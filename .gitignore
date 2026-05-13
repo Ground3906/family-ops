@@ -1,0 +1,26 @@
+﻿# OS junk
+Thumbs.db
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# Environments and secrets - NEVER commit these
+.env
+.env.*
+*.key
+*.pem
+credentials*
+secrets*
+
+# Python (Phase 2)
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Logs
+*.log

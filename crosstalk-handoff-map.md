@@ -1,0 +1,148 @@
+# Crosstalk & Handoff Map v1
+
+How agents pass work to each other. Designed against Charter §Anti-Silo Principles.
+
+---
+
+## Bedrock Rules
+
+1. **Foreman is the universal calendar sink.** Anything that needs a time block goes through Foreman. No agent writes events directly to Google Calendar.
+2. **The originating agent writes the handoff to `handoffs.json`.** Subject + payload + proposed options. The receiving agent reads it on next invocation.
+3. **The receiving agent confirms with the human before acting.** Especially for calendar writes, state mutations, or anything irreversible.
+4. **Handoffs don't vanish.** Closed handoffs stay in the file (`status: done`) — they're the audit trail.
+5. **Sacred blocks beat everything.** Family meals 17:30 daily. Sundays. Hunting season blackouts. Kalea-flagged blocks. Foreman refuses scheduling violations and bounces back to the originating agent.
+
+---
+
+## Routing Matrix
+
+Read as: ROW agent typically hands work TO COLUMN agent.
+
+|              | Foreman | Punch | Whet | Chow | MR  | FAK | Foot | Sq | Mantel |
+|--------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **Al**       | route | route | route | route | route | route | route | route | route |
+| **Foreman**  |  —   |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  →   |
+| **Punch**    |  →   |  —  |     |  ←  |     |  ←  |     |     |      |
+| **Whetstone**|  →   |     |  —  |     |     |     |  ↔  |     |      |
+| **Chow Hall**|  →   |  →  |     |  —  |  ←  |     |     |     |      |
+| **Mystery R**|  →   |     |     |  →  |  —  |     |     |     |  →   |
+| **FAK**      |  →   |  →  |     |     |     |  —  |     |     |  →   |
+| **Footings** |  →   |     |  →  |     |     |     |  —  |     |      |
+| **Square**   |  →   |     |     |     |     |     |     |  —  |      |
+| **Mantel**   |      |     |     |     |     |     |     |     |  —   |
+
+`→` sends to. `←` receives from. `↔` bidirectional. **MR = Mystery Ranch.**
+
+Mantel is mostly a terminal sink: things flow IN (moments worth keeping), little flows out except direct queries.
+
+---
+
+## Canonical Patterns
+
+### Pattern A — Logistics → Schedule
+**Punch List → Foreman.** A task needs a time block.
+
+```
+Punch List writes:
+{
+  from: "punch-list", to: "foreman",
+  subject: "Truck oil change — 1200 mi past due",
+  payload: { task_id, proposed_blocks: ["Tue 09:00", "Thu 14:00"] },
+  status: open
+}
+```
+
+Foreman next invocation: *"Punch List flagged the truck oil change. Tuesday 09:00 or Thursday 14:00? Or pick another."*
+
+### Pattern B — Health → Logistics → Schedule
+**First Aid Kit → Punch List → Foreman.** Appointment scheduled, needs a driving block + maybe a prescription pickup.
+
+FAK emits one handoff to Foreman (the appointment) and one to Punch List (Rx pickup). Punch List may then hand back to Foreman if the pickup needs its own slot.
+
+### Pattern C — Hunting → Calendar Blackout
+**Mystery Ranch → Foreman.** Draw results, season dates, scouting trip.
+
+Foreman writes a HARD block. Other agents querying Foreman get a refusal for those windows.
+
+### Pattern D — Hunting → Meals
+**Mystery Ranch → Chow Hall.** Harvest comes in. Headed to processor. Processor done.
+
+Chow Hall updates `freezer.json` and adjusts upcoming meal plans accordingly.
+
+### Pattern E — Study → Schedule
+**Whetstone → Foreman.** Exam scheduled. Drill block needed. Weak-cluster session.
+
+Foreman places study blocks on Work/Career calendar. Respects 17:30 meals and Sunday — no exceptions, even for cert crunch.
+
+### Pattern F — Job Hunt ↔ Study
+**Footings ↔ Whetstone.** Bidirectional.
+
+- Footings → Whetstone: interview approaching for a role; ramp drills on relevant domains.
+- Whetstone → Footings: cert milestone hit; trigger application push or résumé update.
+
+### Pattern G — Hunting → Memory
+**Mystery Ranch → Mantel.** Notable harvest. First hunt with a kid. Season highlight.
+
+Mystery Ranch emits a `mantel` handoff with the moment; Mantel files it with appropriate gravity. If the moment touches grief or sacred ground, tone-drop carries through.
+
+### Pattern H — Calendar Echo Back
+**Foreman → Originating Agent.** Foreman couldn't fit the request, or there's a sacred-block conflict.
+
+Foreman writes a return handoff: *"Couldn't slot oil change Tue 09:00 — Wyatt's appointment. Try Tue 14:00 or Wed 08:30."*
+
+### Pattern I — Family-Care Echo
+**Any → Al → Human.** Session has run long on a weekend. Kids are around.
+
+Al (orchestrator) holds final authority on when to push back on the human. Other agents don't moralize directly — they flag to Al via handoff, Al decides whether to nudge.
+
+---
+
+## Confirmation Protocol
+
+Before any agent writes to Google Calendar, `handoffs.json`, or any shared state file:
+
+1. **Propose** in chat: *"Here's what I'm about to write — [diff]. Confirm?"*
+2. **Wait for explicit confirmation.** "Yes," "ship it," "do it" — explicit affirmation. Not a thumbs-up emoji, not silence.
+3. **Commit** the change.
+4. **Report** back: *"Done. [path]."*
+
+No silent writes. Ever. Phase 2 may relax this for trusted patterns, but Phase 1 is propose-then-commit, no exceptions.
+
+---
+
+## Sacred Block Refusals
+
+Foreman is the gatekeeper. When asked to schedule in a sacred block:
+
+- **17:30–19:00 daily (family meal):** REFUSE. Propose 19:00+ or earlier in day.
+- **Sunday (any time):** REFUSE work, study, appointments. Mass, family, rest. Override only on Matt's explicit say-so for a single block, captured in chat for that session — not stored as standing permission.
+- **Hunting blackouts:** REFUSE. Bounce to Mystery Ranch for the dates.
+- **Kalea-flagged blocks:** REFUSE. Never schedule over without Kalea's confirmation in chat.
+
+Receiving agent (the one that asked) gets a return handoff with the refusal reason + the suggested alternative.
+
+---
+
+## Anti-Loop Discipline
+
+A handoff that bounces back unprocessed twice = stop and surface to the human via Al. Don't let agents ping-pong. Two strikes, raise the hand.
+
+---
+
+## Quick Reference — Who Owns What
+
+| Domain | Owner Agent | State File |
+|---|---|---|
+| Calendar | Foreman | Google Calendar + `calendars.md` |
+| Tasks | Punch List | `punch-list/tasks.json` |
+| Vehicles | Punch List | `punch-list/vehicles.json` |
+| Study | Whetstone | `whetstone/progress.md` |
+| Meals | Chow Hall | `chow-hall/meal-plan.md` |
+| Game meat | Chow Hall | `chow-hall/freezer.json` |
+| Hunting seasons | Mystery Ranch | `mystery-ranch/seasons.md` |
+| Health | First Aid Kit | `first-aid/` |
+| Career | Footings | `footings/pipeline.json` |
+| Takeoff | The Square | `square/projects/` |
+| Memory | The Mantel | `mantel/` |
+
+If two agents seem to want the same fact: re-read this table. One owner only. The other agent references.
