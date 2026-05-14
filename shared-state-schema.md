@@ -32,10 +32,15 @@
 │
 ├── stockyard/                 ← Edelweiss Farms livestock ops
 │   ├── eggs-log.csv           ← Daily egg counts (exported from widget)
-│   ├── flock-config.md        ← Y1/Y2 hen split, breeds, refresh dates
+│   ├── flock-log.csv          ← Transaction-based flock history (exported from widget v2)
+│   ├── breeds.csv             ← Breed list with user overrides + notes (exported from widget v2)
+│   ├── flock-config.md        ← [LEGACY — superseded by flock-log.csv in widget v2]
 │   ├── pigs.md                ← Current pigs, feed schedule, weigh-ins
 │   ├── turkeys.md             ← Spring raise tracking
-│   └── slaughter-log.md       ← Historical processing records
+│   ├── slaughter-log.md       ← Historical processing records
+│   └── widget/
+│       ├── egg-tracker-v2.html  ← Archived widget source
+│       └── CHANGELOG.md         ← Widget version history
 │
 ├── rootstock/                 ← Edelweiss Farms growing ops
 │   ├── plantings.md           ← Trees, shrubs, perennials with dates planted
@@ -200,25 +205,32 @@ date,count,notes
 2026-05-13,13,
 ```
 
-### `stockyard/flock-config.md`
-Hen roster + breed + age cohorts. Default operating model: 50/50 Y1/Y2 split, half the flock refreshed annually.
+### `stockyard/flock-log.csv`
+Transaction-based flock history. Exported from the egg tracker widget (v2). Every change to the flock (additions, losses, processing, sales, auto-promotions) is a single signed entry. Current flock state is computed by walking the log — not stored anywhere. See `stockyard-widget.md` for the transaction shape and cohort math.
 
-```markdown
-## Current Flock — as of 2026-05-13
-
-- Total layers: TBD
-- Year 1 cohort: TBD (hatched ~Mar 2026)
-- Year 2 cohort: TBD (hatched ~Mar 2025)
-- Last refresh date: TBD
-- Next refresh planned: ~Mar 2027
-
-## Production Model Constants
-(See `stockyard-widget.md` for full reference)
-- Y1 hens: 0.80 eggs/day at peak
-- Y2 hens: 0.65 eggs/day at peak
-- Seasonal modifier table maintained in widget
-- Altitude factor: TBD after first full year of data
+```csv
+date,sign,count,category,breed,cohort_year,is_pet_layer,reason,notes,auto_generated,edited
+2026-03-15,1,12,pullet,"Marans",2026,false,"Spring order","Murray McMurray batch",false,false
+2026-08-15,-12,12,pullet,"Marans",2026,false,"Auto-promoted (pullet → layer)","Reached lay onset (~6 mo)",true,false
+2026-08-15,1,12,layer,"Marans",2026,false,"Auto-promoted (pullet → layer)","Reached lay onset (~6 mo)",true,false
+2026-10-04,-2,2,layer,"Marans",2026,false,"Predator loss","Fox at dusk, fence gap repaired",false,false
 ```
+
+Categories: layer, pullet, cockerel, rooster, meat, pet, other. Cohort key: transactions group by `category | breed | cohort_year | is_pet_layer`. Different cohorts = different age tracks for production rate purposes. Auto-generated rows: pullet→layer promotions write paired -pullet / +layer entries tagged `auto_generated=true`.
+
+### `stockyard/breeds.csv`
+Breed reference list with user overrides and field notes. Exported from the egg tracker widget (v2). The widget ships with ~25 seeded breeds (user's current order plus common varieties); this CSV captures only the user-overridden values and observed-performance notes. Seeded breed data lives in the widget code, not here.
+
+```csv
+breed,last_used,eggs_per_year_override,notes
+"Marans",2026-10-04,175,"Ours lay closer to 175 than the advertised 200. Heavy molt in year 2."
+"Whiting True Blue",2026-08-15,,"Performing at or near advertised. Excellent foragers."
+```
+
+The `eggs_per_year_override` field replaces the advertised value in vacuum projection math when present. Blank = use advertised. Notes are free text — preserve verbatim, never paraphrase.
+
+### `stockyard/flock-config.md` (LEGACY)
+Superseded by `flock-log.csv` in widget v2. Pre-v2 snapshot model: stored `{ y1Count, y2Count }`. Kept on disk as a backup of pre-transition state; not read by current widget or future Stockyard agent. Production model constants previously documented here now live in `stockyard-widget.md`.
 
 ### `rootstock/plantings.md`
 Trees, shrubs, perennials. Dates planted, current zone classification, microclimate notes. Stockyard-style historical record for the orchard and forest garden.

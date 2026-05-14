@@ -174,7 +174,7 @@ Per Matt's directive: Foreman gets the deep treatment; others ship as MVPs and r
 | 2 | 🏠 Punch List | **MVP — next build** | Vehicle/maintenance tracker baked in |
 | — | 🗓️ Calendar Widget | **DIRE — v1.5** | Non-negotiable. Spouse adoption gate. |
 | 3 | 📚 Whetstone | **MVP** | Protocol already documented |
-| 4 | 🐷 Stockyard | **Skeleton queued** | Egg tracker live as widget; agent skeleton pending |
+| 4 | 🐷 Stockyard | **v2 widget shipped — agent skeleton queued** | v2 widget (transaction-based, breed-aware) live as pinned-chat artifact; archived at stockyard/widget/egg-tracker-v2.html; agent skeleton pending |
 | 5 | 🌱 Rootstock | **Skeleton queued** | Spring planning window already passing; build before fall |
 | 6 | 🩺 First Aid Kit | Next | Sensitive data, careful schema |
 | 7 | 🍳 Chow Hall | Next | Big-batch friendly, game meat in season, feast-day meal hooks |
@@ -193,7 +193,7 @@ Per Matt's directive: Foreman gets the deep treatment; others ship as MVPs and r
 
 **v2 (week 2):** Bring Kalea in via the project. Walkthrough together. Capture her feedback as system-prompt updates.
 
-**v3 (weeks 3-6):** Stockyard skeleton + Rootstock skeleton + First Aid Kit + Chow Hall + Mystery Ranch MVPs. Stockyard egg tracker widget is already live as a standalone artifact; agent skeleton wraps it. Rootstock skeleton before fall planting prep window closes. Each agent gets a week of solo use before the next.
+**v3 (weeks 3-6):** Stockyard skeleton + Rootstock skeleton + First Aid Kit + Chow Hall + Mystery Ranch MVPs. Stockyard egg tracker v2 widget is live as a standalone artifact (transaction-based flock model, breed-aware); agent skeleton wraps it. Rootstock skeleton before fall planting prep window closes. Each agent gets a week of solo use before the next.
 
 **v4 (month 2):** The Square MVP. Hard build — vision, math, accuracy stakes.
 
