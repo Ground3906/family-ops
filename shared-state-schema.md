@@ -30,6 +30,20 @@
 │   ├── draws.json             ← Active applications
 │   └── scouting.md            ← Recon log
 │
+├── stockyard/                 ← Edelweiss Farms livestock ops
+│   ├── eggs-log.csv           ← Daily egg counts (exported from widget)
+│   ├── flock-config.md        ← Y1/Y2 hen split, breeds, refresh dates
+│   ├── pigs.md                ← Current pigs, feed schedule, weigh-ins
+│   ├── turkeys.md             ← Spring raise tracking
+│   └── slaughter-log.md       ← Historical processing records
+│
+├── rootstock/                 ← Edelweiss Farms growing ops
+│   ├── plantings.md           ← Trees, shrubs, perennials with dates planted
+│   ├── garden-plan.md         ← Annual veg succession, frost windows
+│   ├── greenhouse.md          ← Build status, then operation log
+│   ├── gardyn-roster.md       ← Indoor hydroponic inventory (Matt-updated)
+│   └── harvest-log.md         ← What's coming in, when, how much
+│
 ├── chow-hall/
 │   ├── meal-plan.md           ← Current + upcoming weeks
 │   ├── pantry.json
@@ -173,6 +187,85 @@ Block strength: HARD
 ### Scouting weekend
 2026-08-22 → 2026-08-23
 Block strength: SOFT — work avoidable if needed
+```
+
+### `stockyard/eggs-log.csv`
+Daily egg count history. Exported from the egg tracker widget. The Bayer flock never has zero-egg days — blank entries = uncollected/unrecorded, not real zeros. Stockyard analytics treat missing dates as null, not zero.
+
+```csv
+date,count,notes
+2026-05-10,11,
+2026-05-11,12,
+2026-05-12,,uncollected
+2026-05-13,13,
+```
+
+### `stockyard/flock-config.md`
+Hen roster + breed + age cohorts. Default operating model: 50/50 Y1/Y2 split, half the flock refreshed annually.
+
+```markdown
+## Current Flock — as of 2026-05-13
+
+- Total layers: TBD
+- Year 1 cohort: TBD (hatched ~Mar 2026)
+- Year 2 cohort: TBD (hatched ~Mar 2025)
+- Last refresh date: TBD
+- Next refresh planned: ~Mar 2027
+
+## Production Model Constants
+(See `stockyard-widget.md` for full reference)
+- Y1 hens: 0.80 eggs/day at peak
+- Y2 hens: 0.65 eggs/day at peak
+- Seasonal modifier table maintained in widget
+- Altitude factor: TBD after first full year of data
+```
+
+### `rootstock/plantings.md`
+Trees, shrubs, perennials. Dates planted, current zone classification, microclimate notes. Stockyard-style historical record for the orchard and forest garden.
+
+```markdown
+## 2026 Plantings (year planted)
+
+### Fruit trees
+- Honeycrisp apple — 7-8ft — planted 2026-05
+- McIntosh apple — 7-8ft — planted 2026-05
+- Loring peach — 7-8ft — planted 2026-05 (zone 5-8 — stretch at 4a)
+- Arctic Honey jujube — 7-8ft — planted 2026-05 (zone 6+ — biggest gamble)
+- Dwarf North Star cherry — planted 2026-05
+- 2x mulberry — planted 2026-05
+
+### Shrubs / bushes
+- Pink Lemonade blueberry — 3gal — planted 2026-05 (needs pH amendment)
+- 2x Regent serviceberry — small 3ft — planted 2026-05
+
+### Brambles
+- Black Hawk black raspberry — 3yr — planted 2026-05
+- Fall Gold raspberry — 3yr — planted 2026-05
+- Latham raspberry — 3yr — planted 2026-05
+- Brandywine purple raspberry — 3yr — planted 2026-05
+
+### Vines
+- Issai kiwi — 1gal — planted 2026-05
+
+## Site
+- 1722 Edelweiss Dr, Westcliffe CO
+- Elevation: 9000 ft exact
+- Zone: 4a (effective 5a in south-facing HC container microclimate)
+- Last frost: mid-to-late May
+- First frost: early September
+- ~100 days unprotected growing season
+```
+
+### `rootstock/gardyn-roster.md`
+Indoor hydroponic inventory. Matt-updated when planting or harvesting. Gardyn appliance owns its own app and operational logic; this file is read-only awareness for Chow Hall.
+
+```markdown
+## Current Gardyn (as of YYYY-MM-DD)
+- Position 1: basil — planted 2026-05-01 — harvestable ~2026-06
+- Position 2: ...
+
+## Harvested
+- 2026-04-15 basil — used for pesto batch
 ```
 
 ### `chow-hall/freezer.json`

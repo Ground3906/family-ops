@@ -41,8 +41,14 @@ Currently targeting AWS certification via WGU. Azure planned post-hire via tuiti
 ### 🍳 Chow Hall — Meal Planning
 Feeds the platoon. Big-batch friendly. Game meat in season. Honors meal allergies/preferences (TBD — capture in shared state). Outputs grocery runs to Punch List, time blocks to Foreman.
 
-### 🦌 Treestand — Hunting
-Seasonal. Patient. Owns the prep, the draw applications, the scouting calendar, and the sacred blackouts on Foreman's schedule. Knows the difference between general season and elk archery and acts accordingly.
+### 🎒 Mystery Ranch — Hunting
+Seasonal. Patient. Owns the prep, the draw applications, the scouting calendar, and the sacred blackouts on Foreman's schedule. Knows the difference between general season and elk archery and acts accordingly. Named after the pack — gear that goes in deep, comes out heavy.
+
+### 🐷 Stockyard — Livestock & Farm Operations
+Edelweiss Farms LLC's working agent. Tracks the animals on the ground — chickens (egg production analytics, molt detection, flock refresh cycle), pigs (feed cadence, weigh-ins, dewormings, slaughter timing), turkeys (April raise), any future additions. Owns the recurring biological calendar that's distinct from family logistics — pig feed on Sundays isn't a Sunday-violation, it's life-support. 98% operations at start; 2% business hooks reserved for future revenue/expense/asset-depreciation tracking when Edelweiss Farms LLC scales. First artifact: egg tracker widget (lives in a pinned chat, schema documented in `stockyard-widget.md`).
+
+### 🌱 Rootstock — Forest Garden, Orchard, Greenhouse
+Plants, soil, and growing cycles. Westcliffe, 9000 ft elevation, USDA zone 4a (effective 5a in the south-facing HC container microclimate). Tracks the forest garden plantings (current year: apple, peach, jujube, cherry, mulberry, serviceberry, raspberries, blueberry, kiwi), the planned 40x25 greenhouse off a 3rd HC container, succession planting windows, frost dates, harvest cycles, and preservation timing. Goal: household food security first, Edelweiss Farms profit later. Prompts Matt for Gardyn (indoor hydroponics) roster updates — Gardyn's app rules its own appliance, Rootstock just keeps the inventory aware so Chow Hall can reach for fresh basil on a Thursday.
 
 ### 📐 The Square — Material Takeoff
 Accuracy is non-negotiable. Reads plans page-by-page (PDF + vision). Outputs takeoff schedules to xlsx — item, qty, unit, sheet, detail. Always cites plan sheet + detail callout per line item. Flags scale assumptions explicitly. Never rounds silently. Side-project agent; lower priority than household runtime.
@@ -138,7 +144,7 @@ Foreman writes events to the appropriate calendar based on event type, and **tag
 
 > `[Punch List] truck oil change`
 > `[Whetstone] AWS practice exam — Domain 3`
-> `[Treestand] elk archery opener — DO NOT SCHEDULE OVER`
+> `[Mystery Ranch] elk archery opener — DO NOT SCHEDULE OVER`
 
 Routing stays clean underneath. Humans see a normal family calendar on top.
 
@@ -164,15 +170,18 @@ Per Matt's directive: Foreman gets the deep treatment; others ship as MVPs and r
 
 | # | Agent | Status | Notes |
 |---|---|---|---|
-| 1 | 📅 Foreman | **v1 deep** — build first | Foundation. Polish before moving on. |
-| 2 | 🏠 Punch List | **MVP** | Vehicle/maintenance tracker baked in |
+| 1 | 📅 Foreman | **v1 deep — COMPLETE** | Foundation. Stress test passed 12/12. |
+| 2 | 🏠 Punch List | **MVP — next build** | Vehicle/maintenance tracker baked in |
+| — | 🗓️ Calendar Widget | **DIRE — v1.5** | Non-negotiable. Spouse adoption gate. |
 | 3 | 📚 Whetstone | **MVP** | Protocol already documented |
-| 4 | 🩺 First Aid Kit | Next | Sensitive data, careful schema |
-| 5 | 🍳 Chow Hall | Next | Big-batch friendly, game meat in season |
-| 6 | 🦌 Treestand | Next | Seasonal — finish before next draw cycle |
-| 7 | 📐 The Square | Later | Most complex; vision + math + accuracy |
-| 8 | 💼 Footings | Low priority | UI automation in flight; cert path first |
-| 9 | 📖 The Mantel | Whenever | Long-term family archive |
+| 4 | 🐷 Stockyard | **Skeleton queued** | Egg tracker live as widget; agent skeleton pending |
+| 5 | 🌱 Rootstock | **Skeleton queued** | Spring planning window already passing; build before fall |
+| 6 | 🩺 First Aid Kit | Next | Sensitive data, careful schema |
+| 7 | 🍳 Chow Hall | Next | Big-batch friendly, game meat in season, feast-day meal hooks |
+| 8 | 🎒 Mystery Ranch | Next | Seasonal — finish before next draw cycle |
+| 9 | 📐 The Square | Later | Most complex; vision + math + accuracy |
+| 10 | 💼 Footings | Low priority | UI automation in flight; cert path first |
+| 11 | 📖 The Mantel | Whenever | Long-term family archive |
 
 ---
 
@@ -184,7 +193,7 @@ Per Matt's directive: Foreman gets the deep treatment; others ship as MVPs and r
 
 **v2 (week 2):** Bring Kalea in via the project. Walkthrough together. Capture her feedback as system-prompt updates.
 
-**v3 (weeks 3-6):** First Aid Kit, Chow Hall, Treestand MVPs. Each gets a week of solo use before the next is added.
+**v3 (weeks 3-6):** Stockyard skeleton + Rootstock skeleton + First Aid Kit + Chow Hall + Mystery Ranch MVPs. Stockyard egg tracker widget is already live as a standalone artifact; agent skeleton wraps it. Rootstock skeleton before fall planting prep window closes. Each agent gets a week of solo use before the next.
 
 **v4 (month 2):** The Square MVP. Hard build — vision, math, accuracy stakes.
 

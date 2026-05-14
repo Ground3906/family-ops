@@ -28,6 +28,8 @@ When you say no, you propose two alternatives. Foreman doesn't leave a trade han
 - `mystery-ranch/blackouts.md` — hunting blocks (HARD)
 - `first-aid/appointments.md` — medical appointments needing time blocks
 - `whetstone/progress.md` — to know when study blocks are needed
+- `stockyard/flock-config.md` and `stockyard/pigs.md` — feed cadence awareness (don't book over morning feed windows)
+- `rootstock/garden-plan.md` — weather-sensitive planting windows when flagged
 
 **Write:**
 - `calendars.md` — append events after human confirms

@@ -18,20 +18,22 @@ How agents pass work to each other. Designed against Charter §Anti-Silo Princip
 
 Read as: ROW agent typically hands work TO COLUMN agent.
 
-|              | Foreman | Punch | Whet | Chow | MR  | FAK | Foot | Sq | Mantel |
-|--------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| **Al**       | route | route | route | route | route | route | route | route | route |
-| **Foreman**  |  —   |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  →   |
-| **Punch**    |  →   |  —  |     |  ←  |     |  ←  |     |     |      |
-| **Whetstone**|  →   |     |  —  |     |     |     |  ↔  |     |      |
-| **Chow Hall**|  →   |  →  |     |  —  |  ←  |     |     |     |      |
-| **Mystery R**|  →   |     |     |  →  |  —  |     |     |     |  →   |
-| **FAK**      |  →   |  →  |     |     |     |  —  |     |     |  →   |
-| **Footings** |  →   |     |  →  |     |     |     |  —  |     |      |
-| **Square**   |  →   |     |     |     |     |     |     |  —  |      |
-| **Mantel**   |      |     |     |     |     |     |     |     |  —   |
+|              | Foreman | Punch | Whet | Chow | MR  | Stock | Root | FAK | Foot | Sq | Mantel |
+|--------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **Al**       | route | route | route | route | route | route | route | route | route | route | route |
+| **Foreman**  |  —   |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  ←  |  →   |
+| **Punch**    |  →   |  —  |     |  ←  |     |  ↔  |  ↔  |  ←  |     |     |      |
+| **Whetstone**|  →   |     |  —  |     |     |     |     |     |  ↔  |     |      |
+| **Chow Hall**|  →   |  →  |     |  —  |  ←  |  ←  |  ←  |     |     |     |      |
+| **Mystery R**|  →   |     |     |  →  |  —  |     |     |     |     |     |  →   |
+| **Stockyard**|  →   |  ↔  |     |  →  |     |  —  |     |     |     |     |  →   |
+| **Rootstock**|  →   |  ↔  |     |  →  |     |     |  —  |     |     |     |      |
+| **FAK**      |  →   |  →  |     |     |     |     |     |  —  |     |     |  →   |
+| **Footings** |  →   |     |  →  |     |     |     |     |     |  —  |     |      |
+| **Square**   |  →   |     |     |     |     |     |     |     |     |  —  |      |
+| **Mantel**   |      |     |     |     |     |     |     |     |     |     |  —   |
 
-`→` sends to. `←` receives from. `↔` bidirectional. **MR = Mystery Ranch.**
+`→` sends to. `←` receives from. `↔` bidirectional. **MR = Mystery Ranch. Stock = Stockyard. Root = Rootstock.**
 
 Mantel is mostly a terminal sink: things flow IN (moments worth keeping), little flows out except direct queries.
 
@@ -84,6 +86,46 @@ Foreman places study blocks on Work/Career calendar. Respects 17:30 meals and Su
 **Mystery Ranch → Mantel.** Notable harvest. First hunt with a kid. Season highlight.
 
 Mystery Ranch emits a `mantel` handoff with the moment; Mantel files it with appropriate gravity. If the moment touches grief or sacred ground, tone-drop carries through.
+
+### Pattern J — Farm Ops → Schedule
+**Stockyard → Foreman.** Slaughter day, weigh-ins, vet visits, multi-hour farm events that need a calendar block. Daily feed cadence does NOT route through Foreman — it's a known persistent rhythm Foreman respects from the rhythm table.
+
+```
+Stockyard writes:
+{
+  from: "stockyard", to: "foreman",
+  subject: "Pig slaughter day — 6-8 hour block",
+  payload: { proposed_dates: ["2026-11-07", "2026-11-14"], conflicts_to_check: ["rifle elk season"] },
+  status: open
+}
+```
+
+### Pattern K — Eggs/Harvest → Meals
+**Stockyard → Chow Hall.** Egg counts trending up, glut incoming. Or pig in the freezer, processor done. Or chickens culled, broth stock available.
+
+Chow Hall updates `chow-hall/freezer.json` (proteins) or `chow-hall/produce.md` (eggs, fresh harvest), adjusts meal plans toward use-it-up.
+
+### Pattern L — Garden Harvest → Meals
+**Rootstock → Chow Hall.** Fresh harvest ready. Tomatoes coming in heavy. Apples on the tree. Gardyn basil at peak.
+
+Chow Hall pulls into meal planning. Preservation prompts (canning, freezing, drying) handed back to Punch List or Rootstock depending on scale.
+
+### Pattern M — Garden Planting → Schedule
+**Rootstock → Foreman.** Spring transplant weekend, fall mulching, greenhouse build phase, irrigation install. Multi-hour outdoor work blocks.
+
+Foreman respects sacred blocks; planting windows are weather-sensitive so flexibility from Tim is sometimes required.
+
+### Pattern N — Farm Maintenance ↔ Logistics
+**Stockyard ↔ Punch List.** Bidirectional.
+
+- Stockyard → Punch List: coop repair, feed run, water heater for winter, vet supplies pickup.
+- Punch List → Stockyard: equipment failure noticed during chores ("the auger's binding"), feed inventory low.
+
+### Pattern O — Garden Maintenance ↔ Logistics
+**Rootstock ↔ Punch List.** Bidirectional. Same pattern — tools, supplies, infrastructure (drip line repair, greenhouse panels, fence work) flow between the two.
+
+### Pattern P — Gardyn Roster Prompts
+**Rootstock → Human.** Gardyn (indoor hydroponics appliance) runs on its own app. Rootstock owns the *prompting cadence* — periodically asks Matt to update `gardyn-roster.md` so Chow Hall knows what's harvestable. Thin handshake, no operational logic, no sync.
 
 ### Pattern H — Calendar Echo Back
 **Foreman → Originating Agent.** Foreman couldn't fit the request, or there's a sacred-block conflict.
@@ -140,6 +182,8 @@ A handoff that bounces back unprocessed twice = stop and surface to the human vi
 | Meals | Chow Hall | `chow-hall/meal-plan.md` |
 | Game meat | Chow Hall | `chow-hall/freezer.json` |
 | Hunting seasons | Mystery Ranch | `mystery-ranch/seasons.md` |
+| Livestock, eggs, feed | Stockyard | `stockyard/` (eggs-log, flock-config, pigs, turkeys) |
+| Plants, orchard, greenhouse | Rootstock | `rootstock/` (plantings.md, garden-plan.md, gardyn-roster.md) |
 | Health | First Aid Kit | `first-aid/` |
 | Career | Footings | `footings/pipeline.json` |
 | Takeoff | The Square | `square/projects/` |
