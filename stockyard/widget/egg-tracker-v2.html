@@ -1,0 +1,3600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Egg Ledger · Stockyard Operations · v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3ead5;
+    --paper-deep: #ebdfbf;
+    --paper-shadow: #d6c79e;
+    --ink: #1a1612;
+    --ink-soft: #4a3f2f;
+    --ink-faint: #8a7a5e;
+    --rust: #b8492a;
+    --rust-deep: #8c3418;
+    --rust-soft: #d97246;
+    --moss: #4a6b3a;
+    --moss-deep: #2f4427;
+    --barn: #5a2818;
+    --warning: #c08416;
+    --warning-deep: #8a5c0a;
+    --alarm: #a8281a;
+    --line: #5a4a32;
+    --line-soft: #b8a679;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(184, 73, 42, 0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(74, 107, 58, 0.04), transparent 50%);
+  }
+
+  .app { max-width: 1100px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  /* HEADER */
+  .masthead {
+    border-top: 4px double var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 22px 0 18px;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .masthead::before {
+    content: ""; position: absolute;
+    top: 8px; left: 0; right: 0;
+    height: 1px; background: var(--ink);
+  }
+  .masthead-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .brand-block { display: flex; align-items: center; gap: 18px; }
+  .logo-slot { width: 88px; height: 88px; flex-shrink: 0; }
+  .logo-slot svg { width: 100%; height: 100%; display: block; }
+  @media (max-width: 600px) {
+    .logo-slot { width: 64px; height: 64px; }
+    .brand-block { gap: 12px; }
+  }
+  .brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .brand .amp { color: var(--rust); font-style: italic; font-weight: 400; margin: 0 0.1em; }
+  .masthead-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+  .masthead-meta strong { color: var(--rust); font-weight: 500; }
+  .sub {
+    margin-top: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+  .version-tag {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1px 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    margin-left: 6px;
+    vertical-align: 2px;
+  }
+
+  /* TABS */
+  .tabs {
+    display: flex; gap: 0;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 28px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    padding: 12px 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-bottom: -2px;
+    white-space: nowrap;
+  }
+  .tab:hover { color: var(--ink-soft); }
+  .tab.active { color: var(--rust); border-bottom-color: var(--rust); }
+
+  .panel { display: none; }
+  .panel.active { display: block; animation: fadein 0.2s ease; }
+  @keyframes fadein {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* CARDS, COMMON */
+  .card {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+  }
+  .card-tag {
+    position: absolute; top: -10px; left: 14px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 2px 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .card-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 14px;
+  }
+
+  /* DASHBOARD */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 760px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+  }
+
+  .today-card { padding: 28px 24px 22px; }
+  .today-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+  }
+  .today-count-row {
+    display: flex; align-items: baseline;
+    gap: 14px; margin: 8px 0 14px;
+  }
+  .count-input {
+    width: 120px;
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--ink);
+    color: var(--ink);
+    padding: 0 4px 6px;
+    text-align: center;
+    outline: none;
+  }
+  .count-input:focus { border-bottom-color: var(--rust); }
+  .count-input::-webkit-outer-spin-button,
+  .count-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .count-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+  }
+  .expected-row {
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    padding: 12px 0;
+    border-top: 1px dashed var(--line-soft);
+    border-bottom: 1px dashed var(--line-soft);
+    margin: 12px 0;
+  }
+  .expected-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .expected-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 100px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .status-good { background: rgba(74, 107, 58, 0.15); color: var(--moss-deep); border: 1px solid var(--moss); }
+  .status-low { background: rgba(192, 132, 22, 0.15); color: var(--warning-deep); border: 1px solid var(--warning); }
+  .status-high { background: rgba(74, 107, 58, 0.15); color: var(--moss-deep); border: 1px solid var(--moss); }
+  .status-empty { background: rgba(138, 122, 94, 0.1); color: var(--ink-faint); border: 1px solid var(--line-soft); }
+
+  .save-btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    padding: 12px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  .save-btn:hover { background: var(--rust); }
+  .save-btn:active { transform: translateY(1px); }
+
+  .counter-stack { display: flex; flex-direction: column; gap: 16px; }
+  .counter {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 16px 20px;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+  }
+  .counter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .counter-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.75rem;
+    color: var(--rust);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .counter-value {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin-top: 4px;
+  }
+  .counter-detail {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+
+  /* ALERT */
+  .alert {
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    border-left: 4px solid;
+    background: var(--paper-deep);
+    display: flex; gap: 14px;
+    align-items: flex-start;
+  }
+  .alert-tier-1 { border-color: var(--warning); }
+  .alert-tier-2 { border-color: var(--rust); }
+  .alert-tier-3 { border-color: var(--alarm); background: rgba(168, 40, 26, 0.06); }
+  .alert-icon {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--rust);
+  }
+  .alert-tier-3 .alert-icon { color: var(--alarm); }
+  .alert-tier-1 .alert-icon { color: var(--warning); }
+  .alert-body { flex: 1; }
+  .alert-title { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.05rem; margin: 0 0 4px; }
+  .alert-text { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+
+  /* CHART */
+  .chart-card { padding: 24px 20px 16px; margin-bottom: 24px; }
+  .chart-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 16px; flex-wrap: wrap; gap: 12px;
+  }
+  .chart-legend {
+    display: flex; gap: 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    flex-wrap: wrap;
+  }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 14px; height: 14px; display: inline-block; }
+  .swatch-bar { background: var(--ink); }
+  .swatch-line { background: var(--rust); height: 2px; }
+  .swatch-band { background: rgba(74, 107, 58, 0.2); border: 1px solid var(--moss); }
+  .chart-wrap { position: relative; width: 100%; overflow-x: auto; }
+  .chart-svg { display: block; width: 100%; height: 280px; overflow: visible; }
+
+  /* BACK-FILL */
+  .backfill-controls {
+    display: flex; gap: 12px; align-items: center;
+    margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .month-nav {
+    display: flex; align-items: center; gap: 8px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .nav-btn {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    width: 36px; height: 36px;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 1.1rem;
+    color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .nav-btn:hover { background: var(--rust); color: var(--paper); border-color: var(--rust); }
+  .month-label { min-width: 180px; text-align: center; }
+  .calendar-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    gap: 2px; background: var(--line);
+    border: 1px solid var(--line); margin-bottom: 16px;
+  }
+  .cal-header {
+    background: var(--ink); color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 8px 4px; text-align: center;
+  }
+  .cal-cell {
+    background: var(--paper);
+    min-height: 72px;
+    padding: 6px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .cal-cell.empty { background: var(--paper-deep); opacity: 0.4; }
+  .cal-cell.future { background: var(--paper-deep); opacity: 0.5; }
+  .cal-cell.today { background: rgba(184, 73, 42, 0.08); border: 2px solid var(--rust); padding: 4px; }
+  .cal-date { font-family: 'DM Mono', monospace; font-size: 0.75rem; font-weight: 500; color: var(--ink-soft); }
+  .cal-input {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--rust);
+    text-align: right;
+    padding: 0 2px;
+    outline: none;
+  }
+  .cal-input:focus { border-bottom-color: var(--rust); background: var(--paper-deep); }
+  .cal-input::-webkit-outer-spin-button,
+  .cal-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+  /* RECORDS */
+  .records-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px; margin-bottom: 24px;
+  }
+  .record-tile {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    padding: 16px;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+  }
+  .record-tile.wide { grid-column: span 2; }
+  @media (max-width: 760px) { .record-tile.wide { grid-column: span 1; } }
+  .record-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+  }
+  .record-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .record-detail {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+  .record-twin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 6px;
+  }
+  .twin-block .twin-val {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .twin-block .twin-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+
+  /* VACUUM PROJECTIONS */
+  .vacuum-card {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    padding: 18px;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+    margin-bottom: 24px;
+  }
+  .vacuum-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 10px;
+  }
+  .vacuum-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 0;
+  }
+  .vacuum-subtitle {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .vacuum-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    margin: 12px 0 14px;
+  }
+  .vacuum-stat .vstat-val {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .vacuum-stat .vstat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+  .reality-factor.good { color: var(--moss-deep); }
+  .reality-factor.warn { color: var(--warning-deep); }
+  .reality-factor.bad { color: var(--alarm); }
+  .vacuum-toggle {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    padding: 6px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .vacuum-toggle:hover { background: var(--ink); color: var(--paper); }
+  .vacuum-breakdown {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line-soft);
+  }
+  .vacuum-breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .vacuum-breakdown-table th {
+    text-align: left;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .vacuum-breakdown-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line-soft);
+    font-family: 'DM Mono', monospace;
+  }
+  .vacuum-breakdown-table td.breed-link {
+    color: var(--rust);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+  }
+  .vacuum-breakdown-table td.breed-link:hover { color: var(--rust-deep); }
+  .vacuum-breakdown-table tr:last-child td { border-bottom: none; }
+
+  .monthly-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+  }
+  .monthly-table th, .monthly-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.88rem;
+  }
+  .monthly-table th {
+    background: var(--ink); color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .monthly-table td { font-family: 'DM Mono', monospace; }
+  .monthly-table tr:last-child td { border-bottom: none; }
+  .monthly-table tr:hover td { background: rgba(184, 73, 42, 0.04); }
+
+  /* FLOCK TAB — three-panel */
+  .flock-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 900px) {
+    .flock-panels { grid-template-columns: 1fr; }
+  }
+
+  .flock-state-panel {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    padding: 18px;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+  }
+  .flock-state-panel h3 {
+    font-family: 'Fraunces', serif;
+    margin: 0 0 12px;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .state-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+  }
+  .state-row:last-of-type { border-bottom: none; }
+  .state-row .state-label {
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .state-row .state-value { font-weight: 500; }
+  .state-row.total {
+    margin-top: 8px;
+    padding-top: 10px;
+    border-top: 2px solid var(--ink);
+    border-bottom: none;
+  }
+  .state-row.total .state-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--rust);
+  }
+  .state-detail {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    padding-left: 12px;
+    margin-top: -2px;
+  }
+  .state-cohort-list {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line-soft);
+  }
+  .state-cohort {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    padding: 3px 0;
+  }
+  .state-cohort .breed-link {
+    color: var(--rust);
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+  }
+  .state-cohort .breed-link:hover { color: var(--rust-deep); }
+  .state-empty {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--ink-faint);
+    padding: 8px 0;
+  }
+
+  .change-form-panel {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    padding: 18px;
+    box-shadow: 2px 2px 0 var(--paper-shadow);
+  }
+  .change-form-panel h3 {
+    font-family: 'Fraunces', serif;
+    margin: 0 0 12px;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field.full { grid-column: span 2; }
+  .field label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 8px 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+    outline: none;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus { border-color: var(--rust); }
+  .field input[type="number"] { font-family: 'DM Mono', monospace; }
+  .field textarea { resize: vertical; min-height: 56px; }
+
+  .sign-toggle {
+    display: flex;
+    border: 1px solid var(--line);
+    width: 100%;
+  }
+  .sign-toggle button {
+    flex: 1;
+    background: var(--paper);
+    border: none;
+    padding: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--ink-soft);
+  }
+  .sign-toggle button.active { background: var(--ink); color: var(--paper); }
+  .sign-toggle button.active.add { background: var(--moss-deep); }
+  .sign-toggle button.active.subtract { background: var(--barn); }
+
+  .form-pet-row { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .form-pet-row input[type="checkbox"] { margin: 0; }
+  .form-pet-row label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+
+  /* Reason quick-picks */
+  .reason-picks {
+    display: flex; gap: 4px; flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  .reason-pick {
+    background: transparent;
+    border: 1px dashed var(--line-soft);
+    color: var(--ink-soft);
+    padding: 3px 9px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .reason-pick:hover { background: var(--paper); border-color: var(--rust); color: var(--rust); border-style: solid; }
+
+  /* AUTOCOMPLETE */
+  .autocomplete-wrap { position: relative; }
+  .autocomplete-list {
+    position: absolute;
+    top: calc(100% + 2px); left: 0; right: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+    max-height: 200px; overflow-y: auto;
+    z-index: 50;
+    display: none;
+  }
+  .autocomplete-list.open { display: block; }
+  .ac-item {
+    padding: 7px 10px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .ac-item:last-child { border-bottom: none; }
+  .ac-item:hover, .ac-item.highlighted { background: var(--paper-deep); color: var(--rust); }
+  .ac-item .ac-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    margin-left: 8px;
+  }
+  .ac-item.new-suggestion {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--moss-deep);
+    background: rgba(74, 107, 58, 0.06);
+  }
+  .ac-item.typo-suggestion {
+    background: rgba(192, 132, 22, 0.08);
+    color: var(--warning-deep);
+  }
+  .ac-item.typo-suggestion::before {
+    content: "Did you mean: ";
+    font-style: italic;
+    color: var(--ink-faint);
+    margin-right: 4px;
+  }
+
+  /* HISTORY */
+  .history-section { margin-top: 24px; }
+  .history-section h3 {
+    font-family: 'Fraunces', serif;
+    margin: 0 0 12px;
+    font-weight: 700;
+    font-size: 1.15rem;
+  }
+  .history-list { display: flex; flex-direction: column; gap: 6px; }
+  .history-row {
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--line);
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 100px 70px 70px 1fr auto auto;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  .history-row.add { border-left-color: var(--moss); }
+  .history-row.sub { border-left-color: var(--barn); }
+  .history-row.auto { border-left-color: var(--rust); background: rgba(184, 73, 42, 0.04); }
+  @media (max-width: 760px) {
+    .history-row { grid-template-columns: 1fr 1fr; gap: 4px; }
+  }
+  .hist-date {
+    font-family: 'DM Mono', monospace;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hist-amount {
+    font-family: 'DM Mono', monospace;
+    font-weight: 700;
+  }
+  .hist-amount.add { color: var(--moss-deep); }
+  .hist-amount.sub { color: var(--barn); }
+  .hist-category {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .hist-details {
+    font-family: 'Fraunces', serif;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .hist-details .breed-link {
+    color: var(--rust);
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+    font-style: normal;
+  }
+  .hist-details .breed-link:hover { color: var(--rust-deep); }
+  .hist-edited {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--warning-deep);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 6px;
+  }
+  .hist-auto-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--rust);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 4px;
+  }
+  .row-btn {
+    background: transparent;
+    border: 1px solid var(--line-soft);
+    color: var(--ink-faint);
+    width: 28px; height: 28px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .row-btn.edit:hover { background: var(--rust); color: var(--paper); border-color: var(--rust); }
+  .row-btn.del:hover { background: var(--alarm); color: var(--paper); border-color: var(--alarm); }
+
+  /* SETTINGS */
+  .setting-row {
+    display: flex; justify-content: space-between;
+    align-items: center; padding: 14px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    gap: 20px;
+  }
+  .setting-row:last-child { border-bottom: none; }
+  .setting-label {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .setting-help {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 2px;
+  }
+  .setting-stockyard-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--rust);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-left: 8px;
+    background: rgba(184, 73, 42, 0.08);
+    padding: 1px 6px;
+    border: 1px solid var(--rust);
+  }
+  .toggle {
+    position: relative; display: inline-block;
+    width: 48px; height: 26px; flex-shrink: 0;
+  }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider {
+    position: absolute; cursor: pointer; inset: 0;
+    background: var(--line-soft);
+    transition: 0.2s;
+    border: 1px solid var(--line);
+  }
+  .toggle-slider::before {
+    content: ""; position: absolute;
+    height: 20px; width: 20px; left: 2px; top: 2px;
+    background: var(--paper);
+    transition: 0.2s;
+    border: 1px solid var(--line);
+  }
+  .toggle input:checked + .toggle-slider { background: var(--rust); }
+  .toggle input:checked + .toggle-slider::before { transform: translateX(22px); }
+
+  .setting-input {
+    width: 80px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 6px 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    text-align: right;
+  }
+  .setting-select {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 6px 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+  }
+
+  /* IMPORT EXPORT */
+  .ie-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .btn-secondary {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 10px 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .btn-secondary:hover { background: var(--rust); color: var(--paper); border-color: var(--rust); }
+  .btn-danger { background: transparent; border: 1px solid var(--alarm); color: var(--alarm); }
+  .btn-danger:hover { background: var(--alarm); color: var(--paper); }
+  .csv-area {
+    width: 100%; min-height: 140px;
+    background: var(--paper-deep);
+    border: 1px dashed var(--line);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    padding: 12px; margin-bottom: 12px;
+    resize: vertical; outline: none;
+  }
+
+  /* SECTION HEAD */
+  .section-head {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .section-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: -8px 0 16px;
+    font-size: 0.95rem;
+  }
+
+  /* BREED CARD MODAL */
+  .breed-modal-bg {
+    position: fixed; inset: 0;
+    background: rgba(26, 22, 18, 0.55);
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 200;
+    padding: 20px;
+  }
+  .breed-modal-bg.open { display: flex; animation: fadein 0.15s ease; }
+  .breed-modal {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--paper-shadow);
+    max-width: 520px; width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 24px;
+    position: relative;
+  }
+  .breed-modal-close {
+    position: absolute; top: 12px; right: 14px;
+    background: transparent; border: none;
+    font-size: 1.4rem; cursor: pointer;
+    color: var(--ink-soft); font-family: 'DM Sans', sans-serif;
+    width: 32px; height: 32px;
+  }
+  .breed-modal-close:hover { color: var(--alarm); }
+  .breed-modal h2 {
+    font-family: 'Fraunces', serif;
+    margin: 0 0 4px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-right: 30px;
+  }
+  .breed-modal .breed-alt {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+    font-size: 0.9rem;
+  }
+  .breed-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .breed-stat {
+    background: var(--paper-deep);
+    border-left: 3px solid var(--rust);
+    padding: 8px 12px;
+  }
+  .breed-stat .bs-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .breed-stat .bs-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 1px;
+  }
+  .breed-stat .bs-overridden {
+    color: var(--moss-deep);
+  }
+  .breed-stat .bs-original {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--ink-faint);
+    margin-top: 1px;
+  }
+  .breed-modal .breed-temperament {
+    background: var(--paper-deep);
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    border-left: 3px solid var(--moss);
+  }
+  .breed-override-form {
+    background: var(--paper-deep);
+    border: 1px dashed var(--line);
+    padding: 12px;
+    margin-top: 14px;
+  }
+  .breed-override-form h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .breed-override-form .field { margin-bottom: 8px; }
+  .breed-tags {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    margin-bottom: 12px;
+  }
+  .breed-tag {
+    background: var(--paper-deep);
+    border: 1px solid var(--line-soft);
+    padding: 2px 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .breed-tag.meat { border-color: var(--barn); color: var(--barn); }
+  .breed-tag.layer { border-color: var(--moss); color: var(--moss-deep); }
+  .breed-tag.dual { border-color: var(--warning); color: var(--warning-deep); }
+
+  .toast {
+    position: fixed;
+    bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0; transition: all 0.25s ease;
+    z-index: 1000;
+    box-shadow: 4px 4px 0 var(--paper-shadow);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .toast.error { background: var(--alarm); }
+  .toast.success { background: var(--moss-deep); }
+
+  .loading-shell {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ink-faint);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line-soft);
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .footer strong { color: var(--rust); }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="masthead">
+    <div class="masthead-row">
+      <div class="brand-block">
+        <div class="logo-slot" aria-label="Edelweiss Farms, LLC logo">
+          <svg viewBox="180 20 320 320" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <path id="logoTopArc" d="M 204,180 A 136,136 0 0,1 476,180"/>
+              <path id="logoBotArc" d="M 192,180 A 148,148 0 0,0 488,180"/>
+              <clipPath id="logoMedClip"><circle cx="340" cy="180" r="83"/></clipPath>
+            </defs>
+            <circle cx="340" cy="180" r="160" fill="#ebdfbf" stroke="#1a1612" stroke-width="4"/>
+            <circle cx="340" cy="180" r="152" fill="none" stroke="#1a1612" stroke-width="0.6"/>
+            <text font-family="Georgia, serif" font-size="17" font-weight="600" fill="#1a1612" letter-spacing="2.5"><textPath href="#logoTopArc" startOffset="50%" text-anchor="middle">EDELWEISS FARMS, LLC</textPath></text>
+            <text font-family="Georgia, serif" font-size="15" font-weight="600" fill="#4a6b3a" letter-spacing="2.5"><textPath href="#logoBotArc" startOffset="50%" text-anchor="middle">WESTCLIFFE · COLORADO</textPath></text>
+            <polygon points="218,171 220.06,177.25 226.61,177.25 221.27,181.11 223.33,187.36 218,183.5 212.67,187.36 214.73,181.11 209.39,177.25 215.94,177.25" fill="#1a1612"/>
+            <polygon points="462,171 464.06,177.25 470.61,177.25 465.27,181.11 467.33,187.36 462,183.5 456.67,187.36 458.73,181.11 453.39,177.25 459.94,177.25" fill="#1a1612"/>
+            <circle cx="340" cy="180" r="90" fill="#f3ead5" stroke="#1a1612" stroke-width="1.5"/>
+            <g clip-path="url(#logoMedClip)">
+              <polygon transform="translate(340, 180)" points="-83,83 -83,10 -58,-22 -35,8 -12,-42 8,-2 32,-28 52,-8 75,-18 83,4 83,83" fill="#b8c4a8" fill-opacity="0.55" stroke="#2f4427" stroke-width="0.5" stroke-opacity="0.75"/>
+              <polygon transform="translate(340, 180)" points="-83,83 -83,30 -65,15 -45,-5 -22,18 5,-15 28,5 50,-12 70,2 83,-5 83,83" fill="#5e7860" fill-opacity="0.82"/>
+            </g>
+            <circle cx="340" cy="180" r="84" fill="none" stroke="#1a1612" stroke-width="0.4"/>
+            <g transform="translate(340, 180)">
+              <g transform="rotate(0)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(45)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(90)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(135)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(180)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(225)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(270)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <g transform="rotate(315)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#f3ead5" stroke="#1a1612" stroke-width="0.8"/></g>
+              <circle cx="0" cy="0" r="5" fill="#c08416"/>
+              <circle cx="-7" cy="-4" r="4" fill="#c08416"/>
+              <circle cx="7" cy="-4" r="4" fill="#c08416"/>
+              <circle cx="-4" cy="6" r="3.5" fill="#c08416"/>
+              <circle cx="4" cy="6" r="3.5" fill="#c08416"/>
+              <circle cx="0" cy="-9" r="3" fill="#c08416"/>
+              <circle cx="-3" cy="-1" r="2" fill="#c08416"/>
+              <circle cx="3" cy="-1" r="2" fill="#c08416"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand">Egg <span class="amp">&</span> Ledger <span class="version-tag">v2</span></h1>
+          <div class="sub">Stockyard Operations &middot; Edelweiss Farms, LLC</div>
+        </div>
+      </div>
+      <div class="masthead-meta">
+        <strong id="brand-date">—</strong><br>
+        Westcliffe, CO &middot; 9000 ft
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="dashboard">Today</button>
+    <button class="tab" data-tab="backfill">Back-fill</button>
+    <button class="tab" data-tab="records">Records</button>
+    <button class="tab" data-tab="flock">Flock</button>
+    <button class="tab" data-tab="data">Import / Export</button>
+    <button class="tab" data-tab="settings">Settings</button>
+  </nav>
+
+  <div id="loading" class="loading-shell">Loading the ledger…</div>
+
+  <!-- DASHBOARD -->
+  <section class="panel" data-panel="dashboard">
+    <div id="alert-zone"></div>
+    <div class="dashboard-grid">
+      <div class="card today-card">
+        <div class="card-tag">Today</div>
+        <div class="today-date" id="today-date-label">—</div>
+        <div class="today-count-row">
+          <input type="number" class="count-input" id="today-count" min="0" placeholder="—" />
+          <span class="count-label">eggs collected</span>
+        </div>
+        <div class="expected-row">
+          <span class="expected-label">Expected band</span>
+          <span class="expected-value" id="expected-band">—</span>
+          <span class="status-pill status-empty" id="status-pill">No entry</span>
+        </div>
+        <button class="save-btn" id="save-today">Save today's count</button>
+      </div>
+      <div class="counter-stack">
+        <div class="counter">
+          <div class="counter-label">Month to date <span class="counter-sub" id="mtd-month">—</span></div>
+          <div class="counter-value" id="mtd-value">0</div>
+          <div class="counter-detail" id="mtd-detail">— days logged</div>
+        </div>
+        <div class="counter">
+          <div class="counter-label">Year to date <span class="counter-sub" id="ytd-year">—</span></div>
+          <div class="counter-value" id="ytd-value">0</div>
+          <div class="counter-detail" id="ytd-detail">— days logged</div>
+        </div>
+      </div>
+    </div>
+    <div class="card chart-card">
+      <div class="card-tag">60-day production</div>
+      <div class="chart-head">
+        <h2 class="card-title">Last 60 days</h2>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-swatch swatch-bar"></span> Daily</span>
+          <span class="legend-item"><span class="legend-swatch swatch-line"></span> 7-day avg</span>
+          <span class="legend-item"><span class="legend-swatch swatch-band"></span> Expected</span>
+        </div>
+      </div>
+      <div class="chart-wrap"><svg class="chart-svg" id="chart" viewBox="0 0 900 280" preserveAspectRatio="none"></svg></div>
+    </div>
+  </section>
+
+  <!-- BACK-FILL -->
+  <section class="panel" data-panel="backfill">
+    <h2 class="section-head">Back-fill calendar</h2>
+    <p class="section-sub">Tap a day, type the count. Blank = uncollected. Auto-saves.</p>
+    <div class="backfill-controls">
+      <div class="month-nav">
+        <button class="nav-btn" id="prev-month">‹</button>
+        <span class="month-label" id="bf-month-label">—</span>
+        <button class="nav-btn" id="next-month">›</button>
+      </div>
+      <button class="btn-secondary" id="today-jump">Jump to today</button>
+    </div>
+    <div class="calendar-grid" id="backfill-grid"></div>
+  </section>
+
+  <!-- RECORDS -->
+  <section class="panel" data-panel="records">
+    <h2 class="section-head">Records &amp; data mining</h2>
+    <p class="section-sub">The deep stats. For Sunday-afternoon flock analysis.</p>
+
+    <div class="vacuum-card" id="vacuum-card">
+      <div class="vacuum-head">
+        <div>
+          <h3 class="vacuum-title">Vacuum projections</h3>
+          <p class="vacuum-subtitle">What advertised breed data says <em>should</em> happen — sealed lab, no weather, no losses. Reality factor compares your actuals against this.</p>
+        </div>
+        <button class="vacuum-toggle" id="vacuum-toggle">Show breakdown</button>
+      </div>
+      <div class="vacuum-stats" id="vacuum-stats"></div>
+      <div class="vacuum-breakdown" id="vacuum-breakdown" style="display:none;"></div>
+    </div>
+
+    <div class="records-grid" id="records-grid"></div>
+
+    <h3 class="section-head" style="font-size: 1.2rem;">Monthly breakdown</h3>
+    <div style="overflow-x: auto;">
+      <table class="monthly-table" id="monthly-table">
+        <thead>
+          <tr>
+            <th>Month</th><th>Total</th><th>Days</th><th>Avg</th><th>High</th><th>Low</th><th>Dozen</th>
+          </tr>
+        </thead>
+        <tbody id="monthly-tbody"></tbody>
+      </table>
+    </div>
+
+    <h3 class="section-head" style="font-size: 1.2rem;">Collection consistency</h3>
+    <div class="records-grid" id="consistency-grid"></div>
+  </section>
+
+  <!-- FLOCK -->
+  <section class="panel" data-panel="flock">
+    <h2 class="section-head">Flock</h2>
+    <p class="section-sub">Transaction-based. Every change is a single entry with a reason. Current state is computed live.</p>
+
+    <div class="flock-panels">
+      <!-- Current state -->
+      <div class="flock-state-panel" id="state-panel">
+        <h3>Current flock</h3>
+        <div id="state-body"></div>
+      </div>
+
+      <!-- Change form -->
+      <div class="change-form-panel">
+        <h3 id="form-title">Record a change</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label>Date</label>
+            <input type="date" id="tx-date" />
+          </div>
+          <div class="field">
+            <label>Category</label>
+            <select id="tx-category">
+              <option value="layer">Layer (mature, laying)</option>
+              <option value="pullet">Pullet (young female)</option>
+              <option value="cockerel">Cockerel (young male)</option>
+              <option value="rooster">Rooster (mature male)</option>
+              <option value="meat">Meat bird</option>
+              <option value="pet">Pet bird</option>
+              <option value="other">Other (duck, turkey, etc.)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Change type</label>
+            <div class="sign-toggle">
+              <button type="button" id="sign-add" class="active add" data-sign="1">+ Add</button>
+              <button type="button" id="sign-sub" data-sign="-1">− Subtract</button>
+            </div>
+          </div>
+          <div class="field">
+            <label>Count</label>
+            <input type="number" id="tx-count" min="1" placeholder="0" />
+          </div>
+          <div class="field full">
+            <label>Breed</label>
+            <div class="autocomplete-wrap">
+              <input type="text" id="tx-breed" placeholder="Start typing breed name…" autocomplete="off" />
+              <div class="autocomplete-list" id="tx-breed-ac"></div>
+            </div>
+          </div>
+          <div class="field" id="cohort-year-field">
+            <label>Cohort year (when this group came to the farm)</label>
+            <input type="number" id="tx-cohort-year" min="2000" max="2099" />
+          </div>
+          <div class="field" id="pet-layer-field" style="display:none;">
+            <label>&nbsp;</label>
+            <div class="form-pet-row">
+              <input type="checkbox" id="tx-pet-layer" />
+              <label for="tx-pet-layer">This pet bird lays eggs (counts in production)</label>
+            </div>
+          </div>
+          <div class="field full">
+            <label>Reason</label>
+            <div class="autocomplete-wrap">
+              <input type="text" id="tx-reason" placeholder="Start typing reason…" autocomplete="off" />
+              <div class="autocomplete-list" id="tx-reason-ac"></div>
+            </div>
+            <div class="reason-picks" id="reason-picks"></div>
+          </div>
+          <div class="field full">
+            <label>Notes (optional)</label>
+            <textarea id="tx-notes" placeholder="Free text. For meat birds: live weight, dressed weight, mortality, days to process — these will migrate to structured fields when Stockyard ships."></textarea>
+          </div>
+        </div>
+        <button class="save-btn" id="tx-save" style="margin-top: 14px;">Save change</button>
+        <button class="btn-secondary" id="tx-cancel" style="margin-top: 14px; display:none;">Cancel edit</button>
+      </div>
+    </div>
+
+    <div class="history-section">
+      <h3>History</h3>
+      <div id="history-list" class="history-list"></div>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section class="panel" data-panel="data">
+    <h2 class="section-head">Import / Export</h2>
+    <p class="section-sub">CSV bulk in, CSV out. Format: <code>YYYY-MM-DD,count</code></p>
+    <h3 style="font-family: 'Fraunces', serif; margin: 24px 0 8px;">Paste CSV to import</h3>
+    <textarea class="csv-area" id="csv-input" placeholder="2026-01-01,17&#10;2026-01-02,24&#10;..."></textarea>
+    <div class="ie-row">
+      <button class="btn-secondary" id="csv-import">Import egg CSV</button>
+      <button class="btn-secondary" id="csv-export">Export egg log</button>
+      <button class="btn-secondary" id="flock-export">Export flock log</button>
+      <button class="btn-secondary" id="breeds-export">Export breed list</button>
+    </div>
+    <h3 class="section-head" style="font-size: 1.2rem;">Danger zone</h3>
+    <div class="ie-row">
+      <button class="btn-secondary btn-danger" id="reset-data">Reset all data</button>
+    </div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section class="panel" data-panel="settings">
+    <h2 class="section-head">Settings</h2>
+    <p class="section-sub">Tunes the display and model. Persists across sessions.</p>
+
+    <div class="card" style="margin-top: 8px;">
+      <div class="card-tag">Display</div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Show expected band on chart</div>
+          <div class="setting-help">Shaded ±15% range behind the 60-day chart.</div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="set-band" checked><span class="toggle-slider"></span></label>
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Show breed data cards</div>
+          <div class="setting-help">Click any breed name to see advertised data. Off = breed names display as plain text.</div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="set-cards" checked><span class="toggle-slider"></span></label>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 28px;">
+      <div class="card-tag">Production model</div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Winter light supplementation</div>
+          <div class="setting-help">Heat lamp keeps waterers from freezing, lights keep birds laying through winter.</div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="set-light" checked><span class="toggle-slider"></span></label>
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Reality factor floor (%)</div>
+          <div class="setting-help">Vacuum-projections shows this many points below floor → flag.</div>
+        </div>
+        <input type="number" class="setting-input" id="set-rf-floor" min="0" max="200" step="5" />
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Cohort retirement age (years)</div>
+          <div class="setting-help">Flag cohorts older than this as post-productive.</div>
+        </div>
+        <input type="number" class="setting-input" id="set-retire-age" min="2" max="12" />
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Production rate curve (Y1/Y2/Y3/Y4+) <span class="setting-stockyard-flag">Stockyard hook</span></div>
+          <div class="setting-help">Currently hardcoded at 0.80 / 0.65 / 0.50 / 0.35. Stockyard will auto-tune from historical data.</div>
+        </div>
+        <span style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--ink-faint);">deferred</span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 28px;">
+      <div class="card-tag">Breeds &amp; reasons</div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Auto-prune unused breeds</div>
+          <div class="setting-help">Breeds you haven't used in this many years drop off suggestions (still searchable).</div>
+        </div>
+        <select id="set-prune" class="setting-select">
+          <option value="1">1 year</option>
+          <option value="2">2 years</option>
+          <option value="5">5 years</option>
+          <option value="never">Never</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">New breed confirmation <span class="setting-stockyard-flag">Stockyard hook</span></div>
+          <div class="setting-help">Currently: prompt to confirm with suggested matches. Stockyard will move to silent-add once breed library is mature.</div>
+        </div>
+        <span style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--ink-faint);">prompt + suggest</span>
+      </div>
+      <div class="setting-row">
+        <div>
+          <div class="setting-label">Fuzzy match threshold <span class="setting-stockyard-flag">Stockyard hook</span></div>
+          <div class="setting-help">Hardcoded at 85% for v1. Revisit in 2 years if catching too many / too few.</div>
+        </div>
+        <span style="font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--ink-faint);">85%</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    Egg &amp; Ledger v2 &middot; <strong>Edelweiss Farms, LLC</strong> &middot; built for Stockyard
+  </div>
+</div>
+
+<!-- Breed card modal -->
+<div class="breed-modal-bg" id="breed-modal-bg">
+  <div class="breed-modal" id="breed-modal">
+    <button class="breed-modal-close" id="breed-modal-close" aria-label="Close">×</button>
+    <div id="breed-modal-content"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// =====================================================================
+// STORAGE
+// =====================================================================
+const KEYS = {
+  EGGS: 'stockyard:eggs-log',
+  FLOCK_LOG: 'stockyard:flock-log',
+  FLOCK_LEGACY: 'stockyard:flock-config',  // archived v1 entries
+  BREEDS: 'stockyard:breeds',              // user's breed list with overrides + notes
+  REASONS: 'stockyard:reasons',            // user's reason list (silent learning)
+  SETTINGS: 'stockyard:settings',
+};
+
+const storage = {
+  async get(key, fallback) {
+    try {
+      const r = await window.storage.get(key);
+      if (r && r.value !== undefined) {
+        try { return JSON.parse(r.value); } catch { return fallback; }
+      }
+      return fallback;
+    } catch { return fallback; }
+  },
+  async set(key, value) {
+    try { await window.storage.set(key, JSON.stringify(value)); return true; }
+    catch (e) { console.error('storage set failed', key, e); return false; }
+  },
+  async clear(key) {
+    try { await window.storage.delete(key); return true; }
+    catch { return false; }
+  },
+};
+
+// =====================================================================
+// BREED REFERENCE DATA (curated, baked-in)
+// =====================================================================
+// type: layer | meat | dual
+// stats: layerStats { eggsPerYear, eggColor, eggSize } / meatStats { matureWeightLb, daysToProcess, fcr, dressingPct }
+// general: cold/heat hardy, weight, temperament, etc.
+const BREED_DATA = {
+  // ---- USER'S CURRENT ORDER ----
+  "Ginger Brown": {
+    altNames: "",
+    type: "layer",
+    layerStats: { eggsPerYear: 280, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 4.5, rooster: 5.5 },
+    layOnsetWeeks: 18,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Friendly hybrid, calm, good for family flocks. Reliable production layer.",
+    origin: "Production hybrid, Hubbard/ISA derived."
+  },
+  "Marans": {
+    altNames: "Black Copper Marans, Cuckoo Marans",
+    type: "layer",
+    layerStats: { eggsPerYear: 200, eggColor: "Dark chocolate brown", eggSize: "Large" },
+    matureWeightLb: { hen: 6.5, rooster: 8 },
+    layOnsetWeeks: 24,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: false,
+    temperament: "Quiet, docile, hardy. Famous for the deepest brown eggs of any breed.",
+    origin: "Marans, France. Developed early 1900s."
+  },
+  "Whiting True Blue": {
+    altNames: "WTB",
+    type: "layer",
+    layerStats: { eggsPerYear: 300, eggColor: "Blue", eggSize: "Large" },
+    matureWeightLb: { hen: 4, rooster: 5 },
+    layOnsetWeeks: 20,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Active, alert, excellent foragers. Tom Whiting's blue-egg production line.",
+    origin: "Whiting Farms, Colorado. Developed by Dr. Tom Whiting."
+  },
+  "Whiting True Green": {
+    altNames: "WTG",
+    type: "layer",
+    layerStats: { eggsPerYear: 280, eggColor: "Green", eggSize: "Large" },
+    matureWeightLb: { hen: 4, rooster: 5 },
+    layOnsetWeeks: 20,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Active, alert. Sister line to True Blue.",
+    origin: "Whiting Farms, Colorado."
+  },
+  "Combless Leghorn": {
+    altNames: "California White, Combless White Leghorn",
+    type: "layer",
+    layerStats: { eggsPerYear: 290, eggColor: "White", eggSize: "Large" },
+    matureWeightLb: { hen: 4.5, rooster: 6 },
+    layOnsetWeeks: 18,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "High-strung, prolific. Combless variant tolerates cold better than standard Leghorn.",
+    origin: "Italian breed, US adaptation."
+  },
+  "Mille Fleur": {
+    altNames: "Mille Fleur d'Uccle, Booted Bantam",
+    type: "layer",
+    layerStats: { eggsPerYear: 150, eggColor: "Cream/tinted", eggSize: "Small" },
+    matureWeightLb: { hen: 1.5, rooster: 1.7 },
+    layOnsetWeeks: 22,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: true,
+    temperament: "Bantam. Tame, ornamental, often kept as pets. Excellent broody mothers.",
+    origin: "Uccle, Belgium. Late 1800s."
+  },
+  "Colorado Gold": {
+    altNames: "Colorado Ranger, Quality Ranger",
+    type: "meat",
+    meatStats: { matureWeightLb: 6, daysToProcess: 75, fcr: 2.5, dressingPct: 72 },
+    matureWeightLb: { hen: 6, rooster: 8 },
+    layOnsetWeeks: null,
+    coldHardy: true, heatHardy: true,
+    temperament: "Slow-growing meat bird. Robust, forages well, better welfare than Cornish Cross.",
+    origin: "Hubbard ColorYield genetics, US strain."
+  },
+  "Jumbo Naked Neck": {
+    altNames: "Turken, Transylvanian Naked Neck",
+    type: "dual",
+    meatStats: { matureWeightLb: 8, daysToProcess: 100, fcr: 2.8, dressingPct: 70 },
+    layerStats: { eggsPerYear: 180, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 6.5, rooster: 8.5 },
+    layOnsetWeeks: 24,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Distinctive bare neck. Easier to process. Excellent heat tolerance, surprisingly cold-hardy. Dual purpose.",
+    origin: "Transylvania, Romania."
+  },
+  // ---- COMMON BREEDS (seeded suggestions) ----
+  "Buff Orpington": {
+    altNames: "Orpington",
+    type: "dual",
+    layerStats: { eggsPerYear: 200, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 8, rooster: 10 },
+    layOnsetWeeks: 22,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: false,
+    temperament: "Big, gentle, broody. The golden retriever of chickens.",
+    origin: "Orpington, England. William Cook, 1886."
+  },
+  "Rhode Island Red": {
+    altNames: "RIR",
+    type: "dual",
+    layerStats: { eggsPerYear: 250, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 6.5, rooster: 8.5 },
+    layOnsetWeeks: 20,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: true,
+    temperament: "Hardy, dual-purpose American classic. Roosters can be aggressive.",
+    origin: "Rhode Island, USA. Late 1800s."
+  },
+  "Barred Rock": {
+    altNames: "Barred Plymouth Rock, Plymouth Rock",
+    type: "dual",
+    layerStats: { eggsPerYear: 240, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 7.5, rooster: 9.5 },
+    layOnsetWeeks: 20,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: true,
+    temperament: "Friendly, hardy, classic American dual-purpose breed.",
+    origin: "Plymouth, Massachusetts. Mid-1800s."
+  },
+  "Australorp": {
+    altNames: "Black Australorp",
+    type: "dual",
+    layerStats: { eggsPerYear: 250, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 6.5, rooster: 8.5 },
+    layOnsetWeeks: 20,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: true,
+    temperament: "Calm, friendly, exceptional layer. Holds the egg-laying world record (364 in 365 days).",
+    origin: "Australia, from Orpington stock."
+  },
+  "Wyandotte": {
+    altNames: "Silver Laced Wyandotte, Gold Laced Wyandotte",
+    type: "dual",
+    layerStats: { eggsPerYear: 200, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 6.5, rooster: 8.5 },
+    layOnsetWeeks: 20,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: false,
+    temperament: "Beautiful laced plumage. Hardy, calm, good winter layer.",
+    origin: "USA, 1870s."
+  },
+  "Easter Egger": {
+    altNames: "EE, Ameraucana mix",
+    type: "layer",
+    layerStats: { eggsPerYear: 220, eggColor: "Blue/green/pink/olive (varies)", eggSize: "Medium-Large" },
+    matureWeightLb: { hen: 4, rooster: 5 },
+    layOnsetWeeks: 22,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Mixed parentage with blue-egg gene. Friendly, hardy, varied colors.",
+    origin: "USA. Not a true breed — Ameraucana/Araucana crosses."
+  },
+  "Olive Egger": {
+    altNames: "OE",
+    type: "layer",
+    layerStats: { eggsPerYear: 200, eggColor: "Olive green", eggSize: "Large" },
+    matureWeightLb: { hen: 5, rooster: 6 },
+    layOnsetWeeks: 22,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Marans × blue-layer cross. Friendly, hardy. Egg color deepens with diet.",
+    origin: "Designer hybrid."
+  },
+  "Welsummer": {
+    altNames: "Welsumer",
+    type: "layer",
+    layerStats: { eggsPerYear: 180, eggColor: "Dark brown speckled", eggSize: "Large" },
+    matureWeightLb: { hen: 6, rooster: 7 },
+    layOnsetWeeks: 22,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: false,
+    temperament: "Calm, alert. Cornelius the Kellogg's mascot is a Welsummer.",
+    origin: "Welsum, Netherlands. 1920s."
+  },
+  "Speckled Sussex": {
+    altNames: "Sussex",
+    type: "dual",
+    layerStats: { eggsPerYear: 240, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 7, rooster: 9 },
+    layOnsetWeeks: 20,
+    productiveYears: 4,
+    coldHardy: true, heatHardy: true,
+    temperament: "Curious, friendly, beautiful mahogany speckled plumage.",
+    origin: "Sussex, England. Ancient."
+  },
+  "Brahma": {
+    altNames: "Light Brahma, Dark Brahma, Buff Brahma",
+    type: "dual",
+    layerStats: { eggsPerYear: 180, eggColor: "Brown", eggSize: "Medium-Large" },
+    matureWeightLb: { hen: 10, rooster: 12 },
+    layOnsetWeeks: 28,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: false,
+    temperament: "Massive, gentle giants. Feathered legs. Excellent cold-hardy.",
+    origin: "Brahmaputra River region, then refined in USA mid-1800s."
+  },
+  "Silkie": {
+    altNames: "",
+    type: "layer",
+    layerStats: { eggsPerYear: 100, eggColor: "Cream/tinted", eggSize: "Small" },
+    matureWeightLb: { hen: 2, rooster: 3 },
+    layOnsetWeeks: 28,
+    productiveYears: 3,
+    coldHardy: false, heatHardy: false,
+    temperament: "Fluffy, gentle, ornamental. Excellent broody mothers, often used to hatch other breeds' eggs.",
+    origin: "China. Ancient breed."
+  },
+  "Cornish Cross": {
+    altNames: "Cornish X, Jumbo Cornish Cross",
+    type: "meat",
+    meatStats: { matureWeightLb: 5.5, daysToProcess: 49, fcr: 1.9, dressingPct: 75 },
+    matureWeightLb: { hen: 5.5, rooster: 7 },
+    layOnsetWeeks: null,
+    coldHardy: true, heatHardy: false,
+    temperament: "Fast-growing industrial meat bird. Welfare concerns at processing age. Eats constantly.",
+    origin: "Industrial hybrid, mid-1900s."
+  },
+  "Red Ranger": {
+    altNames: "Freedom Ranger, Red Broiler",
+    type: "meat",
+    meatStats: { matureWeightLb: 5.5, daysToProcess: 75, fcr: 2.4, dressingPct: 72 },
+    matureWeightLb: { hen: 5.5, rooster: 7 },
+    layOnsetWeeks: null,
+    coldHardy: true, heatHardy: true,
+    temperament: "Slow-growing meat bird, active forager. Pastured-poultry favorite.",
+    origin: "Hubbard JA57 line, France/USA."
+  },
+  "Sapphire Gem": {
+    altNames: "Blue Plymouth Rock cross",
+    type: "layer",
+    layerStats: { eggsPerYear: 290, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 5, rooster: 6 },
+    layOnsetWeeks: 18,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Sex-linked production hybrid. Calm, friendly, beautiful blue plumage.",
+    origin: "Hatchery hybrid, USA."
+  },
+  "Black Star": {
+    altNames: "Black Sex-Link",
+    type: "layer",
+    layerStats: { eggsPerYear: 280, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 5, rooster: 6.5 },
+    layOnsetWeeks: 18,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: true,
+    temperament: "Sex-linked production hybrid. Hardy, calm, prolific brown-egg layer.",
+    origin: "Hatchery hybrid."
+  },
+  "Red Star": {
+    altNames: "Red Sex-Link, ISA Brown, Cinnamon Queen",
+    type: "layer",
+    layerStats: { eggsPerYear: 300, eggColor: "Brown", eggSize: "Large" },
+    matureWeightLb: { hen: 4.5, rooster: 6 },
+    layOnsetWeeks: 18,
+    productiveYears: 2,
+    coldHardy: true, heatHardy: true,
+    temperament: "Top egg-laying hybrid. Friendly, calm. Burn out faster than heritage breeds.",
+    origin: "Hatchery hybrid."
+  },
+  "Cochin": {
+    altNames: "Buff Cochin, Partridge Cochin",
+    type: "layer",
+    layerStats: { eggsPerYear: 160, eggColor: "Brown", eggSize: "Medium" },
+    matureWeightLb: { hen: 8.5, rooster: 11 },
+    layOnsetWeeks: 28,
+    productiveYears: 3,
+    coldHardy: true, heatHardy: false,
+    temperament: "Large, fluffy, feathered feet. Gentle, broody, ornamental.",
+    origin: "China, refined in England 1800s."
+  },
+  "Polish": {
+    altNames: "White Crested Black Polish, Golden Polish",
+    type: "layer",
+    layerStats: { eggsPerYear: 150, eggColor: "White", eggSize: "Medium" },
+    matureWeightLb: { hen: 4.5, rooster: 6 },
+    layOnsetWeeks: 22,
+    productiveYears: 3,
+    coldHardy: false, heatHardy: true,
+    temperament: "Crested head feathers obscure vision — often startled. Ornamental.",
+    origin: "Eastern Europe, name misleading."
+  },
+};
+
+// Common reason templates (seeded)
+const REASON_SEEDS = [
+  "Spring order",
+  "Fall order",
+  "Hatched on farm",
+  "Predator loss",
+  "Illness",
+  "Died of unknown causes",
+  "Processed",
+  "Sold",
+  "Given away",
+  "Chick mortality",
+  "Auto-promoted (pullet → layer)",
+  "Annual refresh — aged out",
+];
+
+// =====================================================================
+// STATE
+// =====================================================================
+const STATE = {
+  eggs: {},
+  flockLog: [],   // [{id, date, sign, count, category, breed, cohortYear, isPetLayer, reason, notes, edited, autoGenerated}]
+  breeds: {},     // { 'Breed Name': { lastUsed: 'YYYY-MM-DD', overrides: {}, userNotes: '' } }
+  reasons: [],    // [{ text, lastUsed }]
+  settings: {
+    showBandOnChart: true,
+    showCards: true,
+    supplementLighting: true,
+    realityFactorFloor: 70,
+    cohortRetirementAge: 6,
+    pruneYears: 2,
+  },
+  ui: {
+    backfillMonth: null,
+    editingTxId: null,
+    txSign: 1,
+    vacuumExpanded: false,
+  },
+};
+
+// =====================================================================
+// CONSTANTS
+// =====================================================================
+const SEASONAL_LIT = { 0: 0.80, 1: 0.80, 2: 0.85, 3: 0.95, 4: 0.95, 5: 1.00, 6: 1.00, 7: 0.95, 8: 0.85, 9: 0.70, 10: 0.80, 11: 0.80 };
+const SEASONAL_NATURAL = { 0: 0.65, 1: 0.65, 2: 0.80, 3: 0.95, 4: 0.95, 5: 1.00, 6: 1.00, 7: 0.95, 8: 0.85, 9: 0.70, 10: 0.55, 11: 0.55 };
+const COHORT_RATES = { 1: 0.80, 2: 0.65, 3: 0.50, 4: 0.35 };  // Y1, Y2, Y3, Y4+
+const BAND_PCT = 0.15;
+const DEFAULT_LAY_ONSET_MONTHS = 5;
+const FUZZY_THRESHOLD = 0.85;
+const CATEGORIES = ['layer', 'pullet', 'cockerel', 'rooster', 'meat', 'pet', 'other'];
+const CATEGORY_LABELS = {
+  layer: 'Layer', pullet: 'Pullet', cockerel: 'Cockerel', rooster: 'Rooster',
+  meat: 'Meat bird', pet: 'Pet', other: 'Other'
+};
+
+// =====================================================================
+// UTILS
+// =====================================================================
+function ymd(d) {
+  const yr = d.getFullYear();
+  const mo = String(d.getMonth() + 1).padStart(2, '0');
+  const da = String(d.getDate()).padStart(2, '0');
+  return `${yr}-${mo}-${da}`;
+}
+function todayStr() { return ymd(new Date()); }
+function parseYMD(s) { return new Date(s + 'T12:00:00'); }
+function addDays(d, n) { const r = new Date(d); r.setDate(r.getDate() + n); return r; }
+function addMonths(d, n) { const r = new Date(d); r.setMonth(r.getMonth() + n); return r; }
+function daysBetween(a, b) { return Math.round((parseYMD(b) - parseYMD(a)) / 86400000); }
+function monthName(m) {
+  return ['January','February','March','April','May','June','July','August','September','October','November','December'][m];
+}
+function fmtLongDate(d) {
+  return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+}
+function fmtDateShort(s) {
+  if (!s) return '';
+  return parseYMD(s).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function uid() { return 'tx_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8); }
+
+// Title-case each word
+function autoCap(s) {
+  return s.replace(/\b\w+/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+}
+
+// Levenshtein similarity (0..1, where 1 is identical)
+function similarity(a, b) {
+  a = a.toLowerCase(); b = b.toLowerCase();
+  if (!a || !b) return 0;
+  const m = a.length, n = b.length;
+  if (Math.abs(m - n) / Math.max(m, n) > (1 - FUZZY_THRESHOLD)) return 0;  // shortcut
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (a[i-1] === b[j-1]) dp[i][j] = dp[i-1][j-1];
+      else dp[i][j] = 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+    }
+  }
+  return 1 - dp[m][n] / Math.max(m, n);
+}
+
+// =====================================================================
+// COHORT MATH (transaction model)
+// =====================================================================
+// Walk transactions up to and including dateStr; return summarized state.
+function flockStateOn(dateStr) {
+  const txs = [...STATE.flockLog]
+    .filter(t => t.date <= dateStr)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  // Group by (category, breed, cohortYear, isPetLayer) — call this a "cohort key"
+  const cohorts = {};  // key -> {category, breed, cohortYear, isPetLayer, count}
+  for (const tx of txs) {
+    const key = `${tx.category}|${tx.breed || '(unspecified)'}|${tx.cohortYear || ''}|${tx.isPetLayer ? '1' : '0'}`;
+    if (!cohorts[key]) {
+      cohorts[key] = {
+        category: tx.category,
+        breed: tx.breed || '',
+        cohortYear: tx.cohortYear || null,
+        isPetLayer: !!tx.isPetLayer,
+        count: 0,
+      };
+    }
+    cohorts[key].count += tx.sign * tx.count;
+  }
+
+  // Drop empties and negatives (shouldn't happen but be safe)
+  const result = Object.values(cohorts).filter(c => c.count > 0);
+  return result;
+}
+
+// What's the production rate for a cohort on a given date?
+// Layers: year of lay based on (currentYear - cohortYear + 1), clamped 1..4+
+function cohortRate(cohort, dateStr) {
+  const eligibleCategories = ['layer'];
+  const isPetWithLay = (cohort.category === 'pet' && cohort.isPetLayer);
+  if (!eligibleCategories.includes(cohort.category) && !isPetWithLay) return 0;
+  const d = parseYMD(dateStr);
+  const year = d.getFullYear();
+  const cohortYear = cohort.cohortYear || year;
+  const yearsSinceCohort = Math.max(0, year - cohortYear);
+  // Year of lay: cohort placed in 2026 starts laying in 2026 (Y1), in 2027 is Y2, etc.
+  const yearOfLay = Math.min(4, yearsSinceCohort + 1);
+  return COHORT_RATES[yearOfLay] || COHORT_RATES[4];
+}
+
+// Sum of effective layers on a date (including pet layers, weighted by year-of-lay)
+// We can't simply count birds — we have to apply the cohort rate when computing expected
+// So this returns an "expected eggs without seasonal modifier" — Σ (cohort.count × cohortRate)
+function expectedRawForDate(dateStr) {
+  const cohorts = flockStateOn(dateStr);
+  let total = 0;
+  for (const c of cohorts) {
+    total += c.count * cohortRate(c, dateStr);
+  }
+  return total;
+}
+
+// Count of laying birds on a date (for "eggs per hen" denominator)
+function layerCountOn(dateStr) {
+  const cohorts = flockStateOn(dateStr);
+  let count = 0;
+  for (const c of cohorts) {
+    if (c.category === 'layer' || (c.category === 'pet' && c.isPetLayer)) {
+      count += c.count;
+    }
+  }
+  return count;
+}
+
+function seasonalFor(monthIdx) {
+  return STATE.settings.supplementLighting ? SEASONAL_LIT[monthIdx] : SEASONAL_NATURAL[monthIdx];
+}
+
+function expectedIndustry(dateStr) {
+  const raw = expectedRawForDate(dateStr);
+  if (raw <= 0) return null;
+  const d = parseYMD(dateStr);
+  return raw * seasonalFor(d.getMonth());
+}
+
+function expectedYoY(dateStr) {
+  const d = parseYMD(dateStr);
+  const priorYear = d.getFullYear() - 1;
+  const counts = [];
+  for (let offset = -7; offset <= 7; offset++) {
+    const probe = new Date(priorYear, d.getMonth(), d.getDate() + offset);
+    const k = ymd(probe);
+    if (STATE.eggs[k] != null && STATE.eggs[k] > 0) counts.push(STATE.eggs[k]);
+  }
+  if (counts.length < 5) return null;
+  return counts.reduce((a, b) => a + b, 0) / counts.length;
+}
+
+function expectedFor(dateStr) {
+  const yoy = expectedYoY(dateStr);
+  if (yoy !== null) return { value: yoy, source: 'yoy' };
+  const ind = expectedIndustry(dateStr);
+  if (ind !== null) return { value: ind, source: 'industry' };
+  return null;
+}
+
+// =====================================================================
+// PULLET AUTO-PROMOTION
+// =====================================================================
+// For each pullet transaction (add only), check if cohort age has reached lay-onset.
+// If so, ensure a paired auto-generated layer transaction exists.
+async function processAutoPromotions() {
+  const today = todayStr();
+  const existing = new Set(STATE.flockLog.filter(t => t.autoGenerated && t.parentTxId).map(t => t.parentTxId));
+  const newlyGenerated = [];
+
+  for (const tx of STATE.flockLog) {
+    if (tx.category !== 'pullet') continue;
+    if (tx.sign !== 1) continue;
+    if (existing.has(tx.id)) continue;
+    if (!tx.breed) continue;
+    const breedData = BREED_DATA[tx.breed];
+    const onsetWeeks = breedData?.layOnsetWeeks;
+    const onsetMonths = onsetWeeks ? Math.ceil(onsetWeeks / 4.3) : DEFAULT_LAY_ONSET_MONTHS;
+    const arrivalDate = parseYMD(tx.date);
+    const promotionDate = addMonths(arrivalDate, onsetMonths);
+    if (promotionDate <= parseYMD(today)) {
+      // Generate auto-promotion transaction: subtract from pullet, add to layer
+      const promotionDateStr = ymd(promotionDate);
+      // Subtract pullets
+      newlyGenerated.push({
+        id: uid(),
+        date: promotionDateStr,
+        sign: -1,
+        count: tx.count,
+        category: 'pullet',
+        breed: tx.breed,
+        cohortYear: tx.cohortYear,
+        isPetLayer: false,
+        reason: 'Auto-promoted (pullet → layer)',
+        notes: `Reached lay onset (~${onsetMonths} mo) from arrival on ${fmtDateShort(tx.date)}`,
+        autoGenerated: true,
+        parentTxId: tx.id,
+      });
+      // Add layers
+      newlyGenerated.push({
+        id: uid(),
+        date: promotionDateStr,
+        sign: 1,
+        count: tx.count,
+        category: 'layer',
+        breed: tx.breed,
+        cohortYear: tx.cohortYear,
+        isPetLayer: false,
+        reason: 'Auto-promoted (pullet → layer)',
+        notes: `Reached lay onset (~${onsetMonths} mo) from arrival on ${fmtDateShort(tx.date)}`,
+        autoGenerated: true,
+        parentTxId: tx.id,
+      });
+    }
+  }
+  if (newlyGenerated.length > 0) {
+    STATE.flockLog.push(...newlyGenerated);
+    await storage.set(KEYS.FLOCK_LOG, STATE.flockLog);
+  }
+}
+
+// =====================================================================
+// BREED + REASON LIBRARIES
+// =====================================================================
+function knownBreedNames() {
+  const seeded = Object.keys(BREED_DATA);
+  const userKnown = Object.keys(STATE.breeds || {});
+  const set = new Set([...seeded, ...userKnown]);
+  return Array.from(set).sort();
+}
+
+function shouldPruneBreed(name) {
+  if (STATE.settings.pruneYears === 'never') return false;
+  const meta = STATE.breeds[name];
+  if (!meta || !meta.lastUsed) {
+    // not in user data — seeded only, always suggested unless never used in N years
+    return false;
+  }
+  const lastUsed = parseYMD(meta.lastUsed);
+  const cutoff = addMonths(new Date(), -12 * STATE.settings.pruneYears);
+  return lastUsed < cutoff;
+}
+
+function suggestedBreeds(query) {
+  query = (query || '').trim();
+  const all = knownBreedNames();
+  const lc = query.toLowerCase();
+  if (!query) {
+    return all.filter(n => !shouldPruneBreed(n)).slice(0, 8);
+  }
+  const exactPrefix = all.filter(n => n.toLowerCase().startsWith(lc));
+  const contains = all.filter(n => n.toLowerCase().includes(lc) && !exactPrefix.includes(n));
+  const fuzzy = all
+    .filter(n => !exactPrefix.includes(n) && !contains.includes(n))
+    .map(n => ({ name: n, score: similarity(n, query) }))
+    .filter(o => o.score >= FUZZY_THRESHOLD)
+    .sort((a, b) => b.score - a.score)
+    .map(o => o.name);
+  return [...exactPrefix, ...contains, ...fuzzy].slice(0, 8);
+}
+
+function suggestedReasons(query) {
+  query = (query || '').trim();
+  const all = [...new Set([...REASON_SEEDS, ...STATE.reasons.map(r => r.text)])];
+  const lc = query.toLowerCase();
+  if (!query) return all.slice(0, 8);
+  const exactPrefix = all.filter(r => r.toLowerCase().startsWith(lc));
+  const contains = all.filter(r => r.toLowerCase().includes(lc) && !exactPrefix.includes(r));
+  const fuzzy = all
+    .filter(r => !exactPrefix.includes(r) && !contains.includes(r))
+    .map(r => ({ text: r, score: similarity(r, query) }))
+    .filter(o => o.score >= FUZZY_THRESHOLD)
+    .sort((a, b) => b.score - a.score)
+    .map(o => o.text);
+  return [...exactPrefix, ...contains, ...fuzzy].slice(0, 8);
+}
+
+async function recordBreedUsage(name) {
+  if (!name) return;
+  if (!STATE.breeds[name]) STATE.breeds[name] = { lastUsed: todayStr(), overrides: {}, userNotes: '' };
+  else STATE.breeds[name].lastUsed = todayStr();
+  await storage.set(KEYS.BREEDS, STATE.breeds);
+}
+
+async function recordReasonUsage(text) {
+  if (!text) return;
+  const exist = STATE.reasons.find(r => r.text === text);
+  if (exist) exist.lastUsed = todayStr();
+  else STATE.reasons.push({ text, lastUsed: todayStr() });
+  await storage.set(KEYS.REASONS, STATE.reasons);
+}
+
+// =====================================================================
+// EGG STATS
+// =====================================================================
+function loggedDays() {
+  return Object.entries(STATE.eggs).filter(([, v]) => v != null && v > 0);
+}
+
+function mtdTotal() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), now.getMonth(), 1);
+  let total = 0, days = 0;
+  for (let d = new Date(start); d <= now; d = addDays(d, 1)) {
+    const v = STATE.eggs[ymd(d)];
+    if (v != null && v > 0) { total += v; days++; }
+  }
+  return { total, days };
+}
+function ytdTotal() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 1);
+  let total = 0, days = 0;
+  for (let d = new Date(start); d <= now; d = addDays(d, 1)) {
+    const v = STATE.eggs[ymd(d)];
+    if (v != null && v > 0) { total += v; days++; }
+  }
+  return { total, days };
+}
+
+// Avg eggs per day — A: per logged day, B: per calendar day from first entry
+function avgEggsPerDay() {
+  const lds = loggedDays();
+  if (lds.length === 0) return { perLogged: 0, perCalendar: 0 };
+  const total = lds.reduce((s, [, v]) => s + v, 0);
+  const perLogged = total / lds.length;
+  const dates = lds.map(([k]) => k).sort();
+  const calendarDays = daysBetween(dates[0], todayStr()) + 1;
+  const perCalendar = calendarDays > 0 ? total / calendarDays : 0;
+  return { perLogged, perCalendar };
+}
+
+// Avg eggs per hen — walks each logged day, eggs / layer count on that day
+function avgEggsPerHen() {
+  const lds = loggedDays();
+  if (lds.length === 0) return { perLogged: 0, perCalendar: 0 };
+  // perLogged: average of (eggs / layers) over logged days where layers > 0
+  let sumRatio = 0, ratioCount = 0;
+  let sumEggs = 0, sumHenDays = 0;
+  let calendarDays = 0;
+  const dates = lds.map(([k]) => k).sort();
+  if (dates.length === 0) return { perLogged: 0, perCalendar: 0 };
+  for (const [date, eggs] of lds) {
+    const layers = layerCountOn(date);
+    if (layers > 0) {
+      sumRatio += eggs / layers;
+      ratioCount++;
+      sumEggs += eggs;
+      sumHenDays += layers;
+    }
+  }
+  // For perCalendar: sum eggs / sum hen-days across full calendar window from first entry to today
+  let totalHenDays = 0;
+  let totalEggs = 0;
+  for (let d = parseYMD(dates[0]); d <= new Date(); d = addDays(d, 1)) {
+    const k = ymd(d);
+    const layers = layerCountOn(k);
+    totalHenDays += layers;
+    const eggs = STATE.eggs[k];
+    if (eggs != null && eggs > 0) totalEggs += eggs;
+    calendarDays++;
+  }
+  return {
+    perLogged: ratioCount > 0 ? sumRatio / ratioCount : 0,
+    perCalendar: totalHenDays > 0 ? totalEggs / totalHenDays : 0,
+  };
+}
+
+function lifetimeStats() {
+  const entries = loggedDays();
+  if (entries.length === 0) return { lifetime: 0, days: 0, best: null, worst: null, busiest: null, slowest: null };
+  let lifetime = 0, best = null, worst = null;
+  entries.forEach(([k, v]) => {
+    lifetime += v;
+    if (!best || v > best.count) best = { date: k, count: v };
+    if (!worst || v < worst.count) worst = { date: k, count: v };
+  });
+  const months = monthlyBreakdown();
+  let busiest = null, slowest = null;
+  months.forEach(m => {
+    if (!busiest || m.total > busiest.total) busiest = m;
+    if (!slowest || m.total < slowest.total) slowest = m;
+  });
+  return { lifetime, days: entries.length, best, worst, busiest, slowest };
+}
+
+function monthlyBreakdown() {
+  const months = {};
+  for (const [k, v] of Object.entries(STATE.eggs)) {
+    if (v == null || v <= 0) continue;
+    const ym = k.substring(0, 7);
+    if (!months[ym]) months[ym] = { total: 0, days: 0, high: -Infinity, low: Infinity, highDate: '', lowDate: '' };
+    months[ym].total += v;
+    months[ym].days += 1;
+    if (v > months[ym].high) { months[ym].high = v; months[ym].highDate = k; }
+    if (v < months[ym].low) { months[ym].low = v; months[ym].lowDate = k; }
+  }
+  return Object.entries(months).sort((a, b) => b[0].localeCompare(a[0])).map(([ym, m]) => ({
+    ym,
+    label: `${monthName(parseInt(ym.substring(5, 7)) - 1)} ${ym.substring(0, 4)}`,
+    total: m.total,
+    days: m.days,
+    avg: m.days > 0 ? m.total / m.days : 0,
+    high: m.high === -Infinity ? 0 : m.high,
+    low: m.low === Infinity ? 0 : m.low,
+    highDate: m.highDate,
+    lowDate: m.lowDate,
+    dozen: Math.floor(m.total / 12),
+    dozenRem: m.total % 12,
+  }));
+}
+
+function consistencyStats() {
+  const entries = loggedDays();
+  if (entries.length === 0) return { pct: 0, longestGap: 0, currentGap: 0, totalDays: 0, loggedDays: 0 };
+  const sorted = entries.sort((a, b) => a[0].localeCompare(b[0]));
+  const first = sorted[0][0];
+  const today = todayStr();
+  const totalDays = daysBetween(first, today) + 1;
+  const loggedDaysCount = sorted.length;
+  const pct = totalDays > 0 ? (loggedDaysCount / totalDays) * 100 : 0;
+  let longest = 0, curGap = 0;
+  for (let d = parseYMD(first); d <= parseYMD(today); d = addDays(d, 1)) {
+    const k = ymd(d);
+    if (STATE.eggs[k] != null && STATE.eggs[k] > 0) curGap = 0;
+    else { curGap++; if (curGap > longest) longest = curGap; }
+  }
+  let currentGap = 0;
+  for (let d = new Date(); d >= parseYMD(first); d = addDays(d, -1)) {
+    const v = STATE.eggs[ymd(d)];
+    if (v != null && v > 0) break;
+    currentGap++;
+  }
+  return { pct, longestGap: longest, currentGap, totalDays, loggedDays: loggedDaysCount };
+}
+
+// =====================================================================
+// VACUUM PROJECTIONS
+// =====================================================================
+// For the current year, for each active layer cohort (and pet-layer):
+//   advertised eggs/year × cohort age modifier × count = annual projection
+// Then normalize for year-elapsed.
+function getBreedAdvertisedEggs(breedName) {
+  const data = BREED_DATA[breedName];
+  if (!data) return null;
+  const meta = STATE.breeds[breedName];
+  // Allow user override
+  if (meta?.overrides?.eggsPerYear != null) return meta.overrides.eggsPerYear;
+  return data.layerStats?.eggsPerYear || null;
+}
+
+function cohortAgeFactor(cohort, year) {
+  const yearsSince = Math.max(0, year - (cohort.cohortYear || year));
+  const yearOfLay = Math.min(4, yearsSince + 1);
+  return COHORT_RATES[yearOfLay] / COHORT_RATES[1];  // ratio relative to Y1 best year
+}
+
+function vacuumProjection() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const yearStart = new Date(year, 0, 1);
+  const yearEnd = new Date(year, 11, 31);
+
+  // Get all cohorts as of today
+  const cohorts = flockStateOn(todayStr());
+  const layerCohorts = cohorts.filter(c =>
+    c.category === 'layer' || (c.category === 'pet' && c.isPetLayer)
+  );
+
+  const breakdown = [];
+  let totalProjected = 0;
+  for (const c of layerCohorts) {
+    const advertised = getBreedAdvertisedEggs(c.breed);
+    if (advertised == null) {
+      // Unknown breed: skip projection but flag in breakdown
+      breakdown.push({
+        breed: c.breed || '(unspecified)',
+        category: c.category,
+        cohortYear: c.cohortYear,
+        count: c.count,
+        advertisedPerBird: null,
+        ageFactor: cohortAgeFactor(c, year),
+        annualProjected: null,
+        note: 'No advertised data — projection skipped',
+      });
+      continue;
+    }
+    const ageFactor = cohortAgeFactor(c, year);
+    const perBird = advertised * ageFactor;
+    const annual = perBird * c.count;
+    breakdown.push({
+      breed: c.breed,
+      category: c.category,
+      cohortYear: c.cohortYear,
+      count: c.count,
+      advertisedPerBird: Math.round(advertised),
+      ageFactor,
+      annualProjected: Math.round(annual),
+    });
+    totalProjected += annual;
+  }
+
+  // Compute season-aware projection for year-to-date by walking each day and summing per-day expected
+  let ytdProjected = 0;
+  const todayMs = today.getTime();
+  for (let d = new Date(yearStart); d <= today; d = addDays(d, 1)) {
+    const cohortsOnDay = flockStateOn(ymd(d));
+    const month = d.getMonth();
+    const seasonal = seasonalFor(month);
+    let perDay = 0;
+    for (const c of cohortsOnDay) {
+      const advertised = getBreedAdvertisedEggs(c.breed);
+      if (advertised == null) continue;
+      const isLayer = c.category === 'layer' || (c.category === 'pet' && c.isPetLayer);
+      if (!isLayer) continue;
+      const ageFactor = cohortAgeFactor(c, d.getFullYear());
+      // advertised eggs per bird per year → daily rate × seasonal × age × count
+      const dailyBase = advertised / 365;
+      perDay += dailyBase * ageFactor * seasonal * c.count;
+    }
+    ytdProjected += perDay;
+  }
+
+  // Actual YTD
+  const ytdActual = ytdTotal().total;
+  const realityFactor = ytdProjected > 0 ? (ytdActual / ytdProjected) * 100 : 0;
+
+  return {
+    totalProjected: Math.round(totalProjected),
+    ytdProjected: Math.round(ytdProjected),
+    ytdActual,
+    realityFactor,
+    breakdown,
+    year,
+  };
+}
+
+// =====================================================================
+// MOLT DETECTION
+// =====================================================================
+function detectAnomaly() {
+  const today = todayStr();
+  const win = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = ymd(addDays(new Date(), -i));
+    win.push({ date: d, count: STATE.eggs[d] });
+  }
+  const valid = win.filter(w => w.count != null && w.count > 0);
+  if (valid.length < 4) return null;
+  const actual = valid.reduce((s, w) => s + w.count, 0) / valid.length;
+
+  let expSum = 0, expCount = 0;
+  for (const w of win) {
+    const e = expectedFor(w.date);
+    if (e) { expSum += e.value; expCount++; }
+  }
+  if (expCount === 0) return null;
+  const expected = expSum / expCount;
+  if (expected <= 0) return null;
+  const shortfall = 1 - (actual / expected);
+  if (shortfall < 0.25) return null;
+  if (shortfall < 0.40) return {
+    tier: 1, shortfall, actual, expected,
+    title: 'Production dip — watch it',
+    text: `7-day actual avg of ${actual.toFixed(1)} is ~${(shortfall*100).toFixed(0)}% below expected (~${expected.toFixed(1)}). Could be weather, stress, or early molt.`
+  };
+  if (shortfall < 0.60) return {
+    tier: 2, shortfall, actual, expected,
+    title: 'Molt suspected',
+    text: `7-day actual avg of ${actual.toFixed(1)} is ~${(shortfall*100).toFixed(0)}% below expected (~${expected.toFixed(1)}). Half-flock molt fits this drop. Typical recovery: 6–8 weeks.`
+  };
+  return {
+    tier: 3, shortfall, actual, expected,
+    title: 'Bigger than a molt',
+    text: `7-day actual avg of ${actual.toFixed(1)} is ~${(shortfall*100).toFixed(0)}% below expected (~${expected.toFixed(1)}). Check water, predator activity, illness, feed quality.`
+  };
+}
+
+// =====================================================================
+// RENDERERS — TODAY
+// =====================================================================
+function renderTodayCard() {
+  const today = todayStr();
+  const d = new Date();
+  document.getElementById('today-date-label').textContent = fmtLongDate(d);
+  document.getElementById('brand-date').textContent = today;
+
+  const input = document.getElementById('today-count');
+  const existing = STATE.eggs[today];
+  if (existing != null && document.activeElement !== input) input.value = existing;
+
+  const exp = expectedFor(today);
+  const expEl = document.getElementById('expected-band');
+  const pillEl = document.getElementById('status-pill');
+  if (exp) {
+    const low = Math.round(exp.value * (1 - BAND_PCT));
+    const high = Math.round(exp.value * (1 + BAND_PCT));
+    expEl.textContent = `${low}–${high} eggs (${exp.source === 'yoy' ? 'last year' : 'baseline'})`;
+    const actual = parseInt(input.value, 10);
+    if (!isNaN(actual)) {
+      if (actual < low) { pillEl.className = 'status-pill status-low'; pillEl.textContent = `↓ ${low - actual} under`; }
+      else if (actual > high) { pillEl.className = 'status-pill status-high'; pillEl.textContent = `↑ ${actual - high} over`; }
+      else { pillEl.className = 'status-pill status-good'; pillEl.textContent = '✓ in range'; }
+    } else {
+      pillEl.className = 'status-pill status-empty'; pillEl.textContent = 'No entry yet';
+    }
+  } else {
+    expEl.textContent = 'No flock data yet';
+    pillEl.className = 'status-pill status-empty'; pillEl.textContent = '—';
+  }
+}
+
+function renderCounters() {
+  const mtd = mtdTotal();
+  const ytd = ytdTotal();
+  const now = new Date();
+  document.getElementById('mtd-value').textContent = mtd.total.toLocaleString();
+  document.getElementById('mtd-month').textContent = monthName(now.getMonth());
+  const mtdDoz = Math.floor(mtd.total / 12);
+  const mtdRem = mtd.total % 12;
+  document.getElementById('mtd-detail').textContent = `${mtd.days} day${mtd.days === 1 ? '' : 's'} · ${mtdDoz} dz${mtdRem ? ' + ' + mtdRem : ''}`;
+  document.getElementById('ytd-value').textContent = ytd.total.toLocaleString();
+  document.getElementById('ytd-year').textContent = now.getFullYear();
+  const ytdDoz = Math.floor(ytd.total / 12);
+  const ytdRem = ytd.total % 12;
+  document.getElementById('ytd-detail').textContent = `${ytd.days} day${ytd.days === 1 ? '' : 's'} · ${ytdDoz} dz${ytdRem ? ' + ' + ytdRem : ''}`;
+}
+
+function renderAlert() {
+  const zone = document.getElementById('alert-zone');
+  const a = detectAnomaly();
+  if (!a) { zone.innerHTML = ''; return; }
+  zone.innerHTML = `
+    <div class="alert alert-tier-${a.tier}">
+      <div class="alert-icon">${a.tier === 3 ? '⚠' : a.tier === 2 ? '◐' : '◔'}</div>
+      <div class="alert-body">
+        <h3 class="alert-title">${a.title}</h3>
+        <p class="alert-text">${a.text}</p>
+      </div>
+    </div>`;
+}
+
+// =====================================================================
+// RENDERERS — CHART
+// =====================================================================
+function renderChart() {
+  const svg = document.getElementById('chart');
+  const today = todayStr();
+  const win = [];
+  for (let i = 59; i >= 0; i--) {
+    const d = ymd(addDays(new Date(), -i));
+    win.push({ date: d, count: STATE.eggs[d] });
+  }
+  const expArr = win.map(w => {
+    const e = expectedFor(w.date);
+    return e ? e.value : null;
+  });
+  const rollArr = win.map((_, i) => {
+    const slice = win.slice(Math.max(0, i - 6), i + 1).filter(s => s.count != null && s.count > 0);
+    if (slice.length < 3) return null;
+    return slice.reduce((a, b) => a + b.count, 0) / slice.length;
+  });
+  const allVals = [
+    ...win.map(w => w.count || 0),
+    ...expArr.filter(e => e != null).map(e => e * (1 + BAND_PCT)),
+    ...rollArr.filter(r => r != null),
+  ];
+  const yMax = Math.max(20, Math.ceil(Math.max(...allVals, 1) * 1.1 / 5) * 5);
+
+  const W = 900, H = 280;
+  const padL = 40, padR = 10, padT = 16, padB = 32;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+  const barW = plotW / 60;
+  const y = v => padT + plotH - (v / yMax) * plotH;
+  const x = i => padL + i * barW + barW / 2;
+
+  let out = '';
+  const ticks = 4;
+  for (let t = 0; t <= ticks; t++) {
+    const v = (yMax / ticks) * t;
+    const yy = y(v);
+    out += `<line x1="${padL}" x2="${W - padR}" y1="${yy}" y2="${yy}" stroke="var(--line-soft)" stroke-width="0.5" stroke-dasharray="2,3"/>`;
+    out += `<text x="${padL - 6}" y="${yy + 4}" text-anchor="end" font-family="DM Mono" font-size="10" fill="var(--ink-faint)">${Math.round(v)}</text>`;
+  }
+
+  if (STATE.settings.showBandOnChart) {
+    const pts = [];
+    for (let i = 0; i < expArr.length; i++) {
+      if (expArr[i] == null) continue;
+      pts.push({ i, top: y(expArr[i] * (1 + BAND_PCT)), bot: y(expArr[i] * (1 - BAND_PCT)) });
+    }
+    if (pts.length > 1) {
+      let p = `M ${x(pts[0].i)} ${pts[0].top}`;
+      for (let j = 1; j < pts.length; j++) p += ` L ${x(pts[j].i)} ${pts[j].top}`;
+      for (let j = pts.length - 1; j >= 0; j--) p += ` L ${x(pts[j].i)} ${pts[j].bot}`;
+      p += ' Z';
+      out += `<path d="${p}" fill="rgba(74,107,58,0.18)" stroke="rgba(74,107,58,0.4)" stroke-width="0.5"/>`;
+    }
+  }
+
+  for (let i = 0; i < win.length; i++) {
+    const v = win[i].count;
+    if (v == null || v <= 0) continue;
+    const bx = padL + i * barW + barW * 0.15;
+    const bw = barW * 0.7;
+    const by = y(v);
+    const bh = (padT + plotH) - by;
+    out += `<rect x="${bx}" y="${by}" width="${bw}" height="${bh}" fill="var(--ink)" opacity="0.85"/>`;
+  }
+
+  let linePath = '';
+  let started = false;
+  for (let i = 0; i < rollArr.length; i++) {
+    if (rollArr[i] == null) { started = false; continue; }
+    const px = x(i); const py = y(rollArr[i]);
+    if (!started) { linePath += `M ${px} ${py}`; started = true; }
+    else linePath += ` L ${px} ${py}`;
+  }
+  if (linePath) out += `<path d="${linePath}" fill="none" stroke="var(--rust)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+
+  for (let i = 0; i < win.length; i += 10) {
+    out += `<text x="${x(i)}" y="${H - 10}" text-anchor="middle" font-family="DM Mono" font-size="10" fill="var(--ink-faint)">${win[i].date.substring(5)}</text>`;
+  }
+  const lastIdx = win.length - 1;
+  out += `<text x="${x(lastIdx)}" y="${H - 10}" text-anchor="middle" font-family="DM Mono" font-size="10" font-weight="500" fill="var(--rust)">${win[lastIdx].date.substring(5)}</text>`;
+  out += `<line x1="${padL}" x2="${W - padR}" y1="${padT + plotH}" y2="${padT + plotH}" stroke="var(--ink)" stroke-width="1"/>`;
+
+  svg.innerHTML = out;
+}
+
+// =====================================================================
+// RENDERERS — BACK-FILL
+// =====================================================================
+function renderBackfill() {
+  let cur = STATE.ui.backfillMonth;
+  if (!cur) {
+    const t = new Date();
+    cur = { year: t.getFullYear(), month: t.getMonth() };
+    STATE.ui.backfillMonth = cur;
+  }
+  document.getElementById('bf-month-label').textContent = `${monthName(cur.month)} ${cur.year}`;
+  const grid = document.getElementById('backfill-grid');
+  const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  let html = dayHeaders.map(d => `<div class="cal-header">${d}</div>`).join('');
+  const first = new Date(cur.year, cur.month, 1);
+  const startDay = first.getDay();
+  const daysInMonth = new Date(cur.year, cur.month + 1, 0).getDate();
+  const today = todayStr();
+  const todayD = new Date();
+  for (let i = 0; i < startDay; i++) html += `<div class="cal-cell empty"></div>`;
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(cur.year, cur.month, d);
+    const key = ymd(date);
+    const isToday = key === today;
+    const isFuture = date > todayD;
+    const v = STATE.eggs[key];
+    const cls = ['cal-cell'];
+    if (isToday) cls.push('today');
+    else if (isFuture) cls.push('future');
+    html += `
+      <div class="${cls.join(' ')}">
+        <div class="cal-date">${d}</div>
+        <input type="number" class="cal-input" data-date="${key}" min="0" value="${v != null ? v : ''}" ${isFuture ? 'disabled' : ''} placeholder="—" />
+      </div>`;
+  }
+  grid.innerHTML = html;
+  grid.querySelectorAll('.cal-input').forEach(inp => {
+    inp.addEventListener('change', async (e) => {
+      const dateKey = e.target.dataset.date;
+      const raw = e.target.value.trim();
+      if (raw === '') delete STATE.eggs[dateKey];
+      else {
+        const num = parseInt(raw, 10);
+        if (isNaN(num) || num < 0) { e.target.value = STATE.eggs[dateKey] || ''; return; }
+        if (num === 0) {
+          if (!confirm('0 eggs?\n\nBlank = uncollected/unrecorded. The flock never has true zero days.\n\nDid you mean to leave this blank?')) {
+            e.target.value = STATE.eggs[dateKey] || '';
+            return;
+          }
+        }
+        STATE.eggs[dateKey] = num;
+      }
+      await storage.set(KEYS.EGGS, STATE.eggs);
+      renderAll();
+      toast('Saved', 'success');
+    });
+  });
+}
+
+// =====================================================================
+// RENDERERS — RECORDS
+// =====================================================================
+function recTile(label, value, detail) {
+  return `<div class="record-tile">
+    <div class="record-label">${label}</div>
+    <div class="record-value">${value}</div>
+    <div class="record-detail">${detail || ''}</div>
+  </div>`;
+}
+
+function twinTile(label, a, b) {
+  return `<div class="record-tile wide">
+    <div class="record-label">${label}</div>
+    <div class="record-twin">
+      <div class="twin-block">
+        <div class="twin-val">${a.value}</div>
+        <div class="twin-label">${a.label}</div>
+      </div>
+      <div class="twin-block">
+        <div class="twin-val">${b.value}</div>
+        <div class="twin-label">${b.label}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderRecords() {
+  const r = lifetimeStats();
+  const grid = document.getElementById('records-grid');
+  let html = '';
+
+  const lifetimeDoz = Math.floor(r.lifetime / 12);
+  html += recTile('Lifetime eggs', r.lifetime.toLocaleString(), `${lifetimeDoz.toLocaleString()} dozen · ${r.days} days logged`);
+
+  // Avg eggs per day (twin tile)
+  const aepd = avgEggsPerDay();
+  html += twinTile('Avg eggs per day',
+    { value: aepd.perLogged.toFixed(1), label: 'Per logged day' },
+    { value: aepd.perCalendar.toFixed(1), label: 'Per calendar day' }
+  );
+
+  // Avg eggs per hen (twin tile)
+  const aeph = avgEggsPerHen();
+  html += twinTile('Avg eggs per hen (layers only)',
+    { value: aeph.perLogged.toFixed(2), label: 'Per logged day' },
+    { value: aeph.perCalendar.toFixed(2), label: 'Per calendar day' }
+  );
+
+  if (r.best) html += recTile('Biggest day', r.best.count, fmtDateShort(r.best.date));
+  else html += recTile('Biggest day', '—', 'No data');
+  if (r.worst) html += recTile('Smallest logged day', r.worst.count, fmtDateShort(r.worst.date));
+  else html += recTile('Smallest logged day', '—', 'No data');
+  if (r.busiest) html += recTile('Best month', r.busiest.total.toLocaleString(), `${r.busiest.label} · ${r.busiest.avg.toFixed(1)}/day`);
+  else html += recTile('Best month', '—', 'No data');
+  if (r.slowest) html += recTile('Slowest month', r.slowest.total.toLocaleString(), `${r.slowest.label} · ${r.slowest.avg.toFixed(1)}/day`);
+  else html += recTile('Slowest month', '—', 'No data');
+
+  grid.innerHTML = html;
+
+  // Vacuum projections
+  renderVacuum();
+
+  // Monthly table
+  const months = monthlyBreakdown();
+  const tbody = document.getElementById('monthly-tbody');
+  if (months.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; font-style:italic; color: var(--ink-faint); padding: 20px;">No data yet.</td></tr>`;
+  } else {
+    tbody.innerHTML = months.map(m => `
+      <tr>
+        <td>${m.label}</td>
+        <td><strong>${m.total.toLocaleString()}</strong></td>
+        <td>${m.days}</td>
+        <td>${m.avg.toFixed(1)}</td>
+        <td>${m.high} <span style="color: var(--ink-faint); font-size: 0.75rem;">(${fmtDateShort(m.highDate)})</span></td>
+        <td>${m.low} <span style="color: var(--ink-faint); font-size: 0.75rem;">(${fmtDateShort(m.lowDate)})</span></td>
+        <td>${m.dozen}${m.dozenRem ? ` + ${m.dozenRem}` : ''}</td>
+      </tr>`).join('');
+  }
+
+  // Consistency
+  const c = consistencyStats();
+  const cgrid = document.getElementById('consistency-grid');
+  cgrid.innerHTML =
+    recTile('Logging rate', `${c.pct.toFixed(0)}%`, `${c.loggedDays} of ${c.totalDays} days`) +
+    recTile('Longest gap', `${c.longestGap} ${c.longestGap === 1 ? 'day' : 'days'}`, 'Without a recorded count') +
+    recTile('Current gap', `${c.currentGap} ${c.currentGap === 1 ? 'day' : 'days'}`, c.currentGap === 0 ? 'Logged today' : 'Since last entry');
+}
+
+function renderVacuum() {
+  const v = vacuumProjection();
+  const stats = document.getElementById('vacuum-stats');
+
+  let rfClass = 'good';
+  let rfLabel = '';
+  if (v.realityFactor < STATE.settings.realityFactorFloor) {
+    rfClass = v.realityFactor < STATE.settings.realityFactorFloor * 0.7 ? 'bad' : 'warn';
+    rfLabel = ' ↓';
+  } else if (v.realityFactor >= 100) {
+    rfLabel = ' ↑';
+  }
+
+  if (v.ytdProjected === 0) {
+    stats.innerHTML = `
+      <div class="vacuum-stat">
+        <div class="vstat-val">—</div>
+        <div class="vstat-label">No layer cohorts to project</div>
+      </div>`;
+    document.getElementById('vacuum-breakdown').innerHTML = '<p style="font-style:italic; color: var(--ink-faint);">Add layer or pet-layer cohorts in the Flock tab to see projections.</p>';
+    return;
+  }
+
+  stats.innerHTML = `
+    <div class="vacuum-stat">
+      <div class="vstat-val reality-factor ${rfClass}">${v.realityFactor.toFixed(0)}%${rfLabel}</div>
+      <div class="vstat-label">Reality factor</div>
+    </div>
+    <div class="vacuum-stat">
+      <div class="vstat-val">${v.ytdActual.toLocaleString()}</div>
+      <div class="vstat-label">Actual ${v.year} YTD</div>
+    </div>
+    <div class="vacuum-stat">
+      <div class="vstat-val">${v.ytdProjected.toLocaleString()}</div>
+      <div class="vstat-label">Projected YTD</div>
+    </div>
+    <div class="vacuum-stat">
+      <div class="vstat-val">${v.totalProjected.toLocaleString()}</div>
+      <div class="vstat-label">Annual projection</div>
+    </div>
+  `;
+
+  const b = document.getElementById('vacuum-breakdown');
+  if (v.breakdown.length === 0) {
+    b.innerHTML = '<p style="font-style:italic; color: var(--ink-faint);">No active cohorts.</p>';
+    return;
+  }
+  let rows = v.breakdown.map(r => {
+    const breedCell = STATE.settings.showCards && r.breed && r.breed !== '(unspecified)' && BREED_DATA[r.breed]
+      ? `<td class="breed-link" data-breed="${escapeHtml(r.breed)}">${escapeHtml(r.breed)}</td>`
+      : `<td>${escapeHtml(r.breed)}</td>`;
+    return `
+      <tr>
+        <td>${r.count}</td>
+        ${breedCell}
+        <td>${CATEGORY_LABELS[r.category] || r.category}${r.category === 'pet' ? ' (layer)' : ''}</td>
+        <td>${r.cohortYear || '—'}</td>
+        <td>${r.advertisedPerBird != null ? r.advertisedPerBird + '/yr' : '—'}</td>
+        <td>${(r.ageFactor * 100).toFixed(0)}%</td>
+        <td><strong>${r.annualProjected != null ? r.annualProjected.toLocaleString() : '—'}</strong>${r.note ? `<br><span style="font-style:italic; color:var(--ink-faint);">${r.note}</span>` : ''}</td>
+      </tr>`;
+  }).join('');
+  b.innerHTML = `
+    <table class="vacuum-breakdown-table">
+      <thead><tr><th>Count</th><th>Breed</th><th>Category</th><th>Cohort</th><th>Advertised</th><th>Age factor</th><th>Projected/yr</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+  // Wire breed links
+  b.querySelectorAll('.breed-link').forEach(el => {
+    el.addEventListener('click', () => openBreedCard(el.dataset.breed));
+  });
+}
+
+// =====================================================================
+// RENDERERS — FLOCK
+// =====================================================================
+function renderFlockState() {
+  const today = todayStr();
+  const cohorts = flockStateOn(today);
+  const body = document.getElementById('state-body');
+
+  if (cohorts.length === 0) {
+    body.innerHTML = `<div class="state-empty">No active cohorts. Use the form to record your first change.</div>`;
+    return;
+  }
+
+  // Roll up totals by category
+  const byCategory = {};
+  for (const cat of CATEGORIES) byCategory[cat] = 0;
+  for (const c of cohorts) byCategory[c.category] = (byCategory[c.category] || 0) + c.count;
+
+  // Layer count includes pet layers
+  const layerTotal = byCategory.layer + cohorts.filter(c => c.category === 'pet' && c.isPetLayer).reduce((s, c) => s + c.count, 0);
+  const petTotal = byCategory.pet;
+  const petLayerCount = cohorts.filter(c => c.category === 'pet' && c.isPetLayer).reduce((s, c) => s + c.count, 0);
+
+  let html = '';
+  html += `<div class="state-row"><span class="state-label">Layers</span><span class="state-value">${byCategory.layer}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Pullets</span><span class="state-value">${byCategory.pullet}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Cockerels</span><span class="state-value">${byCategory.cockerel}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Roosters</span><span class="state-value">${byCategory.rooster}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Meat birds</span><span class="state-value">${byCategory.meat}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Pet birds</span><span class="state-value">${petTotal}${petLayerCount > 0 ? ` <span style="color:var(--moss); font-size:0.7rem;">(${petLayerCount} layer)</span>` : ''}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Other</span><span class="state-value">${byCategory.other}</span></div>`;
+  const allTotal = Object.values(byCategory).reduce((a, b) => a + b, 0);
+  html += `<div class="state-row total"><span class="state-label">Total laying</span><span class="state-value">${layerTotal}</span></div>`;
+  html += `<div class="state-row"><span class="state-label">Total birds</span><span class="state-value">${allTotal}</span></div>`;
+
+  // Cohort breakdown
+  html += `<div class="state-cohort-list">`;
+  const sorted = cohorts.slice().sort((a, b) => {
+    if (a.category !== b.category) return CATEGORIES.indexOf(a.category) - CATEGORIES.indexOf(b.category);
+    return (a.cohortYear || 0) - (b.cohortYear || 0);
+  });
+  for (const c of sorted) {
+    const yearTag = c.cohortYear ? ` (${c.cohortYear})` : '';
+    const petLabel = c.isPetLayer ? ' [layer]' : '';
+    const breedDisplay = c.breed
+      ? (STATE.settings.showCards && BREED_DATA[c.breed]
+          ? `<span class="breed-link" data-breed="${escapeHtml(c.breed)}">${escapeHtml(c.breed)}</span>`
+          : escapeHtml(c.breed))
+      : '<em>unspecified</em>';
+    html += `<div class="state-cohort">${c.count} × ${breedDisplay} — ${CATEGORY_LABELS[c.category]}${petLabel}${yearTag}</div>`;
+  }
+  html += `</div>`;
+
+  body.innerHTML = html;
+
+  body.querySelectorAll('.breed-link').forEach(el => {
+    el.addEventListener('click', () => openBreedCard(el.dataset.breed));
+  });
+}
+
+function renderHistory() {
+  const list = document.getElementById('history-list');
+  if (!STATE.flockLog || STATE.flockLog.length === 0) {
+    list.innerHTML = `<p style="font-style:italic; color: var(--ink-soft); font-family: 'Fraunces', serif;">No transactions yet.</p>`;
+    return;
+  }
+  const sorted = [...STATE.flockLog].sort((a, b) => b.date.localeCompare(a.date));
+  list.innerHTML = sorted.map(t => {
+    const signClass = t.sign > 0 ? 'add' : 'sub';
+    const rowClass = t.autoGenerated ? 'auto' : signClass;
+    const signSym = t.sign > 0 ? '+' : '−';
+    const breedDisplay = t.breed
+      ? (STATE.settings.showCards && BREED_DATA[t.breed]
+          ? `<span class="breed-link" data-breed="${escapeHtml(t.breed)}">${escapeHtml(t.breed)}</span>`
+          : escapeHtml(t.breed))
+      : '<em>unspecified</em>';
+    const yearTag = t.cohortYear ? ` cohort ${t.cohortYear}` : '';
+    const petLabel = t.isPetLayer ? ' [layer]' : '';
+    const editedTag = t.edited ? `<span class="hist-edited">edited</span>` : '';
+    const autoTag = t.autoGenerated ? `<span class="hist-auto-badge">auto</span>` : '';
+    return `
+      <div class="history-row ${rowClass}">
+        <div class="hist-date">${fmtDateShort(t.date)}</div>
+        <div class="hist-amount ${signClass}">${signSym}${t.count}</div>
+        <div class="hist-category">${CATEGORY_LABELS[t.category] || t.category}${petLabel}</div>
+        <div class="hist-details">${breedDisplay}${yearTag} · ${escapeHtml(t.reason || '(no reason)')}${t.notes ? ` · <span style="color:var(--ink-faint);">${escapeHtml(t.notes)}</span>` : ''}${editedTag}${autoTag}</div>
+        <button class="row-btn edit" data-id="${t.id}" title="Edit">✎</button>
+        <button class="row-btn del" data-id="${t.id}" title="Delete">×</button>
+      </div>`;
+  }).join('');
+
+  list.querySelectorAll('.breed-link').forEach(el => {
+    el.addEventListener('click', () => openBreedCard(el.dataset.breed));
+  });
+  list.querySelectorAll('.row-btn.edit').forEach(btn => {
+    btn.addEventListener('click', () => loadTxIntoForm(btn.dataset.id));
+  });
+  list.querySelectorAll('.row-btn.del').forEach(btn => {
+    btn.addEventListener('click', () => deleteTx(btn.dataset.id));
+  });
+}
+
+// =====================================================================
+// BREED CARD MODAL
+// =====================================================================
+function openBreedCard(breedName) {
+  if (!STATE.settings.showCards) return;
+  const data = BREED_DATA[breedName];
+  if (!data) return;
+  const meta = STATE.breeds[breedName] || {};
+  const overrides = meta.overrides || {};
+  const overriddenEggs = overrides.eggsPerYear != null;
+
+  const content = document.getElementById('breed-modal-content');
+  const tags = [];
+  if (data.type === 'layer') tags.push('<span class="breed-tag layer">Layer</span>');
+  if (data.type === 'meat') tags.push('<span class="breed-tag meat">Meat</span>');
+  if (data.type === 'dual') tags.push('<span class="breed-tag dual">Dual-purpose</span>');
+  if (data.coldHardy) tags.push('<span class="breed-tag">Cold hardy</span>');
+  if (data.heatHardy) tags.push('<span class="breed-tag">Heat hardy</span>');
+
+  let stats = '';
+  if (data.layerStats) {
+    const eggsDisplay = overriddenEggs ? overrides.eggsPerYear : data.layerStats.eggsPerYear;
+    stats += `
+      <div class="breed-stat">
+        <div class="bs-label">Eggs/year</div>
+        <div class="bs-value ${overriddenEggs ? 'bs-overridden' : ''}">${eggsDisplay}</div>
+        ${overriddenEggs ? `<div class="bs-original">advertised: ${data.layerStats.eggsPerYear}</div>` : ''}
+      </div>
+      <div class="breed-stat">
+        <div class="bs-label">Egg color &amp; size</div>
+        <div class="bs-value">${escapeHtml(data.layerStats.eggColor)}, ${escapeHtml(data.layerStats.eggSize)}</div>
+      </div>`;
+  }
+  if (data.meatStats) {
+    stats += `
+      <div class="breed-stat">
+        <div class="bs-label">Mature weight (process)</div>
+        <div class="bs-value">${data.meatStats.matureWeightLb} lb</div>
+      </div>
+      <div class="breed-stat">
+        <div class="bs-label">Days to process</div>
+        <div class="bs-value">${data.meatStats.daysToProcess}</div>
+      </div>
+      <div class="breed-stat">
+        <div class="bs-label">Feed conversion ratio</div>
+        <div class="bs-value">${data.meatStats.fcr}:1</div>
+      </div>
+      <div class="breed-stat">
+        <div class="bs-label">Dressing %</div>
+        <div class="bs-value">${data.meatStats.dressingPct}%</div>
+      </div>`;
+  }
+  if (data.matureWeightLb && !data.meatStats) {
+    stats += `
+      <div class="breed-stat">
+        <div class="bs-label">Mature weight</div>
+        <div class="bs-value">${data.matureWeightLb.hen} lb hen<br>${data.matureWeightLb.rooster} lb rooster</div>
+      </div>`;
+  }
+  if (data.layOnsetWeeks) {
+    stats += `
+      <div class="breed-stat">
+        <div class="bs-label">Lay onset</div>
+        <div class="bs-value">${data.layOnsetWeeks} weeks</div>
+      </div>`;
+  }
+  if (data.productiveYears) {
+    stats += `
+      <div class="breed-stat">
+        <div class="bs-label">Productive years</div>
+        <div class="bs-value">${data.productiveYears}</div>
+      </div>`;
+  }
+
+  content.innerHTML = `
+    <h2>${escapeHtml(breedName)}</h2>
+    ${data.altNames ? `<p class="breed-alt">also: ${escapeHtml(data.altNames)}</p>` : ''}
+    <div class="breed-tags">${tags.join('')}</div>
+    <div class="breed-card-grid">${stats}</div>
+    <div class="breed-temperament">${escapeHtml(data.temperament)}</div>
+    ${data.origin ? `<p style="font-size: 0.85rem; color: var(--ink-soft); font-family: 'Fraunces', serif; font-style: italic;">Origin: ${escapeHtml(data.origin)}</p>` : ''}
+
+    ${data.layerStats ? `
+    <div class="breed-override-form">
+      <h4>Your override (from observed data)</h4>
+      <div class="field">
+        <label>Eggs/year (your observed, replaces advertised in projections)</label>
+        <input type="number" id="breed-override-eggs" min="0" placeholder="${data.layerStats.eggsPerYear}" value="${overrides.eggsPerYear ?? ''}" />
+      </div>
+      <div class="field">
+        <label>Notes for this breed (your observations)</label>
+        <textarea id="breed-override-notes" placeholder="What you've noticed about how this breed actually performs at your farm">${escapeHtml(meta.userNotes || '')}</textarea>
+      </div>
+      <div style="display:flex; gap: 8px; margin-top: 10px;">
+        <button class="save-btn" id="breed-save-override">Save</button>
+        ${overriddenEggs || meta.userNotes ? '<button class="btn-secondary" id="breed-clear-override">Clear override</button>' : ''}
+      </div>
+    </div>` : ''}
+  `;
+
+  document.getElementById('breed-modal-bg').classList.add('open');
+
+  const saveBtn = document.getElementById('breed-save-override');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', async () => {
+      const eggsVal = document.getElementById('breed-override-eggs').value.trim();
+      const notesVal = document.getElementById('breed-override-notes').value.trim();
+      if (!STATE.breeds[breedName]) STATE.breeds[breedName] = { lastUsed: todayStr(), overrides: {}, userNotes: '' };
+      if (eggsVal) STATE.breeds[breedName].overrides.eggsPerYear = parseInt(eggsVal, 10);
+      else delete STATE.breeds[breedName].overrides.eggsPerYear;
+      STATE.breeds[breedName].userNotes = notesVal;
+      await storage.set(KEYS.BREEDS, STATE.breeds);
+      toast('Override saved', 'success');
+      closeBreedCard();
+      renderAll();
+    });
+  }
+  const clearBtn = document.getElementById('breed-clear-override');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', async () => {
+      if (STATE.breeds[breedName]) {
+        STATE.breeds[breedName].overrides = {};
+        STATE.breeds[breedName].userNotes = '';
+      }
+      await storage.set(KEYS.BREEDS, STATE.breeds);
+      toast('Override cleared', 'success');
+      closeBreedCard();
+      renderAll();
+    });
+  }
+}
+
+function closeBreedCard() {
+  document.getElementById('breed-modal-bg').classList.remove('open');
+}
+
+// =====================================================================
+// FLOCK FORM
+// =====================================================================
+function clearForm() {
+  STATE.ui.editingTxId = null;
+  STATE.ui.txSign = 1;
+  document.getElementById('form-title').textContent = 'Record a change';
+  document.getElementById('tx-cancel').style.display = 'none';
+  document.getElementById('tx-save').textContent = 'Save change';
+  document.getElementById('tx-date').value = todayStr();
+  document.getElementById('tx-category').value = 'layer';
+  document.getElementById('tx-count').value = '';
+  document.getElementById('tx-breed').value = '';
+  document.getElementById('tx-cohort-year').value = new Date().getFullYear();
+  document.getElementById('tx-pet-layer').checked = false;
+  document.getElementById('tx-reason').value = '';
+  document.getElementById('tx-notes').value = '';
+  updateSignToggle();
+  updateCategoryFields();
+}
+
+function updateSignToggle() {
+  const sign = STATE.ui.txSign;
+  document.getElementById('sign-add').classList.toggle('active', sign === 1);
+  document.getElementById('sign-sub').classList.toggle('active', sign === -1);
+  document.getElementById('sign-sub').classList.toggle('subtract', sign === -1);
+}
+
+function updateCategoryFields() {
+  const cat = document.getElementById('tx-category').value;
+  const cohortField = document.getElementById('cohort-year-field');
+  const petLayerField = document.getElementById('pet-layer-field');
+  const showCohort = ['layer', 'pullet', 'pet', 'rooster'].includes(cat);
+  cohortField.style.display = showCohort ? '' : 'none';
+  petLayerField.style.display = (cat === 'pet') ? '' : 'none';
+}
+
+function loadTxIntoForm(id) {
+  const tx = STATE.flockLog.find(t => t.id === id);
+  if (!tx) return;
+  STATE.ui.editingTxId = id;
+  STATE.ui.txSign = tx.sign;
+  document.getElementById('form-title').textContent = `Edit transaction (${fmtDateShort(tx.date)})`;
+  document.getElementById('tx-cancel').style.display = '';
+  document.getElementById('tx-save').textContent = 'Save edits';
+  document.getElementById('tx-date').value = tx.date;
+  document.getElementById('tx-category').value = tx.category;
+  document.getElementById('tx-count').value = tx.count;
+  document.getElementById('tx-breed').value = tx.breed || '';
+  document.getElementById('tx-cohort-year').value = tx.cohortYear || new Date().getFullYear();
+  document.getElementById('tx-pet-layer').checked = !!tx.isPetLayer;
+  document.getElementById('tx-reason').value = tx.reason || '';
+  document.getElementById('tx-notes').value = tx.notes || '';
+  updateSignToggle();
+  updateCategoryFields();
+  document.querySelector('[data-tab="flock"]').click();
+  document.querySelector('[data-panel="flock"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function saveTx() {
+  const date = document.getElementById('tx-date').value;
+  const category = document.getElementById('tx-category').value;
+  const count = parseInt(document.getElementById('tx-count').value, 10);
+  const breedRaw = document.getElementById('tx-breed').value.trim();
+  const breed = breedRaw ? autoCap(breedRaw) : '';
+  const cohortYear = parseInt(document.getElementById('tx-cohort-year').value, 10);
+  const isPetLayer = document.getElementById('tx-pet-layer').checked;
+  const reasonRaw = document.getElementById('tx-reason').value.trim();
+  const reason = reasonRaw;
+  const notes = document.getElementById('tx-notes').value.trim();
+  const sign = STATE.ui.txSign;
+
+  if (!date) { toast('Date required', 'error'); return; }
+  if (isNaN(count) || count <= 0) { toast('Count must be > 0', 'error'); return; }
+
+  // Breed confirmation for new breeds (option B)
+  if (breed && !BREED_DATA[breed] && !STATE.breeds[breed]) {
+    const known = knownBreedNames();
+    const matches = known.map(n => ({ name: n, score: similarity(n, breed) }))
+      .filter(o => o.score >= FUZZY_THRESHOLD)
+      .sort((a, b) => b.score - a.score);
+    let msg = `"${breed}" isn't in your breed list.`;
+    if (matches.length > 0) {
+      msg += `\n\nDid you mean one of these?\n  • ${matches.slice(0, 3).map(m => m.name).join('\n  • ')}\n\nClick OK to add "${breed}" as a new breed, or Cancel to fix the spelling.`;
+    } else {
+      msg += `\n\nClick OK to add it as a new breed, Cancel to fix.`;
+    }
+    if (!confirm(msg)) return;
+  }
+
+  if (STATE.ui.editingTxId) {
+    const tx = STATE.flockLog.find(t => t.id === STATE.ui.editingTxId);
+    if (!tx) return;
+    Object.assign(tx, {
+      date, sign, count, category, breed,
+      cohortYear: ['layer', 'pullet', 'pet', 'rooster'].includes(category) ? cohortYear : null,
+      isPetLayer: category === 'pet' ? isPetLayer : false,
+      reason, notes, edited: true,
+    });
+    await storage.set(KEYS.FLOCK_LOG, STATE.flockLog);
+    toast('Transaction updated', 'success');
+  } else {
+    const tx = {
+      id: uid(), date, sign, count, category, breed,
+      cohortYear: ['layer', 'pullet', 'pet', 'rooster'].includes(category) ? cohortYear : null,
+      isPetLayer: category === 'pet' ? isPetLayer : false,
+      reason, notes, edited: false, autoGenerated: false,
+    };
+    STATE.flockLog.push(tx);
+    await storage.set(KEYS.FLOCK_LOG, STATE.flockLog);
+    toast('Transaction saved', 'success');
+  }
+
+  if (breed) await recordBreedUsage(breed);
+  if (reason) await recordReasonUsage(reason);
+  await processAutoPromotions();
+  clearForm();
+  renderAll();
+}
+
+async function deleteTx(id) {
+  const tx = STATE.flockLog.find(t => t.id === id);
+  if (!tx) return;
+  const sym = tx.sign > 0 ? '+' : '−';
+  if (!confirm(`Delete this transaction?\n\n${fmtDateShort(tx.date)}: ${sym}${tx.count} ${CATEGORY_LABELS[tx.category]} ${tx.breed ? `(${tx.breed})` : ''}\nReason: ${tx.reason || '(none)'}\n\nIf this is a parent of auto-generated transactions, they will also be removed.`)) return;
+  // Cascade: remove auto-generated children
+  const removeIds = new Set([id]);
+  STATE.flockLog.forEach(t => { if (t.autoGenerated && t.parentTxId === id) removeIds.add(t.id); });
+  STATE.flockLog = STATE.flockLog.filter(t => !removeIds.has(t.id));
+  await storage.set(KEYS.FLOCK_LOG, STATE.flockLog);
+  toast('Transaction deleted', 'success');
+  renderAll();
+}
+
+// =====================================================================
+// AUTOCOMPLETE BEHAVIORS
+// =====================================================================
+function wireAutocomplete(inputEl, listEl, getSuggestions) {
+  let highlightIdx = -1;
+  let items = [];
+
+  function render(query) {
+    items = getSuggestions(query);
+    if (items.length === 0) { listEl.classList.remove('open'); return; }
+    listEl.innerHTML = items.map((it, i) => {
+      const text = typeof it === 'string' ? it : it.text;
+      return `<div class="ac-item" data-i="${i}">${escapeHtml(text)}</div>`;
+    }).join('');
+    listEl.classList.add('open');
+    highlightIdx = -1;
+    listEl.querySelectorAll('.ac-item').forEach((el, i) => {
+      el.addEventListener('mousedown', e => {
+        e.preventDefault();
+        const text = typeof items[i] === 'string' ? items[i] : items[i].text;
+        inputEl.value = text;
+        listEl.classList.remove('open');
+        inputEl.dispatchEvent(new Event('change'));
+      });
+    });
+  }
+
+  inputEl.addEventListener('input', () => {
+    const v = inputEl.value;
+    // auto-cap each word as they type spaces
+    const capped = autoCap(v);
+    if (capped !== v && capped.length === v.length) {
+      const pos = inputEl.selectionStart;
+      inputEl.value = capped;
+      inputEl.setSelectionRange(pos, pos);
+    }
+    render(inputEl.value);
+  });
+
+  inputEl.addEventListener('focus', () => render(inputEl.value));
+  inputEl.addEventListener('blur', () => setTimeout(() => listEl.classList.remove('open'), 150));
+  inputEl.addEventListener('keydown', e => {
+    if (!listEl.classList.contains('open')) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); highlightIdx = Math.min(items.length - 1, highlightIdx + 1); updateHighlight(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); highlightIdx = Math.max(-1, highlightIdx - 1); updateHighlight(); }
+    else if (e.key === 'Enter' && highlightIdx >= 0) {
+      e.preventDefault();
+      const text = typeof items[highlightIdx] === 'string' ? items[highlightIdx] : items[highlightIdx].text;
+      inputEl.value = text;
+      listEl.classList.remove('open');
+    } else if (e.key === 'Escape') {
+      listEl.classList.remove('open');
+    }
+  });
+
+  function updateHighlight() {
+    listEl.querySelectorAll('.ac-item').forEach((el, i) => el.classList.toggle('highlighted', i === highlightIdx));
+  }
+}
+
+// =====================================================================
+// CSV IMPORT/EXPORT
+// =====================================================================
+function downloadFile(content, name, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// =====================================================================
+// SETTINGS RENDER
+// =====================================================================
+function renderSettings() {
+  document.getElementById('set-band').checked = STATE.settings.showBandOnChart;
+  document.getElementById('set-cards').checked = STATE.settings.showCards;
+  document.getElementById('set-light').checked = STATE.settings.supplementLighting;
+  document.getElementById('set-rf-floor').value = STATE.settings.realityFactorFloor;
+  document.getElementById('set-retire-age').value = STATE.settings.cohortRetirementAge;
+  document.getElementById('set-prune').value = STATE.settings.pruneYears;
+}
+
+// =====================================================================
+// MASTER RENDER
+// =====================================================================
+function renderAll() {
+  renderTodayCard();
+  renderCounters();
+  renderAlert();
+  renderChart();
+  renderBackfill();
+  renderRecords();
+  renderFlockState();
+  renderHistory();
+  renderSettings();
+}
+
+// =====================================================================
+// TOAST
+// =====================================================================
+let toastTimer;
+function toast(msg, kind) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show ' + (kind || '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.className = 'toast ' + (kind || ''); }, 2200);
+}
+
+// =====================================================================
+// REASON QUICK-PICKS
+// =====================================================================
+function renderReasonPicks() {
+  const picks = document.getElementById('reason-picks');
+  const common = ['Spring order', 'Fall order', 'Hatched on farm', 'Predator loss', 'Processed', 'Sold', 'Died'];
+  picks.innerHTML = common.map(r => `<button type="button" class="reason-pick" data-r="${escapeHtml(r)}">${r}</button>`).join('');
+  picks.querySelectorAll('.reason-pick').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('tx-reason').value = btn.dataset.r;
+    });
+  });
+}
+
+// =====================================================================
+// WIRE UP
+// =====================================================================
+function wireUp() {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      document.querySelector(`.panel[data-panel="${t.dataset.tab}"]`).classList.add('active');
+    });
+  });
+
+  // Today
+  const todayInput = document.getElementById('today-count');
+  todayInput.addEventListener('input', () => renderTodayCard());
+  document.getElementById('save-today').addEventListener('click', async () => {
+    const raw = todayInput.value.trim();
+    const today = todayStr();
+    if (raw === '') delete STATE.eggs[today];
+    else {
+      const num = parseInt(raw, 10);
+      if (isNaN(num) || num < 0) { toast('Enter a valid number', 'error'); return; }
+      if (num === 0) {
+        if (!confirm('0 eggs today?\n\nBlank = uncollected. The flock never has true zero days.\n\nMean to leave blank?')) return;
+      }
+      STATE.eggs[today] = num;
+    }
+    await storage.set(KEYS.EGGS, STATE.eggs);
+    toast(`Saved today's count`, 'success');
+    renderAll();
+  });
+
+  // Back-fill nav
+  document.getElementById('prev-month').addEventListener('click', () => {
+    const c = STATE.ui.backfillMonth;
+    let m = c.month - 1, y = c.year;
+    if (m < 0) { m = 11; y--; }
+    STATE.ui.backfillMonth = { year: y, month: m };
+    renderBackfill();
+  });
+  document.getElementById('next-month').addEventListener('click', () => {
+    const c = STATE.ui.backfillMonth;
+    let m = c.month + 1, y = c.year;
+    if (m > 11) { m = 0; y++; }
+    STATE.ui.backfillMonth = { year: y, month: m };
+    renderBackfill();
+  });
+  document.getElementById('today-jump').addEventListener('click', () => {
+    const t = new Date();
+    STATE.ui.backfillMonth = { year: t.getFullYear(), month: t.getMonth() };
+    renderBackfill();
+  });
+
+  // Flock form
+  document.getElementById('sign-add').addEventListener('click', () => { STATE.ui.txSign = 1; updateSignToggle(); });
+  document.getElementById('sign-sub').addEventListener('click', () => { STATE.ui.txSign = -1; updateSignToggle(); });
+  document.getElementById('tx-category').addEventListener('change', updateCategoryFields);
+  document.getElementById('tx-save').addEventListener('click', saveTx);
+  document.getElementById('tx-cancel').addEventListener('click', clearForm);
+
+  // Autocomplete
+  wireAutocomplete(
+    document.getElementById('tx-breed'),
+    document.getElementById('tx-breed-ac'),
+    suggestedBreeds
+  );
+  wireAutocomplete(
+    document.getElementById('tx-reason'),
+    document.getElementById('tx-reason-ac'),
+    suggestedReasons
+  );
+  renderReasonPicks();
+
+  // Vacuum toggle
+  document.getElementById('vacuum-toggle').addEventListener('click', () => {
+    STATE.ui.vacuumExpanded = !STATE.ui.vacuumExpanded;
+    const b = document.getElementById('vacuum-breakdown');
+    b.style.display = STATE.ui.vacuumExpanded ? '' : 'none';
+    document.getElementById('vacuum-toggle').textContent = STATE.ui.vacuumExpanded ? 'Hide breakdown' : 'Show breakdown';
+  });
+
+  // Breed modal close
+  document.getElementById('breed-modal-close').addEventListener('click', closeBreedCard);
+  document.getElementById('breed-modal-bg').addEventListener('click', e => {
+    if (e.target.id === 'breed-modal-bg') closeBreedCard();
+  });
+
+  // CSV
+  document.getElementById('csv-import').addEventListener('click', async () => {
+    const raw = document.getElementById('csv-input').value.trim();
+    if (!raw) { toast('Paste CSV first', 'error'); return; }
+    const lines = raw.split(/\r?\n/).filter(l => l.trim());
+    let imported = 0, skipped = 0;
+    for (const line of lines) {
+      if (/^date/i.test(line)) continue;
+      const parts = line.split(',').map(p => p.trim());
+      if (parts.length < 2) { skipped++; continue; }
+      const date = parts[0];
+      const count = parseInt(parts[1], 10);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) { skipped++; continue; }
+      if (isNaN(count) || count < 0) { skipped++; continue; }
+      if (count === 0) { skipped++; continue; }
+      STATE.eggs[date] = count;
+      imported++;
+    }
+    await storage.set(KEYS.EGGS, STATE.eggs);
+    document.getElementById('csv-input').value = '';
+    toast(`Imported ${imported}${skipped ? ` (${skipped} skipped)` : ''}`, 'success');
+    renderAll();
+  });
+  document.getElementById('csv-export').addEventListener('click', () => {
+    const rows = ['date,count'];
+    Object.keys(STATE.eggs).sort().forEach(k => {
+      if (STATE.eggs[k] != null && STATE.eggs[k] > 0) rows.push(`${k},${STATE.eggs[k]}`);
+    });
+    downloadFile(rows.join('\n'), 'egg-log.csv', 'text/csv');
+    toast('Exported', 'success');
+  });
+  document.getElementById('flock-export').addEventListener('click', () => {
+    const rows = ['date,sign,count,category,breed,cohort_year,is_pet_layer,reason,notes,auto_generated,edited'];
+    [...STATE.flockLog].sort((a, b) => a.date.localeCompare(b.date)).forEach(t => {
+      const esc = s => `"${String(s || '').replace(/"/g, '""')}"`;
+      rows.push([
+        t.date, t.sign, t.count, t.category,
+        esc(t.breed || ''), t.cohortYear || '', t.isPetLayer ? 'true' : 'false',
+        esc(t.reason || ''), esc(t.notes || ''),
+        t.autoGenerated ? 'true' : 'false',
+        t.edited ? 'true' : 'false',
+      ].join(','));
+    });
+    downloadFile(rows.join('\n'), 'flock-log.csv', 'text/csv');
+    toast('Exported', 'success');
+  });
+  document.getElementById('breeds-export').addEventListener('click', () => {
+    const rows = ['breed,last_used,eggs_per_year_override,notes'];
+    Object.entries(STATE.breeds).forEach(([name, meta]) => {
+      const esc = s => `"${String(s || '').replace(/"/g, '""')}"`;
+      rows.push([esc(name), meta.lastUsed || '', meta.overrides?.eggsPerYear || '', esc(meta.userNotes || '')].join(','));
+    });
+    downloadFile(rows.join('\n'), 'breeds.csv', 'text/csv');
+    toast('Exported', 'success');
+  });
+
+  // Reset
+  document.getElementById('reset-data').addEventListener('click', async () => {
+    if (!confirm('Reset ALL data? This deletes the egg log, flock log, breeds, reasons, and settings.\n\nCannot be undone.')) return;
+    if (!confirm('Really? Last chance.')) return;
+    await storage.clear(KEYS.EGGS);
+    await storage.clear(KEYS.FLOCK_LOG);
+    await storage.clear(KEYS.BREEDS);
+    await storage.clear(KEYS.REASONS);
+    await storage.clear(KEYS.SETTINGS);
+    STATE.eggs = {};
+    STATE.flockLog = [];
+    STATE.breeds = {};
+    STATE.reasons = [];
+    STATE.settings = {
+      showBandOnChart: true, showCards: true, supplementLighting: true,
+      realityFactorFloor: 70, cohortRetirementAge: 6, pruneYears: 2,
+    };
+    toast('Reset complete', 'success');
+    renderAll();
+  });
+
+  // Settings
+  document.getElementById('set-band').addEventListener('change', async e => {
+    STATE.settings.showBandOnChart = e.target.checked;
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+    renderChart();
+  });
+  document.getElementById('set-cards').addEventListener('change', async e => {
+    STATE.settings.showCards = e.target.checked;
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+    renderAll();
+  });
+  document.getElementById('set-light').addEventListener('change', async e => {
+    STATE.settings.supplementLighting = e.target.checked;
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+    renderAll();
+  });
+  document.getElementById('set-rf-floor').addEventListener('change', async e => {
+    const v = parseInt(e.target.value, 10);
+    if (!isNaN(v) && v >= 0 && v <= 200) STATE.settings.realityFactorFloor = v;
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+    renderRecords();
+  });
+  document.getElementById('set-retire-age').addEventListener('change', async e => {
+    const v = parseInt(e.target.value, 10);
+    if (!isNaN(v) && v >= 2 && v <= 12) STATE.settings.cohortRetirementAge = v;
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+    renderAll();
+  });
+  document.getElementById('set-prune').addEventListener('change', async e => {
+    STATE.settings.pruneYears = e.target.value === 'never' ? 'never' : parseInt(e.target.value, 10);
+    await storage.set(KEYS.SETTINGS, STATE.settings);
+  });
+
+  // Initial form state
+  clearForm();
+}
+
+// =====================================================================
+// BOOT
+// =====================================================================
+async function boot() {
+  try {
+    STATE.eggs = await storage.get(KEYS.EGGS, {});
+    STATE.flockLog = await storage.get(KEYS.FLOCK_LOG, []);
+    STATE.breeds = await storage.get(KEYS.BREEDS, {});
+    STATE.reasons = await storage.get(KEYS.REASONS, []);
+    const s = await storage.get(KEYS.SETTINGS, null);
+    if (s) STATE.settings = { ...STATE.settings, ...s };
+
+    // Archive legacy v1 flock-config to FLOCK_LEGACY (one-time)
+    const legacy = await storage.get(KEYS.FLOCK_LEGACY, null);
+    if (legacy && Array.isArray(legacy) && legacy.length > 0 && STATE.flockLog.length === 0) {
+      console.log('Archiving legacy flock-config entries:', legacy.length);
+      // Keep them under FLOCK_LEGACY key as a backup. Don't translate to transactions —
+      // user said "start fresh" in the redesign.
+    }
+  } catch (e) {
+    console.error('boot error', e);
+  }
+
+  await processAutoPromotions();
+
+  document.getElementById('loading').style.display = 'none';
+  document.querySelector('.panel[data-panel="dashboard"]').classList.add('active');
+  wireUp();
+  renderAll();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
+</script>
+</body>
+</html>
