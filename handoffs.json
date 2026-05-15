@@ -2,5 +2,21 @@
   "version": 1,
   "created": "2026-05-15",
   "notes": "Append-only. Mark entries status: done rather than deleting. Closed entries keep a closed_at timestamp.",
-  "entries": []
+  "entries": [
+    {
+      "id": "punch-list-001",
+      "created_at": "2026-05-15",
+      "from": "punch-list",
+      "to": "foreman",
+      "status": "open",
+      "subject": "Calendar block request — Jackson trailer registration action, early September 2026",
+      "body": "[Punch List] Jackson trailer registration expires October 2026. 30-day lead puts the action window at 2026-09-01. Need a calendar block on a weekday in the first week of September 2026 (2026-09-01 through 2026-09-05, Mon–Fri) for Matt to complete the renewal — online first, DMV trip if required. Suggest a Cañon City day so Austin Auto stops can bundle if any are open at that time. Avoid Sundays (sacred block) and check for hunting blackouts in that window before confirming. Action: Foreman proposes a specific date and confirms with Matt.",
+      "priority": "routine",
+      "task_ref": "jackson-registration-oct-2026",
+      "asset": "Jackson trailer",
+      "due_date": "2026-10-01",
+      "target_action_date": "2026-09-01",
+      "wave4_flag": "calendars.md currently shows 2026-08-01 as the Jackson registration prompt — needs rewrite to 2026-09-01 per 30-day lead rule. Punch List surfacing until rewrite ships."
+    }
+  ]
 }
