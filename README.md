@@ -1,4 +1,4 @@
-# Bayer Family Ops
+﻿# Bayer Family Ops
 
 **Repo:** `github.com/Ground3906/family-ops` (private)
 **Local path:** `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\`
@@ -23,6 +23,7 @@ Operational nerve center for the Bayer household. Structured Markdown and JSON f
 3. `prefs.md` — conventions, sacred rules, standing decisions
 4. `calendars.md` — Foreman reads this; any agent scheduling an event reads it too
 5. `handoffs.json` — filter to `to: self`, `status: open`
+6. `ccir-protocol.md` — household urgent-issue routing doctrine (notifier/arbiter pattern)
 
 Then load agent-specific data files for the session domain.
 
@@ -31,7 +32,7 @@ Then load agent-specific data files for the session domain.
 ## Rules
 
 - **Agents propose; Matt commits.** Nothing is written to the repo silently.
-- **One fact, one file.** Don't restate roster data outside `family.md`. Reference by name or ID.
+- **One fact, one file.** Don''t restate roster data outside `family.md`. Reference by name or ID.
 - **Secrets policy: NEVER STORE.** No passwords, API keys, SSNs, AWS account IDs.
 - **Append-only for logs.** Status flags over deletes. Destructive actions are logged in `prefs.md`.
 - **Confirm before shared calendar or state writes.** Same as the repo: propose, then commit.
