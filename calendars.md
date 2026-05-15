@@ -46,7 +46,6 @@ Future schema changes: bump `Schema version`, note migration in `prefs.md`.
 
 ### Family Sacred Dates
 - **November 8 — wedding anniversary** (Matt + Kalea, eloped Nov 2013).
-- **January 13 — Tim's birthday.**
 - **April 25 — Loretto Chapel day.** Mantel-owned sacred memory. Foreman marks but never schedules over.
 
 ### Hunting Blackouts
@@ -191,7 +190,6 @@ Time TBD; whiteboard or coach to confirm. Placeholder pattern:
 
 #### 2026
 - 2026-01-06 (Tue)              Epiphany / Three Kings                       [Family]
-- 2026-01-13 (Tue)              Tim's birthday                               [Family]
 - 2026-04-25 (Sat)              Loretto Chapel day — sacred memory           [Mantel]
 - 2026-11-08 (Sun)              Wedding anniversary (Matt + Kalea)           [Family]
 - 2026-11-26 (Thu) 1000-1100   Thanksgiving Mass                            [Family]

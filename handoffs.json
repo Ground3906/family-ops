@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "created": "2026-05-15",
+  "notes": "Append-only. Mark entries status: done rather than deleting. Closed entries keep a closed_at timestamp.",
+  "entries": []
+}

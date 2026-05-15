@@ -1,7 +1,7 @@
 # Bayer Family Ops — Shared State Schema v1
 
-**Location:** Google Drive → `/Family Operations/`
-**Access:** Matt + Kalea (full). Agents read via Google Drive MCP or local sync.
+**Location:** Git repo → `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
+**Access:** Matt + Kalea (full). Agents read from local repo clone. OneDrive scratch location retired 2026-05-15. Google Drive previously named as canonical — superseded; Git only.
 **Source-of-truth rule:** Each fact lives in exactly one file. Other agents reference, never duplicate.
 
 ---
@@ -9,12 +9,19 @@
 ## Top-Level Layout
 
 ```
-/Family Operations/
-├── README.md                  ← What this is + how agents use it
+/family-ops/
+├── README.md                  ← What this is + how agents use it (cold-session read first)
+├── al.md                      ← Al orchestrator definition
+├── foreman.md                 ← Foreman calendar agent definition
+├── [other agent .md files]    ← Agent definitions live at repo root
+│
 ├── family.md                  ← Roster, ages, allergies, prefs
 ├── prefs.md                   ← Household decisions, schema versions
 ├── calendars.md               ← Google Calendar map (for Foreman)
 ├── handoffs.json              ← Cross-agent inbox
+│
+├── docs/
+│   └── manuals/               ← Vehicle/equipment maintenance PDFs (untracked → tracked 2026-05-15)
 │
 ├── punch-list/
 │   ├── tasks.json             ← Open/in-progress/done tasks
@@ -32,15 +39,10 @@
 │
 ├── stockyard/                 ← Edelweiss Farms livestock ops
 │   ├── eggs-log.csv           ← Daily egg counts (exported from widget)
-│   ├── flock-log.csv          ← Transaction-based flock history (exported from widget v2)
-│   ├── breeds.csv             ← Breed list with user overrides + notes (exported from widget v2)
-│   ├── flock-config.md        ← [LEGACY — superseded by flock-log.csv in widget v2]
+│   ├── flock-config.md        ← Y1/Y2 hen split, breeds, refresh dates
 │   ├── pigs.md                ← Current pigs, feed schedule, weigh-ins
 │   ├── turkeys.md             ← Spring raise tracking
-│   ├── slaughter-log.md       ← Historical processing records
-│   └── widget/
-│       ├── egg-tracker-v2.html  ← Archived widget source
-│       └── CHANGELOG.md         ← Widget version history
+│   └── slaughter-log.md       ← Historical processing records
 │
 ├── rootstock/                 ← Edelweiss Farms growing ops
 │   ├── plantings.md           ← Trees, shrubs, perennials with dates planted
@@ -79,20 +81,19 @@
 ## File Specs
 
 ### `README.md`
-Single page describing this directory + the rules below. First file an agent should read on a cold session.
+Single page describing this repo + the rules. First file an agent reads on a cold session.
 
 ### `family.md`
 The roster. Single source of truth for who is in the family. Markdown, one section per person.
 
 ```markdown
 ## Matt
-- Age 38, Marine veteran
-- Allergies: none
+- DOB: 1987-12-07 (age 38)
+- Background: Marine veteran
 - Notes: AWS cert pursuit; primary planner
 
 ## Kalea
-- Age 38
-- Allergies: TBD
+- DOB: 1988-05-27
 - Notes: teaching schedule M/W 12:20–13:40
 ```
 
@@ -205,32 +206,25 @@ date,count,notes
 2026-05-13,13,
 ```
 
-### `stockyard/flock-log.csv`
-Transaction-based flock history. Exported from the egg tracker widget (v2). Every change to the flock (additions, losses, processing, sales, auto-promotions) is a single signed entry. Current flock state is computed by walking the log — not stored anywhere. See `stockyard-widget.md` for the transaction shape and cohort math.
+### `stockyard/flock-config.md`
+Hen roster + breed + age cohorts. Default operating model: 50/50 Y1/Y2 split, half the flock refreshed annually.
 
-```csv
-date,sign,count,category,breed,cohort_year,is_pet_layer,reason,notes,auto_generated,edited
-2026-03-15,1,12,pullet,"Marans",2026,false,"Spring order","Murray McMurray batch",false,false
-2026-08-15,-12,12,pullet,"Marans",2026,false,"Auto-promoted (pullet → layer)","Reached lay onset (~6 mo)",true,false
-2026-08-15,1,12,layer,"Marans",2026,false,"Auto-promoted (pullet → layer)","Reached lay onset (~6 mo)",true,false
-2026-10-04,-2,2,layer,"Marans",2026,false,"Predator loss","Fox at dusk, fence gap repaired",false,false
+```markdown
+## Current Flock — as of 2026-05-13
+
+- Total layers: TBD
+- Year 1 cohort: TBD (hatched ~Mar 2026)
+- Year 2 cohort: TBD (hatched ~Mar 2025)
+- Last refresh date: TBD
+- Next refresh planned: ~Mar 2027
+
+## Production Model Constants
+(See `stockyard-widget.md` for full reference)
+- Y1 hens: 0.80 eggs/day at peak
+- Y2 hens: 0.65 eggs/day at peak
+- Seasonal modifier table maintained in widget
+- Altitude factor: TBD after first full year of data
 ```
-
-Categories: layer, pullet, cockerel, rooster, meat, pet, other. Cohort key: transactions group by `category | breed | cohort_year | is_pet_layer`. Different cohorts = different age tracks for production rate purposes. Auto-generated rows: pullet→layer promotions write paired -pullet / +layer entries tagged `auto_generated=true`.
-
-### `stockyard/breeds.csv`
-Breed reference list with user overrides and field notes. Exported from the egg tracker widget (v2). The widget ships with ~25 seeded breeds (user's current order plus common varieties); this CSV captures only the user-overridden values and observed-performance notes. Seeded breed data lives in the widget code, not here.
-
-```csv
-breed,last_used,eggs_per_year_override,notes
-"Marans",2026-10-04,175,"Ours lay closer to 175 than the advertised 200. Heavy molt in year 2."
-"Whiting True Blue",2026-08-15,,"Performing at or near advertised. Excellent foragers."
-```
-
-The `eggs_per_year_override` field replaces the advertised value in vacuum projection math when present. Blank = use advertised. Notes are free text — preserve verbatim, never paraphrase.
-
-### `stockyard/flock-config.md` (LEGACY)
-Superseded by `flock-log.csv` in widget v2. Pre-v2 snapshot model: stored `{ y1Count, y2Count }`. Kept on disk as a backup of pre-transition state; not read by current widget or future Stockyard agent. Production model constants previously documented here now live in `stockyard-widget.md`.
 
 ### `rootstock/plantings.md`
 Trees, shrubs, perennials. Dates planted, current zone classification, microclimate notes. Stockyard-style historical record for the orchard and forest garden.
@@ -299,7 +293,7 @@ Game meat inventory. Drives meal planning + butcher-trip timing.
 ```
 
 ### `first-aid/` — SENSITIVE
-Sharing access in Google Drive *is* access control. Default to Matt + Kalea only. Extending access to anyone or anything else = deliberate decision logged in `prefs.md`. Tone-drop applies inside this directory.
+The private repo *is* the access control layer for this directory. Default: Matt + Kalea only. Extending read/write access to anyone or anything beyond the private repo = deliberate decision logged in `prefs.md`. Tone-drop applies inside this directory — no Tool Time, no jokes, straight information.
 
 - `people/<initials>.md` — one file per family member. Med history, immunizations, conditions.
 - `medications.json` — current Rx, doses, refills.
