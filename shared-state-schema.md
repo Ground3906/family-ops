@@ -1,4 +1,4 @@
-# Bayer Family Ops — Shared State Schema v1
+﻿# Bayer Family Ops — Shared State Schema v1
 
 **Location:** Git repo → `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
 **Access:** Matt + Kalea (full). Agents read from local repo clone. OneDrive scratch location retired 2026-05-15. Google Drive previously named as canonical — superseded; Git only.
@@ -15,6 +15,10 @@
 ├── foreman.md                 ← Foreman calendar agent definition
 ├── [other agent .md files]    ← Agent definitions live at repo root
 │
+├── ccir-protocol.md           ← Household urgent-issue routing doctrine
+├── crosstalk-handoff-map.md   ← Inter-agent routing patterns
+├── fleet-state-v1.md          ← Rolling stock & equipment master record
+│
 ├── family.md                  ← Roster, ages, allergies, prefs
 ├── prefs.md                   ← Household decisions, schema versions
 ├── calendars.md               ← Google Calendar map (for Foreman)
@@ -25,7 +29,9 @@
 │
 ├── punch-list/
 │   ├── tasks.json             ← Open/in-progress/done tasks
-│   └── vehicles.json          ← Service intervals, registration
+│   ├── vehicles.json          ← Service intervals, registration
+│   ├── documents.md           ← ID/registration/insurance/military/farm/property/financial tracker
+│   └── wyatt-licensing.md     ← CO GDL timeline + Foreman prompt schedule for Wyatt
 │
 ├── whetstone/
 │   ├── progress.md            ← Domain coverage, weak clusters
@@ -33,7 +39,7 @@
 │
 ├── mystery-ranch/
 │   ├── seasons.md             ← Rifle seasons, draws by year
-│   ├── blackouts.md           ← Sacred blocks for Foreman
+│   ├── blackouts.md           ← Sacred blocks for Foreman (Matt-only scope)
 │   ├── draws.json             ← Active applications
 │   └── scouting.md            ← Recon log
 │
@@ -49,7 +55,7 @@
 │   ├── garden-plan.md         ← Annual veg succession, frost windows
 │   ├── greenhouse.md          ← Build status, then operation log
 │   ├── gardyn-roster.md       ← Indoor hydroponic inventory (Matt-updated)
-│   └── harvest-log.md         ← What's coming in, when, how much
+│   └── harvest-log.md         ← What''s coming in, when, how much
 │
 ├── chow-hall/
 │   ├── meal-plan.md           ← Current + upcoming weeks
@@ -83,8 +89,11 @@
 ### `README.md`
 Single page describing this repo + the rules. First file an agent reads on a cold session.
 
+### `ccir-protocol.md`
+Household-wide urgent-issue routing doctrine. Notifier/arbiter pattern, CCIR triggers by domain, edge cases, decision log. Read by **all agents** at session start. Vocabulary (CCIR, notifier, arbiter) is locked in `prefs.md`.
+
 ### `family.md`
-The roster. Single source of truth for who is in the family. Markdown, one section per person.
+The roster. Single source of truth for who is in the family and the extended-network operational map (anchor houses, backup-adult tier hierarchy). Markdown, one section per person/household.
 
 ```markdown
 ## Matt
@@ -94,17 +103,23 @@ The roster. Single source of truth for who is in the family. Markdown, one secti
 
 ## Kalea
 - DOB: 1988-05-27
-- Notes: teaching schedule M/W 12:20–13:40
+- Notes: teaching schedule M/W 12:20–13:40; USMC Reserve IMA MAJ MARFORPAC
 ```
 
 **Read by:** all agents.
 **Written by:** Matt or Kalea via Al, with confirmation. Agents propose roster updates, never commit silently.
 
 ### `prefs.md`
-Household-level decisions, schema versions, conventions. Not personal preferences (those live in `family.md`). Things like "we use 24h clock," "Sunday is sacred," schema version history, decision log for irreversible choices.
+Household-level decisions, schema versions, conventions. Not personal preferences (those live in `family.md`). Vocabulary lock, sacred blocks, Equipment Access Principle, Agent Personality Routing, Anti-Atrophy (Option C), Renewal Watch, Tow Protocol, Decision Log, Schema History.
 
 ### `calendars.md`
 The Google Calendar map. Names, owners, color codes, sacred blocks, event-tagging conventions. Read by Foreman before any calendar write. See Charter §Calendar Strategy for the structure.
+
+### `crosstalk-handoff-map.md`
+Inter-agent routing patterns, Bedrock Rules (including Option C reminder ownership), routing matrix, canonical patterns, sacred-block refusal protocol, owner-table.
+
+### `fleet-state-v1.md`
+Master record for rolling stock and equipment. Asset summary, per-asset detail (NV3500, Ford F-250, Dodge Ram, Chevy Tahoe, Gehl skid steer, deck trailer, Jackson trailer, ATV), service histories, open items, registration cycles, preferred shops. Owned by Punch List.
 
 ### `handoffs.json`
 Cross-agent inbox. Append-only by convention; entries marked `status: done` rather than deleted.
@@ -173,22 +188,28 @@ Cross-agent inbox. Append-only by convention; entries marked `status: done` rath
 }
 ```
 
+### `punch-list/documents.md`
+Tracker skeleton for IDs, registrations, insurance, military, hunting, farm/LLC, property, financial. Opportunistic capture model — populated as documents surface, not by hunting. Foreman derives renewal-prompt milestones from this file. Sensitive numbers (SSN, account #, passwords) excluded permanently.
+
+### `punch-list/wyatt-licensing.md`
+Full CO GDL timeline for Wyatt: phases 0-6, HB24-1021 reference, course-start window (2026-10-22 to 2026-12-22), Foreman prompt schedule. Voice belongs to Punch List under Option C.
+
 ### `whetstone/progress.md`
-Domain coverage table, weak-cluster list, current exam target, dates, run-log summary. Detail per-exam goes in `exam-logs/<date>-<exam>.md` following Matt's documented protocol.
+Domain coverage table, weak-cluster list, current exam target, dates, run-log summary. Detail per-exam goes in `exam-logs/<date>-<exam>.md` following Matt''s documented protocol.
 
 ### `mystery-ranch/blackouts.md`
-The sacred date ranges Foreman must protect.
+The sacred date ranges Foreman must protect — **Matt-only scope** per `prefs.md`. Kalea, kids, household continue normally during these windows.
 
 ```markdown
 ## 2026 Season
 
 ### 3rd Rifle (CO)
 2026-11-07 → 2026-11-13
-Block strength: HARD — no work, no study, no appointments
+Block strength: HARD — Matt-only
 
 ### 4th Rifle (CO)
 2026-11-18 → 2026-11-22
-Block strength: HARD
+Block strength: HARD — Matt-only
 
 ### Scouting weekend
 2026-08-22 → 2026-08-23
@@ -325,8 +346,9 @@ Append-only. Sacred and everyday. Date-stamped. The Loretto Chapel entry (2026-0
 - **Times: 24-hour clock, always.** `17:30`, not `5:30 PM`.
 - **Dates: ISO format.** `2026-05-13`.
 - **Schema version: every JSON file has a `version` field.** Bump it on breaking changes; note the migration in `prefs.md`.
-- **Source of truth: one file per fact.** Don't restate roster details outside `family.md`. Reference by ID.
-- **Secrets policy: NEVER STORE.** No AWS keys, account IDs, passwords, SSNs. Sensitive medical info lives in `first-aid/` with restricted access.
+- **Source of truth: one file per fact.** Don''t restate roster details outside `family.md`. Reference by ID.
+- **Reminder ownership — Option C.** The agent that owns the work owns the reminder. Foreman owns calendar truth (the *when*); domain agents own voice and cadence (the *what* and *how*). See `prefs.md` and `crosstalk-handoff-map.md` Bedrock Rule #6.
+- **Secrets policy: NEVER STORE.** No AWS keys, account IDs, passwords, SSNs. Sensitive medical info lives in `first-aid/` with restricted access. Document tracker (`punch-list/documents.md`) excludes high-sensitivity numbers by policy.
 - **Append-only mindset for logs.** Delete is destructive; status flags are reversible.
 - **Confirmation before writes to anything shared.** Agents propose, human commits.
 
@@ -336,8 +358,8 @@ Append-only. Sacred and everyday. Date-stamped. The Loretto Chapel entry (2026-0
 
 When standing this up from scratch:
 
-1. Create `README.md`, `family.md`, `prefs.md`, `calendars.md`, and an empty `handoffs.json`.
+1. Create `README.md`, `family.md`, `prefs.md`, `calendars.md`, `ccir-protocol.md`, `crosstalk-handoff-map.md`, and an empty `handoffs.json`.
 2. Foreman first (v1 deep) → drives `calendars.md` to completeness.
-3. Punch List MVP → `tasks.json` + `vehicles.json`.
+3. Punch List MVP → `tasks.json` + `vehicles.json` + `documents.md` + `wyatt-licensing.md`. References `fleet-state-v1.md`.
 4. Whetstone MVP → `progress.md`.
 5. Remaining agents per Charter §Build Order.
