@@ -1,4 +1,4 @@
-# calendars.md — Bayer Family Calendar State (v0)
+﻿# calendars.md — Bayer Family Calendar State (v0)
 
 **Owner:** Foreman
 **Schema version:** 1
@@ -26,7 +26,7 @@ Future schema changes: bump `Schema version`, note migration in `prefs.md`.
 ## Sacred Blocks
 
 ### Daily
-- **17:30-19:00 — Family meal.** HARD. No exceptions without Tim's chat-session override.
+- **17:30-19:00 — Family meal.** HARD. No exceptions without Tim''s chat-session override.
 
 ### Weekly
 - **Sundays — all day.** HARD. Mass + Faith Formation 0900-1015. Family/rest. No work, no study, no non-essential appointments.
@@ -48,8 +48,11 @@ Future schema changes: bump `Schema version`, note migration in `prefs.md`.
 - **November 8 — wedding anniversary** (Matt + Kalea, eloped Nov 2013).
 - **April 25 — Loretto Chapel day.** Mantel-owned sacred memory. Foreman marks but never schedules over.
 
-### Hunting Blackouts
-See `mystery-ranch/blackouts.md` — read at session start. Mystery Ranch writes; Foreman protects.
+### Hunting Blackouts — Matt-only scope
+See `mystery-ranch/blackouts.md` — read at session start. Mystery Ranch writes; Foreman protects. **Freezes Matt''s calendar only**; Kalea, kids, household continue normally. Re-route drivers per `family.md` backup-adult tier.
+
+### Kalea Drill Travel — Kalea-only scope
+Per `prefs.md`. Freezes Kalea''s calendar only; household continues normally with routing falling to Matt or backup-adult tier (default Tier 1: Oma & Papa).
 
 ---
 
@@ -107,7 +110,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Farm Rhythm (Aware-of, not Foreman-planned)
 
-Owned by Punch List or Tim directly. Foreman doesn't book over an obviously-blocked feed window without asking.
+Owned by Punch List or Tim directly. Foreman doesn''t book over an obviously-blocked feed window without asking.
 
 - Pig feed — Mon/Wed/Fri/Sat regular cadence.
 - Chicken feed — weekly 3 bags.
@@ -119,7 +122,7 @@ Owned by Punch List or Tim directly. Foreman doesn't book over an obviously-bloc
 
 ## Whiteboard Conventions (Reference Only)
 
-Tim's whiteboard legend. Foreman reads, never writes.
+Tim''s whiteboard legend. Foreman reads, never writes.
 
 - **Red outline around date** = trash pickup (every 4 weeks, not weekly).
 - **Orange number, upper-right of cell** = daily egg count (Stockyard data; started late 2025 when layers came online).
@@ -143,7 +146,41 @@ Tim's whiteboard legend. Foreman reads, never writes.
 
 Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, `Tip Nebraska`, etc. Capture confirmed travel here as soft blocks; surface conflicts at session start.
 
+Kalea USMC drill travel is a sub-category here — Kalea-only scope sacred block.
+
 (empty — populated as Wave 3+ proceeds)
+
+---
+
+## Standing Milestones (Derived from Domain Agents)
+
+Foreman holds the date; the originating agent voices the reminder (Option C). When the prompt fires, the named agent surfaces the action.
+
+### Punch List milestones
+
+- **2026-06-15** — Kalea CAC renewal prompt. CAC expires 2026-07-31. Schedule DEERS appointment for renewal. **Earlier-rather-than-later given Aug 2026 birth timing.** Source: `punch-list/documents.md`. Voice: Punch List.
+- **2026-08-01** — Jackson trailer registration renewal prompt (60 days before Oct expiration). Voice: Punch List.
+- **Spring 2027** — Gehl skid steer oil change. Voice: Punch List.
+- **2027-02-27** — Kalea CO DL renewal prompt (90 days before 2027-05-27 expiration). Voice: Punch List.
+- **2028-09-07** — Matt CO DL renewal prompt (90 days before 2028-12-07 expiration). Voice: Punch List.
+
+### Wyatt licensing milestones
+
+From `punch-list/wyatt-licensing.md` Foreman prompt schedule. Voice: Punch List.
+
+- **2026-08-01** — Research CO driver-ed providers for Wyatt (90 days before course start window)
+- **2026-09-15** — Enroll Wyatt in driver ed (30 days before course start window)
+- **2026-12-15** — Confirm driver ed cert issuance on track (30 days before permit eligible)
+- **2027-01-01** — Schedule DMV appointment for Wyatt permit application (3 weeks before permit eligible 2027-01-22)
+- **2027-04-22** — Permit checkpoint — 3 months in, audit hours log
+- **2027-07-22** — Permit checkpoint — 6 months in, halfway
+- **2027-10-22** — Permit checkpoint — 9 months in, countdown to license
+- **2028-01-01** — Schedule CO road test for Wyatt license application (3 weeks before license eligible 2028-01-22)
+- **2029-01-01** — Confirm restricted phase ending cleanly (3 weeks before restrictions end 2029-01-22)
+
+### Mantel milestones
+
+- **Annual November 8** — Wedding anniversary. Voice: Mantel.
 
 ---
 
@@ -151,7 +188,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 
-**Batched 2026-05-13:** initial recurring + annual + liturgical + feast-day load through 2026-05-31. Per-occurrence times marked `(TBD)` where the cadence is known but the weekly time isn't. Foreman confirms or refines as actual dates approach.
+**Batched 2026-05-13:** initial recurring + annual + liturgical + feast-day load through 2026-05-31. Per-occurrence times marked `(TBD)` where the cadence is known but the weekly time isn''t. Foreman confirms or refines as actual dates approach.
 
 ### Weekly Recurring (year-round unless noted)
 
@@ -191,9 +228,24 @@ Time TBD; whiteboard or coach to confirm. Placeholder pattern:
 #### 2026
 - 2026-01-06 (Tue)              Epiphany / Three Kings                       [Family]
 - 2026-04-25 (Sat)              Loretto Chapel day — sacred memory           [Mantel]
-- 2026-11-08 (Sun)              Wedding anniversary (Matt + Kalea)           [Family]
+- 2026-06-15 (Mon)              Kalea CAC renewal prompt — DEERS appt        [Punch List]
+- 2026-08-01 (Sat)              Wyatt driver-ed provider research            [Punch List]
+- 2026-08-01 (Sat)              Jackson trailer registration prompt          [Punch List]
+- 2026-09-15 (Tue)              Enroll Wyatt in driver ed                    [Punch List]
+- 2026-11-08 (Sun)              Wedding anniversary (Matt + Kalea)           [Mantel]
 - 2026-11-26 (Thu) 1000-1100   Thanksgiving Mass                            [Family]
+- 2026-12-15 (Tue)              Wyatt driver ed cert issuance check          [Punch List]
 - 2026-12-25 (Fri)              Christmas                                    [Family]
+
+#### 2027+
+- 2027-01-01 (Fri)              Schedule Wyatt DMV permit appt               [Punch List]
+- 2027-02-27 (Sat)              Kalea CO DL renewal prompt                   [Punch List]
+- 2027-04-22 (Thu)              Wyatt permit checkpoint — 3 mo               [Punch List]
+- 2027-07-22 (Thu)              Wyatt permit checkpoint — 6 mo               [Punch List]
+- 2027-10-22 (Fri)              Wyatt permit checkpoint — 9 mo               [Punch List]
+- 2028-01-01 (Sat)              Schedule Wyatt CO road test                  [Punch List]
+- 2028-09-07 (Thu)              Matt CO DL renewal prompt                    [Punch List]
+- 2029-01-01 (Mon)              Wyatt restricted phase ending check          [Punch List]
 
 #### DST Sundays (protect after)
 - 2026-03-08 (Sun)              DST begins — protect Sunday                  [Family]
@@ -224,11 +276,11 @@ Through 2026-05-31. Solid candidates for meal-tradition incorporation when Chow 
 
 - 2026-01-06 (Tue)              Epiphany / Three Kings — King Cake           [Liturgical]
 - 2026-01-17 (Sat)              St. Anthony the Abbot — bread blessing       [Liturgical]
-- 2026-01-21 (Wed)              St. Agnes — feast for girls' patron          [Liturgical]
+- 2026-01-21 (Wed)              St. Agnes — feast for girls'' patron          [Liturgical]
 - 2026-02-02 (Mon)              Candlemas / Presentation — crepes tradition  [Liturgical]
 - 2026-02-03 (Tue)              St. Blaise — throat blessing at Mass         [Liturgical]
 - 2026-03-17 (Tue)              St. Patrick — corned beef + Irish soda bread [Liturgical]
-- 2026-03-19 (Thu)              St. Joseph — pasta + St. Joseph's altar      [Liturgical]
+- 2026-03-19 (Thu)              St. Joseph — pasta + St. Joseph''s altar      [Liturgical]
 - 2026-03-25 (Wed)              Annunciation                                 [Liturgical]
 - 2026-04-23 (Thu)              St. George                                   [Liturgical]
 - 2026-04-29 (Wed)              St. Catherine of Siena — patron of cooks     [Liturgical]
@@ -237,19 +289,20 @@ Through 2026-05-31. Solid candidates for meal-tradition incorporation when Chow 
 - 2026-05-15 (Fri)              St. Isidore the Farmer — patron of Edelweiss [Liturgical]
 - 2026-05-31 (Sun)              Visitation                                   [Liturgical]
 
-**Note for future Chow Hall:** feast-day meal traditions worth incorporating where reasonable. St. Joseph (Mar 19) has the strongest Italian food tradition; St. Patrick is obvious; St. Isidore the Farmer is the operational fit for Edelweiss Farms. Don't force traditions that aren't natural — many feasts are observed liturgically only without specific cuisine.
+**Note for future Chow Hall:** feast-day meal traditions worth incorporating where reasonable. St. Joseph (Mar 19) has the strongest Italian food tradition; St. Patrick is obvious; St. Isidore the Farmer is the operational fit for Edelweiss Farms. Don''t force traditions that aren''t natural — many feasts are observed liturgically only without specific cuisine.
 
 ---
 
 ### Travel / Extended Absences
 
-(Populated when Tim/Jill flag trips.)
+(Populated when Tim/Jill flag trips. Kalea drill travel goes here.)
 
 ---
 
 ## Notes for Foreman
 
-- **Phase 1 = no Google Calendar writes. No whiteboard writes.** Propose, don't push.
-- **Whiteboard is the family's ground truth.** This file is a parallel ledger they choose to consult.
-- **One source of truth per fact.** Don't restate `family.md` or `prefs.md` here. Reference.
-- **When in doubt, ask Tim.** Life with 6 kids changes — don't guess at this year's wrestling schedule from last year's.
+- **Phase 1 = no Google Calendar writes. No whiteboard writes.** Propose, don''t push.
+- **Whiteboard is the family''s ground truth.** This file is a parallel ledger they choose to consult.
+- **One source of truth per fact.** Don''t restate `family.md` or `prefs.md` here. Reference.
+- **Reminder voice belongs to domain agents (Option C).** You hold the date; the named agent in brackets speaks when the prompt fires.
+- **When in doubt, ask Tim.** Life with 6 kids changes — don''t guess at this year''s wrestling schedule from last year''s.
