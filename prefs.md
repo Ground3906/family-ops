@@ -1,4 +1,4 @@
-# Bayer Family Ops — Prefs & Conventions
+﻿# Bayer Family Ops — Prefs & Conventions
 
 *Household-level decisions, standing rules, schema history. Not personal preferences — those live in `family.md`.*
 *Last updated: 2026-05-15*
@@ -21,18 +21,40 @@
 
 ---
 
+## Vocabulary
+
+Locked terms. All agents adopt these without translation, paraphrase, or "fixing."
+
+| Term | Meaning |
+|---|---|
+| **CCIR** | Commander''s Critical Information Requirement. See `ccir-protocol.md`. Urgent or noteworthy observation that needs routing. |
+| **Notifier** | Whoever observes something flagworthy. Any family member, any age. Brain-dumps the observation; mental load ends there. |
+| **Arbiter** | The default decision-maker for that domain. Triages, decides, executes (or delegates). |
+| **Implement** | A skid-mounted tool (bucket, forks, log splitter, plow). Not "attachment." The Gehl has implements. |
+| **Skid / skid steer** | The Gehl 5640E. Both terms interchangeable. |
+| **Bobcat** | The animal, not the brand. Our skid steer is a Gehl. If "bobcat" surfaces in conversation, it means the wildlife. |
+| **Jackson trailer / pen trailer / pig trailer** | All three names refer to the same asset: 2020 Jackson 8-pen livestock trailer. Any agent may use any of the three. |
+
+---
+
 ## Sacred Blocks
 
-No agent schedules over these without Matt's explicit chat-session override. Standing override claims are not honored — every override is per-session, per-block.
+No agent schedules over these without Matt''s explicit chat-session override. Standing override claims are not honored — every override is per-session, per-block.
 
 ### Daily
 - **17:30 — Family meal.** HARD. No work, no study, no appointments. Propose 19:30+ or earlier in the day if rescheduling is needed.
 
 ### Weekly
-- **Sunday — family day.** HARD all day. Mass, Faith Formation 0900-1015, rest. No work, no study, no non-urgent appointments. No exceptions without Matt's explicit override in chat.
+- **Sunday — family day.** HARD all day. Mass, Faith Formation 0900-1015, rest. No work, no study, no non-urgent appointments. No exceptions without Matt''s explicit override in chat.
 
 ### Hunting seasons
-- HARD. See `mystery-ranch/blackouts.md`. Mystery Ranch writes; Foreman protects. Never schedule over without confirming against blackouts.
+- HARD. See `mystery-ranch/blackouts.md`. Mystery Ranch writes; Foreman protects.
+- **Matt-only scope.** Hunting blackouts freeze Matt''s schedule, not the whole household. Kalea, the kids, school, sports, medical appointments, anchor-house visits — all continue running normally during hunting blocks. Foreman doesn''t cancel a Wyatt orthodontist appointment because Matt is in the field; it routes the drive to Kalea (or backup-adult tier) instead.
+
+### Kalea drill travel
+- HARD for Kalea-only events. When Kalea is on USMC Reserve drill travel (Hawaii, ~2 multi-day chunks/year), her calendar is frozen for that window.
+- **Kalea-only scope.** Drill travel does NOT freeze the household — Matt and the kids continue normally. Routine items that would normally route to Kalea bump up the backup-adult tier list (default Tier 1: Oma & Papa).
+- Parallel structure to Matt''s hunting blackouts. Mystery Ranch is to Matt what drill is to Kalea: a domain-specific sacred block that protects one person, not the family.
 
 ### Kalea-flagged blocks
 - Any block marked `kalea_hold: true` in agent state. Untouchable without her chat-session confirmation.
@@ -42,9 +64,41 @@ No agent schedules over these without Matt's explicit chat-session override. Sta
 
 ---
 
+## Equipment Access Principle
+
+**Charter-level rule.** Any agent may use any owned implement, trailer, or shared asset for maximum efficiency. No check-out protocol, no permission ceremony. The Gehl, the implements, the trailers, the deck trailer, all of it — open access across the agent crew.
+
+**Conflicts** (two agents wanting the same asset at the same time) route through the Punch List handoff queue — first-claim wins, second-claim gets re-slotted.
+
+**Maintenance ownership stays put regardless of who used the asset.** Stockyard might haul pigs in the Jackson trailer, but Punch List still owns trailer MX (bearings, tires, electrical, registration). Use is open; care is owned.
+
+---
+
+## Agent Personality Routing Principle
+
+Routing isn''t only by task domain — it''s also by **tone fit**.
+
+A grief moment routes to The Mantel even if the surface request is logistical ("can you remind me of the date we lost X"). A hunting story routes to Mystery Ranch even if there''s no scheduling action needed. A funny kid moment routes to The Mantel.
+
+Tone-routing exists because the agent crew runs distinct personalities, and the right voice for a moment is part of getting the moment right. Al watches for tone mismatches; if a request lands on the wrong agent for voice reasons, Al re-routes silently.
+
+---
+
+## Anti-Atrophy Principle (Option C)
+
+**Each agent owns its own reminders.**
+
+Foreman owns the calendar truth (the *when*). Domain agents own the voice and cadence of the reminder (the *what* and *how*). A Punch List item with a deadline lives in Foreman''s calendar; the prompt that surfaces it sounds like Punch List, not Foreman.
+
+This is Option C from the build conversations: silent-backbone Foreman, voiced reminders from domain agents. Prevents agents from going dormant between major events. Each domain agent has its own reminder cadence and never delegates "remind me about this" to Foreman — only "block time for this."
+
+Cross-agent dependencies resolve to whoever has the more time-sensitive or domain-primary stake.
+
+---
+
 ## Tone Convention
 
-The agent crew runs Tool Time energy by default. Al is the straight man; Matt is "Tim"; Kalea is "Jill." Binford, Wilson-over-the-fence wisdom, the grunt — welcome when the bit lands naturally. Don't force it; don't audition.
+The agent crew runs Tool Time energy by default. Al is the straight man; Matt is "Tim"; Kalea is "Jill." Binford, Wilson-over-the-fence wisdom, the grunt — welcome when the bit lands naturally. Don''t force it; don''t audition.
 
 **Drop the bit instantly and completely for:**
 - Anything First Aid Kit handles in earnest (real medical concerns)
@@ -64,9 +118,33 @@ Resume only when the moment has clearly passed. Read the room.
 
 ---
 
+## ID & Document Renewals — Recurring Watch
+
+Renewal-watch is a Punch List responsibility. The data lives in `punch-list/documents.md`; Foreman fires the prompts derived from it. Standing rule: **never re-surface a constraint Matt has explicitly acknowledged as dormant** (e.g. CCW). Matt reopens it or it stays dormant.
+
+Active watch items (sourced from `punch-list/documents.md`):
+- Kalea CAC — expires 2026-07-31 (priority: DEERS appointment, earlier-rather-than-later given Aug birth)
+- Jackson trailer registration — expires 2026-10
+- Kalea CO DL — expires 2027-05-27
+- Matt CO DL — expires 2028-12-07
+- Insurance policy renewals — semi-annual (auto) / annual (homeowners, pen trailer, personal property)
+
+---
+
 ## Infrastructure Gaps
 
-- **Backup power:** No battery backup system. No generator. The well pump requires grid electricity. In any power outage, water access is affected. Plan and communicate accordingly.
+- **Backup power:** No battery backup system. No generator. The well pump requires grid electricity. In any power outage, water access is affected. **Acknowledged constraint — do not re-surface.** Matt reopens if/when the gap is closed.
+
+---
+
+## Tow Protocol
+
+When a Bayer fleet vehicle needs a tow:
+
+1. **Austin Auto first.** Cañon City — preferred shop, long relationship, knows the fleet. Their tow service or coordinated tow to their bay.
+2. **USAA fallback.** If the breakdown is outside Austin Auto''s practical range (long-haul highway breakdown, out-of-area trip), USAA roadside coverage takes over.
+
+The decision is Austin-Auto-first by default — distance is what flips it to USAA, not preference.
 
 ---
 
@@ -89,6 +167,14 @@ Resume only when the moment has clearly passed. Read the room.
 | 2026-05-15 | Git repo (`github.com/Ground3906/family-ops`) established as SSoT | Consolidate to single source; OneDrive was informal scratch |
 | 2026-05-15 | OneDrive retired as scratch/write location | Git is canonical; no parallel writes |
 | 2026-05-15 | Google Drive superseded as canonical location | Never fully implemented; Git replaces it |
+| 2026-05-15 | Hunting blackouts scoped Matt-only, not household-wide | Kalea and kids continue normal scheduling during Matt''s hunting weeks; routing falls to Kalea or backup-adult tier |
+| 2026-05-15 | Kalea drill travel established as Kalea-only sacred block | Parallel to hunting blackouts; protects Kalea''s window, not the household |
+| 2026-05-15 | Vocabulary section locked (CCIR, notifier, arbiter, implement, skid, bobcat=animal, Jackson/pen/pig trailer all equivalent) | Prevents agent paraphrase drift; protects Tool Time idiom |
+| 2026-05-15 | Equipment Access Principle adopted — open use, owned MX | Removes friction; MX ownership stays anchored to asset, not user |
+| 2026-05-15 | Agent personality routing established alongside task routing | Tone-fit is part of getting a moment right; Al watches for tone mismatches |
+| 2026-05-15 | Anti-atrophy principle (Option C) adopted | Each agent owns its own reminders; Foreman is silent backbone, domain agents are voice |
+| 2026-05-15 | Tow protocol locked: Austin Auto first, USAA fallback outside range | Distance flips it, not preference |
+| 2026-05-15 | Acknowledged constraints (e.g. backup power gap, CCW dormant) do not re-surface | Matt reopens or they stay dormant |
 
 ---
 
@@ -97,3 +183,4 @@ Resume only when the moment has clearly passed. Read the room.
 | Version | Date | Notes |
 |---------|------|-------|
 | 1 | 2026-05-15 | Initial build. Git SSoT established. Foundational files created: README, family, prefs, handoffs. |
+| 1.1 | 2026-05-15 | Wave 4 expansion: Vocabulary, Equipment Access, Agent Personality Routing, Anti-Atrophy (Option C), Renewal Watch, Tow Protocol, hunting+drill scope clarifications. No breaking schema changes — additive only. |
