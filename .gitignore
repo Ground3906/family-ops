@@ -24,3 +24,5 @@ venv/
 
 # Logs
 *.log
+.claude/settings.local.json
+WAVE4-HANDOFF.md
