@@ -54,12 +54,12 @@ Cross-referenced from `fleet-state-v1.md`. This table is the renewal-date index;
 
 | Asset | Registration expires | Renewal lead | Notes |
 |---|---|---|---|
-| NV3500 | TBD | 60 days | Capture month during next renewal cycle |
-| Ford F-250 | TBD | 60 days | Capture month during next renewal cycle |
-| Dodge Ram 2500 | TBD | 60 days | Custer County rural — exempt from CO emissions testing |
-| Chevy Tahoe | TBD | 60 days | Capture month during next renewal cycle |
-| Deck trailer | 2027-05 | 60 days | May renewal cycle |
-| Jackson 8-pen | 2026-10 | 60 days | ⚠️ Closest time-sensitive registration item in fleet |
+| NV3500 | TBD | 30 days | Capture month during next renewal cycle |
+| Ford F-250 | TBD | 30 days | Capture month during next renewal cycle |
+| Dodge Ram 2500 | TBD | 30 days | Custer County rural — exempt from CO emissions testing |
+| Chevy Tahoe | TBD | 30 days | Capture month during next renewal cycle |
+| Deck trailer | 2027-05 | 30 days | May renewal cycle |
+| Jackson 8-pen | 2026-10 | 30 days | ⚠️ Closest time-sensitive registration item in fleet |
 | Gehl skid steer | N/A | — | Off-road equipment, no registration |
 | ATV | TBD | — | Hunting asset only; off Punch List radar — Mystery Ranch owns |
 
