@@ -65,3 +65,16 @@ Agent definition files (`al.md`, `foreman.md`, etc.) live at repo root. Data fil
 ## Directory layout
 
 See `shared-state-schema.md` for the full directory tree and per-file specs.
+---
+
+## Build status
+
+| Wave | Status | Notes |
+|------|--------|-------|
+| Wave 1 | ✅ Complete | Charter, shared-state schema, crosstalk map |
+| Wave 2 | ✅ Complete | Foreman v1 deep — 12/12 stress test passed |
+| Wave 3 | ✅ Complete | Agent skeletons, foundational files |
+| Wave 4 | ✅ Complete | Punch List MVP — deployed as Claude Code subagent, 7/7 stress test passed (2026-05-15) |
+| Wave 4.1 | 🔧 Queued | Punch List tightening — 9 cosmetic/verbosity fixes |
+| Wave 4.5 | 🔴 DIRE | Calendar visual widget — Kalea adoption is the bar. Slots before Whetstone. |
+| Wave 5 | ⏳ Pending | Whetstone (WGU study) + Stockyard/Rootstock v3 |
