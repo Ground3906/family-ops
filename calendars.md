@@ -159,7 +159,7 @@ Foreman holds the date; the originating agent voices the reminder (Option C). Wh
 ### Punch List milestones
 
 - **2026-06-15** — Kalea CAC renewal prompt. CAC expires 2026-07-31. Schedule DEERS appointment for renewal. **Earlier-rather-than-later given Aug 2026 birth timing.** Source: `punch-list/documents.md`. Voice: Punch List.
-- **2026-08-01** — Jackson trailer registration renewal prompt (60 days before Oct expiration). Voice: Punch List.
+- **2026-09-01** — Jackson trailer registration renewal prompt (30 days before Oct expiration). Voice: Punch List.
 - **Spring 2027** — Gehl skid steer oil change. Voice: Punch List.
 - **2027-02-27** — Kalea CO DL renewal prompt (90 days before 2027-05-27 expiration). Voice: Punch List.
 - **2028-09-07** — Matt CO DL renewal prompt (90 days before 2028-12-07 expiration). Voice: Punch List.
@@ -230,7 +230,7 @@ Time TBD; whiteboard or coach to confirm. Placeholder pattern:
 - 2026-04-25 (Sat)              Loretto Chapel day — sacred memory           [Mantel]
 - 2026-06-15 (Mon)              Kalea CAC renewal prompt — DEERS appt        [Punch List]
 - 2026-08-01 (Sat)              Wyatt driver-ed provider research            [Punch List]
-- 2026-08-01 (Sat)              Jackson trailer registration prompt          [Punch List]
+- 2026-09-01 (Tue)              Jackson trailer registration prompt          [Punch List]
 - 2026-09-15 (Tue)              Enroll Wyatt in driver ed                    [Punch List]
 - 2026-11-08 (Sun)              Wedding anniversary (Matt + Kalea)           [Mantel]
 - 2026-11-26 (Thu) 1000-1100   Thanksgiving Mass                            [Family]
