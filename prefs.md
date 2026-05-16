@@ -175,6 +175,9 @@ The decision is Austin-Auto-first by default — distance is what flips it to US
 | 2026-05-15 | Anti-atrophy principle (Option C) adopted | Each agent owns its own reminders; Foreman is silent backbone, domain agents are voice |
 | 2026-05-15 | Tow protocol locked: Austin Auto first, USAA fallback outside range | Distance flips it, not preference |
 | 2026-05-15 | Acknowledged constraints (e.g. backup power gap, CCW dormant) do not re-surface | Matt reopens or they stay dormant |
+| 2026-05-15 | Vehicle/trailer registration renewal lead-time set to 30 days | Tighter than original 60-day spec; less padding needed for a simple DMV transaction |
+| 2026-05-15 | Punch List designated full arbiter for routine items in vehicles/equipment/fleet MX/infrastructure/garden tooling/documents | Matt only arbitrates urgent or above-$250 items; routine work routes autonomously |
+| 2026-05-15 | Punch List autonomy threshold set at $250 | Below the line: schedule and route autonomously, surface as done. Above the line: propose and wait for Matt''s confirm. |
 
 ---
 
@@ -184,3 +187,4 @@ The decision is Austin-Auto-first by default — distance is what flips it to US
 |---------|------|-------|
 | 1 | 2026-05-15 | Initial build. Git SSoT established. Foundational files created: README, family, prefs, handoffs. |
 | 1.1 | 2026-05-15 | Wave 4 expansion: Vocabulary, Equipment Access, Agent Personality Routing, Anti-Atrophy (Option C), Renewal Watch, Tow Protocol, hunting+drill scope clarifications. No breaking schema changes — additive only. |
+| 1.2 | 2026-05-15 | Wave 4: Punch List deployed as Claude Code subagent. tasks.json and vehicles.json seeded. Three decisions locked (30-day reg lead, full-arbiter, $250 threshold). |
