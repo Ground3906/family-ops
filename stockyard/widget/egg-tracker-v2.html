@@ -1123,6 +1123,96 @@
   .breed-tag.layer { border-color: var(--moss); color: var(--moss-deep); }
   .breed-tag.dual { border-color: var(--warning); color: var(--warning-deep); }
 
+  /* CONFIRMATION MODAL (replaces window.confirm — suppressed in artifact iframes) */
+  .confirm-modal-bg {
+    position: fixed; inset: 0;
+    background: rgba(26, 22, 18, 0.65);
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 300;
+    padding: 20px;
+  }
+  .confirm-modal-bg.open { display: flex; animation: fadein 0.15s ease; }
+  .confirm-modal {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--paper-shadow);
+    max-width: 480px; width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 24px;
+  }
+  .confirm-modal.danger {
+    border-color: var(--alarm);
+  }
+  .confirm-modal-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin: 0 0 12px;
+    line-height: 1.2;
+  }
+  .confirm-modal.danger .confirm-modal-title { color: var(--alarm); }
+  .confirm-modal-body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 16px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .confirm-modal-body strong { color: var(--ink); font-weight: 600; }
+  .confirm-modal-suggestions {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0 0 18px;
+    padding: 12px;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--moss);
+  }
+  .confirm-modal-suggestions.open { display: flex; }
+  .confirm-suggestion-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 4px;
+  }
+  .confirm-suggestion-btn {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--rust);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .confirm-suggestion-btn:hover {
+    background: var(--rust);
+    color: var(--paper);
+    border-color: var(--rust);
+  }
+  .confirm-modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .confirm-modal-actions button {
+    min-width: 110px;
+  }
+  .confirm-modal.danger #confirm-modal-ok {
+    background: var(--alarm);
+  }
+  .confirm-modal.danger #confirm-modal-ok:hover {
+    background: var(--barn);
+  }
+
   .toast {
     position: fixed;
     bottom: 24px; left: 50%;
@@ -1209,7 +1299,7 @@
           </svg>
         </div>
         <div>
-          <h1 class="brand">Egg <span class="amp">&</span> Ledger <span class="version-tag">v2</span></h1>
+          <h1 class="brand">Egg <span class="amp">&</span> Ledger <span class="version-tag">v2.1</span></h1>
           <div class="sub">Stockyard Operations &middot; Edelweiss Farms, LLC</div>
         </div>
       </div>
@@ -1528,6 +1618,19 @@
   </div>
 </div>
 
+<!-- Custom confirmation modal — replaces window.confirm() which is suppressed in artifact iframes -->
+<div class="confirm-modal-bg" id="confirm-modal-bg" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
+  <div class="confirm-modal" id="confirm-modal">
+    <h2 class="confirm-modal-title" id="confirm-modal-title">Confirm</h2>
+    <div class="confirm-modal-body" id="confirm-modal-body"></div>
+    <div class="confirm-modal-suggestions" id="confirm-modal-suggestions"></div>
+    <div class="confirm-modal-actions">
+      <button class="btn-secondary" id="confirm-modal-cancel">Cancel</button>
+      <button class="save-btn" id="confirm-modal-ok">Confirm</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
@@ -1647,8 +1750,8 @@ const BREED_DATA = {
     temperament: "Slow-growing meat bird. Robust, forages well, better welfare than Cornish Cross.",
     origin: "Hubbard ColorYield genetics, US strain."
   },
-  "Jumbo Naked Neck": {
-    altNames: "Turken, Transylvanian Naked Neck",
+  "Turken (Jumbo Naked Neck)": {
+    altNames: "Jumbo Naked Neck, Transylvanian Naked Neck, Naked Neck",
     type: "dual",
     meatStats: { matureWeightLb: 8, daysToProcess: 100, fcr: 2.8, dressingPct: 70 },
     layerStats: { eggsPerYear: 180, eggColor: "Brown", eggSize: "Large" },
@@ -2683,7 +2786,13 @@ function renderBackfill() {
         const num = parseInt(raw, 10);
         if (isNaN(num) || num < 0) { e.target.value = STATE.eggs[dateKey] || ''; return; }
         if (num === 0) {
-          if (!confirm('0 eggs?\n\nBlank = uncollected/unrecorded. The flock never has true zero days.\n\nDid you mean to leave this blank?')) {
+          const ok = await askConfirm({
+            title: 'Log zero eggs?',
+            body: 'Blank = uncollected/unrecorded. The flock never has true zero days.\n\nDid you mean to leave this blank?',
+            okText: 'Yes, log 0',
+            cancelText: 'Leave blank',
+          });
+          if (!ok) {
             e.target.value = STATE.eggs[dateKey] || '';
             return;
           }
@@ -3173,19 +3282,37 @@ async function saveTx() {
   if (!date) { toast('Date required', 'error'); return; }
   if (isNaN(count) || count <= 0) { toast('Count must be > 0', 'error'); return; }
 
-  // Breed confirmation for new breeds (option B)
+  // Breed confirmation for new breeds (option B + Option A: clickable fuzzy suggestions)
   if (breed && !BREED_DATA[breed] && !STATE.breeds[breed]) {
     const known = knownBreedNames();
     const matches = known.map(n => ({ name: n, score: similarity(n, breed) }))
       .filter(o => o.score >= FUZZY_THRESHOLD)
-      .sort((a, b) => b.score - a.score);
-    let msg = `"${breed}" isn't in your breed list.`;
-    if (matches.length > 0) {
-      msg += `\n\nDid you mean one of these?\n  • ${matches.slice(0, 3).map(m => m.name).join('\n  • ')}\n\nClick OK to add "${breed}" as a new breed, or Cancel to fix the spelling.`;
-    } else {
-      msg += `\n\nClick OK to add it as a new breed, Cancel to fix.`;
-    }
-    if (!confirm(msg)) return;
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 4);
+
+    const body = matches.length > 0
+      ? `"${breed}" isn't in your breed list.\n\nClick a suggestion below to use that name instead, OR click "Add new" to save "${breed}" as a brand-new breed.`
+      : `"${breed}" isn't in your breed list.\n\nClick "Add new" to save it as a brand-new breed, or Cancel to fix the spelling.`;
+
+    const suggestions = matches.map(m => ({
+      label: m.name,
+      onPick: (picked) => {
+        // Fill the breed field with the picked suggestion and dismiss.
+        // User hits Save again to commit the transaction.
+        document.getElementById('tx-breed').value = picked;
+        toast(`Breed set to "${picked}" — review and save`, 'success');
+      }
+    }));
+
+    const ok = await askConfirm({
+      title: 'New breed?',
+      body,
+      suggestions,
+      suggestionsLabel: 'Did you mean:',
+      okText: 'Add new',
+      cancelText: 'Cancel',
+    });
+    if (!ok) return;
   }
 
   if (STATE.ui.editingTxId) {
@@ -3222,7 +3349,16 @@ async function deleteTx(id) {
   const tx = STATE.flockLog.find(t => t.id === id);
   if (!tx) return;
   const sym = tx.sign > 0 ? '+' : '−';
-  if (!confirm(`Delete this transaction?\n\n${fmtDateShort(tx.date)}: ${sym}${tx.count} ${CATEGORY_LABELS[tx.category]} ${tx.breed ? `(${tx.breed})` : ''}\nReason: ${tx.reason || '(none)'}\n\nIf this is a parent of auto-generated transactions, they will also be removed.`)) return;
+  const hasAutoChildren = STATE.flockLog.some(t => t.autoGenerated && t.parentTxId === id);
+  const body = `${fmtDateShort(tx.date)}: ${sym}${tx.count} ${CATEGORY_LABELS[tx.category]}${tx.breed ? ` (${tx.breed})` : ''}\nReason: ${tx.reason || '(none)'}${hasAutoChildren ? '\n\nThis is a parent of auto-generated transactions — they will also be removed.' : ''}`;
+  const ok = await askConfirm({
+    title: 'Delete transaction?',
+    body,
+    okText: 'Delete',
+    cancelText: 'Cancel',
+    danger: true,
+  });
+  if (!ok) return;
   // Cascade: remove auto-generated children
   const removeIds = new Set([id]);
   STATE.flockLog.forEach(t => { if (t.autoGenerated && t.parentTxId === id) removeIds.add(t.id); });
@@ -3332,6 +3468,106 @@ function renderAll() {
 }
 
 // =====================================================================
+// CONFIRMATION MODAL (replaces window.confirm — suppressed in artifact iframes)
+// =====================================================================
+// Usage: const ok = await askConfirm({ title, body, okText, cancelText, danger, suggestions });
+// suggestions: optional [{label, onPick}] — renders clickable buttons that resolve the promise as false
+//              and invoke onPick(label). Use for fuzzy-match new-breed flow.
+let confirmResolver = null;
+let confirmEscHandler = null;
+
+function askConfirm(opts) {
+  return new Promise((resolve) => {
+    // If a previous modal is somehow still resolving, settle it as cancel first
+    if (confirmResolver) {
+      const r = confirmResolver; confirmResolver = null;
+      try { r(false); } catch {}
+    }
+    confirmResolver = resolve;
+
+    const bg = document.getElementById('confirm-modal-bg');
+    const modal = document.getElementById('confirm-modal');
+    const titleEl = document.getElementById('confirm-modal-title');
+    const bodyEl = document.getElementById('confirm-modal-body');
+    const suggBox = document.getElementById('confirm-modal-suggestions');
+    const okBtn = document.getElementById('confirm-modal-ok');
+    const cancelBtn = document.getElementById('confirm-modal-cancel');
+
+    titleEl.textContent = opts.title || 'Confirm';
+    // Allow basic line breaks; treat body as text (escape via textContent then convert \n)
+    bodyEl.innerHTML = '';
+    const bodyText = opts.body || '';
+    const lines = bodyText.split('\n');
+    lines.forEach((ln, i) => {
+      bodyEl.appendChild(document.createTextNode(ln));
+      if (i < lines.length - 1) bodyEl.appendChild(document.createElement('br'));
+    });
+
+    okBtn.textContent = opts.okText || 'Confirm';
+    cancelBtn.textContent = opts.cancelText || 'Cancel';
+
+    // Suggestions (for fuzzy-match new-breed flow)
+    suggBox.innerHTML = '';
+    if (opts.suggestions && opts.suggestions.length > 0) {
+      const label = document.createElement('div');
+      label.className = 'confirm-suggestion-label';
+      label.textContent = opts.suggestionsLabel || 'Did you mean:';
+      suggBox.appendChild(label);
+      opts.suggestions.forEach(s => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'confirm-suggestion-btn';
+        btn.textContent = s.label;
+        btn.addEventListener('click', () => {
+          try { s.onPick && s.onPick(s.label); } catch (e) { console.error(e); }
+          closeConfirm(false);
+        });
+        suggBox.appendChild(btn);
+      });
+      suggBox.classList.add('open');
+    } else {
+      suggBox.classList.remove('open');
+    }
+
+    modal.classList.toggle('danger', !!opts.danger);
+    bg.classList.add('open');
+
+    // Wire one-shot handlers
+    okBtn.onclick = () => closeConfirm(true);
+    cancelBtn.onclick = () => closeConfirm(false);
+    bg.onclick = (e) => { if (e.target === bg) closeConfirm(false); };
+
+    confirmEscHandler = (e) => {
+      if (e.key === 'Escape') { e.preventDefault(); closeConfirm(false); }
+      else if (e.key === 'Enter' && document.activeElement === okBtn) {
+        e.preventDefault(); closeConfirm(true);
+      }
+    };
+    document.addEventListener('keydown', confirmEscHandler);
+
+    // Focus management: danger → Cancel (defensive). Benign → OK.
+    setTimeout(() => {
+      if (opts.danger) cancelBtn.focus();
+      else okBtn.focus();
+    }, 30);
+  });
+}
+
+function closeConfirm(result) {
+  const bg = document.getElementById('confirm-modal-bg');
+  bg.classList.remove('open');
+  if (confirmEscHandler) {
+    document.removeEventListener('keydown', confirmEscHandler);
+    confirmEscHandler = null;
+  }
+  if (confirmResolver) {
+    const r = confirmResolver;
+    confirmResolver = null;
+    r(result);
+  }
+}
+
+// =====================================================================
 // TOAST
 // =====================================================================
 let toastTimer;
@@ -3381,7 +3617,13 @@ function wireUp() {
       const num = parseInt(raw, 10);
       if (isNaN(num) || num < 0) { toast('Enter a valid number', 'error'); return; }
       if (num === 0) {
-        if (!confirm('0 eggs today?\n\nBlank = uncollected. The flock never has true zero days.\n\nMean to leave blank?')) return;
+        const ok = await askConfirm({
+          title: 'Log zero eggs today?',
+          body: 'Blank = uncollected. The flock never has true zero days.\n\nDid you mean to leave this blank?',
+          okText: 'Yes, log 0',
+          cancelText: 'Leave blank',
+        });
+        if (!ok) return;
       }
       STATE.eggs[today] = num;
     }
@@ -3503,8 +3745,22 @@ function wireUp() {
 
   // Reset
   document.getElementById('reset-data').addEventListener('click', async () => {
-    if (!confirm('Reset ALL data? This deletes the egg log, flock log, breeds, reasons, and settings.\n\nCannot be undone.')) return;
-    if (!confirm('Really? Last chance.')) return;
+    const first = await askConfirm({
+      title: 'Reset ALL data?',
+      body: 'This deletes the egg log, flock log, breeds, reasons, and settings.\n\nCannot be undone.',
+      okText: 'Continue',
+      cancelText: 'Cancel',
+      danger: true,
+    });
+    if (!first) return;
+    const second = await askConfirm({
+      title: 'Last chance',
+      body: 'Really? This will wipe every transaction, every egg count, every breed override.',
+      okText: 'Yes, wipe everything',
+      cancelText: 'Cancel',
+      danger: true,
+    });
+    if (!second) return;
     await storage.clear(KEYS.EGGS);
     await storage.clear(KEYS.FLOCK_LOG);
     await storage.clear(KEYS.BREEDS);
@@ -3577,6 +3833,26 @@ async function boot() {
       console.log('Archiving legacy flock-config entries:', legacy.length);
       // Keep them under FLOCK_LEGACY key as a backup. Don't translate to transactions —
       // user said "start fresh" in the redesign.
+    }
+
+    // ---- v2.1 migrations ----
+    // (M1) Breed rename: "Jumbo Naked Neck" → "Turken (Jumbo Naked Neck)"
+    let migrated = 0;
+    const OLD_JNN = 'Jumbo Naked Neck';
+    const NEW_JNN = 'Turken (Jumbo Naked Neck)';
+    STATE.flockLog.forEach(tx => {
+      if (tx.breed === OLD_JNN) { tx.breed = NEW_JNN; migrated++; }
+    });
+    if (STATE.breeds[OLD_JNN]) {
+      // Move user metadata under the new key, preserving overrides and notes.
+      STATE.breeds[NEW_JNN] = STATE.breeds[NEW_JNN] || STATE.breeds[OLD_JNN];
+      delete STATE.breeds[OLD_JNN];
+      migrated++;
+    }
+    if (migrated > 0) {
+      console.log(`Migrated ${migrated} record(s): Jumbo Naked Neck → Turken (Jumbo Naked Neck)`);
+      await storage.set(KEYS.FLOCK_LOG, STATE.flockLog);
+      await storage.set(KEYS.BREEDS, STATE.breeds);
     }
   } catch (e) {
     console.error('boot error', e);
