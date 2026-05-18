@@ -17,6 +17,16 @@
       "due_date": "2026-10-01",
       "target_action_date": "2026-09-01",
       "wave4_flag": "calendars.md currently shows 2026-08-01 as the Jackson registration prompt — needs rewrite to 2026-09-01 per 30-day lead rule. Punch List surfacing until rewrite ships."
+    },
+    {
+      "id": "stockyard-durability-gate-2026-05-17",
+      "from": "al",
+      "to": "stockyard",
+      "status": "open",
+      "priority": "blocker",
+      "subject": "HARD GATE: durability fix required before real flock data",
+      "created": "2026-05-17",
+      "body": "On 2026-05-17, v2.1 widget refresh in same chat silently dropped previously-entered flock transactions despite per-chat window.storage design. Root cause undetermined. Real fix: auto-export to repo via GitHub MCP (S8 hook) or local sync agent — eliminates window.storage as single point of failure. NO real flock data entry and NO Wave 4.5 calendar widget integration until durability fix built and verified. Interim discipline: manual CSV export after every flock-change session."
     }
   ]
 }
