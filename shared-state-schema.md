@@ -1,6 +1,6 @@
 ﻿# Bayer Family Ops — Shared State Schema v1
 
-**Location:** Git repo → `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
+**Location:** Git repo → `$env:BAYER_OPS_ROOT` -> `C:\dev\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
 **Access:** Matt + Kalea (full). Agents read from local repo clone. OneDrive scratch location retired 2026-05-15. Google Drive previously named as canonical — superseded; Git only.
 **Source-of-truth rule:** Each fact lives in exactly one file. Other agents reference, never duplicate.
 

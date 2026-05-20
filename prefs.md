@@ -15,7 +15,7 @@
 ## Source of Truth
 
 - This Git repo is canonical: `github.com/Ground3906/family-ops` (private).
-- OneDrive (`C:\Users\ThinkPad X1 Carbon\OneDrive\Desktop\Stuff\Jobs\AA_My Home\Al Bayer Operations`) — **retired 2026-05-15.** Do not write there.
+- OneDrive (`C:\Users\strayhawk\OneDrive\Desktop\Stuff\Jobs\AA_My Home\Al Bayer Operations`) — **retired 2026-05-15.** Do not write there.
 - Google Drive was previously named as canonical — **superseded.** Git only.
 - Agents propose; Matt commits. No file is written to the repo silently.
 
