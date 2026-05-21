@@ -1,4 +1,4 @@
-﻿# calendars.md — Bayer Family Calendar State (v0)
+# calendars.md — Bayer Family Calendar State (v0)
 
 **Owner:** Foreman
 **Schema version:** 1
@@ -159,7 +159,7 @@ Foreman holds the date; the originating agent voices the reminder (Option C). Wh
 ### Punch List milestones
 
 - **2026-06-15** — Kalea CAC renewal prompt. CAC expires 2026-07-31. Schedule DEERS appointment for renewal. **Earlier-rather-than-later given Aug 2026 birth timing.** Source: `punch-list/documents.md`. Voice: Punch List.
-- **2026-09-01** — Jackson trailer registration renewal prompt (30 days before Oct expiration). Voice: Punch List.
+- **2026-08-01** — Jackson trailer registration renewal prompt (60 days before Oct expiration). Voice: Punch List.
 - **Spring 2027** — Gehl skid steer oil change. Voice: Punch List.
 - **2027-02-27** — Kalea CO DL renewal prompt (90 days before 2027-05-27 expiration). Voice: Punch List.
 - **2028-09-07** — Matt CO DL renewal prompt (90 days before 2028-12-07 expiration). Voice: Punch List.
@@ -230,7 +230,7 @@ Time TBD; whiteboard or coach to confirm. Placeholder pattern:
 - 2026-04-25 (Sat)              Loretto Chapel day — sacred memory           [Mantel]
 - 2026-06-15 (Mon)              Kalea CAC renewal prompt — DEERS appt        [Punch List]
 - 2026-08-01 (Sat)              Wyatt driver-ed provider research            [Punch List]
-- 2026-09-01 (Tue)              Jackson trailer registration prompt          [Punch List]
+- 2026-08-01 (Sat)              Jackson trailer registration prompt          [Punch List]
 - 2026-09-15 (Tue)              Enroll Wyatt in driver ed                    [Punch List]
 - 2026-11-08 (Sun)              Wedding anniversary (Matt + Kalea)           [Mantel]
 - 2026-11-26 (Thu) 1000-1100   Thanksgiving Mass                            [Family]
@@ -306,3 +306,90 @@ Through 2026-05-31. Solid candidates for meal-tradition incorporation when Chow 
 - **One source of truth per fact.** Don''t restate `family.md` or `prefs.md` here. Reference.
 - **Reminder voice belongs to domain agents (Option C).** You hold the date; the named agent in brackets speaks when the prompt fires.
 - **When in doubt, ask Tim.** Life with 6 kids changes — don''t guess at this year''s wrestling schedule from last year''s.
+
+---
+
+## Events
+
+<!-- Machine-readable event lines. Widget parses any line starting with [CAL.
+     Add events here. Never edit the widget source for calendar data.
+     Format: [CAL] YYYY-MM-DD HH:MM [PILLS] Title :: category :: options
+     Format: [CAL] YYYY-MM-DD ALL-DAY Title :: category :: options
+     Format: [CAL-RECUR weekly start=YYYY-MM-DD day=dow] HH:MM [PILLS] Title :: category
+     Edit history: use HTML comments <!-- edited YYYY-MM-DD: note --> inline after the line.
+-->
+
+[CAL-RECUR weekly start=2026-05-17 day=sun] 08:00 [D][K][W][M][R][C][E] Mass :: liturgical
+[CAL-RECUR weekly start=2026-05-17 day=sun] 14:00 [K] Eggs to Fr. Joe :: liturgical
+[CAL-RECUR weekly start=2026-05-21 day=thu] 18:30 [W][M][R][C][E] Youth Group :: kids
+[CAL] 2026-05-17 ALL-DAY St. Paschal Baylon :: liturgical
+[CAL] 2026-05-17 09:00 [W][M][R] Faith Formation :: liturgical
+[CAL] 2026-05-18 14:00 [K] Weekly apt - Salida :: appointments
+[CAL] 2026-05-19 13:00 [W] Ortho - Pueblo :: appointments :: stripe=appt :: vehicle=tahoe :: driver=D
+<!-- edited 2026-05-14: time changed from 10:30 to 13:00 per clinic reschedule -->
+[CAL] 2026-05-19 17:00 [R] Dance class - Westcliffe :: kids :: span=start
+[CAL] 2026-05-20 ALL-DAY [R] Dance comp :: kids :: span=mid
+[CAL] 2026-05-21 ALL-DAY [R] Returns :: kids :: span=end
+[CAL] 2026-05-20 ALL-DAY St. Bernardine of Siena :: liturgical
+[CAL] 2026-05-20 08:00 [D] Range check - scouting :: matt :: sacred=hunting
+[CAL] 2026-05-20 15:30 [M] Soccer practice - Westcliffe :: kids
+[CAL] 2026-05-20 16:00 [C][E] Swim lesson :: kids :: flag=conflict
+[CAL] 2026-05-21 16:00 [M] Piano lesson :: kids
+[CAL] 2026-05-22 ALL-DAY St. Rita of Cascia :: liturgical
+[CAL] 2026-05-22 07:00 [D][W] Pig feed / weigh-in :: animals
+[CAL] 2026-05-22 08:30 [D] WGU study block :: matt
+[CAL] 2026-05-22 16:00 [C] Speech therapy - Pueblo :: appointments :: stripe=appt
+[CAL] 2026-05-23 10:00 [E] OT session - Pueblo :: appointments :: stripe=appt
+[CAL] 2026-05-23 13:00 [W][M][R][C][E] 4H meeting :: kids
+[CAL] 2026-05-24 10:00 [OMA] Doctor apt :: appointments :: stripe=appt
+[CAL] 2026-05-25 ALL-DAY Memorial Day :: birthdays
+[CAL] 2026-05-25 08:00 [PAPA] Ranch supply run :: misc
+[CAL] 2026-05-26 ALL-DAY St. Philip Neri :: liturgical
+[CAL] 2026-05-26 14:00 [K] Weekly apt - Salida :: appointments
+[CAL] 2026-05-27 ALL-DAY Kalea Birthday :: birthdays :: stripe=gold
+[CAL] 2026-05-27 18:00 [D][K][W][M][R][C][E] Birthday dinner - Kalea :: kids
+[CAL] 2026-05-28 ALL-DAY [OMA][PAPA] Pueblo trip :: misc :: span=start
+[CAL] 2026-05-29 ALL-DAY [OMA][PAPA] Pueblo :: misc :: span=mid
+[CAL] 2026-05-29 18:00 [R] Dance recital - Westcliffe :: kids
+[CAL] 2026-05-30 ALL-DAY [OMA][PAPA] Return :: misc :: span=end
+[CAL] 2026-05-30 14:00 [D][K][W][M][R][C][E] Family BBQ - Pyrite :: kids
+[CAL] 2026-05-31 ALL-DAY Visitation of the Blessed Virgin Mary :: liturgical
+[CAL] 2026-06-01 ALL-DAY St. Justin Martyr :: liturgical
+[CAL] 2026-06-01 14:00 [K] Weekly apt - Salida :: appointments
+[CAL] 2026-06-02 09:00 [B6] 36-week checkup :: appointments :: stripe=appt
+[CAL] 2026-06-02 19:00 [D] Fairboard meeting :: matt
+[CAL] 2026-06-03 ALL-DAY trash-day
+[CAL] 2026-06-03 ALL-DAY St. Charles Lwanga :: liturgical
+[CAL] 2026-06-04 ALL-DAY [C] Oma & Papa's :: misc :: span=start
+[CAL] 2026-06-04 ALL-DAY [E] Oma & Papa's :: misc :: span=start
+[CAL] 2026-06-05 ALL-DAY [C] Returns :: misc :: span=end
+[CAL] 2026-06-05 ALL-DAY [E] Returns :: misc :: span=end
+[CAL] 2026-06-05 ALL-DAY St. Boniface :: liturgical
+[CAL] 2026-06-05 09:00 [D][K][W][M][R][C][E] Greenhouse seeding :: rootstock
+[CAL] 2026-06-06 07:00 [D][W] Chicken feed / 3 bags :: animals
+[CAL] 2026-06-06 08:00 [W] Track invitational - Salida :: kids :: vehicle=tahoe :: driver=D
+[CAL] 2026-06-07 ALL-DAY [K] Departs - HI drill :: kalea :: span=start
+<!-- edited 2026-05-20: departure shifted +1 day per MARFORPAC orders update -->
+[CAL] 2026-06-08 ALL-DAY [K] HI drill :: kalea :: span=mid
+[CAL] 2026-06-08 10:00 [OMA][PAPA] Cover Kalea :: misc
+[CAL] 2026-06-09 ALL-DAY [K] HI drill :: kalea :: span=mid
+[CAL] 2026-06-10 ALL-DAY [K] Returns :: kalea :: span=end
+[CAL] 2026-06-11 ALL-DAY St. Barnabas :: liturgical
+[CAL] 2026-06-11 ALL-DAY [W] Track champ :: kids :: span=start
+[CAL] 2026-06-11 18:00 [D] Knights of Columbus :: matt
+[CAL] 2026-06-12 ALL-DAY [W] Track champ :: kids :: span=mid
+[CAL] 2026-06-12 15:00 [M][R] Girls swim - Pueblo :: kids :: vehicle=tahoe :: driver=D
+[CAL] 2026-06-13 ALL-DAY St. Anthony of Padua :: liturgical
+[CAL] 2026-06-13 ALL-DAY [W] Returns :: kids :: span=end
+[CAL] 2026-06-13 10:00 [D][K][W][M][R][C][E] 4H fair prep :: kids
+[CAL] 2026-06-15 ALL-DAY [D][K] CAC renewal - DEERS appt :: appointments :: stripe=appt
+[CAL] 2026-06-15 ALL-DAY [B6] Birth prep :: appointments :: span=start
+[CAL] 2026-06-15 14:00 [K][W][M][R][C][E] Garden beds - summer prep :: rootstock
+[CAL] 2026-06-16 ALL-DAY [B6] Monitoring :: appointments :: span=end
+[CAL] 2026-06-16 14:00 [K] Weekly apt - Salida :: appointments
+[CAL] 2026-06-16 17:00 [E] Swim lesson - Westcliffe :: kids
+[CAL] 2026-06-17 11:00 [PAPA] Fence repair :: misc
+[CAL] 2026-06-18 15:30 [M][R][C][E] Kids dentist - Pueblo :: appointments :: stripe=appt :: vehicle=tahoe :: driver=K
+[CAL] 2026-06-19 ALL-DAY Sacred Heart of Jesus :: liturgical
+[CAL] 2026-06-19 04:00 [D] Hunting opener - depart :: matt :: span=start
+[CAL] 2026-06-20 ALL-DAY [D] Hunting - field day :: matt :: span=mid
