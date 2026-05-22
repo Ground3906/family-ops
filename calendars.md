@@ -279,7 +279,8 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JUNE 2026
 
-[CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
+[CAL] 2026-06-01 08:00 [W] Sweden trip — departure :: kids :: flag=true :: notes="🚩 F-05 drop-off chaperone logistics unresolved"
+[CAL] 2026-06-13 08:00 [W] Sweden trip — return :: kids :: flag=true :: notes="🚩 F-05 pickup logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY trash-day
 [CAL] 2026-06-03 ALL-DAY [D] NV drop — Austin Automotive :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
