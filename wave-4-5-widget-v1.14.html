@@ -1,5 +1,10 @@
-<!-- v1.13 - 2026-05-22 - Day Brief architecture: location=, notes=, [BRIEF] line type, Day panel rebuilt
+<!-- v1.14 - 2026-05-22 - GUEST pill, Cook Mode tab fix, week arrow fix
      Bayer Family Ops | Edelweiss Farms — Family Ops
+
+     CHANGES FROM v1.13:
+     1. PCOL: GUEST pill added #E8DFC0 (light cream)
+     2. Fix: Cook Mode no longer sticks when switching Week/Month tabs
+     3. Fix: Week view arrows now jump by week not month
 
      CHANGES FROM v1.11:
      1. [CAL] format: location="..." and notes="..." attributes added to parseOpts + parseCalLine
@@ -489,7 +494,7 @@ TODAY.setHours(12,0,0,0);
 const TODAY_STR=TODAY.getFullYear()+'-'+String(TODAY.getMonth()+1).padStart(2,'0')+'-'+String(TODAY.getDate()).padStart(2,'0');
 const STRESS_DATES=new Set(_stressOverride?_stressOverride.split(',').map(s=>s.trim()).filter(Boolean):[]);
 
-const PCOL={D:'#CFB87C',K:'#2a5fb8',W:'#cc2233',M:'#9944cc',R:'#f040b8',C:'#2a8a9a',E:'#228844',OMA:'#7755cc',PAPA:'#58a080',B6:'#faa030'};
+const PCOL={D:'#CFB87C',K:'#2a5fb8',W:'#cc2233',M:'#9944cc',R:'#f040b8',C:'#2a8a9a',E:'#228844',OMA:'#7755cc',PAPA:'#58a080',B6:'#faa030',GUEST:'#E8DFC0'};
 const FAM_MEMBERS=['D','K','W','M','R','C','E'];
 const KIDS_MEMBERS=['W','M','R','C','E'];
 const NO_PILL_CATS=new Set(['liturgical','birthdays','holidays']);
@@ -839,9 +844,7 @@ function jumpMonth(dir){
     renderMonthGrid();return;
   }
   if(curView==='week'){
-    const ws=addD(wkStart(TODAY),weekViewWi*7);
-    const target=new Date(ws.getFullYear(),ws.getMonth()+dir,8,12,0,0);
-    weekViewWi=Math.floor((wkStart(target).getTime()-wkStart(TODAY).getTime())/(7*24*3600*1000));
+    weekViewWi+=dir;
     render();return;
   }
   // Rolling — disconnect observer, append needed rows, scroll, then reconnect
@@ -1044,6 +1047,11 @@ function openAgent(name){
 document.getElementById('tabs').addEventListener('click',e=>{
   const tab=e.target.closest('.tab');if(!tab)return;
   curView=tab.dataset.view;
+  cookOn=false;mealOn=false;
+  document.getElementById('cook-scr').style.display='none';
+  document.getElementById('meal-scr').style.display='none';
+  document.getElementById('cook-btn').classList.remove('cook-active');
+  document.getElementById('meal-btn').classList.remove('meal-active');
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));tab.classList.add('on');
   if(curView==='month'){
     setMonthViewFromRolling();
