@@ -213,10 +213,10 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### RECURRING — Swim Practice (Canon City Pirates — Summer Season)
 <!-- Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. Kalea drives+coaches. -->
-[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
 
 ---
 
