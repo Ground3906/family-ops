@@ -1,6 +1,6 @@
-﻿# Bayer Family Ops — Shared State Schema v1
+# Bayer Family Ops — Shared State Schema v1
 
-**Location:** Git repo → `$env:BAYER_OPS_ROOT` -> `C:\dev\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
+**Location:** Git repo → `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\` (remote: `github.com/Ground3906/family-ops`, private)
 **Access:** Matt + Kalea (full). Agents read from local repo clone. OneDrive scratch location retired 2026-05-15. Google Drive previously named as canonical — superseded; Git only.
 **Source-of-truth rule:** Each fact lives in exactly one file. Other agents reference, never duplicate.
 
@@ -363,3 +363,59 @@ When standing this up from scratch:
 3. Punch List MVP → `tasks.json` + `vehicles.json` + `documents.md` + `wyatt-licensing.md`. References `fleet-state-v1.md`.
 4. Whetstone MVP → `progress.md`.
 5. Remaining agents per Charter §Build Order.
+
+---
+
+## Calendar Widget Schema (Wave 4.5+)
+
+### `[CAL]` entry format
+```
+[CAL] YYYY-MM-DD TIME TITLE :: CATEGORY :: [optional attributes]
+```
+
+**Pill tokens** (who is involved):
+- Individual: `[D]` Matt, `[K]` Kalea, `[W]` Wyatt, `[M]` Molly, `[R]` Rileigh, `[C]` Cullen, `[E]` Emmitt, `[B6]` baby boy
+- Collective: `[FAM]` = all family members. Widget auto-generates minus pills for absent members.
+- Extended: `[OMA]`, `[PAPA]`, `[GUEST]`
+
+**Pill colors (locked):**
+```
+D=#CFB87C, K=#2a5fb8, W=#cc2233, M=#9944cc, R=#f040b8
+C=#2a8a9a, E=#228844, B6=#faa030, OMA=#7755cc, PAPA=#58a080
+GUEST=#E8DFC0, FAM=#7a7aaa
+```
+
+**Categories:**
+- `:: liturgical` — Mass, feast days, sacred observances
+- `:: kids` — children's activities
+- `:: animals` — farm/livestock events
+- `:: appointments` — medical, therapy, professional appointments
+- `:: birthdays` — renders in header slot
+- `:: holidays` — renders in header slot
+- `:: misc` — general household
+- `:: prompt` — reminders and milestone triggers. Pattern: `Title ⏰ :: prompt`. NOT an appointment. Never add `stripe=appt`.
+
+**Optional attributes:**
+- `span=YYYY-MM-DD` — event spans multiple days (end date)
+- `travel=true` — person is physically away from home during span. Suppresses traveler's pill on overlapping events. Foreman always asks "Are they traveling?" when proposing multi-day absences.
+- `flag=true` — unresolved conflict or logistics pending
+- `location="..."` — renders in day detail panel only, EXCEPT for travel sports (swim meets, track, XC) where location renders on the tile
+- `notes="..."` — day detail only, never on tile
+- `stripe=appt` — colored appointment stripe
+
+### Feast day format
+```
+[CAL] YYYY-MM-DD ALL-DAY ✝️ Saint Name 🍞 :: liturgical :: notes="food description"
+```
+Cross leads, bread closes. Food name in `notes=` only — never in title. Holy Days of Obligation always included regardless of food association.
+
+### Prompt entry format
+```
+[CAL] YYYY-MM-DD ALL-DAY [PILL] Title ⏰ :: prompt
+```
+
+### Recurring entries
+```
+[CAL-RECUR weekly start=YYYY-MM-DD day=DOW] TIME TITLE :: CATEGORY
+[CAL-RECUR monthly start=YYYY-MM-DD day=DOW week=N] TIME TITLE :: CATEGORY
+```
