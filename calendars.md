@@ -233,10 +233,10 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### YOUTH GROUP — 2026 Season
-<!-- Seasonal only — NOT year-round. End date unconfirmed. Flagged. -->
-[CAL] 2026-05-14 18:30 Youth Group :: kids :: flag=true :: notes="🚩 Season end date unconfirmed"
-[CAL] 2026-05-21 18:30 Youth Group :: kids :: flag=true :: notes="🚩 Season end date unconfirmed"
-[CAL] 2026-05-28 18:30 Youth Group :: kids :: flag=true :: notes="🚩 Season end date unconfirmed"
+<!-- Seasonal only — NOT year-round. Season end confirmed May 2026. -->
+[CAL] 2026-05-14 18:30 Youth Group :: kids
+[CAL] 2026-05-21 18:30 Youth Group :: kids
+[CAL] 2026-05-28 18:30 Youth Group :: kids
 
 ---
 
@@ -255,12 +255,8 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-04-04 17:45 Easter Vigil :: liturgical
 [CAL] 2026-04-05 ALL-DAY Easter Sunday :: liturgical
 [CAL] 2026-04-25 ALL-DAY Loretto Chapel day — sacred memory :: liturgical
-[CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
-[CAL] 2026-05-13 ALL-DAY Our Lady of Fatima :: liturgical
-[CAL] 2026-05-15 ALL-DAY St. Isidore the Farmer — patron of Edelweiss :: liturgical
 [CAL] 2026-11-01 ALL-DAY DST ends — protect Sunday :: misc
 [CAL] 2026-11-26 10:00 Thanksgiving Mass :: liturgical :: location="St. Joseph's, Salida"
-[CAL] 2026-12-25 ALL-DAY Christmas :: liturgical
 [CAL] 2027-01-06 ALL-DAY ✝️ Epiphany 🍞 :: liturgical :: notes="king cake"
 
 ---
