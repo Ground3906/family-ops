@@ -305,7 +305,8 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-09 ALL-DAY [W][M][D] Custer County Fair :: kids :: span=2026-07-19 :: location="Westcliffe, CO"
 [CAL] 2026-07-13 16:30 [D] Fairboard meeting :: misc
 [CAL] 2026-07-14 18:00 [D] Knights of Columbus :: misc
-[CAL] 2026-07-14 ALL-DAY [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO" :: flag=true :: notes="🚩 PQ-16 GUEST pill Adam+Bethany Louche Tue-Fri pending"
+[CAL] 2026-07-14 ALL-DAY [GUEST] Louche visit — Adam+Bethany :: misc :: span=2026-07-17
+[CAL] 2026-07-14 ALL-DAY [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-15 ALL-DAY [W][M][D] Swine show + pork meal :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-16 09:00 [M] Sheep show :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-17 ALL-DAY [M] Master showmanship — sheep :: kids :: location="Westcliffe, CO"
