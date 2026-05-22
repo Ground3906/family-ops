@@ -488,7 +488,7 @@ TODAY.setHours(12,0,0,0);
 const TODAY_STR=TODAY.getFullYear()+'-'+String(TODAY.getMonth()+1).padStart(2,'0')+'-'+String(TODAY.getDate()).padStart(2,'0');
 const STRESS_DATES=new Set(_stressOverride?_stressOverride.split(',').map(s=>s.trim()).filter(Boolean):[]);
 
-const PCOL={D:'#CFB87C',K:'#2a5fb8',W:'#cc2233',M:'#9944cc',R:'#f040b8',C:'#2a8a9a',E:'#228844',OMA:'#7755cc',PAPA:'#58a080',B6:'#faa030',GUEST:'#E8DFC0'};
+const PCOL={D:'#CFB87C',K:'#2a5fb8',W:'#cc2233',M:'#9944cc',R:'#f040b8',C:'#2a8a9a',E:'#228844',OMA:'#7755cc',PAPA:'#58a080',B6:'#faa030',GUEST:'#E8DFC0',FAM:'#7a7aaa'};
 const FAM_MEMBERS=['D','K','W','M','R','C','E'];
 const KIDS_MEMBERS=['W','M','R','C','E'];
 const NO_PILL_CATS=new Set(['liturgical','birthdays','holidays']);
