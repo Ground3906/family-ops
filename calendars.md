@@ -207,16 +207,15 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### RECURRING — Swim Practice (Canon City Pirates — Summer Season)
-<!-- First week: Tue-Fri 09:30-11:30. Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. -->
-[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+<!-- Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. Kalea drives+coaches. -->
+[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
 
 ---
 
 ### RECURRING — Monthly
-<!-- PQ-17: [CAL-RECUR monthly] now supported in v1.15. Knights + Fairboard converted below. -->
 [CAL-RECUR monthly start=2026-06-09 day=tue week=2] 18:00 [D] Knights of Columbus :: misc
 [CAL-RECUR monthly start=2026-06-08 day=mon week=2] 16:30 [D] Fairboard meeting :: misc
 
@@ -302,7 +301,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY trash-day
-[CAL] 2026-06-03 ALL-DAY [D] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
+[CAL] 2026-06-03 ALL-DAY [D][K] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
 [CAL] 2026-06-05 ALL-DAY [W][M][R][C][E] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: span=2026-06-07 :: flag=true :: notes="🚩 F-01 Castle Rock jackpot same day — logistics unresolved"
 [CAL] 2026-06-05 ALL-DAY Jackpot — Castle Rock :: animals :: location="Castle Rock, CO" :: flag=true :: notes="🚩 F-01 swim meet conflict — logistics unresolved"
@@ -321,18 +320,17 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### JULY 2026
 
 [CAL] 2026-07-01 ALL-DAY trash-day
-[CAL] 2026-07-03 ALL-DAY [W][M][R][C][E] Swim meet — no meet weekend :: kids :: notes="Jul 3-5 no meet per schedule"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
-[CAL] 2026-07-09 ALL-DAY [W][M][D] Custer County Fair :: kids :: span=2026-07-19 :: location="Westcliffe, CO"
+[CAL] 2026-07-09 16:00 Fair cleanup :: misc :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [W][M][R][C][E] Swim meet — Piranhas home meet :: kids :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Louche visit — Adam+Bethany :: misc :: span=2026-07-17
-[CAL] 2026-07-14 ALL-DAY [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-15 ALL-DAY [W][M][D] Swine show + pork meal :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-14 15:00 [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-15 17:00 [W][M][D] Swine show + pork meal :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-16 09:00 [M] Sheep show :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-17 ALL-DAY [W][M][R][C][E] Swim meet — Salida :: kids :: location="Salida, CO" :: span=2026-07-19
-[CAL] 2026-07-17 ALL-DAY [M] Master showmanship — sheep :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-18 ALL-DAY [D][W][M] Buckle ceremony + livestock sale :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-19 ALL-DAY Fair cleanup :: misc :: location="Westcliffe, CO"
+[CAL] 2026-07-18 12:00 [D][W][M] Buckle ceremony + livestock sale :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-19 12:00 Fair cleanup :: misc :: location="Westcliffe, CO"
 [CAL] 2026-07-24 ALL-DAY [W][M][R][C][E] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-31 ALL-DAY [W][M][R][C][E] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
 

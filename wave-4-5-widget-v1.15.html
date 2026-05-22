@@ -623,9 +623,7 @@ function spanColor(pills,cat){
   if(!pills||!pills.length){const cc={kalea:'#2a5fb8',matt:'#CFB87C'};return cc[cat]||'#CFB87C';}
   const famP=pills.filter(p=>FAM_MEMBERS.includes(p));
   if(famP.length>=5)return'#CFB87C';
-  if(pills.length===1&&PCOL[pills[0]])return PCOL[pills[0]];
-  if(pills.includes('K')&&!pills.includes('D'))return'#2a5fb8';
-  if(!famP.length&&pills[0]&&PCOL[pills[0]])return PCOL[pills[0]];
+  if(pills[0]&&PCOL[pills[0]])return PCOL[pills[0]];
   return'#CFB87C';
 }
 function spanBg(sc){const m=sc.match(/^#([a-f0-9]{6})$/i);if(!m)return'rgba(207,184,124,.14)';const r=parseInt(m[1].slice(0,2),16),g=parseInt(m[1].slice(2,4),16),b=parseInt(m[1].slice(4,6),16);return`rgba(${r},${g},${b},.14)`;}
