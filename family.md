@@ -1,7 +1,15 @@
-﻿# Bayer Family — Roster
+# Bayer Family — Roster
 
 *Source of truth for family membership and extended-network operational data. Do not duplicate elsewhere — reference this file.*
-*Last updated: 2026-05-15*
+*Last updated: 2026-05-22*
+
+---
+
+## Medical Providers
+
+### Dental
+- **Matt** — Salida Family Dental, Salida CO
+- **Kalea, Wyatt, Molly, Rileigh, Cullen, Emmitt** — Canyon Family Dental, Cañon City CO
 
 ---
 
@@ -113,6 +121,17 @@ When an adult is needed for a kid issue or logistical pickup and neither Matt no
 | 6 | Mesquite contingent | Out of state; only relevant when kids are actually with them on a visit |
 
 Drill-week note: when Kalea is on USMC drill in Hawaii, the tier list runs hotter. Routine items that would default to "wait for Kalea" route to Tier 1 (Oma & Papa) instead of escalating to Matt.
+
+---
+
+## Extended Network — Birthdays & Notable Dates
+
+*Non-immediate family and close friends. Foreman pulls from here for calendar entries.*
+
+| Person | Date | Notes |
+|---|---|---|
+| Uncle Doug | June 13 | Same day as Fr. Joe |
+| Fr. Joe | June 13 | Parish priest, St. Joseph's Salida — same day as Uncle Doug |
 
 ---
 
