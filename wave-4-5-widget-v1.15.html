@@ -492,8 +492,8 @@ const FAM_MEMBERS=['D','K','W','M','R','C','E'];
 const KIDS_MEMBERS=['W','M','R','C','E'];
 const NO_PILL_CATS=new Set(['liturgical','birthdays','holidays']);
 const MAX_EVENTS=4;
-const ABBREV=[['Knights of Columbus','Knights'],['Faith Formation','Faith Form.'],['Study block','Study'],['study block','study'],['Invitational','Invit.'],['invitational','invit.'],['Birthday dinner','Bday dinner'],['Greenhouse seeding','Greenhouse'],['Garden beds','Garden'],['weekly apt','apt'],['Fairboard meeting','Fairboard mtg'],['4H fair prep','Fair prep'],['ranch supply run','ranch supply'],['orthodontist','ortho'],['Track practice','Track'],['track practice','track']];
-function abbreviate(t){for(const[f,s]of ABBREV)t=t.replace(f,s);if(t.length>26)t=t.slice(0,25).trimEnd();return t;}
+const ABBREV=[['Faith Formation','Faith Form.'],['Study block','Study'],['study block','study'],['Invitational','Invit.'],['invitational','invit.'],['Birthday dinner','Bday dinner'],['Greenhouse seeding','Greenhouse'],['Garden beds','Garden'],['weekly apt','apt'],['Fairboard meeting','Fairboard mtg'],['4H fair prep','Fair prep'],['ranch supply run','ranch supply'],['orthodontist','ortho'],['Track practice','Track'],['track practice','track']];
+function abbreviate(t){for(const[f,s]of ABBREV)t=t.replace(f,s);return t;}
 
 const TC_SKIP=new Set(['of','the','a','an','in','at','for','and','or','but','to','with','from','by','on','as']);
 function titleCase(s){return s.split(' ').map((w,i)=>(!i||!TC_SKIP.has(w.toLowerCase()))?w.charAt(0).toUpperCase()+w.slice(1):w).join(' ');}
@@ -567,18 +567,7 @@ function parseRecur(line,ws,we){
   const tdow=dayS?(DOW[dayS.toLowerCase()]??sd.getDay()):sd.getDay();
   const evts=[];const cur=new Date(ws);
   while(cur<=we){if(cur.getDay()===tdow&&cur>=sd){const e=parseCalLine(`[CAL] ${fmtD(cur)} ${tr} ${rest}`);if(e){e.recur=true;evts.push(e);}}cur.setDate(cur.getDate()+1);}
-  // PQ-18: expand span= date strings into start/mid/end synthetic events
-  const expanded=[];
-  for(const e of evts){
-    if(!e.span||e.span==='start'||e.span==='mid'||e.span==='end'){expanded.push(e);continue;}
-    const startD=parseD(e.date);const endD=parseD(e.span);
-    if(endD<=startD){expanded.push({...e,span:'start'});continue;}
-    expanded.push({...e,span:'start'});
-    const cur2=new Date(startD);cur2.setDate(cur2.getDate()+1);
-    while(cur2<endD){expanded.push({...e,id:gid(),date:fmtD(cur2),span:'mid'});cur2.setDate(cur2.getDate()+1);}
-    expanded.push({...e,id:gid(),date:fmtD(endD),span:'end'});
-  }
-  return expanded;
+  return evts;
 }
 
 function nthWeekdayOfMonth(yr,mo,dow,n){let count=0;const d=new Date(yr,mo,1,12,0,0);while(d.getMonth()===mo){if(d.getDay()===dow){count++;if(count===n)return new Date(d);}d.setDate(d.getDate()+1);}return null;}
@@ -616,7 +605,18 @@ function parseSrc(txt){
     if(t.startsWith('[CAL-RECUR')){const re=t.includes('monthly')?parseRecurMonthly(t,FLOOR,CEIL):parseRecur(t,FLOOR,CEIL);evts.push(...re);if(re.length)last=re[re.length-1];continue;}
     if(t.startsWith('[CAL]')){const e=parseCalLine(t);if(e){evts.push(e);last=e;}}
   }
-  return evts;
+  // PQ-18: expand span= date strings into start/mid/end synthetic events
+  const expanded=[];
+  for(const e of evts){
+    if(!e.span||e.span==='start'||e.span==='mid'||e.span==='end'){expanded.push(e);continue;}
+    const startD=parseD(e.date);const endD=parseD(e.span);
+    if(endD<=startD){expanded.push({...e,span:'start'});continue;}
+    expanded.push({...e,span:'start'});
+    const cur2=new Date(startD);cur2.setDate(cur2.getDate()+1);
+    while(cur2<endD){expanded.push({...e,id:gid(),date:fmtD(cur2),span:'mid'});cur2.setDate(cur2.getDate()+1);}
+    expanded.push({...e,id:gid(),date:fmtD(endD),span:'end'});
+  }
+  return expanded;
 }
 function sortEvts(es){return[...es].sort((a,b)=>{if(a.trash&&!b.trash)return-1;if(!a.trash&&b.trash)return 1;if(a.allDay&&!b.allDay)return-1;if(!a.allDay&&b.allDay)return 1;if(a.time&&b.time)return a.time.localeCompare(b.time);return 0;});}
 function spanColor(pills,cat){
