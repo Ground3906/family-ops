@@ -1,7 +1,7 @@
-﻿# Bayer Family Ops — Prefs & Conventions
+# Bayer Family Ops — Prefs & Conventions
 
 *Household-level decisions, standing rules, schema history. Not personal preferences — those live in `family.md`.*
-*Last updated: 2026-05-15*
+*Last updated: 2026-05-22*
 
 ---
 
@@ -15,7 +15,7 @@
 ## Source of Truth
 
 - This Git repo is canonical: `github.com/Ground3906/family-ops` (private).
-- OneDrive (`C:\Users\strayhawk\OneDrive\Desktop\Stuff\Jobs\AA_My Home\Al Bayer Operations`) — **retired 2026-05-15.** Do not write there.
+- OneDrive (`C:\Users\ThinkPad X1 Carbon\OneDrive\Desktop\Stuff\Jobs\AA_My Home\Al Bayer Operations`) — **retired 2026-05-15.** Do not write there.
 - Google Drive was previously named as canonical — **superseded.** Git only.
 - Agents propose; Matt commits. No file is written to the repo silently.
 
@@ -55,6 +55,13 @@ No agent schedules over these without Matt''s explicit chat-session override. St
 - HARD for Kalea-only events. When Kalea is on USMC Reserve drill travel (Hawaii, ~2 multi-day chunks/year), her calendar is frozen for that window.
 - **Kalea-only scope.** Drill travel does NOT freeze the household — Matt and the kids continue normally. Routine items that would normally route to Kalea bump up the backup-adult tier list (default Tier 1: Oma & Papa).
 - Parallel structure to Matt''s hunting blackouts. Mystery Ranch is to Matt what drill is to Kalea: a domain-specific sacred block that protects one person, not the family.
+
+### Kalea canning — Kalea-only scope
+- HARD for Kalea's kitchen territory. Two sessions/year, 3 days each:
+  - **(1) Peaches** — ~Labor Day (early September)
+  - **(2) Apples / jalapeños / etc.** — ~October
+- During canning sessions: Chow Hall simplifies meals and handles jar/lid/pectin inventory. Rootstock aligns harvest peaks. Stockyard feeds in if meat canning is in scope.
+- Parallel structure to hunting blackouts and drill travel — protects Kalea's window, not the whole household.
 
 ### Kalea-flagged blocks
 - Any block marked `kalea_hold: true` in agent state. Untouchable without her chat-session confirmation.
@@ -160,7 +167,19 @@ The decision is Austin-Auto-first by default — distance is what flips it to US
 
 ---
 
-## Decision Log
+## Decision Window Doctrine
+
+**Kalea is a morning person. Matt is a night owl.**
+
+Any agent or system push that requires Kalea's decision-making input **cannot fire after 20:00.** Her cognitive capacity falls short past that hour and the decision won't land cleanly.
+
+- **Kalea-input agents** (Chow Hall meal planning, family logistics requiring her sign-off, anything that needs a "yes" from Jill) → morning or early-afternoon windows only.
+- **Matt-only late-night work** (Whetstone study, deep design sessions, solo agent builds) → fine post-20:00.
+- Foreman enforces this passively: if a prompt would fire after 20:00 and requires Kalea, it holds until the next morning window.
+
+Charter-level scheduling rule.
+
+---
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
@@ -174,10 +193,8 @@ The decision is Austin-Auto-first by default — distance is what flips it to US
 | 2026-05-15 | Agent personality routing established alongside task routing | Tone-fit is part of getting a moment right; Al watches for tone mismatches |
 | 2026-05-15 | Anti-atrophy principle (Option C) adopted | Each agent owns its own reminders; Foreman is silent backbone, domain agents are voice |
 | 2026-05-15 | Tow protocol locked: Austin Auto first, USAA fallback outside range | Distance flips it, not preference |
-| 2026-05-15 | Acknowledged constraints (e.g. backup power gap, CCW dormant) do not re-surface | Matt reopens or they stay dormant |
-| 2026-05-15 | Vehicle/trailer registration renewal lead-time set to 30 days | Tighter than original 60-day spec; less padding needed for a simple DMV transaction |
-| 2026-05-15 | Punch List designated full arbiter for routine items in vehicles/equipment/fleet MX/infrastructure/garden tooling/documents | Matt only arbitrates urgent or above-$250 items; routine work routes autonomously |
-| 2026-05-15 | Punch List autonomy threshold set at $250 | Below the line: schedule and route autonomously, surface as done. Above the line: propose and wait for Matt''s confirm. |
+| 2026-05-22 | Kalea canning established as Kalea-only sacred block | Two sessions/year (~Labor Day peaches, ~October apples+). Parallel to hunting blackouts and drill travel. |
+| 2026-05-22 | Decision window doctrine locked — Kalea-input agents cannot fire after 20:00 | Kalea is a morning person; decisions after 20:00 don't land. Matt-only work fine post-20:00. |
 
 ---
 
@@ -186,5 +203,4 @@ The decision is Austin-Auto-first by default — distance is what flips it to US
 | Version | Date | Notes |
 |---------|------|-------|
 | 1 | 2026-05-15 | Initial build. Git SSoT established. Foundational files created: README, family, prefs, handoffs. |
-| 1.1 | 2026-05-15 | Wave 4 expansion: Vocabulary, Equipment Access, Agent Personality Routing, Anti-Atrophy (Option C), Renewal Watch, Tow Protocol, hunting+drill scope clarifications. No breaking schema changes — additive only. |
-| 1.2 | 2026-05-15 | Wave 4: Punch List deployed as Claude Code subagent. tasks.json and vehicles.json seeded. Three decisions locked (30-day reg lead, full-arbiter, $250 threshold). |
+| 1.2 | 2026-05-22 | Kalea canning sacred block added. Decision window doctrine added. Additive only. |
