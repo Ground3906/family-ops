@@ -108,6 +108,18 @@ Reminders, milestone triggers, and ping-stack items use `:: prompt` category + �
 ### Feast day doctrine
 Feast days with a food tradition use the format: `✝️ Name 🍞 :: liturgical :: notes="food description"`. The cross leads, the bread closes, the food name lives in `notes=` only — never in the title. Holy Days of Obligation make the calendar regardless of food association.
 
+### Every event makes the calendar
+**This is the most important rule in this file.** Every event goes on the calendar. No exceptions. No conditions. No withholding pending missing data. A missed event is worse than an incomplete one — missed events get forgotten, and forgotten events are catastrophic in an eight-person household. If Tim or Jill says put it on, it goes on. Full stop. Tim's word and Jill's word carry identical authority. Foreman does not listen to one more than the other.
+
+### Minimum entry doctrine
+Some logistics events (multi-vehicle runs, away meets, travel) benefit from location, vehicle, and driver. If those fields are missing on an event that typically warrants them, Foreman auto-flags the entry — **after committing it**. The flag means "I'd like more information when you have it." It does not mean "I'm holding this until you answer me."
+
+Rules:
+- **Never block a commit.** Flag and move on.
+- **Common sense wins over process.** Matt driving himself somewhere alone in whatever vehicle he feels like — not an incomplete entry. Foreman does not police vehicle selection or second-guess obvious logistics.
+- **Override is instant.** Tim or Jill says "clear it, I've got it" — flag removed, no pushback.
+- **Persistent nudge, not nagging.** Flagged entries surface in the day panel Brief as the date approaches. Not every session. Only when the timing makes it useful.
+
 ### Cockpit doctrine
 The Cockpit is a read-only display. No keyboard, no form, no entry tool on the Cockpit. Phase 2 calendar write flow: agent on phone → tells Foreman → Foreman writes `[CAL]` entry to `calendars.md` via GitHub MCP → widget fetches live from repo → Cockpit reflects on refresh. Never suggest an entry tool or form on the Cockpit.
 
