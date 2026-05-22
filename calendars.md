@@ -213,10 +213,10 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### RECURRING — Swim Practice (Canon City Pirates — Summer Season)
 <!-- Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. Kalea drives+coaches. -->
-[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
 
 ---
 
@@ -361,3 +361,162 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 - **It always makes the calendar.** Unresolved = flag=true. Nothing stays off pending resolution.
 - **Travel spans:** `travel=true` on any span where a person is physically away from home. Foreman asks "Are they traveling?" on all multi-day absence entries.
 - **When in doubt, ask Tim.** Life with 6 kids changes — don't guess at this year's schedule from last year's.
+
+---
+
+### BIRTHDAYS — Immediate Family
+
+[CAL] 2026-01-22 ALL-DAY Wyatt birthday :: birthdays
+[CAL] 2026-04-19 ALL-DAY Molly birthday :: birthdays
+[CAL] 2026-05-27 ALL-DAY Kalea birthday :: birthdays
+[CAL] 2026-06-28 ALL-DAY Rileigh birthday :: birthdays
+[CAL] 2026-09-04 ALL-DAY Cullen + Emmitt birthday :: birthdays
+[CAL] 2026-12-07 ALL-DAY Matt birthday :: birthdays
+[CAL] 2027-01-22 ALL-DAY Wyatt birthday :: birthdays
+[CAL] 2027-04-19 ALL-DAY Molly birthday :: birthdays
+[CAL] 2027-05-27 ALL-DAY Kalea birthday :: birthdays
+[CAL] 2027-06-28 ALL-DAY Rileigh birthday :: birthdays
+[CAL] 2027-09-04 ALL-DAY Cullen + Emmitt birthday :: birthdays
+[CAL] 2027-12-07 ALL-DAY Matt birthday :: birthdays
+
+---
+
+### FEDERAL HOLIDAYS + OBSERVANCES — 2026
+
+[CAL] 2026-01-01 ALL-DAY New Year's Day :: holidays
+[CAL] 2026-01-19 ALL-DAY MLK Day :: holidays
+[CAL] 2026-02-16 ALL-DAY Presidents Day :: holidays
+[CAL] 2026-05-10 ALL-DAY Mother's Day :: holidays
+[CAL] 2026-05-25 ALL-DAY Memorial Day :: holidays
+[CAL] 2026-06-21 ALL-DAY Father's Day :: holidays
+[CAL] 2026-07-04 ALL-DAY Independence Day :: holidays
+[CAL] 2026-09-07 ALL-DAY Labor Day :: holidays
+[CAL] 2026-10-12 ALL-DAY Columbus Day :: holidays
+[CAL] 2026-11-11 ALL-DAY Veterans Day :: holidays
+[CAL] 2026-11-26 ALL-DAY Thanksgiving :: holidays
+[CAL] 2026-12-25 ALL-DAY Christmas :: holidays
+
+---
+
+### FEDERAL HOLIDAYS + OBSERVANCES — 2027
+
+[CAL] 2027-01-01 ALL-DAY New Year's Day :: holidays
+[CAL] 2027-01-18 ALL-DAY MLK Day :: holidays
+[CAL] 2027-02-15 ALL-DAY Presidents Day :: holidays
+[CAL] 2027-05-09 ALL-DAY Mother's Day :: holidays
+[CAL] 2027-05-31 ALL-DAY Memorial Day :: holidays
+[CAL] 2027-06-20 ALL-DAY Father's Day :: holidays
+[CAL] 2027-07-04 ALL-DAY Independence Day :: holidays
+[CAL] 2027-09-06 ALL-DAY Labor Day :: holidays
+[CAL] 2027-10-11 ALL-DAY Columbus Day :: holidays
+[CAL] 2027-11-11 ALL-DAY Veterans Day :: holidays
+[CAL] 2027-11-25 ALL-DAY Thanksgiving :: holidays
+[CAL] 2027-12-25 ALL-DAY Christmas :: holidays
+
+---
+
+### AUG 1 PING STACK — additions
+
+[CAL] 2026-08-01 ALL-DAY Kalea teaching block — confirm fall schedule ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY Youth Group fall schedule — confirm ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY Faith Formation fall start — confirm with parish ⏰ :: prompt
+
+---
+
+### LITURGICAL — Curated Feasts 2026
+<!-- Filter: Holy Days of Obligation + feasts with food tradition or significant family observance. -->
+<!-- Full auto-render of all saint days = PQ-22 widget build. -->
+
+[CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
+[CAL] 2026-01-06 ALL-DAY Epiphany — king cake :: liturgical
+[CAL] 2026-02-02 ALL-DAY Candlemas — crêpes :: liturgical
+[CAL] 2026-02-03 ALL-DAY St. Blaise — throat blessing :: liturgical
+[CAL] 2026-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
+[CAL] 2026-02-14 ALL-DAY St. Valentine :: liturgical
+[CAL] 2026-03-17 ALL-DAY St. Patrick — corned beef :: liturgical
+[CAL] 2026-03-19 ALL-DAY St. Joseph — zeppole :: liturgical
+[CAL] 2026-03-25 ALL-DAY Annunciation :: liturgical
+[CAL] 2026-04-23 ALL-DAY St. George :: liturgical
+[CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
+[CAL] 2026-05-13 ALL-DAY Our Lady of Fatima :: liturgical
+[CAL] 2026-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
+[CAL] 2026-05-31 ALL-DAY Visitation :: liturgical
+[CAL] 2026-06-13 ALL-DAY St. Anthony — bread of St. Anthony :: liturgical
+[CAL] 2026-06-24 ALL-DAY Birth of St. John the Baptist — bonfire :: liturgical
+[CAL] 2026-06-29 ALL-DAY Sts. Peter and Paul — fish :: liturgical
+[CAL] 2026-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
+[CAL] 2026-07-22 ALL-DAY St. Mary Magdalene :: liturgical
+[CAL] 2026-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
+[CAL] 2026-08-06 ALL-DAY Transfiguration — first fruits :: liturgical
+[CAL] 2026-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
+[CAL] 2026-08-22 ALL-DAY Queenship of Mary :: liturgical
+[CAL] 2026-09-08 ALL-DAY Birth of Mary :: liturgical
+[CAL] 2026-09-14 ALL-DAY Exaltation of the Holy Cross :: liturgical
+[CAL] 2026-09-29 ALL-DAY Sts. Michael, Gabriel, Raphael :: liturgical
+[CAL] 2026-10-01 ALL-DAY St. Thérèse of Lisieux :: liturgical
+[CAL] 2026-10-02 ALL-DAY Guardian Angels :: liturgical
+[CAL] 2026-10-04 ALL-DAY St. Francis — animal blessing :: liturgical
+[CAL] 2026-10-07 ALL-DAY Our Lady of the Rosary :: liturgical
+[CAL] 2026-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
+[CAL] 2026-10-31 ALL-DAY All Hallows Eve :: liturgical
+[CAL] 2026-11-01 ALL-DAY All Saints Day — Holy Day of Obligation :: liturgical
+[CAL] 2026-11-02 ALL-DAY All Souls Day — pan de muerto :: liturgical
+[CAL] 2026-11-11 ALL-DAY St. Martin of Tours — goose :: liturgical
+[CAL] 2026-11-22 ALL-DAY St. Cecilia :: liturgical
+[CAL] 2026-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
+[CAL] 2026-12-06 ALL-DAY St. Nicholas — treats :: liturgical
+[CAL] 2026-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
+[CAL] 2026-12-12 ALL-DAY Our Lady of Guadalupe — tamales :: liturgical
+[CAL] 2026-12-13 ALL-DAY St. Lucy — saffron buns :: liturgical
+[CAL] 2026-12-26 ALL-DAY St. Stephen :: liturgical
+[CAL] 2026-12-27 ALL-DAY St. John the Apostle :: liturgical
+[CAL] 2026-12-28 ALL-DAY Holy Innocents :: liturgical
+
+---
+
+### LITURGICAL — Curated Feasts 2027
+
+[CAL] 2027-01-01 ALL-DAY Mary, Mother of God :: liturgical
+[CAL] 2027-01-06 ALL-DAY Epiphany — king cake :: liturgical
+[CAL] 2027-02-02 ALL-DAY Candlemas — crêpes :: liturgical
+[CAL] 2027-02-03 ALL-DAY St. Blaise — throat blessing :: liturgical
+[CAL] 2027-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
+[CAL] 2027-02-14 ALL-DAY St. Valentine :: liturgical
+[CAL] 2027-03-17 ALL-DAY St. Patrick — corned beef :: liturgical
+[CAL] 2027-03-19 ALL-DAY St. Joseph — zeppole :: liturgical
+[CAL] 2027-03-25 ALL-DAY Annunciation :: liturgical
+[CAL] 2027-04-23 ALL-DAY St. George :: liturgical
+[CAL] 2027-05-01 ALL-DAY St. Joseph the Worker :: liturgical
+[CAL] 2027-05-13 ALL-DAY Our Lady of Fatima :: liturgical
+[CAL] 2027-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
+[CAL] 2027-05-31 ALL-DAY Visitation :: liturgical
+[CAL] 2027-06-13 ALL-DAY St. Anthony — bread of St. Anthony :: liturgical
+[CAL] 2027-06-24 ALL-DAY Birth of St. John the Baptist — bonfire :: liturgical
+[CAL] 2027-06-29 ALL-DAY Sts. Peter and Paul — fish :: liturgical
+[CAL] 2027-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
+[CAL] 2027-07-22 ALL-DAY St. Mary Magdalene :: liturgical
+[CAL] 2027-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
+[CAL] 2027-08-06 ALL-DAY Transfiguration — first fruits :: liturgical
+[CAL] 2027-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
+[CAL] 2027-08-22 ALL-DAY Queenship of Mary :: liturgical
+[CAL] 2027-09-08 ALL-DAY Birth of Mary :: liturgical
+[CAL] 2027-09-14 ALL-DAY Exaltation of the Holy Cross :: liturgical
+[CAL] 2027-09-29 ALL-DAY Sts. Michael, Gabriel, Raphael :: liturgical
+[CAL] 2027-10-01 ALL-DAY St. Thérèse of Lisieux :: liturgical
+[CAL] 2027-10-02 ALL-DAY Guardian Angels :: liturgical
+[CAL] 2027-10-04 ALL-DAY St. Francis — animal blessing :: liturgical
+[CAL] 2027-10-07 ALL-DAY Our Lady of the Rosary :: liturgical
+[CAL] 2027-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
+[CAL] 2027-10-31 ALL-DAY All Hallows Eve :: liturgical
+[CAL] 2027-11-01 ALL-DAY All Saints Day — Holy Day of Obligation :: liturgical
+[CAL] 2027-11-02 ALL-DAY All Souls Day — pan de muerto :: liturgical
+[CAL] 2027-11-11 ALL-DAY St. Martin of Tours — goose :: liturgical
+[CAL] 2027-11-22 ALL-DAY St. Cecilia :: liturgical
+[CAL] 2027-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
+[CAL] 2027-12-06 ALL-DAY St. Nicholas — treats :: liturgical
+[CAL] 2027-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
+[CAL] 2027-12-12 ALL-DAY Our Lady of Guadalupe — tamales :: liturgical
+[CAL] 2027-12-13 ALL-DAY St. Lucy — saffron buns :: liturgical
+[CAL] 2027-12-26 ALL-DAY St. Stephen :: liturgical
+[CAL] 2027-12-27 ALL-DAY St. John the Apostle :: liturgical
+[CAL] 2027-12-28 ALL-DAY Holy Innocents :: liturgical
