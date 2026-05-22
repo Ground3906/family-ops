@@ -117,7 +117,12 @@ All school-day events (field trips, school activities, etc.) = 08:00–15:00 for
 ---
 
 ## Sports Location Doctrine
-For travel sports (swim meets, track meets, cross country meets, and similar away competitions), the location renders on the calendar tile. This is an explicit exception to the location-in-detail-only rule — every meet is a different venue and the location is essential at-a-glance information.
+For travel sports (swim meets, track meets, cross country meets, and similar away competitions), the location renders on the calendar tile. Explicit exception to the location-in-detail-only rule — every meet is a different venue and the location is essential at-a-glance information.
+
+---
+
+## Prompt Entry Doctrine
+Reminders and milestone triggers use `:: prompt` category + ⏰ at end of title. These are not appointments — no `stripe=appt`, no location unless confirmed. Pattern: `[PILL] Title ⏰ :: prompt`
 
 ---
 
@@ -160,11 +165,11 @@ Tim's whiteboard legend. Foreman reads, never writes.
 Foreman holds the date; the originating agent voices the reminder (Option C). When the prompt fires, the named agent surfaces the action.
 
 ### Punch List milestones
-- **2026-06-15** — Kalea CAC renewal prompt. CAC expires 2026-07-31. Schedule DEERS appt. Earlier-rather-than-later given Aug 2026 birth timing. Voice: Punch List.
-- **2026-08-01** — Jackson trailer registration renewal prompt (60 days before Oct expiration). Voice: Punch List.
-- **Spring 2027** — Gehl skid steer oil change. Voice: Punch List.
-- **2027-02-27** — Kalea CO DL renewal prompt (90 days before 2027-05-27 expiration). Voice: Punch List.
-- **2028-09-07** — Matt CO DL renewal prompt (90 days before 2028-12-07 expiration). Voice: Punch List.
+- **2026-06-15** — Kalea CAC renewal prompt. CAC expires 2026-07-31. Schedule DEERS appt.
+- **2026-08-01** — Jackson trailer registration renewal prompt (60 days before Oct expiration).
+- **Spring 2027** — Gehl skid steer oil change.
+- **2027-02-27** — Kalea CO DL renewal prompt (90 days before 2027-05-27 expiration).
+- **2028-09-07** — Matt CO DL renewal prompt (90 days before 2028-12-07 expiration).
 
 ### Wyatt licensing milestones
 From `punch-list/wyatt-licensing.md`. Voice: Punch List.
@@ -208,10 +213,10 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### RECURRING — Swim Practice (Canon City Pirates — Summer Season)
 <!-- Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. Kalea drives+coaches. -->
-[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [FAM] Swim practice :: kids :: location="Florence Pool, Florence, CO"
 
 ---
 
@@ -222,7 +227,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### FAITH FORMATION — School Year 2026-27
-<!-- School year Aug–May. Start date TBD. Flagged until confirmed with parish. -->
+<!-- School year Aug–May. Start date TBD. Sequential with Mass — not a conflict. PQ-20 logged. -->
 [CAL-RECUR weekly start=2026-08-01 day=sun] 09:00 [M][R][C][E] Faith Formation :: kids :: flag=true :: notes="🚩 Fall start date unconfirmed — verify with parish"
 
 ---
@@ -263,27 +268,40 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### MILESTONES — Punch List / Wyatt / Mantel
 
-[CAL] 2026-06-15 ALL-DAY Kalea CAC renewal prompt — DEERS appt :: misc
-[CAL] 2026-08-01 ALL-DAY Wyatt driver-ed provider research :: misc
-[CAL] 2026-08-01 ALL-DAY Jackson trailer registration prompt :: misc
-[CAL] 2026-09-15 ALL-DAY Enroll Wyatt in driver ed :: misc
+[CAL] 2026-06-15 ALL-DAY [K] CAC renewal reminder ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY Wyatt driver-ed research ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY Jackson trailer registration ⏰ :: prompt
+[CAL] 2026-09-15 ALL-DAY Enroll Wyatt in driver ed ⏰ :: prompt
 [CAL] 2026-11-08 ALL-DAY [D][K] Wedding anniversary :: misc
-[CAL] 2026-12-15 ALL-DAY Wyatt driver ed cert check :: misc
-[CAL] 2027-01-01 ALL-DAY Schedule Wyatt DMV permit appt :: misc
-[CAL] 2027-02-27 ALL-DAY Kalea CO DL renewal prompt :: misc
-[CAL] 2027-04-22 ALL-DAY Wyatt permit checkpoint — 3 mo :: misc
-[CAL] 2027-07-22 ALL-DAY Wyatt permit checkpoint — 6 mo :: misc
-[CAL] 2027-10-22 ALL-DAY Wyatt permit checkpoint — 9 mo :: misc
-[CAL] 2028-01-01 ALL-DAY Schedule Wyatt CO road test :: misc
-[CAL] 2028-09-07 ALL-DAY Matt CO DL renewal prompt :: misc
-[CAL] 2029-01-01 ALL-DAY Wyatt restricted phase ending check :: misc
+[CAL] 2026-12-15 ALL-DAY Wyatt driver ed cert check ⏰ :: prompt
+[CAL] 2027-01-01 ALL-DAY Wyatt DMV permit appt ⏰ :: prompt
+[CAL] 2027-02-27 ALL-DAY [K] CO DL renewal reminder ⏰ :: prompt
+[CAL] 2027-04-22 ALL-DAY Wyatt permit checkpoint — 3 mo ⏰ :: prompt
+[CAL] 2027-07-22 ALL-DAY Wyatt permit checkpoint — 6 mo ⏰ :: prompt
+[CAL] 2027-10-22 ALL-DAY Wyatt permit checkpoint — 9 mo ⏰ :: prompt
+[CAL] 2028-01-01 ALL-DAY Wyatt CO road test ⏰ :: prompt
+[CAL] 2028-09-07 ALL-DAY [D] CO DL renewal reminder ⏰ :: prompt
+[CAL] 2029-01-01 ALL-DAY Wyatt restricted phase ending check ⏰ :: prompt
+
+---
+
+### TRASH PICKUP — Jul 2026 → Jan 2027 (every 4 weeks from Jul 1)
+
+[CAL] 2026-07-01 ALL-DAY trash-day :: misc
+[CAL] 2026-07-29 ALL-DAY trash-day :: misc
+[CAL] 2026-08-26 ALL-DAY trash-day :: misc
+[CAL] 2026-09-23 ALL-DAY trash-day :: misc
+[CAL] 2026-10-21 ALL-DAY trash-day :: misc
+[CAL] 2026-11-18 ALL-DAY trash-day :: misc
+[CAL] 2026-12-16 ALL-DAY trash-day :: misc
+[CAL] 2027-01-13 ALL-DAY trash-day :: misc
 
 ---
 
 ### MAY 2026
 
+[CAL] 2026-05-06 ALL-DAY trash-day :: misc
 [CAL] 2026-05-05 10:00 [K][D] Prenatal apt — Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-05-06 ALL-DAY trash-day
 [CAL] 2026-05-14 08:00 [W] Field trip — Sky Zone :: kids :: location="Colorado Springs, CO"
 [CAL] 2026-05-14 ALL-DAY [M][R][C][E] PJ Day :: kids
 [CAL] 2026-05-16 11:00 [R] Haircut :: kids
@@ -299,40 +317,38 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JUNE 2026
 
-[CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
-[CAL] 2026-06-03 ALL-DAY trash-day
+[CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
-[CAL] 2026-06-05 ALL-DAY [W][M][R][C][E] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: span=2026-06-07 :: flag=true :: notes="🚩 F-01 Castle Rock jackpot same day — logistics unresolved"
+[CAL] 2026-06-05 ALL-DAY [FAM] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: span=2026-06-07 :: flag=true :: notes="🚩 F-01 Castle Rock jackpot same day — logistics unresolved"
 [CAL] 2026-06-05 ALL-DAY Jackpot — Castle Rock :: animals :: location="Castle Rock, CO" :: flag=true :: notes="🚩 F-01 swim meet conflict — logistics unresolved"
-[CAL] 2026-06-12 ALL-DAY [W][M][R][C][E] Swim meet — Lamar :: kids :: location="Lamar, CO" :: span=2026-06-14
+[CAL] 2026-06-12 ALL-DAY [FAM] Swim meet — Lamar :: kids :: location="Lamar, CO" :: span=2026-06-14
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: span=2026-06-19 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
-[CAL] 2026-06-19 ALL-DAY [W][M][R][C][E] Swim meet — Pueblo County :: kids :: location="Pueblo, CO" :: span=2026-06-21
+[CAL] 2026-06-19 ALL-DAY [FAM] Swim meet — Pueblo County :: kids :: location="Pueblo, CO" :: span=2026-06-21
 [CAL] 2026-06-20 08:00 Livestock clinic — Florence :: misc :: location="Florence, CO"
 [CAL] 2026-06-20 ALL-DAY Jackpot — Jefferson County Fairgrounds :: animals :: location="Golden, CO"
 [CAL] 2026-06-25 13:30 [W] Ortho — Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-06-26 ALL-DAY [W][M][R][C][E] Swim meet — Rocky Ford :: kids :: location="Rocky Ford, CO" :: span=2026-06-28 :: flag=true :: notes="🚩 F-02 jackpot same window — logistics unresolved"
+[CAL] 2026-06-26 ALL-DAY [FAM] Swim meet — Rocky Ford :: kids :: location="Rocky Ford, CO" :: span=2026-06-28 :: flag=true :: notes="🚩 F-02 jackpot same window — logistics unresolved"
 [CAL] 2026-06-27 ALL-DAY Jackpot — Monte Vista or Lamar TBD :: animals :: flag=true :: notes="🚩 F-02 Rocky Ford swim meet conflict Jun 26-28"
 
 ---
 
 ### JULY 2026
 
-[CAL] 2026-07-01 ALL-DAY trash-day
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
 [CAL] 2026-07-09 16:00 Fair cleanup :: misc :: location="Westcliffe, CO"
-[CAL] 2026-07-11 ALL-DAY [W][M][R][C][E] Swim meet — Piranhas home meet :: kids :: location="Pueblo, CO"
+[CAL] 2026-07-11 ALL-DAY [FAM] Swim meet — Piranhas home meet :: kids :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Louche visit — Adam+Bethany :: misc :: span=2026-07-17
 [CAL] 2026-07-14 15:00 [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-15 17:00 [W][M][D] Swine show + pork meal :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-16 09:00 [M] Sheep show :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-17 ALL-DAY [W][M][R][C][E] Swim meet — Salida :: kids :: location="Salida, CO" :: span=2026-07-19
+[CAL] 2026-07-17 ALL-DAY [FAM] Swim meet — Salida :: kids :: location="Salida, CO" :: span=2026-07-19
 [CAL] 2026-07-18 12:00 [D][W][M] Buckle ceremony + livestock sale :: kids :: location="Westcliffe, CO"
 [CAL] 2026-07-19 12:00 Fair cleanup :: misc :: location="Westcliffe, CO"
-[CAL] 2026-07-24 ALL-DAY [W][M][R][C][E] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
-[CAL] 2026-07-31 ALL-DAY [W][M][R][C][E] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
+[CAL] 2026-07-24 ALL-DAY [FAM] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
+[CAL] 2026-07-31 ALL-DAY [FAM] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
 
 ---
 
@@ -343,4 +359,5 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 - **One source of truth per fact.** Don't restate `family.md` or `prefs.md` here. Reference.
 - **Reminder voice belongs to domain agents (Option C).** You hold the date; the named agent in brackets speaks when the prompt fires.
 - **It always makes the calendar.** Unresolved = flag=true. Nothing stays off pending resolution.
+- **Travel spans:** `travel=true` on any span where a person is physically away from home. Foreman asks "Are they traveling?" on all multi-day absence entries.
 - **When in doubt, ask Tim.** Life with 6 kids changes — don't guess at this year's schedule from last year's.
