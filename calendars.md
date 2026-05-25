@@ -213,10 +213,10 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### RECURRING — Swim Practice (Canon City Pirates — Summer Season)
 <!-- Regular: Mon+Wed 17:30-19:30, Tue+Thu 09:30-11:30. Florence Pool. Kalea drives+coaches. -->
-[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
-[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [K][W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=mon] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=wed] 17:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=tue] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
+[CAL-RECUR weekly start=2026-06-01 day=thu] 09:30 [W][M][R][C][E] Swim practice :: kids :: location="Florence Pool, Florence, CO"
 
 ---
 
@@ -306,7 +306,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-05-19 08:00 [M][R] Triathlon — Westcliffe :: kids :: location="Westcliffe, CO"
 [CAL] 2026-05-22 ALL-DAY [D] Pick up wood shavings — Ryan Stover :: misc :: notes="In town"
 [CAL] 2026-05-23 11:00 [R][M] Apt — Tacey :: appointments :: stripe=appt
-[CAL] 2026-05-28 ALL-DAY [W][M][D] Jackpot — Brighton :: animals :: location="Brighton, CO" :: flag=true :: notes="🚩 F-01 swim meet conflict — logistics unresolved"
+[CAL] 2026-05-28 ALL-DAY [W][M] Jackpot — Brighton :: 4h :: location="Brighton, CO"
 
 ---
 
@@ -315,17 +315,24 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
-[CAL] 2026-06-05 ALL-DAY [FAM] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: span=2026-06-07 :: flag=true :: notes="🚩 F-01 Castle Rock jackpot same day — logistics unresolved"
-[CAL] 2026-06-05 ALL-DAY Jackpot — Castle Rock :: animals :: location="Castle Rock, CO" :: flag=true :: notes="🚩 F-01 swim meet conflict — logistics unresolved"
+[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi — Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
+[CAL] 2026-06-05 ALL-DAY [W][M] Jackpot — Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-12 ALL-DAY [FAM] Swim meet — Lamar :: kids :: location="Lamar, CO" :: span=2026-06-14
-[CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: span=2026-06-19 :: location="Westcliffe, CO"
+[CAL] 2026-06-15 10:00-15:00 [M][R] Art camp :: kids :: span=2026-06-19 :: location="Westcliffe, CO" :: notes="⚠️ Jun 16 + Jun 18 overlap with Tue/Thu swim practice 09:30-11:30 — Matt review required"
 [CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
-[CAL] 2026-06-19 ALL-DAY [FAM] Swim meet — Pueblo County :: kids :: location="Pueblo, CO" :: span=2026-06-21
-[CAL] 2026-06-20 08:00 Livestock clinic — Florence :: misc :: location="Florence, CO"
-[CAL] 2026-06-20 ALL-DAY Jackpot — Jefferson County Fairgrounds :: animals :: location="Golden, CO"
+[CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
+[CAL] 2026-06-18 13:00 [K] Apt — Gina :: appointments :: stripe=appt
+[CAL] 2026-06-20 ALL-DAY [FAM] Swim meet — Pueblo County :: kids :: location="Pueblo, CO"
+[CAL] 2026-06-20 08:00 Livestock clinic — Florence :: misc :: location="Florence, CO" :: tentative=true
 [CAL] 2026-06-25 13:30 [W] Ortho — Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-06-26 ALL-DAY [FAM] Swim meet — Rocky Ford :: kids :: location="Rocky Ford, CO" :: span=2026-06-28 :: flag=true :: notes="🚩 F-02 jackpot same window — logistics unresolved"
-[CAL] 2026-06-27 ALL-DAY Jackpot — Monte Vista or Lamar TBD :: animals :: flag=true :: notes="🚩 F-02 Rocky Ford swim meet conflict Jun 26-28"
+[CAL] 2026-06-27 ALL-DAY [W][M] Jackpot — Monte Vista :: 4h :: location="Monte Vista, CO"
+
+---
+
+### AUGUST 2026
+
+[CAL] 2026-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
+[CAL] 2026-08-31 ALL-DAY SNAP Recertification :: appointments :: flag=true :: notes="🚩 Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
 
@@ -335,12 +342,12 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-09 16:00 Fair cleanup :: misc :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet — Piranhas home meet :: kids :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Louche visit — Adam+Bethany :: misc :: span=2026-07-17
-[CAL] 2026-07-14 15:00 [W][M] Weigh-ins + picnic :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-15 17:00 [W][M][D] Swine show + pork meal :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-16 09:00 [M] Sheep show :: kids :: location="Westcliffe, CO"
-[CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-14 15:00 [W][M] Weigh-ins + picnic :: 4h :: location="Westcliffe, CO"
+[CAL] 2026-07-15 17:00 [W][M] Swine show + pork meal :: 4h :: location="Westcliffe, CO"
+[CAL] 2026-07-16 09:00 [M] Sheep show :: 4h :: location="Westcliffe, CO"
+[CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-17 ALL-DAY [FAM] Swim meet — Salida :: kids :: location="Salida, CO" :: span=2026-07-19
-[CAL] 2026-07-18 12:00 [D][W][M] Buckle ceremony + livestock sale :: kids :: location="Westcliffe, CO"
+[CAL] 2026-07-18 12:00 [W][M] Buckle ceremony + livestock sale :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-19 12:00 Fair cleanup :: misc :: location="Westcliffe, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
@@ -389,7 +396,6 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-10-12 ALL-DAY Columbus Day :: holidays
 [CAL] 2026-11-11 ALL-DAY Veterans Day :: holidays
 [CAL] 2026-11-26 ALL-DAY Thanksgiving :: holidays
-[CAL] 2026-12-25 ALL-DAY Christmas :: holidays
 
 ---
 
@@ -406,12 +412,13 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-10-11 ALL-DAY Columbus Day :: holidays
 [CAL] 2027-11-11 ALL-DAY Veterans Day :: holidays
 [CAL] 2027-11-25 ALL-DAY Thanksgiving :: holidays
-[CAL] 2027-12-25 ALL-DAY Christmas :: holidays
 
 ---
 
 ### AUG 1 PING STACK — additions
 
+[CAL] 2026-07-15 ALL-DAY SNAP Recertification reminder — gather docs ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY SNAP Recertification reminder — appointment Aug 31 ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Kalea teaching block — confirm fall schedule ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Youth Group fall schedule — confirm ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Faith Formation fall start — confirm with parish ⏰ :: prompt
@@ -434,8 +441,11 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
 [CAL] 2026-05-13 ALL-DAY Our Lady of Fatima :: liturgical
+[CAL] 2026-05-14 ALL-DAY ✝️ Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2026-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
+[CAL] 2026-05-24 ALL-DAY ✝️ Pentecost Sunday — Holy Day :: liturgical
 [CAL] 2026-05-31 ALL-DAY Visitation :: liturgical
+[CAL] 2026-06-07 ALL-DAY ✝️ Corpus Christi — Holy Day :: liturgical :: flag=true :: notes="🚩 Las Animas swim meet same day. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
 [CAL] 2026-06-13 ALL-DAY ✝️ St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
 [CAL] 2026-06-24 ALL-DAY ✝️ Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
 [CAL] 2026-06-29 ALL-DAY ✝️ Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
@@ -463,7 +473,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
 [CAL] 2026-12-12 ALL-DAY ✝️ Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
 [CAL] 2026-12-13 ALL-DAY ✝️ St. Lucy 🍞 :: liturgical :: notes="saffron buns"
-[CAL] 2026-12-26 ALL-DAY St. Stephen :: liturgical
+[CAL] 2026-12-25 ALL-DAY ✝️ Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
 [CAL] 2026-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2026-12-28 ALL-DAY Holy Innocents :: liturgical
 
@@ -485,6 +495,9 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-05-13 ALL-DAY Our Lady of Fatima :: liturgical
 [CAL] 2027-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
 [CAL] 2027-05-31 ALL-DAY Visitation :: liturgical
+[CAL] 2027-06-06 ALL-DAY ✝️ Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
+[CAL] 2027-06-13 ALL-DAY ✝️ Pentecost Sunday — Holy Day :: liturgical
+[CAL] 2027-06-27 ALL-DAY ✝️ Corpus Christi — Holy Day :: liturgical
 [CAL] 2027-06-13 ALL-DAY ✝️ St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
 [CAL] 2027-06-24 ALL-DAY ✝️ Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
 [CAL] 2027-06-29 ALL-DAY ✝️ Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
@@ -512,6 +525,6 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
 [CAL] 2027-12-12 ALL-DAY ✝️ Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
 [CAL] 2027-12-13 ALL-DAY ✝️ St. Lucy 🍞 :: liturgical :: notes="saffron buns"
-[CAL] 2027-12-26 ALL-DAY St. Stephen :: liturgical
+[CAL] 2027-12-25 ALL-DAY ✝️ Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
 [CAL] 2027-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2027-12-28 ALL-DAY Holy Innocents :: liturgical

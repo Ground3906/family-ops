@@ -78,11 +78,12 @@ No exceptions without Tim's explicit chat-session override. Standing overrides a
 
 1. **Daily 17:30-19:00 — family meal.** Propose 19:30+ or earlier in the day.
 2. **All of Sunday.** Mass + Faith Formation 0900-1015 lives there. The rest is family and rest. No work, no study, no non-urgent appointments.
-3. **Hunting blackouts — Matt-only scope.** From `mystery-ranch/blackouts.md`. Refuse anything inside them **for Matt**. Bounce the asker.
+3. **Mass — floating sacred.** The weekly Mass obligation is always a protected block regardless of which time slot it occupies. Default is Sunday 08:00 St. Joseph's Salida. When a conflict triggers adjudication (see Mass Options doctrine below), the proposed replacement slot is **immediately soft-held** alongside the original — both are protected simultaneously until Matt or Kalea confirms. On confirmation the original releases and the new slot locks. No agent schedules over any confirmed or proposed mass time.
+4. **Hunting blackouts — Matt-only scope.** From `mystery-ranch/blackouts.md`. Refuse anything inside them **for Matt**. Bounce the asker.
    - Critical: hunting blocks freeze Matt's calendar, not the household's. Kid medical, Kalea events, school, sports — all continue. Re-route drivers to Kalea or backup-adult tier (per `family.md`). Don't cancel a Wyatt ortho because Matt is in the field; just shift the driver.
-4. **Kalea USMC drill travel — Kalea-only scope.** Drill windows freeze Kalea's calendar, not the household's. Same principle as hunting: re-route, don't cancel. Kalea-events that can wait, wait; everything else routes around her.
-5. **Kalea-flagged blocks** — anything `prefs.md` marks as `kalea_hold: true`. Untouchable without her chat confirmation.
-6. **The Loretto Chapel day — April 25.** Mantel-owned sacred memory. Do not schedule over.
+5. **Kalea USMC drill travel — Kalea-only scope.** Drill windows freeze Kalea's calendar, not the household's. Same principle as hunting: re-route, don't cancel. Kalea-events that can wait, wait; everything else routes around her.
+6. **Kalea-flagged blocks** — anything `prefs.md` marks as `kalea_hold: true`. Untouchable without her chat confirmation.
+7. **The Loretto Chapel day — April 25.** Mantel-owned sacred memory. Do not schedule over.
 
 ### Soft holds — propose around, accept on Tim's say-so
 
@@ -120,7 +121,24 @@ Rules:
 - **Override is instant.** Tim or Jill says "clear it, I've got it" — flag removed, no pushback.
 - **Persistent nudge, not nagging.** Flagged entries surface in the day panel Brief as the date approaches. Not every session. Only when the timing makes it useful.
 
-### Cockpit doctrine
+### Pill ownership doctrine
+Pills identify who **owns** the event — the person whose activity it is. Not who drives. Not who attends in a support role. A swim meet belongs to the swimmers. A jackpot belongs to the kids showing animals. A medical appointment belongs to the patient.
+
+Driver and vehicle assignment is **Punch List territory**. It surfaces in the day/week detail panel on tap — never on the pill stack. When building an entry, ask: *"Whose event is this?"* That's the pill. Logistics follow separately.
+
+This doctrine applies retroactively to all entries. If a `[D]` or `[K]` pill is on an event because they were driving, not because it was their event — remove it.
+
+### Mass options + conflict adjudication doctrine
+When a Sunday or Holy Day of Obligation has a scheduling conflict, Foreman flags it and proposes adjudication using the following mass options in order of preference:
+
+1. **08:00** — St. Joseph's Catholic Church, Salida
+2. **10:30** — St. Joseph's Catholic Church, Salida
+3. **11:00** — Our Lady of Assumption Catholic Church, Westcliffe
+4. **17:00 Saturday prior** — Anticipated Mass, St. Joseph's Salida. **Counts as Sunday obligation. Foreman's preferred conflict-resolution path when Saturday is clean.**
+
+When flagging a Holy Day conflict, Foreman always names the specific adjudication path in the `notes=` field. Example: `notes="🚩 [Event] same day. Adjudication: anticipated Mass [date] 17:00 St. Joseph's Salida"`.
+
+
 The Cockpit is a read-only display. No keyboard, no form, no entry tool on the Cockpit. Phase 2 calendar write flow: agent on phone → tells Foreman → Foreman writes `[CAL]` entry to `calendars.md` via GitHub MCP → widget fetches live from repo → Cockpit reflects on refresh. Never suggest an entry tool or form on the Cockpit.
 
 ---

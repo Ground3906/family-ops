@@ -1,4 +1,4 @@
-﻿# Crosstalk & Handoff Map v1
+# Crosstalk & Handoff Map v1
 
 How agents pass work to each other. Designed against Charter §Anti-Silo Principles.
 
@@ -10,8 +10,9 @@ How agents pass work to each other. Designed against Charter §Anti-Silo Princip
 2. **The originating agent writes the handoff to `handoffs.json`.** Subject + payload + proposed options. The receiving agent reads it on next invocation.
 3. **The receiving agent confirms with the human before acting.** Especially for calendar writes, state mutations, or anything irreversible.
 4. **Handoffs don''t vanish.** Closed handoffs stay in the file (`status: done`) — they''re the audit trail.
-5. **Sacred blocks beat everything.** Family meals 17:30 daily. Sundays. Hunting season blackouts (Matt-only scope). Kalea drill travel (Kalea-only scope). Kalea-flagged blocks. Foreman refuses scheduling violations and bounces back to the originating agent.
+5. **Sacred blocks beat everything.** Family meals 17:30 daily. Sundays. Mass obligation (floating sacred — travels through adjudication, always protected). Hunting season blackouts (Matt-only scope). Kalea drill travel (Kalea-only scope). Kalea-flagged blocks. Foreman refuses scheduling violations and bounces back to the originating agent.
 6. **Reminder ownership — Option C.** The agent that owns the work owns the reminder. Foreman owns calendar truth (the *when*); domain agents own voice and cadence (the *what* and *how*). Cross-agent dependencies resolve to whoever has the more time-sensitive or domain-primary stake.
+7. **Pills = ownership, not logistics.** A pill on a calendar event means that person owns the event. Driver and vehicle assignment is Punch List territory — surfaced in the day/week detail panel on tap, never on the pill stack.
 
 ---
 
@@ -170,6 +171,7 @@ Foreman is the gatekeeper. When asked to schedule in a sacred block:
 
 - **17:30–19:00 daily (family meal):** REFUSE. Propose 19:00+ or earlier in day.
 - **Sunday (any time):** REFUSE work, study, appointments. Mass, family, rest. Override only on Matt''s explicit say-so for a single block, captured in chat for that session — not stored as standing permission.
+- **Mass — floating sacred:** REFUSE both the original default mass slot AND any currently proposed adjudication slot. Both protected simultaneously during adjudication window. On confirmation original releases; confirmed slot becomes the new protected block.
 - **Hunting blackouts (Matt-only):** REFUSE Matt events. Re-route household items to Kalea or backup-adult tier. Bounce to Mystery Ranch for the dates.
 - **Kalea drill travel (Kalea-only):** REFUSE Kalea events. Re-route household items to Matt or backup-adult tier.
 - **Kalea-flagged blocks:** REFUSE. Never schedule over without Kalea''s confirmation in chat.
@@ -189,6 +191,7 @@ A handoff that bounces back unprocessed twice = stop and surface to the human vi
 | Domain | Owner Agent | State File |
 |---|---|---|
 | Calendar | Foreman | Google Calendar + `calendars.md` |
+| Driver assignment | Punch List | Surfaced in day/week detail panel on tap — never on pill stack |
 | Tasks | Punch List | `punch-list/tasks.json` |
 | Vehicles | Punch List | `punch-list/vehicles.json` + `fleet-state-v1.md` |
 | Documents / renewals | Punch List | `punch-list/documents.md` |

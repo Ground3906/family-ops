@@ -20,7 +20,7 @@ The default voice. Routes requests to the right agent, threads context between t
 ### 📅 Foreman — Calendar
 Runs the jobsite. Knows where everyone needs to be, won't let two trades work the same space. Owns the schedule, period. Every other agent reads/writes through Foreman.
 
-**Sacred blocks Foreman protects:** 17:30 family meals daily, all of Sunday, hunting season blackouts, Kalea-flagged blocks.
+**Sacred blocks Foreman protects:** 17:30 family meals daily, all of Sunday, hunting season blackouts, Kalea-flagged blocks, and the weekly Mass obligation (floating sacred — see prefs.md).
 
 ### 🏠 Punch List — Family Logistics
 "What needs doing this week and who owns it?" Includes the vehicle/maintenance tracker — service intervals, registration renewals, inspections, tire rotations. Family of 8 likely runs multiple vehicles; treat each as its own line item.
@@ -110,6 +110,7 @@ Re-read before adding any agent.
 3. **Foreman is the universal calendar sink.** Time blocks live in one place. Agents propose; Foreman disposes.
 4. **Shared state schema changes get versioned.** Adding a new field? Note it in `family.md` so all agents pick it up.
 5. **One source of truth per fact.** Family roster lives only in `family.md`. Vehicle list lives only in `vehicles.json`. Never duplicate.
+6. **Pills identify ownership, not logistics.** A pill on a calendar event means that person *owns* the event — it is their activity. Not their driver. Not their escort. Driver and vehicle assignment is Punch List territory, surfaced in the detail panel on tap. Never put a logistics person on the pill stack.
 
 ### Handoff pattern (Phase 1)
 1. Agent A finishes a task and identifies a handoff
@@ -148,6 +149,22 @@ Foreman writes events to the appropriate calendar based on event type, and **tag
 
 Routing stays clean underneath. Humans see a normal family calendar on top.
 
+### Category Emoji Map (locked)
+
+Calendar tiles use a category emoji in place of a color stripe. Colors belong to pills only. This is the full locked map — all agents adopt:
+
+| Emoji | Category |
+|---|---|
+| 🚸 | Kids events |
+| 🏠 | Family events |
+| ✝️ | Active church participation (Mass, Youth Group, Faith Formation, Knights, Stations, serving rotations — any event Bayers attend at church) |
+| 📖 | Liturgical calendar entries (feast days, Holy Days, season markers) |
+| ⚕️ | Medical appointments |
+| 🐾 | Animals / farm |
+| 🍀 | 4H events |
+| 🌱 | Garden / Rootstock events |
+| 📋 | Meetings |
+
 **Next input needed:** Matt's actual current Google Calendar setup (export `.ics` files via Google Calendar → Settings → Export, or screenshots of a typical week). Foreman's system prompt is built against the real shape of the data.
 
 ### 🚨 Dire task — Calendar visual widget (non-negotiable)
@@ -172,7 +189,7 @@ Per Matt's directive: Foreman gets the deep treatment; others ship as MVPs and r
 |---|---|---|---|
 | 1 | 📅 Foreman | **v1 deep — COMPLETE** | Foundation. Stress test passed 12/12. |
 | 2 | 🏠 Punch List | **MVP — next build** | Vehicle/maintenance tracker baked in |
-| — | 🗓️ Calendar Widget | **DIRE — v1.5** | Non-negotiable. Spouse adoption gate. |
+| — | 🗓️ Calendar Widget | **v1.19 live — v2.0 in progress** | Kalea reviewed v1.19. v2.0 = full rewrite. Phase 1 canonical release. |
 | 3 | 📚 Whetstone | **MVP** | Protocol already documented |
 | 4 | 🐷 Stockyard | **Skeleton queued** | Egg tracker live as widget; agent skeleton pending |
 | 5 | 🌱 Rootstock | **Skeleton queued** | Spring planning window already passing; build before fall |
@@ -207,15 +224,16 @@ Captured from prior conversations for agent prompts to reference.
 
 **Family roster:**
 - Matt (38, Marine veteran, met Kalea at TBS Quantico, eloped Nov 2013)
-- Kalea (wife)
-- Wyatt
-- Molly
-- Rileigh
-- Twins (age 6)
-- Infant (born ~Feb 2026)
+- Kalea (wife, USMC Reserve MAJ O-4, MARFORPAC)
+- Wyatt (b. 2012)
+- Molly (b. 2016)
+- Rileigh (b. 2018)
+- Cullen + Emmitt — twins (b. 2019)
+- Sixth child — baby boy, due ~2026-08-15, Parkview Hospital Pueblo. No name stored until post-birth confirmation.
 
 **Technical environment:**
-- PC `strayhawk-pc\mbay`, ThinkPad X1 Carbon, Win10 Pro, Chrome only
+- Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro
+- ThinkPad X1 Carbon — retiring to headless server role (Cockpit host + Phase 2 automation host)
 - VS Code with Python, PowerShell, AWS Toolkit, Terraform, GitLens
 - GitHub: Ground3906
 - AWS region: us-west-2

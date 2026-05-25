@@ -69,6 +69,19 @@ No agent schedules over these without Matt''s explicit chat-session override. St
 ### Specific sacred dates
 - **2026-04-25 — Loretto Chapel day.** Mantel-owned sacred memory. Tone-drop on contact. Foreman marks but never schedules over.
 
+### Mass — floating sacred
+The weekly Mass obligation is always a protected block. It is not pinned to a specific time slot — it travels through Foreman's adjudication process.
+
+**Default slot:** Sunday 08:00, St. Joseph's Catholic Church, Salida.
+
+**When a conflict is detected:** Foreman flags and proposes adjudication using the mass options in order (see `foreman.md`). The proposed replacement slot is **immediately soft-held** — both the original default slot and the adjudicated slot are protected simultaneously until Matt or Kalea confirms. No agent may schedule over either slot during the adjudication window.
+
+**On confirmation:** The original default slot releases. The confirmed slot locks as the sacred block for that week.
+
+**Anticipated Mass (Saturday 17:00, St. Joseph's Salida)** counts as Sunday obligation and is Foreman's preferred conflict-resolution path when Saturday is clean.
+
+No agent schedules over any confirmed or proposed mass time. Ever.
+
 ---
 
 ## Equipment Access Principle
@@ -81,7 +94,43 @@ No agent schedules over these without Matt''s explicit chat-session override. St
 
 ---
 
-## Agent Personality Routing Principle
+## Pill Ownership Doctrine
+
+**Charter-level rule.** Pills on a calendar event identify who **owns** the event — the person whose activity it is. Not who drives. Not who attends to support.
+
+A swim meet belongs to the swimmers. A jackpot belongs to the kids showing. A medical appointment belongs to the patient.
+
+**Driver and vehicle assignment is Punch List territory.** It surfaces in the day/week detail panel on tap — never on the pill stack. When building or reading any calendar entry: *"Whose event is this?"* is the pill question. *"Who's driving?"* is answered by Punch List in the detail view.
+
+This doctrine applies retroactively to all `calendars.md` entries. Any `[D]` or `[K]` pill present only because they were driving — remove it.
+
+---
+
+## Calendar Category Emoji Map
+
+Left-side color stripes on calendar tiles are replaced by category emoji in v2.0. Colors belong to pills/people only — never to categories.
+
+Full locked map:
+
+| Emoji | Category |
+|---|---|
+| 🚸 | Kids events |
+| 🏠 | Family events |
+| ✝️ | Active church participation (Mass, Youth Group, Faith Formation, Knights, Stations, serving rotations — any event Bayers attend at church) |
+| 📖 | Liturgical calendar entries (feast days, Holy Days, season markers) |
+| ⚕️ | Medical appointments |
+| 🐾 | Animals / farm |
+| 🍀 | 4H events |
+| 🌱 | Garden / Rootstock events |
+| 📋 | Meetings |
+
+All agents adopt this map. Never invent a new category without locking it here first.
+
+---
+
+## Tentative Event Treatment
+
+Events flagged `tentative=true` in `calendars.md` render with a **diagonal stripe pattern** overlaid on the standard tile background. Pills and title render at full opacity on top of the hatching. No new color introduced. Colorblind-safe by design — texture, not hue.
 
 Routing isn''t only by task domain — it''s also by **tone fit**.
 
@@ -195,6 +244,10 @@ Charter-level scheduling rule.
 | 2026-05-15 | Tow protocol locked: Austin Auto first, USAA fallback outside range | Distance flips it, not preference |
 | 2026-05-22 | Kalea canning established as Kalea-only sacred block | Two sessions/year (~Labor Day peaches, ~October apples+). Parallel to hunting blackouts and drill travel. |
 | 2026-05-22 | Decision window doctrine locked — Kalea-input agents cannot fire after 20:00 | Kalea is a morning person; decisions after 20:00 don't land. Matt-only work fine post-20:00. |
+| 2026-05-25 | Mass — floating sacred block doctrine locked | Mass obligation always protected regardless of slot. Foreman adjudicates conflicts using 4-option mass menu. Anticipated Mass (Sat 17:00) is preferred conflict-resolution path. Both original and adjudicated slots soft-held during window. |
+| 2026-05-25 | Pill Ownership Doctrine locked — charter-level | Pills = event owner, not driver/logistics. Driver/vehicle is Punch List territory, surfaced in detail panel on tap. Retroactive to all entries. |
+| 2026-05-25 | Category emoji map locked | Left-side color stripe → category emoji in v2.0. Colors belong to pills only. Full map in prefs.md. |
+| 2026-05-25 | Tentative event treatment locked — diagonal stripe | Repeating diagonal hatching overlaid on tile. Pills and title at full opacity on top. No new color. Colorblind-safe. |
 
 ---
 
@@ -204,3 +257,4 @@ Charter-level scheduling rule.
 |---------|------|-------|
 | 1 | 2026-05-15 | Initial build. Git SSoT established. Foundational files created: README, family, prefs, handoffs. |
 | 1.2 | 2026-05-22 | Kalea canning sacred block added. Decision window doctrine added. Additive only. |
+| 1.3 | 2026-05-25 | Mass floating sacred block added. Pill Ownership Doctrine added. Category emoji map added. Tentative event treatment locked. Decision log updated. |
