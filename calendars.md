@@ -257,7 +257,6 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-04-25 ALL-DAY Loretto Chapel day — sacred memory :: liturgical
 [CAL] 2026-11-01 ALL-DAY DST ends — protect Sunday :: misc
 [CAL] 2026-11-26 10:00 Thanksgiving Mass :: liturgical :: location="St. Joseph's, Salida"
-[CAL] 2027-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
 
 ---
 
@@ -296,14 +295,14 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### MAY 2026
 
 [CAL] 2026-05-06 ALL-DAY trash-day :: misc
-[CAL] 2026-05-05 10:00 [K][D] Prenatal apt — Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-05-14 08:00 [W] Field trip — Sky Zone :: kids :: location="Colorado Springs, CO"
+[CAL] 2026-05-05 10:00 [K][D] Prenatal apt - Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-05-14 08:00 [W] Field trip - Sky Zone :: kids :: location="Colorado Springs, CO"
 [CAL] 2026-05-14 ALL-DAY [M][R][C][E] PJ Day :: kids
 [CAL] 2026-05-16 11:00 [R] Haircut :: kids
 [CAL] 2026-05-16 11:00 [W] Art :: kids
 [CAL] 2026-05-16 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-05-18 10:00 [K] Apt — Gina :: appointments :: stripe=appt
-[CAL] 2026-05-19 08:00 [M][R] Triathlon — Westcliffe :: kids :: location="Westcliffe, CO"
+[CAL] 2026-05-19 08:00 [M][R] Triathlon - Westcliffe :: kids :: location="Westcliffe, CO"
 [CAL] 2026-05-22 ALL-DAY [D] Pick up wood shavings — Ryan Stover :: misc :: notes="In town"
 [CAL] 2026-05-23 11:00 [R][M] Apt — Tacey :: appointments :: stripe=appt
 
@@ -312,27 +311,26 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### JUNE 2026
 
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
-[CAL] 2026-06-03 ALL-DAY [D][K] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
+[CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
 [CAL] 2026-06-06 17:00 Mass :: liturgical :: tentative=true :: location="St. Joseph's, Salida" :: notes="TBD — Foreman suggestion. Fulfills Corpus Christi obligation. Confirm to release Jun 7 default slot."
-[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi — Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-05 ALL-DAY [W][M] Jackpot — Castle Rock :: 4h :: location="Castle Rock, CO"
-[CAL] 2026-06-12 ALL-DAY [FAM] Swim meet — Lamar :: kids :: location="Lamar, CO" :: span=2026-06-14
-[CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: span=2026-06-19 :: location="Westcliffe, CO" :: notes="10:00-15:00 daily. ⚠️ Jun 16 + Jun 18 overlap with Tue/Thu swim practice 09:30-11:30 — Matt review required"
+[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi — Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
+[CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
+[CAL] 2026-06-12 ALL-DAY [FAM] Swim meet - Lamar :: family :: location="Lamar, CO" :: span=2026-06-14
+[CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: span=2026-06-19 :: travel=true :: end=15:00 :: location="Westcliffe, CO" :: notes="10:00-15:00 daily. Overlap Jun 16+18 swim practice handled by travel suppression."
 [CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
 [CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
 [CAL] 2026-06-18 13:00 [K] Apt — Gina :: appointments :: stripe=appt
-[CAL] 2026-06-20 ALL-DAY [FAM] Swim meet — Pueblo County :: kids :: location="Pueblo, CO"
-[CAL] 2026-06-20 08:00 [W][M] Livestock clinic — Florence :: misc :: location="Florence, CO" :: tentative=true
-[CAL] 2026-06-25 13:30 [W] Ortho — Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-06-27 ALL-DAY [W][M] Jackpot — Monte Vista :: 4h :: location="Monte Vista, CO"
+[CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: location="Pueblo, CO"
+[CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
+[CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
 
 ---
 
 ### AUGUST 2026
 
-[CAL] 2026-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
-[CAL] 2026-08-31 ALL-DAY SNAP Recertification :: appointments :: flag=true :: notes="🚩 Bring required docs. Prompts fire Jul 15 + Aug 1."
+[CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: notes="🚩 Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
 
@@ -340,17 +338,17 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Cañon City, CO"
 [CAL] 2026-07-09 16:00 Fair cleanup :: misc :: location="Westcliffe, CO"
-[CAL] 2026-07-11 ALL-DAY [FAM] Swim meet — Piranhas home meet :: kids :: location="Pueblo, CO"
-[CAL] 2026-07-14 ALL-DAY [GUEST] Louche visit — Adam+Bethany :: misc :: span=2026-07-17
-[CAL] 2026-07-14 15:00 [W][M] Weigh-ins + picnic :: 4h :: location="Westcliffe, CO"
+[CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
+[CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17
+[CAL] 2026-07-14 15:00 [W][M] Weigh-in / Picnic :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-15 17:00 [W][M] Swine show + pork meal :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-16 09:00 [M] Sheep show :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: 4h :: location="Westcliffe, CO"
-[CAL] 2026-07-19 ALL-DAY [FAM] Swim meet — Salida :: kids :: location="Salida, CO" :: tentative=true
+[CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: tentative=true
 [CAL] 2026-07-18 12:00 [W][M] Buckle ceremony + livestock sale :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: misc :: location="Westcliffe, CO" :: notes="W+M at fair cleanup — cannot attend Salida swim meet same day"
-[CAL] 2026-07-24 ALL-DAY [FAM] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
-[CAL] 2026-07-31 ALL-DAY [FAM] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
+[CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
+[CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
 ---
 
@@ -417,8 +415,8 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### AUG 1 PING STACK — additions
 
-[CAL] 2026-07-15 ALL-DAY SNAP Recertification reminder — gather docs ⏰ :: prompt
-[CAL] 2026-08-01 ALL-DAY SNAP Recertification reminder — appointment Aug 31 ⏰ :: prompt
+[CAL] 2026-07-15 ALL-DAY [K][D] SNAP recert - gather docs ⏰ :: prompt
+[CAL] 2026-08-01 ALL-DAY [K][D] SNAP recert - appt Aug 31 ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Kalea teaching block — confirm fall schedule ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Youth Group fall schedule — confirm ⏰ :: prompt
 [CAL] 2026-08-01 ALL-DAY Faith Formation fall start — confirm with parish ⏰ :: prompt

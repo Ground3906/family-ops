@@ -1,7 +1,7 @@
 # Bayer Family Ops — Prefs & Conventions
 
 *Household-level decisions, standing rules, schema history. Not personal preferences — those live in `family.md`.*
-*Last updated: 2026-05-22*
+*Last updated: 2026-05-25*
 
 ---
 
@@ -141,6 +141,8 @@ Pre-birth collapse (5-member group):
 - 4 present → KIDS −[missing]
 - 3 or fewer → list individuals explicitly
 
+**B6_ACTIVE gate:** B6 is in the KIDS and FAM member arrays from day one for threshold math. However, the `−B6` subtraction pill is suppressed from display until `B6_ACTIVE = true` in the widget. Flip this flag post-birth confirmation. Until then, B6 is invisible on all tiles.
+
 ### Pill ownership doctrine
 Pills identify who **owns** the event — not who drives, not who attends in support. Driver and vehicle assignment is Punch List territory, surfaced in the detail panel on tap. Never put a logistics person on the pill stack. Retroactive to all entries.
 
@@ -158,7 +160,7 @@ Full locked map:
 | 🏠 | Family events |
 | ✝️ | Active church participation (Mass, Youth Group, Faith Formation, Knights, Stations, serving rotations — any event Bayers attend at church) |
 | 📖 | Liturgical calendar entries (feast days, Holy Days, season markers) |
-| ⚕️ | Medical appointments |
+| ➕ | Medical appointments |
 | 🐾 | Animals / farm |
 | 🍀 | 4H events |
 | 🌱 | Garden / Rootstock events |
@@ -170,7 +172,7 @@ All agents adopt this map. Never invent a new category without locking it here f
 
 ## Tentative Event Treatment
 
-Events flagged `tentative=true` in `calendars.md` render with a **diagonal stripe pattern** overlaid on the standard tile background. Pills and title render at full opacity on top of the hatching. No new color introduced. Colorblind-safe by design — texture, not hue.
+Events flagged `tentative=true` in `calendars.md` render with an **amber tint background + wide diagonal stripe pattern + dashed amber border**. Pills and title render at full opacity on top. No solid color change — texture and tint only. Colorblind-safe by design.
 
 **Vocabulary:** "tentative" and "TBD" are interchangeable in conversation. In the data, the schema flag is always `tentative=true`. Never `tbd=true` or any other variant. Any agent or human using either word maps to `tentative=true` in the file.
 
@@ -292,6 +294,12 @@ Charter-level scheduling rule.
 | 2026-05-25 | Tentative event treatment locked — diagonal stripe | Repeating diagonal hatching overlaid on tile. Pills and title at full opacity on top. No new color. Colorblind-safe. |
 | 2026-05-25 | Full pill color palette locked — 13 pills | All hex values confirmed. D=#9a5828, K=#1a50e0, W=#cc2233, M=#9944cc, R=#f040b8, C=#2070b8, E=#156e2a, B6=#faa030, OMA=#7755cc, PAPA=#6ec898, GUEST=#E8DFC0, FAM=#7a7aaa, KIDS=#a0c840. |
 | 2026-05-25 | KIDS pill group defined + collapse doctrine locked | KIDS=[W][M][R][C][E][B6]. B6 joins post-birth ~Aug 15. FAM collapses at 8/7, KIDS at 6/5. ≤4 kids or ≤5 FAM = list individuals. |
+| 2026-05-25 | B6_ACTIVE gate locked | B6 in arrays day one; −B6 display suppressed until B6_ACTIVE=true in widget. Flip post-birth. |
+| 2026-05-25 | Three-pass pill logic locked | Collapse → travel subtract → re-collapse. Travel suppression applied after collapse, not before. Prevents swim practice rendering as individuals when traveler removed. |
+| 2026-05-25 | Pill display order locked | Always: D→K→W→M→R→C→E→B6→OMA→PAPA→GUEST. FAM/KIDS always far left. |
+| 2026-05-25 | Swim meets = family category locked | Swim meets use :: family. Swim practice uses :: kids. Swim meets are whole-family events; practice is kids-only. |
+| 2026-05-25 | Agent emojis updated | Chow Hall: 🍳→🍴. Mystery Ranch: 🎒→⛺. Medical category: ⚕️→➕. All agents adopt. |
+| 2026-05-25 | Tentative treatment updated | Amber tint + wide diagonal stripes + dashed amber border. More prominent than v2.0 diagonal-only. |
 
 ---
 
@@ -303,3 +311,4 @@ Charter-level scheduling rule.
 | 1.2 | 2026-05-22 | Kalea canning sacred block added. Decision window doctrine added. Additive only. |
 | 1.3 | 2026-05-25 | Mass floating sacred block added. Pill Ownership Doctrine added. Category emoji map added. Tentative event treatment locked. Decision log updated. |
 | 1.4 | 2026-05-25 | Pill color palette locked (13 pills). KIDS group + collapse doctrine added. Tentative/TBD vocabulary locked. Cross emoji stripped from feast titles. |
+| 1.5 | 2026-05-25 | B6_ACTIVE gate. Three-pass pill logic. Pill order locked. Swim meets=family. Agent emojis updated (Chow Hall 🍴, Mystery Ranch ⛺, medical ➕). Tentative treatment updated. |

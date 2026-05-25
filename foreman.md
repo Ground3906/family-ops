@@ -100,6 +100,11 @@ All school-day events (field trips, in-school activities, school-day blocks) = *
 ### Sports location doctrine
 For travel sports (swim meets, track meets, cross country meets, and all away competitions): **location renders on the calendar tile**. This is an explicit exception to the location-in-detail-only rule. Every meet is a different venue; the location is essential at-a-glance information for a family running multiple vehicles.
 
+### Swim meet vs swim practice category doctrine
+- **Swim meets** → `:: family` category. Whole-family events. Use `[FAM]` pill.
+- **Swim practice** → `:: kids` category. Kids-only events. Use `[W][M][R][C][E]` pills (collapses to KIDS pill).
+- Never use `:: kids` on a meet entry. Never use `[FAM]` on a practice entry.
+
 ### Travel span doctrine
 Any multi-day absence entry where a person is physically away from home gets `travel=true` on the `[CAL]` entry. When proposing any multi-day absence for a named person, Foreman always asks: **"Are they traveling away from home?"** If yes, `travel=true` is added. This attribute suppresses the traveler's pill on overlapping events during the span window — no flag, no conflict, just an automatic minus.
 

@@ -1,10 +1,10 @@
-﻿# Bayer Family Ops
+# Bayer Family Ops
 
 **Repo:** `github.com/Ground3906/family-ops` (private)
-**Local path:** `$env:BAYER_OPS_ROOT` -> `C:\dev\family-ops\`
+**Local path:** `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\`
 **Maintained by:** Matt & Kalea Bayer
 **Schema version:** 1 (see `prefs.md` for history)
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-25
 
 ---
 
@@ -45,18 +45,18 @@ Then load agent-specific data files for the session domain.
 
 | Agent | Emoji | Domain |
 |-------|-------|--------|
-| Al | ?? | Orchestrator — default voice |
-| Foreman | ?? | Calendar |
-| Punch List | ?? | Family logistics, vehicles, maintenance |
-| Whetstone | ?? | WGU study |
-| Chow Hall | ?? | Meal planning |
-| Mystery Ranch | ?? | Hunting |
-| Stockyard | ?? | Livestock & farm ops (Edelweiss Farms LLC) |
-| Rootstock | ?? | Forest garden, orchard, greenhouse |
-| The Square | ?? | Material takeoff |
-| The Mantel | ?? | Memory keeper |
-| First Aid Kit | ?? | Health & medical |
-| Footings | ?? | Job hunt |
+| Al | 🔧 | Orchestrator — default voice |
+| Foreman | 📅 | Calendar |
+| Punch List | 🏠 | Family logistics, vehicles, maintenance |
+| Whetstone | 📚 | WGU study |
+| Chow Hall | 🍴 | Meal planning |
+| Mystery Ranch | ⛺ | Hunting |
+| Stockyard | 🐷 | Livestock & farm ops (Edelweiss Farms LLC) |
+| Rootstock | 🌱 | Forest garden, orchard, greenhouse |
+| The Square | 📐 | Material takeoff |
+| The Mantel | 📖 | Memory keeper |
+| First Aid Kit | 🩺 | Health & medical |
+| Footings | 💼 | Job hunt |
 
 Agent definition files (`al.md`, `foreman.md`, etc.) live at repo root. Data files follow the directory layout in `shared-state-schema.md`.
 
@@ -65,16 +65,3 @@ Agent definition files (`al.md`, `foreman.md`, etc.) live at repo root. Data fil
 ## Directory layout
 
 See `shared-state-schema.md` for the full directory tree and per-file specs.
----
-
-## Build status
-
-| Wave | Status | Notes |
-|------|--------|-------|
-| Wave 1 | ? Complete | Charter, shared-state schema, crosstalk map |
-| Wave 2 | ? Complete | Foreman v1 deep — 12/12 stress test passed |
-| Wave 3 | ? Complete | Agent skeletons, foundational files |
-| Wave 4 | ? Complete | Punch List MVP — deployed as Claude Code subagent, 7/7 stress test passed (2026-05-15) |
-| Wave 4.1 | ?? Queued | Punch List tightening — 9 cosmetic/verbosity fixes |
-| Wave 4.5 | ?? DIRE | Calendar visual widget — Kalea adoption is the bar. Slots before Whetstone. |
-| Wave 5 | ? Pending | Whetstone (WGU study) + Stockyard/Rootstock v3 |
