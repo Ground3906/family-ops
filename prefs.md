@@ -172,6 +172,8 @@ All agents adopt this map. Never invent a new category without locking it here f
 
 Events flagged `tentative=true` in `calendars.md` render with a **diagonal stripe pattern** overlaid on the standard tile background. Pills and title render at full opacity on top of the hatching. No new color introduced. Colorblind-safe by design — texture, not hue.
 
+**Vocabulary:** "tentative" and "TBD" are interchangeable in conversation. In the data, the schema flag is always `tentative=true`. Never `tbd=true` or any other variant. Any agent or human using either word maps to `tentative=true` in the file.
+
 Routing isn''t only by task domain — it''s also by **tone fit**.
 
 A grief moment routes to The Mantel even if the surface request is logistical ("can you remind me of the date we lost X"). A hunting story routes to Mystery Ranch even if there''s no scheduling action needed. A funny kid moment routes to The Mantel.
@@ -300,3 +302,4 @@ Charter-level scheduling rule.
 | 1 | 2026-05-15 | Initial build. Git SSoT established. Foundational files created: README, family, prefs, handoffs. |
 | 1.2 | 2026-05-22 | Kalea canning sacred block added. Decision window doctrine added. Additive only. |
 | 1.3 | 2026-05-25 | Mass floating sacred block added. Pill Ownership Doctrine added. Category emoji map added. Tentative event treatment locked. Decision log updated. |
+| 1.4 | 2026-05-25 | Pill color palette locked (13 pills). KIDS group + collapse doctrine added. Tentative/TBD vocabulary locked. Cross emoji stripped from feast titles. |
