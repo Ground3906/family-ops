@@ -257,7 +257,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-04-25 ALL-DAY Loretto Chapel day — sacred memory :: liturgical
 [CAL] 2026-11-01 ALL-DAY DST ends — protect Sunday :: misc
 [CAL] 2026-11-26 10:00 Thanksgiving Mass :: liturgical :: location="St. Joseph's, Salida"
-[CAL] 2027-01-06 ALL-DAY ✝️ Epiphany 🍞 :: liturgical :: notes="king cake"
+[CAL] 2027-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
 
 ---
 
@@ -314,7 +314,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop — Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
-[CAL] 2026-06-06 17:00 Anticipated Mass — St. Joseph's Salida :: liturgical :: tentative=true :: notes="TBD — Foreman suggestion. Fulfills Corpus Christi obligation. Confirm to release Jun 7 default slot."
+[CAL] 2026-06-06 17:00 Mass :: liturgical :: tentative=true :: location="St. Joseph's, Salida" :: notes="TBD — Foreman suggestion. Fulfills Corpus Christi obligation. Confirm to release Jun 7 default slot."
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet — Las Animas :: kids :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi — Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot — Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-12 ALL-DAY [FAM] Swim meet — Lamar :: kids :: location="Lamar, CO" :: span=2026-06-14
@@ -348,7 +348,7 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-17 12:00 [M] Master showmanship — sheep :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet — Salida :: kids :: location="Salida, CO" :: tentative=true
 [CAL] 2026-07-18 12:00 [W][M] Buckle ceremony + livestock sale :: 4h :: location="Westcliffe, CO"
-[CAL] 2026-07-19 12:00 Fair cleanup :: misc :: location="Westcliffe, CO"
+[CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: misc :: location="Westcliffe, CO" :: notes="W+M at fair cleanup — cannot attend Salida swim meet same day"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet — SECAL Championship :: kids :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet — State Championship :: kids :: location="Alamosa, CO" :: span=2026-08-02
 
@@ -430,29 +430,29 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 <!-- Full auto-render of all saint days = PQ-22 widget build. -->
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
-[CAL] 2026-01-06 ALL-DAY ✝️ Epiphany 🍞 :: liturgical :: notes="king cake"
-[CAL] 2026-02-02 ALL-DAY ✝️ Candlemas 🍞 :: liturgical :: notes="crêpes"
+[CAL] 2026-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
+[CAL] 2026-02-02 ALL-DAY Candlemas 🍞 :: liturgical :: notes="crêpes"
 [CAL] 2026-02-03 ALL-DAY St. Blaise — throat blessing :: liturgical
 [CAL] 2026-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2026-02-14 ALL-DAY St. Valentine :: liturgical
-[CAL] 2026-03-17 ALL-DAY ✝️ St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
-[CAL] 2026-03-19 ALL-DAY ✝️ St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
+[CAL] 2026-03-17 ALL-DAY St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
+[CAL] 2026-03-19 ALL-DAY St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
 [CAL] 2026-03-25 ALL-DAY Annunciation :: liturgical
 [CAL] 2026-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
 [CAL] 2026-05-13 ALL-DAY Our Lady of Fatima :: liturgical
-[CAL] 2026-05-14 ALL-DAY ✝️ Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
+[CAL] 2026-05-14 ALL-DAY Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2026-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
-[CAL] 2026-05-24 ALL-DAY ✝️ Pentecost Sunday — Holy Day :: liturgical
+[CAL] 2026-05-24 ALL-DAY Pentecost Sunday — Holy Day :: liturgical
 [CAL] 2026-05-31 ALL-DAY Visitation :: liturgical
-[CAL] 2026-06-07 ALL-DAY ✝️ Corpus Christi — Holy Day :: liturgical :: flag=true :: notes="🚩 Las Animas swim meet same day. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-13 ALL-DAY ✝️ St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
-[CAL] 2026-06-24 ALL-DAY ✝️ Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
-[CAL] 2026-06-29 ALL-DAY ✝️ Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
+[CAL] 2026-06-07 ALL-DAY Corpus Christi — Holy Day :: liturgical :: flag=true :: notes="🚩 Las Animas swim meet same day. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
+[CAL] 2026-06-13 ALL-DAY St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
+[CAL] 2026-06-24 ALL-DAY Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
+[CAL] 2026-06-29 ALL-DAY Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
 [CAL] 2026-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
 [CAL] 2026-07-22 ALL-DAY St. Mary Magdalene :: liturgical
 [CAL] 2026-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
-[CAL] 2026-08-06 ALL-DAY ✝️ Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
+[CAL] 2026-08-06 ALL-DAY Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
 [CAL] 2026-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
 [CAL] 2026-08-22 ALL-DAY Queenship of Mary :: liturgical
 [CAL] 2026-09-08 ALL-DAY Birth of Mary :: liturgical
@@ -465,15 +465,15 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2026-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2026-11-01 ALL-DAY All Saints Day — Holy Day of Obligation :: liturgical
-[CAL] 2026-11-02 ALL-DAY ✝️ All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
-[CAL] 2026-11-11 ALL-DAY ✝️ St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
+[CAL] 2026-11-02 ALL-DAY All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
+[CAL] 2026-11-11 ALL-DAY St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
 [CAL] 2026-11-22 ALL-DAY St. Cecilia :: liturgical
 [CAL] 2026-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
-[CAL] 2026-12-06 ALL-DAY ✝️ St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
+[CAL] 2026-12-06 ALL-DAY St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
 [CAL] 2026-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
-[CAL] 2026-12-12 ALL-DAY ✝️ Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
-[CAL] 2026-12-13 ALL-DAY ✝️ St. Lucy 🍞 :: liturgical :: notes="saffron buns"
-[CAL] 2026-12-25 ALL-DAY ✝️ Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
+[CAL] 2026-12-12 ALL-DAY Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
+[CAL] 2026-12-13 ALL-DAY St. Lucy 🍞 :: liturgical :: notes="saffron buns"
+[CAL] 2026-12-25 ALL-DAY Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
 [CAL] 2026-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2026-12-28 ALL-DAY Holy Innocents :: liturgical
 
@@ -482,29 +482,29 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### LITURGICAL — Curated Feasts 2027
 
 [CAL] 2027-01-01 ALL-DAY Mary, Mother of God :: liturgical
-[CAL] 2027-01-06 ALL-DAY ✝️ Epiphany 🍞 :: liturgical :: notes="king cake"
-[CAL] 2027-02-02 ALL-DAY ✝️ Candlemas 🍞 :: liturgical :: notes="crêpes"
+[CAL] 2027-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
+[CAL] 2027-02-02 ALL-DAY Candlemas 🍞 :: liturgical :: notes="crêpes"
 [CAL] 2027-02-03 ALL-DAY St. Blaise — throat blessing :: liturgical
 [CAL] 2027-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2027-02-14 ALL-DAY St. Valentine :: liturgical
-[CAL] 2027-03-17 ALL-DAY ✝️ St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
-[CAL] 2027-03-19 ALL-DAY ✝️ St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
+[CAL] 2027-03-17 ALL-DAY St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
+[CAL] 2027-03-19 ALL-DAY St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
 [CAL] 2027-03-25 ALL-DAY Annunciation :: liturgical
 [CAL] 2027-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2027-05-01 ALL-DAY St. Joseph the Worker :: liturgical
 [CAL] 2027-05-13 ALL-DAY Our Lady of Fatima :: liturgical
 [CAL] 2027-05-15 ALL-DAY St. Isidore — patron of Edelweiss :: liturgical
 [CAL] 2027-05-31 ALL-DAY Visitation :: liturgical
-[CAL] 2027-06-06 ALL-DAY ✝️ Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
-[CAL] 2027-06-13 ALL-DAY ✝️ Pentecost Sunday — Holy Day :: liturgical
-[CAL] 2027-06-27 ALL-DAY ✝️ Corpus Christi — Holy Day :: liturgical
-[CAL] 2027-06-13 ALL-DAY ✝️ St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
-[CAL] 2027-06-24 ALL-DAY ✝️ Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
-[CAL] 2027-06-29 ALL-DAY ✝️ Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
+[CAL] 2027-06-06 ALL-DAY Ascension of the Lord — Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
+[CAL] 2027-06-13 ALL-DAY Pentecost Sunday — Holy Day :: liturgical
+[CAL] 2027-06-27 ALL-DAY Corpus Christi — Holy Day :: liturgical
+[CAL] 2027-06-13 ALL-DAY St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
+[CAL] 2027-06-24 ALL-DAY Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
+[CAL] 2027-06-29 ALL-DAY Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
 [CAL] 2027-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
 [CAL] 2027-07-22 ALL-DAY St. Mary Magdalene :: liturgical
 [CAL] 2027-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
-[CAL] 2027-08-06 ALL-DAY ✝️ Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
+[CAL] 2027-08-06 ALL-DAY Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
 [CAL] 2027-08-15 ALL-DAY Assumption of Mary — Holy Day of Obligation :: liturgical
 [CAL] 2027-08-22 ALL-DAY Queenship of Mary :: liturgical
 [CAL] 2027-09-08 ALL-DAY Birth of Mary :: liturgical
@@ -517,14 +517,14 @@ Last batch: 2026-05-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2027-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2027-11-01 ALL-DAY All Saints Day — Holy Day of Obligation :: liturgical
-[CAL] 2027-11-02 ALL-DAY ✝️ All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
-[CAL] 2027-11-11 ALL-DAY ✝️ St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
+[CAL] 2027-11-02 ALL-DAY All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
+[CAL] 2027-11-11 ALL-DAY St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
 [CAL] 2027-11-22 ALL-DAY St. Cecilia :: liturgical
 [CAL] 2027-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
-[CAL] 2027-12-06 ALL-DAY ✝️ St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
+[CAL] 2027-12-06 ALL-DAY St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
 [CAL] 2027-12-08 ALL-DAY Immaculate Conception — Holy Day of Obligation :: liturgical
-[CAL] 2027-12-12 ALL-DAY ✝️ Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
-[CAL] 2027-12-13 ALL-DAY ✝️ St. Lucy 🍞 :: liturgical :: notes="saffron buns"
-[CAL] 2027-12-25 ALL-DAY ✝️ Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
+[CAL] 2027-12-12 ALL-DAY Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
+[CAL] 2027-12-13 ALL-DAY St. Lucy 🍞 :: liturgical :: notes="saffron buns"
+[CAL] 2027-12-25 ALL-DAY Christmas — Nativity of the Lord 🍞 :: liturgical :: notes="Mass attendance"
 [CAL] 2027-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2027-12-28 ALL-DAY Holy Innocents :: liturgical

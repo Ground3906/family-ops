@@ -94,15 +94,55 @@ No agent schedules over any confirmed or proposed mass time. Ever.
 
 ---
 
-## Pill Ownership Doctrine
+## Pill Color Palette (locked)
 
-**Charter-level rule.** Pills on a calendar event identify who **owns** the event — the person whose activity it is. Not who drives. Not who attends to support.
+All agents and widgets use these exact hex values. Never substitute or approximate.
 
-A swim meet belongs to the swimmers. A jackpot belongs to the kids showing. A medical appointment belongs to the patient.
+| Pill | Person | Color |
+|---|---|---|
+| D | Matt (Dad) | `#9a5828` |
+| K | Kalea | `#1a50e0` |
+| W | Wyatt | `#cc2233` |
+| M | Molly | `#9944cc` |
+| R | Rileigh | `#f040b8` |
+| C | Cullen | `#2070b8` |
+| E | Emmitt | `#156e2a` |
+| B6 | Baby 6 | `#faa030` |
+| OMA | Oma | `#7755cc` |
+| PAPA | Papa | `#6ec898` |
+| GUEST | Guest | `#E8DFC0` |
+| FAM | Family (all 8) | `#7a7aaa` |
+| KIDS | Kids group | `#a0c840` |
 
-**Driver and vehicle assignment is Punch List territory.** It surfaces in the day/week detail panel on tap — never on the pill stack. When building or reading any calendar entry: *"Whose event is this?"* is the pill question. *"Who's driving?"* is answered by Punch List in the detail view.
+---
 
-This doctrine applies retroactively to all `calendars.md` entries. Any `[D]` or `[K]` pill present only because they were driving — remove it.
+## Pill Group Definitions + Collapse Doctrine
+
+### FAM group
+All 8 household members: D, K, W, M, R, C, E, B6.
+
+Collapse logic:
+- All 8 present → FAM pill
+- 7 present → FAM −[missing]
+- 5 or fewer → list individuals explicitly
+
+### KIDS group
+The 6 Bayer children: W, M, R, C, E, B6.
+
+B6 joins the KIDS group upon post-birth confirmation (~2026-08-15). Until then, KIDS = [W][M][R][C][E] (5 members).
+
+Collapse logic:
+- All 6 present → KIDS pill
+- 5 present → KIDS −[missing]
+- 4 or fewer → list individuals explicitly
+
+Pre-birth collapse (5-member group):
+- All 5 → KIDS pill
+- 4 present → KIDS −[missing]
+- 3 or fewer → list individuals explicitly
+
+### Pill ownership doctrine
+Pills identify who **owns** the event — not who drives, not who attends in support. Driver and vehicle assignment is Punch List territory, surfaced in the detail panel on tap. Never put a logistics person on the pill stack. Retroactive to all entries.
 
 ---
 
@@ -248,6 +288,8 @@ Charter-level scheduling rule.
 | 2026-05-25 | Pill Ownership Doctrine locked — charter-level | Pills = event owner, not driver/logistics. Driver/vehicle is Punch List territory, surfaced in detail panel on tap. Retroactive to all entries. |
 | 2026-05-25 | Category emoji map locked | Left-side color stripe → category emoji in v2.0. Colors belong to pills only. Full map in prefs.md. |
 | 2026-05-25 | Tentative event treatment locked — diagonal stripe | Repeating diagonal hatching overlaid on tile. Pills and title at full opacity on top. No new color. Colorblind-safe. |
+| 2026-05-25 | Full pill color palette locked — 13 pills | All hex values confirmed. D=#9a5828, K=#1a50e0, W=#cc2233, M=#9944cc, R=#f040b8, C=#2070b8, E=#156e2a, B6=#faa030, OMA=#7755cc, PAPA=#6ec898, GUEST=#E8DFC0, FAM=#7a7aaa, KIDS=#a0c840. |
+| 2026-05-25 | KIDS pill group defined + collapse doctrine locked | KIDS=[W][M][R][C][E][B6]. B6 joins post-birth ~Aug 15. FAM collapses at 8/7, KIDS at 6/5. ≤4 kids or ≤5 FAM = list individuals. |
 
 ---
 

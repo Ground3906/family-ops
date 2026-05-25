@@ -165,6 +165,24 @@ Calendar tiles use a category emoji in place of a color stripe. Colors belong to
 | 🌱 | Garden / Rootstock events |
 | 📋 | Meetings |
 
+### Pill color palette (locked)
+
+| Pill | Person | Color |
+|---|---|---|
+| D | Matt (Dad) | `#9a5828` |
+| K | Kalea | `#1a50e0` |
+| W | Wyatt | `#cc2233` |
+| M | Molly | `#9944cc` |
+| R | Rileigh | `#f040b8` |
+| C | Cullen | `#2070b8` |
+| E | Emmitt | `#156e2a` |
+| B6 | Baby 6 | `#faa030` |
+| OMA | Oma | `#7755cc` |
+| PAPA | Papa | `#6ec898` |
+| GUEST | Guest | `#E8DFC0` |
+| FAM | Family (all 8) | `#7a7aaa` |
+| KIDS | Kids group (W M R C E B6) | `#a0c840` |
+
 **Next input needed:** Matt's actual current Google Calendar setup (export `.ics` files via Google Calendar → Settings → Export, or screenshots of a typical week). Foreman's system prompt is built against the real shape of the data.
 
 ### 🚨 Dire task — Calendar visual widget (non-negotiable)

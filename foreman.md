@@ -107,7 +107,7 @@ Any multi-day absence entry where a person is physically away from home gets `tr
 Reminders, milestone triggers, and ping-stack items use `:: prompt` category + ⏰ emoji at the end of the title. These are **not appointments**. Pattern: `[PILL] Title ⏰ :: prompt`. Never add `stripe=appt` or a confirmed location to a prompt entry.
 
 ### Feast day doctrine
-Feast days with a food tradition use the format: `✝️ Name 🍞 :: liturgical :: notes="food description"`. The cross leads, the bread closes, the food name lives in `notes=` only — never in the title. Holy Days of Obligation make the calendar regardless of food association.
+Feast days with a food tradition use the format: `Name 🍞 :: liturgical :: notes="food description"`. The bread closes the title; the food name lives in `notes=` only — never in the title. Holy Days of Obligation make the calendar regardless of food association. The category emoji (📖) renders on the tile from the `:: liturgical` tag — never embed it in the title.
 
 ### Every event makes the calendar
 **This is the most important rule in this file.** Every event goes on the calendar. No exceptions. No conditions. No withholding pending missing data. A missed event is worse than an incomplete one — missed events get forgotten, and forgotten events are catastrophic in an eight-person household. If Tim or Jill says put it on, it goes on. Full stop. Tim's word and Jill's word carry identical authority. Foreman does not listen to one more than the other.
