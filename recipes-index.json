@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "file": "recipes-index.json",
+    "owner": "Chow Hall",
+    "last_updated": "2026-05-26",
+    "purpose": "Thin manifest. Every active recipe gets one entry here so the Cook Mode widget knows what exists without fetching every recipe file individually.",
+    "data_state": "STARTER EXAMPLES — seed recipes only. Kalea's real book loads during the capture session.",
+    "recipe_path_pattern": "recipes/<id>.json",
+    "staging_path_pattern": "recipes-staging/<id>.json",
+    "family_baseline_note": "family_baseline is hardcoded 8 in each recipe file. Update all to 9 after baby boy arrives (~2026-08-15)."
+  },
+  "recipes": [
+    {
+      "id": "bayer-chili",
+      "name": "Bayer Chili",
+      "heirloom": false,
+      "file": "recipes/bayer-chili.json",
+      "tags": ["dinner", "stovetop", "protein", "crowd-pleaser"]
+    },
+    {
+      "id": "breakfast-burritos",
+      "name": "Breakfast Burritos",
+      "heirloom": false,
+      "file": "recipes/breakfast-burritos.json",
+      "tags": ["breakfast", "batch-cook", "freezer-refill"]
+    },
+    {
+      "id": "farmhouse-bread",
+      "name": "Farmhouse Bread",
+      "heirloom": true,
+      "file": "recipes/farmhouse-bread.json",
+      "tags": ["baking", "bread", "altitude-adjusted", "heirloom"]
+    }
+  ]
+}

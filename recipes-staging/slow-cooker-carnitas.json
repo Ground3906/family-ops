@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "file": "recipes-staging/slow-cooker-carnitas.json",
+    "owner": "Chow Hall",
+    "last_updated": "2026-05-26",
+    "status_note": "Staging candidate. Not in the active library. Try it, then keep or drop. On keep: move to recipes/, add entry to recipes-index.json, heirloom stays false.",
+    "equipment_note": "Requires a slow cooker — not in chow-hall-appliances.md. Confirm the Bayers own one before scheduling this.",
+    "altitude_note": "Low-and-slow braise adds time at 9,000 ft. Add 1-2 hours to slow cooker time if results are underdone on first try."
+  },
+  "id": "slow-cooker-carnitas",
+  "name": "Slow Cooker Carnitas",
+  "status": "candidate",
+  "source_url": "https://example.com/slow-cooker-carnitas",
+  "source_note": "Research candidate — found online, not Kalea's recipe.",
+  "snooze_until": null,
+  "keep_drop_note": null,
+  "heirloom": false,
+  "yield_servings": 8,
+  "family_baseline": 8,
+  "multiplier": null,
+  "equipment": ["COOK-01"],
+  "time": {
+    "prep_min": 15,
+    "cook_min": 480,
+    "total_min": 495,
+    "learned": false,
+    "note": "Slow cooker 8 hours + COOK-01 broil to crisp at the end. Start morning of serve day."
+  },
+  "prep_lead": {
+    "thaw_hours": null,
+    "thaw_override": null,
+    "prep_ahead": "Start in slow cooker morning of serve day.",
+    "note": "thaw_hours null = compute from frz-pork-shoulder linked weight."
+  },
+  "free_tags": ["dinner", "pork", "slow-cook", "candidate"],
+  "base": {
+    "ingredients": [
+      {
+        "name": "Pork shoulder",
+        "amount": 4,
+        "unit": "lbs",
+        "inventory_link": { "file": "freezer", "id": "frz-pork-shoulder" },
+        "note": "cut into 3-inch chunks"
+      },
+      {
+        "name": "Orange juice",
+        "amount": 0.5,
+        "unit": "cup",
+        "inventory_link": null,
+        "note": null
+      },
+      {
+        "name": "Lime juice",
+        "amount": 2,
+        "unit": "tbsp",
+        "inventory_link": null,
+        "note": null
+      },
+      {
+        "name": "Garlic",
+        "amount": 4,
+        "unit": "cloves",
+        "inventory_link": null,
+        "note": "minced"
+      },
+      {
+        "name": "Cumin",
+        "amount": 2,
+        "unit": "tsp",
+        "inventory_link": null,
+        "note": null
+      },
+      {
+        "name": "Salt",
+        "amount": 1,
+        "unit": "tbsp",
+        "inventory_link": { "file": "pantry", "name": "Salt" },
+        "note": null
+      }
+    ],
+    "steps": [
+      "Season pork chunks with salt and cumin.",
+      "Place in slow cooker. Add orange juice, lime juice, and garlic.",
+      "Cook on low 8-10 hours until very tender and shreddable. Add extra time if underdone at altitude.",
+      "Shred pork in the slow cooker. Spread on a sheet pan.",
+      "Broil on COOK-01 upper oven 5-7 minutes until edges crisp.",
+      "Serve immediately."
+    ]
+  },
+  "adjustments": {
+    "ingredients": [],
+    "steps": [],
+    "notes": null
+  },
+  "feedback": []
+}

@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "file": "recipes/bayer-chili.json",
+    "owner": "Chow Hall",
+    "last_updated": "2026-05-26",
+    "altitude_note": "Simmer time extended at 9,000 ft — water never reaches 212F. Extra time already built into cook_min."
+  },
+  "id": "bayer-chili",
+  "name": "Bayer Chili",
+  "heirloom": false,
+  "yield_servings": 8,
+  "family_baseline": 8,
+  "multiplier": null,
+  "equipment": ["COOK-01"],
+  "time": {
+    "prep_min": 20,
+    "cook_min": 75,
+    "total_min": 95,
+    "learned": false,
+    "note": "Cook time includes 15-min altitude extension on simmer."
+  },
+  "prep_lead": {
+    "thaw_hours": null,
+    "thaw_override": null,
+    "prep_ahead": null,
+    "note": "thaw_hours null = Chow Hall computes from linked protein weight. Kalea override goes in thaw_override."
+  },
+  "free_tags": ["dinner", "stovetop", "protein", "crowd-pleaser"],
+  "base": {
+    "ingredients": [
+      {
+        "name": "Ground beef 80/20",
+        "amount": 2,
+        "unit": "lbs",
+        "inventory_link": { "file": "freezer", "id": "frz-ground-beef" },
+        "note": null
+      },
+      {
+        "name": "Diced tomatoes",
+        "amount": 2,
+        "unit": "cans (28 oz)",
+        "inventory_link": { "file": "pantry", "name": "Diced tomatoes" },
+        "note": null
+      },
+      {
+        "name": "Black beans",
+        "amount": 2,
+        "unit": "cans (15 oz)",
+        "inventory_link": { "file": "pantry", "name": "Black beans" },
+        "note": null
+      },
+      {
+        "name": "Tomato sauce",
+        "amount": 1,
+        "unit": "can (15 oz)",
+        "inventory_link": { "file": "pantry", "name": "Tomato sauce" },
+        "note": null
+      },
+      {
+        "name": "Yellow onion",
+        "amount": 1,
+        "unit": "large",
+        "inventory_link": null,
+        "note": "diced"
+      },
+      {
+        "name": "Garlic",
+        "amount": 4,
+        "unit": "cloves",
+        "inventory_link": null,
+        "note": "minced"
+      },
+      {
+        "name": "Chili powder",
+        "amount": 2,
+        "unit": "tbsp",
+        "inventory_link": null,
+        "note": null
+      },
+      {
+        "name": "Cumin",
+        "amount": 1,
+        "unit": "tsp",
+        "inventory_link": null,
+        "note": null
+      },
+      {
+        "name": "Salt",
+        "amount": 1,
+        "unit": "tsp",
+        "inventory_link": { "file": "pantry", "name": "Salt" },
+        "note": null
+      }
+    ],
+    "steps": [
+      "Brown the ground beef in a large pot over medium-high heat on COOK-01. Drain excess fat.",
+      "Add diced onion and cook 5 minutes until softened. Add garlic and cook 1 minute more.",
+      "Stir in chili powder and cumin, cook 30 seconds.",
+      "Add diced tomatoes, tomato sauce, and black beans. Stir to combine.",
+      "Bring to a boil, then reduce heat and simmer uncovered 60-75 minutes at 9,000 ft, stirring occasionally.",
+      "Taste and adjust seasoning. Serve."
+    ]
+  },
+  "adjustments": {
+    "ingredients": [],
+    "steps": [],
+    "notes": null
+  },
+  "feedback": []
+}

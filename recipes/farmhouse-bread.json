@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "file": "recipes/farmhouse-bread.json",
+    "owner": "Chow Hall",
+    "last_updated": "2026-05-26",
+    "altitude_note": "All 9,000 ft adjustments pre-applied in this recipe. Do not layer additional altitude corrections on top.",
+    "heirloom_note": "Base is frozen. Changes go in the adjustments block only — never edit base ingredients or steps directly.",
+    "f1_gaps": [
+      "Active dry yeast — not yet in pantry.md. Add at next inventory pass."
+    ]
+  },
+  "id": "farmhouse-bread",
+  "name": "Farmhouse Bread",
+  "heirloom": true,
+  "yield_servings": 12,
+  "family_baseline": 8,
+  "multiplier": null,
+  "equipment": ["COOK-01", "COOK-04"],
+  "time": {
+    "prep_min": 20,
+    "cook_min": 30,
+    "total_min": 170,
+    "learned": false,
+    "note": "Includes two shortened proof periods. Total active time ~50 min; rest is hands-off proof. Start 3 hours before serve."
+  },
+  "prep_lead": {
+    "thaw_hours": null,
+    "thaw_override": null,
+    "prep_ahead": "Start 3 hours before serve time.",
+    "note": null
+  },
+  "free_tags": ["baking", "bread", "altitude-adjusted", "heirloom", "mixer"],
+  "base": {
+    "ingredients": [
+      {
+        "name": "All-purpose flour",
+        "amount": 3.25,
+        "unit": "cups",
+        "inventory_link": { "file": "pantry", "name": "All-purpose flour" },
+        "note": "Altitude: 2 tbsp extra already included in this amount."
+      },
+      {
+        "name": "Active dry yeast",
+        "amount": 2.25,
+        "unit": "tsp",
+        "inventory_link": null,
+        "note": "Not yet in pantry.md. Altitude: watch the proof — reduce to 2 tsp if it rises unusually fast."
+      },
+      {
+        "name": "Salt",
+        "amount": 1.5,
+        "unit": "tsp",
+        "inventory_link": { "file": "pantry", "name": "Salt" },
+        "note": null
+      },
+      {
+        "name": "Sugar",
+        "amount": 1,
+        "unit": "tbsp",
+        "inventory_link": { "file": "pantry", "name": "Sugar" },
+        "note": "Altitude: reduced from 2 tbsp sea-level amount."
+      },
+      {
+        "name": "Warm water",
+        "amount": 1.25,
+        "unit": "cups",
+        "inventory_link": null,
+        "note": "Altitude: increased by 4 tbsp. Target 105-110F — use a thermometer."
+      },
+      {
+        "name": "Butter",
+        "amount": 2,
+        "unit": "tbsp",
+        "inventory_link": { "file": "freezer", "id": "frz-butter" },
+        "note": "softened"
+      }
+    ],
+    "steps": [
+      "Proof yeast in warm water (105-110F) with sugar for 5-8 minutes. At 9,000 ft yeast activates quickly — don't let it over-foam.",
+      "Combine flour and salt in COOK-04 bowl with dough hook. Add yeast mixture and softened butter.",
+      "Mix on low 2 minutes, then medium 6-8 minutes until smooth and slightly tacky.",
+      "Shape into a ball. Place in a lightly oiled bowl. Cover.",
+      "First proof in COOK-01 Proof mode 45-55 minutes until just doubled. Watch closely — altitude rises 20-30% faster. Punch down before it over-rises.",
+      "Shape into a loaf and place in a greased 9x5 pan. Second proof in COOK-01 Proof mode 30-40 minutes. Don't let it crest the pan edge.",
+      "Preheat COOK-01 lower oven to 375F. ProBake Convection handles heat distribution — no adjustment needed for metal pan.",
+      "Bake 25-30 minutes until deep golden and hollow when tapped. Pull at 190F internal on probe.",
+      "Cool on rack 20 minutes before slicing."
+    ]
+  },
+  "adjustments": {
+    "ingredients": [],
+    "steps": [],
+    "notes": null
+  },
+  "feedback": []
+}
