@@ -2,10 +2,10 @@
   "_meta": {
     "file": "punch-list/vehicles.json",
     "owner": "Punch List",
-    "schema_version": 1,
-    "last_updated": "2026-05-15",
-    "seeded_from": "fleet-state-v1.md (intake 2026-05-14)",
-    "note": "Registration renewal months for NV3500, Ford, Dodge, Tahoe not yet captured — see fleet-state-v1.md Cross-Fleet TODO. Update when obtained."
+    "schema_version": 2,
+    "last_updated": "2026-05-26",
+    "seeded_from": "fleet-state-v1.md (intake 2026-05-14) + Punch List deep build (2026-05-15) + capability intake session",
+    "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured — obtain and update when known."
   },
   "assets": [
     {
@@ -34,6 +34,30 @@
       "next_oil_change_mi": 111277,
       "preferred_shop": "Austin Automotive",
       "co_owned_by": [],
+      "capability": {
+        "passenger_default": 9,
+        "passenger_default_note": "3 seats removed from factory 12. Standard Bayer config.",
+        "passenger_max_reconfigured": 12,
+        "passenger_max_note": "Full 12-seat config possible with pre-event reconfig. Requires advance task — not a morning-of decision.",
+        "reconfig_lead_time_required": true,
+        "carseat_config": {
+          "cullen": "booster seat",
+          "emmitt": "booster seat",
+          "rileigh": "small booster seat",
+          "wyatt": "unassisted",
+          "molly": "unassisted",
+          "baby_b6": "infant carrier (post-Aug 2026)"
+        },
+        "cargo_at_family_max": "collapsed — bread-on-Molly's-lap territory",
+        "cargo_at_2_adults": "Mesquite-proven — full family + coolers + gear inside when seats configured",
+        "cargo_note": "Seats are reasonably easy to remove and rearrange. Interior cargo only — no open bed.",
+        "trailer_rule": "NEVER. Hard rule. Not rated, not situational, not negotiable.",
+        "long_haul_capable": true,
+        "long_haul_note": "Only vehicle that can do Mesquite NV trip with full family + luggage. Single point of failure for long-haul family travel.",
+        "weather_aware_cargo": false,
+        "rotation_cadence": null
+      },
+      "single_point_of_failure": "Full-family long-haul travel (Mesquite, CO Springs with full load). If NV is in shop, Tahoe absorbs family load — Costco postpones or 2-adult only.",
       "open_items": [
         {
           "id": "nv-lf-lca",
@@ -87,6 +111,24 @@
       "next_oil_change_note": "Flag as potentially overdue — last service Nov 2024, ~18 months ago as of 2026-05. Time-based annual interval.",
       "preferred_shop": "Austin Automotive",
       "co_owned_by": [],
+      "capability": {
+        "passenger_default": 2,
+        "passenger_default_note": "Single cab, bench seat. 2 comfortable.",
+        "passenger_max_reconfigured": 3,
+        "passenger_max_note": "3 maximum, tight center belt.",
+        "reconfig_lead_time_required": false,
+        "carseat_config": {
+          "note": "No carseats compatible — single cab, no back seat. Matt-only or Matt + 1 adult."
+        },
+        "cargo_at_family_max": "N/A — not a family vehicle",
+        "cargo_at_2_adults": "8-ft bed fully available",
+        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies — check radar before loading exposed cargo.",
+        "trailer_rule": "Short trips and emergency only. Not primary haul rig.",
+        "long_haul_capable": false,
+        "weather_aware_cargo": true,
+        "rotation_cadence": "monthly",
+        "rotation_note": "Monthly in-town errand minimum. Fluids moving, seals lubed, battery exercised. In-town rotation companion: Matt solo or Matt + 1."
+      },
       "open_items": [],
       "permanent_notes": [
         "BATTERY DISCONNECT REQUIRED BEFORE ANY FIELD WELDING — PCM was fried by welding 2019, replaced at $1,979",
@@ -100,16 +142,16 @@
       "type": "vehicle",
       "year": 2008,
       "make": "Dodge",
-      "model": "Ram 2500 HD",
+      "model": "Ram 2500 HD double cab (4-door, not mega cab)",
       "engine": "6.7L Cummins diesel I6",
       "vin": "3D7KS28A38G180521",
       "plate": "BYN-073 CO",
-      "use_profile": "secondary driver (~3,000 mi/yr, not daily)",
+      "use_profile": "hauling, hunting, diesel rotation (~3,000 mi/yr)",
       "tracking_unit": "miles",
       "current_mileage": 181342,
       "current_mileage_as_of": "2026-05-15",
       "registration_expiry": null,
-      "registration_note": "Renewal month not captured — obtain and update",
+      "registration_note": "Renewal month not captured — obtain and update. Custer County rural — CO emissions exempt.",
       "oil_change_interval_mi": 15000,
       "oil_type": "15W-40 synthetic blend, 12 qt capacity",
       "last_oil_change_mi": 172778,
@@ -117,6 +159,26 @@
       "next_oil_change_mi": 187778,
       "preferred_shop": "High Valley Diesel",
       "co_owned_by": [],
+      "capability": {
+        "passenger_default": 5,
+        "passenger_default_note": "Double cab, 4-door (not mega cab). 6 official (bench front + bench back). 5 realistic with boosters — gets tight.",
+        "passenger_max_reconfigured": 6,
+        "passenger_max_note": "6 official max, very tight with carseats in back.",
+        "reconfig_lead_time_required": false,
+        "carseat_config": {
+          "note": "Can fit littles in back bench. Monthly school-run config: 1 adult + 4 littles in-town. Not ideal carseat vehicle but functional for short runs."
+        },
+        "cargo_at_family_max": "limited in-cab with max passengers",
+        "cargo_at_2_adults": "8-ft bed fully available",
+        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies. Backpacks and cargo exposed on school runs — weather-aware.",
+        "trailer_rule": "Jackson confirmed. Deck confirmed. Primary haul rig.",
+        "long_haul_capable": false,
+        "long_haul_note": "Hunting rig and haul truck. Not a family long-haul vehicle.",
+        "weather_aware_cargo": true,
+        "rotation_cadence": "monthly",
+        "rotation_note": "Monthly drive cycle minimum — diesel should not sit. Natural form: school run with the littles (1 adult + 4 littles). Two-birds: maintenance run + kid taxi."
+      },
+      "single_point_of_failure": "Only vehicle that can pull the Jackson trailer. If Dodge is down during a butcher window, pig haul stalls. Punch List flags proactively when Dodge is in shop near slaughter window.",
       "open_items": [
         {
           "id": "dodge-wobble",
@@ -146,7 +208,7 @@
       "vin": "1GNEK13T41R129987",
       "plate": "APW-W74 CO",
       "plate_note": "Prior plate AHO-550",
-      "use_profile": "backup family hauler; Denver trip vehicle; light town runs. Fall 2026: Wyatt Salida runs end, transition to ~8,000 mi/yr.",
+      "use_profile": "backup family hauler; solo/date-night rig; cheapest miles. Fall 2026: Wyatt Salida runs end, transition to ~8,000 mi/yr.",
       "tracking_unit": "miles",
       "current_mileage": 182114,
       "current_mileage_as_of": "2026-05-15",
@@ -165,6 +227,29 @@
       },
       "preferred_shop": "Austin Automotive",
       "co_owned_by": [],
+      "capability": {
+        "passenger_default": 7,
+        "passenger_default_note": "Full 3-row. Captain seats front, bench rows 2+3. All kids ride routinely.",
+        "passenger_max_reconfigured": 9,
+        "passenger_max_note": "9-passenger rated. Family of 8 fits — backup family hauler when NV in shop.",
+        "reconfig_lead_time_required": false,
+        "carseat_config": {
+          "note": "All kids ride in Tahoe routinely. Same carseat layout as NV3500."
+        },
+        "cargo_at_family_max": "collapsed — bread-on-Molly's-lap territory. No meaningful cargo space.",
+        "cargo_at_2_adults": "fold seats = Costco-capable. Full cargo access.",
+        "cargo_note": "Foldable seats unlock cargo for 2-adult runs. Do not attempt Costco with full family in Tahoe.",
+        "trailer_rule": "No large trailer.",
+        "long_haul_capable": false,
+        "long_haul_note": "Not for long-haul with full family — cargo collapses. Denver day trips fine.",
+        "weather_aware_cargo": false,
+        "rotation_cadence": null,
+        "dispatch_rules": [
+          "When NV in shop: Tahoe absorbs family load. Costco postpones or goes to 2-adult-only config.",
+          "Solo or date-night: Tahoe default — cheapest miles.",
+          "Costco with 2 adults: Tahoe (fold seats) or NV3500 (seats configured)."
+        ]
+      },
       "open_items": [
         {
           "id": "tahoe-heater-hose",
@@ -214,16 +299,22 @@
       "current_hours_as_of": "2026-05-15",
       "registration_expiry": null,
       "registration_note": "No road registration — off-road equipment only",
-      "oil_change_interval_mi": null,
       "oil_change_interval_hours": 250,
       "oil_type": "Delo 15W-40",
       "last_service_hours": null,
-      "last_service_note": "PM at Faris Machinery 2019-04-10 (hours not recorded in service record). Last known full PM was at that service. Ongoing self oil changes logged but hours not tracked.",
+      "last_service_note": "PM at Faris Machinery 2019-04-10 (hours not recorded). Last known full PM at that service. Ongoing self oil changes logged but hours not tracked.",
       "next_oil_change_hours": 2250,
       "next_oil_change_note": "Spring 2027 target per fleet-state calendar alert. Next 250-hr mark above 2,009 is 2,250 hrs.",
       "preferred_shop": "High Valley Diesel",
       "preferred_shop_note": "High Valley mobile service. Faris Machinery (Commerce City / Colorado Springs) is dealer backup — 2.5 hr drive.",
       "co_owned_by": [],
+      "capability": {
+        "passenger_default": 0,
+        "passenger_default_note": "Equipment only. No passenger capacity.",
+        "trailer_rule": "N/A — not a road vehicle.",
+        "rotation_cadence": "monthly",
+        "rotation_note": "Monthly startup minimum. Longer run preferred. Diesel should not sit."
+      },
       "implements": [
         {
           "name": "Bucket",
@@ -282,15 +373,15 @@
       "model": "20-ft dual-axle deck trailer",
       "description": "20-ft dual-axle homemade deck trailer, 16\" fixed sides + front, wood deck (well-maintained)",
       "tracking_unit": "registration + tire age",
-      "current_mileage": null,
-      "current_hours": null,
       "registration_expiry": "2027-05-31",
       "registration_note": "May renewal. Current through May 2027.",
-      "oil_change_interval_mi": null,
-      "last_oil_change_mi": null,
-      "next_oil_change_mi": null,
       "preferred_shop": "self",
       "co_owned_by": [],
+      "capability": {
+        "tow_vehicles": ["Dodge (preferred)", "Ford (short trips / emergency only)"],
+        "trailer_rule": "Dodge preferred. Ford emergency/short only. NV3500 never.",
+        "rotation_cadence": null
+      },
       "open_items": [
         {
           "id": "deck-tire-dot",
@@ -317,16 +408,16 @@
       "upgrades": ["Load E tires", "upgraded rims"],
       "auxiliary": ["generator adapter", "hardwired IR heater", "fan outlets"],
       "tracking_unit": "registration + electrical",
-      "current_mileage": null,
-      "current_hours": null,
       "registration_expiry": "2026-10-31",
-      "registration_note": "October renewal. Next due 2026-10. CLOSEST TIME-SENSITIVE ITEM IN FLEET. Foreman handoff Sep 2026.",
-      "oil_change_interval_mi": null,
-      "last_oil_change_mi": null,
-      "next_oil_change_mi": null,
+      "registration_note": "October renewal. Next due 2026-10. CLOSEST TIME-SENSITIVE ITEM IN FLEET. Foreman handoff target: 2026-09-01.",
       "preferred_shop": "self",
       "co_owned_by": ["Stockyard"],
       "co_ownership_note": "Punch List owns MX. Stockyard owns haul-readiness workflow ('is this rig ready to take pigs to butcher?'). Equipment Access Principle: open use, owned MX.",
+      "capability": {
+        "tow_vehicles": ["Dodge only"],
+        "trailer_rule": "Dodge only. No exceptions. No substitutions.",
+        "single_point_of_failure": "Dodge is the only vehicle that can pull the Jackson. If Dodge is down during a butcher window, pig haul stalls. Flag proactively."
+      },
       "open_items": [],
       "permanent_notes": [
         "Purchased 2025 for $16,000",
