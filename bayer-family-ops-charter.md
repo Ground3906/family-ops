@@ -1,10 +1,10 @@
-# Bayer Family Operations — Charter v1.5
+# Bayer Family Operations — Charter v1.6
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-05-26 — v1.5: Plain-language rule added. Question/pick balance added. Lock divider style render-fix (blank lines around both rules). Wave 6.1 built (freezer.json + pantry.md + canning-goals.md). Chow Hall inventory ownership RESOLVED + LOCKED.
+**Last updated:** 2026-05-26 — v1.6: Engine check added as mandatory session-open step. Verbosity nudge calibrated (subtle trim, not bare-bones). Git walkthrough memory authority note added — spin-up docs must not re-describe. Wave 6.2 built (recipe library schema + seed recipes + capture session guide).
+**Prior:** 2026-05-26 — v1.5: Plain-language rule added. Question/pick balance added. Lock divider style render-fix (blank lines around both rules). Wave 6.1 built (freezer.json + pantry.md + canning-goals.md). Chow Hall inventory ownership RESOLVED + LOCKED.
 **Prior:** 2026-05-26 — v1.4: Lock divider style added. Verbosity trim added. Chow Hall Layer 2 (Recipe Library) designed — carried in Wave 6.0 spin-up. Equipment registry expanded (KitchenAid stand mixer, Broil King grill).
-**Prior:** 2026-05-26 — v1.3: Git two-chunk pattern locked. Agent build session inventory rule added. Unknown history search rule added. Punch List dispatcher doctrine added. Wave 5 closed. Wave 6 next.
 
 ---
 
@@ -76,6 +76,8 @@ Render exactly: blank line, rule, blank line, italic beat on its own line, blank
 ### Verbosity trim
 Lean slightly less wordy across all prompts and responses. Trim fat, keep substance. Long sessions wear on Matt when every turn is a wall of words. This is a nudge, not bare-bones — clarity and the locked formats (options, one-question-at-a-time, dividers) always win over brevity.
 
+**Nudge calibration:** When Matt asks for less wordiness mid-session, ease off a notch — subtle trim only. Do not swing to bare-bones. The adjustment should be barely noticeable in length but clearly felt in tightness. One degree, not a hard left turn.
+
 ### Plain-language rule
 Talk to Matt in plain, free-flowing language. Describe how a thing works in human terms — not field names, schema syntax, or code logic. The technical implementation (JSON fields, column specs, code structure) stays under the hood; apply it in the background, don't narrate it. When proposing a build approach: say what you want done in plain English, get Matt's read, then handle the technical detail yourself. Less jargon, less listing-out of logic. Matt can always pull the technical layer up on request ("deep learning mode") — the default is plain.
 
@@ -87,6 +89,8 @@ Whenever a new chat is mentioned (handoff, intake, build, cleanup), automaticall
 
 ### Engine defaults
 Matt = Max 5x. Default = Sonnet. Opus = design-only. Every handoff prompt must name engine + rationale.
+
+**Engine check is mandatory at session open.** Surface any engine mismatch immediately — before any work begins. Never proceed silently on the wrong engine.
 
 ---
 
@@ -209,7 +213,7 @@ See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
 | 1-3 | Foundation | **COMPLETE** | Charter, schema, crosstalk map, Foreman v1 deep |
 | 4.5 | Calendar Widget | **COMPLETE — v2.8** | Kalea adoption bar met. PQ-29 parked. |
 | 5 | 🏠 Punch List | **COMPLETE — MVP** | `punch-list.md` built. `vehicles.json` v2 with capability fields. Committed `734f12a`. |
-| 6 | 🍴 Chow Hall | **In build — 6.1 done** | Kalea's highest-leverage agent. Inventory files built + committed `6b8931d` (freezer.json + pantry.md + canning-goals.md). Layers 1+2 designed. 6.2 recipe library next. |
+| 6 | 🍴 Chow Hall | **In build — 6.2 done** | Wave 6.2 committed `bafa07b`: recipe library schema (per-recipe JSON + index + staging pen), 3 seed recipes, capture session guide. Wave 6.3 meal-plan agent next. |
 | 7 | 🐷 Stockyard | **Skeleton queued** | Egg tracker widget live. S8 durability gate open. Feeds Chow Hall. |
 | 8 | 🌱 Rootstock | **Skeleton queued** | Build before fall. Feeds Chow Hall. Low urgency vs Chow Hall. |
 | — | 📚 Whetstone | Protocol documented | Build after Punch List |
@@ -297,6 +301,8 @@ git push
 ```
 git log --oneline -5
 ```
+
+**Memory is the authority on this format.** Memory rule #12 mirrors the two-chunk format exactly. Spin-up prompts and any other file must NOT re-describe the git walkthrough — write "git walkthrough: follow memory rule" only. Re-describing creates drift. Charter + memory = one source, no summaries anywhere else.
 
 ### Step 4 — PK Upload
 Re-present ALL updated files in one batch via present_files — every file touched this session, in a single call. Matt uploads directly from the links. No hunting, no searching. Then Matt confirms PK is updated before Step 5 begins. Stale PK = broken future sessions.
