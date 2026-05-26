@@ -1,6 +1,6 @@
 # Chow Hall — Appliance Registry
 **Owner:** Chow Hall (🍴)
-**Last Updated:** 2026-05-26
+**Last Updated:** 2026-05-26 — added COOK-04 KitchenAid stand mixer and COOK-05 Broil King Baron S590 Pro IR grill.
 **Elevation:** 9,000 ft — Westcliffe, CO. All recipe planning, baking, and stovetop instructions MUST apply altitude adjustments. See Altitude Doctrine section.
 **Purpose:** Complete reference manifest for all cold storage, cooking, and kitchen appliances on the Edelweiss Farms property. Chow Hall owns this file. Stockyard and Rootstock deposit into cold storage per crosstalk protocol. Punch List owns succession/replacement planning for flagged units.
 
@@ -290,6 +290,37 @@ Vacuum-seal protein in a bag → place in lower oven → select Air Sous Vide mo
 
 ---
 
+### COOK-04 — KitchenAid Stand Mixer
+**Location:** Kitchen | **Status:** Active
+
+| Field | Value |
+|---|---|
+| Brand | KitchenAid |
+| Model | *(TBD — not captured)* |
+| Serial | *(TBD — not captured)* |
+| Type | Stand Mixer |
+| Capacity | *(TBD — not captured)* |
+| Attachments | *(TBD — not captured)* |
+| Notes | Primary mixing/dough/batter appliance. Critical for Bakery bin recipes and big-batch dough. Altitude doctrine: proof in COOK-01 Proof mode after mixing. Capture model, bowl size, and attachments at next inventory pass. |
+
+---
+
+### COOK-05 — Broil King Baron S590 Pro IR *(OUTDOOR GRILL)*
+**Location:** Outdoor | **Status:** Active
+
+| Field | Value |
+|---|---|
+| Brand | Broil King |
+| Model | Baron S590 Pro IR |
+| Serial | *(TBD — not captured)* |
+| Type | Outdoor Gas Grill — 5-burner, side burner, rear infrared rotisserie burner |
+| Purchase Price | ~$1,399–$1,499 |
+| Fuel | *(TBD — confirm NG vs LP at next pass)* |
+| BTU / burner specs | *(TBD — not captured)* |
+| Notes | Primary outdoor cooking surface. Owns grilled/smoked proteins, big-batch summer cooking, rotisserie via IR rear burner. Recipes tagged for grill route here. Confirm fuel type and capture burner specs at next inventory pass. |
+
+---
+
 ### DISH-01 — KitchenAid Dishwasher
 **Location:** Kitchen | **Status:** Active
 
@@ -408,7 +439,10 @@ Chow Hall's job is not just to plan meals — it's to open up the full capabilit
 2. **COOK-01 upper oven (2.6 cu ft)** — parallel cooking, small batches, finishing
 3. **COOK-01 cooktop (5 burners, 22K BTU max)** — primary stovetop
 4. **COOK-02 wall oven (5.1 cu ft)** — simultaneous overflow, canning sessions, feast days
-5. **COOK-03 microwave** — single portions, beverages, butter/chocolate, defrost assist only
+5. **COOK-05 Broil King grill** — outdoor proteins, rotisserie, big-batch summer cooking
+6. **COOK-03 microwave** — single portions, beverages, butter/chocolate, defrost assist only
+
+**Prep tool (not a heat source):** COOK-04 KitchenAid stand mixer — dough, batter, big-batch mixing. Feeds the Bakery bin and proof workflow.
 
 ### Succession Flags — Punch List Handoff
 | Unit | Issue | Action |
