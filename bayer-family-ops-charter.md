@@ -281,7 +281,7 @@ git log --oneline -5
 ```
 
 ### Step 4 — PK Upload
-Matt re-uploads updated files to project knowledge. Stale PK = broken future sessions.
+Re-present ALL updated files in one batch via present_files — every file touched this session, in a single call. Matt uploads directly from the links. No hunting, no searching. Then Matt confirms PK is updated before Step 5 begins. Stale PK = broken future sessions.
 
 ### Step 5 — Handoff Prompt
 Only after Steps 1-4 are complete. Draft in a code block. Include: engine + rationale, machine state, HEAD commit, active version, open items, locked doctrine, parked PQs, chat rules.
