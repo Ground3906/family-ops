@@ -2,7 +2,7 @@
 
 **Owner:** Foreman
 **Schema version:** 1
-**Last full rewrite:** 2026-05-25
+**Last full rewrite:** 2026-05-26
 **Source-of-truth rule:** This file is the digital plan. The whiteboard on the fridge is authoritative for daily ops. Tim and Jill mirror confirmed events from here to the whiteboard.
 
 Future schema changes: bump `Schema version`, note migration in `prefs.md`.
@@ -137,7 +137,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-05-26. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -191,34 +191,34 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### KNIGHTS OF COLUMBUS - 2026-27 (2nd Tuesday monthly)
-[CAL] 2026-06-09 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-07-14 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-08-11 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-09-08 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-10-13 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-11-10 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2026-12-08 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2027-01-12 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2027-02-09 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2027-03-09 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2027-04-13 18:00 [D] Knights of Columbus :: misc :: end=20:00
-[CAL] 2027-05-11 18:00 [D] Knights of Columbus :: misc :: end=20:00
+[CAL] 2026-06-09 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-07-14 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-08-11 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-09-08 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-10-13 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-11-10 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2026-12-08 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2027-01-12 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2027-02-09 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2027-03-09 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2027-04-13 18:00 [D] Knights of Columbus :: meetings :: end=20:00
+[CAL] 2027-05-11 18:00 [D] Knights of Columbus :: meetings :: end=20:00
 
 ---
 
 ### FAIRBOARD MEETING - 2026-27 (2nd Monday monthly)
-[CAL] 2026-06-08 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-07-13 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-09-14 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-10-12 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-11-09 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2026-12-14 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2027-01-11 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2027-02-08 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2027-03-08 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2027-04-12 16:30 [D] Fairboard meeting :: misc :: end=17:30
-[CAL] 2027-05-10 16:30 [D] Fairboard meeting :: misc :: end=17:30
+[CAL] 2026-06-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-07-13 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-09-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-10-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-11-09 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-12-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2027-01-11 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2027-02-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2027-03-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2027-04-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2027-05-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 
 ---
 
@@ -273,7 +273,6 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-06 17:00 Mass :: liturgical :: tentative=true :: end=19:00 :: location="St. Joseph's, Salida" :: notes="TBD - Foreman suggestion. Fulfills Corpus Christi obligation. Confirm to release Jun 7 default slot."
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi - Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-12 ALL-DAY [FAM] Swim meet - Lamar :: family :: location="Lamar, CO" :: span=2026-06-14 :: travel=true :: flag=true :: notes="Multi-day travel. Jun 14 conflicts with Sunday Mass obligation. Anticipated Mass Jun 13 Lamar or en-route - arbiter needed."
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-17 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
@@ -292,8 +291,8 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### JULY 2026
 
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Canon City, CO"
-[CAL] 2026-07-09 16:00 Fair cleanup :: misc :: location="Westcliffe, CO"
-[CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
+[CAL] 2026-07-09 16:00 Fair cleanup :: 4h :: location="Westcliffe, CO"
+[CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home :: family :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17
 [CAL] 2026-07-14 15:00 [W][M] Weigh-in / Picnic :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-15 17:00 [W][M] Swine show + pork meal :: 4h :: location="Westcliffe, CO"
@@ -301,7 +300,7 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-17 12:00 [M] Master showmanship - sheep :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-18 12:00 [W][M] Buckle ceremony + livestock sale :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: tentative=true
-[CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: misc :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
+[CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 

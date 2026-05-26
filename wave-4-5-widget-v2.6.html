@@ -1,33 +1,12 @@
-<!-- v2.1 - 2026-05-25
+<!-- v2.6 - 2026-05-26
      Bayer Family Ops | Edelweiss Farms — Family Ops
-     Phase 1 canonical release — post first-pass review fixes
 
-     CHANGES FROM v2.0:
-     PQ-26: FAM span pill suppression during travel — edge case fixed
-     PQ-27: mid-span bar position — flush to cell header bottom edge (--cell-hdr-h)
-     PQ-28: sixth row bleed — wrow overflow fix
-     PQ-29: week view arrow nav — step ±1 week, not ±1 month
-     PQ-30: FAM/KIDS collapse logic — FAM requires parent; KIDS never collapses to FAM
-     PQ-31: end= time field — parsed and stored on events
-     PQ-32: tentative=true renderer — diagonal stripe hatching, pills full opacity
+     CHANGES FROM v2.5:
+     v2.6-1: meetings category added to CAT_EMOJI (📋), CAT_MAP, CAT_CLS — KoC + Fairboard now render emoji
+     v2.6-2: Cook Mode centering fixed — --nh CSS var replaces padding-bottom:76px fudge; bottom:var(--nh) gives true symmetric center
+     v2.6-3: syncNavH() added — measures actual nav height on init + resize, writes to --nh
 
-     New in v2.0:
-     - Left-side color stripe REPLACED by category emoji (CAT_EMOJI map)
-     - KIDS pill (#a0c840) — new group pill
-     - B6 added to FAM_MEMBERS + KIDS_MEMBERS (invisible until first [CAL] entry)
-     - Updated pill colors: D K C E PAPA
-     - Bottom nav: [Rolling][Week][Month][←][Home][Cook Mode][→]
-     - Top tab strip removed — views live in bottom nav only
-     - Top header reduced height
-     - Cook Mode button: reduced height, 50% width
-     - Week view: fixed top grid + fixed bottom detail zone, no-jump doctrine
-     - Week view: left/right arrows step ±1 week (PQ-29)
-     - Day Panel v2: agent filter bar always rendered; Brief parser active
-     - Agent emojis: Chow Hall 🍴, Mystery Ranch ⛺
-     - 4h added to CAT_MAP + CAT_EMOJI
-     - spinnerColor/spanColor updated for FAM #7a7aaa + KIDS #a0c840
-
-     PARKED PQs:
+     PARKED PQs (carried forward):
      PQ-22: Liturgical data 2028-2035
      PQ-03: Egg count hardcoded 47 — pull from stockyard:eggs-log (Wave 4.6)
      PQ-04: Agent buttons open stubs — wire to agent modules (Wave 4.6)
@@ -53,17 +32,18 @@
   --tr:#ff5000;--tr-bg:rgba(255,80,0,.15);--fl:#ff5000;
   --cream:#e2d6aa;
   --hh:96px;
+  --nh:76px;
   --cell-hdr-h:54px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{font-size:13px;}
 body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI',Roboto,system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;padding-bottom:110px;}
 
-/* HEADER — reduced height v2.0 */
+/* HEADER */
 #hdr{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px solid var(--brd);padding:8px 10px 0;}
 .hdr-top{display:flex;align-items:center;gap:0;margin-bottom:6px;position:relative;}
 
-/* WORDMARK ZONE — compact v2.0 */
+/* WORDMARK ZONE */
 .wordmark-zone{display:flex;align-items:center;gap:8px;flex-shrink:0;z-index:1;}
 .logo-badge{width:72px;height:72px;flex-shrink:0;}
 .wordmark{display:flex;flex-direction:column;gap:2px;}
@@ -71,7 +51,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .logo-div{height:0.5px;background:#2e2820;margin:2px 0;}
 .logo-s{font-family:Georgia,serif;font-size:13px;font-weight:600;color:#4a6b3a;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2;}
 
-/* EGG TACK CARD — compact */
+/* EGG TACK CARD */
 .egg-card{display:flex;flex-direction:column;align-items:center;padding:4px 10px 4px;background:var(--cream);border:1px solid #c8b88a;border-radius:2px;cursor:pointer;position:relative;flex-shrink:0;box-shadow:1px 2px 5px rgba(0,0,0,.55);transform:rotate(-1.5deg);transform-origin:top center;margin-top:4px;z-index:1;}
 .egg-card::before{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;background:linear-gradient(225deg,#b8a870 45%,var(--cream) 45%);border-radius:0 0 2px 0;}
 .tack{position:absolute;top:-4px;left:44%;width:9px;height:9px;background:radial-gradient(circle at 35% 30%,#c88050,#7a4a1e);border-radius:50%;box-shadow:0 0 2px rgba(0,0,0,.9);z-index:2;}
@@ -82,15 +62,15 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .egg-sub{font-family:Georgia,serif;font-size:6px;color:#6a5a3a;letter-spacing:1px;text-transform:uppercase;}
 .egg-stale{font-size:5px;color:#c08416;font-family:Georgia,serif;margin-top:1px;}
 
-/* MONTH+YEAR CENTER BANNER */
-.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:baseline;gap:8px;justify-content:center;pointer-events:none;z-index:0;}
+/* MONTH+YEAR CENTER BANNER — v2.2: align-items:center (was baseline) */
+.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:center;gap:8px;justify-content:center;pointer-events:none;z-index:0;}
 .month-name{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--cream);letter-spacing:.05em;line-height:1;text-shadow:0 1px 10px rgba(0,0,0,.8),0 2px 20px rgba(0,0,0,.6);}
 .month-year{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#9a8a60;letter-spacing:.2em;line-height:1;}
 
 /* VDIV */
 .vdiv{width:1px;align-self:stretch;background:var(--brd);flex-shrink:0;margin:0 8px;}
 
-/* MEAL PLANNER BUTTON — compact v2.0 */
+/* MEAL PLANNER BUTTON */
 #meal-btn{padding:4px;background:#0c0a06;border:1.5px solid #3a1e06;border-top-color:#502e0c;border-left-color:#502e0c;border-bottom-color:#000;border-right-color:#000;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.8);cursor:pointer;flex-shrink:0;user-select:none;z-index:1;}
 #meal-face{background:#6a3e10;border-radius:6px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:8px 14px;text-align:center;box-shadow:inset 0 0 16px rgba(0,0,0,.32);transition:background .15s;}
 #meal-btn.meal-active #meal-face{background:#4a2c0a;}
@@ -149,10 +129,11 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .dnum{font-family:Georgia,serif;font-size:40px;font-weight:700;color:#7a6e5e;line-height:1;}
 .dnum.tod{color:var(--cream);}
 .hdr-slot{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-end;}
-.hdr-feast{font-family:Georgia,serif;font-size:14px;font-style:italic;color:#e0cc80;line-height:1.25;text-align:right;word-wrap:break-word;display:block;}
-.hdr-holiday{font-family:Georgia,serif;font-size:14px;font-style:italic;color:var(--cb);line-height:1.25;text-align:right;word-wrap:break-word;display:block;}
+/* v2.3: font-weight:700 on all header labels — unified upward (trash excluded) */
+.hdr-feast{font-family:Georgia,serif;font-size:14px;font-style:italic;font-weight:700;color:#e0cc80;line-height:1.25;text-align:right;word-wrap:break-word;display:block;}
+.hdr-holiday{font-family:Georgia,serif;font-size:14px;font-style:italic;font-weight:700;color:var(--cb);line-height:1.25;text-align:right;word-wrap:break-word;display:block;}
 .hdr-month{font-family:Georgia,serif;font-size:22px;font-style:italic;color:var(--txt1);line-height:1;text-align:right;}
-.hdr-feast-disp{display:block;font-family:Georgia,serif;font-size:13px;font-style:italic;color:#e0cc80;margin-bottom:4px;line-height:1.3;}
+.hdr-feast-disp{display:block;font-family:Georgia,serif;font-size:13px;font-style:italic;font-weight:700;color:#e0cc80;margin-bottom:4px;line-height:1.3;}
 .hdr-trash-solo{font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--tr);text-align:right;line-height:1.2;}
 .hdr-trash-dogs{font-family:Georgia,serif;font-size:10px;font-style:italic;color:var(--tr);opacity:.72;text-align:right;}
 .hdr-split{flex:1;min-width:0;height:40px;position:relative;}
@@ -161,7 +142,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .split-bot{position:absolute;top:29px;right:0;text-align:right;}
 .trash-hdr{font-size:10px;font-weight:700;color:var(--tr);background:var(--tr-bg);border:1.5px solid var(--tr);border-radius:3px;padding:3px 6px;display:flex;justify-content:space-between;align-items:center;gap:5px;width:100%;}
 
-/* SPAN OBJECTS — PQ-27: top spans flush to cell header bottom (--cell-hdr-h) */
+/* SPAN OBJECTS */
 .span-dep{position:absolute;bottom:0;left:8px;right:-1px;border-left:7px solid var(--sc);border-bottom:7px solid var(--sc);border-bottom-left-radius:16px;background:var(--sb);min-height:28px;display:flex;align-items:center;padding:4px 8px 2px 4px;overflow:hidden;z-index:1;}
 .span-ret{position:absolute;bottom:0;left:-1px;right:8px;border-right:7px solid var(--sc);border-bottom:7px solid var(--sc);border-bottom-right-radius:16px;background:var(--sb);min-height:28px;display:flex;align-items:center;justify-content:flex-end;padding:4px 4px 2px 8px;overflow:hidden;text-align:right;z-index:1;}
 .bar-mid{position:absolute;bottom:0;left:-1px;right:-1px;height:7px;background:var(--sc);opacity:.9;z-index:1;}
@@ -171,32 +152,37 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .span-dep-top{position:absolute;top:var(--cell-hdr-h);left:8px;right:-1px;border-left:7px solid var(--sc);border-top:7px solid var(--sc);border-top-left-radius:16px;background:var(--sb);min-height:28px;display:flex;align-items:flex-end;padding:2px 8px 4px 4px;overflow:hidden;z-index:1;}
 .span-ret-top{position:absolute;top:var(--cell-hdr-h);left:-1px;right:8px;border-right:7px solid var(--sc);border-top:7px solid var(--sc);border-top-right-radius:16px;background:var(--sb);min-height:28px;display:flex;align-items:flex-end;justify-content:flex-end;padding:2px 4px 4px 8px;overflow:hidden;text-align:right;z-index:1;}
 .bar-mid-top{position:absolute;top:var(--cell-hdr-h);left:-1px;right:-1px;height:7px;background:var(--sc);opacity:.9;z-index:1;}
-.edot{position:absolute;top:8px;right:8px;width:6px;height:6px;border-radius:50%;background:var(--cb);cursor:pointer;z-index:3;}
-.more{font-size:9px;color:var(--txt3);padding:1px 3px;}
+/* v2.5: +N more — big, bold, can't miss it */
+.more{font-size:11px;font-weight:700;color:var(--cb);padding:2px 4px;letter-spacing:.03em;}
 
-/* EVENT BLOCKS — v2.1: category emoji RIGHT-ALIGNED absolute, no left stripe */
-.evt{border-radius:3px;margin-bottom:3px;padding:4px 26px 4px 6px;position:relative;background:#201c18;}
-/* Tentative: amber tint + wide cadence stripes + dashed amber border */
+/* EVENT BLOCKS — v2.2: default padding no right reserve; .has-em adds right padding when emoji present */
+.evt{border-radius:3px;margin-bottom:3px;padding:4px 6px;position:relative;background:#201c18;}
+.evt.has-em{padding-right:24px;}
+/* Tentative */
 .evt.tentative{background-color:#271e0a;background-image:repeating-linear-gradient(45deg,transparent,transparent 8px,rgba(255,180,40,.10) 8px,rgba(255,180,40,.10) 16px);border:1px dashed rgba(207,184,124,.40);}
-/* Appointment — subtle red tint */
+/* Appointment */
 .evt.sa{background:#241814;}
-/* Category emoji — right-aligned absolute, pill size */
-.cat-em{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:14px;line-height:1;pointer-events:none;}
-/* History dot — left of emoji */
+/* Category emoji — v2.2: right:3px default (flush edge); history dot presence shifts via inline style to right:14px */
+.cat-em{position:absolute;right:3px;top:50%;transform:translateY(-50%);font-size:14px;line-height:1;pointer-events:none;}
+/* History dot */
 .edot{position:absolute;top:50%;right:4px;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:var(--cb);cursor:pointer;z-index:3;}
 .pills{display:flex;flex-wrap:wrap;gap:2px;margin-right:3px;flex-shrink:0;}
 .pill{display:inline-flex;align-items:center;padding:1px 6px;border-radius:20px;font-size:10px;font-weight:600;background:rgba(0,0,0,.35);}
 .eline{display:flex;align-items:center;flex-wrap:nowrap;gap:3px;overflow:hidden;}
 .etime{font-size:12px;color:#b8c8d8;font-weight:600;flex-shrink:0;}
 .ettl{font-size:12px;color:#ccc8bc;font-weight:500;white-space:normal;}
-.sep{font-size:10px;color:var(--txt3);flex-shrink:0;}
+/* v2.2: sep brightened to #6a6050 (was var(--txt3) = #3e3428) */
+.sep{font-size:10px;color:#6a6050;flex-shrink:0;}
 
-/* BOTTOM NAV — v2.0: Rolling/Week/Month live here */
-#bottom{position:fixed;bottom:0;left:0;right:0;z-index:100;border-top:0.5px solid var(--brd);background:var(--bg);padding:8px 10px;display:flex;align-items:center;justify-content:center;gap:6px;transform:translateZ(0);will-change:transform;}
+/* BOTTOM NAV */
+/* v2.5: two-zone nav — view zone left, action zone fills remaining centered */
+#bottom{position:fixed;bottom:0;left:0;right:0;z-index:100;border-top:0.5px solid var(--brd);background:var(--bg);padding:8px 10px;display:flex;align-items:center;gap:0;transform:translateZ(0);will-change:transform;}
+.nav-view-zone{display:flex;align-items:center;gap:4px;flex-shrink:0;padding-right:8px;border-right:0.5px solid var(--brd);}
+.nav-action-zone{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;}
 
-/* VIEW BUTTONS — same size/shape as arrow buttons */
+/* VIEW BUTTONS — v2.2: padding:14.5px 14px to match arrow button height exactly */
 .nav-view-btn{padding:5px;background:#1a1610;border:1.5px solid #3e3428;border-top-color:#54462e;border-left-color:#54462e;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.6);cursor:pointer;user-select:none;}
-.nav-view-face{background:#252015;border-radius:8px;border-top:1px solid #4e4020;border-bottom:1px solid #060400;padding:10px 14px;text-align:center;box-shadow:inset 0 0 10px rgba(0,0,0,.3);}
+.nav-view-face{background:#252015;border-radius:8px;border-top:1px solid #4e4020;border-bottom:1px solid #060400;padding:14.5px 14px;text-align:center;box-shadow:inset 0 0 10px rgba(0,0,0,.3);}
 .nav-view-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;color:var(--cb);line-height:1;opacity:.75;letter-spacing:.05em;}
 .nav-view-btn.on .nav-view-face{background:#352e15;}
 .nav-view-btn.on .nav-view-lbl{opacity:1;}
@@ -207,9 +193,10 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .home-house{font-size:16px;line-height:1;margin-bottom:3px;color:#c8dcaa;}
 .home-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:#c8dcaa;text-transform:uppercase;}
 
-/* COOK MODE BUTTON — v2.0: reduced height, ~50% width */
-#cook-btn{flex:0 0 auto;width:44%;max-width:200px;padding:5px;background:#0c0a06;border:1.5px solid #3a2e14;border-top-color:#4e3e1c;border-left-color:#4e3e1c;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
-#cook-face{background:var(--cream);border-radius:8px;border-top:1px solid #f4eccc;border-left:1px solid #ecdfc0;border-bottom:1px solid #a09050;border-right:1px solid #b8a060;padding:14px 0;text-align:center;box-shadow:inset 0 0 22px rgba(0,0,0,.32),inset 0 3px 8px rgba(0,0,0,.20);transition:background .15s;}
+/* COOK MODE BUTTON */
+/* v2.5: cook-btn same size as other nav buttons — width:44% removed, nav now balanced */
+#cook-btn{padding:5px;background:#0c0a06;border:1.5px solid #3a2e14;border-top-color:#4e3e1c;border-left-color:#4e3e1c;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
+#cook-face{background:var(--cream);border-radius:8px;border-top:1px solid #f4eccc;border-left:1px solid #ecdfc0;border-bottom:1px solid #a09050;border-right:1px solid #b8a060;padding:14px 10px;text-align:center;box-shadow:inset 0 0 22px rgba(0,0,0,.32),inset 0 3px 8px rgba(0,0,0,.20);transition:background .15s;}
 #cook-btn.cook-active #cook-face{background:#d4c898;}
 .cook-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#6a5a18;text-transform:uppercase;margin-bottom:2px;text-shadow:0 0 3px rgba(255,255,220,.55);}
 .cook-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#261c06;letter-spacing:.03em;line-height:1;text-shadow:0 0 4px rgba(255,255,230,.70);}
@@ -230,17 +217,20 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #night-wake{display:none;position:fixed;inset:0;z-index:999;cursor:pointer;background:rgba(0,0,0,0.92);}
 
 /* SCREENS */
-#cook-scr{display:none;flex:1;flex-direction:column;padding:24px 18px;gap:14px;}
+/* v2.6: cook-scr true center — bottom:var(--nh) stops at nav top; symmetric padding:24px gives correct centroid */
+#cook-scr{display:none;position:fixed;top:var(--hh);left:0;right:0;bottom:var(--nh);z-index:50;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;}
 .cook-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:var(--ck);}
-.cook-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;}
+/* v2.2: cook-body gets max-width for centered overlay layout */
+.cook-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;max-width:480px;width:90%;}
 #meal-scr{display:none;flex:1;flex-direction:column;padding:24px 18px;gap:14px;}
 .meal-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#f0c880;}
 .meal-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;}
+
 .cell-empty{background:transparent;cursor:default;pointer-events:none;}
 .hdr-year{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--cb);letter-spacing:.15em;text-align:right;display:block;line-height:1.2;}
 .hdr-month-disp{font-family:Georgia,serif;font-size:11px;color:var(--cb);opacity:.6;font-style:italic;}
 
-/* DAY PANEL — centered modal */
+/* DAY PANEL */
 #day-panel{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:500;align-items:center;justify-content:center;}
 #day-panel.open{display:flex;}
 #day-box{background:var(--surf2);border:0.5px solid var(--brd);border-radius:8px;width:90%;max-width:640px;max-height:80vh;overflow-y:auto;}
@@ -276,12 +266,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .brief-row{display:flex;align-items:flex-start;gap:8px;padding:4px 0;font-size:12px;color:var(--txt2);line-height:1.4;}
 .brief-icon{flex-shrink:0;font-size:13px;width:18px;text-align:center;}
 .brief-text{flex:1;}
+/* v2.5: brief row colors — conflict=red only; others use distinct non-red colors */
 .brief-conflict{color:#ff5000;}
-.brief-appt{color:#c83838;}
+.brief-appt{color:#c86878;}
 .brief-vehicle{color:var(--cb);}
 .brief-sacred{color:var(--cb);}
 .brief-travel{color:#4aa8d4;}
-/* Agent filter bar — always rendered v2.0 */
 .agent-filter-bar{display:flex;flex-wrap:wrap;gap:4px;padding:8px 18px 10px;border-top:0.5px solid var(--brd);}
 .agent-filter-btn{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;border:1px solid var(--brd);background:transparent;color:var(--txt2);cursor:pointer;transition:all .15s;}
 .agent-filter-btn.on{background:rgba(207,184,124,.15);border-color:var(--cb);color:var(--cb);}
@@ -293,7 +283,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .day-evt.collapsed{padding-bottom:4px;}
 #err-banner{display:none;background:#3a1010;border-bottom:1px solid #c83838;padding:6px 18px;font-size:11px;color:#e87060;font-weight:600;letter-spacing:.3px;}
 
-/* WEEK DETAIL ZONE — v2.0 fixed bottom zone for week view */
+/* WEEK DETAIL ZONE */
 #week-detail{display:none;height:260px;overflow-y:auto;border-top:1.5px solid var(--brd);background:var(--surf2);padding:0;}
 #week-detail.visible{display:block;}
 #wk-detail-hdr{padding:10px 18px 8px;border-bottom:0.5px solid var(--brd);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--surf2);z-index:2;}
@@ -303,6 +293,13 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #wk-detail-brief{}
 #wk-detail-events{padding:10px 18px 16px;}
 .wk-quiet{font-size:12px;color:var(--txt3);padding:16px 18px;font-style:italic;}
+
+/* v2.2: Week layout mode — 55% grid / 45% detail, viewport-filling */
+#cal-wrap.week-layout{display:flex!important;flex-direction:column;overflow:hidden;}
+#cal-wrap.week-layout #weeks{flex:0 0 55%;overflow:hidden;}
+#cal-wrap.week-layout #weeks .wrow{height:100%;}
+#cal-wrap.week-layout #weeks .cell{height:100%;}
+#cal-wrap.week-layout #week-detail{flex:0 0 45%;height:auto!important;min-height:0;overflow-y:auto;}
 
 /* MODAL */
 #modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:600;align-items:center;justify-content:center;}
@@ -362,14 +359,14 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
         </g>
         <circle cx="340" cy="180" r="84" fill="none" stroke="#c8b890" stroke-width="0.4"/>
         <g transform="translate(340,180)">
-          <g transform="rotate(22.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(67.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(112.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(157.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(202.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(247.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(292.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(337.5) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(0) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(45) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(90) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(135) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(180) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(225) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(270) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
+          <g transform="rotate(315) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
         </g>
         <text x="340" y="196" font-family="Georgia,serif" font-size="14" font-weight="600" fill="#e2d6aa" text-anchor="middle" letter-spacing="6" opacity="0.0">FARMS</text>
       </svg>
@@ -424,7 +421,6 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 <div id="cal-wrap">
   <div id="weeks"></div>
-  <!-- Week detail zone — PQ week view: fixed height, populates on tap -->
   <div id="week-detail">
     <div id="wk-detail-hdr">
       <div>
@@ -439,6 +435,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
   </div>
 </div>
 
+<!-- v2.2: cook-scr is position:fixed overlay — centered by CSS -->
 <div id="cook-scr">
   <div class="cook-hdr">Cook Mode</div>
   <div class="cook-body">
@@ -460,40 +457,46 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 <div id="month-scr"></div>
 
-<!-- BOTTOM NAV — v2.1: Rolling/Week/Month as arrow-style buttons, right arrow rightmost -->
+<!-- BOTTOM NAV -->
 <div id="bottom">
-  <div class="nav-view-btn on" data-view="rolling" onclick="switchView('rolling')">
-    <div class="nav-view-face"><div class="nav-view-lbl">Rolling</div></div>
-  </div>
-  <div class="nav-view-btn" data-view="week" onclick="switchView('week')">
-    <div class="nav-view-face"><div class="nav-view-lbl">Week</div></div>
-  </div>
-  <div class="nav-view-btn" data-view="month" onclick="switchView('month')">
-    <div class="nav-view-face"><div class="nav-view-lbl">Month</div></div>
-  </div>
-  <div class="nav-arrow-btn" onclick="jumpNav(-1)">
-    <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8249;</div></div>
-  </div>
-  <div id="home-btn" onclick="goHome()">
-    <div id="home-face">
-      <div class="home-house">⌂</div>
-      <div class="home-lbl">Home</div>
+  <!-- LEFT ZONE: view toggles -->
+  <div class="nav-view-zone">
+    <div class="nav-view-btn on" data-view="rolling" onclick="switchView('rolling')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Rolling</div></div>
+    </div>
+    <div class="nav-view-btn" data-view="week" onclick="switchView('week')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Week</div></div>
+    </div>
+    <div class="nav-view-btn" data-view="month" onclick="switchView('month')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Month</div></div>
     </div>
   </div>
-  <div id="cook-btn" onclick="toggleCook()">
-    <div id="cook-face">
-      <div class="cook-sub">Edelweiss Farms</div>
-      <div class="cook-main">Cook Mode</div>
+  <!-- RIGHT ZONE: action buttons, centered -->
+  <div class="nav-action-zone">
+    <div class="nav-arrow-btn" onclick="jumpNav(-1)">
+      <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8249;</div></div>
     </div>
-  </div>
-  <div id="night-btn" onclick="toggleNight()">
-    <div id="night-face">
-      <div class="night-moon">☽</div>
-      <div class="night-lbl">Night</div>
+    <div id="home-btn" onclick="goHome()">
+      <div id="home-face">
+        <div class="home-house">⌂</div>
+        <div class="home-lbl">Home</div>
+      </div>
     </div>
-  </div>
-  <div class="nav-arrow-btn" onclick="jumpNav(1)">
-    <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8250;</div></div>
+    <div id="cook-btn" onclick="toggleCook()">
+      <div id="cook-face">
+        <div class="cook-sub">Edelweiss Farms</div>
+        <div class="cook-main">Cook Mode</div>
+      </div>
+    </div>
+    <div id="night-btn" onclick="toggleNight()">
+      <div id="night-face">
+        <div class="night-moon">☽</div>
+        <div class="night-lbl">Night</div>
+      </div>
+    </div>
+    <div class="nav-arrow-btn" onclick="jumpNav(1)">
+      <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8250;</div></div>
+    </div>
   </div>
 </div>
 
@@ -528,18 +531,16 @@ const STRESS_DATES=new Set(_stressOverride?_stressOverride.split(',').map(s=>s.t
 // PILL COLORS — v2.1 locked palette
 const PCOL={D:'#9a5828',K:'#1a50e0',W:'#cc2233',M:'#9944cc',R:'#f040b8',C:'#2070b8',E:'#156e2a',OMA:'#7755cc',PAPA:'#6ec898',B6:'#faa030',GUEST:'#E8DFC0',FAM:'#7a7aaa',KIDS:'#a0c840'};
 
-// FAM_MEMBERS includes B6 (B6_ACTIVE gates display — flip post-birth)
+// FAM_MEMBERS includes B6 (B6_ACTIVE gates display)
 const B6_ACTIVE=false;
 const FAM_MEMBERS=['D','K','W','M','R','C','E','B6'];
 const KIDS_MEMBERS=['W','M','R','C','E','B6'];
-// Effective members — gate B6 until active
 const effFAM=()=>B6_ACTIVE?FAM_MEMBERS:FAM_MEMBERS.filter(p=>p!=='B6');
 const effKIDS=()=>B6_ACTIVE?KIDS_MEMBERS:KIDS_MEMBERS.filter(p=>p!=='B6');
 
 const NO_PILL_CATS=new Set(['liturgical','birthdays','holidays']);
 const MAX_EVENTS=4;
 
-// Pill display order — always sort before collapse
 const PILL_ORDER=['D','K','W','M','R','C','E','B6','OMA','PAPA','GUEST'];
 function sortPills(pills){
   return[...pills].sort((a,b)=>{
@@ -548,12 +549,11 @@ function sortPills(pills){
   });
 }
 
-// CATEGORY EMOJI MAP — v2.1: medical=➕, prompt=⏰
-const CAT_EMOJI={liturgical:'✝️',kids:'🚸',family:'🏠',animals:'🐾',appointments:'➕','4h':'🍀',rootstock:'🌱',medical:'➕',prompt:'⏰'};
+// CATEGORY EMOJI MAP
+const CAT_EMOJI={liturgical:'✝️',kids:'🚸',family:'🏠',animals:'🐾',appointments:'➕','4h':'🍀',rootstock:'🌱',medical:'➕',prompt:'⏰',meetings:'📋'};
 
-// CAT_MAP — v2.0: added 4h
-const CAT_MAP={liturgical:'liturgical',kids:'kids',animals:'animals',appointments:'appointments',appt:'appointments','4h':'4h',birthday:'birthdays',birthdays:'birthdays',holiday:'holidays',holidays:'holidays',kalea:'kalea',matt:'matt',rootstock:'rootstock',misc:'misc',prompt:'prompt'};
-const CAT_CLS={liturgical:'el',kids:'ek',animals:'ea',appointments:'eap',birthdays:'eb',holidays:'ex',kalea:'eka',matt:'em',rootstock:'ero',misc:'ex',prompt:'eprompt','4h':'ek'};
+const CAT_MAP={liturgical:'liturgical',kids:'kids',animals:'animals',appointments:'appointments',appt:'appointments','4h':'4h',birthday:'birthdays',birthdays:'birthdays',holiday:'holidays',holidays:'holidays',kalea:'kalea',matt:'matt',rootstock:'rootstock',misc:'misc',prompt:'prompt',meetings:'meetings'};
+const CAT_CLS={liturgical:'el',kids:'ek',animals:'ea',appointments:'eap',birthdays:'eb',holidays:'ex',kalea:'eka',matt:'em',rootstock:'ero',misc:'ex',prompt:'eprompt','4h':'ek',meetings:'emtg'};
 
 const ABBREV=[['Faith Formation','Faith Form.'],['Study block','Study'],['study block','study'],['Invitational','Invit.'],['invitational','invit.'],['Birthday dinner','Bday dinner'],['Greenhouse seeding','Greenhouse'],['Garden beds','Garden'],['weekly apt','apt'],['Fairboard meeting','Fairboard mtg'],['4H fair prep','Fair prep'],['ranch supply run','ranch supply'],['orthodontist','ortho'],['Track practice','Track'],['track practice','track']];
 function abbreviate(t){for(const[f,s]of ABBREV)t=t.replace(f,s);return t;}
@@ -577,14 +577,12 @@ function fmtD(d){return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'
 function parseD(s){const[y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12);}
 function gid(){return`e${++_id}`;}
 
-// PILL LOGIC — v2.1: three-pass (collapse→travel subtract→B6 gate), pill ordering
-// suppressList = array of pill codes traveling/absent (passed from parseSrc via e.travelSuppressed)
+// PILL LOGIC — three-pass (collapse→travel subtract→B6 gate)
 function computePills(rawPills,cat,suppressList){
   if(NO_PILL_CATS.has(cat)||!rawPills||!rawPills.length)return[];
   const isKidsCat=cat==='kids'||cat==='4h';
   const ef=effFAM(),ek=effKIDS();
 
-  // Handle literal FAM/KIDS group pills in entry
   if(rawPills.includes('FAM')){
     let o=[{t:'s',lbl:'FAM',c:'#7a7aaa'}];
     rawPills.filter(p=>p!=='FAM'&&!ef.includes(p)).forEach(p=>o.push({t:'s',lbl:p,c:PCOL[p]||'#6068a0'}));
@@ -596,7 +594,6 @@ function computePills(rawPills,cat,suppressList){
     return applySuppress(o,suppressList,ef,ek);
   }
 
-  // Sort pills
   const sorted=sortPills(rawPills);
   const famP=sorted.filter(p=>ef.includes(p));
   const famM=ef.filter(p=>!sorted.includes(p));
@@ -605,26 +602,20 @@ function computePills(rawPills,cat,suppressList){
   const kidsP=sorted.filter(p=>ek.includes(p));
   const kidsM=ek.filter(p=>!sorted.includes(p));
 
-  // PASS 1: Collapse
-  // FAM: NOT kids-cat, parent present, all-minus-1 FAM present
   const famThreshold=Math.max(ef.length-1,1);
   let result=[];
   if(!isKidsCat&&hasParent&&famP.length>=famThreshold){
     result=[{t:'s',lbl:'FAM',c:'#7a7aaa'}];
     famM.forEach(p=>result.push({t:'d',lbl:`−${p}`,bc:'#7a7aaa',tc:PCOL[p]||'#8888aa'}));
     extras.forEach(p=>result.push({t:'s',lbl:p,c:PCOL[p]||'#6068a0'}));
-  }
-  // KIDS: kids-cat, all-minus-1 KIDS present
-  else if(isKidsCat&&kidsP.length>=Math.max(ek.length-1,1)){
+  } else if(isKidsCat&&kidsP.length>=Math.max(ek.length-1,1)){
     result=[{t:'s',lbl:'KIDS',c:'#a0c840'}];
     kidsM.forEach(p=>result.push({t:'d',lbl:`−${p}`,bc:'#a0c840',tc:PCOL[p]||'#8888aa'}));
     extras.filter(p=>p!=='D'&&p!=='K').forEach(p=>result.push({t:'s',lbl:p,c:PCOL[p]||'#6068a0'}));
-  }
-  else{
+  } else {
     result=sorted.map(p=>({t:'s',lbl:p,c:PCOL[p]||'#6068a0'}));
   }
 
-  // PASS 2+3: Apply travel suppression and B6 gate
   return applySuppress(result,suppressList,ef,ek);
 }
 
@@ -671,10 +662,11 @@ function parseOpts(parts){
     if(t.startsWith('flag='))o.flag=true;
     if(t.startsWith('travel='))o.travel=t.includes('true');
     if(t.startsWith('span='))o.span=t.slice(5);
-    if(t.startsWith('end='))o.end=t.slice(4); // PQ-31
-    if(t.startsWith('tentative='))o.tentative=t.includes('true'); // PQ-32
+    if(t.startsWith('end='))o.end=t.slice(4);
+    if(t.startsWith('tentative='))o.tentative=t.includes('true');
     if(t.startsWith('location='))o.location=t.slice(9).replace(/^"|"$/g,'').trim();
     if(t.startsWith('notes='))o.notes=t.slice(6).replace(/^"|"$/g,'').trim();
+    if(t.startsWith('optional='))o.optional=t.includes('true'); // v2.3: optional events never trigger conflict flag
   }
   return o;
 }
@@ -683,15 +675,18 @@ function parseCalLine(line){
   const m=line.match(/^\[CAL\]\s+(\d{4}-\d{2}-\d{2})\s+(ALL-DAY|\d{2}:\d{2})\s+(.+)$/);
   if(!m)return null;
   const[,date,tr,rest]=m;
-  if(rest.trim()==='trash-day'||rest.trim().startsWith('trash-day '))return{id:gid(),date,time:null,allDay:true,trash:true,pills:[],title:'TRASH DAY',cat:'trash',stripe:null,flag:false,span:null,vehicle:null,driver:null,location:null,notes:null,tentative:false,end:null,recur:false,hist:[]};
+  if(rest.trim()==='trash-day'||rest.trim().startsWith('trash-day '))return{id:gid(),date,time:null,allDay:true,trash:true,pills:[],title:'TRASH DAY',cat:'trash',stripe:null,flag:false,optional:false,span:null,vehicle:null,driver:null,location:null,notes:null,tentative:false,end:null,recur:false,hist:[]};
   const ps=getPills(rest);
   const after=rest.slice(pillsEnd(rest)).trim();
-  const parts=after.split('::').map(s=>s.trim());
-  const title=parts[0];
-  const rawC=(parts[1]||'misc').toLowerCase().replace(/[^a-z0-9]/g,'');
+  // v2.3: robust title parse — explicit first :: split so + or other chars in title never break category detection
+  const colonIdx=after.indexOf('::');
+  const title=colonIdx>=0?after.slice(0,colonIdx).trim():after.trim();
+  const optStr=colonIdx>=0?after.slice(colonIdx+2):'';
+  const optParts=optStr.split('::').map(s=>s.trim());
+  const rawC=(optParts[0]||'misc').toLowerCase().replace(/[^a-z0-9]/g,'');
   const cat=CAT_MAP[rawC]||'misc';
-  const opts=parseOpts(parts.slice(2));
-  return{id:gid(),date,time:tr==='ALL-DAY'?null:tr,allDay:tr==='ALL-DAY',trash:false,pills:ps,title,cat,stripe:opts.stripe||null,sacred:opts.sacred||null,vehicle:opts.vehicle||null,driver:opts.driver||null,location:opts.location||null,notes:opts.notes||null,flag:opts.flag||false,span:opts.span||null,travel:opts.travel||false,tentative:opts.tentative||false,end:opts.end||null,recur:false,hist:[]};
+  const opts=parseOpts(optParts.slice(1));
+  return{id:gid(),date,time:tr==='ALL-DAY'?null:tr,allDay:tr==='ALL-DAY',trash:false,pills:ps,title,cat,stripe:opts.stripe||null,sacred:opts.sacred||null,vehicle:opts.vehicle||null,driver:opts.driver||null,location:opts.location||null,notes:opts.notes||null,flag:opts.flag||false,optional:opts.optional||false,span:opts.span||null,travel:opts.travel||false,tentative:opts.tentative||false,end:opts.end||null,recur:false,hist:[]};
 }
 
 function parseRecur(line,ws,we){
@@ -741,27 +736,25 @@ function parseSrc(txt){
     if(t.startsWith('[CAL-RECUR')){const re=t.includes('monthly')?parseRecurMonthly(t,FLOOR,CEIL):parseRecur(t,FLOOR,CEIL);evts.push(...re);if(re.length)last=re[re.length-1];continue;}
     if(t.startsWith('[CAL]')){const e=parseCalLine(t);if(e){evts.push(e);last=e;}}
   }
-  // Expand span= date strings — stamp _spanColor once at expansion (v2.1: fixes mid-span color flip)
+  // Expand span= date strings
   const expanded=[];
   for(const e of evts){
     if(!e.span||e.span==='start'||e.span==='mid'||e.span==='end'){expanded.push(e);continue;}
     const startD=parseD(e.date);const endD=parseD(e.span);
-    const sc=spanColor(e.pills,e.cat); // stamp once
+    const sc=spanColor(e.pills,e.cat);
     if(endD<=startD){expanded.push({...e,span:'start',_spanColor:sc});continue;}
     expanded.push({...e,span:'start',_spanColor:sc});
     const cur2=new Date(startD);cur2.setDate(cur2.getDate()+1);
     while(cur2<endD){expanded.push({...e,id:gid(),date:fmtD(cur2),span:'mid',_spanColor:sc});cur2.setDate(cur2.getDate()+1);}
     expanded.push({...e,id:gid(),date:fmtD(endD),span:'end',_spanColor:sc});
   }
-  // v2.1: travel suppression — store travelSuppressed on event, DON'T modify pills
-  // computePills handles three-pass logic (collapse → suppress → B6 gate)
+  // Travel suppression
   const travelSpans=expanded.filter(e=>e.travel&&e.pills&&e.pills.length);
   if(travelSpans.length){
     const travelMap={};
     expanded.filter(e=>e.travel&&e.span).forEach(e=>{
       if(!travelMap[e.date])travelMap[e.date]={};
       (e.pills||[]).forEach(p=>{travelMap[e.date][p]=true;});
-      // Handle literal FAM/KIDS pills — expand for travel map
       if((e.pills||[]).includes('FAM'))effFAM().forEach(p=>{travelMap[e.date][p]=true;});
       if((e.pills||[]).includes('KIDS'))effKIDS().forEach(p=>{travelMap[e.date][p]=true;});
     });
@@ -769,9 +762,7 @@ function parseSrc(txt){
       if(e.travel)continue;
       if(travelMap[e.date]){
         const suppress=Object.keys(travelMap[e.date]);
-        if(suppress.length&&e.pills){
-          e.travelSuppressed=suppress;
-        }
+        if(suppress.length&&e.pills){e.travelSuppressed=suppress;}
       }
     }
   }
@@ -792,14 +783,14 @@ function spanColor(pills,cat){
 }
 function spanBg(sc){const m=sc.match(/^#([a-f0-9]{6})$/i);if(!m)return'rgba(207,184,124,.14)';const r=parseInt(m[1].slice(0,2),16),g=parseInt(m[1].slice(2,4),16),b=parseInt(m[1].slice(4,6),16);return`rgba(${r},${g},${b},.14)`;}
 
+// v2.2: buildSpan — departure shows start time, return shows end time
 function buildSpan(e,pos){
-  const sc=e._spanColor||spanColor(e.pills,e.cat); // use stamped color (v2.1: consistent across span)
+  const sc=e._spanColor||spanColor(e.pills,e.cat);
   const sb=spanBg(sc);
   const dp=computePills(e.pills,e.cat,e.travelSuppressed);
   const ph=dp.length?pillHtml(dp):'';
   const ttl=abbreviate(e.title);
   if(e.span==='mid'){
-    // Week view: compact in-transit banner with return date hint
     if(pos==='top-mid-compact'){
       const retDate=e._spanEnd?` → ${MOS[parseD(e._spanEnd).getMonth()]} ${parseD(e._spanEnd).getDate()}`:'';
       return`<div class="bar-mid-top" style="--sc:${sc};height:20px;display:flex;align-items:center;padding:0 6px;overflow:hidden;">${ph}<span style="font-size:9px;color:${sc};margin-left:4px;white-space:nowrap;">${abbreviate(e.title)}${retDate}</span></div>`;
@@ -807,12 +798,22 @@ function buildSpan(e,pos){
     const cls=pos==='top'?'bar-mid-top':'bar-mid';
     return`<div class="${cls}" style="--sc:${sc};"></div>`;
   }
-  if(e.span==='start'){const cls=pos==='top'?'span-dep-top':'span-dep';return`<div class="${cls}" style="--sc:${sc};--sb:${sb};"><div class="eline">${ph}<span class="sep">·</span><span class="ettl">${ttl}</span></div></div>`;}
-  if(e.span==='end'){const cls=pos==='top'?'span-ret-top':'span-ret';return`<div class="${cls}" style="--sc:${sc};--sb:${sb};"><div class="eline" style="justify-content:flex-end;">${ph}<span class="sep">·</span><span class="ettl">${ttl}</span></div></div>`;}
+  if(e.span==='start'){
+    const cls=pos==='top'?'span-dep-top':'span-dep';
+    // v2.2: show departure time if available
+    const timeH=e.time?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.time}</span>`:'';
+    return`<div class="${cls}" style="--sc:${sc};--sb:${sb};"><div class="eline">${ph}${timeH}<span class="ettl">${ttl}</span></div></div>`;
+  }
+  if(e.span==='end'){
+    const cls=pos==='top'?'span-ret-top':'span-ret';
+    // v2.3: arrH before ettl — pills → time → title (consistent with departure and day panel)
+    const arrH=e.end?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.end}</span>`:'';
+    return`<div class="${cls}" style="--sc:${sc};--sb:${sb};"><div class="eline" style="justify-content:flex-end;">${ph}${arrH}<span class="ettl">${ttl}</span></div></div>`;
+  }
   return'';
 }
 
-// EVENT BLOCK — v2.1: emoji right-aligned absolute, history dot left of it
+// v2.2: renderEvtBlock — no sep slash; has-em class for dynamic padding
 function renderEvtBlock(e,abbrev,dp){
   const sc=e.stripe?(e.stripe==='appt'?' sa':''):'';
   const tentH=e.tentative?' tentative':'';
@@ -820,14 +821,16 @@ function renderEvtBlock(e,abbrev,dp){
   const hasKidsPill=dp&&dp.some(p=>p.lbl==='KIDS');
   let ttl=abbrev?abbreviate(e.title):e.title;
   if(hasKidsPill)ttl=ttl.replace(/^kids?\s+/i,'');
-  // Strip ⏰ from prompt titles (rendered as cat-em instead)
   if(e.cat==='prompt'&&ttl.endsWith('⏰'))ttl=ttl.slice(0,-2).trim();
-  const timeH=e.time?`<span class="etime">${e.time}</span><span class="sep">/</span>`:'';
+  // v2.2: no slash sep between time and title
+  const timeH=e.time?`<span class="etime">${e.time}</span>`:'';
   const histDot=e.hist.length?`<div class="edot" data-eid="${e.id}"></div>`:'';
-  // Cat emoji right-aligned; if also has history dot, shift left slightly
+  // v2.2: emoji right:3px default; shift to right:14px when history dot present
   const emShift=e.hist.length?' style="right:14px;"':'';
-  const catEm=CAT_EMOJI[e.cat]?`<span class="cat-em"${emShift}>${CAT_EMOJI[e.cat]}</span>`:'';
-  return`<div class="evt${sc}${tentH}" data-eid="${e.id}"><div class="eline">${ph}${timeH}<span class="ettl">${ttl}</span></div>${histDot}${catEm}</div>`;
+  const hasEm=!!CAT_EMOJI[e.cat];
+  const catEm=hasEm?`<span class="cat-em"${emShift}>${CAT_EMOJI[e.cat]}</span>`:'';
+  // v2.2: has-em class only when emoji present
+  return`<div class="evt${sc}${tentH}${hasEm?' has-em':''}" data-eid="${e.id}"><div class="eline">${ph}${timeH}<span class="ettl">${ttl}</span></div>${histDot}${catEm}</div>`;
 }
 
 function renderCell(date,isWeekView){
@@ -840,7 +843,12 @@ function renderCell(date,isWeekView){
   const daysInMonth=new Date(date.getFullYear(),date.getMonth()+1,0).getDate();
   const isLastOfMonth=dn===daysInMonth;
   const dayEvts=sortEvts(allEvts.filter(e=>e.date===ds));
-  const flaggedEvts=dayEvts.filter(e=>e.flag);
+  // v2.3: flaggedEvts excludes mid/end span dates (flags never bleed across span) and optional events
+  const flaggedEvts=dayEvts.filter(e=>e.flag&&e.span!=='mid'&&e.span!=='end'&&!e.optional);
+
+  // v2.4: auto-conflict detection via shared detectTimeConflicts()
+  const timeConflicts=detectTimeConflicts(dayEvts);
+  const autoConflict=timeConflicts.length>0;
 
   const suppressSunday=dow===0&&flaggedEvts.length>0&&flaggedEvts.every(e=>{
     const isLiturgicalKids=e.cat==='liturgical'||e.cat==='kids';
@@ -855,7 +863,8 @@ function renderCell(date,isWeekView){
     return[...travelPills].some(p=>evtPills.has(p));
   });
   const suppressConflict=suppressSunday||suppressTravel;
-  const hasConflict=!suppressConflict&&dayEvts.some(e=>e.flag);
+  // v2.4: hasConflict fires on manual flags OR auto-detected time+pill overlap
+  const hasConflict=(!suppressConflict&&flaggedEvts.length>0)||autoConflict;
 
   let hdrLabels=[],trashEvt=null;
   const bodyEvts=[];
@@ -864,12 +873,11 @@ function renderCell(date,isWeekView){
   for(const e of dayEvts){
     if(e.trash){trashEvt=e;continue;}
     if(e.span)continue;
-    // Week view: prompts go to bottom zone only — hide from top grid
     if(isWeekView&&e.cat==='prompt')continue;
     if(e.allDay&&HDR_PRI.hasOwnProperty(e.cat)){
       const cls=e.cat==='liturgical'?'hdr-feast':e.cat==='holidays'?'hdr-holiday':'hdr-holiday';
       hdrLabels.push({text:e.title,cls,pri:HDR_PRI[e.cat]});
-    } else {bodyEvts.push(e);}
+    } else if(!e.optional){bodyEvts.push(e);} // v2.5: optional events never consume cell slots
   }
   if(dn===1&&mo===0) hdrLabels.push({text:String(date.getFullYear()),cls:'hdr-year',pri:0});
   hdrLabels.sort((a,b)=>a.pri-b.pri);
@@ -903,7 +911,6 @@ function renderCell(date,isWeekView){
 
   let cls='cell';
   if(isSun)cls+=' sun';if(isSat)cls+=' sat';if(isToday)cls+=' tod';
-  // Week view: mark active (tapped) cell
   if(isWeekView&&ds===weekDetailDs)cls+=' wk-active';
 
   const dnH=`<span class="dnum${isToday?' tod':''}">${dn}</span>`;
@@ -958,37 +965,56 @@ function buildYrStair(col,yr){
     `<div style="${lbl}top:6px;left:${pct}%;right:0;text-align:center;">${yr}</div>`;
 }
 
+// v2.2: Week layout manager — 55% grid / 45% detail, viewport-filling
+function applyWeekLayout(){
+  const calWrap=document.getElementById('cal-wrap');
+  const hdrH=document.getElementById('hdr').offsetHeight;
+  const dhdrsH=document.getElementById('dhdrs').offsetHeight;
+  const navH=document.getElementById('bottom').offsetHeight;
+  calWrap.style.position='fixed';
+  calWrap.style.top=(hdrH+dhdrsH)+'px';
+  calWrap.style.left='0';
+  calWrap.style.right='0';
+  calWrap.style.bottom=navH+'px';
+  calWrap.classList.add('week-layout');
+  document.body.style.overflow='hidden';
+  document.body.style.paddingBottom='0';
+}
+
+function clearWeekLayout(){
+  const calWrap=document.getElementById('cal-wrap');
+  calWrap.style.position='';
+  calWrap.style.top='';
+  calWrap.style.left='';
+  calWrap.style.right='';
+  calWrap.style.bottom='';
+  calWrap.classList.remove('week-layout');
+  document.body.style.overflow='';
+  document.body.style.paddingBottom='';
+}
+
 // WEEK VIEW render — fixed single row
 function render(){
   document.getElementById('weeks').innerHTML=buildWkRow(weekViewWi,true);
   setBanner(addD(wkStart(TODAY),weekViewWi*7));
-  // Show week detail zone; populate if a day was previously selected
   document.getElementById('week-detail').classList.add('visible');
   if(weekDetailDs){
     populateWeekDetail(weekDetailDs);
   } else {
-    // Show quiet prompt
     document.getElementById('wk-detail-date').textContent='';
     document.getElementById('wk-detail-feast').textContent='';
     document.getElementById('wk-detail-brief').innerHTML='';
     document.getElementById('wk-detail-events').innerHTML=`<div class="wk-quiet">Tap a day to see details.</div>`;
   }
+  // v2.2: apply viewport layout after DOM paint
+  requestAnimationFrame(applyWeekLayout);
 }
 
-function populateWeekDetail(ds){
-  weekDetailDs=ds;
-  const date=parseD(ds);const dow=date.getDay();const isToday=ds===TODAY_STR||STRESS_DATES.has(ds);
-  document.getElementById('wk-detail-date').textContent=`${DAYS[dow]}, ${MOS[date.getMonth()]} ${date.getDate()}${isToday?' — Today':''}`;
-  const dayEvts=sortEvts(allEvts.filter(e=>e.date===ds));
-  const dayHdr=dayEvts.filter(e=>e.allDay&&HDR_PRI.hasOwnProperty(e.cat)).sort((a,b)=>(HDR_PRI[a.cat]||99)-(HDR_PRI[b.cat]||99))[0];
-  const df=document.getElementById('wk-detail-feast');
-  df.textContent=dayHdr?titleCase(dayHdr.title):'';
-  df.style.color=dayHdr?(dayHdr.cat==='liturgical'?'#e0cc80':'#CFB87C'):'';
-  // Brief
-  document.getElementById('wk-detail-brief').innerHTML=buildBriefHtml(ds,dayEvts);
-  // Events — include prompts (week bottom zone shows all)
-  const container=document.getElementById('wk-detail-events');
-  let html='';let hasEvents=false;
+// v2.2: buildDayEventsHtml — shared function for day panel + week detail (full parity)
+const DAY_VEH_STUB=`<div class="day-vehicle-stub"><div class="day-vehicle-lbl">🔧 Punch List — vehicle section coming Wave 4.6</div></div>`;
+function buildDayEventsHtml(dayEvts){
+  let html='';
+  let hasEvents=false;
   for(const e of dayEvts){
     if(e.allDay&&(e.cat==='liturgical'||e.cat==='birthdays'||e.cat==='holidays'))continue;
     if(e.span==='mid')continue;
@@ -998,7 +1024,10 @@ function populateWeekDetail(ds){
     const tentH=e.tentative?' tentative':'';
     const dp=computePills(e.pills,e.cat,e.travelSuppressed);
     let pillRowHtml='';
-    const personPills=dp.length?dp.map(p=>p.t==='s'?`<span class="dpill" style="border:1.5px solid ${p.c};color:${p.c};">${p.lbl}</span>`:`<span class="dpill" style="border:1.5px dashed ${p.bc};color:${p.tc};">${p.lbl}</span>`).join(''):'';
+    const personPills=dp.length?dp.map(p=>p.t==='s'
+      ?`<span class="dpill" style="border:1.5px solid ${p.c};color:${p.c};">${p.lbl}</span>`
+      :`<span class="dpill" style="border:1.5px dashed ${p.bc};color:${p.tc};">${p.lbl}</span>`
+    ).join(''):'';
     let vehBadgeHtml='';
     if(e.vehicle){
       const VEHI={tahoe:'🚗',dodge:'🛻',nv:'🚙'};
@@ -1013,16 +1042,40 @@ function populateWeekDetail(ds){
     const catEm=CAT_EMOJI[e.cat]?`<span style="font-size:12px;margin-right:4px;">${CAT_EMOJI[e.cat]}</span>`:'';
     const timeH=e.time?`<span class="dtime">${e.time}</span>`:'';
     const endH=e.end?`<span class="dtime" style="opacity:.7;"> – ${e.end}</span>`:'';
+    const edot=e.hist.length?`<span class="dedot" data-eid="${e.id}"></span>`:'';
     const locH=e.location?`<div class="dev-loc">${e.location}</div>`:'';
     const notesH=e.notes?`<div class="dev-notes">${e.notes}</div>`:'';
-    html+=`<div class="day-evt${sc}${tentH}"><span class="evt-collapse" onclick="toggleCollapse(this)">▾</span>${pillRowHtml}<div class="dline">${catEm}${timeH}${endH}<span class="dttl">${e.title}</span></div>${locH}${notesH}</div>`;
+    html+=`<div class="day-evt${sc}${tentH}" data-eid="${e.id}"><span class="evt-collapse" onclick="toggleCollapse(this)">▾</span>${pillRowHtml}<div class="dline">${catEm}${timeH}${endH}<span class="dttl">${e.title}</span>${edot}</div>${locH}${notesH}</div>`;
   }
-  if(!hasEvents){
-    // Zero-event day: quiet acknowledgment
-    const feastTxt=dayHdr?` · ${titleCase(dayHdr.title)}`:'';
-    html=`<div class="wk-quiet">${DAYS[dow]}${feastTxt} — clear day.</div>`;
-  }
-  container.innerHTML=html;
+  return{html,hasEvents};
+}
+
+function wireDedots(container){
+  container.querySelectorAll('.dedot').forEach(dot=>{
+    dot.addEventListener('click',ev=>{
+      ev.stopPropagation();
+      const evObj=evtMap[dot.dataset.eid];
+      if(evObj)openEdit(evObj);
+    });
+  });
+}
+
+// v2.2: populateWeekDetail — uses shared buildDayEventsHtml, full parity with day panel
+function populateWeekDetail(ds){
+  weekDetailDs=ds;
+  const date=parseD(ds);const dow=date.getDay();const isToday=ds===TODAY_STR||STRESS_DATES.has(ds);
+  document.getElementById('wk-detail-date').textContent=`${DAYS[dow]}, ${MOS[date.getMonth()]} ${date.getDate()}${isToday?' — Today':''}`;
+  const dayEvts=sortEvts(allEvts.filter(e=>e.date===ds));
+  const dayHdr=dayEvts.filter(e=>e.allDay&&HDR_PRI.hasOwnProperty(e.cat)).sort((a,b)=>(HDR_PRI[a.cat]||99)-(HDR_PRI[b.cat]||99))[0];
+  const df=document.getElementById('wk-detail-feast');
+  df.textContent=dayHdr?titleCase(dayHdr.title):'';
+  df.style.color=dayHdr?(dayHdr.cat==='liturgical'?'#e0cc80':'#CFB87C'):'';
+  document.getElementById('wk-detail-brief').innerHTML=buildBriefHtml(ds,dayEvts);
+  const container=document.getElementById('wk-detail-events');
+  const{html,hasEvents}=buildDayEventsHtml(dayEvts);
+  const feastTxt=dayHdr?` · ${titleCase(dayHdr.title)}`:'';
+  container.innerHTML=hasEvents?(html+DAY_VEH_STUB):`<div class="wk-quiet">${DAYS[dow]}${feastTxt} — clear day.</div>`;
+  wireDedots(container);
 }
 
 // --- INFINITE SCROLL ---
@@ -1052,6 +1105,7 @@ function reobserveEdges(){
   edgeObserver.observe(rows[0]);edgeObserver.observe(rows[rows.length-1]);
 }
 function initRolling(){
+  clearWeekLayout(); // v2.2: release week layout before rolling init
   if(edgeObserver)edgeObserver.disconnect();
   viewTopWi=0;viewBotWi=5;rollingAnchorWi=0;
   let html='';for(let wi=viewTopWi;wi<=viewBotWi;wi++)html+=buildWkRow(wi);
@@ -1108,17 +1162,17 @@ function renderMonthGrid(){
   setBanner(monthViewDate);
 }
 
-// --- VIEW SWITCHING — v2.0: bottom nav owns view state ---
+// --- VIEW SWITCHING — v2.2: week layout management added ---
 function switchView(view){
   if(cookOn||nightOn||mealOn)return;
   curView=view;
-  // Update nav buttons
   document.querySelectorAll('.nav-view-btn').forEach(b=>b.classList.toggle('on',b.dataset.view===view));
   const calWrap=document.getElementById('cal-wrap');
   const dhdrs=document.getElementById('dhdrs');
   const monthScr=document.getElementById('month-scr');
   const wkDetail=document.getElementById('week-detail');
   if(view==='month'){
+    clearWeekLayout(); // v2.2
     setMonthViewFromRolling();
     calWrap.style.display='none';
     dhdrs.style.display='none';
@@ -1126,6 +1180,7 @@ function switchView(view){
     wkDetail.classList.remove('visible');
     renderMonthGrid();
   } else if(view==='rolling'){
+    clearWeekLayout(); // v2.2
     calWrap.style.display='';
     dhdrs.style.display='';
     monthScr.style.display='none';
@@ -1136,11 +1191,11 @@ function switchView(view){
     dhdrs.style.display='';
     monthScr.style.display='none';
     weekDetailDs=null;
-    render();
+    render(); // render() calls applyWeekLayout via rAF
   }
 }
 
-// --- NAV ARROWS — PQ-29: week view steps ±1 week ---
+// --- NAV ARROWS ---
 function jumpNav(dir){
   if(!['rolling','week','month'].includes(curView))return;
   if(cookOn||nightOn||mealOn)return;
@@ -1149,13 +1204,12 @@ function jumpNav(dir){
     renderMonthGrid();return;
   }
   if(curView==='week'){
-    // PQ-29 FIX: step ±1 week, never jump to month boundary
     weekViewWi+=dir;
     weekDetailDs=null;
-    render();
+    render(); // render() calls applyWeekLayout via rAF
     return;
   }
-  // Rolling: jump by month (existing behavior)
+  // Rolling: jump by month
   const anchorDate=addD(wkStart(TODAY),rollingAnchorWi*7);
   const target=new Date(anchorDate.getFullYear(),anchorDate.getMonth()+dir,8,12,0,0);
   const targetWi=Math.floor((wkStart(target).getTime()-wkStart(TODAY).getTime())/(7*24*3600*1000));
@@ -1186,7 +1240,45 @@ function openMantelStub(title){
   document.getElementById('modal-bg').classList.add('open');
 }
 
-// DAY BRIEF — compute from event data
+// DAY BRIEF
+// v2.4: detectTimeConflicts — shared function used by renderCell (⚑) and computeDayBrief (detail rows)
+const _FAMPILLS=new Set(['D','K','W','M','R','C','E','B6']);
+function _expandPills(pills){
+  if(!pills||!pills.length)return new Set();
+  const s=new Set();
+  pills.forEach(p=>{
+    if(p==='FAM'){effFAM().forEach(x=>s.add(x));}
+    else if(p==='KIDS'){effKIDS().forEach(x=>s.add(x));}
+    else if(_FAMPILLS.has(p))s.add(p);
+  });
+  return s;
+}
+function _toMins(t){if(!t)return null;const[h,m]=t.split(':').map(Number);return h*60+m;}
+function detectTimeConflicts(dayEvts){
+  const timedEvts=dayEvts.filter(e=>
+    e.time&&!e.allDay&&!e.trash&&!e.optional&&e.span!=='mid'&&
+    _expandPills(e.pills).size>0
+  );
+  const conflicts=[];
+  for(let i=0;i<timedEvts.length;i++){
+    for(let j=i+1;j<timedEvts.length;j++){
+      const a=timedEvts[i],b=timedEvts[j];
+      if(a.travel||b.travel)continue;
+      const aStart=_toMins(a.time),bStart=_toMins(b.time);
+      if(aStart===null||bStart===null)continue;
+      const aEnd=a.end?_toMins(a.end):aStart+60;
+      const bEnd=b.end?_toMins(b.end):bStart+60;
+      if(aStart<bEnd&&bStart<aEnd){
+        const aPills=_expandPills(a.pills);
+        const bPills=_expandPills(b.pills);
+        const shared=[...aPills].filter(p=>bPills.has(p));
+        if(shared.length)conflicts.push({a,b,shared});
+      }
+    }
+  }
+  return conflicts;
+}
+
 function computeDayBrief(dayEvts){
   const rows=[];
   dayEvts.filter(e=>e.vehicle&&!e.allDay).forEach(e=>{
@@ -1199,8 +1291,17 @@ function computeDayBrief(dayEvts){
     const loc=e.location?` → ${e.location}`:'';
     rows.push({cls:'brief-vehicle',icon:vIcon,html:`<b>${vName}</b>${loc}${dTxt} — ${e.time||'all day'} ${e.title}`});
   });
-  dayEvts.filter(e=>e.flag).forEach(e=>{
-    rows.push({cls:'brief-conflict',icon:'⚠',html:`<b>Conflict flagged</b> — ${e.time||'all day'} ${e.title}`});
+  // v2.4: auto-detected time conflicts with specific detail
+  detectTimeConflicts(dayEvts).forEach(({a,b,shared})=>{
+    const pillStr=shared.map(p=>`<span style="color:${PCOL[p]||'#CFB87C'};font-weight:700;">${p}</span>`).join(', ');
+    const aTime=`${a.time}${a.end?' - '+a.end:''}`;
+    const bTime=`${b.time}${b.end?' - '+b.end:''}`;
+    rows.push({cls:'brief-conflict',icon:'⚑',html:`${pillStr}: <b>${a.title}</b> ${aTime} conflicts with <b>${b.title}</b> ${bTime}`});
+  });
+  // Manual flags — special cases (Holy Days, unresolved logistics, etc.)
+  dayEvts.filter(e=>e.flag&&e.span!=='mid'&&e.span!=='end'&&!e.optional).forEach(e=>{
+    const noteStr=e.notes?e.notes.replace(/^🚩\s*/,''):'flagged';
+    rows.push({cls:'brief-conflict',icon:'⚠',html:`<b>${e.title}</b> — ${noteStr}`});
   });
   dayEvts.filter(e=>e.stripe==='appt').forEach(e=>{
     const loc=e.location?` · ${e.location}`:'';
@@ -1212,7 +1313,6 @@ function computeDayBrief(dayEvts){
   return rows;
 }
 
-// Build Brief HTML — v2.0: agent filter bar always rendered
 const ALL_AGENTS=['Stockyard','Chow Hall','Mystery Ranch','Rootstock','Punch List','First Aid Kit'];
 function buildBriefHtml(ds,dayEvts){
   const computed=computeDayBrief(dayEvts);
@@ -1224,7 +1324,6 @@ function buildBriefHtml(ds,dayEvts){
     computed.forEach(r=>{html+=`<div class="brief-row ${r.cls}"><span class="brief-icon">${r.icon}</span><span class="brief-text">${r.html}</span></div>`;});
     html+='</div>';
   }
-  // Agent filter bar — always rendered (v2.0: parser ready, silent when empty)
   const presentAgents=agentLines.length?[...new Set(agentLines.map(b=>b.agent))]:[];
   html+=`<div class="agent-filter-bar">`;
   html+=`<button class="agent-filter-btn${activeAgentFilter===null?' on':''}" onclick="setAgentFilter(null,'${ds}')">All</button>`;
@@ -1243,14 +1342,13 @@ function buildBriefHtml(ds,dayEvts){
 
 function setAgentFilter(agent,ds){
   activeAgentFilter=agent;
-  // Update in both day panel and week detail if open
   const dayEvts=sortEvts(allEvts.filter(e=>e.date===ds));
   const briefHtml=buildBriefHtml(ds,dayEvts);
   document.getElementById('day-brief').innerHTML=briefHtml;
   if(weekDetailDs===ds)document.getElementById('wk-detail-brief').innerHTML=briefHtml;
 }
 
-// DAY PANEL — used in rolling + month views
+// v2.2: openDayPanel — uses shared buildDayEventsHtml
 function openDayPanel(ds){
   currentDayDs=ds;activeAgentFilter=null;
   const date=parseD(ds);const dow=date.getDay();const isToday=ds===TODAY_STR||STRESS_DATES.has(ds);
@@ -1266,47 +1364,16 @@ function openDayPanel(ds){
   }
   document.getElementById('day-brief').innerHTML=buildBriefHtml(ds,dayEvts);
   const container=document.getElementById('day-events');
-  let html='';let hasEvents=false;
-  for(const e of dayEvts){
-    if(e.allDay&&(e.cat==='liturgical'||e.cat==='birthdays'||e.cat==='holidays'))continue;
-    if(e.span==='mid')continue;
-    hasEvents=true;
-    if(e.trash){html+=`<div class="day-trash"><span>🗑 Trash Day</span><span>Keep dogs locked</span></div>`;continue;}
-    const sc=e.stripe?(e.stripe==='appt'?' sa':''):'';
-    const tentH=e.tentative?' tentative':'';
-    const dp=computePills(e.pills,e.cat,e.travelSuppressed);
-    let pillRowHtml='';
-    const personPills=dp.length?dp.map(p=>p.t==='s'?`<span class="dpill" style="border:1.5px solid ${p.c};color:${p.c};">${p.lbl}</span>`:`<span class="dpill" style="border:1.5px dashed ${p.bc};color:${p.tc};">${p.lbl}</span>`).join(''):'';
-    let vehBadgeHtml='';
-    if(e.vehicle){
-      const VEHI={tahoe:'🚗',dodge:'🛻',nv:'🚙'};
-      const vKey=e.vehicle.toLowerCase();
-      const vIcon=VEHI[vKey]||'🚗';
-      const vName=e.vehicle.charAt(0).toUpperCase()+e.vehicle.slice(1);
-      const dc=e.driver?(PCOL[e.driver]||'#CFB87C'):'#6a6050';
-      const driverPill=e.driver?`<span class="dpill" style="border:1.5px solid ${dc};color:${dc};">${e.driver}</span>`:'';
-      vehBadgeHtml=`<div class="veh-badge"><span class="veh-icon">${vIcon}</span><span class="veh-name">${vName}</span><span class="veh-dot">·</span>${driverPill}</div>`;
-    }
-    if(personPills||vehBadgeHtml){pillRowHtml=`<div class="dpills">${personPills}${vehBadgeHtml}</div>`;}
-    const catEm=CAT_EMOJI[e.cat]?`<span style="font-size:12px;margin-right:4px;">${CAT_EMOJI[e.cat]}</span>`:'';
-    const timeH=e.time?`<span class="dtime">${e.time}</span>`:'';
-    const endH=e.end?`<span class="dtime" style="opacity:.7;"> – ${e.end}</span>`:'';
-    const edot=e.hist.length?`<span class="dedot" data-eid="${e.id}"></span>`:'';
-    const locH=e.location?`<div class="dev-loc">${e.location}</div>`:'';
-    const notesH=e.notes?`<div class="dev-notes">${e.notes}</div>`:'';
-    html+=`<div class="day-evt${sc}${tentH}" data-eid="${e.id}"><span class="evt-collapse" onclick="toggleCollapse(this)">▾</span>${pillRowHtml}<div class="dline">${catEm}${timeH}${endH}<span class="dttl">${e.title}</span>${edot}</div>${locH}${notesH}</div>`;
-  }
-  if(!hasEvents)html=`<div class="day-empty">No events scheduled.</div>`;
-  html+=`<div class="day-vehicle-stub"><div class="day-vehicle-lbl">🔧 Punch List — vehicle section coming Wave 4.6</div></div>`;
-  container.innerHTML=html;
-  container.querySelectorAll('.dedot').forEach(dot=>{dot.addEventListener('click',ev=>{ev.stopPropagation();const evObj=evtMap[dot.dataset.eid];if(evObj)openEdit(evObj);});});
+  const{html,hasEvents}=buildDayEventsHtml(dayEvts);
+  container.innerHTML=hasEvents?(html+DAY_VEH_STUB):`<div class="day-empty">No events scheduled.</div>`+DAY_VEH_STUB;
+  wireDedots(container);
   document.getElementById('day-panel').classList.add('open');
 }
 
 function toggleCollapse(btn){const card=btn.closest('.day-evt');card.classList.toggle('collapsed');btn.textContent=card.classList.contains('collapsed')?'▸':'▾';}
 function closeDayPanel(evt){if(evt&&evt.target!==document.getElementById('day-panel'))return;document.getElementById('day-panel').classList.remove('open');}
 
-// Cell click handler — week view goes to detail zone, others open day panel
+// Cell click handler
 document.getElementById('weeks').addEventListener('click',e=>{
   const dot=e.target.closest('.edot');
   if(dot){e.stopPropagation();const ev=evtMap[dot.dataset.eid];if(ev)openEdit(ev);return;}
@@ -1314,8 +1381,8 @@ document.getElementById('weeks').addEventListener('click',e=>{
   if(cell&&cell.dataset.date){
     if(curView==='week'){
       populateWeekDetail(cell.dataset.date);
-      // Re-render to update active cell highlight
       document.getElementById('weeks').innerHTML=buildWkRow(weekViewWi,true);
+      requestAnimationFrame(applyWeekLayout); // v2.2: re-apply after re-render
     } else {
       openDayPanel(cell.dataset.date);
     }
@@ -1341,6 +1408,7 @@ function toggleCook(){
   const dhdrs=document.getElementById('dhdrs');
   calWrap.style.display=cookOn?'none':'';
   dhdrs.style.display=cookOn?'none':'';
+  // v2.2: cook-scr is position:fixed overlay — display:flex centers it
   document.getElementById('cook-scr').style.display=cookOn?'flex':'none';
   document.getElementById('meal-scr').style.display='none';
   document.getElementById('month-scr').style.display='none';
@@ -1367,33 +1435,8 @@ function toggleNight(){
 }
 
 async function goHome(){
-  cookOn=false;nightOn=false;mealOn=false;
-  const calWrap=document.getElementById('cal-wrap');
-  const dhdrs=document.getElementById('dhdrs');
-  calWrap.style.display='';
-  dhdrs.style.display='';
-  document.getElementById('cook-scr').style.display='none';
-  document.getElementById('meal-scr').style.display='none';
-  document.getElementById('month-scr').style.display='none';
-  document.getElementById('cook-btn').classList.remove('cook-active');
-  document.getElementById('meal-btn').classList.remove('meal-active');
-  document.getElementById('night-btn').classList.remove('night-active');
-  document.getElementById('night-wake').style.display='none';
-  // Re-fetch calendars.md
-  const sdata=await loadCalendar();
-  allEvts=parseSrc(sdata);
-  evtMap=Object.fromEntries(allEvts.map(e=>[e.id,e]));
-  if(curView==='week'){
-    // Week view: snap to today's week, re-render
-    weekViewWi=0;weekDetailDs=null;
-    render();
-    setBanner(TODAY);
-  } else {
-    // All other views: go to rolling
-    curView='rolling';
-    document.querySelectorAll('.nav-view-btn').forEach(b=>b.classList.toggle('on',b.dataset.view==='rolling'));
-    initRolling();
-  }
+  // v2.5: full page reload — picks up latest widget code + calendar data from server
+  location.reload();
 }
 
 function openAgent(name){
@@ -1414,6 +1457,12 @@ function updateEggCard(){
 function syncHdrH(){
   const hdr=document.getElementById('hdr');
   document.documentElement.style.setProperty('--hh',hdr.offsetHeight+'px');
+}
+
+// v2.6: syncNavH — measures actual nav height, writes to --nh for cook-scr centering
+function syncNavH(){
+  const nav=document.getElementById('bottom');
+  document.documentElement.style.setProperty('--nh',nav.offsetHeight+'px');
 }
 
 async function loadCalendar(){
@@ -1447,7 +1496,8 @@ async function init(){
   updateEggCard();
   initRolling();
   syncHdrH();
-  window.addEventListener('resize',syncHdrH);
+  syncNavH();
+  window.addEventListener('resize',()=>{syncHdrH();syncNavH();if(curView==='week')applyWeekLayout();});
   window.addEventListener('scroll',updateBannerFromScroll,{passive:true});
   setInterval(updateEggCard,60000);
 }
@@ -1455,8 +1505,8 @@ async function init(){
 document.addEventListener('DOMContentLoaded',init);
 </script>
 <!--
-v2.0 OPEN PQ QUEUE:
-PQ-22: Liturgical data 2028-2035 — PARKED Phase 1 closeout
+v2.6 OPEN PQ QUEUE:
+PQ-22: Liturgical data 2028-2035 — PARKED
 PQ-03: Egg count hardcoded 47. Pull from stockyard:eggs-log (Wave 4.6)
 PQ-04: Agent buttons open alert stubs. Wire to agent modules (Wave 4.6)
 PQ-05: Trash cadence — real 4-week schedule
@@ -1464,11 +1514,8 @@ PQ-06: Saint panel — Mantel stub active; full build Wave 4.6
 PQ-08: Cook mode recipe — requires Chow Hall Wave 4.6
 PQ-10: OMA+PAPA dual-color span — future enhancement
 PQ-11: Meal Planner full view — Chow Hall Wave 4.6
-PARKED: Lamar swim meet entry — revisit post v2.0 publish
-PARKED: Phase 2 custom icon upgrade
-PARKED: Extended birthday network pass — Kalea input needed
-PARKED: Feast day review — Kalea to review/trim/add
-PARKED: School breaks — pending school calendar
+PARKED: Phase 2 custom icon upgrade — medical symbol priority
+PARKED: Swim meet venue names — full venue confirmation needed
 -->
 </body>
 </html>
