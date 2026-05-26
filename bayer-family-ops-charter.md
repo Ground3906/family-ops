@@ -1,8 +1,8 @@
-# Bayer Family Operations — Charter v1.1
+# Bayer Family Operations — Charter v1.2
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-05-25 — Interaction doctrine additions locked. v1.1.
+**Last updated:** 2026-05-26 — Step 0 Session Retrospective added. Step 3 git carve-out added. Build order updated. v1.2.
 
 ---
 
@@ -80,76 +80,37 @@ Runs the jobsite. Knows where everyone needs to be, won't let two trades work th
 "What needs doing this week and who owns it?" Includes the vehicle/maintenance tracker — service intervals, registration renewals, inspections, tire rotations. Family of 8 likely runs multiple vehicles; treat each as its own line item.
 
 ### 📚 Whetstone — WGU Study
-Doesn't add knowledge, sharpens what's there. Runs Matt's documented exam protocol:
-- Full practice exam, one question at a time
-- No feedback during exam
-- Silent scorekeeping, 90-min timer starting at Q1
-- After: full results table
-- Debrief each missed/flagged question fresh before revealing answer
-- Full breakdown of all answer choices, note original answer and why it was a trap
-- Rapid-fire drills on weak clusters (always list options)
-- Escalate difficulty, drill until 2 clean runs
+Doesn't add knowledge, sharpens what's there.
 
-Currently targeting AWS certification via WGU. Azure planned post-hire via tuition reimbursement.
+### 🍴 Chow Hall — Meal Planning
+Big-batch cooking, feast-day meals, Gardyn handshake. Highest priority after Punch List for Kalea adoption.
 
-### 🍳 Chow Hall — Meal Planning
-Feeds the platoon. Big-batch friendly. Game meat in season. Honors meal allergies/preferences (TBD — capture in shared state). Outputs grocery runs to Punch List, time blocks to Foreman.
+### ⛺ Mystery Ranch — Hunting
+Seasonal. Knows the draw calendar, scouting windows, gear state, and Matt's blackout dates.
 
-### 🎒 Mystery Ranch — Hunting
-Seasonal. Patient. Owns the prep, the draw applications, the scouting calendar, and the sacred blackouts on Foreman's schedule. Knows the difference between general season and elk archery and acts accordingly. Named after the pack — gear that goes in deep, comes out heavy.
-
-### 🐷 Stockyard — Livestock & Farm Operations
-Edelweiss Farms LLC's working agent. Tracks the animals on the ground — chickens (egg production analytics, molt detection, flock refresh cycle), pigs (feed cadence, weigh-ins, dewormings, slaughter timing), turkeys (April raise), any future additions. Owns the recurring biological calendar that's distinct from family logistics. 98% operations at start; 2% business hooks reserved for future revenue/expense/asset-depreciation tracking when Edelweiss Farms LLC scales. First artifact: egg tracker widget (lives in a pinned chat, schema documented in `stockyard-widget.md`).
-
-**HARD GATE:** Stockyard S8 durability fix required before real flock data entry and before Wave 4.5 calendar integration. Surface this gate every session.
+### 🐷 Stockyard — Livestock & Farm Ops
+Edelweiss Farms LLC. Eggs, pigs, chickens, turkeys, feed cycles. Produces into Chow Hall inventory (meat to freezer, eggs to fridge).
 
 ### 🌱 Rootstock — Forest Garden, Orchard, Greenhouse
-Plants, soil, and growing cycles. Westcliffe, 9000 ft elevation, USDA zone 4a (effective 5a in the south-facing HC container microclimate). Tracks the forest garden plantings, the planned 40x25 greenhouse off a 3rd HC container, succession planting windows, frost dates, harvest cycles, and preservation timing. Goal: household food security first, Edelweiss Farms profit later.
+Westcliffe 9000ft zone 4a. Gardyn handshake. Produces into Chow Hall inventory (harvest to pantry/root cellar).
 
 ### 📐 The Square — Material Takeoff
-Accuracy is non-negotiable. Reads plans page-by-page (PDF + vision). Outputs takeoff schedules to xlsx. Always cites plan sheet + detail callout per line item. Flags scale assumptions explicitly. Never rounds silently.
+Most complex agent. Vision + math + accuracy. Build last.
 
 ### 📖 The Mantel — Memory Keeper
-The family stuff. Photos, mementos, the stories worth keeping. Long-term archive. Sacred memories get treated as sacred — drop the bit when handling them. (Example: April 25, 2026, Loretto Chapel.)
+Family archive. Sacred memories. Long-term.
 
 ### 🩺 First Aid Kit — Health & Medical
-Sensitive data, careful schema. Tracks appointments, medications, immunization records for 7+ people. Tone-drops by default. Heavy Tool Time bit stays out of medical contexts unless Matt explicitly signals it's OK.
+Sensitive data. Careful schema. Private files.
 
 ### 💼 Footings — Job Hunt
-Pouring the career foundation. Tracks: AWS cert progress (priority), target employers (FedRAMP/GovCloud AWS partners — Coalfire, Presidio, Smartronix, Optiv, WWT, Sungard, Booz Allen commercial), résumé versions, application pipeline, interview prep.
-
-**Filter criteria:** 100% remote (non-negotiable), hunting/family flexibility (non-negotiable), $90-115k entry / $115-140k mid, 12-18 month timeline.
+Cert path first. Low priority until certs are closer.
 
 ---
 
-## Architecture
+## Phase Architecture
 
-```
-┌─────────────┐         ┌─────────────┐
-│    Matt     │◄───────►│      Al     │
-│  (or Kalea) │         │ Orchestrator│
-└─────────────┘         └──────┬──────┘
-                               │
-        ┌──────────────────────┼──────────────────────┐
-        ▼                      ▼                      ▼
-   ┌─────────┐           ┌─────────┐            ┌─────────┐
-   │ Foreman │           │  Punch  │   ...      │  Other  │
-   │  (Cal)  │           │  List   │            │ Agents  │
-   └────┬────┘           └────┬────┘            └────┬────┘
-        │                     │                      │
-        └──────────────┬──────┴──────────────────────┘
-                       ▼
-              ┌────────────────┐
-              │  Shared State  │
-              │  family.md     │
-              │  vehicles.json │
-              │  tasks.json    │
-              │  prefs.md      │
-              │  ...           │
-              └────────────────┘
-```
-
-**Phase 1:** Each agent = a markdown file with a system prompt + scoped tool list, invoked as a Claude Code subagent. Orchestrator = Matt's main Claude Code session running as Al. Zero custom code.
+**Phase 1:** Claude.ai Projects. Orchestrator = Matt's main Claude session running as Al. Zero custom code.
 
 **Phase 2:** Migrate to Python on the Anthropic API. Background execution. Scheduled runs. Agents chain without Matt in the middle. Push notifications.
 
@@ -197,7 +158,7 @@ Re-read before adding any agent.
 
 ### Calendar Widget (Wave 4.5)
 
-Live as `wave-4-5-widget-v2.5.html`. Served locally via `python -m http.server 8080` from `C:\dev\family-ops`. Reads `calendars.md` live on load and Home button press.
+Live as `wave-4-5-widget-v2.8.html`. Served locally via `python -m http.server 8080` from `C:\dev\family-ops`. Reads `calendars.md` live on load and Home button press.
 
 **Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. Full rewrite only — never surgical patches.
 
@@ -219,20 +180,50 @@ See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
 
 ## Build Order
 
-| # | Agent | Status | Notes |
-|---|-------|--------|-------|
-| 1 | 📅 Foreman | **v1 deep — COMPLETE** | Foundation. Stress test passed 12/12. |
-| 2 | 🏠 Punch List | **MVP — next build** | Vehicle/maintenance tracker baked in |
-| — | 🗓️ Calendar Widget | **v2.5 live** | Wave 4.5. Kalea adoption is the bar. |
-| 3 | 📚 Whetstone | **MVP** | Protocol already documented |
-| 4 | 🐷 Stockyard | **Skeleton queued** | Egg tracker live; S8 durability gate open |
-| 5 | 🌱 Rootstock | **Skeleton queued** | Build before fall |
-| 6 | 🩺 First Aid Kit | Next | Sensitive data, careful schema |
-| 7 | 🍳 Chow Hall | Next | Big-batch friendly, feast-day meal hooks |
-| 8 | 🎒 Mystery Ranch | Next | Seasonal — finish before next draw cycle |
-| 9 | 📐 The Square | Later | Most complex; vision + math + accuracy |
-| 10 | 💼 Footings | Low priority | Cert path first |
-| 11 | 📖 The Mantel | Whenever | Long-term family archive |
+| Wave | Agent | Status | Notes |
+|------|-------|--------|-------|
+| 1-3 | Foundation | **COMPLETE** | Charter, schema, crosstalk map, Foreman v1 deep |
+| 4.5 | Calendar Widget | **COMPLETE — v2.8** | Kalea adoption bar met. PQ-29 parked. |
+| 5 | 🏠 Punch List | **MVP — next build** | Data files exist. Agent definition not yet written. |
+| 6 | 🍴 Chow Hall | **MVP — high priority** | Kalea's highest-leverage agent. Pantry/freezer ownership TBD at intake. |
+| 7 | 🐷 Stockyard | **Skeleton queued** | Egg tracker widget live. S8 durability gate open. Feeds Chow Hall. |
+| 8 | 🌱 Rootstock | **Skeleton queued** | Build before fall. Feeds Chow Hall. Low urgency vs Chow Hall. |
+| — | 📚 Whetstone | Protocol documented | Build after Punch List |
+| — | 🩺 First Aid Kit | Not started | Sensitive data, careful schema |
+| — | ⛺ Mystery Ranch | Not started | Seasonal — finish before next draw cycle |
+| — | 📐 The Square | Not started | Most complex. Build last. |
+| — | 💼 Footings | Not started | Cert path first. Low priority. |
+| — | 📖 The Mantel | Not started | Long-term family archive |
+
+**Open design question — locked for Chow Hall intake:** Who owns pantry/freezer inventory? Working assumption: Chow Hall owns and manages. Stockyard and Rootstock are producers that deposit (meat to freezer, eggs to fridge, harvest to pantry/root cellar). Chow Hall reads and depletes. One source of truth, one owner. Confirm and lock before writing any schema.
+
+---
+
+## Cockpit Hardware Status
+
+**Hardware locked. Pending software gates.**
+
+- Display: PaitentPoint P-WAL-230-ELC-02 (32" Android 13, $349.99, eBay 205826242798)
+- Mount: Ergotron LX Wall Mount 45-243-026 ($64.99)
+- Total: $414.98
+
+**Purchase gates (all must be green):**
+
+A. Wave 4.5 widget stable — **GREEN** (v2.8, PQ-29 parked)
+
+B. Stockyard S8 durability fix — open
+
+C. ThinkPad headless validation — open
+
+D. Kalea usability — Matt's call
+
+Full spec, mount plan, Firewalla plan in `cockpit.md`.
+
+---
+
+## calendars.md Calendar Update Cadence
+
+Matt pushes `calendars.md` updates daily or as events change. When parish publishes Faith Formation 2026-27 schedule (expected August), add individual entries and remove the placeholder prompt entry at that time.
 
 ---
 
@@ -240,13 +231,24 @@ See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
 
 **Every chat session ends in this exact sequence. No exceptions.**
 
+### Step 0 — Session Retrospective
+Before doctrine delta, Al runs a self-audit of the full session:
+- What interaction rules were violated or drifted from charter? Name the specific instance.
+- What caused it — conflicting instructions in charter vs memory vs project instructions vs spin-up prompt? Name the source.
+- What needs to change and where — charter, memory, project instructions, or spin-up template?
+- Present findings as a short list. Each item: what went wrong, why it happened, proposed fix, where the fix lives.
+
+Matt reviews. Any confirmed fix rolls into the doctrine delta and the affected file(s).
+
 ### Step 1 — Doctrine Delta
-Generate a doctrine delta: every decision, rule, or convention locked during the session that needs to land in a permanent project file. This happens BEFORE the handoff prompt.
+Every decision, rule, or convention locked during the session that needs to land in a permanent project file. Happens BEFORE the handoff prompt.
 
 ### Step 2 — Confirmation
 Matt confirms the doctrine delta is complete and accurate.
 
 ### Step 3 — File Rewrites + Git
+**Git commits happen mid-session and at end-of-session. A pushed commit is file deployment only — not a session-close trigger. End-of-session is initiated by Matt explicitly.**
+
 Affected files get fully rewritten. Matt downloads, drops into repo. Git walkthrough — PowerShell, every command its own code block:
 
 ```

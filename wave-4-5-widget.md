@@ -1,8 +1,8 @@
 # wave-4-5-widget.md — Calendar Widget Reference
 
-**Current version:** v2.5
+**Current version:** v2.8
 **Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore
-**Status:** Live on local server. Kalea adoption is the bar. Phase 1 canonical.
+**Status:** Wave 4.5 CLOSED. v2.8 canonical. PQ-29 parked.
 **Served from:** `C:\dev\family-ops` via `python -m http.server 8080`
 **Data source:** `calendars.md` in same directory — fetched live on load and Home button
 
@@ -27,6 +27,9 @@
 | v2.3 | 2026-05-25 | Span return time order, flag bleed fix, optional=true field, title parser hardened, feast weight unified, cook mode CSS |
 | v2.4 | 2026-05-25 | Auto-conflict detection (pill + time overlap), cook mode z-index/centering, conflict brief detail |
 | v2.5 | 2026-05-25 | Brief color doctrine, +N more visible, optional events hidden from cell, Home = location.reload(), nav two-zone layout |
+| v2.6 | 2026-05-26 | meetings category added (📋) to CAT_EMOJI/CAT_MAP/CAT_CLS. KoC + Fairboard entries updated in calendars.md. syncNavH() + --nh var added. |
+| v2.7 | 2026-05-26 | Cook mode inset:0 attempt — centers at true 50vh but visual perception off |
+| v2.8 | 2026-05-26 | Cook mode padding:var(--hh) 24px var(--nh) — reserves header+nav zones. PQ-29 still open. |
 
 ---
 
@@ -54,6 +57,7 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 | 4h | 🍀 | 4H events, fair |
 | rootstock | 🌱 | Garden, orchard |
 | prompt | ⏰ | Reminders, milestone pings |
+| meetings | 📋 | KoC, Fairboard, any recurring meeting |
 | misc | (none) | Catch-all |
 
 ---
@@ -91,7 +95,7 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 - Sunday Mass 08:00 — never changes, never has exceptions
 - Daily Mass Wed 10:00 — optional=true, always loses to other events
 
-**Everything else = individual [CAL] entries.** Seasonal events (swim practice, Faith Formation, Knights, Fairboard, Youth Group) all have start/end dates and exceptions. Individual entries give full control. CAL-RECUR for seasonal events is forbidden — it causes exception complexity that breaks conflict detection.
+**Everything else = individual [CAL] entries.**
 
 ---
 
@@ -107,10 +111,6 @@ Widget scans each day for family pill + time window overlap automatically. No ma
 5. If overlap + shared family member → fire ⚑ on cell AND render detail row in brief
 6. Skip travel events (travel suppression handles those)
 7. Skip optional=true events
-
-**Brief conflict row format:** `[pill colors]: EventA 09:30-12:00 conflicts with EventB 10:00-15:00`
-
-**flag=true reserved for:** Holy Day obligations, unresolved logistics, unconfirmed dates, travel chaperone issues.
 
 ---
 
@@ -136,11 +136,20 @@ Two-zone bottom nav:
 
 ---
 
-## Cook Mode (v2.5)
+## Cook Mode (v2.8)
 
-CSS: `position:fixed; top:var(--hh); left:0; right:0; bottom:0; z-index:50; padding:24px 24px 76px`
-Nav sits on top at z-index:100. Padding-bottom:76px reserves nav zone for centering.
+CSS: `position:fixed; inset:0; z-index:50; padding:var(--hh) 24px var(--nh)`
+Header + nav sit at z-index:100 on top. Padding reserves header and nav zones so flexbox centers in visible space.
+**PQ-29: Centering still not resolved.** Requires devtools on live server to diagnose. Do not guess-fix.
 Mode Sovereignty — calendar hidden. Home button (location.reload) exits cook mode.
+
+---
+
+## CSS Variables (v2.6+)
+
+- `--hh` — header height. Set by `syncHdrH()` on init + resize.
+- `--nh` — nav height. Set by `syncNavH()` on init + resize.
+- `--cell-hdr-h` — cell header height (54px fixed).
 
 ---
 
@@ -156,25 +165,24 @@ When week view active, JS applies `applyWeekLayout()`:
 
 ---
 
+## Open Items (not resolved — carry forward)
+
+- **PQ-29: Cook Mode vertical centering** — persistent across v2.5-v2.8. Requires devtools session on live server. Do not guess-fix again.
+- **Faith Formation 2026-27 entries** — parish publishes schedule in August. Add individual entries, remove placeholder prompt at that time.
+
+---
+
 ## Parked PQs
 
 | PQ | Description | Wave |
 |----|-------------|------|
 | PQ-22 | Liturgical data 2028-2035 | Phase 1 closeout |
+| PQ-29 | Cook Mode vertical centering — devtools required | 4.6 |
 | PQ-03 | Egg count hardcoded 47 — pull from stockyard:eggs-log | 4.6 |
 | PQ-04 | Agent buttons — wire to modules | 4.6 |
 | PQ-06 | Saint panel — Mantel stub | 4.6 |
 | PQ-08 | Cook mode recipe — Chow Hall | 4.6 |
 | PQ-11 | Meal Planner full view — Chow Hall | 4.6 |
-
----
-
-## Open Items (not resolved in v2.5)
-
-- Cook Mode centering — Matt not satisfied with current fix. Nav two-zone helped nav balance. Cook mode screen centering still under review.
-- Phase 2 Foreman hook — Foreman writes [CAL] entries via GitHub MCP. Widget fetches live. Cockpit reflects on refresh.
-- Swim practice end date — season ends ~Jul 30. No explicit season-end entry. Add if needed.
-- Faith Formation individual entries — pending parish start date confirmation.
 
 ---
 
