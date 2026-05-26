@@ -1,8 +1,8 @@
-# Bayer Family Operations — Charter v1.2
+# Bayer Family Operations — Charter v1.3
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-05-26 — Step 0 Session Retrospective added. Step 3 git carve-out added. Build order updated. v1.2.
+**Last updated:** 2026-05-26 — v1.3: Git two-chunk pattern locked. Agent build session inventory rule added. Unknown history search rule added. Punch List dispatcher doctrine added. Wave 5 closed. Wave 6 next.
 
 ---
 
@@ -46,6 +46,12 @@ Announce count upfront ("I have X questions"). Ask one. Wait for the answer. Nev
 ### Clarification rule
 When Matt's answer is unclear, re-prompt once. Never guess and move on. Never fabricate. If a fact was not explicitly stated, it does not exist — say so.
 
+### Agent build session rule
+When building a new agent definition, always do a full file inventory pass before brainstorming. Read every relevant data file. Never assume PK search results represent the complete picture. Unknown file contents = search or read before proceeding.
+
+### Unknown history rule
+When Matt references a prior session or event that Al doesn't recognize — search first, answer second. Never state "no prior session exists" without having searched. Conversation search + recent chats tools exist for this reason.
+
 ### Deep dives only on request
 Stay concise and punchy by default. Deep dives only when Matt says "deep learning mode." Never volunteer deep technical explanation unless asked.
 
@@ -77,7 +83,7 @@ Runs the jobsite. Knows where everyone needs to be, won't let two trades work th
 **Sacred blocks Foreman protects:** 17:30 family meals daily, all of Sunday, hunting season blackouts, Kalea-flagged blocks, and the weekly Mass obligation (floating sacred — see prefs.md).
 
 ### 🏠 Punch List — Family Logistics
-"What needs doing this week and who owns it?" Includes the vehicle/maintenance tracker — service intervals, registration renewals, inspections, tire rotations. Family of 8 likely runs multiple vehicles; treat each as its own line item.
+Dispatcher, tracker, and renewal watchdog. Receives work from any agent or Matt/Kalea directly. Reads the full board — calendar, availability, fleet state — and makes the assignment call. One vehicle, one driver, one decision. Hands off to Foreman for calendar blocks. Owns the voice on all household logistics reminders. Does not generate work — routes it.
 
 ### 📚 Whetstone — WGU Study
 Doesn't add knowledge, sharpens what's there.
@@ -184,8 +190,8 @@ See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
 |------|-------|--------|-------|
 | 1-3 | Foundation | **COMPLETE** | Charter, schema, crosstalk map, Foreman v1 deep |
 | 4.5 | Calendar Widget | **COMPLETE — v2.8** | Kalea adoption bar met. PQ-29 parked. |
-| 5 | 🏠 Punch List | **MVP — next build** | Data files exist. Agent definition not yet written. |
-| 6 | 🍴 Chow Hall | **MVP — high priority** | Kalea's highest-leverage agent. Pantry/freezer ownership TBD at intake. |
+| 5 | 🏠 Punch List | **COMPLETE — MVP** | `punch-list.md` built. `vehicles.json` v2 with capability fields. Committed `734f12a`. |
+| 6 | 🍴 Chow Hall | **MVP — next build** | Kalea's highest-leverage agent. Pantry/freezer ownership TBD at intake. |
 | 7 | 🐷 Stockyard | **Skeleton queued** | Egg tracker widget live. S8 durability gate open. Feeds Chow Hall. |
 | 8 | 🌱 Rootstock | **Skeleton queued** | Build before fall. Feeds Chow Hall. Low urgency vs Chow Hall. |
 | — | 📚 Whetstone | Protocol documented | Build after Punch List |
@@ -249,17 +255,28 @@ Matt confirms the doctrine delta is complete and accurate.
 ### Step 3 — File Rewrites + Git
 **Git commits happen mid-session and at end-of-session. A pushed commit is file deployment only — not a session-close trigger. End-of-session is initiated by Matt explicitly.**
 
-Affected files get fully rewritten. Matt downloads, drops into repo. Git walkthrough — PowerShell, every command its own code block:
+Affected files get fully rewritten. Matt downloads, drops into repo. Git walkthrough — PowerShell, two chunks, every command its own code block:
 
+**Chunk 1 — stage and verify (run all three, paste back all three results together):**
 ```
 git status
+```
+```
 git add [files]
+```
+```
 git diff --cached --stat
 ```
-STOP — wait for paste-back confirm, then:
+STOP — wait for paste-back confirm of all three results, then:
+
+**Chunk 2 — commit and push (run all three, paste back all three results together):**
 ```
 git commit -m "message"
+```
+```
 git push
+```
+```
 git log --oneline -5
 ```
 
