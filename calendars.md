@@ -151,6 +151,10 @@ Last batch: 2026-05-26. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### SWIM PRACTICE - Canon City Pirates Summer Season 2026
 <!-- Mon+Wed 17:30-19:30. Tue+Thu 09:30-12:00. Florence Pool. Kalea drives+coaches. -->
 <!-- Exceptions: Jun 16+18 M+R at art camp. Jul 15 W+M at fair (swine show). Jul 16 M at fair (sheep show). -->
+[CAL] 2026-05-26 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
+[CAL] 2026-05-27 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
+[CAL] 2026-05-28 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
+[CAL] 2026-05-29 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-02 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-03 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
