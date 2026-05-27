@@ -1,8 +1,15 @@
-<!-- v2.8 - 2026-05-26
+<!-- v3.5 - 2026-05-27
      Bayer Family Ops | Edelweiss Farms — Family Ops
+     Wave 6.4: Cook Mode + Kids Recipe Browser
 
-     CHANGES FROM v2.7:
-     v2.8-1: Cook Mode centering — padding:var(--hh) 24px var(--nh) reserves header+nav zones so flexbox centers in actual visible space, not full viewport
+     CHANGES FROM v3.4:
+     v3.5-1: Ingredient tabs removed — simple full-width two-column list
+     v3.5-2: Recipe name bar removed from sticky zone — tab carries the name
+     v3.5-3: Start Recipe button in servings bar — timers populate on tap only
+     v3.5-4: Tap Servings label to reset to recipe default serving size
+     v3.5-5: Float bar fixed — CSS handles position, JS toggles display only
+     v3.5-6: Coming Up styled as category, always first in left rail
+     v3.5-7: cmStartRecipe() + cmResetServings() added
 
      PARKED PQs (carried forward):
      PQ-22: Liturgical data 2028-2035
@@ -10,9 +17,12 @@
      PQ-04: Agent buttons open stubs — wire to agent modules (Wave 4.6)
      PQ-05: Trash cadence — real 4-week schedule
      PQ-06: Saint panel — Mantel stub active; full build Wave 4.6
-     PQ-08: Cook mode recipe — requires Chow Hall Wave 4.6
      PQ-10: OMA+PAPA dual-color span — future enhancement
      PQ-11: Meal Planner full view — Chow Hall Wave 4.6
+     PQ-29: Cook mode centering perception — parked
+     PQ-30: Wire RECIPES[] to fetch live from recipes/*.json on ThinkPad server
+     PQ-31: Chow Hall post-cook altitude follow-up prompt hook
+     PQ-32: Phase 3 — voice timer start/stop via speak() / Web Speech API
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +40,7 @@
   --tr:#ff5000;--tr-bg:rgba(255,80,0,.15);--fl:#ff5000;
   --cream:#e2d6aa;
   --hh:96px;
-  --nh:76px;
+  --nh:110px;
   --cell-hdr-h:54px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -214,12 +224,154 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 /* NIGHT OVERLAY */
 #night-wake{display:none;position:fixed;inset:0;z-index:999;cursor:pointer;background:rgba(0,0,0,0.92);}
 
-/* SCREENS */
-/* v2.8: cook-scr center in visible space — inset:0 full viewport; padding:var(--hh) reserves header zone top, var(--nh) reserves nav zone bottom; flexbox centers in remaining visible area */
-#cook-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:var(--hh) 24px var(--nh);}
-.cook-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:var(--ck);}
-/* v2.2: cook-body gets max-width for centered overlay layout */
-.cook-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;max-width:480px;width:90%;}
+/* ============================================================
+   v3.2 COOK MODE — WORN RECIPE CARD THEME (Option A)
+   ============================================================ */
+#cook-scr,#kids-scr{
+  --paper:#f5ecd4;--paper2:#faf3e2;--paper3:#e8d8a8;
+  --paper-brd:#c8a878;--paper-brd2:#b8945c;
+  --ink:#1a1208;--ink2:#3a2c18;--ink3:#6a5230;
+  --amber:#c87818;--amber2:#e8a830;
+  --cook-bg:#1a1208;--cook-surf:#241c10;--cook-surf2:#2e2414;
+}
+#cook-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--cook-bg);flex-direction:column;}
+#cm-tabs{display:flex;gap:4px;padding:8px 12px 0;padding-top:calc(var(--hh) + 8px);background:var(--cook-bg);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;overflow-x:auto;}
+.cm-tab{padding:9px 18px;background:var(--paper3);border:1.5px solid var(--paper-brd2);border-bottom:none;border-radius:5px 5px 0 0;font-family:Georgia,serif;font-size:14px;color:var(--ink2);cursor:pointer;white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:8px;}
+.cm-tab.active{background:var(--paper);color:var(--ink);}
+.cm-tab-x{color:var(--ink3);font-size:12px;padding:1px 4px;border-radius:2px;}
+.cm-tab-x:hover{color:#8a1808;background:rgba(138,24,8,.12);}
+.cm-add-tab{padding:9px 16px;background:transparent;border:1.5px dashed var(--paper-brd);border-bottom:none;border-radius:5px 5px 0 0;font-family:Georgia,serif;font-size:20px;color:var(--paper-brd);cursor:pointer;line-height:1;transition:all .15s;}
+.cm-add-tab:hover{color:var(--amber);border-color:var(--amber);}
+#cm-body{display:flex;flex:1;overflow:hidden;padding-bottom:var(--nh);}
+#cm-left{width:200px;flex-shrink:0;border-right:2px solid var(--paper-brd2);overflow-y:auto;background:var(--cook-surf);display:flex;flex-direction:column;}
+.cm-left-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+/* RECIPE BROWSER RAIL */
+.cm-coming-up{border-bottom:1px solid rgba(200,168,120,.15);}
+.cm-cat-section{border-bottom:1px solid rgba(200,168,120,.15);}
+.cm-cat-hdr{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;cursor:pointer;user-select:none;transition:background .1s;}
+.cm-cat-hdr:hover{background:rgba(245,236,212,.05);}
+.cm-cat-name{font-family:Georgia,serif;font-size:12px;font-weight:700;color:var(--paper-brd2);letter-spacing:.03em;}
+.cm-cat-toggle{font-size:14px;color:var(--paper-brd);line-height:1;}
+.cm-cat-recipes{padding:2px 0 6px;}
+.cm-cat-recipes.collapsed{display:none;}
+.cm-recipe-entry{padding:8px 14px 8px 20px;font-family:Georgia,serif;font-size:12px;color:var(--paper3);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .12s;border-left:2px solid transparent;}
+.cm-recipe-entry:hover{background:rgba(245,236,212,.08);color:var(--paper);border-left-color:var(--paper-brd);}
+#cm-center{flex:1;overflow-y:auto;display:flex;flex-direction:column;background:var(--cook-bg);}
+.cm-recipe-bar{padding:14px 24px 12px;background:var(--paper3);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;position:sticky;top:0;z-index:5;}
+.cm-recipe-name{font-family:Georgia,serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;}
+.cm-recipe-meta{font-size:12px;color:var(--ink3);margin-top:3px;font-family:Georgia,serif;font-style:italic;}
+.cm-srv-bar{display:flex;align-items:center;gap:14px;padding:10px 24px;background:var(--paper2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+.cm-srv-btn{width:40px;height:40px;background:var(--paper3);border:2px solid var(--paper-brd2);border-radius:4px;color:var(--ink);font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background .1s;user-select:none;flex-shrink:0;font-family:Georgia,serif;}
+.cm-srv-btn:hover{background:var(--paper);}
+.cm-srv-val{font-family:Georgia,serif;font-size:26px;font-weight:700;color:var(--ink);min-width:50px;text-align:center;line-height:1;}
+.cm-srv-factor{font-size:11px;color:var(--ink3);font-family:Georgia,serif;font-style:italic;margin-left:4px;}
+.cm-ing-pane{background:var(--paper2);border-bottom:2px solid var(--paper-brd);flex-shrink:0;}
+.cm-ing-pane-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 24px 8px;cursor:pointer;user-select:none;}
+.cm-ing-pane-lbl{font-family:Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--ink3);}
+.cm-ing-toggle{font-family:Georgia,serif;font-size:16px;color:var(--ink3);background:none;border:none;cursor:pointer;padding:0;line-height:1;}
+.cm-ing-body{padding:0 0 12px;}
+.cm-ing-list{padding:6px 16px 0 16px;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;}
+.cm-ing{display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid rgba(200,168,120,.15);}
+.cm-ing:last-child{border-bottom:none;}
+.cm-ing-amt{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--ink);min-width:52px;text-align:right;flex-shrink:0;}
+.cm-ing-name{font-size:13px;color:var(--ink2);line-height:1.3;}
+.cm-ing.hi .cm-ing-name{color:var(--ink);font-weight:700;}
+.cm-ing-pane.collapsed .cm-ing-body,.cm-ing-pane.collapsed .cm-alt-brief-inner{display:none;}
+/* Alt brief inside frozen pane */
+.cm-alt-brief-inner{margin:4px 12px 8px;background:#201800;border:2px solid var(--amber);border-radius:4px;padding:10px 14px;}
+.cm-alt-brief-inner .cm-alt-hdr{font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--amber2);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.cm-alt-brief-inner .cm-alt-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:12px;color:#d0a040;line-height:1.5;border-bottom:1px solid rgba(200,120,24,.18);}
+.cm-alt-brief-inner .cm-alt-row:last-child{border-bottom:none;padding-bottom:0;}
+.cm-alt-brief-inner .cm-alt-icon{flex-shrink:0;font-size:12px;margin-top:2px;}
+.cm-alt-brief{margin:16px 24px 4px;background:#201800;border:2px solid var(--amber);border-radius:4px;padding:14px 18px;}
+.cm-alt-hdr{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--amber2);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.cm-alt-row{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:13px;color:#d0a040;line-height:1.55;border-bottom:1px solid rgba(200,120,24,.2);}
+.cm-alt-row:last-child{border-bottom:none;padding-bottom:0;}
+.cm-alt-icon{flex-shrink:0;font-size:13px;margin-top:2px;}
+.cm-steps{padding:16px 24px 24px;background:var(--cook-bg);}
+/* STEP CARDS — read-only recipe card display */
+.cm-step-card{background:var(--paper);border:1.5px solid var(--paper-brd);border-radius:4px;padding:16px 18px;margin-bottom:10px;scroll-margin-top:80px;position:relative;overflow:hidden;}
+.cm-fold{position:absolute;bottom:0;right:0;border-radius:0 0 4px 0;}
+.cm-timer-card .cm-fold{width:16px;height:16px;background:linear-gradient(225deg,var(--paper-brd2) 50%,var(--paper) 50%);}
+.cm-recipe-pick .cm-fold{width:14px;height:14px;background:linear-gradient(225deg,var(--paper-brd2) 50%,var(--paper3) 50%);}
+.cm-step-card-n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--amber);font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);margin-bottom:8px;flex-shrink:0;border:none;}
+.cm-step-card-title{font-family:Georgia,serif;font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.2;display:flex;align-items:center;gap:10px;}
+.cm-step-timer-info{font-size:12px;color:var(--amber);font-weight:400;font-style:italic;}
+.cm-start-recipe{padding:8px 16px;background:var(--amber);border:2px solid var(--paper-brd2);border-radius:4px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);cursor:pointer;white-space:nowrap;transition:all .15s;margin-left:auto;flex-shrink:0;}
+.cm-start-recipe:hover{background:var(--amber2);}
+.cm-start-recipe.started{background:var(--cook-surf);border-color:var(--paper-brd);color:var(--paper-brd);cursor:default;}
+.cm-srv-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--ink3);text-transform:uppercase;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;}
+.cm-srv-lbl:hover{color:var(--ink2);}
+.cm-step-card-text{font-size:14px;color:var(--ink2);line-height:1.8;}
+/* MANUAL TIMER */
+#cm-manual-zone{flex-shrink:0;border-top:2px solid var(--paper-brd);background:var(--paper2);padding:12px 10px 10px;}
+.cm-mt-hdr{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px;text-align:center;}
+.cm-mt-display{font-family:Georgia,serif;font-size:40px;font-weight:700;color:var(--ink);text-align:center;line-height:1;padding:10px 0;cursor:ns-resize;user-select:none;border:1.5px solid var(--paper-brd);border-radius:4px;background:var(--paper);margin-bottom:8px;}
+.cm-mt-quick{display:flex;gap:4px;margin-bottom:8px;}
+.cm-mt-qbtn{flex:1;padding:8px 0;background:var(--paper3);border:1.5px solid var(--paper-brd2);border-radius:3px;font-family:Georgia,serif;font-size:12px;font-weight:700;color:var(--ink2);cursor:pointer;text-align:center;transition:all .12s;}
+.cm-mt-qbtn:hover{background:var(--amber2);border-color:var(--amber);}
+.cm-mt-start{width:100%;padding:11px 0;background:var(--amber);border:2px solid var(--paper-brd2);border-radius:4px;font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;transition:all .12s;}
+.cm-mt-start:hover{background:var(--amber2);}
+/* FLOATING TIMER BAR */
+#cm-float-bar{display:none;position:fixed;left:0;right:0;bottom:110px;z-index:48;background:var(--cook-bg);border-top:2px solid var(--paper-brd2);padding:8px 16px;align-items:center;gap:12px;flex-wrap:wrap;}
+.cm-float-timer{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--paper);background:var(--cook-surf);border:1px solid var(--paper-brd);border-radius:4px;padding:4px 10px;white-space:nowrap;}
+.cm-float-timer.done{color:var(--amber);border-color:var(--amber);}
+.cm-float-back{margin-left:auto;padding:7px 16px;background:var(--amber);border:none;border-radius:4px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);cursor:pointer;flex-shrink:0;}
+#cm-launch{padding:48px 28px;display:flex;flex-direction:column;align-items:center;background:var(--cook-bg);}
+.cm-launch-msg{font-family:Georgia,serif;font-size:18px;color:var(--paper-brd);margin-bottom:32px;text-align:center;line-height:1.7;}
+.cm-recipe-list{width:100%;max-width:540px;display:flex;flex-direction:column;gap:10px;}
+.cm-recipe-pick{background:var(--paper3);border:1.5px solid var(--paper-brd);border-radius:4px;padding:16px 20px;cursor:pointer;transition:all .15s;text-align:left;position:relative;overflow:hidden;}
+.cm-recipe-pick:hover{background:var(--paper);border-color:var(--paper-brd2);}
+.cm-recipe-pick-name{font-family:Georgia,serif;font-size:19px;color:var(--ink);margin-bottom:4px;font-weight:700;}
+.cm-recipe-pick-meta{font-size:12px;color:var(--ink3);font-style:italic;}
+#cm-right{width:224px;flex-shrink:0;border-left:2px solid var(--paper-brd2);background:var(--cook-surf);display:flex;flex-direction:column;overflow:hidden;}
+#cm-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+#cm-timers{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:12px;}
+.cm-no-timers{font-family:Georgia,serif;font-size:13px;color:var(--paper-brd);font-style:italic;text-align:center;padding:24px 0;opacity:.5;}
+.cm-timer-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:14px 14px 12px;position:relative;overflow:hidden;}
+.cm-timer-card.t-running{border-color:var(--amber);}
+.cm-timer-card.t-done{border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
+.cm-timer-card.t-silenced{border-color:var(--paper-brd2);opacity:.8;}
+@keyframes timerDone{from{border-color:var(--amber);}to{border-color:#ff8010;background:#fffae8;}}
+.cm-timer-lbl{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;}
+.cm-timer-card.t-done .cm-timer-lbl{color:var(--amber);}
+.cm-timer-card.t-silenced .cm-timer-lbl{color:var(--ink3);}
+.cm-timer-display{font-family:Georgia,serif;font-size:36px;font-weight:700;color:var(--ink2);letter-spacing:.04em;line-height:1;margin-bottom:11px;}
+.cm-timer-card.t-running .cm-timer-display{color:var(--amber);}
+.cm-timer-card.t-done .cm-timer-display{color:var(--amber);font-size:40px;}
+.cm-timer-card.t-silenced .cm-timer-display{color:var(--ink3);}
+.cm-timer-btns{display:flex;gap:6px;}
+.cm-tbtn{flex:1;padding:9px 0;border-radius:3px;font-family:Georgia,serif;font-size:12px;font-weight:700;cursor:pointer;text-align:center;transition:all .12s;user-select:none;}
+.cm-tbtn.t-start{background:var(--paper3);border:1.5px solid var(--paper-brd2);color:var(--ink2);}
+.cm-tbtn.t-start:hover{background:var(--amber2);border-color:var(--amber);}
+.cm-tbtn.t-stop{background:#2a0808;border:1.5px solid #8a2010;color:#e08060;}
+.cm-tbtn.t-stop:hover{background:#3a1010;}
+.cm-tbtn.t-dismiss{background:var(--cook-surf2);border:1.5px solid var(--paper-brd);color:var(--paper3);}
+.cm-tbtn.t-dismiss:hover{color:var(--paper);}
+.cm-silence-btn{width:100%;padding:13px 0;margin-top:6px;background:var(--amber);border:2px solid #e89018;border-radius:4px;font-family:Georgia,serif;font-size:17px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;letter-spacing:.05em;user-select:none;animation:silencePulse .5s ease-in-out infinite alternate;}
+@keyframes silencePulse{from{background:var(--amber);}to{background:#c85008;}}
+.cm-silence-btn:hover{background:#a04008;animation:none;}
+#kids-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--cook-bg);flex-direction:column;}
+#kids-hdr{padding:calc(var(--hh) + 14px) 24px 16px;background:var(--paper3);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;}
+.kids-title{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1;}
+.kids-sub{font-size:13px;color:var(--ink3);margin-top:5px;font-family:Georgia,serif;font-style:italic;}
+#kids-grid{flex:1;overflow-y:auto;padding:20px 20px calc(var(--nh) + 20px);display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:16px;align-items:start;}
+.kids-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:20px 18px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;height:170px;position:relative;overflow:hidden;}
+.kids-card:hover{background:var(--paper2);border-color:var(--paper-brd2);transform:translateY(-2px);}
+.kids-card:active{transform:translateY(0);}
+.kids-card-icon{font-size:40px;margin-bottom:12px;line-height:1;}
+.kids-card-name{font-family:Georgia,serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:10px;}
+.kids-card-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.kids-card-tag{font-size:11px;font-family:Georgia,serif;color:var(--ink3);background:rgba(26,18,8,.06);border:1px solid var(--paper-brd);border-radius:20px;padding:3px 10px;}
+.kids-empty{font-family:Georgia,serif;font-size:16px;color:var(--paper-brd);font-style:italic;text-align:center;padding:60px 20px;}
+
+
+/* KIDS NAV BUTTON */
+#kids-btn{padding:5px;background:#0c0a06;border:1.5px solid #2a4a6a;border-top-color:#3a6090;border-left-color:#3a6090;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
+#kids-face{background:#0c1a2e;border-radius:8px;border-top:1px solid #3a7ab0;border-left:1px solid #2e6090;border-bottom:1px solid #040810;border-right:1px solid #081018;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4);transition:background .15s;}
+#kids-btn.kids-active #kids-face{background:#081422;}
+.kids-nav-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#5a9aca;text-transform:uppercase;margin-bottom:2px;}
+.kids-nav-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#90d0f0;letter-spacing:.03em;line-height:1;}
 #meal-scr{display:none;flex:1;flex-direction:column;padding:24px 18px;gap:14px;}
 .meal-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#f0c880;}
 .meal-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;}
@@ -433,15 +585,39 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
   </div>
 </div>
 
-<!-- v2.2: cook-scr is position:fixed overlay — centered by CSS -->
+<!-- v3.0: cook-scr — full Cook Mode -->
 <div id="cook-scr">
-  <div class="cook-hdr">Cook Mode</div>
-  <div class="cook-body">
-    16:00–19:30 window active. Mode Sovereignty — calendar replaced.<br><br>
-    Recipe display requires Chow Hall agent (Wave 4.6).<br><br>
-    Current recipe: <span style="color:#ddd8ce;">None loaded.</span><br><br>
-    Tap <strong>Home</strong> to return to calendar.
+  <!-- TABS -->
+  <div id="cm-tabs">
+    <div class="cm-add-tab" onclick="cmAddRecipe()" title="Add another recipe">+</div>
   </div>
+  <!-- 3-COLUMN BODY -->
+  <div id="cm-body">
+    <!-- LEFT RAIL: step index -->
+    <div id="cm-left"></div>
+    <!-- CENTER: recipe content -->
+    <div id="cm-center">
+      <div id="cm-launch">
+        <div class="cm-launch-msg">Choose a recipe to begin cooking.</div>
+        <div class="cm-recipe-list" id="cm-recipe-list"></div>
+      </div>
+    </div>
+    <!-- RIGHT RAIL: session timer stack -->
+    <div id="cm-right">
+      <div id="cm-timer-hdr">Timers</div>
+      <div id="cm-timers"><div class="cm-no-timers">No active timers</div></div>
+      <div id="cm-manual-zone"></div>
+    </div>
+  </div>
+</div>
+
+<!-- v3.0: kids recipe browser -->
+<div id="kids-scr">
+  <div id="kids-hdr">
+    <div class="kids-title">👨‍🍳 Kids Kitchen</div>
+    <div class="kids-sub">Pick a recipe and start cooking.</div>
+  </div>
+  <div id="kids-grid"></div>
 </div>
 
 <div id="meal-scr">
@@ -455,6 +631,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 <div id="month-scr"></div>
 
+<div id="cm-float-bar"><div id="cm-float-timers" style="display:flex;gap:8px;flex-wrap:wrap;flex:1;"></div><button class="cm-float-back" onclick="toggleCook()">🍳 Cook Mode</button></div>
 <!-- BOTTOM NAV -->
 <div id="bottom">
   <!-- LEFT ZONE: view toggles -->
@@ -484,6 +661,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
       <div id="cook-face">
         <div class="cook-sub">Edelweiss Farms</div>
         <div class="cook-main">Cook Mode</div>
+      </div>
+    </div>
+    <div id="kids-btn" onclick="toggleKids()">
+      <div id="kids-face">
+        <div class="kids-nav-sub">Edelweiss</div>
+        <div class="kids-nav-main">Kids Kitchen</div>
       </div>
     </div>
     <div id="night-btn" onclick="toggleNight()">
@@ -550,7 +733,7 @@ function sortPills(pills){
 // CATEGORY EMOJI MAP
 const CAT_EMOJI={liturgical:'✝️',kids:'🚸',family:'🏠',animals:'🐾',appointments:'➕','4h':'🍀',rootstock:'🌱',medical:'➕',prompt:'⏰',meetings:'📋'};
 
-const CAT_MAP={liturgical:'liturgical',kids:'kids',animals:'animals',appointments:'appointments',appt:'appointments','4h':'4h',birthday:'birthdays',birthdays:'birthdays',holiday:'holidays',holidays:'holidays',kalea:'kalea',matt:'matt',rootstock:'rootstock',misc:'misc',prompt:'prompt',meetings:'meetings'};
+const CAT_MAP={liturgical:'liturgical',kids:'kids',animals:'animals',appointments:'appointments',appt:'appointments','4h':'4h',birthday:'birthdays',birthdays:'birthdays',holiday:'holidays',holidays:'holidays',kalea:'kalea',matt:'matt',rootstock:'rootstock',misc:'misc',prompt:'prompt',meetings:'meetings',meeting:'meetings'};
 const CAT_CLS={liturgical:'el',kids:'ek',animals:'ea',appointments:'eap',birthdays:'eb',holidays:'ex',kalea:'eka',matt:'em',rootstock:'ero',misc:'ex',prompt:'eprompt','4h':'ek',meetings:'emtg'};
 
 const ABBREV=[['Faith Formation','Faith Form.'],['Study block','Study'],['study block','study'],['Invitational','Invit.'],['invitational','invit.'],['Birthday dinner','Bday dinner'],['Greenhouse seeding','Greenhouse'],['Garden beds','Garden'],['weekly apt','apt'],['Fairboard meeting','Fairboard mtg'],['4H fair prep','Fair prep'],['ranch supply run','ranch supply'],['orthodontist','ortho'],['Track practice','Track'],['track practice','track']];
@@ -566,7 +749,7 @@ const DOW={sun:0,mon:1,tue:2,wed:3,thu:4,fri:5,sat:6};
 const HDR_PRI={year:0,holidays:1,liturgical:2,birthdays:3};
 
 let allEvts=[],evtMap={},allBriefs={},activeAgentFilter=null,currentDayDs=null;
-let curView='rolling',nightOn=false,cookOn=false,mealOn=false,_id=0;
+let curView='rolling',nightOn=false,cookOn=false,mealOn=false,kidsOn=false,_id=0;
 let weekViewWi=0,weekDetailDs=null;
 
 function wkStart(d){const x=new Date(d);x.setHours(12,0,0,0);x.setDate(x.getDate()-x.getDay());return x;}
@@ -1397,26 +1580,578 @@ function openEdit(ev){document.getElementById('m-title').textContent=`Edit histo
 function closeModal(){document.getElementById('modal-bg').classList.remove('open');}
 document.getElementById('modal-bg').addEventListener('click',function(e){if(e.target===this)closeModal();});
 
+// ============================================================
+// v3.0 COOK MODE + KIDS BROWSER
+// ============================================================
+
+// RECIPE DATA — seed library
+// PQ-30: Replace with live fetch from recipes/*.json on ThinkPad server
+const RECIPES = [
+  {
+    id:'bayer-chili', name:'Bayer Chili', kids:false, heirloom:false, category:'Beef',
+    icon:'🍲', equipment:'COOK-01 cooktop',
+    tags:['dinner','stovetop','protein','crowd-pleaser'],
+    family_baseline:8,
+    altitude_adjustments:[
+      {note:'Simmer time +25% at 9,000 ft — plan 37 min instead of 30'}
+    ],
+    ingredients:[
+      {amount:2,unit:'lbs',name:'Ground beef 80/20'},
+      {amount:2,unit:'cans',name:'Diced tomatoes (28 oz)'},
+      {amount:2,unit:'cans',name:'Black beans (15 oz)'},
+      {amount:1,unit:'can',name:'Tomato sauce (15 oz)'},
+      {amount:1,unit:'packet',name:'Chili seasoning'},
+      {amount:1,unit:'',name:'Yellow onion, diced'},
+    ],
+    steps:[
+      {n:1,title:'Brown beef',text:'Brown ground beef in large pot over medium-high heat. Break apart as it cooks. Drain excess fat.',timer_seconds:null,step_ingredients:[0]},
+      {n:2,title:'Add onion',text:'Add diced onion to pot. Cook over medium heat until softened.',timer_seconds:300,timer_label:'Onion',step_ingredients:[5]},
+      {n:3,title:'Add ingredients',text:'Add diced tomatoes, black beans, tomato sauce, and chili seasoning. Stir to combine.',timer_seconds:null,step_ingredients:[1,2,3,4]},
+      {n:4,title:'Simmer',text:'Bring to a boil, then reduce heat to low. Cover and simmer — 37 minutes at altitude (25% longer than sea-level 30 min).',timer_seconds:2220,timer_label:'Simmer',step_ingredients:[]},
+      {n:5,title:'Taste & serve',text:'Taste and adjust seasoning. Serve with cornbread, shredded cheese, or sour cream.',timer_seconds:null,step_ingredients:[]},
+    ]
+  },
+  {
+    id:'farmhouse-bread', name:'Farmhouse Bread', kids:true, heirloom:true, category:'Bread',
+    icon:'🍞', equipment:'COOK-01 lower oven + Proof mode',
+    tags:['baking','bread','altitude-adjusted','heirloom'],
+    family_baseline:8,
+    altitude_adjustments:[
+      {note:'Oven temp +25°F (metal pan) — set COOK-01 to 375°F, not 350°F'},
+      {note:'Reduce yeast — use ¾ tsp per loaf, not 1 tsp'},
+      {note:'Shorter first rise — punch down after 35 min, not 60'},
+      {note:'Add 1 tbsp flour per cup for structure'},
+    ],
+    ingredients:[
+      {amount:3,unit:'cups',name:'All-purpose flour (+3 tbsp for altitude)'},
+      {amount:0.75,unit:'tsp',name:'Active dry yeast (altitude-reduced)'},
+      {amount:1,unit:'tsp',name:'Salt'},
+      {amount:1.5,unit:'cups',name:'Warm water'},
+    ],
+    steps:[
+      {n:1,title:'Mix dough',text:'Combine flour (with extra tbsp for altitude), yeast (¾ tsp — altitude reduced), and salt. Add warm water. Mix until a shaggy dough forms.',timer_seconds:null,step_ingredients:[0,1,2,3]},
+      {n:2,title:'First rise',text:'Cover bowl with a towel. Use Proof mode on COOK-01 for controlled rise. At altitude, punch down after 35 minutes — not 60.',timer_seconds:2100,timer_label:'First rise',step_ingredients:[]},
+      {n:3,title:'Shape',text:'Turn dough out, shape into a round loaf. Place in Dutch oven or on baking sheet lined with parchment.',timer_seconds:null,step_ingredients:[]},
+      {n:4,title:'Second rise',text:'Cover and let rest 20 minutes. Altitude shortens this rise — watch it, not the clock.',timer_seconds:1200,timer_label:'Second rise',step_ingredients:[]},
+      {n:5,title:'Preheat oven',text:'Preheat COOK-01 lower oven to 375°F. That is +25°F from the sea-level recipe temperature of 350°F, metal pan adjustment.',timer_seconds:600,timer_label:'Preheat',step_ingredients:[]},
+      {n:6,title:'Bake',text:'Bake 28–33 minutes at altitude. Use COOK-01 temp probe — pull at 200°F internal. Knock twice on InstaView to check without opening door.',timer_seconds:5,timer_label:'Bake',step_ingredients:[]},
+      {n:7,title:'Cool',text:'Remove from oven. Cool on wire rack at least 20 minutes before slicing. Hard to wait. Worth it.',timer_seconds:1200,timer_label:'Cool',step_ingredients:[]},
+    ]
+  },
+  {
+    id:'breakfast-burritos', name:'Breakfast Burritos', kids:true, heirloom:false, category:'Breakfast',
+    icon:'🌯', equipment:'COOK-01 cooktop',
+    tags:['breakfast','batch-cook','freezer-refill'],
+    family_baseline:8,
+    altitude_adjustments:[],
+    ingredients:[
+      {amount:12,unit:'',name:'Large eggs'},
+      {amount:1,unit:'lb',name:'Breakfast sausage'},
+      {amount:1,unit:'cup',name:'Shredded cheddar cheese'},
+      {amount:12,unit:'',name:'Flour tortillas (burrito size)'},
+      {amount:1,unit:'can',name:'Black beans (15 oz), drained'},
+      {amount:1,unit:'cup',name:'Salsa'},
+    ],
+    steps:[
+      {n:1,title:'Cook sausage',text:'Brown sausage in large skillet over medium heat. Break apart as it cooks. Drain fat.',timer_seconds:null,step_ingredients:[1]},
+      {n:2,title:'Scramble eggs',text:'Whisk all eggs in a bowl. Pour over sausage in skillet. Scramble together over medium-low heat until just set — do not overcook.',timer_seconds:null,step_ingredients:[0]},
+      {n:3,title:'Warm tortillas',text:'Warm tortillas one at a time in a dry pan or wrapped in a damp paper towel in the microwave — 30 seconds.',timer_seconds:null,step_ingredients:[3]},
+      {n:4,title:'Assemble',text:'Lay out all tortillas. Divide egg-sausage mixture, black beans, cheese, and salsa evenly across all 12.',timer_seconds:null,step_ingredients:[0,1,2,3,4,5]},
+      {n:5,title:'Roll & wrap',text:'Fold sides in first, then roll tight from the bottom up. Seam side down. Wrap each in foil.',timer_seconds:null,step_ingredients:[]},
+      {n:6,title:'Freeze',text:'Label each with today\'s date. Freeze in batches of 6 in gallon zip bags. Good for 3 months.',timer_seconds:null,step_ingredients:[]},
+    ]
+  }
+];
+
+// COOK MODE STATE
+let cmTabs = []; // [{recipeId, servings}]
+let cmActiveTab = -1;
+let activeTimers = []; // [{id, label, total, elapsed, state, intervalId, recipeId, stepN}]
+let cmTimerId = 0;
+let cmIngPaneCollapsed = {}; // {tabIndex: bool}
+let cmIngActiveTab = {}; // {tabIndex: 'all'|stepN}
+let _cmBannerSaved = null;
+let cmExpandedCats = new Set(); // expanded category names in left rail
+// Manual timer state
+let _mtMinutes = 5;
+let _mtDragStartY = null;
+let _mtDragStartMin = null;
+// Categories
+const CM_CATEGORIES = ['Breakfast','Soup','Casserole','Sides','Bread','Beef','Poultry','Pasta','Pork','Dessert','Cookies','Barbecue','Pie','Canning'];
+
+// ---- AUDIO — v3.1 repeating alarm ----
+let _audioCtx = null;
+let _alarmInterval = null;
+function _getAudioCtx(){if(!_audioCtx)_audioCtx=new(window.AudioContext||window.webkitAudioContext)();return _audioCtx;}
+
+function _singleBeep(){
+  try{
+    const ctx=_getAudioCtx();
+    const pairs=[[0,880],[80,1100],[160,880]];
+    pairs.forEach(([delay,freq])=>{
+      const o=ctx.createOscillator();const g=ctx.createGain();
+      o.connect(g);g.connect(ctx.destination);
+      o.type='square';o.frequency.value=freq;
+      const t=ctx.currentTime+delay/1000;
+      g.gain.setValueAtTime(0.7,t);
+      g.gain.exponentialRampToValueAtTime(0.001,t+0.25);
+      o.start(t);o.stop(t+0.28);
+    });
+  }catch(e){console.warn('[beep]',e);}
+}
+
+function startAlarm(){
+  if(_alarmInterval)return;
+  _singleBeep();
+  try{if(navigator.vibrate)navigator.vibrate([300,200,300,200,300]);}catch(e){}
+  _alarmInterval=setInterval(()=>{
+    _singleBeep();
+    try{if(navigator.vibrate)navigator.vibrate([300,200,300]);}catch(e){}
+  },2200);
+}
+
+function silenceAlarm(){
+  if(_alarmInterval){clearInterval(_alarmInterval);_alarmInterval=null;}
+  try{if(navigator.vibrate)navigator.vibrate(0);}catch(e){}
+}
+
+// ---- SERVING SCALE MATH ----
+function scaleAmt(amount, servings, baseline){
+  const s=amount*(servings/baseline);
+  // Format nicely: whole numbers, halves, quarters
+  const frac=(v)=>{
+    const w=Math.floor(v);const f=v-w;
+    const f4=Math.round(f*4);
+    const fStr=f4===0?'':f4===1?'¼':f4===2?'½':f4===3?'¾':'';
+    if(w===0&&fStr)return fStr;
+    if(!fStr)return w.toString();
+    return `${w}${fStr}`;
+  };
+  if(s<1&&s>0){
+    const f4=Math.round(s*4);
+    if(f4===1)return'¼';if(f4===2)return'½';if(f4===3)return'¾';
+    return s.toFixed(1);
+  }
+  if(Math.abs(s-Math.round(s*4)/4)<0.001)return frac(Math.round(s*4)/4);
+  return s%1===0?s.toString():s.toFixed(1);
+}
+
+// ---- TIMER FUNCTIONS ----
+function cmAddTimer(label, totalSeconds){
+  const id=++cmTimerId;
+  activeTimers.push({id,label:label.slice(0,15),total:totalSeconds,elapsed:0,state:'idle',intervalId:null});
+  renderTimerStack();
+}
+function cmStartTimer(id){
+  const t=activeTimers.find(x=>x.id===id);if(!t||t.state==='running')return;
+  if(t.state==='done'){t.elapsed=0;t.state='idle';}
+  t.state='running';
+  t.intervalId=setInterval(()=>{
+    t.elapsed++;
+    if(t.elapsed>=t.total){
+      clearInterval(t.intervalId);t.intervalId=null;t.state='done';
+      startAlarm();
+    }
+    renderTimerStack();
+  },1000);
+  renderTimerStack();
+}
+function cmStopTimer(id){
+  const t=activeTimers.find(x=>x.id===id);if(!t)return;
+  if(t.intervalId){clearInterval(t.intervalId);t.intervalId=null;}
+  t.state='idle';
+  renderTimerStack();
+}
+function cmDismissTimer(id){
+  const t=activeTimers.find(x=>x.id===id);
+  if(t&&t.intervalId){clearInterval(t.intervalId);}
+  // silence alarm if no other done timers remain after this one
+  const otherDone=activeTimers.filter(x=>x.id!==id&&x.state==='done');
+  if(!otherDone.length)silenceAlarm();
+  activeTimers=activeTimers.filter(x=>x.id!==id);
+  renderTimerStack();
+}
+function cmSilenceTimer(id){
+  // Mute alarm, card stays visible in silenced state
+  const t=activeTimers.find(x=>x.id===id);if(!t)return;
+  t.state='silenced';
+  const otherDone=activeTimers.filter(x=>x.id!==id&&x.state==='done');
+  if(!otherDone.length)silenceAlarm();
+  renderTimerStack();
+}
+function fmtTime(seconds){
+  const r=Math.max(0,seconds);
+  const m=Math.floor(r/60);const s=r%60;
+  return`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+function renderTimerStack(){
+  const el=document.getElementById('cm-timers');if(!el)return;
+  if(!activeTimers.length){el.innerHTML='<div class="cm-no-timers">No active timers</div>';updateFloatBar();return;}
+  el.innerHTML=activeTimers.map(t=>{
+    const rem=t.total-t.elapsed;
+    const cls=t.state==='running'?'t-running':t.state==='done'?'t-done':t.state==='silenced'?'t-silenced':'';
+    const btn=t.state==='idle'?`<button class="cm-tbtn t-start" data-action="start" data-tid="${t.id}">▶ Start</button>`:
+              t.state==='running'?`<button class="cm-tbtn t-stop" data-action="stop" data-tid="${t.id}">⏹ Stop</button>`:
+              `<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✓ Done</button>`;
+    const silenceBtn=t.state==='done'?`<button class="cm-silence-btn" data-action="silence" data-tid="${t.id}">⏹ SILENCE</button>`:'';
+    const silencedNote=t.state==='silenced'?`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);margin-top:6px;font-style:italic;">Silenced — tap Done when ready</div>`:'';
+    return`<div class="cm-timer-card ${cls}">
+      <div class="cm-fold"></div>
+      <div class="cm-timer-lbl">${t.label}</div>
+      <div class="cm-timer-display">${fmtTime(rem)}</div>
+      <div class="cm-timer-btns">${btn}<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✕</button></div>
+      ${silenceBtn}${silencedNote}
+    </div>`;
+  }).join('');
+  updateFloatBar();
+}
+
+// ---- COOK MODE RENDER ----
+function cmGetRecipe(id){return RECIPES.find(r=>r.id===id)||null;}
+
+function renderCookMode(){
+  if(cmActiveTab<0||!cmTabs[cmActiveTab]){renderCookLaunch();return;}
+  const tab=cmTabs[cmActiveTab];
+  const recipe=cmGetRecipe(tab.recipeId);
+  if(!recipe){renderCookLaunch();return;}
+  const srv=tab.servings;
+  const bl=recipe.family_baseline;
+  const factorStr=srv===bl?'Family size':`${(srv/bl).toFixed(2).replace(/\.?0+$/,'')}× scale`;
+  const collapsed=!!cmIngPaneCollapsed[cmActiveTab];
+  const ingTab=cmIngActiveTab[cmActiveTab]||'all';
+
+  // Wire banner — recipe name only, hide year
+  const banner=document.getElementById('month-name');
+  const bannerYear=document.getElementById('month-year');
+  if(banner){if(!_cmBannerSaved)_cmBannerSaved=banner.textContent;banner.textContent=recipe.name;}
+  if(bannerYear)bannerYear.style.display='none';
+
+  const center=document.getElementById('cm-center');
+  const recipeStarted=!!(cmTabs[cmActiveTab]&&cmTabs[cmActiveTab].started);
+
+  // Altitude inside frozen pane
+  const hasAlt=recipe.altitude_adjustments&&recipe.altitude_adjustments.length>0;
+  let altInnerHtml='';
+  if(hasAlt){
+    const rows=recipe.altitude_adjustments.map(a=>`<div class="cm-alt-row"><span class="cm-alt-icon">⛰️</span>${a.note}</div>`).join('');
+    altInnerHtml=`<div class="cm-alt-brief-inner"><div class="cm-alt-hdr">⛰️ Altitude — 9,000 ft</div>${rows}</div>`;
+  }
+
+  // Ingredient pane — simple full-width list, no tabs
+  const ingListHtml=recipe.ingredients.map((i)=>{
+    const u=i.unit?` ${i.unit}`:'';
+    return`<div class="cm-ing"><span class="cm-ing-amt">${scaleAmt(i.amount,srv,bl)}${u}</span><span class="cm-ing-name">${i.name}</span></div>`;
+  }).join('');
+  const ingPaneHtml=`<div class="cm-ing-pane${collapsed?' collapsed':''}" id="cm-ing-pane">
+    <div class="cm-ing-pane-hdr" data-action="togglepane">
+      <span class="cm-ing-pane-lbl">Ingredients${hasAlt?' · ⛰️':''}</span>
+      <button class="cm-ing-toggle">${collapsed?'▼ Show':'▲ Hide'}</button>
+    </div>
+    ${altInnerHtml}
+    <div class="cm-ing-body"><div class="cm-ing-list">${ingListHtml}</div></div>
+  </div>`;
+
+  // Step cards — read-only
+  const stepsHtml=recipe.steps.map(s=>{
+    const timerInfo=s.timer_seconds?`<span class="cm-step-timer-info">⏱ ${fmtTime(s.timer_seconds)}</span>`:'';
+    return`<div class="cm-step-card" id="cm-sc-${s.n}">
+      <div class="cm-fold"></div>
+      <div class="cm-step-card-n">${s.n}</div>
+      <div class="cm-step-card-title">${s.title}${timerInfo}</div>
+      <div class="cm-step-card-text">${s.text}</div>
+    </div>`;
+  }).join('');
+
+  const startBtn=recipeStarted
+    ?`<button class="cm-start-recipe started" disabled>✓ Started</button>`
+    :`<button class="cm-start-recipe" onclick="cmStartRecipe()">▶ Start Recipe</button>`;
+
+  center.innerHTML=`
+    <div id="cm-sticky-zone" style="position:sticky;top:0;z-index:5;background:var(--cook-bg);">
+      <div class="cm-srv-bar">
+        <span class="cm-srv-lbl" onclick="cmResetServings()" title="Tap to reset to default">Servings</span>
+        <button class="cm-srv-btn" onclick="cmAdjustServings(-0.5)">−</button>
+        <span class="cm-srv-val">${srv%1===0?srv:srv.toFixed(1)}</span>
+        <button class="cm-srv-btn" onclick="cmAdjustServings(0.5)">+</button>
+        <span class="cm-srv-factor">${factorStr}</span>
+        ${startBtn}
+      </div>
+      ${ingPaneHtml}
+    </div>
+    <div class="cm-steps">${stepsHtml}</div>`;
+
+  renderLeftRail();
+  renderCmTabs();
+}
+
+function cmToggleIngPane(){
+  cmIngPaneCollapsed[cmActiveTab]=!cmIngPaneCollapsed[cmActiveTab];
+  renderCookMode();
+}
+function cmSetIngTab(tabId){
+  cmIngActiveTab[cmActiveTab]=tabId;
+  renderCookMode();
+}
+
+function cmStartRecipe(){
+  if(cmActiveTab<0||!cmTabs[cmActiveTab])return;
+  cmTabs[cmActiveTab].started=true;
+  const recipe=cmGetRecipe(cmTabs[cmActiveTab].recipeId);
+  if(recipe)cmPopulateTimers(recipe);
+  renderCookMode();
+}
+function cmResetServings(){
+  if(cmActiveTab<0||!cmTabs[cmActiveTab])return;
+  const recipe=cmGetRecipe(cmTabs[cmActiveTab].recipeId);
+  if(!recipe)return;
+  cmTabs[cmActiveTab].servings=recipe.family_baseline;
+  renderCookMode();
+}
+
+// ---- LEFT RAIL — recipe browser ----
+function renderLeftRail(){
+  const el=document.getElementById('cm-left');if(!el)return;
+  // Coming Up — always first, styled as category
+  const comingUpHtml=`<div class="cm-cat-section cm-coming-up">
+    <div class="cm-cat-hdr" onclick="cmToggleCat('__coming_up__')">
+      <span class="cm-cat-name">Coming Up</span>
+      <span class="cm-cat-toggle">${cmExpandedCats.has('__coming_up__')?'−':'+'}</span>
+    </div>
+    <div class="cm-cat-recipes${cmExpandedCats.has('__coming_up__')?'':' collapsed'}">
+      <div class="cm-recipe-entry" style="font-style:italic;color:var(--ink3);cursor:default;">Meal plan not connected</div>
+    </div>
+  </div>`;
+  const catsHtml=CM_CATEGORIES.map(cat=>{
+    const catRecipes=RECIPES.filter(r=>r.category===cat);
+    if(!catRecipes.length)return'';
+    const isExpanded=cmExpandedCats.has(cat);
+    const recipesHtml=catRecipes.map(r=>`<div class="cm-recipe-entry" onclick="cmLaunchRecipe('${r.id}')">${r.name}</div>`).join('');
+    return`<div class="cm-cat-section">
+      <div class="cm-cat-hdr" onclick="cmToggleCat('${cat}')">
+        <span class="cm-cat-name">${cat}</span>
+        <span class="cm-cat-toggle">${isExpanded?'−':'+'}</span>
+      </div>
+      <div class="cm-cat-recipes${isExpanded?'':' collapsed'}">${recipesHtml}</div>
+    </div>`;
+  }).join('');
+  el.innerHTML=comingUpHtml+catsHtml;
+}
+
+function cmToggleCat(cat){
+  if(cmExpandedCats.has(cat))cmExpandedCats.delete(cat);
+  else cmExpandedCats.add(cat);
+  renderLeftRail();
+}
+
+// ---- AUTO-POPULATE TIMERS FROM RECIPE ----
+function cmPopulateTimers(recipe){
+  const timedSteps=recipe.steps.filter(s=>s.timer_seconds);
+  timedSteps.forEach(s=>{
+    const exists=activeTimers.some(t=>t.recipeId===recipe.id&&t.stepN===s.n);
+    if(!exists){
+      const id=++cmTimerId;
+      activeTimers.push({id,label:(s.timer_label||s.title).slice(0,15),total:s.timer_seconds,elapsed:0,state:'idle',intervalId:null,recipeId:recipe.id,stepN:s.n});
+    }
+  });
+  renderTimerStack();
+  renderManualTimer();
+}
+
+// ---- MANUAL TIMER ----
+function renderManualTimer(){
+  const el=document.getElementById('cm-manual-zone');if(!el)return;
+  const mm=String(_mtMinutes).padStart(2,'0');
+  el.innerHTML=`<div class="cm-mt-hdr">Manual Timer</div>
+    <div class="cm-mt-display" id="cm-mt-wheel">${mm}:00</div>
+    <div class="cm-mt-quick">
+      <button class="cm-mt-qbtn" onclick="mtAdd(-1)">−1m</button>
+      <button class="cm-mt-qbtn" onclick="mtAdd(1)">+1m</button>
+      <button class="cm-mt-qbtn" onclick="mtAdd(5)">+5m</button>
+    </div>
+    <button class="cm-mt-start" onclick="mtStart()">▶ Start Timer</button>`;
+  const wheel=document.getElementById('cm-mt-wheel');
+  if(wheel){
+    wheel.addEventListener('touchstart',e=>{_mtDragStartY=e.touches[0].clientY;_mtDragStartMin=_mtMinutes;e.preventDefault();},{passive:false});
+    wheel.addEventListener('touchmove',e=>{
+      if(_mtDragStartY===null)return;
+      const dy=_mtDragStartY-e.touches[0].clientY;
+      _mtMinutes=Math.max(1,Math.min(99,_mtDragStartMin+Math.round(dy/24)));
+      renderManualTimer();e.preventDefault();
+    },{passive:false});
+    wheel.addEventListener('mousedown',e=>{
+      _mtDragStartY=e.clientY;_mtDragStartMin=_mtMinutes;
+      const onMove=ev=>{const dy=_mtDragStartY-ev.clientY;_mtMinutes=Math.max(1,Math.min(99,_mtDragStartMin+Math.round(dy/24)));renderManualTimer();};
+      const onUp=()=>{document.removeEventListener('mousemove',onMove);document.removeEventListener('mouseup',onUp);};
+      document.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onUp);
+    });
+  }
+}
+function mtAdd(mins){_mtMinutes=Math.max(1,Math.min(99,_mtMinutes+mins));renderManualTimer();}
+function mtStart(){
+  if(_mtMinutes<1)return;
+  const id=++cmTimerId;
+  activeTimers.push({id,label:'Manual',total:_mtMinutes*60,elapsed:0,state:'idle',intervalId:null,recipeId:null,stepN:null});
+  renderTimerStack();
+  cmStartTimer(id);
+}
+
+// ---- FLOATING TIMER BAR ----
+function updateFloatBar(){
+  const bar=document.getElementById('cm-float-bar');if(!bar)return;
+  const visible=activeTimers.filter(t=>t.state==='running'||t.state==='done');
+  if(visible.length&&!cookOn){
+    bar.style.display='flex';
+    const html=visible.map(t=>`<span class="cm-float-timer${t.state==='done'?' done':''}">${t.label} ${fmtTime(t.total-t.elapsed)}</span>`).join('');
+    document.getElementById('cm-float-timers').innerHTML=html;
+  }else{
+    bar.style.display='none';
+  }
+}
+
+function renderStepList(){} // no-op — left rail is now recipe browser
+
+function renderCookLaunch(){
+  const center=document.getElementById('cm-center');if(!center)return;
+  const stepList=document.getElementById('cm-step-list');if(stepList)stepList.innerHTML='';
+  const list=RECIPES.map(r=>{
+    const altBadge=r.altitude_adjustments&&r.altitude_adjustments.length?` · ⛰️ altitude`:'';
+    const heirloom=r.heirloom?' · ⭐ heirloom':'';
+    return`<div class="cm-recipe-pick" onclick="cmLaunchRecipe('${r.id}')">
+      <div class="cm-recipe-pick-name">${r.icon} ${r.name}</div>
+      <div class="cm-recipe-pick-meta">${r.tags.join(', ')}${altBadge}${heirloom}</div>
+    </div>`;
+  }).join('');
+  center.innerHTML=`<div id="cm-launch"><div class="cm-launch-msg">Choose a recipe to begin cooking.</div><div class="cm-recipe-list">${list}</div></div>`;
+  renderCmTabs();
+}
+
+function renderCmTabs(){
+  const el=document.getElementById('cm-tabs');if(!el)return;
+  const tabHtml=cmTabs.map((t,i)=>{
+    const r=cmGetRecipe(t.recipeId);
+    const name=r?r.name:'Recipe';
+    return`<div class="cm-tab${i===cmActiveTab?' active':''}" onclick="cmSwitchTab(${i})">
+      ${name}<span class="cm-tab-x" onclick="event.stopPropagation();cmCloseTab(${i})">✕</span>
+    </div>`;
+  }).join('');
+  el.innerHTML=tabHtml+`<div class="cm-add-tab" onclick="cmAddRecipe()" title="Add another recipe">+</div>`;
+}
+
+function cmLaunchRecipe(id){
+  const existing=cmTabs.findIndex(t=>t.recipeId===id);
+  if(existing>=0){cmActiveTab=existing;}
+  else{
+    const r=cmGetRecipe(id);if(!r)return;
+    cmTabs.push({recipeId:id,servings:r.family_baseline});
+    cmActiveTab=cmTabs.length-1;
+    cmPopulateTimers(r);
+  }
+  // Expand this recipe's category in the left rail
+  const r=cmGetRecipe(id);
+  if(r&&r.category)cmExpandedCats.add(r.category);
+  renderCookMode();
+}
+
+function cmSwitchTab(i){
+  cmActiveTab=i;
+  renderCookMode();
+}
+
+function cmCloseTab(i){
+  cmTabs.splice(i,1);
+  if(cmActiveTab>=cmTabs.length)cmActiveTab=cmTabs.length-1;
+  renderCookMode();
+}
+
+function cmAddRecipe(){
+  renderCookLaunch();
+  cmActiveTab=-1;
+  renderCmTabs();
+}
+
+function cmAdjustServings(delta){
+  if(cmActiveTab<0||!cmTabs[cmActiveTab])return;
+  const t=cmTabs[cmActiveTab];
+  t.servings=Math.max(0.5,Math.round((t.servings+delta)*2)/2);
+  renderCookMode();
+}
+
+// ---- KIDS BROWSER ----
+function renderKidsBrowser(){
+  const grid=document.getElementById('kids-grid');if(!grid)return;
+  const kids=RECIPES.filter(r=>r.kids);
+  if(!kids.length){grid.innerHTML='<div class="kids-empty">No kids recipes yet. Ask Kalea or Matt to add some — look for the kids tag in Chow Hall.</div>';return;}
+  grid.innerHTML=kids.map(r=>{
+    const tags=r.tags.filter(t=>t!=='breakfast'||true).slice(0,3).map(t=>`<span class="kids-card-tag">${t}</span>`).join('');
+    return`<div class="kids-card" onclick="kidsLaunchRecipe('${r.id}')">
+      <div class="kids-card-icon">${r.icon}</div>
+      <div class="kids-card-name">${r.name}</div>
+      <div class="kids-card-tags">${tags}</div>
+    </div>`;
+  }).join('');
+}
+
+function kidsLaunchRecipe(id){
+  // Kids tap → launches Cook Mode with that recipe
+  kidsOn=false;cookOn=true;
+  document.getElementById('kids-scr').style.display='none';
+  document.getElementById('kids-btn').classList.remove('kids-active');
+  const calWrap=document.getElementById('cal-wrap');
+  const dhdrs=document.getElementById('dhdrs');
+  calWrap.style.display='none';dhdrs.style.display='none';
+  document.getElementById('cook-scr').style.display='flex';
+  document.getElementById('cook-btn').classList.add('cook-active');
+  cmLaunchRecipe(id);
+}
+
+function toggleKids(){
+  kidsOn=!kidsOn;cookOn=false;mealOn=false;nightOn=false;
+  document.getElementById('night-wake').style.display='none';
+  document.getElementById('night-btn').classList.remove('night-active');
+  document.getElementById('cook-btn').classList.remove('cook-active');
+  document.getElementById('meal-btn').classList.remove('meal-active');
+  const calWrap=document.getElementById('cal-wrap');
+  const dhdrs=document.getElementById('dhdrs');
+  calWrap.style.display=kidsOn?'none':'';
+  dhdrs.style.display=kidsOn?'none':'';
+  document.getElementById('cook-scr').style.display='none';
+  document.getElementById('meal-scr').style.display='none';
+  document.getElementById('month-scr').style.display='none';
+  document.getElementById('kids-scr').style.display=kidsOn?'flex':'none';
+  document.getElementById('kids-btn').classList.toggle('kids-active',kidsOn);
+  if(kidsOn)renderKidsBrowser();
+}
+
 function toggleCook(){
-  cookOn=!cookOn;mealOn=false;nightOn=false;
+  cookOn=!cookOn;mealOn=false;nightOn=false;kidsOn=false;
   document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');
   document.getElementById('meal-btn').classList.remove('meal-active');
+  document.getElementById('kids-btn').classList.remove('kids-active');
   const calWrap=document.getElementById('cal-wrap');
   const dhdrs=document.getElementById('dhdrs');
   calWrap.style.display=cookOn?'none':'';
   dhdrs.style.display=cookOn?'none':'';
-  // v2.2: cook-scr is position:fixed overlay — display:flex centers it
   document.getElementById('cook-scr').style.display=cookOn?'flex':'none';
   document.getElementById('meal-scr').style.display='none';
   document.getElementById('month-scr').style.display='none';
+  document.getElementById('kids-scr').style.display='none';
   document.getElementById('cook-btn').classList.toggle('cook-active',cookOn);
+  if(!cookOn){
+    const banner=document.getElementById('month-name');
+    const bannerYear=document.getElementById('month-year');
+    if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
+    if(bannerYear)bannerYear.style.display='';
+  }
+  if(cookOn&&cmActiveTab<0){renderCookLaunch();renderLeftRail();renderManualTimer();}
+  else if(cookOn){renderCookMode();}
 }
 function toggleMeal(){
-  mealOn=!mealOn;cookOn=false;nightOn=false;
+  mealOn=!mealOn;cookOn=false;nightOn=false;kidsOn=false;
   document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');
   document.getElementById('cook-btn').classList.remove('cook-active');
+  document.getElementById('kids-btn').classList.remove('kids-active');
   const calWrap=document.getElementById('cal-wrap');
   const dhdrs=document.getElementById('dhdrs');
   calWrap.style.display=mealOn?'none':'';
@@ -1424,6 +2159,7 @@ function toggleMeal(){
   document.getElementById('meal-scr').style.display=mealOn?'flex':'none';
   document.getElementById('cook-scr').style.display='none';
   document.getElementById('month-scr').style.display='none';
+  document.getElementById('kids-scr').style.display='none';
   document.getElementById('meal-btn').classList.toggle('meal-active',mealOn);
 }
 function toggleNight(){
@@ -1433,8 +2169,26 @@ function toggleNight(){
 }
 
 async function goHome(){
-  // v2.5: full page reload — picks up latest widget code + calendar data from server
-  location.reload();
+  cookOn=false;mealOn=false;nightOn=false;kidsOn=false;
+  document.getElementById('cook-scr').style.display='none';
+  document.getElementById('meal-scr').style.display='none';
+  document.getElementById('month-scr').style.display='none';
+  document.getElementById('kids-scr').style.display='none';
+  document.getElementById('cook-btn').classList.remove('cook-active');
+  document.getElementById('meal-btn').classList.remove('meal-active');
+  document.getElementById('kids-btn').classList.remove('kids-active');
+  document.getElementById('night-btn').classList.remove('night-active');
+  const calWrap=document.getElementById('cal-wrap');
+  const dhdrs=document.getElementById('dhdrs');
+  calWrap.style.display='';
+  dhdrs.style.display='';
+  // Restore banner
+  const banner=document.getElementById('month-name');
+  const bannerYear=document.getElementById('month-year');
+  if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
+  if(bannerYear)bannerYear.style.display='';
+  updateFloatBar();
+  // PQ-PHASE2: Hard reload disabled — sessionStorage timer persistence needed
 }
 
 function openAgent(name){
@@ -1452,15 +2206,12 @@ function updateEggCard(){
   if(est)est.style.display=h>=16?'block':'none';
 }
 
+// v2.6: syncNavH — measures both header and nav, sets --hh and --nh
 function syncHdrH(){
   const hdr=document.getElementById('hdr');
+  const bot=document.getElementById('bottom');
   document.documentElement.style.setProperty('--hh',hdr.offsetHeight+'px');
-}
-
-// v2.6: syncNavH — measures actual nav height, writes to --nh for cook-scr centering
-function syncNavH(){
-  const nav=document.getElementById('bottom');
-  document.documentElement.style.setProperty('--nh',nav.offsetHeight+'px');
+  if(bot)document.documentElement.style.setProperty('--nh',bot.offsetHeight+'px');
 }
 
 async function loadCalendar(){
@@ -1494,26 +2245,151 @@ async function init(){
   updateEggCard();
   initRolling();
   syncHdrH();
-  syncNavH();
-  window.addEventListener('resize',()=>{syncHdrH();syncNavH();if(curView==='week')applyWeekLayout();});
+  window.addEventListener('resize',()=>{syncHdrH();if(curView==='week')applyWeekLayout();});
   window.addEventListener('scroll',updateBannerFromScroll,{passive:true});
   setInterval(updateEggCard,60000);
+  setInterval(updateFloatBar,1000);
+  renderManualTimer();
+  // Delegated timer button handler — survives DOM re-renders
+  document.getElementById('cm-timers').addEventListener('click',e=>{
+    const btn=e.target.closest('[data-action]');if(!btn)return;
+    const id=parseInt(btn.dataset.tid);
+    const action=btn.dataset.action;
+    if(action==='start')cmStartTimer(id);
+    else if(action==='stop')cmStopTimer(id);
+    else if(action==='dismiss')cmDismissTimer(id);
+    else if(action==='silence')cmSilenceTimer(id);
+  });
+  // Delegated handler for frozen pane (toggle + ingredient tabs)
+  document.getElementById('cm-center').addEventListener('click',e=>{
+    const el=e.target.closest('[data-action]');if(!el)return;
+    const action=el.dataset.action;
+    if(action==='togglepane')cmToggleIngPane();
+    else if(action==='ingtab'){const tab=el.dataset.tab;cmSetIngTab(isNaN(tab)?tab:parseInt(tab));}
+  });
 }
+
+// ============================================================
+// AUDIO LAYER — v2.9 — WIRED, DORMANT
+// speak() and playSound() are Phase 3 hooks.
+// Nothing fires until ElevenLabs API key and sound library
+// are wired in. Do NOT activate without Phase 3 gate clearance.
+// Budget flag: ElevenLabs Creator $22/mo, Flash model.
+// ============================================================
+
+// VOICE CAST — Phase 3 ElevenLabs voice IDs (null until assigned)
+// Al          = deep, dry, measured — Al Borland
+// Foreman     = warm, cryptic — Wilson
+// Chow Hall   = warm, practical female — Jill Taylor
+// Punch List  = enthusiastic, direct male — Tim Taylor
+// Whetstone   = authoritative broadcaster — Binford announcer
+// Mystery Ranch = gruff, outdoorsman — Bud
+// Stockyard   = working-class, no-nonsense — Marty
+// Rootstock   = warm, earthy female — Al's mom
+const VOICE_CAST={
+  al:         null,  // Phase 3: ElevenLabs voice ID
+  foreman:    null,  // Phase 3: ElevenLabs voice ID
+  chowhall:   null,  // Phase 3: ElevenLabs voice ID
+  punchlist:  null,  // Phase 3: ElevenLabs voice ID
+  whetstone:  null,  // Phase 3: ElevenLabs voice ID
+  mysteranch: null,  // Phase 3: ElevenLabs voice ID
+  stockyard:  null,  // Phase 3: ElevenLabs voice ID
+  rootstock:  null,  // Phase 3: ElevenLabs voice ID
+};
+
+// SOUND LIBRARY — Phase 3 local files on ThinkPad /sounds/
+// Map key → filename. All null until files are present.
+const SOUNDS={
+  boot:          null,  // Home Improvement theme riff — widget load / morning
+  morePower:     null,  // "More power" — calendar write confirmed
+  argh:          null,  // Tool grunt argh argh argh — CCIR critical alert
+  binfordJingle: null,  // Binford Tools jingle — 17:15 dinner warning
+  arghApproval:  null,  // Argh of approval — task complete
+  idontThinkSo:  null,  // "I don't think so Tim" — system error
+  flockAnomaly:  null,  // Stockyard alert tone
+  frostAlert:    null,  // Rootstock frost alert tone
+};
+
+// speak(text, agent) — Phase 3 TTS via ElevenLabs Flash model
+// agent = key in VOICE_CAST; defaults to 'al'
+// DORMANT: logs intent, does nothing until ElevenLabs wired
+function speak(text, agent='al'){
+  // Phase 3 wire-in:
+  // const voiceId = VOICE_CAST[agent];
+  // if(!voiceId){ console.warn('[speak] no voice ID for agent:'+agent); return; }
+  // fetch ElevenLabs /v1/text-to-speech/{voiceId} with Flash model
+  // → blob → new Audio(URL.createObjectURL(blob)).play()
+  console.log('[speak] DORMANT | agent:'+agent+' | text:'+text);
+}
+
+// playSound(key) — Phase 3 local sound file player
+// key = key in SOUNDS; file served from ThinkPad /sounds/
+// DORMANT: logs intent, does nothing until files present
+function playSound(key){
+  // Phase 3 wire-in:
+  // const file = SOUNDS[key];
+  // if(!file){ console.warn('[playSound] no file for key:'+key); return; }
+  // new Audio('/sounds/'+file).play().catch(e=>console.warn('[playSound] error:',e));
+  console.log('[playSound] DORMANT | key:'+key);
+}
+
+// HOOK: Morning briefing — call at 06:00 via scheduleMorningBriefing()
+// Sequence: playSound('boot') → speak(dayBriefText, 'foreman')
+// Foreman reads the day. Wilson at the fence. Saints of the day included.
+// DORMANT until Phase 3
+function scheduleMorningBriefing(){
+  // Phase 3 wire-in:
+  // 1. Build dayBriefText from today's allEvts + liturgical data
+  // 2. playSound('boot')
+  // 3. speak(dayBriefText, 'foreman')
+  // Schedule via: const now=new Date(); const next6=...; setTimeout(fn, next6-now);
+  console.log('[morningBriefing] DORMANT');
+}
+
+// HOOK: CCIR alert — call when critical household alert fires
+// Sequence: playSound('argh') → speak(text, 'al')
+// DORMANT until Phase 3
+function ccirAlert(text){
+  // Phase 3 wire-in:
+  // playSound('argh');
+  // speak(text, 'al');
+  console.log('[ccirAlert] DORMANT | '+text);
+}
+
+// HOOK: Dinner reminder — call at 17:15 daily
+// Sequence: playSound('binfordJingle') → speak('Dinner in fifteen minutes.', 'chowhall')
+// DORMANT until Phase 3
+function dinnerReminder(){
+  // Phase 3 wire-in:
+  // playSound('binfordJingle');
+  // speak('Dinner in fifteen minutes.', 'chowhall');
+  console.log('[dinnerReminder] DORMANT');
+}
+
+// ============================================================
+// END AUDIO LAYER
+// ============================================================
 
 document.addEventListener('DOMContentLoaded',init);
 </script>
 <!--
-v2.8 OPEN PQ QUEUE:
+v3.0 OPEN PQ QUEUE:
 PQ-22: Liturgical data 2028-2035 — PARKED
 PQ-03: Egg count hardcoded 47. Pull from stockyard:eggs-log (Wave 4.6)
 PQ-04: Agent buttons open alert stubs. Wire to agent modules (Wave 4.6)
 PQ-05: Trash cadence — real 4-week schedule
 PQ-06: Saint panel — Mantel stub active; full build Wave 4.6
-PQ-08: Cook mode recipe — requires Chow Hall Wave 4.6
 PQ-10: OMA+PAPA dual-color span — future enhancement
 PQ-11: Meal Planner full view — Chow Hall Wave 4.6
-PARKED: Phase 2 custom icon upgrade — medical symbol priority
-PARKED: Swim meet venue names — full venue confirmation needed
+PQ-29: Cook mode centering perception — PARKED
+PQ-30: Wire RECIPES[] to fetch live from recipes/*.json on ThinkPad server
+PQ-31: Chow Hall post-cook altitude follow-up prompt hook
+PQ-32: Phase 3 — voice timer start/stop
+PHASE 3 HOOKS (dormant — do not activate without gate clearance):
+  speak() / playSound() / VOICE_CAST / SOUNDS
+  scheduleMorningBriefing() / ccirAlert() / dinnerReminder()
+  Budget: ElevenLabs Creator $22/mo Flash model
+  Sound library: local /sounds/ on ThinkPad server
 -->
 </body>
 </html>
