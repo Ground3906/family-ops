@@ -7,7 +7,6 @@
 
 ## Formatting Rules
 
-- **24-hour clock, always.** `17:30`, not `5:30 PM`. No exceptions, no fallbacks, no parenthetical translations. Charter-level rule.
 - **ISO dates, always.** `2026-05-15`. Weekday optional for readability: `2026-05-15 (Fri)`.
 
 ---
