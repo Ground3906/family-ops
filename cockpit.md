@@ -1,7 +1,7 @@
 # cockpit.md — Bayer Family Ops Display System
 
-**Status:** Hardware decided. Pending software gates. Do not order until gates clear.
-**Last updated:** 2026-05-25
+**Status:** Hardware PURCHASED. Software gates open. Installation pending.
+**Last updated:** 2026-05-27
 
 ---
 
@@ -315,17 +315,21 @@ Every Phase 2 UI decision must be validated against these specs:
 
 ---
 
-## Purchase Hold Conditions
+## Software Gates — Install Readiness
 
-**DO NOT ORDER until all four gates are green:**
+Hardware is purchased and in hand. Installation proceeds when software gates are green.
+Gates 1 and 4 cleared. Gates 2 and 3 still open — install can begin in parallel;
+real operational data entry holds until S8 durability fix ships.
 
-- [ ] Wave 4.5 widget loads clean — Kalea can use without instruction
-- [ ] At least 2 agents writing to `calendars.md` reliably via Foreman handoff
-- [ ] Stockyard S8 durability fix shipped
-- [ ] ThinkPad running headless clean for 1 full week without babysitting
+| Gate | Description | Status |
+|------|-------------|--------|
+| 1 | Wave 4.5 widget loads clean — Kalea can use without instruction | ✅ GREEN — v2.9 |
+| 2 | At least 2 agents writing to `calendars.md` reliably via Foreman handoff | 🔲 OPEN |
+| 3 | Stockyard S8 durability fix shipped | 🔲 OPEN |
+| 4 | ThinkPad running headless clean for 1 full week without babysitting | ✅ GREEN |
 
-When all four are green: two eBay purchases, 5 minutes, done.
-Hardware decision is final. No further research needed.
+**S8 gate discipline:** Cockpit can go on the wall and run the widget. No real flock
+data entry until S8 is resolved. Stockyard runs display-only until then.
 
 ---
 
@@ -333,8 +337,8 @@ Hardware decision is final. No further research needed.
 
 | Item | Status | Price |
 |------|--------|-------|
-| PaitentPoint 32" Android Wallboard (eBay 205826242798) | Locked | $349.99 |
-| Ergotron LX Wall Mount (used) | Locked | $64.99 |
+| PaitentPoint 32" Android Wallboard (eBay 205826242798) | **PURCHASED** | $349.99 |
+| Ergotron LX Wall Mount (used) | **PURCHASED** | $64.99 |
 | **Cockpit total** | | **$414.98** |
 | Firewalla Purple SE (separate purchase — Wyatt/network) | Planned | ~$329.00 |
 | **Full infrastructure total** | | **~$743.98** |
