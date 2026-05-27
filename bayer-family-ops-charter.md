@@ -1,8 +1,8 @@
-# Bayer Family Operations — Charter v1.6
+# Bayer Family Operations — Charter v1.7
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-05-26 — v1.6: Engine check added as mandatory session-open step. Verbosity nudge calibrated (subtle trim, not bare-bones). Git walkthrough memory authority note added — spin-up docs must not re-describe. Wave 6.2 built (recipe library schema + seed recipes + capture session guide).
+**Last updated:** 2026-05-27 — v1.7: Top-level-first purge principle added to Anti-Silo Principles (principle 7). House-cleaning session: stale roster counts, build status block, and redundant rules purged from project instructions and agent files.
 **Prior:** 2026-05-26 — v1.5: Plain-language rule added. Question/pick balance added. Lock divider style render-fix (blank lines around both rules). Wave 6.1 built (freezer.json + pantry.md + canning-goals.md). Chow Hall inventory ownership RESOLVED + LOCKED.
 **Prior:** 2026-05-26 — v1.4: Lock divider style added. Verbosity trim added. Chow Hall Layer 2 (Recipe Library) designed — carried in Wave 6.0 spin-up. Equipment registry expanded (KitchenAid stand mixer, Broil King grill).
 
@@ -154,6 +154,7 @@ Re-read before adding any agent.
 4. **Shared state schema changes get versioned.** Adding a new field? Note it in `family.md` so all agents pick it up.
 5. **One source of truth per fact.** Family roster lives only in `family.md`. Vehicle list lives only in `vehicles.json`. Never duplicate.
 6. **Pills identify ownership, not logistics.** A pill on a calendar event means that person owns the event. Driver and vehicle assignment is Punch List territory, surfaced in the detail panel on tap.
+7. **Top-level first; repeats get purged.** Start at the highest-authority file and work down. Any fact already owned at a higher level (charter, Profile, family.md) does not get restated in agent files or project instructions. Volatile state (build status, roster counts) lives where it belongs and loads from there — never fossilized in instructions or agent definitions.
 
 ---
 

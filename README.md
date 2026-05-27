@@ -1,10 +1,10 @@
 # Bayer Family Ops
 
 **Repo:** `github.com/Ground3906/family-ops` (private)
-**Local path:** `C:\Users\ThinkPad X1 Carbon\Documents\family-ops\`
+**Local path:** `C:\dev\family-ops\` (Precision = dev, ThinkPad = server)
 **Maintained by:** Matt & Kalea Bayer
 **Schema version:** 1 (see `prefs.md` for history)
-**Last updated:** 2026-05-25
+**Last updated:** 2026-05-27
 
 ---
 
@@ -16,28 +16,9 @@ Operational nerve center for the Bayer household. Structured Markdown and JSON f
 
 ---
 
-## Cold-session read order
+## Doctrine
 
-1. This file (`README.md`)
-2. `family.md` — who is in the family
-3. `prefs.md` — conventions, sacred rules, standing decisions
-4. `calendars.md` — Foreman reads this; any agent scheduling an event reads it too
-5. `handoffs.json` — filter to `to: self`, `status: open`
-6. `ccir-protocol.md` — household urgent-issue routing doctrine (notifier/arbiter pattern)
-
-Then load agent-specific data files for the session domain.
-
----
-
-## Rules
-
-- **Agents propose; Matt commits.** Nothing is written to the repo silently.
-- **One fact, one file.** Don''t restate roster data outside `family.md`. Reference by name or ID.
-- **Secrets policy: NEVER STORE.** No passwords, API keys, SSNs, AWS account IDs.
-- **Append-only for logs.** Status flags over deletes. Destructive actions are logged in `prefs.md`.
-- **Confirm before shared calendar or state writes.** Same as the repo: propose, then commit.
-- **24-hour clock, always.** `17:30`, not `5:30 PM`.
-- **ISO dates, always.** `2026-05-15`.
+See [`bayer-family-ops-charter.md`](bayer-family-ops-charter.md).
 
 ---
 

@@ -1,4 +1,4 @@
-﻿# CCIR Protocol — Bayer Household Urgent-Issue Routing
+# CCIR Protocol — Bayer Household Urgent-Issue Routing
 
 **Schema version:** 1
 **Owner:** Household-wide doctrine (read by all agents)
@@ -84,7 +84,7 @@ Kalea is on drill in Hawaii. Wyatt spots a Dodge issue. Options, in order:
 First to drop it wins. Subsequent observations get appended to the same item, not duplicated. If two observations differ in detail, both stay — arbiter reconciles during triage.
 
 ### Notifier is a kid
-Fully valid. Wyatt, Molly, Rileigh — all old enough to be notifiers. Twins and infant get observed *on* rather than observing. A kid''s drop should be acknowledged with the same seriousness as an adult''s; the protocol works only if notifiers trust the system.
+Fully valid. Wyatt, Molly, Rileigh — all old enough to be notifiers. Younger kids get observed *on* rather than observing. A kid''s drop should be acknowledged with the same seriousness as an adult''s; the protocol works only if notifiers trust the system.
 
 ### The observation is mid-task and can''t be written down
 Voice memo to self. Text to Matt. Even just saying it out loud to whoever else is present so they can carry it. Anything that gets it out of working memory and onto something durable.

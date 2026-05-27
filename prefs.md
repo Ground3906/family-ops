@@ -298,7 +298,7 @@ Charter-level scheduling rule.
 | 2026-05-25 | Three-pass pill logic locked | Collapse → travel subtract → re-collapse. Travel suppression applied after collapse, not before. Prevents swim practice rendering as individuals when traveler removed. |
 | 2026-05-25 | Pill display order locked | Always: D→K→W→M→R→C→E→B6→OMA→PAPA→GUEST. FAM/KIDS always far left. |
 | 2026-05-25 | Swim meets = family category locked | Swim meets use :: family. Swim practice uses :: kids. Swim meets are whole-family events; practice is kids-only. |
-| 2026-05-25 | Agent emojis updated | Chow Hall: 🍳→🍴. Mystery Ranch: 🎒→⛺. Medical category: ⚕️→➕. All agents adopt. |
+| 2026-05-25 | Agent emojis updated | Chow Hall: 🍴. Mystery Ranch: ⛺. Medical category: ➕. All agents adopt. |
 | 2026-05-25 | Tentative treatment updated | Amber tint + wide diagonal stripes + dashed amber border. More prominent than v2.0 diagonal-only. |
 
 ---

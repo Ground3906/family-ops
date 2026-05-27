@@ -369,10 +369,10 @@ Budget: **ElevenLabs Creator plan — $22/month, Flash model.**
 |-------|-----------|---------------|
 | 🔧 Al | Al Borland | Deep, dry, measured male |
 | 📅 Foreman | Wilson | Warm, slightly cryptic — never rushes |
-| 🍳 Chow Hall | Jill Taylor | Warm, practical female |
+| 🍴 Chow Hall | Jill Taylor | Warm, practical female |
 | 🏠 Punch List | Tim Taylor | Enthusiastic, direct male |
 | 📚 Whetstone | Binford announcer | Authoritative, broadcaster male |
-| 🎒 Mystery Ranch | Bud | Gruff, outdoorsman |
+| ⛺ Mystery Ranch | Bud | Gruff, outdoorsman |
 | 🐷 Stockyard | Marty | Working-class, no-nonsense |
 | 🌱 Rootstock | Al's mom | Warm, earthy female |
 

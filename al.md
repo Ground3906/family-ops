@@ -95,7 +95,7 @@ When you emit a handoff:
 
 ## Family-Care Nudges
 
-Five kids in the house, including twins (age 6) and an infant (~Feb 2026).
+Roster: family.md.
 
 - Weekends, especially Sunday: if the session is running long and the work isn't urgent, **say so**. *"Tim — kids are awake. This'll keep. Go."*
 - Evening past 21:00 on a school night: gentle nudge. *"This is the kind of thing future-Tim handles better. Bookmark and move?"*

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generated": "2026-05-15",
-  "source": "fleet-state-v1.md — intake session 2026-05-14",
+  "source": "fleet-state-v1.md \u2014 intake session 2026-05-14",
   "owner": "Punch List",
   "tasks": [
     {
@@ -19,21 +19,21 @@
       "what_is_needed": [
         "Current registration card (locate in file cabinet)",
         "Proof of insurance on Jackson trailer",
-        "Payment for CO registration fee (trailer — check Custer County rate, typically $50-$100)",
+        "Payment for CO registration fee (trailer \u2014 check Custer County rate, typically $50-$100)",
         "Title if DMV requires it for a renewal (unlikely but confirm)",
-        "Mail-in option: check CO DMV online renewal eligibility first — may not require a trip"
+        "Mail-in option: check CO DMV online renewal eligibility first \u2014 may not require a trip"
       ],
-      "bundling_note": "Cañon City day (DMV is southeast, ~1 hr) or mail-in / online. Confirm online eligibility first. If DMV visit required, bundle with Austin Auto drop-off or other Cañon City stops.",
+      "bundling_note": "Ca\u00f1on City day (DMV is southeast, ~1 hr) or mail-in / online. Confirm online eligibility first. If DMV visit required, bundle with Austin Auto drop-off or other Ca\u00f1on City stops.",
       "calendar_block_requested": true,
       "calendar_block_requested_at": "2026-05-15",
-      "notes": "October renewal. 30-day lead = 2026-09-01 target action date. Foreman handoff emitted 2026-05-15 requesting calendar block in early September 2026. Wave 4 cleanup outstanding: calendars.md currently shows 2026-08-01 prompt — needs rewrite to 2026-09-01. Surface to Matt until rewrite ships.",
+      "notes": "October renewal. 30-day lead = 2026-09-01 target action date. Foreman handoff emitted 2026-05-15 requesting calendar block in early September 2026. Wave 4 cleanup outstanding: calendars.md currently shows 2026-08-01 prompt \u2014 needs rewrite to 2026-09-01. Surface to Matt until rewrite ships.",
       "status": "scheduled"
     },
     {
       "id": "gehl-hyd-door-switch",
       "type": "task",
       "asset": "Gehl 5640E",
-      "description": "Hydraulic lock door switch INOP. Part on hand. Tim install — no shop required.",
+      "description": "Hydraulic lock door switch INOP. Part on hand. Tim install \u2014 no shop required.",
       "priority": "routine",
       "estimated_cost": null,
       "shop": null,
@@ -47,14 +47,14 @@
       "id": "nv3500-lf-lower-control-arm",
       "type": "task",
       "asset": "NV3500",
-      "description": "LF lower control arm replacement — cam bolt seized, full alignment not achievable until replaced. Alignment work done 2026-05-05 but limited by this item.",
+      "description": "LF lower control arm replacement \u2014 cam bolt seized, full alignment not achievable until replaced. Alignment work done 2026-05-05 but limited by this item.",
       "priority": "routine",
       "estimated_cost": null,
       "shop": "Austin Automotive",
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Seizure discovered at 2026-05-05 service (103,777 mi). Alignment is partial until this is resolved. Bundle with any Cañon City day. NV3500 Titan front-end conversion: front parts via Titan catalog, not NV3500.",
+      "notes": "Seizure discovered at 2026-05-05 service (103,777 mi). Alignment is partial until this is resolved. Bundle with any Ca\u00f1on City day. NV3500 Titan front-end conversion: front parts via Titan catalog, not NV3500.",
       "status": "open"
     },
     {
@@ -68,7 +68,7 @@
       "quoted_date": "2024-10-01",
       "due_date": null,
       "prompt_date": null,
-      "notes": "Quote is 19 months stale — verify current pricing when scheduling. Part of $962 total open deferred on Tahoe. Water pump replaced Jan 2026; cooling system otherwise solid. Bundle with front axle seals (tahoe-front-axle-seals) to keep Tahoe in shop once.",
+      "notes": "Quote is 19 months stale \u2014 verify current pricing when scheduling. Part of $962 total open deferred on Tahoe. Water pump replaced Jan 2026; cooling system otherwise solid. Bundle with front axle seals (tahoe-front-axle-seals) to keep Tahoe in shop once.",
       "status": "open"
     },
     {
@@ -82,7 +82,7 @@
       "quoted_date": "2025-04-10",
       "due_date": null,
       "prompt_date": null,
-      "notes": "RO #43463 on file at Austin Auto. Quote is 13 months stale — verify pricing. Part of $962 total open deferred on Tahoe. Bundle with heater hose tees (tahoe-heater-hose-tees-coolant). Above $250 threshold — Matt confirms before scheduling.",
+      "notes": "RO #43463 on file at Austin Auto. Quote is 13 months stale \u2014 verify pricing. Part of $962 total open deferred on Tahoe. Bundle with heater hose tees (tahoe-heater-hose-tees-coolant). Above $250 threshold \u2014 Matt confirms before scheduling.",
       "status": "open"
     },
     {
@@ -96,7 +96,7 @@
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "High Valley is mobile service — they travel onsite. Emissions deleted on this truck; disclose to any shop. Monitor until wobble worsens or Dodge is needed for a high-speed run.",
+      "notes": "High Valley is mobile service \u2014 they travel onsite. Emissions deleted on this truck; disclose to any shop. Monitor until wobble worsens or Dodge is needed for a high-speed run.",
       "status": "open"
     },
     {
@@ -110,35 +110,35 @@
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Jan 2026 Austin Auto service did extensive front-end work — wobble persists. Separate from Dodge wobble. Monitor. If Denver pre-trip check flags it as safety-relevant, escalate to urgent and route to Austin Auto.",
+      "notes": "Jan 2026 Austin Auto service did extensive front-end work \u2014 wobble persists. Separate from Dodge wobble. Monitor. If Denver pre-trip check flags it as safety-relevant, escalate to urgent and route to Austin Auto.",
       "status": "open"
     },
     {
       "id": "nv3500-cyl7-tick-research",
       "type": "task",
       "asset": "NV3500",
-      "description": "Cylinder 7 ticking. TSB suggests block replacement. Oil consumption confirmed at 1 qt per 8,000 mi. Research-flag only — monitor, do not act.",
+      "description": "Cylinder 7 ticking. TSB suggests block replacement. Oil consumption confirmed at 1 qt per 8,000 mi. Research-flag only \u2014 monitor, do not act.",
       "priority": "watch",
       "estimated_cost": null,
       "shop": null,
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "TSB on record. Current consumption rate (1 qt/8k mi) is marginal — acceptable watch posture. NV3500 is Titan front-end conversion; engine is standard NV3500 VK56DE. Reassess if consumption rate increases or ticking worsens.",
+      "notes": "TSB on record. Current consumption rate (1 qt/8k mi) is marginal \u2014 acceptable watch posture. NV3500 is Titan front-end conversion; engine is standard NV3500 VK56DE. Reassess if consumption rate increases or ticking worsens.",
       "status": "open"
     },
     {
       "id": "nv3500-alignment-delta-analysis",
       "type": "task",
       "asset": "NV3500",
-      "description": "Alignment printout delta analysis — compare 80,417 mi vs 103,773 mi printouts for wear-pattern changes. Punch List internal post-deploy task.",
+      "description": "Alignment printout delta analysis \u2014 compare 80,417 mi vs 103,773 mi printouts for wear-pattern changes. Punch List internal post-deploy task.",
       "priority": "deferred",
       "estimated_cost": null,
       "shop": null,
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Printouts from Austin Auto (80k service) and Car Pros Muffler Masters (103k service, 2026-05-05). LF lower control arm cam seizure limits value of current alignment — complete this analysis after nv3500-lf-lower-control-arm is resolved and new alignment is pulled.",
+      "notes": "Printouts from Austin Auto (80k service) and Car Pros Muffler Masters (103k service, 2026-05-05). LF lower control arm cam seizure limits value of current alignment \u2014 complete this analysis after nv3500-lf-lower-control-arm is resolved and new alignment is pulled.",
       "status": "open"
     },
     {
@@ -152,7 +152,7 @@
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Tim verbal 2026-05-14. No action warranted at this time. If seeps increase in volume or new seeps appear, escalate to High Valley Diesel. High Valley is mobile — they travel onsite.",
+      "notes": "Tim verbal 2026-05-14. No action warranted at this time. If seeps increase in volume or new seeps appear, escalate to High Valley Diesel. High Valley is mobile \u2014 they travel onsite.",
       "status": "open"
     },
     {
@@ -166,7 +166,7 @@
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Trailer registered current through May 2027. Axles repacked and spring packs replaced 2018. Low-use asset — tire age is the primary silent failure mode. Check DOT date on every haul if >6 months since last check. Self-service.",
+      "notes": "Trailer registered current through May 2027. Axles repacked and spring packs replaced 2018. Low-use asset \u2014 tire age is the primary silent failure mode. Check DOT date on every haul if >6 months since last check. Self-service.",
       "status": "open"
     },
     {
@@ -187,7 +187,7 @@
       "id": "gehl-pm-250hr",
       "type": "pm-interval",
       "asset": "Gehl 5640E",
-      "description": "250-hour PM cycle — oil change + filters. Deutz BF4M2011 spec. Delo 15W-40 (Avon Parks & Rec standard, Deutz-spec).",
+      "description": "250-hour PM cycle \u2014 oil change + filters. Deutz BF4M2011 spec. Delo 15W-40 (Avon Parks & Rec standard, Deutz-spec).",
       "interval_hours": 250,
       "current_hours": 2009,
       "last_service_hours": null,
@@ -195,14 +195,14 @@
       "next_service_approx_date": "2027-03-01",
       "shop": "High Valley Diesel",
       "estimated_cost": null,
-      "notes": "Annual use ~82 hrs. At current pace, 2,250 hrs reached approx spring 2027 — aligns with 'Spring 2027 oil change' alert in fleet-state-v1.md. High Valley Diesel is mobile — schedule onsite. Engine catalog: Deutz for parts lookups, not Gehl. Last full PM on record: 2019-04-10 at Faris Machinery (oil + filters + fuel system overhaul).",
+      "notes": "Annual use ~82 hrs. At current pace, 2,250 hrs reached approx spring 2027 \u2014 aligns with 'Spring 2027 oil change' alert in fleet-state-v1.md. High Valley Diesel is mobile \u2014 schedule onsite. Engine catalog: Deutz for parts lookups, not Gehl. Last full PM on record: 2019-04-10 at Faris Machinery (oil + filters + fuel system overhaul).",
       "status": "open"
     },
     {
       "id": "nv3500-oil-change-interval",
       "type": "pm-interval",
       "asset": "NV3500",
-      "description": "Oil change interval tracking — synthetic, 5.6L V8 VK56DE gas. Last oil change 2026-05-05 at 103,777 mi (Car Pros Muffler Masters).",
+      "description": "Oil change interval tracking \u2014 synthetic, 5.6L V8 VK56DE gas. Last oil change 2026-05-05 at 103,777 mi (Car Pros Muffler Masters).",
       "interval_miles": 7500,
       "current_miles": 103777,
       "last_service_miles": 103777,
@@ -210,14 +210,14 @@
       "next_service_approx_date": null,
       "shop": "Austin Automotive",
       "estimated_cost": null,
-      "notes": "Synthetic oil per service history. Annual mileage TBD — use pattern data once available. Previous interval: 83,897 → 103,773 = 19,876 mi (two oil changes in that span based on $cost). Monitor cyl-7 tick and oil consumption (1 qt/8k) at each oil change.",
+      "notes": "Synthetic oil per service history. Annual mileage TBD \u2014 use pattern data once available. Previous interval: 83,897 \u2192 103,773 = 19,876 mi (two oil changes in that span based on $cost). Monitor cyl-7 tick and oil consumption (1 qt/8k) at each oil change.",
       "status": "open"
     },
     {
       "id": "dodge-cel-2026-05-15",
       "type": "task",
       "asset": "Dodge Ram 2500",
-      "description": "Check engine light observed 2026-05-15. Codes unknown. Emissions-deleted 6.7L Cummins — delete can produce persistent baseline fault codes, but CEL may also indicate a genuine mechanical, fuel, or sensor fault. Bundle with overdue oil change at High Valley Diesel.",
+      "description": "Check engine light observed 2026-05-15. Codes unknown. Emissions-deleted 6.7L Cummins \u2014 delete can produce persistent baseline fault codes, but CEL may also indicate a genuine mechanical, fuel, or sensor fault. Bundle with overdue oil change at High Valley Diesel.",
       "priority": "routine",
       "estimated_cost": null,
       "shop": "High Valley Diesel",
@@ -226,14 +226,14 @@
       "observed_miles": 181342,
       "due_date": null,
       "prompt_date": null,
-      "notes": "CCIR received 2026-05-15. Tier: Routine. Diesel with emissions delete — disclose to High Valley. Delete can produce persistent emissions-related fault codes (baseline noise); CEL visibility on cluster may be normal or may indicate new fault. Code read required before any determination. Oil change also overdue (8,564 mi since last confirmed service at 172,778 mi; interval 7,500 mi) — bundle both into same High Valley visit. If codes reveal work above $250, surface to Matt before proceeding. High Valley is mobile — schedule onsite or confirm drop-off. Dodge is not a daily driver (~3,000 mi/year); not urgent but don't defer past next use.",
+      "notes": "CCIR received 2026-05-15. Tier: Routine. Diesel with emissions delete \u2014 disclose to High Valley. Delete can produce persistent emissions-related fault codes (baseline noise); CEL visibility on cluster may be normal or may indicate new fault. Code read required before any determination. Oil change also overdue (8,564 mi since last confirmed service at 172,778 mi; interval 7,500 mi) \u2014 bundle both into same High Valley visit. If codes reveal work above $250, surface to Matt before proceeding. High Valley is mobile \u2014 schedule onsite or confirm drop-off. Dodge is not a daily driver (~3,000 mi/year); not urgent but don't defer past next use.",
       "status": "open"
     },
     {
       "id": "dodge-oil-change-interval",
       "type": "pm-interval",
       "asset": "Dodge Ram 2500",
-      "description": "Oil change interval tracking — 6.7L Cummins diesel, 15W-40 synthetic blend, 12 qt capacity. Emissions deleted. ~3,000 mi/year.",
+      "description": "Oil change interval tracking \u2014 6.7L Cummins diesel, 15W-40 synthetic blend, 12 qt capacity. Emissions deleted. ~3,000 mi/year.",
       "interval_miles": 7500,
       "current_miles": 181342,
       "last_service_miles": 172778,
@@ -241,14 +241,14 @@
       "next_service_approx_date": null,
       "shop": "High Valley Diesel",
       "estimated_cost": null,
-      "notes": "Last confirmed service 2025-05-19 at 172,778 mi (Austin Auto — full deferred-MX recovery). Dodge is at 181,342 mi (2026-05-15) — 8,564 mi since last oil change, past the 7,500-mi interval. Bundle with dodge-cel-2026-05-15 code read at High Valley. Emissions deleted — disclose to any shop. High Valley preferred for diesel-specific work.",
+      "notes": "Last confirmed service 2025-05-19 at 172,778 mi (Austin Auto \u2014 full deferred-MX recovery). Dodge is at 181,342 mi (2026-05-15) \u2014 8,564 mi since last oil change, past the 7,500-mi interval. Bundle with dodge-cel-2026-05-15 code read at High Valley. Emissions deleted \u2014 disclose to any shop. High Valley preferred for diesel-specific work.",
       "status": "open"
     },
     {
       "id": "tahoe-oil-change-interval",
       "type": "pm-interval",
       "asset": "Tahoe",
-      "description": "Oil change interval tracking — 5.3L V8 gas, 4WD. Last oil change January 2026 at Austin Auto (multi-point + LOF, 176,861 mi in).",
+      "description": "Oil change interval tracking \u2014 5.3L V8 gas, 4WD. Last oil change January 2026 at Austin Auto (multi-point + LOF, 176,861 mi in).",
       "interval_miles": 5000,
       "current_miles": 182114,
       "last_service_miles": 176861,
@@ -256,14 +256,14 @@
       "next_service_approx_date": null,
       "shop": "Austin Automotive",
       "estimated_cost": null,
-      "notes": "Current reading 182,114 mi (2026-05-15) — approximately 5,253 mi since last service. At or near interval. Use is transitioning from ~17.7k/yr annualized (Salida run pattern) to ~8k/yr projected. Bundle oil change with open deferred items (axle seals, heater hose tees) on next Cañon City day to minimize shop trips.",
+      "notes": "Current reading 182,114 mi (2026-05-15) \u2014 approximately 5,253 mi since last service. At or near interval. Use is transitioning from ~17.7k/yr annualized (Salida run pattern) to ~8k/yr projected. Bundle oil change with open deferred items (axle seals, heater hose tees) on next Ca\u00f1on City day to minimize shop trips.",
       "status": "open"
     },
     {
       "id": "ford-oil-change-interval",
       "type": "pm-interval",
       "asset": "Ford F-250",
-      "description": "Oil change interval tracking — 5.4L V8 Triton gas. Time-based MX (farm truck, ~1,000 mi/year). Last confirmed oil change 2024-11-26 at 207,950 mi (Austin Auto).",
+      "description": "Oil change interval tracking \u2014 5.4L V8 Triton gas. Time-based MX (farm truck, ~1,000 mi/year). Last confirmed oil change 2024-11-26 at 207,950 mi (Austin Auto).",
       "interval_miles": null,
       "interval_months": 12,
       "current_miles": 209661,
@@ -273,7 +273,33 @@
       "next_service_approx_date": "2025-11-26",
       "shop": "Austin Automotive",
       "estimated_cost": null,
-      "notes": "Ford is time-based MX given low annual mileage (~1,000 mi/yr). Next service was due 2025-11-26 — now 6 months overdue as of 2026-05-15. Surface to Matt. No active open items on the Ford beyond MX interval. Battery disconnect required before any field welding (PCM history 2019).",
+      "notes": "Ford is time-based MX given low annual mileage (~1,000 mi/yr). Next service was due 2025-11-26 \u2014 now 6 months overdue as of 2026-05-15. Surface to Matt. No active open items on the Ford beyond MX interval. Battery disconnect required before any field welding (PCM history 2019).",
+      "status": "open"
+    },
+    {
+      "id": "cockpit-android-install-day-verification",
+      "type": "task",
+      "asset": "Cockpit (PaitentPoint P-WAL-230-ELC-02)",
+      "description": "Install-day verification checklist for Cockpit widget on the real Android unit. Check: viewport/scaling, hover-vs-tap behavior, legibility at 2-4ft and 8-10ft viewing distances.",
+      "priority": "routine",
+      "estimated_cost": null,
+      "shop": null,
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": null,
+      "target_action_date": null,
+      "what_is_needed": [
+        "Cockpit hardware mounted and powered",
+        "wave-4-5-widget served locally via python -m http.server 8080",
+        "Check viewport scaling \u2014 no horizontal scroll, no clipping",
+        "Verify tap targets (no hover states required \u2014 touch only)",
+        "Legibility check at 2-4ft (primary use distance)",
+        "Legibility check at 8-10ft (secondary glance distance)",
+        "Confirm pill colors readable (colorblind-safe palette)"
+      ],
+      "bundling_note": "Run on install day before Cockpit goes live. One-time verification.",
+      "calendar_block_requested": false,
+      "notes": "Gated behind: S8 durability fix, ThinkPad headless validation, Kalea usability sign-off. Added 2026-05-27 house-cleaning session.",
       "status": "open"
     }
   ]
