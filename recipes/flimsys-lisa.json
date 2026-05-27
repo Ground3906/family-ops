@@ -1,0 +1,47 @@
+{
+  "id": "flimsys-lisa",
+  "name": "Flimsy's",
+  "source": "Lisa",
+  "heirloom": true,
+  "serves": "2 (scalable)",
+  "tags": [
+    "breakfast",
+    "stovetop",
+    "heirloom"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "flour",
+      "qty": "1",
+      "unit": "cup",
+      "note": "card notes 'usually \u00be' \u2014 may vary"
+    },
+    {
+      "item": "milk",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "vanilla",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "egg",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": null,
+      "unit": "dash",
+      "note": null
+    }
+  ],
+  "instructions": [],
+  "notes": "Instructions card not available. Doubled batch on card: 6c milk, 4 tsp vanilla, 4 eggs. Flour qty unclear \u2014 card shows 1c with 'usually \u00be' notation. Verify with Lisa."
+}

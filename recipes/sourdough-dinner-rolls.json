@@ -1,0 +1,88 @@
+{
+  "id": "sourdough-dinner-rolls",
+  "name": "Soft Sourdough Dinner Rolls",
+  "source": "Amy Duska",
+  "heirloom": false,
+  "serves": "24 rolls",
+  "tags": [
+    "baking",
+    "bread",
+    "sourdough",
+    "dinner",
+    "make-ahead",
+    "freezer-friendly"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "sourdough starter",
+      "qty": "2 Tbl (30g)",
+      "unit": null,
+      "note": "to build starter"
+    },
+    {
+      "item": "all-purpose flour (for starter)",
+      "qty": "0.67 cup + 1 Tbl (100g)",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "water (for starter)",
+      "qty": "7 Tbl (100g)",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "butter",
+      "qty": "4 Tbl (56g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "milk",
+      "qty": "2 cups (480g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "sugar",
+      "qty": "6 Tbl (88g)",
+      "unit": null,
+      "note": "or 2 Tbl honey; dough"
+    },
+    {
+      "item": "salt",
+      "qty": "2 tsp (10g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "active sourdough starter",
+      "qty": "1 cup (200g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "bread flour",
+      "qty": "6 cups + 2 Tbl (750g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "melted butter",
+      "qty": "2 Tbl",
+      "unit": null,
+      "note": "for brushing after bake"
+    }
+  ],
+  "instructions": [
+    "20:00 \u2014 Feed starter. Ready in 12 hours.",
+    "07:30 \u2014 Melt butter, milk, sugar, and salt over low heat. Cool to room temp.",
+    "08:00 \u2014 Add flour and active starter to cooled butter mix. Stir until combined. Cover, rest 1 hour.",
+    "09:00 \u2014 Perform 3 sets of stretch and fold, 30 min apart. After final set, rise 2 hours or until 50% larger.",
+    "12:00 \u2014 Divide into 12 pieces (~65g each). Shape into balls. Arrange in greased baking dish. Cover, rise 3\u20134 hours.",
+    "16:00 \u2014 Preheat oven to 375\u00b0F (190\u00b0C). Bake 25\u201330 min until golden. Internal temp: 190\u00b0F.",
+    "Brush tops with melted butter. Serve."
+  ],
+  "notes": "Personal note: top oven @ 365\u00b0 / 25 min. Freeze before baking: shape, freeze, thaw in fridge overnight, rise 3\u20134 hr. Make ahead: refrigerate shaped rolls up to 36\u201348 hr; rise 2\u20133 hr before baking. Reheat at 350\u00b0F / 15\u201320 min tented with foil."
+}

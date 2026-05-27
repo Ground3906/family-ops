@@ -1,0 +1,73 @@
+{
+  "id": "bagels",
+  "name": "Bagels",
+  "source": "Homegrown Show Co.",
+  "heirloom": true,
+  "serves": "8-12",
+  "tags": [
+    "baking",
+    "bread",
+    "breakfast"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "warm water",
+      "qty": "1\u00bd",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "all-purpose flour",
+      "qty": "3+",
+      "unit": "cups",
+      "note": "as needed"
+    },
+    {
+      "item": "sugar",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "yeast",
+      "qty": "2",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "honey",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": "added to water bath"
+    },
+    {
+      "item": "water (water bath)",
+      "qty": "6",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "dark brown sugar (water bath)",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Preheat 350\u00b0.",
+    "Form dough into 8-12 round buns.",
+    "Let rise. Bring water bath to boil with honey and brown sugar.",
+    "Push thumb through center of each bun to form hole.",
+    "Drop bagels into boiling water. Cook 1 minute each side.",
+    "Remove, place on parchment paper, add desired toppings.",
+    "Bake 20\u201335 minutes until golden brown."
+  ],
+  "notes": null
+}

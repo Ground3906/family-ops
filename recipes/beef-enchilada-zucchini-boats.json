@@ -1,0 +1,95 @@
+{
+  "id": "beef-enchilada-zucchini-boats",
+  "name": "Beef Enchilada Zucchini Boats",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "oven",
+    "low-carb",
+    "protein"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "olive oil",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "diced onion",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "ground beef",
+      "qty": "1",
+      "unit": "lb",
+      "note": null
+    },
+    {
+      "item": "garlic cloves",
+      "qty": "4",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "smoked paprika",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "cumin",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "large zucchini, halved lengthwise and scooped into boats",
+      "qty": "3",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "red enchilada sauce",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "shredded cheese",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "tomato, sour cream, avocado",
+      "qty": null,
+      "unit": "toppings",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Heat oven to 375\u00b0F.",
+    "Saut\u00e9 onions in oil in skillet.",
+    "Add ground beef; cook through.",
+    "Add garlic, smoked paprika, cumin, salt to taste.",
+    "In 13x9\" baking dish, lay zucchini boats.",
+    "Scoop ground beef mixture to fill.",
+    "Pour enchilada sauce over filled boats.",
+    "Sprinkle with cheese.",
+    "Bake covered 20 minutes; uncover and bake 5 more minutes.",
+    "Garnish with toppings."
+  ],
+  "notes": null
+}

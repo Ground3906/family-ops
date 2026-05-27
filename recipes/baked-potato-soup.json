@@ -1,0 +1,88 @@
+{
+  "id": "baked-potato-soup",
+  "name": "Baked Potato Soup",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "soup",
+    "stovetop",
+    "crowd-pleaser"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "large baking potatoes",
+      "qty": "4",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "butter",
+      "qty": "\u2154",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "flour",
+      "qty": "\u2153",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "milk",
+      "qty": "6",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": "\u00be",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "shredded cheddar cheese",
+      "qty": "1\u00bd",
+      "unit": "cups (6 oz)",
+      "note": "divided"
+    },
+    {
+      "item": "green onions, chopped",
+      "qty": "4",
+      "unit": null,
+      "note": "divided"
+    },
+    {
+      "item": "sour cream",
+      "qty": "8",
+      "unit": "oz",
+      "note": null
+    },
+    {
+      "item": "bacon, cooked and crumbled",
+      "qty": "12",
+      "unit": "slices",
+      "note": "divided"
+    }
+  ],
+  "instructions": [
+    "Bake potatoes at 400\u00b0 for 1 hour until done. Cool.",
+    "Cut in half lengthwise, scoop out pulp. Reserve skins for another use.",
+    "Melt butter in pot over low heat.",
+    "Add flour gradually, stir constantly until smooth and bubbly, about 1 minute.",
+    "Gradually add milk, stirring.",
+    "Stir in potato pulp, salt, pepper, 1c cheese, half the bacon, 1 Tbl green onion, and sour cream.",
+    "Heat through \u2014 DO NOT BOIL.",
+    "Stir in remaining cheese and green onion.",
+    "Garnish with remaining bacon."
+  ],
+  "notes": "Reserved potato skins can be used for loaded potato skins another meal."
+}

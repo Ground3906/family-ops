@@ -1,0 +1,75 @@
+{
+  "id": "sourdough-biscuits",
+  "name": "Sourdough Biscuits",
+  "source": "Amy Duska",
+  "heirloom": false,
+  "serves": "12 biscuits",
+  "tags": [
+    "baking",
+    "bread",
+    "sourdough",
+    "breakfast",
+    "make-ahead"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "all-purpose flour",
+      "qty": "2\u00bd cups (300g)",
+      "unit": null,
+      "note": "initial mix"
+    },
+    {
+      "item": "unsalted butter, cold",
+      "qty": "8 Tbl (113g)",
+      "unit": null,
+      "note": "initial mix"
+    },
+    {
+      "item": "sourdough starter discard",
+      "qty": "\u00bd cup (125g)",
+      "unit": null,
+      "note": "initial mix"
+    },
+    {
+      "item": "buttermilk or milk",
+      "qty": "1 cup (240g)",
+      "unit": null,
+      "note": "initial mix"
+    },
+    {
+      "item": "sugar",
+      "qty": "1 Tbl (15g)",
+      "unit": null,
+      "note": "optional; initial mix"
+    },
+    {
+      "item": "fine sea salt",
+      "qty": "1 tsp (5g)",
+      "unit": null,
+      "note": "add before cutting"
+    },
+    {
+      "item": "baking powder",
+      "qty": "1\u00bd tsp",
+      "unit": null,
+      "note": "add before cutting"
+    },
+    {
+      "item": "baking soda",
+      "qty": "\u00bd tsp",
+      "unit": null,
+      "note": "add before cutting"
+    }
+  ],
+  "instructions": [
+    "Night before: Grate cold butter into large bowl. Add flour, cut butter in until pea-sized crumbles.",
+    "Add starter discard, buttermilk, and sugar. Stir until combined. Cover, rise on counter 10\u201312 hours.",
+    "Next morning: Preheat oven to 400\u00b0F.",
+    "Combine salt, baking soda, and baking powder in a small bowl. Work into dough in two halves.",
+    "Flour work surface. Press dough into 1-inch thick rectangle.",
+    "Cut with biscuit cutter \u2014 press straight down, do NOT twist.",
+    "Arrange in 12\" cast iron skillet. Bake 25\u201330 minutes until tops are golden."
+  ],
+  "notes": "Do not twist the biscuit cutter \u2014 seals edges. Active starter can substitute discard: add salt to initial mix, omit baking soda/powder, let rise in skillet 60\u201390 min before baking. Prep 10 min / Ferment 12 hr / Cook 30 min."
+}

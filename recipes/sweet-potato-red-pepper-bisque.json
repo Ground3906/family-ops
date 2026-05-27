@@ -1,0 +1,72 @@
+{
+  "id": "sweet-potato-red-pepper-bisque",
+  "name": "Sweet Potato Roasted Red Pepper Bisque",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "soup",
+    "vegetarian",
+    "oven",
+    "blender"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "sweet potatoes, peeled and cubed",
+      "qty": "4",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "roasted red bell peppers",
+      "qty": null,
+      "unit": "to taste",
+      "note": "roast on sheet pan until charred, or use jar"
+    },
+    {
+      "item": "garam masala",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "ginger root",
+      "qty": null,
+      "unit": "tsp",
+      "note": "qty not fully legible"
+    },
+    {
+      "item": "ground red pepper",
+      "qty": null,
+      "unit": "tsp",
+      "note": "qty not fully legible"
+    },
+    {
+      "item": "vegetable broth",
+      "qty": "\u00bd+",
+      "unit": "cup",
+      "note": "add more to thin if desired"
+    },
+    {
+      "item": "Bragg Liquid Aminos or Himalayan salt",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "fresh basil, chopped",
+      "qty": null,
+      "unit": "to finish",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Roast sweet potatoes on sheet pan in oven until charred. Or use jar roasted peppers.",
+    "Cool. Use jar pepper or your roasted ones.",
+    "Place all into blender. Blend until smooth. Add water if too thick. Blend in two batches.",
+    "Warm on stove. Add chopped fresh basil before serving."
+  ],
+  "notes": "Some ingredient quantities on original card were not fully legible \u2014 ginger and ground red pepper amounts need verification."
+}

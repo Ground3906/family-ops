@@ -1,0 +1,87 @@
+{
+  "id": "butternut-squash-soup",
+  "name": "Butternut Squash Soup",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "soup",
+    "vegetarian",
+    "stovetop",
+    "blender"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "olive oil",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "yellow onion, chopped",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "cashews",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "apple, peeled and chopped",
+      "qty": "1\u00bd",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "carrots, peeled and chopped",
+      "qty": "1",
+      "unit": "lb",
+      "note": null
+    },
+    {
+      "item": "butternut squash, chopped and cubed",
+      "qty": "2",
+      "unit": "lbs",
+      "note": null
+    },
+    {
+      "item": "fresh thyme leaves",
+      "qty": "1",
+      "unit": "bay leaf + thyme",
+      "note": "bay leaf removed before blending"
+    },
+    {
+      "item": "salt",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "black pepper",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "vegetable stock",
+      "qty": "4+",
+      "unit": "cups",
+      "note": "add more to thin if desired"
+    }
+  ],
+  "instructions": [
+    "Heat oil. Add onion; cook until soft, about 5 min.",
+    "Add cashews; cook about 5 min.",
+    "Add carrot, apple, squash, and thyme. Cook for 35 min.",
+    "Add stock. Stir to combine. Bring to boil, reduce to med simmer 20\u201325 min.",
+    "Allow soup to cool. Remove and discard bay leaf.",
+    "Blend until smooth, working in two batches.",
+    "Warm on stove. Add chopped basil before serving."
+  ],
+  "notes": null
+}

@@ -1,0 +1,109 @@
+{
+  "id": "thai-chicken-wrap",
+  "name": "Thai Chicken Wrap with Spicy Peanut Sauce",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "lunch",
+    "stovetop",
+    "protein",
+    "salad"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "boneless chicken breasts",
+      "qty": "3",
+      "unit": null,
+      "note": "grilled with veg oil + soy sauce"
+    },
+    {
+      "item": "cucumber, halved lengthwise and thinly sliced",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "bean sprouts",
+      "qty": "2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "scallions",
+      "qty": "3",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "shredded carrots",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "sesame seeds",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "basil leaves",
+      "qty": "12",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "soy sauce",
+      "qty": null,
+      "unit": "to marinate chicken",
+      "note": null
+    },
+    {
+      "item": "vegetable oil",
+      "qty": null,
+      "unit": "to marinate chicken",
+      "note": null
+    },
+    {
+      "item": "chunky peanut butter (room temp)",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": "sauce"
+    },
+    {
+      "item": "tamari",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": "sauce"
+    },
+    {
+      "item": "rice wine vinegar",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": "sauce"
+    },
+    {
+      "item": "cayenne pepper",
+      "qty": "\u00bc",
+      "unit": "tsp",
+      "note": "sauce"
+    },
+    {
+      "item": "vegetable oil",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": "sauce"
+    }
+  ],
+  "instructions": [
+    "Toss chicken with soy sauce and oil. Grill.",
+    "Combine all salad ingredients.",
+    "Whisk together all sauce ingredients.",
+    "Toss chicken and salad with sauce.",
+    "Serve on tortillas or as lettuce wraps."
+  ],
+  "notes": null
+}

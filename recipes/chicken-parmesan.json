@@ -1,0 +1,90 @@
+{
+  "id": "chicken-parmesan",
+  "name": "Chicken Parmesan",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "stovetop",
+    "oven",
+    "protein"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "boneless skinless chicken breasts",
+      "qty": "2",
+      "unit": "(1 lb total)",
+      "note": null
+    },
+    {
+      "item": "flour",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "egg",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "breadcrumbs",
+      "qty": "\u00be",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "grated parmesan cheese",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "divided"
+    },
+    {
+      "item": "shredded mozzarella",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "olive oil",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "tomato sauce",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "fresh basil",
+      "qty": null,
+      "unit": "to garnish",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Cut chicken in half horizontally. Pound until \u00bd inch thick.",
+    "Dip in flour, then egg, then breadcrumb-parmesan mix.",
+    "Heat oil in pan. Cook 2\u20133 minutes each side.",
+    "Place in pan. Top with mozzarella. Broil on high until melted and bubbly.",
+    "Top with tomato sauce. Sprinkle with basil."
+  ],
+  "notes": null
+}

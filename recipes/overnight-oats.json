@@ -1,0 +1,64 @@
+{
+  "id": "overnight-oats",
+  "name": "Overnight Oats",
+  "source": null,
+  "heirloom": true,
+  "serves": "1 (single serving base; triple batch notes on card)",
+  "tags": [
+    "breakfast",
+    "no-cook",
+    "make-ahead",
+    "meal-prep"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "rolled oats",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "single serving"
+    },
+    {
+      "item": "almond milk",
+      "qty": "\u2154",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "honey",
+      "qty": "2",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "plain Greek yogurt",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "chia seeds",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "vanilla",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "blueberries",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Mix all ingredients together.",
+    "Refrigerate overnight.",
+    "Serve cold."
+  ],
+  "notes": "Triple batch: scale all quantities x3. Card also notes pumpkin seeds and almonds as add-ins."
+}

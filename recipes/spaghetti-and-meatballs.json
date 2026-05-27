@@ -1,0 +1,40 @@
+{
+  "slug": "spaghetti-and-meatballs",
+  "title": "Spaghetti and Meatballs",
+  "attribution": "Eva (meatballs) / Kalea (sauce)",
+  "heirloom": true,
+  "serves": 6,
+  "protein": ["elk", "pork"],
+  "protein_note": "Elk and pork mix for meatballs",
+  "cook_method": "stovetop",
+  "equipment": "stovetop pot, skillet",
+  "sauce_note": "Premade jarred sauce — not from scratch",
+  "optional_add_ins": ["carrots"],
+  "meatball_ingredients": [
+    { "item": "ground beef", "amount": "0.75", "unit": "lb", "sub": "elk" },
+    { "item": "ground pork", "amount": "0.25", "unit": "lb" },
+    { "item": "fine dry bread crumbs", "amount": "0.25", "unit": "cup" },
+    { "item": "parmesan cheese, grated", "amount": "0.5", "unit": "cup" },
+    { "item": "parsley, chopped", "amount": "1", "unit": "sprig" },
+    { "item": "salt", "amount": null, "unit": "to taste" },
+    { "item": "pepper", "amount": null, "unit": "to taste" },
+    { "item": "eggs, well beaten", "amount": "2" },
+    { "item": "milk", "amount": "0.5", "unit": "cup" },
+    { "item": "garlic, minced", "amount": "1", "unit": "clove", "note": "approx 1/8 lb" }
+  ],
+  "sauce_ingredients": [
+    { "item": "premade jarred pasta sauce", "amount": "1", "unit": "jar" }
+  ],
+  "spaghetti_ingredients": [
+    { "item": "spaghetti", "amount": null, "note": "cook per package" }
+  ],
+  "steps": [
+    "Meatballs: combine all ingredients. Mix well.",
+    "Form into small balls.",
+    "Brown in hot olive oil over low heat. Cook 15 min until cooked through. OR fry approximately 12 min until cooked through.",
+    "Heat jarred sauce in separate pot.",
+    "Cook spaghetti per package directions.",
+    "Combine and serve."
+  ],
+  "tags": ["dinner", "elk", "stovetop", "heirloom", "family-favorite"]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "sheet-pan-shrimp-zucchini",
+  "name": "Sheet Pan Roasted Garlic Shrimp with Zucchini",
+  "source": "Beachbody",
+  "heirloom": false,
+  "serves": "8",
+  "tags": [
+    "dinner",
+    "sheet-pan",
+    "seafood",
+    "low-carb",
+    "gluten-free",
+    "protein"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "olive oil",
+      "qty": "2 Tbsp + 1 tsp",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "garlic, finely chopped",
+      "qty": "8",
+      "unit": "cloves",
+      "note": null
+    },
+    {
+      "item": "dried oregano",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "dried basil",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "sea salt",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "ground black pepper",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "medium zucchini, cut into \u00bd-inch slices",
+      "qty": "8",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "medium shrimp, peeled and deveined",
+      "qty": "2",
+      "unit": "lbs",
+      "note": null
+    },
+    {
+      "item": "grated Parmesan cheese",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "fresh lemon juice",
+      "qty": "2",
+      "unit": "Tbsp",
+      "note": null
+    },
+    {
+      "item": "fresh parsley, finely chopped",
+      "qty": "4",
+      "unit": "Tbsp",
+      "note": null
+    },
+    {
+      "item": "parchment paper",
+      "qty": null,
+      "unit": null,
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 400\u00b0F. Line large sheet pan with parchment paper.",
+    "Combine oil, garlic, oregano, basil, salt, and pepper in a small bowl; whisk.",
+    "Place zucchini on pan. Drizzle with half the oil mixture; mix well. Bake 10 minutes.",
+    "Add shrimp to pan; mix well.",
+    "Drizzle with remaining oil mixture; sprinkle with Parmesan. Bake 6\u20138 minutes until shrimp is firm and opaque and zucchini is tender-crisp.",
+    "Drizzle with lemon juice; sprinkle with parsley. Serve immediately."
+  ],
+  "notes": "230 kcal per serving. Prep 15 min / Cook 18 min."
+}

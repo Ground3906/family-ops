@@ -1,0 +1,61 @@
+{
+  "id": "beef-n-tater-casserole",
+  "name": "Beef-N-Tater Casserole",
+  "source": "Mom",
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "casserole",
+    "oven",
+    "crowd-pleaser",
+    "heirloom"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "hamburger",
+      "qty": "3",
+      "unit": "lbs",
+      "note": "raw"
+    },
+    {
+      "item": "medium onion",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "cream of mushroom soup",
+      "qty": "1",
+      "unit": "lg can",
+      "note": null
+    },
+    {
+      "item": "tater tots",
+      "qty": "1",
+      "unit": "lg bag",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Mix raw hamburger, onion, salt, and pepper together.",
+    "Press into a 9x13 pan.",
+    "Spread large can of cream of mushroom soup on top.",
+    "Lay tater tots in rows on top.",
+    "Bake at 375\u00b0 for 50 minutes or until hamburger is done."
+  ],
+  "notes": "Meat goes in raw \u2014 no pre-browning."
+}

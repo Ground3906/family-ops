@@ -1,0 +1,101 @@
+{
+  "id": "banana-oat-breakfast-cookies",
+  "name": "Banana-Oat Breakfast Cookies",
+  "source": null,
+  "heirloom": true,
+  "serves": "approx. 24 cookies",
+  "tags": [
+    "breakfast",
+    "snack",
+    "baking",
+    "freezer-friendly",
+    "batch-cook"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "peanut butter",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "butter, softened",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "ripe bananas, mashed",
+      "qty": "2",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "packed brown sugar",
+      "qty": "\u00be",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "baking soda",
+      "qty": "\u00bc",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "egg",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "vanilla",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "whole wheat flour",
+      "qty": "\u00be",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "wheat germ",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "rolled oats",
+      "qty": "2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "dried cherries or raisins",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Beat PB and butter 30 seconds.",
+    "Add brown sugar; beat until combined.",
+    "Beat in egg, vanilla, baking soda, and salt.",
+    "Beat in bananas.",
+    "Mix in flours and wheat germ. Stir in oats and cherries/raisins.",
+    "Drop by \u00bc cup onto 3-inch rounds on cookie sheet.",
+    "Bake at 350\u00b0 for 15\u201316 minutes or until edges are browned.",
+    "Let stand 1 minute. Cool.",
+    "Optionally freeze after cooling."
+  ],
+  "notes": "Can freeze. Card says 'cool 24 hours or freeze.'"
+}

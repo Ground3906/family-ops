@@ -1,0 +1,107 @@
+{
+  "id": "blueberry-baked-oatmeal",
+  "name": "Blueberry Baked Oatmeal",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "breakfast",
+    "oven",
+    "make-ahead",
+    "batch-cook"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "chopped pecans",
+      "qty": "\u2154",
+      "unit": "cup",
+      "note": "toasted"
+    },
+    {
+      "item": "old fashioned oats",
+      "qty": "2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "butter, melted",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": "or coconut oil; divided"
+    },
+    {
+      "item": "baking powder",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "cinnamon",
+      "qty": "2",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "sea salt",
+      "qty": "\u00bc",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "nutmeg",
+      "qty": "\u00bc",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "milk",
+      "qty": "\u2153",
+      "unit": "cup",
+      "note": "almond or other"
+    },
+    {
+      "item": "syrup or honey",
+      "qty": "\u2153",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "frozen blueberries",
+      "qty": "12",
+      "unit": "oz (1 pint)",
+      "note": "divided"
+    },
+    {
+      "item": "vanilla",
+      "qty": "3",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "large eggs",
+      "qty": "2",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "sugar",
+      "qty": "2",
+      "unit": "tsp",
+      "note": "optional, for topping"
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 375\u00b0. Grease 9\" square pan.",
+    "Toast nuts 4\u20135 minutes.",
+    "Combine dry ingredients: oats, nuts, cinnamon, baking powder, salt, nutmeg.",
+    "Combine wet ingredients: milk, syrup/honey, vanilla, 2 eggs, and half the butter/oil. Whisk.",
+    "Reserve half the blueberries for topping.",
+    "Arrange remaining blueberries on bottom of dish.",
+    "Cover with dry mix. Drizzle wet mix over top. Wiggle and pat to settle.",
+    "Scatter reserved blueberries on top. Sprinkle with sugar.",
+    "Bake 42\u201345 minutes until golden.",
+    "Drizzle remaining butter over top."
+  ],
+  "notes": "Toppings: yogurt, whipped cream, syrup, honey, or fresh fruit."
+}

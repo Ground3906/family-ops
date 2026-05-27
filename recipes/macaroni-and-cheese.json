@@ -1,0 +1,90 @@
+{
+  "id": "macaroni-and-cheese",
+  "name": "Macaroni & Cheese",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "casserole",
+    "oven",
+    "crowd-pleaser",
+    "kid-friendly"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "uncooked elbow macaroni",
+      "qty": "3",
+      "unit": "cups",
+      "note": "cooked before assembling"
+    },
+    {
+      "item": "butter",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "flour",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "dry mustard",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "Worcestershire sauce",
+      "qty": "\u00bc",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "salt",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": "\u215b",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "milk",
+      "qty": "2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "shredded cheese",
+      "qty": "2",
+      "unit": "cups (8 oz)",
+      "note": "divided"
+    },
+    {
+      "item": "bread crumbs",
+      "qty": null,
+      "unit": "to top",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 375\u00b0.",
+    "Melt butter. Stir in flour, mustard, salt, pepper, and Worcestershire sauce.",
+    "Stir constantly until thickening.",
+    "Gradually add milk; stir until mixture slightly thickens.",
+    "Stir until melted. Add \u00bd c cheese.",
+    "Remove from heat. Stir in cooked macaroni.",
+    "Stir in most remaining cheese.",
+    "Pour into greased shallow baking dish.",
+    "Top with remaining cheese and bread crumbs. Dot with butter.",
+    "Bake 20\u201325 minutes or until bubbly."
+  ],
+  "notes": null
+}

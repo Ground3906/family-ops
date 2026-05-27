@@ -1,0 +1,56 @@
+{
+  "id": "beef-roast-ema",
+  "name": "Beef Roast",
+  "source": "Ema",
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "slow-cooker",
+    "crowd-pleaser",
+    "heirloom",
+    "easy"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "beef roast",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "Hidden Valley Ranch mix",
+      "qty": "1",
+      "unit": "pkg",
+      "note": null
+    },
+    {
+      "item": "beef Au Jus mix",
+      "qty": "1",
+      "unit": "pkg",
+      "note": null
+    },
+    {
+      "item": "butter",
+      "qty": "1",
+      "unit": "stick",
+      "note": null
+    },
+    {
+      "item": "mild peppers, sliced",
+      "qty": "1",
+      "unit": "jar",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Place beef roast in crock pot.",
+    "Top with pkg beef Au Jus mix.",
+    "Add pkg Hidden Valley Ranch mix.",
+    "Add stick of butter.",
+    "Add jar of sliced mild peppers.",
+    "Cook on low 8 hours."
+  ],
+  "notes": null
+}

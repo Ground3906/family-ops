@@ -1,0 +1,72 @@
+{
+  "id": "chicken-breasts-slow-bake",
+  "name": "Chicken Breasts (Slow Bake)",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "oven",
+    "protein",
+    "easy"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "chicken breasts, bone-in skin-on",
+      "qty": "3",
+      "unit": "lbs (4 breasts)",
+      "note": null
+    },
+    {
+      "item": "butter",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "onion, chopped",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "garlic, minced",
+      "qty": "1",
+      "unit": "clove",
+      "note": null
+    },
+    {
+      "item": "chicken broth",
+      "qty": "1",
+      "unit": "cup",
+      "note": "made from bouillon cubes"
+    },
+    {
+      "item": "salt",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": "\u215b",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "Worcestershire sauce",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Brown chicken in butter. Place in casserole.",
+    "Add chopped onion and minced garlic.",
+    "Add chicken broth, salt, pepper, and Worcestershire sauce.",
+    "Cover tightly.",
+    "Bake at 300\u00b0 for approximately 2 hours."
+  ],
+  "notes": null
+}

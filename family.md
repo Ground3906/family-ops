@@ -9,7 +9,7 @@
 
 ### Dental
 - **Matt** — Salida Family Dental, Salida CO
-- **Kalea, Wyatt, Molly, Rileigh, Cullen, Emmitt** — Canyon Family Dental, Cañon City CO
+- **Kalea, Wyatt, Molly, Rileigh, Cullen, Emmitt** — Cañon Family Dental, Cañon City CO
 
 ---
 

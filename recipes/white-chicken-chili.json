@@ -1,0 +1,54 @@
+{
+  "id": "white-chicken-chili",
+  "name": "White Chicken Chili",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "soup",
+    "stovetop",
+    "crowd-pleaser",
+    "easy",
+    "double-friendly"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "rotisserie chicken",
+      "qty": "1",
+      "unit": null,
+      "note": "shredded"
+    },
+    {
+      "item": "navy beans, undrained",
+      "qty": "2",
+      "unit": "cans",
+      "note": null
+    },
+    {
+      "item": "chicken broth",
+      "qty": "1-2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "McCormick's White Chicken Chili mix",
+      "qty": "1",
+      "unit": "pkg",
+      "note": null
+    },
+    {
+      "item": "green chilis",
+      "qty": "1",
+      "unit": "can",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Put all ingredients in a pot.",
+    "Heat through.",
+    "Top with sour cream, cilantro, salsa, hot sauce, and goat cheese as desired."
+  ],
+  "notes": "Easy to double."
+}

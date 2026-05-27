@@ -1,0 +1,55 @@
+{
+  "id": "sloppy-joes-mom",
+  "name": "Sloppy Joes",
+  "source": "Mom",
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "stovetop",
+    "crowd-pleaser",
+    "heirloom",
+    "easy",
+    "kid-friendly"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "hamburger",
+      "qty": "2",
+      "unit": "lbs",
+      "note": null
+    },
+    {
+      "item": "onion",
+      "qty": "1",
+      "unit": null,
+      "note": "chopped"
+    },
+    {
+      "item": "ketchup",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "starting point \u2014 adjust to color"
+    },
+    {
+      "item": "mustard",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": "starting point \u2014 adjust to color"
+    },
+    {
+      "item": "Worcestershire sauce",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    }
+  ],
+  "instructions": [
+    "Brown hamburger with onion.",
+    "Add ketchup, mustard, and Worcestershire sauce to taste.",
+    "Start with \u00bd cup ketchup + \u00bc cup mustard.",
+    "Adjust ratio until color is orange \u2014 that's the tell."
+  ],
+  "notes": "Color is the guide: orange = right ratio. Add ketchup to bring it forward, mustard to cut."
+}

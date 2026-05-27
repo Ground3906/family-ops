@@ -1,0 +1,107 @@
+{
+  "id": "sourdough-pretzels",
+  "name": "Soft Sourdough Pretzels",
+  "source": "Amy Duska / Little Spoon Farm",
+  "heirloom": false,
+  "serves": "16",
+  "tags": [
+    "baking",
+    "bread",
+    "sourdough",
+    "snack",
+    "make-ahead"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "sourdough starter",
+      "qty": "1 Tbl (15g)",
+      "unit": null,
+      "note": "to build starter"
+    },
+    {
+      "item": "all-purpose flour (for starter)",
+      "qty": "\u2153 cup + 1 Tbl (50g)",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "water (for starter)",
+      "qty": "3\u00bd Tbl (50g)",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "active sourdough starter",
+      "qty": "\u00bd cup (100g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "water",
+      "qty": "1 cup + 1 Tbl (255g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "honey or sugar",
+      "qty": "2 Tbl (40g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "fine sea salt",
+      "qty": "2 tsp (10g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "bread flour",
+      "qty": "4 cups + 2 Tbl (500g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "water (water bath)",
+      "qty": "6",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "baking soda (water bath)",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "dark brown sugar (water bath)",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "large egg, lightly beaten",
+      "qty": "1",
+      "unit": null,
+      "note": "egg wash"
+    },
+    {
+      "item": "coarse salt",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": "topping"
+    }
+  ],
+  "instructions": [
+    "12 hours before: feed sourdough starter. Ready when doubled with bubbles.",
+    "Mix active starter, water, honey, and salt. Add bread flour; mix on low 6\u20137 min (or knead 10 min by hand). Cover, rest 8\u201312 hours.",
+    "Line sheet pan with parchment. Divide dough into 16 pieces.",
+    "Roll each into rope. Form U shape, twist ends 2x, fold over and press.",
+    "Cover, rise 30\u201360 min until puffy.",
+    "Preheat oven to 425\u00b0F. Bring water bath to boil; add baking soda and brown sugar.",
+    "Boil pretzels 3\u20134 at a time, 30 sec each side. Remove with mesh strainer onto parchment.",
+    "Brush with egg wash. Sprinkle with coarse salt.",
+    "Bake 12\u201314 minutes until golden brown."
+  ],
+  "notes": "AP flour sub: reduce water by 25g. Store at room temp up to 1 week (not fridge). Freeze up to 3 months. Reheat at 400\u00b0F / 5 min."
+}

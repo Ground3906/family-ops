@@ -1,0 +1,65 @@
+{
+  "id": "pancakes-lisa",
+  "name": "Pancakes",
+  "source": "Lisa",
+  "heirloom": true,
+  "serves": "2 (scalable)",
+  "tags": [
+    "breakfast",
+    "stovetop",
+    "heirloom"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "flour",
+      "qty": "3",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "baking powder",
+      "qty": "1",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "sugar",
+      "qty": "3",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "milk",
+      "qty": "2\u00bd",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "eggs",
+      "qty": "2",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "oil",
+      "qty": "1\u00bd",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "vanilla",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    },
+    {
+      "item": "cinnamon",
+      "qty": null,
+      "unit": "to taste",
+      "note": null
+    }
+  ],
+  "instructions": [],
+  "notes": "Instructions card not available. Card as written serves 2 \u2014 likely a small-batch base. Scale as needed."
+}

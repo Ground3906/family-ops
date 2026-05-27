@@ -1,0 +1,97 @@
+{
+  "id": "sourdough-monkey-bread",
+  "name": "Sourdough Monkey Bread",
+  "source": "Simple is Gourmet",
+  "heirloom": false,
+  "serves": "1 bundt pan",
+  "tags": [
+    "baking",
+    "bread",
+    "sourdough",
+    "breakfast",
+    "dessert",
+    "crowd-pleaser"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "active sourdough starter",
+      "qty": "100",
+      "unit": "g",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "flour",
+      "qty": "450",
+      "unit": "g",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "filtered water",
+      "qty": "200",
+      "unit": "g",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "melted butter or coconut oil",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "honey or sugar",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "salt",
+      "qty": "1",
+      "unit": "tsp",
+      "note": "ferment sponge"
+    },
+    {
+      "item": "brown sugar or coconut sugar",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "cinnamon sugar"
+    },
+    {
+      "item": "cinnamon",
+      "qty": "1",
+      "unit": "Tbl",
+      "note": "cinnamon sugar"
+    },
+    {
+      "item": "butter, melted",
+      "qty": "1 stick (\u00bd cup)",
+      "unit": null,
+      "note": "caramel sauce"
+    },
+    {
+      "item": "maple syrup",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "caramel sauce"
+    },
+    {
+      "item": "vanilla",
+      "qty": "1",
+      "unit": "tsp",
+      "note": "caramel sauce"
+    }
+  ],
+  "instructions": [
+    "Mix starter, flour, water, butter/oil, honey, and salt in stand mixer 5 min until silky and slightly sticky.",
+    "Place in greased bowl, cover, ferment 6\u201312 hours until doubled.",
+    "Roll dough into 1-inch balls.",
+    "In a gallon bag, shake cinnamon and sugar together. Add balls, shake to coat. Continue until all dough is gone.",
+    "Grease bundt pan. Add 2 Tbl maple syrup to bottom.",
+    "Arrange cinnamon sugar balls in pan. Proof 2 hours. (Tip: briefly warm oven, turn off, proof in warm oven.)",
+    "Melt butter in saucepan. Mix in \u00bd cup maple syrup. Remove from heat; add vanilla.",
+    "Pour caramel sauce over proofed balls.",
+    "Bake at 350\u00b0F for 30 minutes.",
+    "Immediately place plate on top of pan and flip. Lift away pan. Serve warm."
+  ],
+  "notes": "Double the caramel sauce if preferred. Bundt pan alternatives noted at simpleisgourmet.com."
+}

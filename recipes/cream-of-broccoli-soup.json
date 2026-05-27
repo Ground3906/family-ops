@@ -1,0 +1,117 @@
+{
+  "id": "cream-of-broccoli-soup",
+  "name": "Cream of Broccoli Soup",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "soup",
+    "stovetop",
+    "vegetarian"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "butter",
+      "qty": "5",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "broccoli, coarsely chopped",
+      "qty": "1\u00bc",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "celery, coarsely chopped",
+      "qty": "\u00bc",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "carrots, coarsely chopped",
+      "qty": "2",
+      "unit": "medium",
+      "note": null
+    },
+    {
+      "item": "onion, coarsely chopped",
+      "qty": "1",
+      "unit": "medium",
+      "note": null
+    },
+    {
+      "item": "garlic",
+      "qty": "1",
+      "unit": "clove",
+      "note": null
+    },
+    {
+      "item": "instant chicken bouillon granules",
+      "qty": "2",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "all-purpose flour",
+      "qty": "\u2153",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "chicken stock or broth",
+      "qty": "4",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "broccoli florets",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "added for texture"
+    },
+    {
+      "item": "milk",
+      "qty": "2\u00bd",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "ground white pepper",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "nutmeg",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "bay leaf",
+      "qty": "1",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "shredded cheese",
+      "qty": "\u00bd",
+      "unit": "cup",
+      "note": "optional topping"
+    }
+  ],
+  "instructions": [
+    "Melt butter over medium heat. Add onion, celery, carrots, garlic, and broccoli. Saut\u00e9 until soft.",
+    "Stir in flour. Add chicken broth and bouillon. Stir to combine.",
+    "Add bay leaf. Bring to boil, cover, cook broccoli florets 2\u20133 min until tender.",
+    "Remove bay leaf.",
+    "Gradually stir in milk. Add white pepper and nutmeg.",
+    "Cook and stir until heated through. Do not boil.",
+    "Allow to cool to room temp. Blend in two batches until smooth.",
+    "Warm on stove before serving."
+  ],
+  "notes": null
+}

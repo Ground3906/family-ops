@@ -1,0 +1,35 @@
+{
+  "slug": "coke-burgers",
+  "title": "Coke Burgers",
+  "attribution": "Tim",
+  "heirloom": true,
+  "serves": 6,
+  "protein": ["elk", "beef", "pork", "lamb", "turkey"],
+  "protein_note": "Whatever is in the freezer — mixed meat patties",
+  "cook_method": "grill",
+  "equipment": "grill",
+  "ingredients": [
+    { "item": "ground beef (or mixed meat)", "amount": "2", "unit": "lb" },
+    { "item": "eggs", "amount": "2" },
+    { "item": "onion, chopped", "amount": "1" },
+    { "item": "Coca-Cola", "amount": "1", "unit": "can", "note": "use 3/4 can in mix" },
+    { "item": "bread crumbs", "amount": "0.67", "unit": "cup" },
+    { "item": "dry seasoning", "amount": null, "note": "your choice — mixed into patties" },
+    { "item": "garlic cloves, minced", "amount": "5", "unit": "large" },
+    { "item": "butter", "amount": "3", "unit": "T", "note": "for garlic bun spread" },
+    { "item": "hamburger buns", "amount": null }
+  ],
+  "steps": [
+    "Sauté onion in olive oil until softened. Strain and cool completely. Freeze 45 minutes.",
+    "Combine cooled onion, ground meat, eggs, bread crumbs, and seasoning. Mix well.",
+    "Add 3/4 can cola. Mix in. Marinate in fridge a couple of hours.",
+    "Form into small patties.",
+    "Grill: get grill extremely hot. Ensure burners are free of debris.",
+    "Sear one side longer to avoid patties falling apart.",
+    "Flip when basted on touch — color does not indicate doneness.",
+    "Add close 1–2 minutes before removing.",
+    "Buns: sauté garlic in butter. Toast buns. Generously coat with butter-garlic mixture.",
+    "Serve."
+  ],
+  "tags": ["dinner", "elk", "grill", "heirloom"]
+}

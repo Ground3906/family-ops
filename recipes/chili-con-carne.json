@@ -1,0 +1,36 @@
+{
+  "slug": "chili-con-carne",
+  "title": "Chili Con Carne",
+  "attribution": "Eva",
+  "heirloom": true,
+  "serves": 6,
+  "usually_doubled": true,
+  "protein": ["elk", "beef"],
+  "protein_note": "Kalea subs elk for beef",
+  "cook_method": "stovetop",
+  "equipment": "large pot",
+  "ingredients": [
+    { "item": "olive oil", "amount": "1", "unit": "T" },
+    { "item": "ground beef", "amount": "1", "unit": "lb", "sub": "elk" },
+    { "item": "onion, chopped", "amount": "0.5", "unit": "cup" },
+    { "item": "green pepper, chopped", "amount": "0.5", "unit": "cup" },
+    { "item": "garlic, minced", "amount": "1", "unit": "clove" },
+    { "item": "celery, diced", "amount": "0.5", "unit": "cup" },
+    { "item": "unsweetened chocolate", "amount": "0.5", "unit": "oz" },
+    { "item": "tomato sauce", "amount": "8", "unit": "oz can" },
+    { "item": "stewed tomatoes", "amount": "46", "unit": "oz can" },
+    { "item": "kidney beans", "amount": "46", "unit": "oz can" },
+    { "item": "sugar", "amount": "1", "unit": "T" },
+    { "item": "salt", "amount": "2", "unit": "tsp" },
+    { "item": "chili powder", "amount": "2", "unit": "T", "note": "or less to taste" }
+  ],
+  "steps": [
+    "Brown beef in oil.",
+    "Add onion and green pepper. Sauté until onions are tender and transparent.",
+    "Add all remaining ingredients to pan.",
+    "Bring to a quick boil.",
+    "Lower heat. Simmer 1 hour or longer.",
+    "Add water if mixture becomes too thick."
+  ],
+  "tags": ["dinner", "elk", "stovetop", "heirloom"]
+}

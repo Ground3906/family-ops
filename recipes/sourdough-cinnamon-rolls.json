@@ -1,0 +1,119 @@
+{
+  "id": "sourdough-cinnamon-rolls",
+  "name": "Sourdough Cinnamon Rolls",
+  "source": "Amy Duska",
+  "heirloom": false,
+  "serves": "12 rolls",
+  "tags": [
+    "baking",
+    "bread",
+    "sourdough",
+    "breakfast",
+    "dessert",
+    "make-ahead"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "butter, cold",
+      "qty": "8 Tbl (113g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "all-purpose flour",
+      "qty": "2\u00bd cups (300g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "sourdough starter discard",
+      "qty": "\u2153 cup (100g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "buttermilk",
+      "qty": "1 cup (240g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "honey or sugar",
+      "qty": "1 Tbl + 1 tsp (25g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "fine sea salt",
+      "qty": "\u00be tsp (4g)",
+      "unit": null,
+      "note": "dough"
+    },
+    {
+      "item": "baking powder",
+      "qty": "1",
+      "unit": "tsp",
+      "note": "hold back \u2014 add next morning"
+    },
+    {
+      "item": "baking soda",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": "hold back \u2014 add next morning"
+    },
+    {
+      "item": "light brown sugar",
+      "qty": "\u00be cup (150g)",
+      "unit": null,
+      "note": "filling"
+    },
+    {
+      "item": "cinnamon",
+      "qty": "2",
+      "unit": "tsp",
+      "note": "filling"
+    },
+    {
+      "item": "butter, melted",
+      "qty": "4 Tbl (56g)",
+      "unit": null,
+      "note": "filling"
+    },
+    {
+      "item": "butter, melted",
+      "qty": "1 Tbl (14g)",
+      "unit": null,
+      "note": "glaze"
+    },
+    {
+      "item": "powdered sugar",
+      "qty": "1 cup (120g)",
+      "unit": null,
+      "note": "glaze"
+    },
+    {
+      "item": "vanilla",
+      "qty": "1 tsp (5g)",
+      "unit": null,
+      "note": "glaze"
+    },
+    {
+      "item": "milk",
+      "qty": "2 Tbl (30g)",
+      "unit": null,
+      "note": "glaze"
+    }
+  ],
+  "instructions": [
+    "Night before: Grate cold butter. Add flour, cut butter in. Add starter discard, buttermilk, honey, salt. Mix until combined. Cover, rest 10\u201312 hours. DO NOT add baking soda/powder yet.",
+    "Next morning: Mix brown sugar + cinnamon for filling. Mix glaze ingredients. Preheat 375\u00b0F; butter 12\" cast iron.",
+    "Mix baking powder + baking soda; work into dough.",
+    "Roll dough out on floured surface to 12\" x 24\".",
+    "Brush with melted butter. Sprinkle cinnamon sugar (leave \u00bd\" bare edge).",
+    "Roll into log from longest side. Cut into 12 pieces (~1.5\" each).",
+    "Arrange in skillet. Bake 35\u201340 min until golden.",
+    "Glaze while hot."
+  ],
+  "notes": "Warmer kitchen: reduce buttermilk to \u00be cup (180g), increase flour to 2\u00be cups (345g). Active starter sub: skip leavening; rise in skillet 1\u20131.5 hr before baking. No cast iron: use baking sheet or spring-form pan."
+}

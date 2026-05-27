@@ -1,0 +1,34 @@
+{
+  "slug": "enchiladas",
+  "title": "Enchiladas",
+  "attribution": "Kalea",
+  "heirloom": true,
+  "serves": 12,
+  "protein": ["elk", "beef"],
+  "protein_note": "Primarily elk",
+  "cook_method": "stovetop then oven",
+  "equipment": "heavy skillet, 13x9x2 baking dish",
+  "ingredients": [
+    { "item": "cooking oil", "amount": "2", "unit": "T" },
+    { "item": "ground beef", "amount": "1.5", "unit": "lb", "sub": "elk" },
+    { "item": "onion, sliced green", "amount": "0.5", "unit": "cup" },
+    { "item": "chili powder", "amount": "1-3", "unit": "T" },
+    { "item": "cheddar cheese, shredded", "amount": "1", "unit": "cup" },
+    { "item": "monterey jack cheese, shredded", "amount": "1", "unit": "cup" },
+    { "item": "corn tortillas", "amount": "12" },
+    { "item": "red enchilada sauce, canned", "amount": "1", "unit": "10oz can" },
+    { "item": "garlic, minced", "amount": "0.25-0.5", "unit": "tsp" },
+    { "item": "black pepper", "amount": "0.25", "unit": "tsp" }
+  ],
+  "steps": [
+    "Cook meat and onion in skillet. Drain. Add chili powder, garlic, and pepper until meat is browned.",
+    "Simmer 1 can enchilada sauce with meat for 20 minutes.",
+    "Meanwhile in heavy skillet, heat oil. Using tongs, dip tortillas one at a time in hot oil for 10 seconds or until limp. Add more oil if needed. Drain on paper towel.",
+    "Assemble: spoon 1/4 cup meat mix on each tortilla. Sprinkle with 2 tsp of each cheese. Fold tortilla. Secure with toothpick.",
+    "Arrange in 13x9x2 dish. Combine remaining 1 can enchilada sauce — pour over remaining tortillas.",
+    "Sprinkle remaining cheese. Spread half meat sauce on top. Repeat layers.",
+    "Bake covered at 350°F for 20 min until heated. Bake uncovered 5 min. Makes 12.",
+    "Garnish with sliced green onions, sour cream, guacamole, and Spanish rice."
+  ],
+  "tags": ["dinner", "elk", "oven", "heirloom"]
+}

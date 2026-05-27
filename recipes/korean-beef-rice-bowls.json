@@ -1,0 +1,35 @@
+{
+  "slug": "korean-beef-rice-bowls",
+  "title": "Korean Beef Rice Bowls",
+  "attribution": "Kalea",
+  "heirloom": false,
+  "serves": null,
+  "cook_time_minutes": 20,
+  "protein": ["elk", "beef"],
+  "protein_note": "Primarily elk",
+  "cook_method": "stovetop",
+  "equipment": "skillet",
+  "ingredients": [
+    { "item": "ground beef", "amount": "1", "unit": "lb", "sub": "elk" },
+    { "item": "garlic cloves, chopped", "amount": "4-6" },
+    { "item": "brown sugar", "amount": "0.25", "unit": "cup" },
+    { "item": "soy sauce", "amount": "0.25", "unit": "cup" },
+    { "item": "sesame oil", "amount": "2", "unit": "tsp" },
+    { "item": "ground ginger", "amount": "0.25", "unit": "tsp" },
+    { "item": "crushed red pepper", "amount": "0.25", "unit": "tsp" },
+    { "item": "pepper", "amount": "0.25", "unit": "tsp" }
+  ],
+  "garnish": [
+    "sliced green onions",
+    "sesame seeds"
+  ],
+  "serve_over": "rice",
+  "steps": [
+    "Cook beef in skillet.",
+    "Combine all sauce ingredients.",
+    "Pour over beef. Cook 1–2 min.",
+    "Serve over rice.",
+    "Garnish with sliced green onions and sesame seeds."
+  ],
+  "tags": ["dinner", "elk", "stovetop", "quick", "rice-bowl"]
+}

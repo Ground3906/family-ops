@@ -1,0 +1,87 @@
+{
+  "id": "confetti-scalloped-potatoes",
+  "name": "Confetti Scalloped Potatoes",
+  "source": null,
+  "heirloom": true,
+  "serves": "6-8",
+  "tags": [
+    "dinner",
+    "casserole",
+    "side-dish",
+    "oven",
+    "crowd-pleaser"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "frozen hash browns",
+      "qty": "30",
+      "unit": "oz pkg",
+      "note": null
+    },
+    {
+      "item": "butter",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "onion, chopped",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "condensed cream of chicken soup",
+      "qty": "2",
+      "unit": "cans (10\u00be oz each)",
+      "note": null
+    },
+    {
+      "item": "milk",
+      "qty": "\u2154",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "green peppers, chopped",
+      "qty": "2",
+      "unit": null,
+      "note": "red noted as option"
+    },
+    {
+      "item": "shredded cheddar cheese",
+      "qty": "2",
+      "unit": "cups (8 oz)",
+      "note": "divided"
+    },
+    {
+      "item": "pimento, chopped",
+      "qty": "1",
+      "unit": "jar",
+      "note": null
+    },
+    {
+      "item": "pepper",
+      "qty": null,
+      "unit": "dash",
+      "note": null
+    },
+    {
+      "item": "cheese cracker crumbs",
+      "qty": "2",
+      "unit": "cups",
+      "note": "divided"
+    }
+  ],
+  "instructions": [
+    "In skillet, melt butter over medium heat.",
+    "Saut\u00e9 onion until tender.",
+    "Stir in potatoes, soup, and milk.",
+    "Add cheese, peppers, pimento, pepper, and half the cracker crumbs.",
+    "Pour into shallow casserole dish.",
+    "Top with remaining cracker crumbs.",
+    "Bake at 375\u00b0 for 35\u201340 minutes."
+  ],
+  "notes": null
+}

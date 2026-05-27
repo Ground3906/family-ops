@@ -1,0 +1,54 @@
+{
+  "id": "wild-rice-casserole",
+  "name": "Wild Rice Casserole",
+  "source": null,
+  "heirloom": true,
+  "serves": null,
+  "tags": [
+    "dinner",
+    "casserole",
+    "side-dish",
+    "oven"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "Uncle Ben's Long Grain & Wild Rice",
+      "qty": "1",
+      "unit": "pkg",
+      "note": null
+    },
+    {
+      "item": "slivered almonds",
+      "qty": "1",
+      "unit": "pkg",
+      "note": null
+    },
+    {
+      "item": "sliced mushrooms",
+      "qty": "2.5",
+      "unit": "oz jar",
+      "note": "optional"
+    },
+    {
+      "item": "butter",
+      "qty": "2",
+      "unit": "Tbl",
+      "note": null
+    },
+    {
+      "item": "chicken bouillon cubes",
+      "qty": "6",
+      "unit": "cubes",
+      "note": "dissolved in 3c water \u2014 yields 1c chicken broth + 2c for rice"
+    }
+  ],
+  "instructions": [
+    "Brown all ingredients in butter.",
+    "Place in casserole dish.",
+    "Add 2c bouillon broth.",
+    "Cover tightly.",
+    "Bake at 300\u00b0 for 1 hour."
+  ],
+  "notes": "Use 1c bouillon broth for chicken dishes; 2c goes into the rice casserole."
+}

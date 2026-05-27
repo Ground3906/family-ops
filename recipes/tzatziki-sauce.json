@@ -1,0 +1,70 @@
+{
+  "id": "tzatziki-sauce",
+  "name": "Tzatziki Sauce",
+  "source": "Love and Lemons",
+  "heirloom": false,
+  "serves": "6-8",
+  "tags": [
+    "sauce",
+    "condiment",
+    "no-cook",
+    "vegetarian"
+  ],
+  "family_baseline": 8,
+  "ingredients": [
+    {
+      "item": "cucumber, finely grated",
+      "qty": "1",
+      "unit": "cup",
+      "note": null
+    },
+    {
+      "item": "thick whole milk Greek yogurt",
+      "qty": "2",
+      "unit": "cups",
+      "note": null
+    },
+    {
+      "item": "fresh lemon juice",
+      "qty": "2",
+      "unit": "Tbsp",
+      "note": null
+    },
+    {
+      "item": "extra-virgin olive oil",
+      "qty": "1",
+      "unit": "Tbsp",
+      "note": null
+    },
+    {
+      "item": "garlic cloves, grated",
+      "qty": "2",
+      "unit": null,
+      "note": null
+    },
+    {
+      "item": "sea salt",
+      "qty": "\u00bd",
+      "unit": "tsp",
+      "note": null
+    },
+    {
+      "item": "fresh dill, chopped",
+      "qty": "2",
+      "unit": "Tbsp",
+      "note": null
+    },
+    {
+      "item": "fresh mint, chopped",
+      "qty": "2",
+      "unit": "Tbsp",
+      "note": "optional"
+    }
+  ],
+  "instructions": [
+    "Place grated cucumber on a kitchen towel. Squeeze out excess water.",
+    "In a medium bowl, combine cucumber, yogurt, lemon juice, olive oil, garlic, salt, dill, and mint if using.",
+    "Chill until ready to serve."
+  ],
+  "notes": "Prep 5 min. Equipment: kitchen towel, box grater, lemon juicer. Source: loveandlemons.com/tzatziki-sauce/"
+}

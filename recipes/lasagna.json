@@ -1,0 +1,41 @@
+{
+  "slug": "lasagna",
+  "title": "Lasagna",
+  "attribution": "Kalea",
+  "heirloom": true,
+  "serves": 10,
+  "protein": ["elk", "beef"],
+  "protein_note": "Primarily elk",
+  "cook_method": "stovetop then oven",
+  "equipment": "skillet, 13x9x9 baking dish",
+  "optional_add_ins": [
+    "zucchini noodles (lengthwise, thin — sprinkle with salt, drain in colander)",
+    "spinach layers (add layers of spinach)"
+  ],
+  "ingredients": [
+    { "item": "ground beef", "amount": "1", "unit": "lb", "sub": "elk" },
+    { "item": "onion, chopped", "amount": "0.5", "unit": "cup" },
+    { "item": "garlic, minced", "amount": "1", "unit": "clove" },
+    { "item": "tomatoes, chopped", "amount": "1", "unit": "16oz can" },
+    { "item": "tomato sauce", "amount": "1", "unit": "6oz can" },
+    { "item": "tomato paste", "amount": "1", "unit": "6oz can" },
+    { "item": "dried basil", "amount": "2", "unit": "tsp" },
+    { "item": "salt", "amount": "1", "unit": "tsp" },
+    { "item": "lasagna noodles", "amount": "8", "unit": "oz" },
+    { "item": "eggs", "amount": "2" },
+    { "item": "ricotta cheese", "amount": "2.5", "unit": "cup" },
+    { "item": "mozzarella cheese, sliced thinly", "amount": "1", "unit": "lb" },
+    { "item": "parmesan cheese, shredded", "amount": "0.75", "unit": "cup" },
+    { "item": "dried parsley", "amount": "3", "unit": "T" },
+    { "item": "oil", "amount": "1", "unit": "T" }
+  ],
+  "steps": [
+    "Cook meat, onion, and garlic in skillet. Stir in tomatoes, next 4 ingredients. Cover; simmer 15 min, stirring often. Cool noodles till tender in boiling salted water. Drain; rinse.",
+    "Beat eggs. Add ricotta, 1/2 cup parmesan, parsley, salt, and pepper. Combine.",
+    "Stuff 13x9x9 dish. Spread half meat sauce on bottom. Layer half noodles, all ricotta filling, half mozzarella. Add remaining sauce on top. Repeat layers.",
+    "Sprinkle remaining mozzarella and parmesan on top.",
+    "Bake covered at 375°F for 30–35 min. Bake uncovered for 45 min or until hot.",
+    "Pre-assembled and refrigerated: bake 45 min or until hot."
+  ],
+  "tags": ["dinner", "elk", "oven", "heirloom"]
+}
