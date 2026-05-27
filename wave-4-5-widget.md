@@ -1,8 +1,8 @@
 # wave-4-5-widget.md — Calendar Widget Reference
 
-**Current version:** v2.8
+**Current version:** v2.9
 **Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore
-**Status:** Wave 4.5 CLOSED. v2.8 canonical. PQ-29 parked.
+**Status:** Wave 4.5 CLOSED. v2.9 canonical. PQ-29 parked.
 **Served from:** `C:\dev\family-ops` via `python -m http.server 8080`
 **Data source:** `calendars.md` in same directory — fetched live on load and Home button
 
@@ -30,6 +30,7 @@
 | v2.6 | 2026-05-26 | meetings category added (📋) to CAT_EMOJI/CAT_MAP/CAT_CLS. KoC + Fairboard entries updated in calendars.md. syncNavH() + --nh var added. |
 | v2.7 | 2026-05-26 | Cook mode inset:0 attempt — centers at true 50vh but visual perception off |
 | v2.8 | 2026-05-26 | Cook mode padding:var(--hh) 24px var(--nh) — reserves header+nav zones. PQ-29 still open. |
+| v2.9 | 2026-05-27 | speak() + playSound() Phase 3 hooks wired dormant. VOICE_CAST + SOUNDS constants. scheduleMorningBriefing(), ccirAlert(), dinnerReminder() hooks. meetings category carried from v2.6. cook-scr inset:0 carried from v2.8. |
 
 ---
 

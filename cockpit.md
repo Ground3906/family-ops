@@ -342,3 +342,152 @@ Hardware decision is final. No further research needed.
 Firewalla is a separate decision with separate timing — it's not a Cockpit gate.
 It should be purchased and configured before Wyatt gets significant device freedom
 (before driver's licensing phase, at minimum).
+
+---
+
+## Phase 3 North Star
+
+**Status:** Vision locked. No build until all Phase 1/2 gates are green.
+**Last captured:** 2026-05-27
+
+This section documents the full end-state vision for the Cockpit. Every Phase 1 and
+Phase 2 build decision should point toward this north star without overbuilding ahead
+of its time.
+
+---
+
+### Voice Layer — ElevenLabs
+
+Full Home Improvement cast. One voice per agent. Nobody sounds like anyone else.
+Budget: **ElevenLabs Creator plan — $22/month, Flash model.**
+
+| Agent | Character | Voice profile |
+|-------|-----------|---------------|
+| 🔧 Al | Al Borland | Deep, dry, measured male |
+| 📅 Foreman | Wilson | Warm, slightly cryptic — never rushes |
+| 🍳 Chow Hall | Jill Taylor | Warm, practical female |
+| 🏠 Punch List | Tim Taylor | Enthusiastic, direct male |
+| 📚 Whetstone | Binford announcer | Authoritative, broadcaster male |
+| 🎒 Mystery Ranch | Bud | Gruff, outdoorsman |
+| 🐷 Stockyard | Marty | Working-class, no-nonsense |
+| 🌱 Rootstock | Al's mom | Warm, earthy female |
+
+Voice IDs assigned in Phase 3. `VOICE_CAST` constants are in the widget, dormant.
+
+---
+
+### Sound Layer — Local Files, Web Audio API, Zero Cost
+
+`playSound()` hook wired in widget v2.9. Files live in `/sounds/` on ThinkPad server.
+No ElevenLabs dependency. No API calls. Instant playback.
+
+| Event | Sound |
+|-------|-------|
+| Widget boot / morning load | Home Improvement theme riff |
+| Morning briefing start | Al voice reads the day |
+| Saints of the day | Wilson — Foreman reads over the fence |
+| Calendar write confirmed | "More power" |
+| CCIR critical alert | Argh argh argh |
+| Anomaly detected | Tool grunt |
+| 17:15 dinner warning | Binford Tools jingle |
+| Task complete | Argh of approval |
+| System error | "I don't think so Tim" |
+| Flock anomaly | Stockyard / Marty voice |
+| Frost alert | Rootstock voice |
+
+---
+
+### Daily Liturgical Briefing — Wilson / Foreman
+
+Every morning. Wilson comes to the fence. Reads the saint of the day — name, feast,
+one line of genuine wisdom in character. Bayer household is Catholic. This is doctrine
+surfacing daily in the kitchen where the whole family hears it. Kids at the bar stools.
+Kalea at the stove. Matt walking through.
+
+Sequence: `playSound('boot')` → `speak(dayBriefText, 'foreman')`
+
+Saints data source: `calendars.md` liturgical entries + Mantel stub (Wave 4.6+).
+
+---
+
+### Video Calling Station
+
+USB camera mounted to Cockpit frame. One tap on a family member's pill. Call opens.
+Kalea deploys — kids walk up to the wall. No phone handed to a six-year-old.
+No hunting for a device. The wall is the phone.
+
+**Why this matters:** USMC Reserve household. Kalea deploys. This is operational,
+not decorative.
+
+Implementation: Android WebRTC or Google Meet link pinned to pill tap. Phase 3 design TBD.
+
+---
+
+### Weather Integration — Foreman Owns
+
+Permanent Westcliffe current conditions panel on the widget. Always visible.
+
+**Who taps it:**
+- **Foreman** — reads destination from calendar entry, pre-loads weather for that
+  location and time in the day brief. "Rainy. 52°F in Colorado Springs. Bring a jacket."
+- **Mystery Ranch** — wind, precip, temp, sunrise/sunset for the hunt unit.
+- **Punch List** — road conditions on the 160 over Hardscrabble before vehicle goes out.
+- **Rootstock** — first/last freeze alerts at 9000ft.
+
+No new agent. Weather is a utility layer. All agents borrow the feed. Foreman surfaces it.
+
+---
+
+### Sensor Feeds — Stockyard + Farm
+
+USB or Bluetooth sensors feeding live into the widget. Stockyard gets a nervous system.
+
+Planned sensors:
+- Freezer alarm — temperature threshold alert
+- Coop temperature — live feed on Stockyard panel
+- Gate alerts — farm perimeter
+- Additional TBD based on Phase 3 farm build
+
+Cockpit shows real farm state, not just calendar state.
+
+---
+
+### Motion-Triggered Wake
+
+Screen sleeps at 21:00. Someone enters the kitchen — it wakes. No tap required.
+Fully Kiosk Browser handles this natively (free tier sufficient).
+
+Phase 2 upgrade: swap Android Screen Pinning for Fully Kiosk Browser if Phase 1
+proves insufficient. Motion wake is a Fully Kiosk feature.
+
+---
+
+### Foundation Placeholders — Wired in v2.9
+
+These are in the widget now. Dormant. Do not activate without Phase 3 gate clearance.
+
+| Hook | Location | Status |
+|------|----------|--------|
+| `speak()` | widget v2.9 JS | WIRED, DORMANT |
+| `playSound()` | widget v2.9 JS | WIRED, DORMANT |
+| `VOICE_CAST` constants | widget v2.9 JS | WIRED, DORMANT |
+| `SOUNDS` constants | widget v2.9 JS | WIRED, DORMANT |
+| `scheduleMorningBriefing()` | widget v2.9 JS | WIRED, DORMANT |
+| `ccirAlert()` | widget v2.9 JS | WIRED, DORMANT |
+| `dinnerReminder()` | widget v2.9 JS | WIRED, DORMANT |
+| Weather panel stub | Phase 3 widget pass | NOT YET |
+| Video call button stub | Phase 3 widget pass | NOT YET |
+
+---
+
+### Phase 3 Budget Flag
+
+| Item | Cost | Notes |
+|------|------|-------|
+| ElevenLabs Creator plan | $22/mo | Flash model, ~100K chars/mo, full cast |
+| Sound library files | $0 | Local ThinkPad, Web Audio API |
+| Weather API | $0 | Open-Meteo or NWS free tier |
+| Video calling | $0 | Android WebRTC / Google Meet |
+| USB camera | ~$30 one-time | Phase 3 hardware add |
+| **Phase 3 recurring** | **$22/mo** | |
+
