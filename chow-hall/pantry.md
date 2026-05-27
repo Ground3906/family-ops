@@ -1,7 +1,7 @@
 # Chow Hall — Pantry
 
 **Owner:** Chow Hall (🍴)
-**Last updated:** 2026-05-26
+**Last updated:** 2026-05-27
 **Data state:** STARTER EXAMPLES — not a real count. Real numbers load when meal planning earns it (Kalea ride-along checks + Costco receipts).
 
 **Naming rule:** Name each item the plain way you'd say it out loud, and keep the name identical here and in `freezer.json` so the shopping list and recipes line up.
@@ -59,6 +59,9 @@ Tracked by how full the bin is, not a count: **full / half / low / out.**
 | Tortilla chips | 3 | — | 4 |
 | Peanut butter | 2 | — | 3 |
 | Coffee | 3 | — | 4 |
+| Eggs (farm fresh) | — | — | — |
+| Flour tortillas | — | — | — |
+| Active dry yeast | — | — | — |
 
 ---
 
