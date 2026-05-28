@@ -34,20 +34,20 @@
 ## v3.8 Spec (26 items)
 
 ### Group 1 — Critical bugs
-1. Night button broken — restore `body.night-dim` CSS (brightness 0.08 on all 4 zones), `#night-wake` CSS (position:fixed, inset:0, z-index:999), and `body.classList.toggle('night-dim')` in `toggleNight()`
-2. Timer layout — 2 fixed columns; col 1 fills top-to-bottom (5 timers); col 2 appears on 6th, collapses when empty; state-sorted: running first, idle next, done last
-3. Week view brief pane — `#week-detail.visible` change from `display:block` to `display:flex`
-4. Timer cards — apply `border-left:3px solid ${rc}; border-top:3px solid ${rc}` matching recipe card treatment
+1. Night button broken — does nothing
+2. Timers stacking before horizontal expansion (z-index/layout issue)
+3. Week view brief row layout didn't render — looks identical to v3.6
+4. Timer cards not picking up recipe color (tab got it, timer cards didn't)
 
 ### Group 2 — Layout/structure
-5. Top bar — maximize wordmark placard within fixed top bar height; no vertical growth; use horizontal space
-6. Month view — `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)` — fills vertical space between top bar and nav
-7. *(resolved with item 2)*
+5. Header area — marquee made everything smaller; needs bigger, more top/bottom padding
+6. Month view — doesn't fill vertical space; must auto-size center area between top and bottom ribbon
+7. Timer layout — 2 fixed columns; col 1 fills top-to-bottom (5 timers); col 2 appears on 6th, collapses when empty
 
 ### Group 3 — Theming pass
-8. Marquee — Option D copper plate: `border-top:2px solid #c07830; border-left:2px solid #a05a20; border-right:2px solid #5a2808; border-bottom:3px solid #3a1404; background:#2e1e0a; corner hardware`. Applies to both wordmark placard and center banner placard.
-9. Wordmark — logo SVG inside the wordmark placard as a single unified unit; no separate logo outside
-10. Recipe card background — burnt cream `--paper` shift; timers match same variable
+8. Marquee — more 3D physical patch feel, sewn-on look, not integrated/modern
+9. Wordmark — logo + wordmark in single unified marquee (logo inside, not outside)
+10. Recipe card background — burnt cream, not white; timers match same color
 11. Servings bar background — brownish with gold/cream border
 12. Recipe accent colors — current blue too aggressive against cream; needs subtler palette
 
@@ -77,12 +77,24 @@
 
 ---
 
+## Locked Design Decisions (v3.8)
+
+- **Item 1 — Night mode restore:** `body.night-dim` CSS on all 4 zones (#hdr, #dhdrs, #cal-wrap, #bottom): `filter:brightness(0.08); pointer-events:none`. `#night-wake`: `display:none; position:fixed; inset:0; z-index:999; cursor:pointer`. `toggleNight()` adds/removes `body.night-dim` class.
+- **Items 2+7 — Timer layout:** 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th, collapses when empty. State-sorted: running first, idle next, done last. Rail width: 224px (1 col) / 448px (2 col).
+- **Item 3 — Week view:** `#week-detail.visible` → `display:flex` (was `display:block`).
+- **Item 4 — Timer card color:** `border-left:3px solid ${rc}; border-top:3px solid ${rc}` on timer cards matching recipe card treatment.
+- **Item 5 — Top bar:** Maximize wordmark placard within fixed top bar height. No vertical growth. Use horizontal space.
+- **Item 8 — Marquee design:** Option D copper plate. `background:#2e1e0a; border-top:2px solid #c07830; border-left:2px solid #a05a20; border-right:2px solid #5a2808; border-bottom:3px solid #3a1404`. Corner hardware. Applies to both wordmark placard and center banner placard.
+- **Item 9 — Logo placement:** Logo SVG inside the wordmark placard as a single unified unit. No separate logo outside the placard.
+
+---
+
 ## Architecture (v3.6+)
 
 ### Top bar
 - Sticky, fixed height — never grows vertically
-- Left: wordmark placard — Option D copper plate, logo inside, corner hardware
-- Center: month/year banner — same Option D copper plate treatment; shows recipe name in Cook Mode; dual-month slash in rolling view when week spans two months
+- Left: wordmark placard — logo inside, corner hardware, Option D copper plate treatment
+- Center: month/year banner — same Option D copper plate; shows recipe name in Cook Mode; dual-month slash when rolling week spans two months
 - Right: egg card + vdiv + agent grid
 
 ### Nav ribbon — 3 fixed sections
@@ -91,7 +103,7 @@
 - **Right (.nav-right-zone):** Rolling / Week / Month — sets section width ruler
 
 ### Cook Mode layout
-- **Left rail (#cm-left):** Timer stack — 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th timer, collapses when empty. State-sorted: running first, idle next, done last. Rail width: 224px (1 col) / 448px (2 col).
+- **Left rail (#cm-left):** Timer stack — 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th, collapses when empty. State-sorted: running first, idle next, done last. Rail: 224px (1 col) / 448px (2 col).
 - **Center (#cm-center):** 2×2 recipe card grid — sticky servings bar + frozen top row (Ingredients | Altitude) + method cards
 - **Right rail (#cm-right):** Recipe browser
 
@@ -112,17 +124,17 @@
 - Tap any timer → snaps to Cook Mode on that recipe
 
 ### Night mode
-- `body.night-dim` on all 4 zones: `#hdr`, `#dhdrs`, `#cal-wrap`, `#bottom` — `filter:brightness(0.08); pointer-events:none`
+- `body.night-dim` on all 4 zones: `filter:brightness(0.08); pointer-events:none`
 - `#night-wake` — transparent full-screen overlay, `position:fixed; inset:0; z-index:999; cursor:pointer`
-- Tap anywhere to wake — overlay catches it, fires `toggleNight()`
+- Tap anywhere to wake
 
 ### goHome behavior (v3.6)
 - Always resets to rolling view, snaps to today
 - No page reload — calls `initRolling()` only
 
-### Month view
+### Month view (v3.6)
 - Hard 5-row cap — overflow days appear as leading days in next month's grid
-- Fills vertical space via `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)`
+- Fills vertical space: `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)`
 
 ### Banner behavior (v3.7)
 - Rolling/week: "Month / Month" only when visible week actually spans two calendar months
