@@ -1,8 +1,7 @@
 # wave-4-5-widget.md — Calendar Widget Reference
 
-**Current version:** v3.7 (shipped 2026-05-28, known issues — v3.8 in design)
+**Current version:** v3.7
 **Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore
-**Status:** Wave 6.5 shipped. v3.7 has known rendering issues. v3.8 spec complete.
 **Served from:** `C:\dev\family-ops` via `python -m http.server 8080`
 **Data source:** `calendars.md` in same directory — fetched live on load
 
@@ -32,23 +31,23 @@
 
 ---
 
-## v3.8 Spec (26 items — next build)
+## v3.8 Spec (26 items)
 
 ### Group 1 — Critical bugs
-1. Night button broken — does nothing
-2. Timers stacking before horizontal expansion (z-index/layout issue)
-3. Week view brief row layout didn't render — looks identical to v3.6
-4. Timer cards not picking up recipe color (tab got it, timer cards didn't)
+1. Night button broken — restore `body.night-dim` CSS (brightness 0.08 on all 4 zones), `#night-wake` CSS (position:fixed, inset:0, z-index:999), and `body.classList.toggle('night-dim')` in `toggleNight()`
+2. Timer layout — 2 fixed columns; col 1 fills top-to-bottom (5 timers); col 2 appears on 6th, collapses when empty; state-sorted: running first, idle next, done last
+3. Week view brief pane — `#week-detail.visible` change from `display:block` to `display:flex`
+4. Timer cards — apply `border-left:3px solid ${rc}; border-top:3px solid ${rc}` matching recipe card treatment
 
 ### Group 2 — Layout/structure
-5. Header area — marquee made everything smaller; needs bigger, more top/bottom padding
-6. Month view — doesn't fill vertical space; must auto-size center area between top and bottom ribbon
-7. Timer layout — 2 fixed columns; col 1 fills top-to-bottom (5 timers); col 2 appears on 6th, collapses when empty
+5. Top bar — maximize wordmark placard within fixed top bar height; no vertical growth; use horizontal space
+6. Month view — `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)` — fills vertical space between top bar and nav
+7. *(resolved with item 2)*
 
 ### Group 3 — Theming pass
-8. Marquee — more 3D physical patch feel, sewn-on look, not integrated/modern
-9. Wordmark — logo + wordmark in single unified marquee (logo inside, not outside)
-10. Recipe card background — burnt cream, not white; timers match same color
+8. Marquee — Option D copper plate: `border-top:2px solid #c07830; border-left:2px solid #a05a20; border-right:2px solid #5a2808; border-bottom:3px solid #3a1404; background:#2e1e0a; corner hardware`. Applies to both wordmark placard and center banner placard.
+9. Wordmark — logo SVG inside the wordmark placard as a single unified unit; no separate logo outside
+10. Recipe card background — burnt cream `--paper` shift; timers match same variable
 11. Servings bar background — brownish with gold/cream border
 12. Recipe accent colors — current blue too aggressive against cream; needs subtler palette
 
@@ -80,13 +79,19 @@
 
 ## Architecture (v3.6+)
 
+### Top bar
+- Sticky, fixed height — never grows vertically
+- Left: wordmark placard — Option D copper plate, logo inside, corner hardware
+- Center: month/year banner — same Option D copper plate treatment; shows recipe name in Cook Mode; dual-month slash in rolling view when week spans two months
+- Right: egg card + vdiv + agent grid
+
 ### Nav ribbon — 3 fixed sections
 - **Left (.nav-left-zone):** Kids Kitchen — width JS-matched to right section via `syncHdrH()`
 - **Center (.nav-center-zone, flex:1):** ← Home **Cook Mode** Night → — Cook Mode anchored dead center always
 - **Right (.nav-right-zone):** Rolling / Week / Month — sets section width ruler
 
 ### Cook Mode layout
-- **Left rail (#cm-left):** Timer stack — flows horizontally, fixed 200px card width, expands to 2 columns at 6+ timers
+- **Left rail (#cm-left):** Timer stack — 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th timer, collapses when empty. State-sorted: running first, idle next, done last. Rail width: 224px (1 col) / 448px (2 col).
 - **Center (#cm-center):** 2×2 recipe card grid — sticky servings bar + frozen top row (Ingredients | Altitude) + method cards
 - **Right rail (#cm-right):** Recipe browser
 
@@ -101,18 +106,23 @@
 - FAMILY: 7 center
 - Hide Ref + Start Recipe right
 
-### Float bar (v3.7)
+### Float bar (v3.7 → v3.8 redesign)
 - Position: bottom left, fixed above nav
-- Contains: all active/done timers with recipe color accent + Cook Mode return button (🍴)
-- Tap any timer chip → snaps to Cook Mode on that recipe
+- v3.8: single boxed unit, semi-transparent, "Cook Mode Timers" label, all timers listed with color markers
+- Tap any timer → snaps to Cook Mode on that recipe
+
+### Night mode
+- `body.night-dim` on all 4 zones: `#hdr`, `#dhdrs`, `#cal-wrap`, `#bottom` — `filter:brightness(0.08); pointer-events:none`
+- `#night-wake` — transparent full-screen overlay, `position:fixed; inset:0; z-index:999; cursor:pointer`
+- Tap anywhere to wake — overlay catches it, fires `toggleNight()`
 
 ### goHome behavior (v3.6)
 - Always resets to rolling view, snaps to today
 - No page reload — calls `initRolling()` only
 
-### Month view (v3.6)
+### Month view
 - Hard 5-row cap — overflow days appear as leading days in next month's grid
-- Auto-fills vertical space between header and nav (v3.8 fix pending)
+- Fills vertical space via `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)`
 
 ### Banner behavior (v3.7)
 - Rolling/week: "Month / Month" only when visible week actually spans two calendar months
