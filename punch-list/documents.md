@@ -1,16 +1,16 @@
-﻿# Bayer Household Documents Tracker
+# Bayer Household Documents Tracker
 
 **Schema version:** 1
 **Owner:** Punch List
 **Capture model:** Opportunistic. Document surfaces during a chat session (renewal letter, expiration reminder, lookup request) → Punch List captures it then. Not via systematic hunt.
-**Last updated:** 2026-05-15
+**Last updated:** 2026-05-28
 
 ---
 
 ## Operating principles
 
 1. **Renewal-watch is the primary value.** The point of this file is to surface expirations before they bite. Each tracked document has an expiration date (or "no expiration") and Foreman gets a renewal-prompt milestone derived from it.
-2. **Sensitive numbers stay off-disk.** Document numbers go here only if they''re considered low-sensitivity (driver license number is fine; SSN is not). High-sensitivity numbers (SSN, account numbers, passwords) never appear in this file or anywhere in the repo.
+2. **Sensitive numbers stay off-disk.** Document numbers go here only if they're considered low-sensitivity (driver license number is fine; SSN is not). High-sensitivity numbers (SSN, account numbers, passwords) never appear in this file or anywhere in the repo.
 3. **One file per fact.** Document expiration dates live here. Foreman references; doesn''t duplicate.
 4. **Reflag suppression.** A document explicitly marked lapsed/dormant (e.g. CCW) does not get re-surfaced as a renewal candidate unless Matt explicitly reopens it.
 
@@ -74,10 +74,44 @@ Cross-referenced from `fleet-state-v1.md`. This table is the renewal-date index;
 | Pen trailer | USAA | Annual | See `pentrailerinsurance.png` |
 | Personal property / umbrella | USAA | Annual | See `ppinsurance.png` |
 | Health (Kalea + dependents via Matt employer) | TBD | — | Capture during open enrollment |
-| Life | TBD | — | Capture as discovered |
+| Life — children (see detail below) | Knights of Columbus | Annual anniversary | 4 active policies; Cullen separate (see notes) |
 | Disability | TBD | — | Capture as discovered |
 
 Renewal prompts: Foreman fires at policy renewal minus 30 days.
+
+---
+
+### Life Insurance — Knights of Columbus Children's Whole Life Policies
+
+**Agent:** Andrew Wheaton | (303) 427-5056 | ANDREW.WHEATON@KOFC.ORG
+**Council:** 16577 | **Agent #:** 014944
+**Policy owner (all):** Matthew S. Bayer
+**Beneficiary (all):** Matthew S. Bayer (Primary)
+**Issue date (all):** May 2023
+**Type (all):** Individual Whole Life Insurance — 901 benefit, US
+**Payment (all):** Monthly, pre-authorized
+
+| Insured | Policy ID | Monthly Premium | Annual Premium | Base Death Benefit | Total Death Benefit (w/ PUA) | Policy Value (as of 05/2026) |
+|---|---|---|---|---|---|---|
+| Wyatt Bayer | 05145961 | $11.09 | $128.25 | $15,000 | $15,083.15 | $52.46 |
+| Molly Bayer | 05145962 | $9.00 | $104.10 | $15,000 | $15,059.25 | $12.59 |
+| Rileigh Bayer | 05145964 | $8.55 | $98.85 | $15,000 | $15,046.02 | $5.49 |
+| Emmitt Bayer | 05145966 | $9.12 | $105.45 | $15,000 | $15,070.18 | $17.88 |
+| **Total** | — | **$37.76/mo** | **$436.65/yr** | — | — | — |
+
+**Cullen Bayer — no standard life insurance.**
+Cullen was born with a VSD and underwent successful open-heart surgery at age 6. He is healthy. Standard life insurance is not available to him through underwriting. A KofC fraternal member benefit (non-life-insurance) is available through Matt's membership — **pending enrollment (open hook — see below).**
+
+---
+
+### KofC — Open Hooks
+
+| Hook | Status | Notes |
+|---|---|---|
+| Cullen KofC fraternal benefit | **Pending — Matt to enroll** | Not a life insurance policy. Available as a KofC member benefit to Matt's dependent. Matt has the materials; action needed. |
+| TSP → KofC managed retirement rollover | **Pending — Matt to execute** | Matt has all necessary paperwork. Rollover from Thrift Savings Plan to KofC-managed retirement plan. High value, non-urgent but don't let it slip. |
+
+Foreman: surface TSP hook in next financial review window. Surface Cullen benefit at next KofC interaction.
 
 ---
 
@@ -138,7 +172,7 @@ Foreman fires these on the calendar as renewal milestones.
 | 2027-03 | Deck trailer registration renewal (expires 2027-05) | Vehicle registrations |
 | 2028-09-07 | Matt CO DL renewal — 90 days out (expires 2028-12-07) | Driver licenses |
 
-Punch List re-derives this schedule whenever a document row changes. Foreman reads; doesn''t restate.
+Punch List re-derives this schedule whenever a document row changes. Foreman reads; doesn't restate.
 
 ---
 
