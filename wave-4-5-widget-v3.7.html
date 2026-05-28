@@ -1,15 +1,23 @@
-<!-- v3.5 - 2026-05-27
+<!-- v3.7 - 2026-05-28
      Bayer Family Ops | Edelweiss Farms — Family Ops
-     Wave 6.4: Cook Mode + Kids Recipe Browser
+     Wave 6.5: Cook Mode overhaul + Nav ribbon restructure
 
-     CHANGES FROM v3.4:
-     v3.5-1: Ingredient tabs removed — simple full-width two-column list
-     v3.5-2: Recipe name bar removed from sticky zone — tab carries the name
-     v3.5-3: Start Recipe button in servings bar — timers populate on tap only
-     v3.5-4: Tap Servings label to reset to recipe default serving size
-     v3.5-5: Float bar fixed — CSS handles position, JS toggles display only
-     v3.5-6: Coming Up styled as category, always first in left rail
-     v3.5-7: cmStartRecipe() + cmResetServings() added
+     CHANGES FROM v3.5:
+     v3.6-1: Home button — always returns to rolling view, scrolls to today, no page reload
+     v3.6-2: Timer auto-pop fix — timers fire ONLY on Start Recipe, never on recipe browse
+     v3.6-3: Recipe card 2×2 grid — frozen top row (ingredients | altitude), method cards bottom
+     v3.6-4: Nav ribbon — 3 fixed sections: Kids Kitchen | Cook/Home/Night/arrows | Rolling/Week/Month
+     v3.6-5: Cook Mode button anchored dead center of ribbon always
+     v3.6-6: Rail swap — timers LEFT, recipe browser RIGHT
+     v3.6-7: Farmhouse tactile buttons — raised/depressed physical feel on all Cook Mode controls
+     v3.6-8: Servings bar — SERVINGS left (half-step, dotted-underline reset) | FAMILY center | buttons right
+     v3.6-9: Timer rail horizontal expansion — cards fixed size, rail grows right when >5 timers
+     v3.6-10: Float bar persistent above nav when timers active outside Cook Mode
+     v3.6-11: Multi-recipe timers — colorblind-safe accent color + 4-char tag per recipe
+     v3.6-12: Daily Mass — zero conflict weight, never counted in time-conflict logic, bumps first on busy days
+     v3.6-13: Month view — hard 5-row cap, overflow days appear as leading days in next month
+     v3.6-14: Dual-month banner — shows "May / June" when rolling week spans two months
+     v3.6-15: Anticipated Mass — uses identical title "Mass - Eggs for Fr. Joe" per Foreman doctrine
 
      PARKED PQs (carried forward):
      PQ-22: Liturgical data 2028-2035
@@ -51,15 +59,43 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #hdr{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px solid var(--brd);padding:8px 10px 0;}
 .hdr-top{display:flex;align-items:center;gap:0;margin-bottom:6px;position:relative;}
 
-/* WORDMARK ZONE */
-.wordmark-zone{display:flex;align-items:center;gap:8px;flex-shrink:0;z-index:1;}
-.logo-badge{width:72px;height:72px;flex-shrink:0;}
-.wordmark{display:flex;flex-direction:column;gap:2px;}
-.logo-t{font-family:Georgia,serif;font-size:15px;font-weight:600;color:var(--cream);letter-spacing:.8px;text-transform:uppercase;white-space:nowrap;line-height:1.3;text-shadow:0 1px 6px rgba(0,0,0,.9);}
-.logo-div{height:0.5px;background:#2e2820;margin:2px 0;}
-.logo-s{font-family:Georgia,serif;font-size:13px;font-weight:600;color:#4a6b3a;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2;}
+/* WORDMARK ZONE — v3.7: Option E antique placard */
+.wordmark-zone{display:flex;align-items:center;gap:0;flex-shrink:0;z-index:1;}
+.logo-badge{width:64px;height:64px;flex-shrink:0;margin-right:8px;}
+.wordmark-placard{
+  position:relative;padding:7px 16px;
+  background:#2a1e0a;
+  border:1.5px solid #7a5c1e;border-radius:2px;
+  box-shadow:inset 0 0 12px rgba(0,0,0,.5),0 0 0 1px #3a2810;
+  flex-shrink:0;
+}
+.wpc{position:absolute;width:14px;height:14px;}
+.wpc svg{width:14px;height:14px;}
+.wpc-tl{top:-2px;left:-2px;}
+.wpc-tr{top:-2px;right:-2px;transform:scaleX(-1);}
+.wpc-bl{bottom:-2px;left:-2px;transform:scaleY(-1);}
+.wpc-br{bottom:-2px;right:-2px;transform:scale(-1,-1);}
+.wordmark{display:flex;flex-direction:column;gap:2px;position:relative;z-index:1;}
+.logo-t{font-family:Georgia,serif;font-size:14px;font-weight:700;color:#e8d8a8;letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;line-height:1.3;text-shadow:0 1px 4px rgba(0,0,0,.8);}
+.logo-div{height:0.5px;background:#6a5020;margin:2px 0;}
+.logo-s{font-family:Georgia,serif;font-size:11px;font-weight:700;color:#8a9a6a;letter-spacing:2px;text-transform:uppercase;line-height:1.2;}
 
-/* EGG TACK CARD */
+/* MONTH+YEAR CENTER BANNER — v3.7: Option E placard */
+.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:center;gap:0;justify-content:center;pointer-events:none;z-index:0;}
+.month-placard{
+  position:relative;padding:6px 20px;
+  background:#2a1e0a;
+  border:1.5px solid #7a5c1e;border-radius:2px;
+  box-shadow:inset 0 0 14px rgba(0,0,0,.5),0 0 0 1px #3a2810;
+}
+.mpc{position:absolute;width:14px;height:14px;}
+.mpc svg{width:14px;height:14px;}
+.mpc-tl{top:-2px;left:-2px;}
+.mpc-tr{top:-2px;right:-2px;transform:scaleX(-1);}
+.mpc-bl{bottom:-2px;left:-2px;transform:scaleY(-1);}
+.mpc-br{bottom:-2px;right:-2px;transform:scale(-1,-1);}
+.month-name{font-family:Georgia,serif;font-size:40px;font-weight:700;color:#e8d8a8;letter-spacing:.06em;line-height:1;text-shadow:0 1px 4px rgba(0,0,0,.8);position:relative;z-index:1;}
+.month-year{font-family:Georgia,serif;font-size:16px;font-weight:600;color:#9a8a60;letter-spacing:.2em;line-height:1;position:relative;z-index:1;margin-left:8px;}
 .egg-card{display:flex;flex-direction:column;align-items:center;padding:4px 10px 4px;background:var(--cream);border:1px solid #c8b88a;border-radius:2px;cursor:pointer;position:relative;flex-shrink:0;box-shadow:1px 2px 5px rgba(0,0,0,.55);transform:rotate(-1.5deg);transform-origin:top center;margin-top:4px;z-index:1;}
 .egg-card::before{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;background:linear-gradient(225deg,#b8a870 45%,var(--cream) 45%);border-radius:0 0 2px 0;}
 .tack{position:absolute;top:-4px;left:44%;width:9px;height:9px;background:radial-gradient(circle at 35% 30%,#c88050,#7a4a1e);border-radius:50%;box-shadow:0 0 2px rgba(0,0,0,.9);z-index:2;}
@@ -69,11 +105,6 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .egg-rule{width:100%;height:0.5px;background:#a09050;margin:2px 0;}
 .egg-sub{font-family:Georgia,serif;font-size:6px;color:#6a5a3a;letter-spacing:1px;text-transform:uppercase;}
 .egg-stale{font-size:5px;color:#c08416;font-family:Georgia,serif;margin-top:1px;}
-
-/* MONTH+YEAR CENTER BANNER — v2.2: align-items:center (was baseline) */
-.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:center;gap:8px;justify-content:center;pointer-events:none;z-index:0;}
-.month-name{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--cream);letter-spacing:.05em;line-height:1;text-shadow:0 1px 10px rgba(0,0,0,.8),0 2px 20px rgba(0,0,0,.6);}
-.month-year{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#9a8a60;letter-spacing:.2em;line-height:1;}
 
 /* VDIV */
 .vdiv{width:1px;align-self:stretch;background:var(--brd);flex-shrink:0;margin:0 8px;}
@@ -182,11 +213,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 /* v2.2: sep brightened to #6a6050 (was var(--txt3) = #3e3428) */
 .sep{font-size:10px;color:#6a6050;flex-shrink:0;}
 
-/* BOTTOM NAV */
-/* v2.5: two-zone nav — view zone left, action zone fills remaining centered */
+/* BOTTOM NAV — v3.6: 3 fixed sections */
+/* Right section sets width; left matches it; center fills between with Cook Mode dead-center */
 #bottom{position:fixed;bottom:0;left:0;right:0;z-index:100;border-top:0.5px solid var(--brd);background:var(--bg);padding:8px 10px;display:flex;align-items:center;gap:0;transform:translateZ(0);will-change:transform;}
-.nav-view-zone{display:flex;align-items:center;gap:4px;flex-shrink:0;padding-right:8px;border-right:0.5px solid var(--brd);}
-.nav-action-zone{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;}
+.nav-left-zone{display:flex;align-items:center;justify-content:center;flex-shrink:0;padding-right:8px;border-right:0.5px solid var(--brd);}
+.nav-center-zone{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;}
+.nav-right-zone{display:flex;align-items:center;gap:4px;flex-shrink:0;padding-left:8px;border-left:0.5px solid var(--brd);}
 
 /* VIEW BUTTONS — v2.2: padding:14.5px 14px to match arrow button height exactly */
 .nav-view-btn{padding:5px;background:#1a1610;border:1.5px solid #3e3428;border-top-color:#54462e;border-left-color:#54462e;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.6);cursor:pointer;user-select:none;}
@@ -221,12 +253,158 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .night-moon{font-size:16px;line-height:1;margin-bottom:3px;}
 .night-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:#ffcca0;text-transform:uppercase;text-shadow:0 0 4px rgba(255,120,60,.5);}
 
-/* NIGHT OVERLAY */
-#night-wake{display:none;position:fixed;inset:0;z-index:999;cursor:pointer;background:rgba(0,0,0,0.92);}
+/* COOK MODE — Meal Planner shell button style (Item 2) */
+.cm-meal-btn-style{
+  background:#2a1e0a;
+  border-top:1px solid #7a5a20;border-left:1px solid #6a4a18;
+  border-right:1px solid #1a1008;border-bottom:3px solid #100c04;
+  border-radius:8px;
+  color:#f0c880;font-family:Georgia,serif;font-size:13px;font-weight:700;
+  height:34px;min-width:34px;padding:0 12px;
+  cursor:pointer;letter-spacing:.3px;user-select:none;
+  box-shadow:0 2px 6px rgba(0,0,0,.5),inset 0 0 8px rgba(0,0,0,.3);
+  transition:transform .07s,border-bottom-width .07s;
+}
+.cm-meal-btn-style:active{border-bottom-width:1px;transform:translateY(2px);}
+.cm-meal-btn-style:disabled{opacity:.6;cursor:default;}
+.cm-start-amber{
+  background:#4a3208;
+  border-top-color:#c07830;border-left-color:#a05a20;
+  color:#f0c880;
+}
 
-/* ============================================================
-   v3.2 COOK MODE — WORN RECIPE CARD THEME (Option A)
-   ============================================================ */
+/* FARMHOUSE COOK MODE CSS block — keep for timer btns */
+.farm-btn{
+  background:#5a3e20;
+  border-top:1px solid #8a6030;
+  border-left:1px solid #7a5028;
+  border-right:1px solid #3a2010;
+  border-bottom:3px solid #2a1808;
+  color:#f0d898;
+  font-family:Georgia,serif;
+  font-size:13px;
+  font-weight:700;
+  height:32px;
+  min-width:32px;
+  padding:0 10px;
+  border-radius:5px;
+  cursor:pointer;
+  letter-spacing:.5px;
+  transition:transform .07s,border-bottom-width .07s;
+  position:relative;
+  top:0;
+  user-select:none;
+}
+.farm-btn:active{border-bottom-width:1px;transform:translateY(2px);}
+.farm-btn-green{
+  background:#3a5820;
+  border-top:1px solid #6a9030;
+  border-left:1px solid #587828;
+  border-right:1px solid #243810;
+  border-bottom:3px solid #182808;
+  color:#c8e898;
+}
+.farm-btn-green:active{border-bottom-width:1px;transform:translateY(2px);}
+
+/* COOK MODE — SERVINGS BAR v3.6 */
+.cm-srv-bar-v36{
+  display:flex;align-items:center;padding:10px 18px;
+  background:var(--paper2);border-bottom:1.5px solid var(--paper-brd);
+  flex-shrink:0;gap:10px;
+}
+.cm-srv-left{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.cm-srv-lbl-v36{
+  font-family:Georgia,serif;font-size:10px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3);
+  border-bottom:1px dotted var(--ink3);cursor:pointer;padding-bottom:1px;
+}
+.cm-srv-lbl-v36:hover{color:var(--ink2);border-color:var(--ink2);}
+.cm-srv-val-v36{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--ink);min-width:36px;text-align:center;}
+.cm-family-lbl{
+  font-family:Georgia,serif;font-size:10px;font-weight:700;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3);
+  flex:1;text-align:center;
+}
+.cm-family-num{color:var(--ink);}
+.cm-bar-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+
+/* COOK MODE — 2×2 GRID v3.6 */
+.cm-grid4{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 14px;flex-shrink:0;}
+.cm-grid-bottom{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px 14px;flex:1;}
+.cm-card{
+  background:var(--paper);border:1px solid var(--paper-brd2);border-radius:5px;
+  padding:10px 12px;position:relative;
+}
+.cm-card-frozen{border-top:3px solid var(--paper-brd2);}
+.cm-card-lbl{
+  font-family:Georgia,serif;font-size:9px;font-weight:700;
+  letter-spacing:1.2px;text-transform:uppercase;color:var(--ink3);margin-bottom:5px;
+}
+.cm-card-divider{height:0.5px;background:var(--paper-brd);margin:5px 0;}
+.cm-ing-row36{display:flex;justify-content:space-between;font-family:Georgia,serif;font-size:11px;padding:2px 0;line-height:1.4;border-bottom:0.5px solid rgba(200,168,120,.15);}
+.cm-ing-row36:last-child{border-bottom:none;}
+.cm-ing-name36{color:var(--ink2);}
+.cm-ing-amt36{color:var(--ink);font-weight:700;margin-left:8px;flex-shrink:0;}
+.cm-alt-badge36{
+  display:inline-block;background:rgba(200,120,24,.15);color:var(--amber);
+  font-size:8px;font-weight:700;padding:1px 4px;border-radius:2px;
+  margin-right:4px;letter-spacing:.3px;font-family:Georgia,serif;text-transform:uppercase;
+}
+.cm-alt-row36{font-size:11px;color:var(--ink2);padding:3px 0;line-height:1.5;border-bottom:0.5px solid rgba(200,168,120,.12);}
+.cm-alt-row36:last-child{border-bottom:none;}
+.cm-step36{display:flex;gap:8px;padding:4px 0;align-items:flex-start;border-bottom:0.5px solid rgba(200,168,120,.12);}
+.cm-step36:last-child{border-bottom:none;}
+.cm-step-n36{font-family:Georgia,serif;font-size:22px;font-weight:700;color:var(--amber);line-height:1;min-width:22px;flex-shrink:0;}
+.cm-step-head36{font-family:Georgia,serif;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.cm-step-body36{font-size:11px;color:var(--ink2);line-height:1.5;}
+.cm-ref-collapse-btn{
+  display:none; /* hidden by default — injected inline in renderCookMode */
+}
+
+/* TIMER RAIL — v3.6: left side, horizontal expansion */
+#cm-left{
+  display:flex;flex-direction:column;flex-shrink:0;
+  border-right:2px solid var(--paper-brd2);background:var(--cook-surf);
+  overflow:hidden;
+  min-width:224px;
+  transition:width .2s ease;
+}
+#cm-left-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+#cm-timers{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:12px;}
+
+/* TIMER CARD — farmhouse tactile buttons, fixed width for horizontal flow */
+.cm-timer-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:12px 12px 10px;position:relative;overflow:hidden;flex-shrink:0;width:200px;}
+.cm-timer-card.t-running{border-color:var(--amber);}
+.cm-timer-card.t-done{border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
+.cm-timer-card.t-silenced{border-color:var(--paper-brd2);opacity:.8;}
+.cm-timer-recipe-tag{
+  display:flex;align-items:center;gap:5px;margin-bottom:4px;
+}
+.cm-timer-color-band{
+  width:4px;height:100%;position:absolute;left:0;top:0;bottom:0;border-radius:4px 0 0 4px;
+}
+.cm-timer-lbl{font-family:Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;}
+.cm-timer-card.t-done .cm-timer-lbl{color:var(--amber);}
+.cm-timer-display{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--ink2);letter-spacing:.04em;line-height:1;margin-bottom:8px;}
+.cm-timer-card.t-running .cm-timer-display{color:var(--amber);}
+.cm-timer-card.t-done .cm-timer-display{color:var(--amber);font-size:34px;}
+.cm-timer-btns{display:flex;gap:5px;}
+.cm-tbtn{
+  flex:1;padding:7px 0;border-radius:3px;
+  font-family:Georgia,serif;font-size:11px;font-weight:700;cursor:pointer;
+  text-align:center;user-select:none;
+  border-bottom:2px solid transparent;
+  transition:transform .07s,border-bottom-width .07s;
+}
+.cm-tbtn:active{transform:translateY(2px);border-bottom-width:0px;}
+.cm-tbtn.t-start{background:var(--paper3);border-top:1px solid var(--paper-brd2);border-left:1px solid rgba(200,160,80,.4);border-right:1px solid rgba(0,0,0,.2);border-bottom:2px solid var(--paper-brd2);color:var(--ink2);}
+.cm-tbtn.t-stop{background:#3a1010;border-top:1px solid #8a2010;border-left:1px solid #6a1808;border-right:1px solid #1a0808;border-bottom:2px solid #0e0404;color:#e08060;}
+.cm-tbtn.t-dismiss{background:var(--cook-surf2);border-top:1px solid var(--paper-brd);border-left:1px solid rgba(200,160,80,.2);border-right:1px solid rgba(0,0,0,.2);border-bottom:2px solid rgba(0,0,0,.4);color:var(--paper3);}
+.cm-silence-btn{width:100%;padding:11px 0;margin-top:6px;background:var(--amber);border-top:1px solid #f0a020;border-left:1px solid #d09018;border-right:1px solid #8a5010;border-bottom:3px solid #6a3808;border-radius:4px;font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;letter-spacing:.05em;user-select:none;animation:silencePulse .5s ease-in-out infinite alternate;}
+.cm-silence-btn:active{border-bottom-width:1px;transform:translateY(2px);}
+
+/* RECIPE BROWSER RAIL — v3.6: RIGHT side */
+#cm-right{width:200px;flex-shrink:0;border-left:2px solid var(--paper-brd2);background:var(--cook-surf);display:flex;flex-direction:column;overflow:hidden;}
 #cook-scr,#kids-scr{
   --paper:#f5ecd4;--paper2:#faf3e2;--paper3:#e8d8a8;
   --paper-brd:#c8a878;--paper-brd2:#b8945c;
@@ -243,7 +421,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-add-tab{padding:9px 16px;background:transparent;border:1.5px dashed var(--paper-brd);border-bottom:none;border-radius:5px 5px 0 0;font-family:Georgia,serif;font-size:20px;color:var(--paper-brd);cursor:pointer;line-height:1;transition:all .15s;}
 .cm-add-tab:hover{color:var(--amber);border-color:var(--amber);}
 #cm-body{display:flex;flex:1;overflow:hidden;padding-bottom:var(--nh);}
-#cm-left{width:200px;flex-shrink:0;border-right:2px solid var(--paper-brd2);overflow-y:auto;background:var(--cook-surf);display:flex;flex-direction:column;}
+/* cm-left (timers) and cm-right (recipe browser) are defined in farmhouse CSS block above */
 .cm-left-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
 /* RECIPE BROWSER RAIL */
 .cm-coming-up{border-bottom:1px solid rgba(200,168,120,.15);}
@@ -260,9 +438,10 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-recipe-bar{padding:14px 24px 12px;background:var(--paper3);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;position:sticky;top:0;z-index:5;}
 .cm-recipe-name{font-family:Georgia,serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;}
 .cm-recipe-meta{font-size:12px;color:var(--ink3);margin-top:3px;font-family:Georgia,serif;font-style:italic;}
+/* legacy srv-bar styles kept for Kids Mode compatibility */
 .cm-srv-bar{display:flex;align-items:center;gap:14px;padding:10px 24px;background:var(--paper2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
-.cm-srv-btn{width:40px;height:40px;background:var(--paper3);border:2px solid var(--paper-brd2);border-radius:4px;color:var(--ink);font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background .1s;user-select:none;flex-shrink:0;font-family:Georgia,serif;}
-.cm-srv-btn:hover{background:var(--paper);}
+.cm-srv-btn{width:36px;height:36px;background:var(--paper3);border-top:1px solid var(--paper-brd2);border-left:1px solid rgba(200,160,80,.4);border-right:1px solid rgba(0,0,0,.2);border-bottom:3px solid var(--paper-brd2);border-radius:4px;color:var(--ink);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;user-select:none;flex-shrink:0;font-family:Georgia,serif;transition:transform .07s,border-bottom-width .07s;}
+.cm-srv-btn:active{border-bottom-width:1px;transform:translateY(2px);}
 .cm-srv-val{font-family:Georgia,serif;font-size:26px;font-weight:700;color:var(--ink);min-width:50px;text-align:center;line-height:1;}
 .cm-srv-factor{font-size:11px;color:var(--ink3);font-family:Georgia,serif;font-style:italic;margin-left:4px;}
 .cm-ing-pane{background:var(--paper2);border-bottom:2px solid var(--paper-brd);flex-shrink:0;}
@@ -312,11 +491,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-mt-qbtn:hover{background:var(--amber2);border-color:var(--amber);}
 .cm-mt-start{width:100%;padding:11px 0;background:var(--amber);border:2px solid var(--paper-brd2);border-radius:4px;font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;transition:all .12s;}
 .cm-mt-start:hover{background:var(--amber2);}
-/* FLOATING TIMER BAR */
-#cm-float-bar{display:none;position:fixed;left:0;right:0;bottom:110px;z-index:48;background:var(--cook-bg);border-top:2px solid var(--paper-brd2);padding:8px 16px;align-items:center;gap:12px;flex-wrap:wrap;}
-.cm-float-timer{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--paper);background:var(--cook-surf);border:1px solid var(--paper-brd);border-radius:4px;padding:4px 10px;white-space:nowrap;}
-.cm-float-timer.done{color:var(--amber);border-color:var(--amber);}
-.cm-float-back{margin-left:auto;padding:7px 16px;background:var(--amber);border:none;border-radius:4px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);cursor:pointer;flex-shrink:0;}
+/* FLOATING TIMER BAR — v3.7: bottom LEFT, larger chips */
+#cm-float-bar{display:none;position:fixed;left:10px;bottom:calc(var(--nh) + 8px);z-index:48;background:var(--cook-bg);border:1.5px solid var(--paper-brd2);border-radius:6px;padding:8px 12px;align-items:center;gap:8px;flex-wrap:wrap;max-width:400px;box-shadow:0 4px 16px rgba(0,0,0,.6);}
+.cm-float-timer{font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);background:var(--cook-surf);border:1.5px solid var(--paper-brd);border-radius:4px;padding:6px 12px;white-space:nowrap;cursor:pointer;border-left-width:4px;}
+.cm-float-timer.done{color:var(--amber);border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
+.cm-float-back{padding:6px 12px;background:var(--amber);border-top:1px solid #f0a020;border-left:1px solid #d09018;border-right:1px solid #8a5010;border-bottom:2px solid #6a3808;border-radius:4px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);cursor:pointer;flex-shrink:0;transition:transform .07s,border-bottom-width .07s;}
+.cm-float-back:active{border-bottom-width:1px;transform:translateY(1px);}
 #cm-launch{padding:48px 28px;display:flex;flex-direction:column;align-items:center;background:var(--cook-bg);}
 .cm-launch-msg{font-family:Georgia,serif;font-size:18px;color:var(--paper-brd);margin-bottom:32px;text-align:center;line-height:1.7;}
 .cm-recipe-list{width:100%;max-width:540px;display:flex;flex-direction:column;gap:10px;}
@@ -324,33 +504,17 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-recipe-pick:hover{background:var(--paper);border-color:var(--paper-brd2);}
 .cm-recipe-pick-name{font-family:Georgia,serif;font-size:19px;color:var(--ink);margin-bottom:4px;font-weight:700;}
 .cm-recipe-pick-meta{font-size:12px;color:var(--ink3);font-style:italic;}
-#cm-right{width:224px;flex-shrink:0;border-left:2px solid var(--paper-brd2);background:var(--cook-surf);display:flex;flex-direction:column;overflow:hidden;}
-#cm-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
-#cm-timers{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:12px;}
+/* RAIL HEADERS — v3.7: bigger, bolder */
+#cm-left-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+.cm-left-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
+/* RECIPE BROWSER — larger fonts */
+.cm-cat-name{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--paper-brd2);letter-spacing:.03em;}
+.cm-recipe-entry{padding:9px 14px 9px 22px;font-family:Georgia,serif;font-size:13px;color:var(--paper3);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .12s;border-left:2px solid transparent;}
+
+/* timer card CSS defined in farmhouse block above */
 .cm-no-timers{font-family:Georgia,serif;font-size:13px;color:var(--paper-brd);font-style:italic;text-align:center;padding:24px 0;opacity:.5;}
-.cm-timer-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:14px 14px 12px;position:relative;overflow:hidden;}
-.cm-timer-card.t-running{border-color:var(--amber);}
-.cm-timer-card.t-done{border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
-.cm-timer-card.t-silenced{border-color:var(--paper-brd2);opacity:.8;}
-@keyframes timerDone{from{border-color:var(--amber);}to{border-color:#ff8010;background:#fffae8;}}
-.cm-timer-lbl{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--ink);margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;}
-.cm-timer-card.t-done .cm-timer-lbl{color:var(--amber);}
-.cm-timer-card.t-silenced .cm-timer-lbl{color:var(--ink3);}
-.cm-timer-display{font-family:Georgia,serif;font-size:36px;font-weight:700;color:var(--ink2);letter-spacing:.04em;line-height:1;margin-bottom:11px;}
-.cm-timer-card.t-running .cm-timer-display{color:var(--amber);}
-.cm-timer-card.t-done .cm-timer-display{color:var(--amber);font-size:40px;}
-.cm-timer-card.t-silenced .cm-timer-display{color:var(--ink3);}
-.cm-timer-btns{display:flex;gap:6px;}
-.cm-tbtn{flex:1;padding:9px 0;border-radius:3px;font-family:Georgia,serif;font-size:12px;font-weight:700;cursor:pointer;text-align:center;transition:all .12s;user-select:none;}
-.cm-tbtn.t-start{background:var(--paper3);border:1.5px solid var(--paper-brd2);color:var(--ink2);}
-.cm-tbtn.t-start:hover{background:var(--amber2);border-color:var(--amber);}
-.cm-tbtn.t-stop{background:#2a0808;border:1.5px solid #8a2010;color:#e08060;}
-.cm-tbtn.t-stop:hover{background:#3a1010;}
-.cm-tbtn.t-dismiss{background:var(--cook-surf2);border:1.5px solid var(--paper-brd);color:var(--paper3);}
-.cm-tbtn.t-dismiss:hover{color:var(--paper);}
-.cm-silence-btn{width:100%;padding:13px 0;margin-top:6px;background:var(--amber);border:2px solid #e89018;border-radius:4px;font-family:Georgia,serif;font-size:17px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;letter-spacing:.05em;user-select:none;animation:silencePulse .5s ease-in-out infinite alternate;}
-@keyframes silencePulse{from{background:var(--amber);}to{background:#c85008;}}
-.cm-silence-btn:hover{background:#a04008;animation:none;}
+/* v3.7: timers flow horizontally, fixed card width */
+#cm-timers{flex:1;overflow-x:auto;overflow-y:hidden;padding:10px;display:flex;flex-direction:row;flex-wrap:nowrap;gap:10px;align-items:flex-start;}
 #kids-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--cook-bg);flex-direction:column;}
 #kids-hdr{padding:calc(var(--hh) + 14px) 24px 16px;background:var(--paper3);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;}
 .kids-title{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1;}
@@ -366,12 +530,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .kids-empty{font-family:Georgia,serif;font-size:16px;color:var(--paper-brd);font-style:italic;text-align:center;padding:60px 20px;}
 
 
-/* KIDS NAV BUTTON */
+/* KIDS NAV BUTTON — v3.7: cream/amber text */
 #kids-btn{padding:5px;background:#0c0a06;border:1.5px solid #2a4a6a;border-top-color:#3a6090;border-left-color:#3a6090;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
-#kids-face{background:#0c1a2e;border-radius:8px;border-top:1px solid #3a7ab0;border-left:1px solid #2e6090;border-bottom:1px solid #040810;border-right:1px solid #081018;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4);transition:background .15s;}
-#kids-btn.kids-active #kids-face{background:#081422;}
-.kids-nav-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#5a9aca;text-transform:uppercase;margin-bottom:2px;}
-.kids-nav-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#90d0f0;letter-spacing:.03em;line-height:1;}
+#kids-face{background:#1e1408;border-radius:8px;border-top:1px solid #4e4020;border-left:1px solid #3e3018;border-bottom:1px solid #060400;border-right:1px solid #0e0c06;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4);transition:background .15s;}
+#kids-btn.kids-active #kids-face{background:#0c0e08;}
+.kids-nav-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#c8a840;text-transform:uppercase;margin-bottom:2px;}
+.kids-nav-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#e8d898;letter-spacing:.03em;line-height:1;}
 #meal-scr{display:none;flex:1;flex-direction:column;padding:24px 18px;gap:14px;}
 .meal-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#f0c880;}
 .meal-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;}
@@ -494,7 +658,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 <div id="hdr">
   <div class="hdr-top">
 
-    <!-- LEFT: Logo + wordmark + vdiv + egg card -->
+    <!-- LEFT: Logo + wordmark placard + vdiv + egg card -->
     <div class="wordmark-zone">
       <svg class="logo-badge" viewBox="180 20 320 320" xmlns="http://www.w3.org/2000/svg">
         <circle cx="340" cy="180" r="160" fill="#141210" stroke="#c8b890" stroke-width="3"/>
@@ -518,12 +682,17 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
           <g transform="rotate(270) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
           <g transform="rotate(315) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
         </g>
-        <text x="340" y="196" font-family="Georgia,serif" font-size="14" font-weight="600" fill="#e2d6aa" text-anchor="middle" letter-spacing="6" opacity="0.0">FARMS</text>
       </svg>
-      <div class="wordmark">
-        <span class="logo-t">Edelweiss Farms</span>
-        <div class="logo-div"></div>
-        <span class="logo-s">Family Ops</span>
+      <div class="wordmark-placard">
+        <div class="wpc wpc-tl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="wpc wpc-tr"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="wpc wpc-bl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="wpc wpc-br"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="wordmark">
+          <span class="logo-t">Edelweiss Farms</span>
+          <div class="logo-div"></div>
+          <span class="logo-s">Family Ops</span>
+        </div>
       </div>
       <div class="vdiv"></div>
       <div class="egg-card" onclick="">
@@ -536,10 +705,18 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
       </div>
     </div>
 
-    <!-- CENTER: Month/Year banner -->
+    <!-- CENTER: Month/Year banner — v3.7 placard -->
     <div class="month-banner">
-      <div class="month-name" id="month-name">May</div>
-      <div class="month-year" id="month-year">2026</div>
+      <div class="month-placard">
+        <div class="mpc mpc-tl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="mpc mpc-tr"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="mpc mpc-bl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="mpc mpc-br"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div class="month-name" id="month-name">May</div>
+          <div class="month-year" id="month-year">2026</div>
+        </div>
+      </div>
     </div>
 
     <!-- RIGHT: Meal button + vdiv + agents -->
@@ -585,7 +762,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
   </div>
 </div>
 
-<!-- v3.0: cook-scr — full Cook Mode -->
+<!-- v3.6: cook-scr — full Cook Mode, rail swap: timers LEFT, recipe browser RIGHT -->
 <div id="cook-scr">
   <!-- TABS -->
   <div id="cm-tabs">
@@ -593,20 +770,23 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
   </div>
   <!-- 3-COLUMN BODY -->
   <div id="cm-body">
-    <!-- LEFT RAIL: step index -->
-    <div id="cm-left"></div>
-    <!-- CENTER: recipe content -->
+    <!-- LEFT RAIL: timer stack (v3.6 — was recipe browser) -->
+    <div id="cm-left">
+      <div id="cm-left-timer-hdr">Timers</div>
+      <div id="cm-timers"><div class="cm-no-timers">No active timers</div></div>
+      <div id="cm-manual-zone"></div>
+    </div>
+    <!-- CENTER: recipe content (2×2 card layout) -->
     <div id="cm-center">
       <div id="cm-launch">
         <div class="cm-launch-msg">Choose a recipe to begin cooking.</div>
         <div class="cm-recipe-list" id="cm-recipe-list"></div>
       </div>
     </div>
-    <!-- RIGHT RAIL: session timer stack -->
+    <!-- RIGHT RAIL: recipe browser (v3.6 — was timer stack) -->
     <div id="cm-right">
-      <div id="cm-timer-hdr">Timers</div>
-      <div id="cm-timers"><div class="cm-no-timers">No active timers</div></div>
-      <div id="cm-manual-zone"></div>
+      <div class="cm-left-hdr">Recipes</div>
+      <div id="cm-recipe-browser" style="flex:1;overflow-y:auto;display:flex;flex-direction:column;"></div>
     </div>
   </div>
 </div>
@@ -631,23 +811,23 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 <div id="month-scr"></div>
 
-<div id="cm-float-bar"><div id="cm-float-timers" style="display:flex;gap:8px;flex-wrap:wrap;flex:1;"></div><button class="cm-float-back" onclick="toggleCook()">🍳 Cook Mode</button></div>
-<!-- BOTTOM NAV -->
+<div id="cm-float-bar">
+  <div id="cm-float-timers" style="display:flex;gap:6px;flex-wrap:wrap;flex:1;"></div>
+  <button class="cm-float-back" onclick="toggleCook()">🍴 Cook Mode</button>
+</div>
+<!-- BOTTOM NAV — v3.6: 3 fixed sections -->
 <div id="bottom">
-  <!-- LEFT ZONE: view toggles -->
-  <div class="nav-view-zone">
-    <div class="nav-view-btn on" data-view="rolling" onclick="switchView('rolling')">
-      <div class="nav-view-face"><div class="nav-view-lbl">Rolling</div></div>
-    </div>
-    <div class="nav-view-btn" data-view="week" onclick="switchView('week')">
-      <div class="nav-view-face"><div class="nav-view-lbl">Week</div></div>
-    </div>
-    <div class="nav-view-btn" data-view="month" onclick="switchView('month')">
-      <div class="nav-view-face"><div class="nav-view-lbl">Month</div></div>
+  <!-- LEFT SECTION: Kids Kitchen (fixed width = right section) -->
+  <div class="nav-left-zone">
+    <div id="kids-btn" onclick="toggleKids()">
+      <div id="kids-face">
+        <div class="kids-nav-sub">Edelweiss</div>
+        <div class="kids-nav-main">Kids Kitchen</div>
+      </div>
     </div>
   </div>
-  <!-- RIGHT ZONE: action buttons, centered -->
-  <div class="nav-action-zone">
+  <!-- CENTER SECTION: Cook Mode anchored dead center -->
+  <div class="nav-center-zone">
     <div class="nav-arrow-btn" onclick="jumpNav(-1)">
       <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8249;</div></div>
     </div>
@@ -663,12 +843,6 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
         <div class="cook-main">Cook Mode</div>
       </div>
     </div>
-    <div id="kids-btn" onclick="toggleKids()">
-      <div id="kids-face">
-        <div class="kids-nav-sub">Edelweiss</div>
-        <div class="kids-nav-main">Kids Kitchen</div>
-      </div>
-    </div>
     <div id="night-btn" onclick="toggleNight()">
       <div id="night-face">
         <div class="night-moon">☽</div>
@@ -677,6 +851,18 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
     </div>
     <div class="nav-arrow-btn" onclick="jumpNav(1)">
       <div class="nav-arrow-face"><div class="nav-arrow-lbl">&#8250;</div></div>
+    </div>
+  </div>
+  <!-- RIGHT SECTION: View toggles (sets section width) -->
+  <div class="nav-right-zone">
+    <div class="nav-view-btn on" data-view="rolling" onclick="switchView('rolling')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Rolling</div></div>
+    </div>
+    <div class="nav-view-btn" data-view="week" onclick="switchView('week')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Week</div></div>
+    </div>
+    <div class="nav-view-btn" data-view="month" onclick="switchView('month')">
+      <div class="nav-view-face"><div class="nav-view-lbl">Month</div></div>
     </div>
   </div>
 </div>
@@ -1028,7 +1214,8 @@ function renderCell(date,isWeekView){
   const flaggedEvts=dayEvts.filter(e=>e.flag&&e.span!=='mid'&&e.span!=='end'&&!e.optional);
 
   // v2.4: auto-conflict detection via shared detectTimeConflicts()
-  const timeConflicts=detectTimeConflicts(dayEvts);
+  // v3.6: exclude optional events (Daily Mass) from conflict detection — zero conflict weight
+  const timeConflicts=detectTimeConflicts(dayEvts.filter(e=>!e.optional));
   const autoConflict=timeConflicts.length>0;
 
   const suppressSunday=dow===0&&flaggedEvts.length>0&&flaggedEvts.every(e=>{
@@ -1058,7 +1245,7 @@ function renderCell(date,isWeekView){
     if(e.allDay&&HDR_PRI.hasOwnProperty(e.cat)){
       const cls=e.cat==='liturgical'?'hdr-feast':e.cat==='holidays'?'hdr-holiday':'hdr-holiday';
       hdrLabels.push({text:e.title,cls,pri:HDR_PRI[e.cat]});
-    } else if(!e.optional){bodyEvts.push(e);} // v2.5: optional events never consume cell slots
+    } else {bodyEvts.push(e);} // v3.6: include optional events — they just sort last and bump first
   }
   if(dn===1&&mo===0) hdrLabels.push({text:String(date.getFullYear()),cls:'hdr-year',pri:0});
   hdrLabels.sort((a,b)=>a.pri-b.pri);
@@ -1102,8 +1289,14 @@ function renderCell(date,isWeekView){
   let innerBody='';
   if(trashDisplaced)innerBody+=`<div class="trash-hdr" style="margin-bottom:4px;font-size:10px;"><span>🗑 Trash</span><span>Lock dogs</span></div>`;
   const maxEv=hasConflict?MAX_EVENTS-1:MAX_EVENTS;
-  const vis=bodyEvts.slice(0,maxEv);
-  const rem=bodyEvts.length-maxEv;
+  // v3.6: Daily Mass bumps first — separate optional events from regular body events
+  // Daily Mass = optional:true liturgical event. Show it last; drop it first when space is tight.
+  const regularEvts=bodyEvts.filter(e=>!e.optional);
+  const optionalEvts=bodyEvts.filter(e=>e.optional);
+  // Fill slots with regular events first, then optional if space remains
+  const combined=[...regularEvts,...optionalEvts];
+  const vis=combined.slice(0,maxEv);
+  const rem=combined.length-maxEv; // +N more count excludes optional overflow (Daily Mass drops silently)
   vis.forEach(e=>{
     if(e._displaced){innerBody+=`<span class="${e.cls} hdr-feast-disp">${e.text}</span>`;}
     else{const dp=computePills(e.pills,e.cat,e.travelSuppressed);innerBody+=renderEvtBlock(e,true,dp);}
@@ -1177,7 +1370,15 @@ function clearWeekLayout(){
 // WEEK VIEW render — fixed single row
 function render(){
   document.getElementById('weeks').innerHTML=buildWkRow(weekViewWi,true);
-  setBanner(addD(wkStart(TODAY),weekViewWi*7));
+  // v3.7: dual-month banner for week view
+  const weekSun=addD(wkStart(TODAY),weekViewWi*7);
+  const weekSat=addD(weekSun,6);
+  if(weekSun.getMonth()!==weekSat.getMonth()){
+    document.getElementById('month-name').textContent=`${MONTHS_FULL[weekSun.getMonth()]} / ${MONTHS_FULL[weekSat.getMonth()]}`;
+    document.getElementById('month-year').textContent=weekSat.getFullYear();
+  } else {
+    setBanner(weekSun);
+  }
   document.getElementById('week-detail').classList.add('visible');
   if(weekDetailDs){
     populateWeekDetail(weekDetailDs);
@@ -1311,8 +1512,23 @@ function updateBannerFromScroll(){
   const hh=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hh'))||96;
   for(const row of document.querySelectorAll('#weeks .wrow')){
     if(row.getBoundingClientRect().bottom>hh+4){
-      document.getElementById('month-name').textContent=MONTHS_FULL[parseInt(row.dataset.month)];
-      document.getElementById('month-year').textContent=row.dataset.year;
+      const rowMo=parseInt(row.dataset.month);
+      const rowYr=parseInt(row.dataset.year);
+      const wi=parseInt(row.dataset.wi);
+      // v3.7: check actual week span — Sun of this row and Sat of this row
+      const rowSun=addD(wkStart(TODAY),wi*7);
+      const rowSat=addD(rowSun,6);
+      const sunMo=rowSun.getMonth();
+      const satMo=rowSat.getMonth();
+      if(sunMo!==satMo){
+        // Week spans two months
+        const yr=rowSat.getMonth()===0?rowSat.getFullYear():rowYr;
+        document.getElementById('month-name').textContent=`${MONTHS_FULL[sunMo]} / ${MONTHS_FULL[satMo]}`;
+        document.getElementById('month-year').textContent=yr;
+      } else {
+        document.getElementById('month-name').textContent=MONTHS_FULL[rowMo];
+        document.getElementById('month-year').textContent=rowYr;
+      }
       return;
     }
   }
@@ -1332,9 +1548,15 @@ function renderMonthGrid(){
   let html=`<div class="mgrid-dows">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d,i)=>`<div class="dhdr${i===0?' sun':''}">${d}</div>`).join('')}</div>`;
   const cells=[];
   for(let i=0;i<firstDay.getDay();i++)cells.push('<div class="cell cell-empty"></div>');
-  for(let d=1;d<=lastDay.getDate();d++)cells.push(renderCell(new Date(yr,mo,d)));
-  while(cells.length%7!==0)cells.push('<div class="cell cell-empty"></div>');
-  for(let w=0;w<cells.length/7;w++){
+  // v3.6: hard 5-row cap — show only days that fit in 5 rows (35 cells - leading empties)
+  const maxCells=35;
+  const leadingEmpty=firstDay.getDay();
+  const maxDays=maxCells-leadingEmpty;
+  const daysToShow=Math.min(lastDay.getDate(),maxDays);
+  for(let d=1;d<=daysToShow;d++)cells.push(renderCell(new Date(yr,mo,d)));
+  while(cells.length<maxCells)cells.push('<div class="cell cell-empty"></div>');
+  // Always exactly 5 rows
+  for(let w=0;w<5;w++){
     html+='<div class="wrow">';
     for(let d=0;d<7;d++)html+=cells[w*7+d];
     html+='</div>';
@@ -1786,7 +2008,11 @@ function fmtTime(seconds){
 }
 function renderTimerStack(){
   const el=document.getElementById('cm-timers');if(!el)return;
-  if(!activeTimers.length){el.innerHTML='<div class="cm-no-timers">No active timers</div>';updateFloatBar();return;}
+  if(!activeTimers.length){el.innerHTML='<div class="cm-no-timers">No active timers</div>';updateFloatBar();_adjustTimerRailWidth(0);return;}
+
+  // Horizontal rail expansion: expand #cm-left when >5 timers
+  _adjustTimerRailWidth(activeTimers.length);
+
   el.innerHTML=activeTimers.map(t=>{
     const rem=t.total-t.elapsed;
     const cls=t.state==='running'?'t-running':t.state==='done'?'t-done':t.state==='silenced'?'t-silenced':'';
@@ -1795,8 +2021,16 @@ function renderTimerStack(){
               `<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✓ Done</button>`;
     const silenceBtn=t.state==='done'?`<button class="cm-silence-btn" data-action="silence" data-tid="${t.id}">⏹ SILENCE</button>`:'';
     const silencedNote=t.state==='silenced'?`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);margin-top:6px;font-style:italic;">Silenced — tap Done when ready</div>`:'';
-    return`<div class="cm-timer-card ${cls}">
-      <div class="cm-fold"></div>
+
+    // Color band + tag for multi-recipe context
+    const rc=t.recipeId?recipeColor(t.recipeId):'var(--paper-brd)';
+    const tag=t.recipeId?recipeTag(cmGetRecipe(t.recipeId)?.name||''):'';
+    const tagHtml=tag?`<span style="font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.5px;color:${rc};background:rgba(0,0,0,.12);padding:1px 4px;border-radius:2px;">${tag}</span>`:'';
+    const colorBand=`<div class="cm-timer-color-band" style="background:${rc};"></div>`;
+
+    return`<div class="cm-timer-card ${cls}" style="padding-left:14px;">
+      ${colorBand}
+      ${tag?`<div class="cm-timer-recipe-tag">${tagHtml}</div>`:''}
       <div class="cm-timer-lbl">${t.label}</div>
       <div class="cm-timer-display">${fmtTime(rem)}</div>
       <div class="cm-timer-btns">${btn}<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✕</button></div>
@@ -1806,7 +2040,22 @@ function renderTimerStack(){
   updateFloatBar();
 }
 
-// ---- COOK MODE RENDER ----
+function _adjustTimerRailWidth(count){
+  const rail=document.getElementById('cm-left');if(!rail)return;
+  // Each 5 timers = one rail width unit (224px base, expands by 224 per 5 over)
+  const units=Math.max(1,Math.ceil(count/5));
+  rail.style.width=(224*units)+'px';
+}
+
+// ---- COOK MODE RENDER — v3.6: 2×2 grid layout ----
+// Recipe color palette (colorblind-safe: blue/orange/purple/teal family)
+const RECIPE_COLORS=['#378ADD','#BA7517','#7F77DD','#1D9E75','#D85A30','#185FA5'];
+function recipeColor(recipeId){
+  const idx=RECIPES.findIndex(r=>r.id===recipeId);
+  return RECIPE_COLORS[idx%RECIPE_COLORS.length]||RECIPE_COLORS[0];
+}
+function recipeTag(name){return(name||'').replace(/[^A-Z0-9]/gi,'').slice(0,4).toUpperCase();}
+
 function cmGetRecipe(id){return RECIPES.find(r=>r.id===id)||null;}
 
 function renderCookMode(){
@@ -1816,9 +2065,8 @@ function renderCookMode(){
   if(!recipe){renderCookLaunch();return;}
   const srv=tab.servings;
   const bl=recipe.family_baseline;
-  const factorStr=srv===bl?'Family size':`${(srv/bl).toFixed(2).replace(/\.?0+$/,'')}× scale`;
   const collapsed=!!cmIngPaneCollapsed[cmActiveTab];
-  const ingTab=cmIngActiveTab[cmActiveTab]||'all';
+  const recipeStarted=!!(tab.started);
 
   // Wire banner — recipe name only, hide year
   const banner=document.getElementById('month-name');
@@ -1827,60 +2075,116 @@ function renderCookMode(){
   if(bannerYear)bannerYear.style.display='none';
 
   const center=document.getElementById('cm-center');
-  const recipeStarted=!!(cmTabs[cmActiveTab]&&cmTabs[cmActiveTab].started);
 
-  // Altitude inside frozen pane
-  const hasAlt=recipe.altitude_adjustments&&recipe.altitude_adjustments.length>0;
-  let altInnerHtml='';
-  if(hasAlt){
-    const rows=recipe.altitude_adjustments.map(a=>`<div class="cm-alt-row"><span class="cm-alt-icon">⛰️</span>${a.note}</div>`).join('');
-    altInnerHtml=`<div class="cm-alt-brief-inner"><div class="cm-alt-hdr">⛰️ Altitude — 9,000 ft</div>${rows}</div>`;
+  // --- SERVINGS BAR ---
+  const startBtn=recipeStarted
+    ?`<button class="farm-btn farm-btn-green" disabled style="opacity:.6;cursor:default;">✓ Started</button>`
+    :`<button class="farm-btn farm-btn-green" onclick="cmStartRecipe()">▶ Start Recipe</button>`;
+  const hideLabel=collapsed?'⊞ Show Ref':'⊟ Hide Ref';
+
+  const srvBarHtml=`
+    <div class="cm-srv-bar-v36" style="position:sticky;top:0;z-index:10;">
+      <div class="cm-srv-left">
+        <button class="cm-meal-btn-style" onclick="cmAdjustServings(-0.5)" style="min-width:34px;padding:0 10px;font-size:18px;">−</button>
+        <span class="cm-srv-val-v36">${srv%1===0?srv:srv.toFixed(1)}</span>
+        <button class="cm-meal-btn-style" onclick="cmAdjustServings(0.5)" style="min-width:34px;padding:0 10px;font-size:18px;">+</button>
+        <span class="cm-srv-lbl-v36" onclick="cmResetServings()" title="Reset to Chow Hall default">Servings</span>
+      </div>
+      <span class="cm-family-lbl">Family: <span class="cm-family-num">7</span></span>
+      <div class="cm-bar-right">
+        <button class="cm-meal-btn-style" onclick="cmToggleIngPane()" id="cm-hide-ref-btn">${hideLabel}</button>
+        <button class="cm-meal-btn-style cm-start-amber" onclick="cmStartRecipe()"${recipeStarted?' disabled style="opacity:.6;cursor:default;"':''}>
+          ${recipeStarted?'✓ Started':'▶ Start Recipe'}
+        </button>
+      </div>
+    </div>`;
+
+  // --- TOP FROZEN ROW (ingredients | altitude) ---
+  // v3.7: quantity LEFT, name RIGHT, two columns when >6 ingredients
+  const ings=recipe.ingredients;
+  const ingCols=ings.length>6?2:1;
+  const ingPerCol=Math.ceil(ings.length/ingCols);
+  function ingColHtml(items){
+    return items.map(i=>{
+      const u=i.unit?` ${i.unit}`:'';
+      return`<div class="cm-ing-row36"><span class="cm-ing-amt36">${scaleAmt(i.amount,srv,bl)}${u}</span><span class="cm-ing-name36">${i.name}</span></div>`;
+    }).join('');
+  }
+  let ingBodyHtml='';
+  if(ingCols===2){
+    const col1=ings.slice(0,ingPerCol);const col2=ings.slice(ingPerCol);
+    ingBodyHtml=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 10px;">`+
+      `<div>${ingColHtml(col1)}</div><div>${ingColHtml(col2)}</div></div>`;
+  } else {
+    ingBodyHtml=ingColHtml(ings);
   }
 
-  // Ingredient pane — simple full-width list, no tabs
-  const ingListHtml=recipe.ingredients.map((i)=>{
-    const u=i.unit?` ${i.unit}`:'';
-    return`<div class="cm-ing"><span class="cm-ing-amt">${scaleAmt(i.amount,srv,bl)}${u}</span><span class="cm-ing-name">${i.name}</span></div>`;
-  }).join('');
-  const ingPaneHtml=`<div class="cm-ing-pane${collapsed?' collapsed':''}" id="cm-ing-pane">
-    <div class="cm-ing-pane-hdr" data-action="togglepane">
-      <span class="cm-ing-pane-lbl">Ingredients${hasAlt?' · ⛰️':''}</span>
-      <button class="cm-ing-toggle">${collapsed?'▼ Show':'▲ Hide'}</button>
-    </div>
-    ${altInnerHtml}
-    <div class="cm-ing-body"><div class="cm-ing-list">${ingListHtml}</div></div>
-  </div>`;
+  const hasAlt=recipe.altitude_adjustments&&recipe.altitude_adjustments.length>0;
+  // v3.7: altitude badge left, note right, two columns when needed
+  function altRowHtml(a){
+    return`<div class="cm-alt-row36"><span class="cm-alt-badge36">${(a.category||'alt').slice(0,5)}</span><span>${a.note}</span></div>`;
+  }
+  const alts=recipe.altitude_adjustments||[];
+  const altCols=alts.length>4?2:1;
+  const altPerCol=Math.ceil(alts.length/altCols);
+  let altBodyHtml='';
+  if(altCols===2){
+    const ac1=alts.slice(0,altPerCol);const ac2=alts.slice(altPerCol);
+    altBodyHtml=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 10px;">`+
+      `<div>${ac1.map(altRowHtml).join('')}</div><div>${ac2.map(altRowHtml).join('')}</div></div>`;
+  } else {
+    altBodyHtml=alts.length?alts.map(altRowHtml).join(''):`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">No altitude adjustments.</div>`;
+  }
 
-  // Step cards — read-only
-  const stepsHtml=recipe.steps.map(s=>{
-    const timerInfo=s.timer_seconds?`<span class="cm-step-timer-info">⏱ ${fmtTime(s.timer_seconds)}</span>`:'';
-    return`<div class="cm-step-card" id="cm-sc-${s.n}">
-      <div class="cm-fold"></div>
-      <div class="cm-step-card-n">${s.n}</div>
-      <div class="cm-step-card-title">${s.title}${timerInfo}</div>
-      <div class="cm-step-card-text">${s.text}</div>
-    </div>`;
-  }).join('');
-
-  const startBtn=recipeStarted
-    ?`<button class="cm-start-recipe started" disabled>✓ Started</button>`
-    :`<button class="cm-start-recipe" onclick="cmStartRecipe()">▶ Start Recipe</button>`;
-
-  center.innerHTML=`
-    <div id="cm-sticky-zone" style="position:sticky;top:0;z-index:5;background:var(--cook-bg);">
-      <div class="cm-srv-bar">
-        <span class="cm-srv-lbl" onclick="cmResetServings()" title="Tap to reset to default">Servings</span>
-        <button class="cm-srv-btn" onclick="cmAdjustServings(-0.5)">−</button>
-        <span class="cm-srv-val">${srv%1===0?srv:srv.toFixed(1)}</span>
-        <button class="cm-srv-btn" onclick="cmAdjustServings(0.5)">+</button>
-        <span class="cm-srv-factor">${factorStr}</span>
-        ${startBtn}
+  const topRowStyle=collapsed?'display:none;':'';
+  const frozenHtml=`
+    <div id="cm-frozen-row" class="cm-grid4" style="${topRowStyle}">
+      <div class="cm-card cm-card-frozen" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
+        <div class="cm-card-lbl">Ingredients</div>
+        <div class="cm-card-divider"></div>
+        ${ingBodyHtml}
       </div>
-      ${ingPaneHtml}
-    </div>
-    <div class="cm-steps">${stepsHtml}</div>`;
+      <div class="cm-card cm-card-frozen" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
+        <div class="cm-card-lbl">Altitude — 9,000 ft</div>
+        <div class="cm-card-divider"></div>
+        ${altBodyHtml}
+      </div>
+    </div>`;
 
-  renderLeftRail();
+  // --- BOTTOM METHOD CARDS (even split) ---
+  const steps=recipe.steps||[];
+  const half=Math.ceil(steps.length/2);
+  const leftSteps=steps.slice(0,half);
+  const rightSteps=steps.slice(half);
+
+  function stepHtml(s){
+    const timerBadge=s.timer_seconds?`<span style="font-family:Georgia,serif;font-size:9px;color:var(--amber);margin-left:6px;">⏱ ${fmtTime(s.timer_seconds)}</span>`:'';
+    return`<div class="cm-step36">
+      <span class="cm-step-n36">${s.n}</span>
+      <div>
+        <div class="cm-step-head36">${s.title}${timerBadge}</div>
+        <div class="cm-step-body36">${s.text}</div>
+      </div>
+    </div>`;
+  }
+
+  const methodHtml=`
+    <div class="cm-grid-bottom">
+      <div class="cm-card" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
+        <div class="cm-card-lbl">Method</div>
+        <div class="cm-card-divider"></div>
+        ${leftSteps.map(stepHtml).join('')}
+      </div>
+      <div class="cm-card" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
+        <div class="cm-card-lbl">Method cont.</div>
+        <div class="cm-card-divider"></div>
+        ${rightSteps.length?rightSteps.map(stepHtml).join(''):`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">All steps on left card.</div>`}
+      </div>
+    </div>`;
+
+  center.innerHTML=srvBarHtml+frozenHtml+methodHtml;
+
+  renderRightRail();
   renderCmTabs();
 }
 
@@ -1908,10 +2212,10 @@ function cmResetServings(){
   renderCookMode();
 }
 
-// ---- LEFT RAIL — recipe browser ----
-function renderLeftRail(){
-  const el=document.getElementById('cm-left');if(!el)return;
-  // Coming Up — always first, styled as category
+// ---- RIGHT RAIL — recipe browser (v3.6: was left rail) ----
+function renderRightRail(){
+  const el=document.getElementById('cm-recipe-browser');if(!el)return;
+  // Coming Up — always first
   const comingUpHtml=`<div class="cm-cat-section cm-coming-up">
     <div class="cm-cat-hdr" onclick="cmToggleCat('__coming_up__')">
       <span class="cm-cat-name">Coming Up</span>
@@ -1937,10 +2241,13 @@ function renderLeftRail(){
   el.innerHTML=comingUpHtml+catsHtml;
 }
 
+// legacy alias — renderLeftRail now routes to right rail
+function renderLeftRail(){renderRightRail();}
+
 function cmToggleCat(cat){
   if(cmExpandedCats.has(cat))cmExpandedCats.delete(cat);
   else cmExpandedCats.add(cat);
-  renderLeftRail();
+  renderRightRail();
 }
 
 // ---- AUTO-POPULATE TIMERS FROM RECIPE ----
@@ -1957,62 +2264,81 @@ function cmPopulateTimers(recipe){
   renderManualTimer();
 }
 
-// ---- MANUAL TIMER ----
+// ---- MANUAL TIMER — v3.7: compact setup strip ----
 function renderManualTimer(){
   const el=document.getElementById('cm-manual-zone');if(!el)return;
   const mm=String(_mtMinutes).padStart(2,'0');
-  el.innerHTML=`<div class="cm-mt-hdr">Manual Timer</div>
-    <div class="cm-mt-display" id="cm-mt-wheel">${mm}:00</div>
-    <div class="cm-mt-quick">
-      <button class="cm-mt-qbtn" onclick="mtAdd(-1)">−1m</button>
-      <button class="cm-mt-qbtn" onclick="mtAdd(1)">+1m</button>
-      <button class="cm-mt-qbtn" onclick="mtAdd(5)">+5m</button>
-    </div>
-    <button class="cm-mt-start" onclick="mtStart()">▶ Start Timer</button>`;
-  const wheel=document.getElementById('cm-mt-wheel');
-  if(wheel){
-    wheel.addEventListener('touchstart',e=>{_mtDragStartY=e.touches[0].clientY;_mtDragStartMin=_mtMinutes;e.preventDefault();},{passive:false});
-    wheel.addEventListener('touchmove',e=>{
-      if(_mtDragStartY===null)return;
-      const dy=_mtDragStartY-e.touches[0].clientY;
-      _mtMinutes=Math.max(1,Math.min(99,_mtDragStartMin+Math.round(dy/24)));
-      renderManualTimer();e.preventDefault();
-    },{passive:false});
-    wheel.addEventListener('mousedown',e=>{
-      _mtDragStartY=e.clientY;_mtDragStartMin=_mtMinutes;
-      const onMove=ev=>{const dy=_mtDragStartY-ev.clientY;_mtMinutes=Math.max(1,Math.min(99,_mtDragStartMin+Math.round(dy/24)));renderManualTimer();};
-      const onUp=()=>{document.removeEventListener('mousemove',onMove);document.removeEventListener('mouseup',onUp);};
-      document.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onUp);
-    });
-  }
+  el.innerHTML=`
+    <div style="border-top:1.5px solid var(--paper-brd);background:var(--paper3);padding:8px 10px;flex-shrink:0;">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+        <span style="font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);">Manual</span>
+        <span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--ink);min-width:38px;text-align:center;">${mm}:00</span>
+        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(-1)">−1m</button>
+        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(1)">+1m</button>
+        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(5)">+5m</button>
+        <button class="cm-meal-btn-style" style="padding:0 12px;height:28px;font-size:11px;" onclick="mtCreate()">Create</button>
+      </div>
+    </div>`;
 }
 function mtAdd(mins){_mtMinutes=Math.max(1,Math.min(99,_mtMinutes+mins));renderManualTimer();}
-function mtStart(){
+function mtCreate(){
+  // v3.7: creates timer card in stack — user hits Start from there
   if(_mtMinutes<1)return;
   const id=++cmTimerId;
   activeTimers.push({id,label:'Manual',total:_mtMinutes*60,elapsed:0,state:'idle',intervalId:null,recipeId:null,stepN:null});
   renderTimerStack();
-  cmStartTimer(id);
+  renderManualTimer();
 }
+function mtStart(){mtCreate();} // legacy alias
 
-// ---- FLOATING TIMER BAR ----
+// ---- FLOATING TIMER BAR — v3.7: bottom left, tap snaps to Cook Mode on that recipe ----
 function updateFloatBar(){
   const bar=document.getElementById('cm-float-bar');if(!bar)return;
   const visible=activeTimers.filter(t=>t.state==='running'||t.state==='done');
   if(visible.length&&!cookOn){
     bar.style.display='flex';
-    const html=visible.map(t=>`<span class="cm-float-timer${t.state==='done'?' done':''}">${t.label} ${fmtTime(t.total-t.elapsed)}</span>`).join('');
+    const html=visible.map(t=>{
+      const rc=t.recipeId?recipeColor(t.recipeId):'var(--paper-brd)';
+      const rid=t.recipeId||'';
+      return`<span class="cm-float-timer${t.state==='done'?' done':''}" style="border-left-color:${rc};border-top-color:${rc};" onclick="floatSnapToCook('${rid}')">${t.label} ${fmtTime(t.total-t.elapsed)}</span>`;
+    }).join('');
     document.getElementById('cm-float-timers').innerHTML=html;
   }else{
     bar.style.display='none';
   }
 }
 
+function floatSnapToCook(recipeId){
+  // Snap into Cook Mode on the recipe that owns this timer
+  cookOn=false; // force re-open
+  toggleCook();
+  if(recipeId){
+    const existing=cmTabs.findIndex(t=>t.recipeId===recipeId);
+    if(existing>=0){cmActiveTab=existing;renderCookMode();}
+  }
+}
+
 function renderStepList(){} // no-op — left rail is now recipe browser
+
+// Scripture quotes for Cook Mode launch — rotating, hearth/home/hospitality theme
+const CM_SCRIPTURE=[
+  {text:"She watches over the affairs of her household and does not eat the bread of idleness.",ref:"Proverbs 31:27"},
+  {text:"Better a small serving of vegetables with love than a fattened calf with hatred.",ref:"Proverbs 15:17"},
+  {text:"Jesus took the five loaves and the two fish and looking up to heaven, he gave thanks and broke them.",ref:"Luke 9:16"},
+  {text:"Whether you eat or drink or whatever you do, do it all for the glory of God.",ref:"1 Corinthians 10:31"},
+  {text:"He who supplies seed to the sower and bread for food will supply and multiply your seed for sowing.",ref:"2 Corinthians 9:10"},
+  {text:"Come, everyone who thirsts, come to the waters; and he who has no money, come, buy and eat.",ref:"Isaiah 55:1"},
+  {text:"Taste and see that the Lord is good; blessed is the one who takes refuge in him.",ref:"Psalm 34:8"},
+  {text:"Man shall not live by bread alone, but by every word that comes from the mouth of God.",ref:"Matthew 4:4"},
+  {text:"She gets up while it is still night; she provides food for her family.",ref:"Proverbs 31:15"},
+  {text:"The Lord has done it this very day; let us rejoice today and be glad.",ref:"Psalm 118:24"},
+];
+let _cmScriptureIdx=Math.floor(Math.random()*CM_SCRIPTURE.length);
 
 function renderCookLaunch(){
   const center=document.getElementById('cm-center');if(!center)return;
-  const stepList=document.getElementById('cm-step-list');if(stepList)stepList.innerHTML='';
+  const q=CM_SCRIPTURE[_cmScriptureIdx%CM_SCRIPTURE.length];
+  _cmScriptureIdx++;
   const list=RECIPES.map(r=>{
     const altBadge=r.altitude_adjustments&&r.altitude_adjustments.length?` · ⛰️ altitude`:'';
     const heirloom=r.heirloom?' · ⭐ heirloom':'';
@@ -2021,7 +2347,14 @@ function renderCookLaunch(){
       <div class="cm-recipe-pick-meta">${r.tags.join(', ')}${altBadge}${heirloom}</div>
     </div>`;
   }).join('');
-  center.innerHTML=`<div id="cm-launch"><div class="cm-launch-msg">Choose a recipe to begin cooking.</div><div class="cm-recipe-list">${list}</div></div>`;
+  center.innerHTML=`<div id="cm-launch" style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding:32px 40px;text-align:center;">
+    <div style="font-family:Georgia,serif;font-size:32px;font-weight:700;color:var(--paper);line-height:1.45;margin-bottom:16px;max-width:700px;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.5);">"${q.text}"</div>
+    <div style="font-family:Georgia,serif;font-size:15px;color:var(--amber);letter-spacing:.08em;margin-bottom:36px;">— ${q.ref}</div>
+    <div style="width:100%;max-width:600px;">
+      <div style="font-family:Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd);margin-bottom:12px;">Browse recipes on the right — or choose from recent:</div>
+      <div class="cm-recipe-list">${list}</div>
+    </div>
+  </div>`;
   renderCmTabs();
 }
 
@@ -2030,7 +2363,9 @@ function renderCmTabs(){
   const tabHtml=cmTabs.map((t,i)=>{
     const r=cmGetRecipe(t.recipeId);
     const name=r?r.name:'Recipe';
-    return`<div class="cm-tab${i===cmActiveTab?' active':''}" onclick="cmSwitchTab(${i})">
+    const rc=recipeColor(t.recipeId);
+    const activeStyle=i===cmActiveTab?`border-top:3px solid ${rc};border-left:2px solid ${rc};background:var(--paper);color:var(--ink);`:``;
+    return`<div class="cm-tab${i===cmActiveTab?' active':''}" onclick="cmSwitchTab(${i})" style="${activeStyle}">
       ${name}<span class="cm-tab-x" onclick="event.stopPropagation();cmCloseTab(${i})">✕</span>
     </div>`;
   }).join('');
@@ -2042,11 +2377,11 @@ function cmLaunchRecipe(id){
   if(existing>=0){cmActiveTab=existing;}
   else{
     const r=cmGetRecipe(id);if(!r)return;
-    cmTabs.push({recipeId:id,servings:r.family_baseline});
+    // v3.6 FIX: do NOT populate timers on launch — timers fire ONLY on Start Recipe
+    cmTabs.push({recipeId:id,servings:r.family_baseline,started:false});
     cmActiveTab=cmTabs.length-1;
-    cmPopulateTimers(r);
   }
-  // Expand this recipe's category in the left rail
+  // Expand this recipe's category in the right rail
   const r=cmGetRecipe(id);
   if(r&&r.category)cmExpandedCats.add(r.category);
   renderCookMode();
@@ -2143,7 +2478,7 @@ function toggleCook(){
     if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
     if(bannerYear)bannerYear.style.display='';
   }
-  if(cookOn&&cmActiveTab<0){renderCookLaunch();renderLeftRail();renderManualTimer();}
+  if(cookOn&&cmActiveTab<0){renderCookLaunch();renderRightRail();renderManualTimer();}
   else if(cookOn){renderCookMode();}
 }
 function toggleMeal(){
@@ -2182,13 +2517,16 @@ async function goHome(){
   const dhdrs=document.getElementById('dhdrs');
   calWrap.style.display='';
   dhdrs.style.display='';
-  // Restore banner
+  // Restore banner if returning from Cook Mode
   const banner=document.getElementById('month-name');
   const bannerYear=document.getElementById('month-year');
   if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
   if(bannerYear)bannerYear.style.display='';
+  // v3.6: always reset to rolling view anchored on today — no page reload
+  curView='rolling';
+  document.querySelectorAll('.nav-view-btn').forEach(b=>b.classList.toggle('on',b.dataset.view==='rolling'));
+  initRolling(); // re-renders from today, scrolls to top
   updateFloatBar();
-  // PQ-PHASE2: Hard reload disabled — sessionStorage timer persistence needed
 }
 
 function openAgent(name){
@@ -2206,12 +2544,21 @@ function updateEggCard(){
   if(est)est.style.display=h>=16?'block':'none';
 }
 
-// v2.6: syncNavH — measures both header and nav, sets --hh and --nh
+// v2.6: syncNavH — measures header, nav, and matches left ribbon to right ribbon width
 function syncHdrH(){
   const hdr=document.getElementById('hdr');
   const bot=document.getElementById('bottom');
   document.documentElement.style.setProperty('--hh',hdr.offsetHeight+'px');
-  if(bot)document.documentElement.style.setProperty('--nh',bot.offsetHeight+'px');
+  if(bot){
+    document.documentElement.style.setProperty('--nh',bot.offsetHeight+'px');
+    // v3.7: match left section width to right section width (Item 1)
+    const rightZone=bot.querySelector('.nav-right-zone');
+    const leftZone=bot.querySelector('.nav-left-zone');
+    if(rightZone&&leftZone){
+      const rw=rightZone.offsetWidth;
+      if(rw>0)leftZone.style.width=rw+'px';
+    }
+  }
 }
 
 async function loadCalendar(){
@@ -2260,12 +2607,11 @@ async function init(){
     else if(action==='dismiss')cmDismissTimer(id);
     else if(action==='silence')cmSilenceTimer(id);
   });
-  // Delegated handler for frozen pane (toggle + ingredient tabs)
+  // Delegated handler for frozen pane toggle (Hide Ref button wired inline, no longer via delegated action)
   document.getElementById('cm-center').addEventListener('click',e=>{
     const el=e.target.closest('[data-action]');if(!el)return;
     const action=el.dataset.action;
     if(action==='togglepane')cmToggleIngPane();
-    else if(action==='ingtab'){const tab=el.dataset.tab;cmSetIngTab(isNaN(tab)?tab:parseInt(tab));}
   });
 }
 
@@ -2373,7 +2719,7 @@ function dinnerReminder(){
 document.addEventListener('DOMContentLoaded',init);
 </script>
 <!--
-v3.0 OPEN PQ QUEUE:
+v3.6 OPEN PQ QUEUE:
 PQ-22: Liturgical data 2028-2035 — PARKED
 PQ-03: Egg count hardcoded 47. Pull from stockyard:eggs-log (Wave 4.6)
 PQ-04: Agent buttons open alert stubs. Wire to agent modules (Wave 4.6)
@@ -2385,6 +2731,11 @@ PQ-29: Cook mode centering perception — PARKED
 PQ-30: Wire RECIPES[] to fetch live from recipes/*.json on ThinkPad server
 PQ-31: Chow Hall post-cook altitude follow-up prompt hook
 PQ-32: Phase 3 — voice timer start/stop
+PQ-33: Nav ribbon — left section width should match right section width via JS measurement (currently relies on flex balance)
+PQ-PHASE2: sessionStorage timer persistence on Home reload
+HARD GATES (still active):
+  Stockyard S8 durability fix before real flock data entry
+  Gate 2 (agent writes to calendars.md) before full Cockpit operational data
 PHASE 3 HOOKS (dormant — do not activate without gate clearance):
   speak() / playSound() / VOICE_CAST / SOUNDS
   scheduleMorningBriefing() / ccirAlert() / dinnerReminder()
