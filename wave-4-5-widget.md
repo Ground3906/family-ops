@@ -42,6 +42,8 @@ Proof frame on 34" first. Interior builds on confirmed frame only.
 | v3.9 | 2026-05-29 | Top bar fill, high-contrast palette, burn pattern randomization, inline method steps, ingredients alignment |
 | v3.10 | 2026-05-29 | Two-layer nav family, fixed bars, 2-card cook center (ingredients+altitude / method), Kids Kitchen removed→rail category, What's for Dinner added, timer silence behavior, altitude collapsible, near-black cook buttons |
 | v3.11 | 2026-05-29 | Frame pass: 96px bars, marquee 12px padding, gold corner hardware 60%, 58px month font, agent button cleanup, height parity all bottom bar buttons, arrow revert, scrollbar-gutter stable |
+| v3.12 | 2026-05-29 | Cook Mode interior pass — servings bar 72px, step layout option C, fonts 52/34/28, altitude default expanded, timer onclick fix, rail headers two-layer, Coming Up/Kids Kitchen pinned, emoji encoding fixed, calendars.md KoC+Fairboard+Fair cleanup category corrections |
+| v4.0 | 2026-05-29 | Ingredient grid unified rows, Meal Planner dead zone fix (minWidth), F11 snap-to-today (viewTopWi=-3, double rAF), scroll anchor fix, alarm async |
 
 ---
 
@@ -294,7 +296,10 @@ Widget scans each day for family pill + time window overlap. No manual flag=true
 - `--nh` — nav height. Fixed `96px`, same enforcement.
 - `--cell-hdr-h` — cell header height (`54px` fixed).
 
-`syncHdrH()` sets both to fixed values and JS-matches left zone width to right zone width. Never measures `#hdr` or `#bottom` offsetHeight.
+`syncHdrH()` sets both to fixed values and JS-matches left zone **minWidth** to right zone width (not width — using width clips the Meal Planner button click area). Never measures `#hdr` or `#bottom` offsetHeight.
+
+### initRolling snap-to-today (v4.0)
+Starts at `viewTopWi=-3` (3 weeks before today) so the edge observer does not immediately fire on load. Scrolls to today's row via double `requestAnimationFrame` — first frame commits layout, second reads `getBoundingClientRect()` and scrolls. Offset = `--hh` + `#dhdrs.offsetHeight`. Single cosmetic blip remains (PQ-40).
 
 ---
 
@@ -313,9 +318,10 @@ Widget scans each day for family pill + time window overlap. No manual flag=true
 | PQ-34 | Unit conversion per ingredient — interactive tap-to-convert, per-session | 4.6 |
 | PQ-35 | Inline ALT tags per ingredient/step — requires recipe schema update | 4.6 |
 | PQ-36 | Kalea altitude override — save per recipe, flag as user edit vs doctrine | 4.6 |
-| PQ-37 | Week mode rendering — broken, deep dive needed | 3.12 |
-| PQ-38 | Rolling view renders 6 lines on Cockpit hardware — investigate when deployed | Cockpit phase |
-| PQ-39 | Month view 5 rows not filling full screen height — empty space below row 5 | 3.12 |
+| PQ-37 | Week mode rendering — broken, deep dive needed | 4.x |
+| PQ-38 | Rolling view renders too many rows on Cockpit hardware — do not diagnose until deployed on final hardware | Cockpit phase |
+| PQ-39 | Month view 5 rows not filling full screen height — empty space below row 5 | 4.x |
+| PQ-40 | Home/Rolling snap blip — cosmetic single-frame flash, landing position correct, diagnose on final Cockpit hardware | Cockpit phase |
 | PQ-PHASE2 | sessionStorage timer persistence on Home reload | Phase 2 |
 
 ---
@@ -334,3 +340,14 @@ Not built. Not bypassed. Surface every session.
 
 - `wave-4-5-widget-v3_5.html` in PK must be renamed to `wave-4-5-widget-v3.5.html`
 - Underscore filename is the root cause of v3_6 naming drift
+
+---
+
+## calendars.md Reversion Watch
+
+Two categories have reverted to `misc` across session rewrites — twice each:
+- **Knights of Columbus** → must be `meetings`
+- **Fairboard meeting** → must be `meetings`
+- **Fair cleanup** → must be `4h`
+
+Every session rewrite of calendars.md must verify these three entries before committing. Pattern suggests the session-close rewrite is defaulting these to `misc`. Third revert = systemic fix required.
