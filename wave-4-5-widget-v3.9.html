@@ -1,6 +1,6 @@
-<!-- v3.7 - 2026-05-28
+<!-- v3.9 - 2026-05-28
      Bayer Family Ops | Edelweiss Farms — Family Ops
-     Wave 6.5: Cook Mode overhaul + Nav ribbon restructure
+     v3.9: top bar fill, kids kitchen fix, ingredients layout, method inline, palette contrast, burns randomized
 
      CHANGES FROM v3.5:
      v3.6-1: Home button — always returns to rolling view, scrolls to today, no page reload
@@ -51,6 +51,14 @@
   --nh:110px;
   --cell-hdr-h:54px;
 }
+/* Item 10 — paper = cream, parchment filters */
+#cook-scr,#kids-scr{
+  --paper:#e2d6aa;--paper2:#d8cc98;--paper3:#ccc090;
+  --paper-brd:#c8a878;--paper-brd2:#b8945c;
+  --ink:#1a1208;--ink2:#3a2c18;--ink3:#6a5230;
+  --amber:#c87818;--amber2:#e8a830;
+  --cook-bg:#1a1208;--cook-surf:#241c10;--cook-surf2:#2e2414;
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{font-size:13px;}
 body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI',Roboto,system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;padding-bottom:110px;}
@@ -59,43 +67,52 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #hdr{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px solid var(--brd);padding:8px 10px 0;}
 .hdr-top{display:flex;align-items:center;gap:0;margin-bottom:6px;position:relative;}
 
-/* WORDMARK ZONE — v3.7: Option E antique placard */
-.wordmark-zone{display:flex;align-items:center;gap:0;flex-shrink:0;z-index:1;}
-.logo-badge{width:64px;height:64px;flex-shrink:0;margin-right:8px;}
+/* WORDMARK ZONE — v3.9: stretch to fill top bar height, text-only */
+.wordmark-zone{display:flex;align-items:stretch;gap:0;flex-shrink:0;z-index:1;}
 .wordmark-placard{
-  position:relative;padding:7px 16px;
-  background:#2a1e0a;
-  border:1.5px solid #7a5c1e;border-radius:2px;
-  box-shadow:inset 0 0 12px rgba(0,0,0,.5),0 0 0 1px #3a2810;
+  position:relative;padding:4px 20px;display:flex;align-items:center;align-self:stretch;
+  background:#2e1e0a;
+  border-radius:3px;
+  border-top:2px solid #c07830;
+  border-left:2px solid #a05a20;
+  border-right:2px solid #5a2808;
+  border-bottom:3px solid #3a1404;
+  box-shadow:0 4px 14px rgba(0,0,0,.8),inset 0 0 16px rgba(0,0,0,.4);
   flex-shrink:0;
 }
-.wpc{position:absolute;width:14px;height:14px;}
-.wpc svg{width:14px;height:14px;}
-.wpc-tl{top:-2px;left:-2px;}
-.wpc-tr{top:-2px;right:-2px;transform:scaleX(-1);}
-.wpc-bl{bottom:-2px;left:-2px;transform:scaleY(-1);}
-.wpc-br{bottom:-2px;right:-2px;transform:scale(-1,-1);}
-.wordmark{display:flex;flex-direction:column;gap:2px;position:relative;z-index:1;}
-.logo-t{font-family:Georgia,serif;font-size:14px;font-weight:700;color:#e8d8a8;letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;line-height:1.3;text-shadow:0 1px 4px rgba(0,0,0,.8);}
-.logo-div{height:0.5px;background:#6a5020;margin:2px 0;}
-.logo-s{font-family:Georgia,serif;font-size:11px;font-weight:700;color:#8a9a6a;letter-spacing:2px;text-transform:uppercase;line-height:1.2;}
+.hw{position:absolute;width:10px;height:10px;}
+.hw::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#8a6028;}
+.hw::after{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:#8a6028;}
+.hw-tl{top:3px;left:3px;}
+.hw-tr{top:3px;right:3px;transform:scaleX(-1);}
+.hw-bl{bottom:3px;left:3px;transform:scaleY(-1);}
+.hw-br{bottom:3px;right:3px;transform:scale(-1);}
+.hw9{position:absolute;width:9px;height:9px;}
+.hw9::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:#8a6028;}
+.hw9::after{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:#8a6028;}
+.hw9-tl{top:3px;left:3px;}
+.hw9-tr{top:3px;right:3px;transform:scaleX(-1);}
+.hw9-bl{bottom:3px;left:3px;transform:scaleY(-1);}
+.hw9-br{bottom:3px;right:3px;transform:scale(-1);}
+.wordmark{display:flex;flex-direction:column;gap:3px;position:relative;z-index:1;}
+.logo-t{font-family:Georgia,serif;font-size:26px;font-weight:700;color:#f0c880;letter-spacing:1.4px;text-transform:uppercase;white-space:nowrap;line-height:1.1;text-shadow:0 0 8px rgba(200,100,20,.35),0 1px 3px rgba(0,0,0,.9);}
+.logo-div{height:0.5px;background:#8a5020;margin:4px 0;}
+.logo-s{font-family:Georgia,serif;font-size:14px;font-weight:700;color:#f0c880;letter-spacing:2.5px;text-transform:uppercase;line-height:1.1;opacity:.8;}
 
-/* MONTH+YEAR CENTER BANNER — v3.7: Option E placard */
-.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:center;gap:0;justify-content:center;pointer-events:none;z-index:0;}
+/* MONTH+YEAR CENTER BANNER — v3.9: stretch to fill top bar, maximized */
+.month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;flex-direction:row;align-items:stretch;gap:0;justify-content:center;pointer-events:none;z-index:0;align-self:stretch;top:0;bottom:0;}
 .month-placard{
-  position:relative;padding:6px 20px;
-  background:#2a1e0a;
-  border:1.5px solid #7a5c1e;border-radius:2px;
-  box-shadow:inset 0 0 14px rgba(0,0,0,.5),0 0 0 1px #3a2810;
+  position:relative;padding:4px 36px;display:flex;align-items:center;
+  background:#2e1e0a;
+  border-radius:3px;
+  border-top:2px solid #c07830;
+  border-left:2px solid #a05a20;
+  border-right:2px solid #5a2808;
+  border-bottom:3px solid #3a1404;
+  box-shadow:0 4px 14px rgba(0,0,0,.8),inset 0 0 16px rgba(0,0,0,.4);
 }
-.mpc{position:absolute;width:14px;height:14px;}
-.mpc svg{width:14px;height:14px;}
-.mpc-tl{top:-2px;left:-2px;}
-.mpc-tr{top:-2px;right:-2px;transform:scaleX(-1);}
-.mpc-bl{bottom:-2px;left:-2px;transform:scaleY(-1);}
-.mpc-br{bottom:-2px;right:-2px;transform:scale(-1,-1);}
-.month-name{font-family:Georgia,serif;font-size:40px;font-weight:700;color:#e8d8a8;letter-spacing:.06em;line-height:1;text-shadow:0 1px 4px rgba(0,0,0,.8);position:relative;z-index:1;}
-.month-year{font-family:Georgia,serif;font-size:16px;font-weight:600;color:#9a8a60;letter-spacing:.2em;line-height:1;position:relative;z-index:1;margin-left:8px;}
+.month-name{font-family:Georgia,serif;font-size:58px;font-weight:700;color:#f0c880;letter-spacing:.06em;line-height:1;text-shadow:0 0 12px rgba(200,100,20,.3),0 1px 4px rgba(0,0,0,.9);position:relative;z-index:1;}
+.month-year{font-family:Georgia,serif;font-size:22px;font-weight:600;color:#f0c880;letter-spacing:.2em;line-height:1;position:relative;z-index:1;margin-left:14px;opacity:.8;align-self:flex-end;margin-bottom:8px;}
 .egg-card{display:flex;flex-direction:column;align-items:center;padding:4px 10px 4px;background:var(--cream);border:1px solid #c8b88a;border-radius:2px;cursor:pointer;position:relative;flex-shrink:0;box-shadow:1px 2px 5px rgba(0,0,0,.55);transform:rotate(-1.5deg);transform-origin:top center;margin-top:4px;z-index:1;}
 .egg-card::before{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;background:linear-gradient(225deg,#b8a870 45%,var(--cream) 45%);border-radius:0 0 2px 0;}
 .tack{position:absolute;top:-4px;left:44%;width:9px;height:9px;background:radial-gradient(circle at 35% 30%,#c88050,#7a4a1e);border-radius:50%;box-shadow:0 0 2px rgba(0,0,0,.9);z-index:2;}
@@ -109,7 +126,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 /* VDIV */
 .vdiv{width:1px;align-self:stretch;background:var(--brd);flex-shrink:0;margin:0 8px;}
 
-/* MEAL PLANNER BUTTON */
+/* MEAL PLANNER BUTTON — restored v3.7 size */
 #meal-btn{padding:4px;background:#0c0a06;border:1.5px solid #3a1e06;border-top-color:#502e0c;border-left-color:#502e0c;border-bottom-color:#000;border-right-color:#000;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.8);cursor:pointer;flex-shrink:0;user-select:none;z-index:1;}
 #meal-face{background:#6a3e10;border-radius:6px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:8px 14px;text-align:center;box-shadow:inset 0 0 16px rgba(0,0,0,.32);transition:background .15s;}
 #meal-btn.meal-active #meal-face{background:#4a2c0a;}
@@ -119,10 +136,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 /* RIGHT ZONE */
 .right-zone{display:flex;align-items:center;justify-content:flex-end;flex-shrink:0;margin-left:auto;z-index:1;}
 .agent-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;}
-.agent{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 8px;background:#1a1610;border:1px solid #2e2010;border-top-color:#3e3018;border-left-color:#3e3018;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:5px;cursor:pointer;opacity:.72;box-shadow:0 2px 4px rgba(0,0,0,.5);transition:opacity .15s;}
-.agent:hover{opacity:1;}
+/* Item 15 — agent buttons match nav-view-btn */
+.agent{padding:5px;background:#1a1610;border:1.5px solid #3e3428;border-top-color:#54462e;border-left-color:#54462e;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:8px;box-shadow:0 3px 8px rgba(0,0,0,.5);cursor:pointer;user-select:none;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.agent-inner{background:#252015;border-radius:5px;border-top:1px solid #4e4020;border-bottom:1px solid #060400;padding:6px 8px;text-align:center;box-shadow:inset 0 0 8px rgba(0,0,0,.3);display:flex;flex-direction:column;align-items:center;gap:2px;}
+.agent:hover .agent-inner{background:#352e15;}
 .agent-icon{font-size:16px;line-height:1;}
-.agent-lbl{font-family:Georgia,serif;font-size:6px;color:#7a6a4a;letter-spacing:.6px;text-transform:uppercase;font-weight:600;white-space:nowrap;}
+.agent-lbl{font-family:Georgia,serif;font-size:6px;color:var(--cb);letter-spacing:.6px;text-transform:uppercase;font-weight:600;white-space:nowrap;opacity:.75;}
 
 /* DAY HEADERS */
 #dhdrs{display:grid;grid-template-columns:repeat(7,1fr);position:sticky;top:var(--hh);z-index:50;background:var(--bg);border-bottom:0.5px solid var(--brd);}
@@ -252,8 +271,19 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #night-btn.night-active #night-face{background:#5a1808;}
 .night-moon{font-size:16px;line-height:1;margin-bottom:3px;}
 .night-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:#ffcca0;text-transform:uppercase;text-shadow:0 0 4px rgba(255,120,60,.5);}
+/* Item 1+2 — Night dim covers ALL screens */
+body.night-dim #hdr{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #dhdrs{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #cal-wrap{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #bottom{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #cook-scr{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #kids-scr{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #month-scr{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #meal-scr{filter:brightness(0.08);pointer-events:none;}
+body.night-dim #week-detail{filter:brightness(0.08);pointer-events:none;}
+#night-wake{display:none;position:fixed;inset:0;z-index:999;cursor:pointer;}
 
-/* COOK MODE — Meal Planner shell button style (Item 2) */
+/* COOK MODE — Meal Planner button style (Items 11+13) — +/− servings, Hide Ref, Start Recipe */
 .cm-meal-btn-style{
   background:#2a1e0a;
   border-top:1px solid #7a5a20;border-left:1px solid #6a4a18;
@@ -270,7 +300,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-start-amber{
   background:#4a3208;
   border-top-color:#c07830;border-left-color:#a05a20;
-  color:#f0c880;
+  color:#f0c060;
 }
 
 /* FARMHOUSE COOK MODE CSS block — keep for timer btns */
@@ -306,10 +336,10 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 }
 .farm-btn-green:active{border-bottom-width:1px;transform:translateY(2px);}
 
-/* COOK MODE — SERVINGS BAR v3.6 */
+/* COOK MODE — SERVINGS BAR v3.8 — inherits cook-surf (brownish, matches rails) */
 .cm-srv-bar-v36{
   display:flex;align-items:center;padding:10px 18px;
-  background:var(--paper2);border-bottom:1.5px solid var(--paper-brd);
+  background:var(--cook-surf);border-bottom:1.5px solid var(--paper-brd);
   flex-shrink:0;gap:10px;
 }
 .cm-srv-left{display:flex;align-items:center;gap:8px;flex-shrink:0;}
@@ -372,17 +402,11 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #cm-left-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
 #cm-timers{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:12px;}
 
-/* TIMER CARD — farmhouse tactile buttons, fixed width for horizontal flow */
+/* TIMER CARD — v3.8: border-left+top recipe color (Item 4), no separate color band */
 .cm-timer-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:12px 12px 10px;position:relative;overflow:hidden;flex-shrink:0;width:200px;}
 .cm-timer-card.t-running{border-color:var(--amber);}
 .cm-timer-card.t-done{border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
 .cm-timer-card.t-silenced{border-color:var(--paper-brd2);opacity:.8;}
-.cm-timer-recipe-tag{
-  display:flex;align-items:center;gap:5px;margin-bottom:4px;
-}
-.cm-timer-color-band{
-  width:4px;height:100%;position:absolute;left:0;top:0;bottom:0;border-radius:4px 0 0 4px;
-}
 .cm-timer-lbl{font-family:Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2;}
 .cm-timer-card.t-done .cm-timer-lbl{color:var(--amber);}
 .cm-timer-display{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--ink2);letter-spacing:.04em;line-height:1;margin-bottom:8px;}
@@ -405,13 +429,6 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 /* RECIPE BROWSER RAIL — v3.6: RIGHT side */
 #cm-right{width:200px;flex-shrink:0;border-left:2px solid var(--paper-brd2);background:var(--cook-surf);display:flex;flex-direction:column;overflow:hidden;}
-#cook-scr,#kids-scr{
-  --paper:#f5ecd4;--paper2:#faf3e2;--paper3:#e8d8a8;
-  --paper-brd:#c8a878;--paper-brd2:#b8945c;
-  --ink:#1a1208;--ink2:#3a2c18;--ink3:#6a5230;
-  --amber:#c87818;--amber2:#e8a830;
-  --cook-bg:#1a1208;--cook-surf:#241c10;--cook-surf2:#2e2414;
-}
 #cook-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--cook-bg);flex-direction:column;}
 #cm-tabs{display:flex;gap:4px;padding:8px 12px 0;padding-top:calc(var(--hh) + 8px);background:var(--cook-bg);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;overflow-x:auto;}
 .cm-tab{padding:9px 18px;background:var(--paper3);border:1.5px solid var(--paper-brd2);border-bottom:none;border-radius:5px 5px 0 0;font-family:Georgia,serif;font-size:14px;color:var(--ink2);cursor:pointer;white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:8px;}
@@ -491,12 +508,13 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-mt-qbtn:hover{background:var(--amber2);border-color:var(--amber);}
 .cm-mt-start{width:100%;padding:11px 0;background:var(--amber);border:2px solid var(--paper-brd2);border-radius:4px;font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);cursor:pointer;text-align:center;transition:all .12s;}
 .cm-mt-start:hover{background:var(--amber2);}
-/* FLOATING TIMER BAR — v3.7: bottom LEFT, larger chips */
-#cm-float-bar{display:none;position:fixed;left:10px;bottom:calc(var(--nh) + 8px);z-index:48;background:var(--cook-bg);border:1.5px solid var(--paper-brd2);border-radius:6px;padding:8px 12px;align-items:center;gap:8px;flex-wrap:wrap;max-width:400px;box-shadow:0 4px 16px rgba(0,0,0,.6);}
-.cm-float-timer{font-family:Georgia,serif;font-size:15px;font-weight:700;color:var(--paper);background:var(--cook-surf);border:1.5px solid var(--paper-brd);border-radius:4px;padding:6px 12px;white-space:nowrap;cursor:pointer;border-left-width:4px;}
-.cm-float-timer.done{color:var(--amber);border-color:var(--amber);animation:timerDone .7s ease-in-out infinite alternate;}
-.cm-float-back{padding:6px 12px;background:var(--amber);border-top:1px solid #f0a020;border-left:1px solid #d09018;border-right:1px solid #8a5010;border-bottom:2px solid #6a3808;border-radius:4px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:var(--paper);cursor:pointer;flex-shrink:0;transition:transform .07s,border-bottom-width .07s;}
-.cm-float-back:active{border-bottom-width:1px;transform:translateY(1px);}
+/* FLOATING TIMER BAR — v3.8: fixed width, no jump, Cook Mode Timers label */
+#cm-float-bar{display:none;position:fixed;left:10px;bottom:calc(var(--nh) + 8px);z-index:48;background:rgba(26,18,8,.92);border:1.5px solid #c8a878;border-radius:6px;padding:8px 12px;flex-direction:column;gap:4px;width:220px;box-shadow:0 4px 16px rgba(0,0,0,.6);}
+.cm-float-label{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#f0c880;margin-bottom:4px;border-bottom:0.5px solid #c8a878;padding-bottom:4px;}
+.cm-float-timers-row{display:flex;flex-direction:column;gap:4px;}
+.cm-float-timer{font-family:Georgia,serif;font-size:12px;font-weight:700;color:#f0c880;background:rgba(42,30,8,.8);border:1.5px solid #c8a878;border-radius:4px;padding:4px 8px;white-space:nowrap;cursor:pointer;border-left-width:3px;border-top-width:2px;min-width:0;overflow:hidden;text-overflow:ellipsis;}
+.cm-float-timer.done{color:#f0c060;border-color:#c07830;}
+.cm-float-back{align-self:flex-end;padding:4px 10px;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:2px solid #1e0e04;border-radius:4px;font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c060;cursor:pointer;}
 #cm-launch{padding:48px 28px;display:flex;flex-direction:column;align-items:center;background:var(--cook-bg);}
 .cm-launch-msg{font-family:Georgia,serif;font-size:18px;color:var(--paper-brd);margin-bottom:32px;text-align:center;line-height:1.7;}
 .cm-recipe-list{width:100%;max-width:540px;display:flex;flex-direction:column;gap:10px;}
@@ -504,38 +522,41 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .cm-recipe-pick:hover{background:var(--paper);border-color:var(--paper-brd2);}
 .cm-recipe-pick-name{font-family:Georgia,serif;font-size:19px;color:var(--ink);margin-bottom:4px;font-weight:700;}
 .cm-recipe-pick-meta{font-size:12px;color:var(--ink3);font-style:italic;}
-/* RAIL HEADERS — v3.7: bigger, bolder */
-#cm-left-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
-.cm-left-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-brd2);border-bottom:1.5px solid var(--paper-brd);flex-shrink:0;}
-/* RECIPE BROWSER — larger fonts */
-.cm-cat-name{font-family:Georgia,serif;font-size:14px;font-weight:700;color:var(--paper-brd2);letter-spacing:.03em;}
-.cm-recipe-entry{padding:9px 14px 9px 22px;font-family:Georgia,serif;font-size:13px;color:var(--paper3);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .12s;border-left:2px solid transparent;}
+/* RAIL HEADERS — v3.8: 28px, unified #f0c880 */
+#cm-left-timer-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:28px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f0c880;border-bottom:1.5px solid #c8a878;flex-shrink:0;}
+.cm-left-hdr{padding:14px 16px 10px;font-family:Georgia,serif;font-size:28px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#f0c880;border-bottom:1.5px solid #c8a878;flex-shrink:0;}
+/* RECIPE BROWSER — Item 8: categories 18px/#f0c880, entries 14px/#e2d6aa */
+.cm-cat-name{font-family:Georgia,serif;font-size:18px;font-weight:700;color:#f0c880;letter-spacing:.03em;}
+.cm-recipe-entry{padding:9px 14px 9px 22px;font-family:Georgia,serif;font-size:14px;color:#e2d6aa;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:all .12s;border-left:2px solid transparent;}
 
 /* timer card CSS defined in farmhouse block above */
 .cm-no-timers{font-family:Georgia,serif;font-size:13px;color:var(--paper-brd);font-style:italic;text-align:center;padding:24px 0;opacity:.5;}
-/* v3.7: timers flow horizontally, fixed card width */
-#cm-timers{flex:1;overflow-x:auto;overflow-y:hidden;padding:10px;display:flex;flex-direction:row;flex-wrap:nowrap;gap:10px;align-items:flex-start;}
+/* v3.8: timers 2-column vertical, state-sorted (running/idle/done), col 2 on 6th+ */
+#cm-timers{flex:1;overflow-y:auto;overflow-x:hidden;padding:10px;display:flex;flex-direction:row;gap:10px;align-items:flex-start;}
+.cm-timer-col{display:flex;flex-direction:column;gap:12px;width:200px;flex-shrink:0;}
 #kids-scr{display:none;position:fixed;inset:0;z-index:50;background:var(--cook-bg);flex-direction:column;}
 #kids-hdr{padding:calc(var(--hh) + 14px) 24px 16px;background:var(--paper3);border-bottom:2px solid var(--paper-brd2);flex-shrink:0;}
 .kids-title{font-family:Georgia,serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1;}
 .kids-sub{font-size:13px;color:var(--ink3);margin-top:5px;font-family:Georgia,serif;font-style:italic;}
-#kids-grid{flex:1;overflow-y:auto;padding:20px 20px calc(var(--nh) + 20px);display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;gap:16px;align-items:start;}
-.kids-card{background:var(--paper);border:2px solid var(--paper-brd);border-radius:4px;padding:20px 18px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;height:170px;position:relative;overflow:hidden;}
+#kids-grid{flex:1;overflow-y:auto;padding:20px 20px calc(var(--nh) + 20px);display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;gap:10px;align-items:start;}
+.kids-card{background:var(--paper);border:1.5px solid var(--paper-brd);border-radius:4px;padding:16px 20px;cursor:pointer;transition:all .2s;display:flex;flex-direction:column;position:relative;overflow:hidden;}
 .kids-card:hover{background:var(--paper2);border-color:var(--paper-brd2);transform:translateY(-2px);}
 .kids-card:active{transform:translateY(0);}
-.kids-card-icon{font-size:40px;margin-bottom:12px;line-height:1;}
-.kids-card-name{font-family:Georgia,serif;font-size:24px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:10px;}
-.kids-card-tags{display:flex;flex-wrap:wrap;gap:6px;}
-.kids-card-tag{font-size:11px;font-family:Georgia,serif;color:var(--ink3);background:rgba(26,18,8,.06);border:1px solid var(--paper-brd);border-radius:20px;padding:3px 10px;}
+.kids-card-icon{font-size:24px;margin-bottom:6px;line-height:1;}
+.kids-card-name{font-family:Georgia,serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:6px;}
+.kids-card-tags{display:flex;flex-wrap:wrap;gap:4px;}
+.kids-card-tag{font-size:11px;font-family:Georgia,serif;color:var(--ink3);background:rgba(26,18,8,.06);border:1px solid var(--paper-brd);border-radius:20px;padding:2px 8px;}
 .kids-empty{font-family:Georgia,serif;font-size:16px;color:var(--paper-brd);font-style:italic;text-align:center;padding:60px 20px;}
 
 
-/* KIDS NAV BUTTON — v3.7: cream/amber text */
-#kids-btn{padding:5px;background:#0c0a06;border:1.5px solid #2a4a6a;border-top-color:#3a6090;border-left-color:#3a6090;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
-#kids-face{background:#1e1408;border-radius:8px;border-top:1px solid #4e4020;border-left:1px solid #3e3018;border-bottom:1px solid #060400;border-right:1px solid #0e0c06;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4);transition:background .15s;}
-#kids-btn.kids-active #kids-face{background:#0c0e08;}
-.kids-nav-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#c8a840;text-transform:uppercase;margin-bottom:2px;}
-.kids-nav-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#e8d898;letter-spacing:.03em;line-height:1;}
+/* KIDS NAV BUTTON — v3.8: matches Rolling/Week/Month */
+#kids-btn{padding:5px;background:#1a1610;border:1.5px solid #3e3428;border-top-color:#54462e;border-left-color:#54462e;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.6);cursor:pointer;user-select:none;}
+#kids-face{background:#252015;border-radius:8px;border-top:1px solid #4e4020;border-bottom:1px solid #060400;padding:14.5px 14px;text-align:center;box-shadow:inset 0 0 10px rgba(0,0,0,.3);}
+#kids-btn.kids-active #kids-face{background:#352e15;}
+.kids-nav-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#c8a840;text-transform:uppercase;margin-bottom:2px;opacity:.75;}
+.kids-nav-main{font-family:Georgia,serif;font-size:11px;font-weight:700;color:var(--cb);letter-spacing:.05em;line-height:1;opacity:.75;}
+#kids-btn.kids-active .kids-nav-main{opacity:1;}
+#kids-btn.kids-active .kids-nav-sub{opacity:1;}
 #meal-scr{display:none;flex:1;flex-direction:column;padding:24px 18px;gap:14px;}
 .meal-hdr{font-family:Georgia,serif;font-size:20px;font-weight:600;color:#f0c880;}
 .meal-body{background:var(--surf);border:0.5px solid var(--brd);border-radius:6px;padding:20px;color:var(--txt2);font-size:13px;line-height:1.8;}
@@ -599,7 +620,8 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 /* WEEK DETAIL ZONE */
 #week-detail{display:none;height:260px;overflow-y:auto;border-top:1.5px solid var(--brd);background:var(--surf2);padding:0;}
-#week-detail.visible{display:block;}
+#week-detail.visible{display:flex;flex-direction:column;}
+#cal-wrap.week-layout #week-detail.visible{flex:0 0 45%;height:auto!important;min-height:0;overflow-y:auto;}
 #wk-detail-hdr{padding:10px 18px 8px;border-bottom:0.5px solid var(--brd);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--surf2);z-index:2;}
 #wk-detail-date{font-family:Georgia,serif;font-size:15px;font-weight:600;color:var(--txt1);}
 #wk-detail-feast{font-family:Georgia,serif;font-size:11px;font-style:italic;margin-top:2px;color:#e0cc80;}
@@ -623,11 +645,11 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 #m-body{font-size:11px;color:var(--txt2);line-height:1.65;white-space:pre-wrap;}
 #m-close{margin-top:14px;background:var(--cb);color:#141210;border:none;border-radius:4px;padding:6px 18px;font-size:11px;font-weight:700;cursor:pointer;}
 
-/* MONTH GRID */
-#month-scr{display:none;flex-direction:column;}
-.mgrid-dows{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:0.5px solid var(--brd);}
+/* MONTH GRID — Item 1: always fills container, 5 rows */
+#month-scr{display:none;flex-direction:column;position:fixed;top:var(--hh);left:0;right:0;bottom:var(--nh);overflow:hidden;}
+.mgrid-dows{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:0.5px solid var(--brd);flex-shrink:0;}
 .mgrid-dow{text-align:center;padding:4px 2px;font-size:9px;font-weight:700;letter-spacing:.6px;color:var(--txt2);text-transform:uppercase;}
-.mgrid{display:grid;grid-template-columns:repeat(7,1fr);}
+.mgrid{display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(5,1fr);flex:1;min-height:0;}
 .mcell{min-height:90px;border-right:0.5px solid var(--brd);border-bottom:0.5px solid var(--brd);padding:4px 6px;cursor:pointer;position:relative;overflow:hidden;transition:filter .1s;}
 .mcell:hover{filter:brightness(1.06);}
 .mcell:nth-child(7n){border-right:none;}
@@ -658,36 +680,11 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 <div id="hdr">
   <div class="hdr-top">
 
-    <!-- LEFT: Logo + wordmark placard + vdiv + egg card -->
+    <!-- LEFT: Logo + wordmark placard (logo inside — Item 9) -->
     <div class="wordmark-zone">
-      <svg class="logo-badge" viewBox="180 20 320 320" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="340" cy="180" r="160" fill="#141210" stroke="#c8b890" stroke-width="3"/>
-        <circle cx="340" cy="180" r="152" fill="none" stroke="#c8b890" stroke-width="0.6" opacity="0.5"/>
-        <polygon points="218,171 220.06,177.25 226.61,177.25 221.27,181.11 223.33,187.36 218,183.5 212.67,187.36 214.73,181.11 209.39,177.25 215.94,177.25" fill="#c8b890"/>
-        <polygon points="462,171 464.06,177.25 470.61,177.25 465.27,181.11 467.33,187.36 462,183.5 456.67,187.36 458.73,181.11 453.39,177.25 459.94,177.25" fill="#c8b890"/>
-        <circle cx="340" cy="180" r="90" fill="#141210" stroke="#c8b890" stroke-width="1.2"/>
-        <defs><clipPath id="mc"><circle cx="340" cy="180" r="83"/></clipPath></defs>
-        <g clip-path="url(#mc)">
-          <polygon transform="translate(340,180)" points="-83,83 -83,10 -58,-22 -35,8 -12,-42 8,-2 32,-28 52,-8 75,-18 83,4 83,83" fill="#b8c4a8" fill-opacity="0.55" stroke="#2f4427" stroke-width="0.5" stroke-opacity="0.75"/>
-          <polygon transform="translate(340,180)" points="-83,83 -83,30 -65,15 -45,-5 -22,18 5,-15 28,5 50,-12 70,2 83,-5 83,83" fill="#5e7860" fill-opacity="0.82"/>
-        </g>
-        <circle cx="340" cy="180" r="84" fill="none" stroke="#c8b890" stroke-width="0.4"/>
-        <g transform="translate(340,180)">
-          <g transform="rotate(0) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(45) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(90) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(135) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(180) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(225) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(270) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-          <g transform="rotate(315) scale(0.46)"><path d="M 0,0 C -4,-12 -10,-25 -6,-45 C -3,-52 -1,-58 0,-60 C 1,-58 3,-52 6,-45 C 10,-25 4,-12 0,0 Z" fill="#e2d6aa" stroke="#c8b890" stroke-width="1.0"/></g>
-        </g>
-      </svg>
       <div class="wordmark-placard">
-        <div class="wpc wpc-tl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="wpc wpc-tr"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="wpc wpc-bl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="wpc wpc-br"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
+        <div class="hw hw-tl"></div><div class="hw hw-tr"></div>
+        <div class="hw hw-bl"></div><div class="hw hw-br"></div>
         <div class="wordmark">
           <span class="logo-t">Edelweiss Farms</span>
           <div class="logo-div"></div>
@@ -705,14 +702,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
       </div>
     </div>
 
-    <!-- CENTER: Month/Year banner — v3.7 placard -->
+    <!-- CENTER: Month/Year banner — v3.8 Option D copper plate -->
     <div class="month-banner">
       <div class="month-placard">
-        <div class="mpc mpc-tl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="mpc mpc-tr"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="mpc mpc-bl"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div class="mpc mpc-br"><svg viewBox="0 0 14 14" fill="none"><path d="M1 12 L1 3 Q1 1 3 1 L12 1" stroke="#c8a840" stroke-width="1.2" fill="none"/><circle cx="3.5" cy="3.5" r="1.8" fill="#2a1e0a" stroke="#c8a840" stroke-width="1"/><circle cx="3.5" cy="3.5" r=".7" fill="#e8c040"/></svg></div>
-        <div style="display:flex;align-items:center;gap:8px;">
+        <div class="hw9 hw9-tl"></div><div class="hw9 hw9-tr"></div>
+        <div class="hw9 hw9-bl"></div><div class="hw9 hw9-br"></div>
+        <div style="display:flex;align-items:center;gap:0;position:relative;z-index:1;">
           <div class="month-name" id="month-name">May</div>
           <div class="month-year" id="month-year">2026</div>
         </div>
@@ -729,12 +724,12 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
       </div>
       <div class="vdiv"></div>
       <div class="agent-grid">
-        <div class="agent" onclick="openAgent('stockyard')"><span class="agent-icon">🐷</span><span class="agent-lbl">Stockyard</span></div>
-        <div class="agent" onclick="openAgent('chowhall')"><span class="agent-icon">🍴</span><span class="agent-lbl">Chow Hall</span></div>
-        <div class="agent" onclick="openAgent('mysteranch')"><span class="agent-icon">⛺</span><span class="agent-lbl">Mystery Ranch</span></div>
-        <div class="agent" onclick="openAgent('rootstock')"><span class="agent-icon">🌱</span><span class="agent-lbl">Rootstock</span></div>
-        <div class="agent" onclick="openAgent('punchlist')"><span class="agent-icon">🏠</span><span class="agent-lbl">Punch List</span></div>
-        <div class="agent" onclick="openAgent('firstaid')"><span class="agent-icon">🩺</span><span class="agent-lbl">First Aid</span></div>
+        <div class="agent" onclick="openAgent('stockyard')"><div class="agent-inner"><span class="agent-icon">🐷</span><span class="agent-lbl">Stockyard</span></div></div>
+        <div class="agent" onclick="openAgent('chowhall')"><div class="agent-inner"><span class="agent-icon">🍴</span><span class="agent-lbl">Chow Hall</span></div></div>
+        <div class="agent" onclick="openAgent('mysteranch')"><div class="agent-inner"><span class="agent-icon">⛺</span><span class="agent-lbl">Mystery Ranch</span></div></div>
+        <div class="agent" onclick="openAgent('rootstock')"><div class="agent-inner"><span class="agent-icon">🌱</span><span class="agent-lbl">Rootstock</span></div></div>
+        <div class="agent" onclick="openAgent('punchlist')"><div class="agent-inner"><span class="agent-icon">🏠</span><span class="agent-lbl">Punch List</span></div></div>
+        <div class="agent" onclick="openAgent('firstaid')"><div class="agent-inner"><span class="agent-icon">🩺</span><span class="agent-lbl">First Aid</span></div></div>
       </div>
     </div>
 
@@ -811,9 +806,9 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 
 <div id="month-scr"></div>
 
-<div id="cm-float-bar">
-  <div id="cm-float-timers" style="display:flex;gap:6px;flex-wrap:wrap;flex:1;"></div>
-  <button class="cm-float-back" onclick="toggleCook()">🍴 Cook Mode</button>
+<div id="cm-float-bar" onclick="floatSnapToCook('')">
+  <div class="cm-float-label">Cook Mode Timers</div>
+  <div class="cm-float-timers-row" id="cm-float-timers"></div>
 </div>
 <!-- BOTTOM NAV — v3.6: 3 fixed sections -->
 <div id="bottom">
@@ -1579,8 +1574,7 @@ function switchView(view){
     setMonthViewFromRolling();
     calWrap.style.display='none';
     dhdrs.style.display='none';
-    monthScr.style.display='flex';
-    wkDetail.classList.remove('visible');
+    monthScr.style.display='flex';    wkDetail.classList.remove('visible');
     renderMonthGrid();
   } else if(view==='rolling'){
     clearWeekLayout(); // v2.2
@@ -1987,9 +1981,8 @@ function cmStopTimer(id){
 function cmDismissTimer(id){
   const t=activeTimers.find(x=>x.id===id);
   if(t&&t.intervalId){clearInterval(t.intervalId);}
-  // silence alarm if no other done timers remain after this one
-  const otherDone=activeTimers.filter(x=>x.id!==id&&x.state==='done');
-  if(!otherDone.length)silenceAlarm();
+  // Item 13 — always silence alarm on dismiss
+  silenceAlarm();
   activeTimers=activeTimers.filter(x=>x.id!==id);
   renderTimerStack();
 }
@@ -2010,46 +2003,101 @@ function renderTimerStack(){
   const el=document.getElementById('cm-timers');if(!el)return;
   if(!activeTimers.length){el.innerHTML='<div class="cm-no-timers">No active timers</div>';updateFloatBar();_adjustTimerRailWidth(0);return;}
 
-  // Horizontal rail expansion: expand #cm-left when >5 timers
-  _adjustTimerRailWidth(activeTimers.length);
+  // Item 2+7 — state-sort: running first, idle next, done/silenced last
+  const stateOrder={running:0,idle:1,done:2,silenced:3};
+  const sorted=[...activeTimers].sort((a,b)=>(stateOrder[a.state]||1)-(stateOrder[b.state]||1));
 
-  el.innerHTML=activeTimers.map(t=>{
+  _adjustTimerRailWidth(sorted.length);
+
+  function timerCardHtml(t){
     const rem=t.total-t.elapsed;
     const cls=t.state==='running'?'t-running':t.state==='done'?'t-done':t.state==='silenced'?'t-silenced':'';
+    // Item 13 — single tap: done state = one full-width Done button that silences+dismisses
     const btn=t.state==='idle'?`<button class="cm-tbtn t-start" data-action="start" data-tid="${t.id}">▶ Start</button>`:
               t.state==='running'?`<button class="cm-tbtn t-stop" data-action="stop" data-tid="${t.id}">⏹ Stop</button>`:
-              `<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✓ Done</button>`;
-    const silenceBtn=t.state==='done'?`<button class="cm-silence-btn" data-action="silence" data-tid="${t.id}">⏹ SILENCE</button>`:'';
-    const silencedNote=t.state==='silenced'?`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);margin-top:6px;font-style:italic;">Silenced — tap Done when ready</div>`:'';
-
-    // Color band + tag for multi-recipe context
+              `<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}" style="flex:1;">✓ Done</button>`;
+    const showX=t.state!=='done'&&t.state!=='silenced';
     const rc=t.recipeId?recipeColor(t.recipeId):'var(--paper-brd)';
-    const tag=t.recipeId?recipeTag(cmGetRecipe(t.recipeId)?.name||''):'';
-    const tagHtml=tag?`<span style="font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.5px;color:${rc};background:rgba(0,0,0,.12);padding:1px 4px;border-radius:2px;">${tag}</span>`:'';
-    const colorBand=`<div class="cm-timer-color-band" style="background:${rc};"></div>`;
-
-    return`<div class="cm-timer-card ${cls}" style="padding-left:14px;">
-      ${colorBand}
-      ${tag?`<div class="cm-timer-recipe-tag">${tagHtml}</div>`:''}
+    return`<div class="cm-timer-card ${cls}" style="border-left:5px solid ${rc};border-top:4px solid ${rc};">
       <div class="cm-timer-lbl">${t.label}</div>
       <div class="cm-timer-display">${fmtTime(rem)}</div>
-      <div class="cm-timer-btns">${btn}<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✕</button></div>
-      ${silenceBtn}${silencedNote}
+      <div class="cm-timer-btns">${btn}${showX?`<button class="cm-tbtn t-dismiss" data-action="dismiss" data-tid="${t.id}">✕</button>`:''}</div>
     </div>`;
-  }).join('');
+  }
+
+  // 2-column: col1 = first 5, col2 = 6th+ (hidden if empty)
+  const col1=sorted.slice(0,5);
+  const col2=sorted.slice(5);
+  let html=`<div class="cm-timer-col">${col1.map(timerCardHtml).join('')}</div>`;
+  if(col2.length){html+=`<div class="cm-timer-col">${col2.map(timerCardHtml).join('')}</div>`;}
+  el.innerHTML=html;
   updateFloatBar();
 }
 
 function _adjustTimerRailWidth(count){
   const rail=document.getElementById('cm-left');if(!rail)return;
-  // Each 5 timers = one rail width unit (224px base, expands by 224 per 5 over)
-  const units=Math.max(1,Math.ceil(count/5));
-  rail.style.width=(224*units)+'px';
+  // Item 2+7: 224px for ≤5 timers (1 col), 448px for 6+ (2 cols)
+  rail.style.width=(count>5?448:224)+'px';
 }
 
-// ---- COOK MODE RENDER — v3.6: 2×2 grid layout ----
-// Recipe color palette (colorblind-safe: blue/orange/purple/teal family)
-const RECIPE_COLORS=['#378ADD','#BA7517','#7F77DD','#1D9E75','#D85A30','#185FA5'];
+// ---- COOK MODE RENDER — v3.9: high-contrast palette, thicker borders ----
+// Item 7 — high-contrast muted palette, distinctly different colors
+const RECIPE_COLORS=['#2660a8','#b86010','#287860','#803050','#c04020','#604898','#208870','#c89010','#486cb0','#386828'];
+// Item 5 — randomized burn patterns, large variability per card
+const _paperSeeds=[7,17,23,38,47,52,61,73,29,43,11,31,59,67,83,97];
+let _paperSeedIdx=0;
+const _burnPatterns=[
+  // 0: darker top-left
+  `radial-gradient(ellipse at 0% 0%,rgba(50,25,4,.22) 0%,transparent 50%),radial-gradient(ellipse at 15% 20%,rgba(60,30,5,.12) 0%,transparent 35%)`,
+  // 1: darker bottom-right
+  `radial-gradient(ellipse at 100% 100%,rgba(50,25,4,.24) 0%,transparent 50%),radial-gradient(ellipse at 85% 75%,rgba(60,30,5,.12) 0%,transparent 35%)`,
+  // 2: darker top-right
+  `radial-gradient(ellipse at 100% 0%,rgba(50,25,4,.22) 0%,transparent 50%),radial-gradient(ellipse at 70% 25%,rgba(60,30,5,.10) 0%,transparent 30%)`,
+  // 3: darker bottom-left
+  `radial-gradient(ellipse at 0% 100%,rgba(50,25,4,.22) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(60,30,5,.12) 0%,transparent 35%)`,
+  // 4: even center fade
+  `radial-gradient(ellipse at 50% 50%,transparent 30%,rgba(40,20,4,.15) 80%,rgba(40,20,4,.20) 100%)`,
+  // 5: dual corners top-left + bottom-right
+  `radial-gradient(ellipse at 0% 0%,rgba(50,25,4,.18) 0%,transparent 45%),radial-gradient(ellipse at 100% 100%,rgba(50,25,4,.18) 0%,transparent 45%)`,
+  // 6: left edge heavy
+  `radial-gradient(ellipse at 0% 50%,rgba(50,25,4,.22) 0%,transparent 45%),radial-gradient(ellipse at 90% 10%,rgba(40,20,4,.08) 0%,transparent 30%)`,
+  // 7: top edge
+  `radial-gradient(ellipse at 50% 0%,rgba(50,25,4,.20) 0%,transparent 45%),radial-gradient(ellipse at 20% 90%,rgba(40,20,4,.10) 0%,transparent 30%)`,
+];
+function paperBg(seedOverride){
+  const seed=seedOverride!==undefined?seedOverride:_paperSeeds[(_paperSeedIdx++)%_paperSeeds.length];
+  const burnIdx=seed%_burnPatterns.length;
+  const fid=`pf${seed}x${Math.random().toString(36).slice(2,5)}`;
+  return{
+    fid,
+    filterDef:`<svg style="position:absolute;width:0;height:0;"><defs><filter id="${fid}" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.009 0.015" numOctaves="4" seed="${seed}" stitchTiles="stitch" result="n"/><feColorMatrix type="matrix" values="0 0 0 0 0.08  0 0 0 0 0.045  0 0 0 0 0.005  0 0 0 0.14 0" in="n" result="c"/><feBlend in="SourceGraphic" in2="c" mode="multiply"/></filter></defs></svg>`,
+    bgEl:`<svg style="position:absolute;inset:0;width:100%;height:100%;z-index:0;" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="pg${fid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5edd8"/><stop offset="40%" stop-color="#eee0b8"/><stop offset="70%" stop-color="#e4d098"/><stop offset="100%" stop-color="#d4bc78"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#pg${fid})" filter="url(#${fid})"/></svg>`,
+    burns:`<div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:${_burnPatterns[burnIdx]};"></div>`
+  };
+}
+
+function cmCardHtml(borderColor,labelText,bodyHtml,seed){
+  const p=paperBg(seed);
+  return`<div class="cm-card cm-card-frozen" style="position:relative;overflow:hidden;border-left:3px solid ${borderColor};border-top:3px solid ${borderColor};">
+    ${p.filterDef}${p.bgEl}${p.burns}
+    <div style="position:relative;z-index:2;">
+      <div class="cm-card-lbl">${labelText}</div>
+      <div class="cm-card-divider"></div>
+      ${bodyHtml}
+    </div>
+  </div>`;}
+
+function cmMethodCardHtml(borderColor,labelText,bodyHtml,seed){
+  const p=paperBg(seed);
+  return`<div class="cm-card" style="position:relative;overflow:hidden;border-left:3px solid ${borderColor};border-top:3px solid ${borderColor};">
+    ${p.filterDef}${p.bgEl}${p.burns}
+    <div style="position:relative;z-index:2;">
+      <div class="cm-card-lbl">${labelText}</div>
+      <div class="cm-card-divider"></div>
+      ${bodyHtml}
+    </div>
+  </div>`;}
+
 function recipeColor(recipeId){
   const idx=RECIPES.findIndex(r=>r.id===recipeId);
   return RECIPE_COLORS[idx%RECIPE_COLORS.length]||RECIPE_COLORS[0];
@@ -2085,70 +2133,66 @@ function renderCookMode(){
   const srvBarHtml=`
     <div class="cm-srv-bar-v36" style="position:sticky;top:0;z-index:10;">
       <div class="cm-srv-left">
-        <button class="cm-meal-btn-style" onclick="cmAdjustServings(-0.5)" style="min-width:34px;padding:0 10px;font-size:18px;">−</button>
-        <span class="cm-srv-val-v36">${srv%1===0?srv:srv.toFixed(1)}</span>
-        <button class="cm-meal-btn-style" onclick="cmAdjustServings(0.5)" style="min-width:34px;padding:0 10px;font-size:18px;">+</button>
-        <span class="cm-srv-lbl-v36" onclick="cmResetServings()" title="Reset to Chow Hall default">Servings</span>
+        <button style="background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:8px;color:#f0c060;font-family:Georgia,serif;font-size:22px;font-weight:700;height:44px;min-width:38px;padding:0 12px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.5);" onclick="cmAdjustServings(-0.5)">−</button>
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <span style="font-family:Georgia,serif;font-size:40px;font-weight:700;color:#f0c880;line-height:1;">${srv%1===0?srv:srv.toFixed(1)}</span>
+          <span style="font-family:Georgia,serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#f0c880;border-bottom:1px dotted #c8a878;cursor:pointer;" onclick="cmResetServings()">Servings</span>
+        </div>
+        <button style="background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:8px;color:#f0c060;font-family:Georgia,serif;font-size:22px;font-weight:700;height:44px;min-width:38px;padding:0 12px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.5);" onclick="cmAdjustServings(0.5)">+</button>
       </div>
-      <span class="cm-family-lbl">Family: <span class="cm-family-num">7</span></span>
+      <span style="flex:1;text-align:center;font-family:Georgia,serif;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#f0c880;">Family: <span style="color:#f0c060;">7</span></span>
       <div class="cm-bar-right">
-        <button class="cm-meal-btn-style" onclick="cmToggleIngPane()" id="cm-hide-ref-btn">${hideLabel}</button>
-        <button class="cm-meal-btn-style cm-start-amber" onclick="cmStartRecipe()"${recipeStarted?' disabled style="opacity:.6;cursor:default;"':''}>
+        <button style="background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:8px;color:#f0c060;font-family:Georgia,serif;font-size:13px;font-weight:700;height:44px;padding:0 12px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.5);" onclick="cmToggleIngPane()" id="cm-hide-ref-btn">${hideLabel}</button>
+        <button style="background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:8px;color:#f0c060;font-family:Georgia,serif;font-size:13px;font-weight:700;height:44px;padding:0 14px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.5);" onclick="cmStartRecipe()"${recipeStarted?' disabled style="opacity:.6;cursor:default;"':''}>
           ${recipeStarted?'✓ Started':'▶ Start Recipe'}
         </button>
       </div>
     </div>`;
 
-  // --- TOP FROZEN ROW (ingredients | altitude) ---
-  // v3.7: quantity LEFT, name RIGHT, two columns when >6 ingredients
+  // --- TOP FROZEN ROW (ingredients | altitude) — Items 20+21: split 2-col, parchment ---
   const ings=recipe.ingredients;
-  const ingCols=ings.length>6?2:1;
-  const ingPerCol=Math.ceil(ings.length/ingCols);
-  function ingColHtml(items){
+  const ingHalf=Math.ceil(ings.length/2);
+  const ingCol1=ings.slice(0,ingHalf);const ingCol2=ings.slice(ingHalf);
+  function ingPairHtml(items){
     return items.map(i=>{
       const u=i.unit?` ${i.unit}`:'';
-      return`<div class="cm-ing-row36"><span class="cm-ing-amt36">${scaleAmt(i.amount,srv,bl)}${u}</span><span class="cm-ing-name36">${i.name}</span></div>`;
+      // Item 3: fixed 80px qty column right-aligned, 12px gap, name left-aligned
+      // Item 4: font size matches altitude card (13px)
+      return`<div style="display:flex;align-items:baseline;padding:5px 0;border-bottom:0.5px solid rgba(100,70,20,.18);">
+        <span style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#1a1208;width:80px;text-align:right;flex-shrink:0;">${scaleAmt(i.amount,srv,bl)}${u}</span>
+        <span style="display:inline-block;width:12px;flex-shrink:0;"></span>
+        <span style="font-size:13px;color:#2a1e0e;line-height:1.3;">${i.name}</span>
+      </div>`;
     }).join('');
   }
-  let ingBodyHtml='';
-  if(ingCols===2){
-    const col1=ings.slice(0,ingPerCol);const col2=ings.slice(ingPerCol);
-    ingBodyHtml=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 10px;">`+
-      `<div>${ingColHtml(col1)}</div><div>${ingColHtml(col2)}</div></div>`;
-  } else {
-    ingBodyHtml=ingColHtml(ings);
-  }
+  const ingBodyHtml=`<div style="display:flex;gap:0;">
+    <div style="flex:1;padding-right:8px;border-right:0.5px solid rgba(100,70,20,.22);">${ingPairHtml(ingCol1)}</div>
+    <div style="flex:1;padding-left:8px;">${ingPairHtml(ingCol2)}</div>
+  </div>`;
 
   const hasAlt=recipe.altitude_adjustments&&recipe.altitude_adjustments.length>0;
-  // v3.7: altitude badge left, note right, two columns when needed
-  function altRowHtml(a){
-    return`<div class="cm-alt-row36"><span class="cm-alt-badge36">${(a.category||'alt').slice(0,5)}</span><span>${a.note}</span></div>`;
-  }
   const alts=recipe.altitude_adjustments||[];
-  const altCols=alts.length>4?2:1;
-  const altPerCol=Math.ceil(alts.length/altCols);
-  let altBodyHtml='';
-  if(altCols===2){
-    const ac1=alts.slice(0,altPerCol);const ac2=alts.slice(altPerCol);
-    altBodyHtml=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 10px;">`+
-      `<div>${ac1.map(altRowHtml).join('')}</div><div>${ac2.map(altRowHtml).join('')}</div></div>`;
-  } else {
-    altBodyHtml=alts.length?alts.map(altRowHtml).join(''):`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">No altitude adjustments.</div>`;
+  const altHalf=Math.ceil(alts.length/2);
+  const altCol1=alts.slice(0,altHalf);const altCol2=alts.slice(altHalf);
+  function altPairHtml(items){
+    return items.map(a=>`<div style="display:flex;align-items:flex-start;gap:6px;padding:5px 0;border-bottom:0.5px solid rgba(100,70,20,.15);">
+      <span style="font-family:Georgia,serif;font-size:8px;font-weight:700;padding:1px 4px;border-radius:2px;background:rgba(200,120,24,.15);color:var(--amber);text-transform:uppercase;letter-spacing:.3px;white-space:nowrap;">${(a.category||'alt').slice(0,5)}</span>
+      <span style="font-size:11px;color:var(--ink2);line-height:1.5;">${a.note}</span>
+    </div>`).join('');
   }
+  const altBodyHtml=alts.length?`<div style="display:flex;gap:0;">
+    <div style="flex:1;padding-right:8px;border-right:0.5px solid rgba(100,70,20,.22);">${altPairHtml(altCol1)}</div>
+    <div style="flex:1;padding-left:8px;">${altPairHtml(altCol2)}</div>
+  </div>`:`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">No altitude adjustments.</div>`;
 
   const topRowStyle=collapsed?'display:none;':'';
+  // Item 9 — reset seed counter so each full render gets fresh unique seeds
+  _paperSeedIdx=0;
+  const rc=recipeColor(tab.recipeId);
   const frozenHtml=`
     <div id="cm-frozen-row" class="cm-grid4" style="${topRowStyle}">
-      <div class="cm-card cm-card-frozen" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
-        <div class="cm-card-lbl">Ingredients</div>
-        <div class="cm-card-divider"></div>
-        ${ingBodyHtml}
-      </div>
-      <div class="cm-card cm-card-frozen" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
-        <div class="cm-card-lbl">Altitude — 9,000 ft</div>
-        <div class="cm-card-divider"></div>
-        ${altBodyHtml}
-      </div>
+      ${cmCardHtml(rc,'Ingredients',ingBodyHtml,undefined)}
+      ${cmCardHtml(rc,'Altitude — 9,000 ft',altBodyHtml,undefined)}
     </div>`;
 
   // --- BOTTOM METHOD CARDS (even split) ---
@@ -2158,28 +2202,19 @@ function renderCookMode(){
   const rightSteps=steps.slice(half);
 
   function stepHtml(s){
-    const timerBadge=s.timer_seconds?`<span style="font-family:Georgia,serif;font-size:9px;color:var(--amber);margin-left:6px;">⏱ ${fmtTime(s.timer_seconds)}</span>`:'';
-    return`<div class="cm-step36">
-      <span class="cm-step-n36">${s.n}</span>
-      <div>
-        <div class="cm-step-head36">${s.title}${timerBadge}</div>
-        <div class="cm-step-body36">${s.text}</div>
-      </div>
+    const timerBadge=s.timer_seconds?` <span style="font-family:Georgia,serif;font-size:13px;color:var(--amber);font-style:italic;">⏱ ${fmtTime(s.timer_seconds)}</span>`:'';
+    // Item 6: all inline — number, bold title, body text. Large font, no vertical stacking.
+    return`<div style="display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:0.5px solid rgba(100,70,20,.12);">
+      <span style="font-family:Georgia,serif;font-size:26px;font-weight:700;color:var(--amber);line-height:1;flex-shrink:0;min-width:28px;">${s.n}</span>
+      <span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--ink);flex-shrink:0;">${s.title}${timerBadge}</span>
+      <span style="font-size:17px;color:var(--ink2);line-height:1.4;">${s.text}</span>
     </div>`;
   }
 
   const methodHtml=`
     <div class="cm-grid-bottom">
-      <div class="cm-card" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
-        <div class="cm-card-lbl">Method</div>
-        <div class="cm-card-divider"></div>
-        ${leftSteps.map(stepHtml).join('')}
-      </div>
-      <div class="cm-card" style="border-left:3px solid ${recipeColor(tab.recipeId)};border-top:3px solid ${recipeColor(tab.recipeId)};">
-        <div class="cm-card-lbl">Method cont.</div>
-        <div class="cm-card-divider"></div>
-        ${rightSteps.length?rightSteps.map(stepHtml).join(''):`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">All steps on left card.</div>`}
-      </div>
+      ${cmMethodCardHtml(rc,'Method',leftSteps.map(stepHtml).join(''),undefined)}
+      ${cmMethodCardHtml(rc,'Method cont.',rightSteps.length?rightSteps.map(stepHtml).join(''):`<div style="font-family:Georgia,serif;font-size:11px;color:var(--ink3);font-style:italic;">All steps on left card.</div>`,undefined)}
     </div>`;
 
   center.innerHTML=srvBarHtml+frozenHtml+methodHtml;
@@ -2264,19 +2299,21 @@ function cmPopulateTimers(recipe){
   renderManualTimer();
 }
 
-// ---- MANUAL TIMER — v3.7: compact setup strip ----
+// ---- MANUAL TIMER — v3.9: no background shell, raw buttons sit in rail ----
 function renderManualTimer(){
   const el=document.getElementById('cm-manual-zone');if(!el)return;
   const mm=String(_mtMinutes).padStart(2,'0');
   el.innerHTML=`
-    <div style="border-top:1.5px solid var(--paper-brd);background:var(--paper3);padding:8px 10px;flex-shrink:0;">
-      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-        <span style="font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);">Manual</span>
-        <span style="font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--ink);min-width:38px;text-align:center;">${mm}:00</span>
-        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(-1)">−1m</button>
-        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(1)">+1m</button>
-        <button class="cm-tbtn t-start" style="flex:0;padding:4px 8px;font-size:11px;" onclick="mtAdd(5)">+5m</button>
-        <button class="cm-meal-btn-style" style="padding:0 12px;height:28px;font-size:11px;" onclick="mtCreate()">Create</button>
+    <div style="flex-shrink:0;padding:8px 10px;border-top:1px solid rgba(200,168,120,.2);">
+      <div style="display:flex;gap:4px;margin-bottom:7px;">
+        <button onclick="mtAdd(-1)" style="flex:1;padding:5px 0;font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c060;text-align:center;cursor:pointer;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:2px solid #1e0e04;border-radius:5px;">−1m</button>
+        <button onclick="mtAdd(1)" style="flex:1;padding:5px 0;font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c060;text-align:center;cursor:pointer;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:2px solid #1e0e04;border-radius:5px;">+1m</button>
+        <button onclick="mtAdd(5)" style="flex:1;padding:5px 0;font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c060;text-align:center;cursor:pointer;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:2px solid #1e0e04;border-radius:5px;">+5m</button>
+        <button onclick="mtAdd(15)" style="flex:1;padding:5px 0;font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c060;text-align:center;cursor:pointer;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:2px solid #1e0e04;border-radius:5px;">+15m</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:700;color:#f0c880;text-align:center;flex:1;background:#0c0800;border-top:1px solid #c8a878;border-left:1px solid #c8a878;border-right:1px solid rgba(0,0,0,.3);border-bottom:2px solid rgba(0,0,0,.4);border-radius:4px;padding:4px 0;box-shadow:inset 0 0 8px rgba(0,0,0,.4);">${mm}:00</div>
+        <button onclick="mtCreate()" style="padding:6px 14px;font-family:Georgia,serif;font-size:13px;font-weight:700;color:#f0c060;cursor:pointer;background:#4a3208;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:6px;box-shadow:0 2px 5px rgba(0,0,0,.5);">Start</button>
       </div>
     </div>`;
 }
@@ -2291,19 +2328,21 @@ function mtCreate(){
 }
 function mtStart(){mtCreate();} // legacy alias
 
-// ---- FLOATING TIMER BAR — v3.7: bottom left, tap snaps to Cook Mode on that recipe ----
+// ---- FLOATING TIMER BAR — v3.8: single boxed unit, Cook Mode Timers label ----
 function updateFloatBar(){
   const bar=document.getElementById('cm-float-bar');if(!bar)return;
   const visible=activeTimers.filter(t=>t.state==='running'||t.state==='done');
   if(visible.length&&!cookOn){
     bar.style.display='flex';
-    const html=visible.map(t=>{
-      const rc=t.recipeId?recipeColor(t.recipeId):'var(--paper-brd)';
-      const rid=t.recipeId||'';
-      return`<span class="cm-float-timer${t.state==='done'?' done':''}" style="border-left-color:${rc};border-top-color:${rc};" onclick="floatSnapToCook('${rid}')">${t.label} ${fmtTime(t.total-t.elapsed)}</span>`;
-    }).join('');
-    document.getElementById('cm-float-timers').innerHTML=html;
-  }else{
+    const timersEl=document.getElementById('cm-float-timers');
+    if(timersEl){
+      timersEl.innerHTML=visible.map(t=>{
+        const rc=t.recipeId?recipeColor(t.recipeId):'var(--paper-brd)';
+        const rem=t.total-t.elapsed;
+        return`<span class="cm-float-timer${t.state==='done'?' done':''}" style="border-left-color:${rc};border-top-color:${rc};" onclick="floatSnapToCook('${t.recipeId||''}')">${t.label} ${fmtTime(rem)}</span>`;
+      }).join('');
+    }
+  } else {
     bar.style.display='none';
   }
 }
@@ -2339,6 +2378,7 @@ function renderCookLaunch(){
   const center=document.getElementById('cm-center');if(!center)return;
   const q=CM_SCRIPTURE[_cmScriptureIdx%CM_SCRIPTURE.length];
   _cmScriptureIdx++;
+  // Item 23 — keep seeded recipes as demo placeholders (right rail handles full browsing)
   const list=RECIPES.map(r=>{
     const altBadge=r.altitude_adjustments&&r.altitude_adjustments.length?` · ⛰️ altitude`:'';
     const heirloom=r.heirloom?' · ⭐ heirloom':'';
@@ -2347,11 +2387,11 @@ function renderCookLaunch(){
       <div class="cm-recipe-pick-meta">${r.tags.join(', ')}${altBadge}${heirloom}</div>
     </div>`;
   }).join('');
+  // Items 19+24 — scripture 52px, no browse-recipes prompt text
   center.innerHTML=`<div id="cm-launch" style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;padding:32px 40px;text-align:center;">
-    <div style="font-family:Georgia,serif;font-size:32px;font-weight:700;color:var(--paper);line-height:1.45;margin-bottom:16px;max-width:700px;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.5);">"${q.text}"</div>
-    <div style="font-family:Georgia,serif;font-size:15px;color:var(--amber);letter-spacing:.08em;margin-bottom:36px;">— ${q.ref}</div>
+    <div style="font-family:Georgia,serif;font-size:52px;font-weight:700;color:var(--paper);line-height:1.45;margin-bottom:16px;max-width:1050px;font-style:italic;text-shadow:0 1px 6px rgba(0,0,0,.5);">"${q.text}"</div>
+    <div style="font-family:Georgia,serif;font-size:18px;color:var(--amber);letter-spacing:.08em;margin-bottom:36px;">— ${q.ref}</div>
     <div style="width:100%;max-width:600px;">
-      <div style="font-family:Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--paper-brd);margin-bottom:12px;">Browse recipes on the right — or choose from recent:</div>
       <div class="cm-recipe-list">${list}</div>
     </div>
   </div>`;
@@ -2364,8 +2404,10 @@ function renderCmTabs(){
     const r=cmGetRecipe(t.recipeId);
     const name=r?r.name:'Recipe';
     const rc=recipeColor(t.recipeId);
-    const activeStyle=i===cmActiveTab?`border-top:3px solid ${rc};border-left:2px solid ${rc};background:var(--paper);color:var(--ink);`:``;
-    return`<div class="cm-tab${i===cmActiveTab?' active':''}" onclick="cmSwitchTab(${i})" style="${activeStyle}">
+    const isActive=i===cmActiveTab;
+    // Item 22 — all tabs keep full recipe color; active tab gets paper bg
+    const tabStyle=`border-top:4px solid ${rc};border-left:5px solid ${rc};${isActive?`background:var(--paper);color:var(--ink);`:`background:var(--paper3);color:var(--ink2);opacity:0.82;`}`;
+    return`<div class="cm-tab${isActive?' active':''}" onclick="cmSwitchTab(${i})" style="${tabStyle}">
       ${name}<span class="cm-tab-x" onclick="event.stopPropagation();cmCloseTab(${i})">✕</span>
     </div>`;
   }).join('');
@@ -2441,6 +2483,7 @@ function kidsLaunchRecipe(id){
 
 function toggleKids(){
   kidsOn=!kidsOn;cookOn=false;mealOn=false;nightOn=false;
+  document.body.classList.remove('night-dim');
   document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');
   document.getElementById('cook-btn').classList.remove('cook-active');
@@ -2459,6 +2502,7 @@ function toggleKids(){
 
 function toggleCook(){
   cookOn=!cookOn;mealOn=false;nightOn=false;kidsOn=false;
+  document.body.classList.remove('night-dim');
   document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');
   document.getElementById('meal-btn').classList.remove('meal-active');
@@ -2483,6 +2527,7 @@ function toggleCook(){
 }
 function toggleMeal(){
   mealOn=!mealOn;cookOn=false;nightOn=false;kidsOn=false;
+  document.body.classList.remove('night-dim');
   document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');
   document.getElementById('cook-btn').classList.remove('cook-active');
@@ -2500,11 +2545,13 @@ function toggleMeal(){
 function toggleNight(){
   nightOn=!nightOn;
   document.getElementById('night-btn').classList.toggle('night-active',nightOn);
+  document.body.classList.toggle('night-dim',nightOn);
   document.getElementById('night-wake').style.display=nightOn?'block':'none';
 }
 
 async function goHome(){
   cookOn=false;mealOn=false;nightOn=false;kidsOn=false;
+  document.body.classList.remove('night-dim');
   document.getElementById('cook-scr').style.display='none';
   document.getElementById('meal-scr').style.display='none';
   document.getElementById('month-scr').style.display='none';

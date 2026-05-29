@@ -1,6 +1,5 @@
 # wave-4-5-widget.md — Calendar Widget Reference
 
-**Current version:** v3.7
 **Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore
 **Served from:** `C:\dev\family-ops` via `python -m http.server 8080`
 **Data source:** `calendars.md` in same directory — fetched live on load
@@ -13,7 +12,7 @@
 - **COCKPIT IS READ-ONLY.** No entry tool, no form, no keyboard on Cockpit. Ever.
 - **NEVER patch data files to work around code bugs.** Fix the code. Log as PQ.
 - **Full rewrite only** — never surgical patches to widget HTML. Version up, full file.
-- **Filename dots, never underscores.** `v3.6`, `v3.7`, `v3.8` — no exceptions.
+- **Filename dots, never underscores.** `v3.6`, `v3.7`, `v3.8`, `v3.9` — no exceptions.
 
 ---
 
@@ -28,74 +27,100 @@
 | v3.5 | 2026-05-27 | Ingredient tabs removed, recipe name bar removed, Start Recipe gates timers, servings reset |
 | v3.6 | 2026-05-28 | Timer auto-pop fix, 2×2 recipe card layout, 3-section nav ribbon, rail swap (timers left/recipe browser right), farmhouse buttons, goHome snap-to-today, 5-row month cap, dual-month banner, Daily Mass zero conflict weight |
 | v3.7 | 2026-05-28 | Option E antique placard on wordmark + month banner, Kids Kitchen text cream/amber, scripture launch screen, JS ribbon width matching, float bar bottom-left, tap-to-snap Cook Mode, horizontal timer flow, 🍴 float branding, recipe color accent on all 5 elements, dual-month banner fix |
+| v3.8 | 2026-05-29 | 26-item spec pass — night mode all layers, copper plate Option D marquee, parchment cards, 2-col timers, color unification #f0c880, servings bar amber, kids kitchen size, scripture 52px, float bar fixed unit |
+| v3.9 | 2026-05-29 | Top bar fill, high-contrast palette, burn pattern randomization, inline method steps, ingredients alignment, kids kitchen compact, servings 40px, float bar vertical stack |
 
 ---
 
-## v3.8 Spec (26 items)
+## Locked Design Decisions
 
-### Group 1 — Critical bugs
-1. Night button broken — does nothing
-2. Timers stacking before horizontal expansion (z-index/layout issue)
-3. Week view brief row layout didn't render — looks identical to v3.6
-4. Timer cards not picking up recipe color (tab got it, timer cards didn't)
+### Copper Plate Marquee (Option D) — wordmark + center banner
+```css
+background: #2e1e0a;
+border-radius: 3px;
+border-top: 2px solid #c07830;
+border-left: 2px solid #a05a20;
+border-right: 2px solid #5a2808;
+border-bottom: 3px solid #3a1404;
+box-shadow: 0 4px 14px rgba(0,0,0,.8), inset 0 0 16px rgba(0,0,0,.4);
+```
+Corner hardware: `.hw` / `.hw9` — CSS `::before` (top bar) + `::after` (left bar) in `#8a6028`.
+Wordmark text only — no logo inside. Text fills bar height. Padding minimal (4px vertical).
+Month/year banner: month `58px`, year `22px`, both `#f0c880`.
+Wordmark: "Edelweiss Farms" `26px`, "Family Ops" `14px`, both `#f0c880`.
 
-### Group 2 — Layout/structure
-5. Header area — marquee made everything smaller; needs bigger, more top/bottom padding
-6. Month view — doesn't fill vertical space; must auto-size center area between top and bottom ribbon
-7. Timer layout — 2 fixed columns; col 1 fills top-to-bottom (5 timers); col 2 appears on 6th, collapses when empty
+### Color Anchor
+All Cook Mode text: `#f0c880`. Amber accent: `#f0c060`. No divergence.
 
-### Group 3 — Theming pass
-8. Marquee — more 3D physical patch feel, sewn-on look, not integrated/modern
-9. Wordmark — logo + wordmark in single unified marquee (logo inside, not outside)
-10. Recipe card background — burnt cream, not white; timers match same color
-11. Servings bar background — brownish with gold/cream border
-12. Recipe accent colors — current blue too aggressive against cream; needs subtler palette
+### Recipe Accent Palette (10 colors, high-contrast)
+```
+['#2660a8','#b86010','#287860','#803050','#c04020','#604898','#208870','#c89010','#486cb0','#386828']
+```
+Timer card borders: `border-left:5px solid ${rc}; border-top:4px solid ${rc}`.
+Tab borders: `border-left:5px solid ${rc}; border-top:4px solid ${rc}`.
+Tab colors persist on ALL open tabs — full color regardless of active state.
 
-### Group 4 — Button styling
-13. Servings +/−, Hide Ref, Start Recipe — exact match to Edelweiss Meal Planner button
-14. Kids Kitchen button — exact match to Rolling/Week/Month button styling
-15. Agent buttons top right — exact match to Rolling/Week/Month button styling
-16. Manual timer strip — fixed width (no bounce), more button-y feel
+### Parchment Cards
+SVG `feTurbulence` filter, `fractalNoise`, `baseFrequency="0.009 0.015"`, `numOctaves="4"`.
+Lightness: `feColorMatrix` alpha `0.14` (C level — not dark).
+Gradient base: `#f5edd8 → #eee0b8 → #e4d098 → #d4bc78`.
+Burn patterns: 8 variations in `_burnPatterns[]`, assigned by `seed % 8` — different direction per card.
+`_paperSeeds`, `_paperSeedIdx`, `_burnPatterns` always declared together — never split.
 
-### Group 5 — Typography
-17. Rail headers — double current size
-18. Right rail categories — double current size
-19. Scripture quote — bigger
+### Timer Layout
+2-column vertical. Col 1: first 5 timers. Col 2: 6th+, collapses when empty.
+State-sorted: running → idle → done.
+Rail: `224px` (1 col) / `448px` (2 col).
 
-### Group 6 — Feature fixes that didn't land from v3.7
-20. Ingredients card — 2-column, quantity left/name right, larger font
-21. Altitude card — same treatment as ingredients
-22. Tab colors persist on ALL open tabs (not just active)
+### Night Mode
+`body.night-dim` covers: `#hdr`, `#dhdrs`, `#cal-wrap`, `#bottom`, `#cook-scr`, `#kids-scr`, `#month-scr`, `#meal-scr`, `#week-detail`.
+`filter:brightness(0.08); pointer-events:none` on all.
+`#night-wake`: `position:fixed; inset:0; z-index:999; cursor:pointer`. Tap to wake.
 
-### Group 7 — Launch screen
-23. Remove 3 seeded recipes from center — right rail handles browsing
-24. Remove "browse recipes" prompt text
+### Servings Bar
+Buttons (−, +, Hide Ref, Start Recipe): all amber variant.
+`background:#4a3208; border-top:1px solid #c07830; border-left:1px solid #a05a20; border-right:1px solid #3a1808; border-bottom:3px solid #1e0e04; border-radius:8px; color:#f0c060;`
+Servings number: `40px`. "Servings" label: `13px`. Family: `18px`. All `#f0c880`.
 
-### Group 8 — Float bar
-25. Single boxed unit, semi-transparent, "Cook Mode Timers" label, all timers inside with color markers
-26. Recipe name tag on timer cards — remove it, color band only
+### Float Bar
+Fixed `220px` wide. Timers stack top-to-bottom. No Cook Mode return button. Tap anywhere on bar snaps to Cook Mode. Label: "Cook Mode Timers".
 
----
+### Method Steps (inline)
+Step number (`26px amber`) + bold title (`18px`) + body text (`17px`) — all inline on one line, no vertical stacking per step.
 
-## Locked Design Decisions (v3.8)
+### Ingredients Card
+Fixed `80px` quantity column, right-aligned. `12px` gap. Ingredient names left-aligned at consistent position. Font `13px` matching altitude card.
 
-- **Item 1 — Night mode restore:** `body.night-dim` CSS on all 4 zones (#hdr, #dhdrs, #cal-wrap, #bottom): `filter:brightness(0.08); pointer-events:none`. `#night-wake`: `display:none; position:fixed; inset:0; z-index:999; cursor:pointer`. `toggleNight()` adds/removes `body.night-dim` class.
-- **Items 2+7 — Timer layout:** 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th, collapses when empty. State-sorted: running first, idle next, done last. Rail width: 224px (1 col) / 448px (2 col).
-- **Item 3 — Week view:** `#week-detail.visible` → `display:flex` (was `display:block`).
-- **Item 4 — Timer card color:** `border-left:3px solid ${rc}; border-top:3px solid ${rc}` on timer cards matching recipe card treatment.
-- **Item 5 — Top bar:** Maximize wordmark placard within fixed top bar height. No vertical growth. Use horizontal space.
-- **Item 8 — Marquee design:** Option D copper plate. `background:#2e1e0a; border-top:2px solid #c07830; border-left:2px solid #a05a20; border-right:2px solid #5a2808; border-bottom:3px solid #3a1404`. Corner hardware. Applies to both wordmark placard and center banner placard.
-- **Item 9 — Logo placement:** Logo SVG inside the wordmark placard as a single unified unit. No separate logo outside the placard.
+### Manual Timer
+No background shell. Raw amber buttons inside rail. Thin top border separator only.
+
+### Week Mode
+`#week-detail.visible { display:flex; flex-direction:column; }`
+
+### Month View
+`#month-scr`: `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh); overflow:hidden; display:flex; flex-direction:column;`
+`.mgrid`: `grid-template-rows:repeat(5,1fr); flex:1; min-height:0;`
+
+### Scripture Quote
+`font-size:52px`. `max-width:1050px`. Centered on launch screen. No browse-recipes prompt text.
+
+### Kids Kitchen Cards
+Match Cook Mode launch screen pick card size. `grid-auto-rows:auto`. Icon `24px`, name `19px`.
+
+### Rail Headers / Categories
+Rail headers (TIMERS, RECIPES): `28px #f0c880`.
+Right rail categories: `18px #f0c880`.
+Recipe entries: `14px #e2d6aa`.
 
 ---
 
 ## Architecture (v3.6+)
 
 ### Top bar
-- Sticky, fixed height — never grows vertically
-- Left: wordmark placard — logo inside, corner hardware, Option D copper plate treatment
-- Center: month/year banner — same Option D copper plate; shows recipe name in Cook Mode; dual-month slash when rolling week spans two months
-- Right: egg card + vdiv + agent grid
+- Sticky, fixed height `--hh` — never grows vertically
+- Left: wordmark placard — text only, copper plate Option D, fills bar height
+- Center: month/year banner — same copper plate; Cook Mode shows recipe name; dual-month slash when rolling week spans two months
+- Right: egg card + vdiv + meal planner button + vdiv + agent grid
 
 ### Nav ribbon — 3 fixed sections
 - **Left (.nav-left-zone):** Kids Kitchen — width JS-matched to right section via `syncHdrH()`
@@ -103,47 +128,38 @@
 - **Right (.nav-right-zone):** Rolling / Week / Month — sets section width ruler
 
 ### Cook Mode layout
-- **Left rail (#cm-left):** Timer stack — 2-column layout. Col 1 fills top-to-bottom (5 timers). Col 2 appears on 6th, collapses when empty. State-sorted: running first, idle next, done last. Rail: 224px (1 col) / 448px (2 col).
+- **Left rail (#cm-left):** Timer stack (2-col) + manual timer (fixed bottom unit, no background)
 - **Center (#cm-center):** 2×2 recipe card grid — sticky servings bar + frozen top row (Ingredients | Altitude) + method cards
-- **Right rail (#cm-right):** Recipe browser
+- **Right rail (#cm-right):** Recipe browser (categories 18px, entries 14px)
 
 ### Recipe color system
-- 6 colorblind-safe accent colors (blue/orange/purple/teal family)
-- Assigned dynamically when recipe tab opens, released on close, recycled
-- Applies to: recipe tab, all 4 center cards (ingredients, altitude, method ×2), timer cards
-- Color band: left + top border accent only
+- 10 high-contrast accent colors assigned dynamically per tab
+- Applies to: recipe tab, all 4 center cards, timer cards
+- Border-left 5px + border-top 4px — color band only, no recipe name tag on timer cards
 
-### Servings bar (v3.6)
-- SERVINGS label left (dotted underline = tap to reset to Chow Hall default, half-step increments)
-- FAMILY: 7 center
-- Hide Ref + Start Recipe right
-
-### Float bar (v3.7 → v3.8 redesign)
-- Position: bottom left, fixed above nav
-- v3.8: single boxed unit, semi-transparent, "Cook Mode Timers" label, all timers listed with color markers
-- Tap any timer → snaps to Cook Mode on that recipe
+### Float bar
+- Position: bottom left, fixed above nav, `220px` wide
+- Timers stack vertically, tap snaps to Cook Mode, no return button
 
 ### Night mode
-- `body.night-dim` on all 4 zones: `filter:brightness(0.08); pointer-events:none`
-- `#night-wake` — transparent full-screen overlay, `position:fixed; inset:0; z-index:999; cursor:pointer`
-- Tap anywhere to wake
+- Covers all full-screen layers — calendar zones + cook/kids/month/meal/week screens
+- Wake overlay at `z-index:999`
 
-### goHome behavior (v3.6)
+### goHome behavior
 - Always resets to rolling view, snaps to today
-- No page reload — calls `initRolling()` only
+- No page reload — calls `initRolling()` only, clears `body.night-dim`
 
-### Month view (v3.6)
-- Hard 5-row cap — overflow days appear as leading days in next month's grid
-- Fills vertical space: `position:fixed; top:var(--hh); left:0; right:0; bottom:var(--nh)`
+### Month view
+- Hard 5-row grid, always fills vertical container
+- `flex:1` on `.mgrid` to consume full height
 
-### Banner behavior (v3.7)
+### Banner behavior
 - Rolling/week: "Month / Month" only when visible week actually spans two calendar months
 - Month view: single month only, never slash
+- Cook Mode: recipe name replaces month in center banner
 
-### Daily Mass display rules (v3.6)
-- `optional=true` on the CAL-RECUR entry
-- Zero conflict weight — excluded from auto-conflict detection
-- Bumps first when day is full — shows when space allows, drops silently when not
+### Daily Mass display rules
+- `optional=true` — zero conflict weight, bumps first, shows when space allows
 - Appears in daily brief regardless
 
 ---
