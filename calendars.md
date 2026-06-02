@@ -2,7 +2,7 @@
 
 **Owner:** Foreman
 **Schema version:** 1
-**Last full rewrite:** 2026-05-25
+**Last full rewrite:** 2026-06-01
 **Source-of-truth rule:** This file is the digital plan. The whiteboard on the fridge is authoritative for daily ops. Tim and Jill mirror confirmed events from here to the whiteboard.
 
 Future schema changes: bump `Schema version`, note migration in `prefs.md`.
@@ -121,6 +121,8 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Travel spans:** `travel=true` on any span where a person is physically away from home. Foreman asks "Are they traveling?" on all multi-day absence entries.
 - **No em-dashes in any calendar entry title or notes field. Hyphen (-) only.**
 - **Swim meets = ALL-DAY always.** Never assign a time to a swim meet entry.
+- **cancel=pending:** Event displays with strikethrough title and ⊘ symbol. Awaiting Matt or Kalea confirmation. Both have equal authority to propose or confirm.
+- **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 
 ---
@@ -137,14 +139,14 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
 ### RECURRING - Weekly
 
-[CAL-RECUR weekly start=2026-05-03 day=sun] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
-[CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 [D][K] Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
+[CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
 
 ---
 
@@ -167,10 +169,10 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-23 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-24 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-25 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
-[CAL] 2026-06-29 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
-[CAL] 2026-06-30 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
-[CAL] 2026-07-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
-[CAL] 2026-07-02 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
+[CAL] 2026-06-29 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO" :: cancel=pending
+[CAL] 2026-06-30 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO" :: cancel=pending
+[CAL] 2026-07-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO" :: cancel=pending
+[CAL] 2026-07-02 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO" :: cancel=pending
 [CAL] 2026-07-06 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-07-07 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-07-08 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
@@ -271,9 +273,8 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
-[CAL] 2026-06-06 17:00 Mass :: liturgical :: tentative=true :: end=19:00 :: location="St. Joseph's, Salida" :: notes="TBD - Foreman suggestion. Fulfills Corpus Christi obligation. Confirm to release Jun 7 default slot."
-[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: flag=true :: notes="🚩 Corpus Christi - Holy Day of Obligation. Adjudication: anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-12 ALL-DAY [FAM] Swim meet - Lamar :: family :: location="Lamar, CO" :: span=2026-06-14 :: travel=true :: flag=true :: notes="Multi-day travel. Jun 14 conflicts with Sunday Mass obligation. Anticipated Mass Jun 13 Lamar or en-route - arbiter needed."
+[CAL] 2026-06-06 17:00 Anticipated Mass - Eggs for Fr. Joe :: liturgical :: end=19:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-17 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
@@ -286,10 +287,12 @@ Last batch: 2026-05-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
-[CAL] 2026-06-14 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida" :: flag=true :: note="Conflict - Lamar swim meet span includes Jun 14. W+M serving requires presence in Salida."
+[CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
+[CAL] 2026-06-14 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true :: note="Date unconfirmed - June 17 or 24. Jun 17: Molly art camp ends 15:00 - conflict. Jun 24 cleaner."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
 [CAL] 2026-06-27 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
+[CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 
 ---
 

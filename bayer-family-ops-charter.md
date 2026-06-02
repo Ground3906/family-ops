@@ -1,15 +1,15 @@
-# Bayer Family Operations — Charter v1.8
+# Bayer Family Operations — Charter v1.9
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only. All universal rules (options format, HOLD, 24h clock, build gate, etc.) cut — live in Profile, not restated here. Spin-up rule rewritten: conversational handoff only, session-specific payload only, no rules in spin-up. Auto-draft rule removed.
-**Prior:** 2026-05-27 — v1.7: Top-level-first purge principle added to Anti-Silo Principles (principle 7). House-cleaning session: stale roster counts, build status block, and redundant rules purged from project instructions and agent files.
+**Last updated:** 2026-06-01 — v1.9: Wave 6.5 complete (Meal Planner + Widget Integration). Widget filename convention updated to `cal-widget-vX.X.html`. calendars.md schema additions: `[MEAL]` tag, `cancel=pending/confirmed`, `skip=` on CAL-RECUR. BUILD GATE and Item vs PQ naming locked in Profile (not restated here — Profile is the source).
+**Prior:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only. All universal rules cut — live in Profile, not restated here.
 
 ---
 
 ## Mission
 
-Build a multi-agent household operations system to run a family of 8 and support Matt's career transition into Cloud/DevOps. Phase 1 lives in Claude Code as a set of named subagents with shared state files. Phase 2 graduates to a Python multi-agent system on the Anthropic API with background execution and scheduled runs.
+Build a multi-agent household operations system to run a family of 8 and support Matt's career transition into Cloud/DevOps. Phase 1 lives in Claude.ai Projects as a set of named subagents with shared state files. Phase 2 graduates to a Python multi-agent system on the Anthropic API with background execution and scheduled runs.
 
 The system serves two people primarily — Matt and Kalea. The kids benefit downstream.
 
@@ -17,7 +17,7 @@ The system serves two people primarily — Matt and Kalea. The kids benefit down
 
 ## Interaction Doctrine — Project-Specific Rules
 
-All universal interaction rules (options format, HOLD, one question, lock divider, build gate, session close, git walkthrough, 24h clock, verbosity, plain-language, efficiency, etc.) live in Profile (Instructions for Claude). They are not restated here.
+All universal interaction rules (options format, BUILD GATE, Item vs PQ naming, session close, git walkthrough, 24h clock, verbosity, plain-language, etc.) live in Profile (Instructions for Claude). They are not restated here.
 
 The following rules are project-specific additions only.
 
@@ -140,46 +140,52 @@ Re-read before adding any agent.
 
 `B6_ACTIVE=false` — flip post-birth (~2026-08-15). Gates B6 pill display everywhere.
 
-### Calendar Widget (Wave 4.5)
+### Calendar Widget
 
-Live as `wave-4-5-widget-v2.8.html`. Served locally via `python -m http.server 8080` from `C:\dev\family-ops`. Reads `calendars.md` live on load and Home button press.
+Current: `cal-widget-v5.0.html`. Served locally via `python -m http.server 8080` from `C:\dev\family-ops`. Reads `calendars.md` live on load with `{cache:'no-store'}`.
 
-**Filename convention:** `wave-4-5-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. Full rewrite only — never surgical patches.
+**Filename convention:** `cal-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. No wave reference in filename. Full rewrite only — never surgical patches.
 
-See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
+See `cal-widget.md` for full architecture, schema, and doctrine.
 
 ---
 
-## calendars.md Doctrine (locked 2026-05-25)
+## calendars.md Doctrine (locked)
 
 - **No em-dashes** in any calendar entry title or notes field. Hyphen (-) only.
 - **Swim meets = ALL-DAY always.** Never assign a time to a swim meet entry.
 - **end= times required** on all timed events for auto-conflict detection to work correctly.
 - **flag=true reserved** for Holy Day obligations, unresolved logistics, unconfirmed dates only. Never for scheduling conflicts — auto-detected by widget.
 - **optional=true** — events never consume cell display slots and never trigger conflict flags. Use for Daily Mass recurrence only.
-- **Recurring entry doctrine:** Only two CAL-RECUR entries permitted: Sunday Mass 08:00 and Daily Mass Wed 10:00. Everything else = individual [CAL] entries. Seasonal events (swim practice, Faith Formation, Knights, Fairboard, Youth Group) all have exceptions. Individual entries give full control. CAL-RECUR for seasonal events is forbidden.
+- **Recurring entry doctrine:** Only two CAL-RECUR entries permitted: Sunday Mass 08:00 and Daily Mass Wed 10:00. Everything else = individual [CAL] entries. CAL-RECUR for seasonal events is forbidden.
 - **Travel spans:** travel=true on any entry where a person is physically away from home. Triggers pill suppression on overlapping events.
+- **cancel=pending:** displays with strikethrough title, ⊘ symbol right, warm bg #1c1814, dashed warm border, no pills. Matt or Kalea confirm. Equal authority.
+- **cancel=confirmed:** parser skips entirely. Line stays in file forever as audit trail. Never delete a confirmed-cancel line.
+- **skip= on CAL-RECUR:** comma-separated dates suppress specific occurrences without killing the series. e.g. `skip=2026-06-07`
+- **[MEAL] entries:** `[MEAL] YYYY-MM-DD HH:MM Title :: recipe-id=X :: meal-type=dinner/breakfast/lunch/prep`
 
 ---
 
 ## Build Order
 
-| Wave | Agent | Status | Notes |
-|------|-------|--------|-------|
+| Wave | Agent/Feature | Status | Notes |
+|------|---------------|--------|-------|
 | 1-3 | Foundation | **COMPLETE** | Charter, schema, crosstalk map, Foreman v1 deep |
-| 4.5 | Calendar Widget | **COMPLETE — v2.8** | Kalea adoption bar met. PQ-29 parked. |
-| 5 | 🏠 Punch List | **COMPLETE — MVP** | `punch-list.md` built. `vehicles.json` v2 with capability fields. Committed `734f12a`. |
-| 6 | 🍴 Chow Hall | **In build — 6.2 done** | Wave 6.2 committed `bafa07b`: recipe library schema (per-recipe JSON + index + staging pen), 3 seed recipes, capture session guide. Wave 6.3 meal-plan agent next. |
-| 7 | 🐷 Stockyard | **Skeleton queued** | Egg tracker widget live. S8 durability gate open. Feeds Chow Hall. |
-| 8 | 🌱 Rootstock | **Skeleton queued** | Build before fall. Feeds Chow Hall. Low urgency vs Chow Hall. |
+| 4.5 | Calendar Widget | **COMPLETE — v2.8** | Kalea adoption bar met |
+| 5 | 🏠 Punch List | **COMPLETE — MVP** | `punch-list.md` built. `vehicles.json` v2. Committed `734f12a` |
+| 6.0-6.2 | 🍴 Chow Hall — Recipe Library | **COMPLETE** | Per-recipe JSON + index + staging pen. Committed `bafa07b` |
+| 6.5 | Cal Widget — Meal Planner + Integration | **COMPLETE — v5.0** | [MEAL] parser, live recipe fetch, Meal Planner screen, What's for Dinner, Cook Mode splash preload, Coming Up rail. Wave naming unified to charter build order. |
+| 6.6+ | Cal Widget — Remaining items | **Next** | PQ items: unit conversion, ALT tags, Kalea altitude override, week mode fix |
+| 7 | 🐷 Stockyard | **Skeleton queued** | Egg tracker widget live. S8 durability gate open. |
+| 8 | 🌱 Rootstock | **Skeleton queued** | Build before fall. Feeds Chow Hall. |
 | — | 📚 Whetstone | Protocol documented | Build after Punch List |
 | — | 🩺 First Aid Kit | Not started | Sensitive data, careful schema |
-| — | ⛺ Mystery Ranch | Not started | Seasonal — finish before next draw cycle |
+| — | ⛺ Mystery Ranch | Not started | Seasonal |
 | — | 📐 The Square | Not started | Most complex. Build last. |
-| — | 💼 Footings | Not started | Cert path first. Low priority. |
+| — | 💼 Footings | Not started | Cert path first |
 | — | 📖 The Mantel | Not started | Long-term family archive |
 
-**Chow Hall inventory ownership — RESOLVED + LOCKED (Wave 6.0/6.1):** Chow Hall owns all inventory and is the one source of truth. Stockyard and Rootstock are producers that deposit (meat to freezer, eggs/fresh to the future `produce.md`, harvest to pantry/root cellar). Chow Hall reads and depletes. Schema built and committed: `freezer.json` (one on-hand list, 9 categories, category-level restock routing), `pantry.md` (canned/bulk/packaged), `canning-goals.md` (Kalea's season targets). Real-count load deferred until the meal planner earns it.
+**Chow Hall inventory ownership — LOCKED:** Chow Hall owns all inventory. Stockyard and Rootstock are producers that deposit. Chow Hall reads and depletes.
 
 ---
 
@@ -191,9 +197,9 @@ See `wave-4-5-widget.md` for full architecture, schema, and doctrine.
 - Mount: Ergotron LX Wall Mount 45-243-026 ($64.99)
 - Total: $414.98
 
-**Purchase gates (all must be green):**
+**Purchase gates:**
 
-A. Wave 4.5 widget stable — **GREEN** (v2.8, PQ-29 parked)
+A. Calendar widget stable — **GREEN** (v5.0)
 
 B. Stockyard S8 durability fix — open
 
@@ -201,13 +207,13 @@ C. ThinkPad headless validation — open
 
 D. Kalea usability — Matt's call
 
-Full spec, mount plan, Firewalla plan in `cockpit.md`.
+Full spec in `cockpit.md`.
 
 ---
 
 ## calendars.md Calendar Update Cadence
 
-Matt pushes `calendars.md` updates daily or as events change. When parish publishes Faith Formation 2026-27 schedule (expected August), add individual entries and remove the placeholder prompt entry at that time.
+Matt pushes `calendars.md` updates daily or as events change.
 
 ---
 
@@ -217,54 +223,25 @@ Matt pushes `calendars.md` updates daily or as events change. When parish publis
 
 ### Step 0 — Session Retrospective
 Before doctrine delta, Al runs a self-audit of the full session:
-- What interaction rules were violated or drifted from charter? Name the specific instance.
-- What caused it — conflicting instructions in charter vs memory vs project instructions vs spin-up prompt? Name the source.
-- What needs to change and where — charter, memory, project instructions, or spin-up template?
-- Present findings as a short list. Each item: what went wrong, why it happened, proposed fix, where the fix lives.
-
-Matt reviews. Any confirmed fix rolls into the doctrine delta and the affected file(s).
+- What interaction rules were violated or drifted? Name the specific instance.
+- What caused it? Name the source.
+- What needs to change and where?
+Present as a short list. Each item: what went wrong, why, proposed fix, where the fix lives. Matt reviews. Confirmed fixes roll into doctrine delta.
 
 ### Step 1 — Doctrine Delta
-Every decision, rule, or convention locked during the session that needs to land in a permanent project file. Happens BEFORE the handoff prompt.
+Every decision, rule, or convention locked during the session that needs to land in a permanent file. Two roll-ups kept separate: universal (Profile) and project doctrine.
 
 ### Step 2 — Confirmation
-Matt confirms the doctrine delta is complete and accurate.
+Matt confirms both roll-ups.
 
 ### Step 3 — File Rewrites + Git
-**Git commits happen mid-session and at end-of-session. A pushed commit is file deployment only — not a session-close trigger. End-of-session is initiated by Matt explicitly.**
-
-Affected files get fully rewritten. Matt downloads, drops into repo. Git walkthrough — PowerShell, two chunks, every command its own code block:
-
-**Chunk 1 — stage and verify (run all three, paste back all three results together):**
-```
-git status
-```
-```
-git add [files]
-```
-```
-git diff --cached --stat
-```
-STOP — wait for paste-back confirm of all three results, then:
-
-**Chunk 2 — commit and push (run all three, paste back all three results together):**
-```
-git commit -m "message"
-```
-```
-git push
-```
-```
-git log --oneline -5
-```
-
-**Memory is the authority on this format.** Memory rule #12 mirrors the two-chunk format exactly. Spin-up prompts and any other file must NOT re-describe the git walkthrough — write "git walkthrough: follow memory rule" only. Re-describing creates drift. Charter + memory = one source, no summaries anywhere else.
+Affected files get fully rewritten. Matt downloads, drops into repo. Git walkthrough: follow Profile git doctrine exactly.
 
 ### Step 4 — PK Upload
-Re-present ALL updated files in one batch via present_files — every file touched this session, in a single call. Matt uploads directly from the links. No hunting, no searching. Then Matt confirms PK is updated before Step 5 begins. Stale PK = broken future sessions.
+Re-present ALL updated files in one batch via present_files. Search PK first to confirm which files exist. DELETES listed first, then ADDS. Matt uploads, confirms PK updated before Step 5.
 
 ### Step 5 — Handoff Prompt
-Only after Steps 1-4 are complete and Matt and Al have mutually acknowledged the session is closing or forking. Draft in a code block. Session-specific payload only — format per Spin-up Prompts rule in Interaction Doctrine above.
+Only after Steps 1-4 complete. Draft in code block. Session-specific payload only.
 
 ---
 
