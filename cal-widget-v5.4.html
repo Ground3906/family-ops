@@ -911,7 +911,7 @@ function populateWeekDetail(ds){
   wireDedots(container);
 }
 const FLOOR_WI=(()=>{const f=new Date(2025,0,1,12,0,0);return Math.floor((f-wkStart(TODAY))/(7*24*3600*1000));})();
-let viewTopWi=0,viewBotWi=5,edgeObserver=null,jumpingMonth=false,rollingAnchorWi=0;
+let viewTopWi=0,viewBotWi=5,edgeObserver=null,jumpingMonth=false,rollingAnchorWi=0,_overlayScrollY=0;
 function appendWeeks(n){const el=document.getElementById('weeks');for(let i=0;i<n;i++){viewBotWi++;el.insertAdjacentHTML('beforeend',buildWkRow(viewBotWi));}reobserveEdges();}
 function prependWeeks(n){
   if(viewTopWi<=FLOOR_WI)return;const el=document.getElementById('weeks');
@@ -1018,9 +1018,8 @@ function jumpNav(dir){
   _exitOverlays();
   if(curView==='month'){monthViewDate=new Date(monthViewDate.getFullYear(),monthViewDate.getMonth()+dir,1);renderMonthGrid();return;}
   if(curView==='week'){weekViewWi+=dir;weekDetailDs=null;render();return;}
-  const anchorDate=addD(wkStart(TODAY),rollingAnchorWi*7);
-  const target=new Date(anchorDate.getFullYear(),anchorDate.getMonth()+dir,8,12,0,0);
-  const targetWi=Math.floor((wkStart(target).getTime()-wkStart(TODAY).getTime())/(7*24*3600*1000));
+  // Rolling: fixed 4-week jump per tap — predictable, consistent
+  const targetWi=rollingAnchorWi+dir*4;
   rollingAnchorWi=targetWi;
   if(edgeObserver){edgeObserver.disconnect();edgeObserver=null;}
   const el=document.getElementById('weeks');
@@ -1030,7 +1029,7 @@ function jumpNav(dir){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
     const targetRow=document.querySelector(`.wrow[data-wi="${targetWi}"]`);
     if(targetRow){const hh2=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hh'))||80;window.scrollTo({top:targetRow.getBoundingClientRect().top+window.scrollY-hh2,behavior:'smooth'});}
-    setBanner(target);setTimeout(()=>{jumpingMonth=false;reobserveEdges();},500);
+    setBanner(addD(wkStart(TODAY),targetWi*7));setTimeout(()=>{jumpingMonth=false;reobserveEdges();},500);
   }));
 }
 function openMantelStub(title){
@@ -1569,8 +1568,9 @@ function toggleDinner(){
   document.body.classList.remove('night-dim');document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');document.getElementById('cook-btn').classList.remove('cook-active');document.getElementById('meal-btn').classList.remove('meal-active');
   const calWrap=document.getElementById('cal-wrap');const dhdrs=document.getElementById('dhdrs');
-  if(dinnerOn){calWrap.style.display='none';dhdrs.style.display='none';}else{
+  if(dinnerOn){_overlayScrollY=window.scrollY;calWrap.style.display='none';dhdrs.style.display='none';}else{
     calWrap.style.display='';dhdrs.style.display='';
+    requestAnimationFrame(()=>window.scrollTo(0,_overlayScrollY));
     const banner=document.getElementById('month-name');const bannerYear=document.getElementById('month-year');
     if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
     if(bannerYear)bannerYear.style.display='';
@@ -1597,8 +1597,9 @@ function toggleMeal(){
   document.body.classList.remove('night-dim');document.getElementById('night-wake').style.display='none';
   document.getElementById('night-btn').classList.remove('night-active');document.getElementById('cook-btn').classList.remove('cook-active');document.getElementById('dinner-btn').classList.remove('dinner-active');
   const calWrap=document.getElementById('cal-wrap');const dhdrs=document.getElementById('dhdrs');
-  if(mealOn){calWrap.style.display='none';dhdrs.style.display='none';}else{
+  if(mealOn){_overlayScrollY=window.scrollY;calWrap.style.display='none';dhdrs.style.display='none';}else{
     calWrap.style.display='';dhdrs.style.display='';
+    requestAnimationFrame(()=>window.scrollTo(0,_overlayScrollY));
     const banner=document.getElementById('month-name');const bannerYear=document.getElementById('month-year');
     if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}
     if(bannerYear)bannerYear.style.display='';
