@@ -372,6 +372,34 @@
 
 ---
 
+## Safeway — Cañon City, CO
+1414 Main Street | 719-275-5221
+*Store 3728. Cañon City runs — secondary grocery. eWIC + SNAP accepted.*
+
+---
+
+### Trip: 2026-05-29 — eWIC + SNAP (total $73.77; eWIC $52.49; SNAP $21.28; $0 out of pocket)
+
+**Refrigerated/Frozen:**
+
+| Item | Qty | You Pay | Shelf | Savings | Payment |
+|---|---|---|---|---|---|
+| Stonyfield YoSqueeze | 2 | $9.98 | $11.58 | -$1.60 Member | eWIC |
+| Greek Gods Yogurt Honey | 2 | $5.98 | $9.98 | -$4.00 Member+forU | eWIC |
+| Greek Gods Yogurt (plain) | 2 | $5.98 | $9.98 | -$4.00 Member+forU | eWIC |
+| Ripple Milk Plant | 5 | $34.95 | $34.95 | — | eWIC |
+
+**Produce:**
+
+| Item | Qty | You Pay | Notes | Payment |
+|---|---|---|---|---|
+| Reduced Bananas | 4 lots | $5.01 | 10.21 lb total @ $0.49/lb markdown | SNAP |
+| Pineapple Gold | 1 | $4.99 | | SNAP |
+| Bananas | 1 | $1.45 | 2.46 lb @ $0.59/lb | SNAP |
+| Green Seedless Grapes | 1 | $5.43 | 2.29 lb @ $3.49/lb; -$2.56 forU | SNAP |
+
+---
+
 ## Flags to Resolve
 
 | Flag | Receipt | Notes |
