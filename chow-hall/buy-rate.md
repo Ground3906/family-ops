@@ -400,6 +400,49 @@
 
 ---
 
+## Safeway — Pueblo, CO
+1231 S. Prairie | 719-561-1234
+*Store 3729. Pueblo runs — tertiary grocery. SNAP accepted.*
+
+---
+
+### Trip: 2026-06-04 — SNAP ($16.27, $0 out of pocket)
+
+| Item | Price | Notes | Payment |
+|---|---|---|---|
+| Basil Leaves | $2.99 | Was $3.99, Member -$1.00 | SNAP |
+| Red Onions | $1.30 | 1.01 lb @ $1.29/lb | SNAP |
+| NTR Sweet Tomatoes | $5.99 | | SNAP |
+| NS Cherub Tomatoes | $5.99 | | SNAP |
+
+---
+
+## Lowes #109 — Westcliffe, CO *(continued)*
+
+---
+
+### Trip: 2026-06-03 — WIC + SNAP + CC (subtotal $93.72; WIC $46.30; SNAP $43.43; CC $4.31)
+
+| Item | Price | Notes | Payment |
+|---|---|---|---|
+| Bayer Aspirin Reg/Large | $3.99 | FSA OTC — taxed; CC only | CC/FSA |
+| BH Dill Pickle | $4.99 | | WIC/SNAP |
+| Cherries Red | $8.02 | 2.01 lb @ $3.99/lb | WIC/SNAP |
+| Cherries Red | $7.34 | 1.84 lb @ $3.99/lb | WIC/SNAP |
+| Claussen Pickle | $6.79 | | WIC/SNAP |
+| Cucumbers Small ×5 | $4.95 | $0.99 ea | WIC/SNAP |
+| Red Seedless Grapes | $6.76 | 2.26 lb @ $2.99/lb | WIC/SNAP |
+| Keebler Town House Crackers | $5.99 | | WIC/SNAP |
+| Kemps All American Ice Cream | $3.99 | | WIC/SNAP |
+| Lettuce Cello ×2 | $5.98 | $2.99 ea | WIC/SNAP |
+| Nabisco Teddy Grahams | $5.69 | | WIC/SNAP |
+| Yellow Onions | $0.87 | 1.48 lb @ $0.59/lb | WIC/SNAP |
+| Santa Cruz Juice | $8.99 | | WIC/SNAP |
+| Silk Soymilk ×2 | $6.19 ea | | WIC/SNAP |
+| Tang Powder Drink Mix | $6.99 | | WIC/SNAP |
+
+---
+
 ## Flags to Resolve
 
 | Flag | Receipt | Notes |
