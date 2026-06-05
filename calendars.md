@@ -139,7 +139,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-06-04. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -272,8 +272,8 @@ Last batch: 2026-06-04. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="🚩 F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
-[CAL] 2026-06-06 ALL-DAY [M] Jackpot - Sheep Castle Rock :: 4h :: location="Castle Rock, CO"
-[CAL] 2026-06-06 16:00 Mass :: liturgical :: end=17:00 :: location="St. Benedict's, Florence"
+[CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
+[CAL] 2026-06-06 17:00 1700 Mass - St. Benedict's, Florence :: liturgical :: end=19:00 :: location="St. Benedict's, Florence"
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
@@ -284,10 +284,7 @@ Last batch: 2026-06-04. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
 [CAL] 2026-06-18 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: location="Pueblo, CO"
-[CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
-[CAL] 2026-06-13 19:00 [D] Wyatt pickup DIA :: misc
-[CAL] 2026-06-22 09:20 [D][K] Prenatal appointment :: appointments :: stripe=appt
-[CAL] 2026-06-25 ALL-DAY ⏰ Soap ready :: prompt
+[CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
