@@ -273,8 +273,10 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
-[CAL] 2026-06-06 17:00 1700 Mass - St. Benedict's, Florence :: liturgical :: end=19:00 :: location="St. Benedict's, Florence"
+[CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
+[CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Canon City, CO"
+[CAL] 2026-06-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-17 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
@@ -282,12 +284,16 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-19 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Canon City, CO"
 [CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
+[CAL] 2026-06-17 10:30 [W][K] School advisory apt :: appointments :: stripe=appt :: end=11:30
 [CAL] 2026-06-18 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
+[CAL] 2026-06-13 ALL-DAY Fr. Joe birthday :: misc
+[CAL] 2026-06-13 ALL-DAY Uncle Doug birthday :: misc
 [CAL] 2026-06-14 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true :: note="Date unconfirmed - June 17 or 24. Jun 17: Molly art camp ends 15:00 - conflict. Jun 24 cleaner."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
