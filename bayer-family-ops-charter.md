@@ -1,8 +1,10 @@
-# Bayer Family Operations — Charter v2.0
+# Bayer Family Operations — Charter v2.2
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-06-08 — v2.1: Added Agent Architecture (two-part machine doctrine) and Capture As You Go to Architecture section. **Prior:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
+**Last updated:** 2026-06-10 — v2.2: Full-system audit close. **Automation layer carries no AI** (deterministic plumbing + heartbeats; all reasoning stays Interactive). **Mobile Wave** added to Rollout — Outlook publish via Microsoft Graph, strict one-pen, read-only shares, revert receipts, $0 recurring. Calendar Strategy rewritten: Google Calendars struck as never-deployed, fridge whiteboard formally retired, glass = Cockpit + Outlook. PK tier sharpened (binaries never; data files exit PK once the GitHub MCP read path is proven). Rollout supersedes the legacy 6.x wave series. Convenience roster and support network stripped to `family.md` pointers (Anti-Silo #5 debt paid). Engine routing pointed to Profile. Plan of action ratified 2026-06-10 — execution sequence and purge-wave deferred ledger ride the spin-up, not this file.
+**Prior:** 2026-06-08 — v2.1: Added Agent Architecture (two-part machine doctrine) and Capture As You Go to Architecture section.
+**Prior:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
 **Prior:** 2026-06-01 — v1.9: Wave 6.5 complete. **Prior:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only.
 
 ---
@@ -41,11 +43,11 @@ The system is built in three layers. There is no "graduation," no someday-migrat
 
 **1. Data — the repo.** The structured truth: JSONL event logs, the calendar file, the widget. Text only, versioned, cloud-backed. This is where "files are truth" lives. Kept lean by discipline (see Profile: layered data).
 
-**2. Interactive — phone + GitHub MCP + the Cockpit.** The product Matt and Kalea actually use. They talk to the agents in plain language, by voice; agents read and write the repo through GitHub MCP; the Cockpit reflects live on refresh. No backend required. This layer delivers most of the value and is the simple part.
+**2. Interactive — phone + GitHub MCP + the glass.** The product Matt and Kalea actually use. They talk to the agents in plain language, by voice; agents read and write the repo through GitHub MCP; the Cockpit and the phones reflect on refresh. No backend required. This layer delivers most of the value and is the simple part. **All reasoning lives here, inside the subscriptions.**
 
-**3. Automation — optional, one job at a time.** Background jobs that run hands-off, built only when a specific task genuinely must run without a person starting it — each one self-contained, with a heartbeat so a silent failure can't happen. The first likely job is the receipt watcher (see Rollout). This is the fragile, heavy layer. Never stood up speculatively.
+**3. Automation — optional, one job at a time, and it carries no AI.** Background jobs are deterministic plumbing only — sync, serve, move, pull — built only when a specific task genuinely must run without a person starting it. Each one self-contained, with a heartbeat so a silent failure can't happen. A job that needs to *think* is not an automation job; it's a queue feeding an agent. Job #1 is the Outlook calendar publish (see Mobile Wave). The receipt watcher, when it comes, moves files into a queue — Chow Hall does the thinking the next time she's opened. This layer is never stood up speculatively.
 
-Data handling — how growing datasets are shaped and stored — follows the **SPINE in Profile** (layered data, data shape, extract-then-file). It is not restated here. This household's specific wiring is in Storage Tiers below.
+Data handling — how growing datasets are shaped and stored — follows the **SPINE in Profile** (layered data, data shape, extract-then-file, capture as you go). It is not restated here. This household's specific wiring is in Storage Tiers below.
 
 ### Agent Architecture — Two-Part Machine
 
@@ -65,9 +67,9 @@ Data accumulates from the first event — not the day the agent ships. The calen
 
 Three tiers, each holding one kind of thing. This is the household-specific application of the Profile data rules.
 
-- **Project (PK)** — doctrine only: Charter, agent definitions, guides. Starved on purpose; never grows. This is the size-limited tier. Nothing operational lands here.
+- **Project (PK)** — doctrine only: Charter, agent definitions, guides. Starved on purpose; never grows — every loaded token shrinks the session's usage window, so starvation is also the Pro-plan survival strategy. **Binaries never.** Data files, event logs, and widget source are repo-only; any still in PK exit as soon as the GitHub MCP read path is proven live (verify at the Purge Wave).
 - **Repo (GitHub `Ground3906/family-ops`)** — structured data + code. Text only, no binaries. Stays lean via the layered-data tally/archive split. The source of truth.
-- **Archive (ThinkPad + 2TB SSD)** — binaries: repair-order PDFs, insurance docs, scanned recipe cards, photos. Grows freely; backed up to the spare 2TB.
+- **Archive (ThinkPad + 2TB SSD)** — binaries: repair-order PDFs, insurance docs, scanned recipe cards, whiteboard photos. Grows freely; backed up to the spare 2TB.
 
 **Transport — OneDrive (supersedes the README "retired" note).** M365 Family. One shared folder; Matt and Kalea drop binaries from any device; it self-syncs to the ThinkPad archive. The repo stays the source of truth — OneDrive only ever holds binaries the repo should never carry. No contradiction with the README; reconciled there.
 
@@ -77,6 +79,7 @@ Three tiers, each holding one kind of thing. This is the household-specific appl
 - `fuel-log.jsonl` — one fuel purchase per line: `date, vehicle, fuel_type, gallons, price_per_gal, rewards_per_gal, net_price_per_gal, total_paid, payment, station, location, station_ref, notes`.
 - `feed-log.jsonl` — one feed line item per line: `date, sku, item, qty, size, price_each, total, saved, payment, station, location, station_ref, notes`.
 - `income-log.jsonl` — one farm-income event per line: `date, type, buyer, qty, rate, total, notes`.
+- `maintenance-log.jsonl` — one service event per line (Punch List; established 2026-06-08 to stop overwrite data loss in `vehicles.json`).
 
 ---
 
@@ -96,7 +99,7 @@ The heart of the system and the keystone build. Plans dinner, learns the family'
 Dispatcher, tracker, renewal watchdog. Tasks, vehicles, maintenance, document renewals, driver/vehicle assignment. Receives work from any agent or from Matt/Kalea; routes it — does not generate it. Owns the voice on all household logistics reminders.
 
 ### 3 · 📅 Foreman — Calendar
-Runs the jobsite. Owns the schedule, period — every other agent reads and writes time through Foreman. Protects sacred blocks: 17:30 family meals daily, all of Sunday, the weekly Mass obligation (floating sacred), hunting blackouts (Matt-only scope), Kalea drill travel (Kalea-only scope), and Kalea-flagged blocks.
+Runs the jobsite. Owns the schedule, period — every other agent reads and writes time through Foreman. **Foreman holds the only pen on the calendar; Tim's word and Jill's word carry identical authority at that pen.** Protects sacred blocks: 17:30 family meals daily, all of Sunday, the weekly Mass obligation (floating sacred), hunting blackouts (Matt-only scope), Kalea drill travel (Kalea-only scope), and Kalea-flagged blocks.
 
 ### 4 · 🐷 Stockyard — Livestock & Farm Ops *(durability-gated)*
 Edelweiss Farms LLC. Eggs, pigs, chickens, turkeys, feed cycles. Produces into Chow Hall (meat to freezer, eggs to fridge). **HARD GATE:** no real flock data entry and no calendar integration until the durability fix is built and verified — see Hard Gates.
@@ -136,20 +139,23 @@ The charter-level rules for the keystone agent. The full agent definition lives 
 
 ## Rollout
 
-The interactive-layer rollout, in waves. Live build status lives in the spin-up, not here — this section is the stable strategy.
+The interactive-layer rollout, in waves. Live build status and the current execution sequence live in the spin-up, not here — this section is the stable strategy.
+
+**Wave numbering (locked 2026-06-10):** this Rollout supersedes the legacy 6.x wave series. The 6.x numbers in `cal-widget.md` and `meal-plan.md` are historical references only; new work numbers against this Rollout. Widget versions (`cal-widget-vX.X.html`) remain independent of waves.
 
 - **Wave 1 — Chow Hall core.** Meal planning + rough pantry sense + the dinner screen, live on the Cockpit, Kalea driving from her phone. This is the pipe-proof: it carries the highest-value payoff *while* proving the phone → repo → Cockpit loop. Scoped rough-not-precise — no inventory engine on the critical path.
-- **Wave 2 — Chow Hall keystone.** The receipt watcher (Automation layer, job #1) → rough inventory → Punch List grocery routing. Bolts onto a Chow Hall that's already proven and adopted.
-- **Wave 3 — Foreman phone-ready.** Calendar writes from the phone. A step up from the Cockpit already showing the calendar, not a revolution — earns its turn after the food problem is solved.
+- **Wave 2 — Chow Hall keystone.** The receipt watcher (Automation queue-feeder — files move, Chow Hall thinks on next open) → rough inventory → Punch List grocery routing. Bolts onto a Chow Hall that's already proven and adopted.
+- **Wave 3 — Foreman phone-ready.** Calendar writes from the phone. A step up from the glass already showing the calendar, not a revolution — earns its turn after the food problem is solved.
+- **Mobile Wave — the calendar in every pocket *(Automation job #1; locked 2026-06-10; may run ahead of agent waves — it's plumbing, not reasoning; target pre-baby).*** A dedicated **Bayer Family Ops** calendar in Matt's Outlook mailbox (M365 Family — never the Microsoft family-group calendar; its API footing is unreliable). A deterministic sync job on the ThinkPad publishes `calendars.md` to it via Microsoft Graph every few minutes. **Strict one-pen:** `calendars.md` is truth; the glass reconciles to match; every foreign edit the sync reverts is written to a **revert receipt** in the log — nothing dies silently. Kalea views read-only with full event detail in her Outlook app; additional viewers (Oma, tier adults) are a 30-second read-only share invite, zero code change. Live shared view requires the viewer hold a (free) Microsoft account; non-Microsoft addresses fall back to a slow-refresh published link — acceptable for extended family, never for Matt or Kalea. Auth: one-time device-code sign-in, self-renewing refresh token; heartbeat-wrapped — failure pings Matt, fix is a two-minute re-sign-in. $0 recurring. Build chunk 1 = the 30-minute proof: push one test event, watch it land on the phone.
 - **Then the rest, by pull** — one phone-ready wave at a time, in priority order, only when there's a real need.
 
-**Kalea's interface:** her own Claude Pro account + a light project (`family.md` + a short Kalea-facing spin-up + GitHub MCP), independent of Matt's project, same repo as truth. Her PK stays tiny; the repo carries the data. Setup steps live in the rollout runbook (parked until the storage + interface layer is built).
+**Kalea's interface:** her own Claude Pro account + a light project (`family.md` + a short Kalea-facing spin-up + GitHub MCP), independent of Matt's project, same repo as truth. Her PK stays tiny; the repo carries the data. Setup steps live in the rollout runbook (target: mid-July, pre-delivery).
 
 ---
 
 ## Interaction Doctrine — Project-Specific Rules
 
-All universal interaction rules (options format, BUILD GATE, Item vs PQ naming, session close, git walkthrough, 24h clock, verbosity, plain-language, layered data, data shape, extract-then-file, etc.) live in **Profile**. They are not restated here. The following are project-specific additions only.
+All universal interaction rules (options format, BUILD GATE, Item vs PQ naming, session close, git walkthrough, 24h clock, verbosity, plain-language, layered data, data shape, extract-then-file, capture as you go, one active session) live in **Profile**. They are not restated here. The following are project-specific additions only.
 
 ### Agent build session rule
 When building a new agent definition, always do a full file inventory pass before brainstorming. Read every relevant data file. Never assume PK search results represent the complete picture. Unknown file contents = search or read before proceeding.
@@ -168,8 +174,8 @@ Spin-up is a conversational handoff — both Matt and Al acknowledge the session
 
 Nothing else. No chat rules, clock reminders, or formatting doctrine. Anything already in Charter or Profile does not ride in the spin-up. Only after PK is confirmed.
 
-### Engine defaults
-Sonnet = execution. Opus = design-only. Every spin-up names engine + rationale. **Engine check is mandatory at session open** — surface any mismatch immediately, before any work begins.
+### Engine routing
+Lives in **Profile** (Fable 5 = design + audit · Opus = design · Sonnet = execution). Project-specific application: every spin-up names engine + rationale, and **engine check is mandatory at session open** — surface any mismatch immediately, before any work begins.
 
 ---
 
@@ -189,10 +195,11 @@ Re-read before adding any agent.
 
 ## Calendar Strategy
 
-**Nine calendars = no.** Agents and Google calendars do different jobs.
+**One truth, many panes of glass.** `calendars.md` is the only calendar. Foreman holds the only pen; writes go phone → Foreman → `calendars.md` via GitHub MCP, and every screen reflects on its next refresh.
 
 - **Agents** = routing logic. Live in markdown files. Invisible to Kalea and the kids.
-- **Calendars** = display, sharing, permissions. What shows on phones, what Kalea sees.
+- **Glass** = display only, never a pen. Pane #1: the Cockpit on the kitchen wall. Pane #2: the Outlook **Bayer Family Ops** calendar on phones (see Mobile Wave). Glass edits don't reach truth — the sync reverts them and logs a revert receipt.
+- **Struck (2026-06-10):** Google Calendars — listed in early doctrine, never deployed, never used; the placeholder rows in `calendars.md` purge at the Purge Wave. The fridge whiteboard is formally retired as a record — the Cockpit replaced it. (Whiteboard photos remain archive material; they were the egg-count source.)
 
 ### Pill Palette (locked)
 
@@ -212,7 +219,9 @@ Re-read before adding any agent.
 | FAM | Family (all 8) | `#7a7aaa` |
 | KIDS | Kids group (W M R C E B6) | `#a0c840` |
 
-`B6_ACTIVE=false` — flip post-birth (~2026-08-15). Gates B6 pill display everywhere.
+`B6_ACTIVE=false` — flip post-birth (~2026-08-15). Gates B6 pill display everywhere. On the Outlook pane, pills map to Outlook categories; colors hand-assigned from this locked colorblind-safe set.
+
+---
 
 ### Calendar Widget
 
@@ -240,24 +249,19 @@ See `cal-widget.md` for full architecture, schema, and doctrine. (Current build 
 
 ---
 
-## Cockpit Hardware Status
+## Cockpit Status
 
-The Cockpit is the Interactive layer's display — read-only, no keyboard or entry tool ever.
+The Cockpit is the Interactive layer's wall display — read-only, no keyboard or entry tool ever. **Hardware installed and live:** PatientPoint P-WAL-230-ELC-02 (32" Android 13) on the Ergotron LX arm, Fully Kiosk Browser locked to `http://192.168.1.60:8080/cal-widget-current.html`.
 
-- Display: PatientPoint P-WAL-230-ELC-02 (32" Android 13)
-- Mount: Ergotron LX Wall Mount 45-243-026
-
-**Purchase gates:**
-
-A. Calendar widget stable — **GREEN**
+**Operational gates remaining:**
 
 B. Stockyard durability fix — open
 
-C. ThinkPad headless validation — open
+C. ThinkPad headless conversion — open (Ubuntu Server target)
 
 D. Kalea usability — Matt's call
 
-Full spec in `cockpit.md`.
+Full spec in `cockpit.md` *(file itself is one reorientation stale — rewrite owned by the Purge Wave)*.
 
 ---
 
@@ -283,28 +287,14 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 
 ## Reference Context
 
-**Family roster:**
-- Matt (38, Marine veteran, met Kalea at TBS Quantico, eloped Nov 2013)
-- Kalea (wife, USMC Reserve MAJ O-4, MARFORPAC, CAC expires 2026-07-31)
-- Wyatt (b. 2012-01-22)
-- Molly (b. 2016-04-19)
-- Rileigh (b. 2018-06-28)
-- Cullen + Emmitt — twins (b. 2019-09-04)
-- Sixth child — baby boy, due ~2026-08-15, Parkview Hospital Pueblo. No name stored until post-birth confirmation from Matt or Kalea.
+**Family roster:** lives in `family.md` only (Anti-Silo #5 — duplication here paid off 2026-06-10). Standing rule worth its redundancy: the sixth child, a boy, due ~2026-08-15 at Parkview Pueblo, carries **no name** until post-birth confirmation from Matt or Kalea. Never invent one.
 
-*(Roster also lives in `family.md`, which is the source of truth per Anti-Silo #5. This copy is convenience context loaded with the Charter; reconcile the duplication in a future cleanup pass.)*
-
-**Support network:**
-- Oma + Papa (Kalea's parents, 160 Pyrite Circle) — Tier 1 backup adults
-- Uncle Doug + Aunt Deb (1094 CR 260) — emergency only; Aunt Deb = master horsemanship
-- Barb + Bill Perkins (1708 Edelweiss Drive) — Tier 2 emergency backup
-- Kerry + Lisa (Matt's parents, Lakewood) — planning to move south 2027
-- Kyle + Natalie Jark (Parker) — godparents to three children
+**Support network & backup-adult tiers:** live in `family.md` only.
 
 **Technical environment:**
 - Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro
 - ThinkPad X1 Carbon — headless server role: Cockpit host + Automation-layer host + binary archive on a 2TB SSD
-- OneDrive (M365 Family) — binary-archive transport to the ThinkPad; supersedes the repo-only "OneDrive retired" note in README
+- OneDrive (M365 Family) — binary-archive transport to the ThinkPad; also hosts the Outlook mailbox carrying the Bayer Family Ops calendar (Mobile Wave)
 - GitHub: Ground3906 · Repo: github.com/Ground3906/family-ops
 - Terminal: PowerShell on Windows (never bash; no grep, use Select-String)
 - Password manager: Bitwarden (cloud-hosted vault)
@@ -316,6 +306,7 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 - $90-115k entry, $115-140k mid
 - 100% remote, hunting/family flexibility — non-negotiables
 - 12-18 month timeline
+- The Mobile Wave's Graph auth, token lifecycle, and idempotent sync are live resume material for this track.
 
 **Core values:**
 - Faith, family, time in nature
