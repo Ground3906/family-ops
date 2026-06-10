@@ -175,7 +175,7 @@ Spin-up is a conversational handoff — both Matt and Al acknowledge the session
 Nothing else. No chat rules, clock reminders, or formatting doctrine. Anything already in Charter or Profile does not ride in the spin-up. Only after PK is confirmed.
 
 ### Engine routing
-Lives in **Profile** (Fable 5 = design + audit · Opus = design · Sonnet = execution). Project-specific application: every spin-up names engine + rationale, and **engine check is mandatory at session open** — surface any mismatch immediately, before any work begins.
+Lives in **Profile** (Opus = design · Sonnet = execution). Project-specific application: every spin-up names engine + rationale, and **engine check is mandatory at session open** — surface any mismatch immediately, before any work begins.
 
 ---
 
