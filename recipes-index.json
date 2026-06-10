@@ -4,10 +4,18 @@
     "owner": "Chow Hall",
     "last_updated": "2026-06-10",
     "purpose": "Thin manifest. Every active recipe gets one entry here so the Cook Mode widget knows what exists without fetching every recipe file individually.",
-    "data_state": "LIVE — starter examples purged 2026-06-10. Entries accumulate from real recipe files only.",
+    "data_state": "LIVE — household consumables belong in the main library (tag: household). Starters purged 2026-06-10.",
     "recipe_path_pattern": "recipes/<id>.json",
     "staging_path_pattern": "recipes-staging/<id>.json",
     "family_baseline_note": "family_baseline is hardcoded 8 in each recipe file. Update all to 9 after baby boy arrives (~2026-08-15)."
   },
-  "recipes": []
+  "recipes": [
+    {
+      "id": "lard-soap",
+      "name": "Lard Soap (Piggie Soap / Grandma's Lye Soap)",
+      "heirloom": false,
+      "file": "recipes/lard-soap.json",
+      "tags": ["household", "soap", "lard", "DIY", "3-ingredient"]
+    }
+  ]
 }

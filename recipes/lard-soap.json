@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "id": "lard-soap",
+    "name": "Lard Soap (Piggie Soap / Grandma's Lye Soap)",
+    "heirloom": false,
+    "source": "Deanna's book, page 162",
+    "source_note": "a.k.a. Piggie Soap, Grandma's Lye Soap. Attributed to Deanna.",
+    "category": "household",
+    "altitude_adjusted": false,
+    "altitude_note": "Cold-process soap chemistry is not altitude-sensitive. No adjustment needed at 9,000 ft.",
+    "family_baseline": null,
+    "family_baseline_note": "Not a food recipe — serving baseline not applicable.",
+    "created": "2026-06-03",
+    "last_updated": "2026-06-10"
+  },
+  "servings": {
+    "base": 1,
+    "unit": "lb-batch",
+    "yield_note": "~20 oz per lb-batch (~4-5 bars at 4.5 oz each)"
+  },
+  "ingredients": [
+    { "id": "0001", "name": "lard", "amount": 1, "unit": "lb" },
+    { "id": "0002", "name": "water (by weight — use a scale)", "amount": 6, "unit": "oz" },
+    { "id": "0003", "name": "lye (sodium hydroxide)", "amount": 2, "unit": "oz" }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "title": "Gear up",
+      "content": "Before anything else: rubber gloves, safety goggles, clothes you can ruin. Set up in the sink or lay down several layers of newspaper. Lye is caustic — treat it with respect.",
+      "timer_seconds": null
+    },
+    {
+      "id": "s2",
+      "title": "Melt the lard",
+      "content": "Melt lard in a saucepan over medium-low heat until fully liquid. Remove from heat.",
+      "timer_seconds": 900
+    },
+    {
+      "id": "s3",
+      "title": "Mix the lye water",
+      "content": "Weigh water into a pitcher. Slowly sprinkle lye INTO the water — lye into water, never the other way. Gently swirl to dissolve. The mixture will heat up; this is normal.",
+      "timer_seconds": null
+    },
+    {
+      "id": "s4",
+      "title": "Cool both to touch",
+      "content": "Let both containers cool until you can touch the outside without burning yourself. Don't rush — if either is too hot, the soap can seize or separate.",
+      "timer_seconds": 2400
+    },
+    {
+      "id": "s5",
+      "title": "Blend to trace",
+      "content": "Pour the lye water into the saucepan. Use an immersion blender — work in the sink or over newspaper. Blend until trace: drips stay visible on the surface for 1-2 seconds before sinking back in. This takes a while with lard.",
+      "timer_seconds": null
+    },
+    {
+      "id": "s6",
+      "title": "Pour into mold",
+      "content": "Pour into Pringles can(s) or milk carton(s). One lb-batch fills roughly one standard Pringles can — handy for shave-cup-sized bars.",
+      "timer_seconds": null
+    },
+    {
+      "id": "s7",
+      "title": "Unmold and slice",
+      "content": "Let sit 1-2 days at room temp. Peel off the container and slice into bars. Average store bar is 4.5 oz — cut to your preference.",
+      "timer_seconds": 86400
+    },
+    {
+      "id": "s8",
+      "title": "Cure",
+      "content": "Set bars somewhere cool and dry. Cure for 3 full weeks before use. Don't skip the cure — the lye is still finishing its work.",
+      "timer_seconds": null
+    }
+  ],
+  "notes": "All amounts BY WEIGHT — use a kitchen scale, not measuring cups, especially for water and lye. Lye into water always — never water into lye. Yield: ~20 oz per lb-batch (~4-5 bars at 4.5 oz). Pringles can mold makes shave-cup-sized bars. Household consumables live in the main recipe library — tag: household.",
+  "tags": ["household", "soap", "lard", "DIY", "3-ingredient"]
+}
