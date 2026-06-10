@@ -182,14 +182,21 @@
       "open_items": [
         {
           "id": "dodge-alignment",
-          "description": "Alignment + wheel balance + rotation \u2014 deferred until after Castle Rock pig show (2026-06-06)",
-          "priority": "routine",
+          "description": "Alignment still TBD. Rotation + balance completed 2026-06-09 at Les Schwab Ca\u00f1on City.",
+          "priority": "watch",
+          "route": "High Valley Diesel"
+        },
+        {
+          "id": "dodge-frontend-wear",
+          "description": "Ball joints + other front-end components showing early play \u2014 not at replacement threshold as of 2026-06-09. Monitor. Reassess 2027 based on mileage. Les Schwab quoted full front-end rebuild $4,000 on 2026-06-09 \u2014 declined as premature.",
+          "priority": "watch",
           "route": "High Valley Diesel"
         }
       ],
       "permanent_notes": [
         "EMISSIONS DELETED \u2014 disclose to any shop. Custer County rural exempt from CO emissions testing; does not affect registration cycle.",
         "Diesel-specific service intervals: 15W-40 synthetic blend, 12 qt capacity",
+        "DO NOT USE: Les Schwab Tires Ca\u00f1on City \u2014 $4,000 front-end rebuild upsell attempt 2026-06-09, declined. High Valley Diesel preferred for all Dodge work.",
         "Purchased ~2020 at ~110k mi",
         "Grid heater replaced ~150k mi (High Valley)",
         "Injectors replaced ~160k mi (High Valley)",
