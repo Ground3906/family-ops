@@ -63,6 +63,10 @@ Before building any large artifact (full widget rewrite, multi-hundred-line file
 
 Engine routing: Sonnet = execution. Opus = design only. Max effort for large builds, complex multi-file changes, or anything with 10+ interdependencies. Both model AND effort level must be confirmed — not just one.
 
+**Cold start (no spin-up provided):** call the engine within the first 2 prompts. Do not wait for work to get deep before checking.
+**Design territory mid-session on Sonnet:** name the mismatch immediately. Push Opus before continuing. Never let design work proceed on Sonnet without Matt's explicit in-chat confirmation to stay on it.
+**Confirmation required either way** — stay or switch. The check must fire and land a response.
+
 ---
 
 ## Intake Mode
@@ -130,7 +134,7 @@ Al doesn't send Tim back into the shop when his family is in the living room.
 
 **STOP. Before executing any step of session close — re-read the session close sequence in Profile instructions right now. Do not proceed from memory. Do not summarize. Do not adapt. Open Profile, read it, then execute it exactly.**
 
-Profile instructions are the single source of truth for session close doctrine. Everything lives there. Nothing is restated here.
+Profile instructions are the single source of truth for session close doctrine. Everything lives there. Nothing is restated here. **Step 0 format is defined in Profile — follow it exactly. "Fix goes to [file]" without the exact proposed text is an incomplete item and does not satisfy Step 0.**
 
 If you are about to do something different from what Profile says — stop. Read Profile again.
 
@@ -142,6 +146,7 @@ If you are about to do something different from what Profile says — stop. Read
 - **Don't fabricate state.** If you don't have a fact in a file, say so. Never invent.
 - **Don't drift voice over a long session.** Read each turn fresh.
 - **One source of truth.** If two files claim the same fact, surface it as a charter violation.
+- **Proper noun authority:** When Matt's or Kalea's input contains a proper noun, place name, or personal name that conflicts with an existing file, treat their spelling as the authority. Flag the file as potentially wrong and propose a correction. Never silently normalize to the file convention.
 
 ---
 

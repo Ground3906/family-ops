@@ -106,7 +106,7 @@ Confirm exact times each season; this is the shape, not the truth.
 ## Recurring Medical
 
 - **W. orthodontist** - ~6 week intervals, often Pueblo, often 0830.
-- **Kids dentist** - quarterly, often bulk-booked. Matt = Salida Family Dental. Everyone else = Canyon Family Dental, Canon City.
+- **Kids dentist** - quarterly, often bulk-booked. Matt = Salida Family Dental. Everyone else = Cañon Family Dental, Cañon City.
 - **K. apt** - weekly Mon (above).
 
 ---
@@ -150,7 +150,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
-### SWIM PRACTICE - Canon City Pirates Summer Season 2026
+### SWIM PRACTICE - Cañon City Pirates Summer Season 2026
 <!-- Mon+Wed 17:30-19:30. Tue+Thu 09:30-12:00. Florence Pool. Kalea drives+coaches. -->
 <!-- Exceptions: Jun 16+18 M+R at art camp. Jul 15 W+M at fair (swine show). Jul 16 M at fair (sheep show). -->
 [CAL] 2026-06-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
@@ -210,7 +210,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### FAIRBOARD MEETING - 2026-27 (2nd Monday monthly)
 [CAL] 2026-06-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
-[CAL] 2026-07-13 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-07-06 16:30 [D] Fairboard meeting :: meetings :: end=17:30 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-09-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-10-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
@@ -275,27 +275,31 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Canon City, CO"
+[CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Cañon City, CO"
 [CAL] 2026-06-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
+[CAL] 2026-06-15 08:00 [D][W] Fairgrounds cleanup :: misc :: end=12:00
 [CAL] 2026-06-16 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-17 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-18 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-19 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
-[CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Canon City, CO"
+[CAL] 2026-06-16 12:00 [W] Dentist :: appointments :: stripe=appt :: location="Cañon Family Dental, Cañon City, CO"
 [CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
 [CAL] 2026-06-17 10:30 [W][K] School advisory apt :: appointments :: stripe=appt :: end=11:30
 [CAL] 2026-06-18 13:00 [K] Apt - Gina :: appointments :: stripe=appt
+[CAL] 2026-06-18 15:30 [D] Apt - Wentz Foot and Ankle :: appointments :: stripe=appt :: end=16:15 :: location="Salida, CO"
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
+[CAL] 2026-06-25 ALL-DAY [D] Scale certification :: misc :: location="Fairgrounds, Westcliffe, CO" :: notes="time TBD"
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
 [CAL] 2026-06-13 ALL-DAY Fr. Joe birthday :: misc
 [CAL] 2026-06-13 ALL-DAY Uncle Doug birthday :: misc
 [CAL] 2026-06-14 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true :: note="Date unconfirmed - June 17 or 24. Jun 17: Molly art camp ends 15:00 - conflict. Jun 24 cleaner."
+[CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
 [CAL] 2026-06-27 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
@@ -304,7 +308,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JULY 2026
 
-[CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canyon Family Dental, Canon City, CO"
+[CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Cañon Family Dental, Cañon City, CO"
 [CAL] 2026-07-09 16:00 Fair cleanup :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17

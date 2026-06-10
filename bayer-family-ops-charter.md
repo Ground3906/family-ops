@@ -2,7 +2,7 @@
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
+**Last updated:** 2026-06-08 — v2.1: Added Agent Architecture (two-part machine doctrine) and Capture As You Go to Architecture section. **Prior:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
 **Prior:** 2026-06-01 — v1.9: Wave 6.5 complete. **Prior:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only.
 
 ---
@@ -46,6 +46,18 @@ The system is built in three layers. There is no "graduation," no someday-migrat
 **3. Automation — optional, one job at a time.** Background jobs that run hands-off, built only when a specific task genuinely must run without a person starting it — each one self-contained, with a heartbeat so a silent failure can't happen. The first likely job is the receipt watcher (see Rollout). This is the fragile, heavy layer. Never stood up speculatively.
 
 Data handling — how growing datasets are shaped and stored — follows the **SPINE in Profile** (layered data, data shape, extract-then-file). It is not restated here. This household's specific wiring is in Storage Tiers below.
+
+### Agent Architecture — Two-Part Machine
+
+Every agent is a two-part machine. Both halves are required. "Built" means both halves exist.
+
+**1. True-data spine.** JSONL event logs, JSON state, markdown narrative. Starts accumulating from the first event, regardless of build order. The agent finds real history already waiting when it builds — not a clean schema.
+
+**2. Reasoning layer.** Fires on invoke or trigger. Reads the whole spine. Draws conclusions no single entry could: overdue detection, cross-person patterns, trend lines, shortfall alerts. This is where Chow Hall knows what the family eats, IFAK knows what Wyatt's health history looks like, Punch List knows whether the oil change interval is actually holding. The reasoning arrives at build; the spine does not wait for it.
+
+### Capture As You Go
+
+Data accumulates from the first event — not the day the agent ships. The calendar, event logs, and person files are always writing. Every appointment logged, every fuel fill recorded, every meal tracked before an agent exists becomes true history that agent reasons over on day one. True data beats a perfect empty schema every time. This governs every agent, present and future.
 
 ---
 

@@ -221,9 +221,29 @@ Punch List monitors the milestone timeline in `punch-list/wyatt-licensing.md`. F
 | Foreman | Milestone handoffs — Wyatt licensing phases, document renewal prompts | Per `wyatt-licensing.md` and `documents.md` prompt schedules |
 | Stockyard | Equipment failure noticed during chores | Notifier brain-dump, Stockyard arbiter |
 | Mystery Ranch | ATV MX surfaces | Route and step back |
-| Mantel | Nothing. Punch List has no memory handoffs. |  |
+| Mantle | Nothing. Punch List has no memory handoffs. |  |
 
 **Anti-loop rule:** A handoff that bounces back unprocessed twice = stop and surface to Matt via Al. Don't ping-pong.
+
+---
+
+## Known Gaps / Next Revisit
+
+### Maintenance history (Option B locked — 2026-06-08)
+
+`vehicles.json` captures current state and open items well. It does not accumulate maintenance event history.
+
+- **Oil changes overwrite.** `last_oil_change_mi` / `last_oil_change_date` are replaced on each service. Previous services are lost. No history chain exists.
+- **Completed repairs land as prose.** Most assets capture finished work in `permanent_notes` as unstructured sentences — not queryable records.
+- **Gehl partial exception.** Has a `service_history` array with one structured entry (right intent, wrong shape — embedded in bounded-state JSON rather than an append-forever JSONL log).
+- `fuel-log.jsonl` is correctly shaped and unaffected.
+
+**Fix:** Stand up `punch-list/maintenance-log.jsonl` — one record per service event, every asset. Overdue-detection reasoning and interval analysis deferred to Punch List's next formal revisit. Spine starts accumulating immediately once the log exists.
+
+**Schema (proposed, to finalize at build):**
+```json
+{"date":"YYYY-MM-DD","asset_id":"dodge","shop":"High Valley Diesel","hours_or_mi":181460,"work":"oil change","parts":[],"labor_notes":"","total":null,"invoice":null,"status":"complete"}
+```
 
 ---
 
