@@ -300,8 +300,9 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-14 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true :: note="Date unconfirmed - June 17 or 24. Jun 17: Molly art camp ends 15:00 - conflict. Jun 24 cleaner."
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
+[CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check ⏰ :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
-[CAL] 2026-06-27 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
+[CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 
 ---
