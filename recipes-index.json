@@ -2,20 +2,455 @@
   "_meta": {
     "file": "recipes-index.json",
     "owner": "Chow Hall",
-    "last_updated": "2026-06-10",
+    "last_updated": "2026-06-12",
     "purpose": "Thin manifest. Every active recipe gets one entry here so the Cook Mode widget knows what exists without fetching every recipe file individually.",
-    "data_state": "LIVE — household consumables belong in the main library (tag: household). Starters purged 2026-06-10.",
+    "data_state": "LIVE \u2014 35 entries (34 food + 1 household). Rebuilt 2026-06-12: all food recipes indexed, 6 elk heirlooms added, misplaced recipes/recipes-index.json removed.",
     "recipe_path_pattern": "recipes/<id>.json",
     "staging_path_pattern": "recipes-staging/<id>.json",
     "family_baseline_note": "family_baseline is hardcoded 8 in each recipe file. Update all to 9 after baby boy arrives (~2026-08-15)."
   },
   "recipes": [
     {
+      "id": "bagels",
+      "name": "Bagels",
+      "heirloom": true,
+      "file": "recipes/bagels.json",
+      "tags": [
+        "baking",
+        "bread",
+        "breakfast"
+      ]
+    },
+    {
+      "id": "baked-potato-soup",
+      "name": "Baked Potato Soup",
+      "heirloom": true,
+      "file": "recipes/baked-potato-soup.json",
+      "tags": [
+        "dinner",
+        "soup",
+        "stovetop",
+        "crowd-pleaser"
+      ]
+    },
+    {
+      "id": "banana-oat-breakfast-cookies",
+      "name": "Banana-Oat Breakfast Cookies",
+      "heirloom": true,
+      "file": "recipes/banana-oat-breakfast-cookies.json",
+      "tags": [
+        "breakfast",
+        "snack",
+        "baking",
+        "freezer-friendly",
+        "batch-cook"
+      ]
+    },
+    {
+      "id": "beef-enchilada-zucchini-boats",
+      "name": "Beef Enchilada Zucchini Boats",
+      "heirloom": true,
+      "file": "recipes/beef-enchilada-zucchini-boats.json",
+      "tags": [
+        "dinner",
+        "oven",
+        "low-carb",
+        "protein"
+      ]
+    },
+    {
+      "id": "beef-n-tater-casserole",
+      "name": "Beef-N-Tater Casserole",
+      "heirloom": true,
+      "file": "recipes/beef-n-tater-casserole.json",
+      "tags": [
+        "dinner",
+        "casserole",
+        "oven",
+        "crowd-pleaser",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "beef-roast-ema",
+      "name": "Beef Roast",
+      "heirloom": true,
+      "file": "recipes/beef-roast-ema.json",
+      "tags": [
+        "dinner",
+        "slow-cooker",
+        "crowd-pleaser",
+        "heirloom",
+        "easy"
+      ]
+    },
+    {
+      "id": "blueberry-baked-oatmeal",
+      "name": "Blueberry Baked Oatmeal",
+      "heirloom": true,
+      "file": "recipes/blueberry-baked-oatmeal.json",
+      "tags": [
+        "breakfast",
+        "oven",
+        "make-ahead",
+        "batch-cook"
+      ]
+    },
+    {
+      "id": "butternut-squash-soup",
+      "name": "Butternut Squash Soup",
+      "heirloom": true,
+      "file": "recipes/butternut-squash-soup.json",
+      "tags": [
+        "dinner",
+        "soup",
+        "vegetarian",
+        "stovetop",
+        "blender"
+      ]
+    },
+    {
+      "id": "chicken-breasts-slow-bake",
+      "name": "Chicken Breasts (Slow Bake)",
+      "heirloom": true,
+      "file": "recipes/chicken-breasts-slow-bake.json",
+      "tags": [
+        "dinner",
+        "oven",
+        "protein",
+        "easy"
+      ]
+    },
+    {
+      "id": "chicken-parmesan",
+      "name": "Chicken Parmesan",
+      "heirloom": true,
+      "file": "recipes/chicken-parmesan.json",
+      "tags": [
+        "dinner",
+        "stovetop",
+        "oven",
+        "protein"
+      ]
+    },
+    {
+      "id": "chili-con-carne",
+      "name": "Chili Con Carne",
+      "heirloom": true,
+      "file": "recipes/chili-con-carne.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "stovetop",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "coke-burgers",
+      "name": "Coke Burgers",
+      "heirloom": true,
+      "file": "recipes/coke-burgers.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "grill",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "confetti-scalloped-potatoes",
+      "name": "Confetti Scalloped Potatoes",
+      "heirloom": true,
+      "file": "recipes/confetti-scalloped-potatoes.json",
+      "tags": [
+        "dinner",
+        "casserole",
+        "side-dish",
+        "oven",
+        "crowd-pleaser"
+      ]
+    },
+    {
+      "id": "cream-of-broccoli-soup",
+      "name": "Cream of Broccoli Soup",
+      "heirloom": true,
+      "file": "recipes/cream-of-broccoli-soup.json",
+      "tags": [
+        "dinner",
+        "soup",
+        "stovetop",
+        "vegetarian"
+      ]
+    },
+    {
+      "id": "enchiladas",
+      "name": "Enchiladas",
+      "heirloom": true,
+      "file": "recipes/enchiladas.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "oven",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "flimsys-lisa",
+      "name": "Flimsy's",
+      "heirloom": true,
+      "file": "recipes/flimsys-lisa.json",
+      "tags": [
+        "breakfast",
+        "stovetop",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "korean-beef-rice-bowls",
+      "name": "Korean Beef Rice Bowls",
+      "heirloom": false,
+      "file": "recipes/korean-beef-rice-bowls.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "stovetop",
+        "quick",
+        "rice-bowl"
+      ]
+    },
+    {
       "id": "lard-soap",
       "name": "Lard Soap (Piggie Soap / Grandma's Lye Soap)",
       "heirloom": false,
       "file": "recipes/lard-soap.json",
-      "tags": ["household", "soap", "lard", "DIY", "3-ingredient"]
+      "tags": [
+        "household",
+        "soap",
+        "lard",
+        "DIY",
+        "3-ingredient"
+      ]
+    },
+    {
+      "id": "lasagna",
+      "name": "Lasagna",
+      "heirloom": true,
+      "file": "recipes/lasagna.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "oven",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "macaroni-and-cheese",
+      "name": "Macaroni & Cheese",
+      "heirloom": true,
+      "file": "recipes/macaroni-and-cheese.json",
+      "tags": [
+        "dinner",
+        "casserole",
+        "oven",
+        "crowd-pleaser",
+        "kid-friendly"
+      ]
+    },
+    {
+      "id": "overnight-oats",
+      "name": "Overnight Oats",
+      "heirloom": true,
+      "file": "recipes/overnight-oats.json",
+      "tags": [
+        "breakfast",
+        "no-cook",
+        "make-ahead",
+        "meal-prep"
+      ]
+    },
+    {
+      "id": "pancakes-lisa",
+      "name": "Pancakes",
+      "heirloom": true,
+      "file": "recipes/pancakes-lisa.json",
+      "tags": [
+        "breakfast",
+        "stovetop",
+        "heirloom"
+      ]
+    },
+    {
+      "id": "sheet-pan-shrimp-zucchini",
+      "name": "Sheet Pan Roasted Garlic Shrimp with Zucchini",
+      "heirloom": false,
+      "file": "recipes/sheet-pan-shrimp-zucchini.json",
+      "tags": [
+        "dinner",
+        "sheet-pan",
+        "seafood",
+        "low-carb",
+        "gluten-free",
+        "protein"
+      ]
+    },
+    {
+      "id": "sloppy-joes-mom",
+      "name": "Sloppy Joes",
+      "heirloom": true,
+      "file": "recipes/sloppy-joes-mom.json",
+      "tags": [
+        "dinner",
+        "stovetop",
+        "crowd-pleaser",
+        "heirloom",
+        "easy",
+        "kid-friendly"
+      ]
+    },
+    {
+      "id": "sourdough-biscuits",
+      "name": "Sourdough Biscuits",
+      "heirloom": false,
+      "file": "recipes/sourdough-biscuits.json",
+      "tags": [
+        "baking",
+        "bread",
+        "sourdough",
+        "breakfast",
+        "make-ahead"
+      ]
+    },
+    {
+      "id": "sourdough-cinnamon-rolls",
+      "name": "Sourdough Cinnamon Rolls",
+      "heirloom": false,
+      "file": "recipes/sourdough-cinnamon-rolls.json",
+      "tags": [
+        "baking",
+        "bread",
+        "sourdough",
+        "breakfast",
+        "dessert",
+        "make-ahead"
+      ]
+    },
+    {
+      "id": "sourdough-dinner-rolls",
+      "name": "Soft Sourdough Dinner Rolls",
+      "heirloom": false,
+      "file": "recipes/sourdough-dinner-rolls.json",
+      "tags": [
+        "baking",
+        "bread",
+        "sourdough",
+        "dinner",
+        "make-ahead",
+        "freezer-friendly"
+      ]
+    },
+    {
+      "id": "sourdough-monkey-bread",
+      "name": "Sourdough Monkey Bread",
+      "heirloom": false,
+      "file": "recipes/sourdough-monkey-bread.json",
+      "tags": [
+        "baking",
+        "bread",
+        "sourdough",
+        "breakfast",
+        "dessert",
+        "crowd-pleaser"
+      ]
+    },
+    {
+      "id": "sourdough-pretzels",
+      "name": "Soft Sourdough Pretzels",
+      "heirloom": false,
+      "file": "recipes/sourdough-pretzels.json",
+      "tags": [
+        "baking",
+        "bread",
+        "sourdough",
+        "snack",
+        "make-ahead"
+      ]
+    },
+    {
+      "id": "spaghetti-and-meatballs",
+      "name": "Spaghetti and Meatballs",
+      "heirloom": true,
+      "file": "recipes/spaghetti-and-meatballs.json",
+      "tags": [
+        "dinner",
+        "elk",
+        "stovetop",
+        "heirloom",
+        "family-favorite"
+      ]
+    },
+    {
+      "id": "sweet-potato-red-pepper-bisque",
+      "name": "Sweet Potato Roasted Red Pepper Bisque",
+      "heirloom": true,
+      "file": "recipes/sweet-potato-red-pepper-bisque.json",
+      "tags": [
+        "dinner",
+        "soup",
+        "vegetarian",
+        "oven",
+        "blender"
+      ]
+    },
+    {
+      "id": "thai-chicken-wrap",
+      "name": "Thai Chicken Wrap with Spicy Peanut Sauce",
+      "heirloom": true,
+      "file": "recipes/thai-chicken-wrap.json",
+      "tags": [
+        "dinner",
+        "lunch",
+        "stovetop",
+        "protein",
+        "salad"
+      ]
+    },
+    {
+      "id": "tzatziki-sauce",
+      "name": "Tzatziki Sauce",
+      "heirloom": false,
+      "file": "recipes/tzatziki-sauce.json",
+      "tags": [
+        "sauce",
+        "condiment",
+        "no-cook",
+        "vegetarian"
+      ]
+    },
+    {
+      "id": "white-chicken-chili",
+      "name": "White Chicken Chili",
+      "heirloom": true,
+      "file": "recipes/white-chicken-chili.json",
+      "tags": [
+        "dinner",
+        "soup",
+        "stovetop",
+        "crowd-pleaser",
+        "easy",
+        "double-friendly"
+      ]
+    },
+    {
+      "id": "wild-rice-casserole",
+      "name": "Wild Rice Casserole",
+      "heirloom": true,
+      "file": "recipes/wild-rice-casserole.json",
+      "tags": [
+        "dinner",
+        "casserole",
+        "side-dish",
+        "oven"
+      ]
     }
   ]
 }
