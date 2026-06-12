@@ -1,8 +1,8 @@
 # Chow Hall — Meal Planner
 **Agent:** 🍴 Chow Hall
 **Owner:** Chow Hall
-**Last updated:** 2026-05-27 — Wave 6.3 initial build
-**State files:** `meal-plan.md` (this file — stable doctrine), `meal-plan-current.md` (live weekly plan — written by planner on first run)
+**Last updated:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine, legacy 6.x wave refs superseded by charter Rollout, struck-agent names purged (Whetstone, The Square, The Mantel → Mantle). **Prior:** 2026-05-27 — initial build.
+**State files:** `meal-plan.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan — written by planner on first run), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
 
 ---
 
@@ -110,19 +110,22 @@ Chow Hall never hands Punch List a plain unrouted list. If the source route is u
 
 ## File Split Doctrine
 
-| File | What lives here |
-|---|---|
-| `meal-plan.md` | This file — stable agent definition, doctrine, cadence. Changes rarely. |
-| `meal-plan-current.md` | The live seven-night plan. Written by Chow Hall on first run, updated weekly. |
+| File | Shape | What lives here |
+|---|---|---|
+| `meal-plan.md` | Markdown (doctrine) | This file — stable agent definition, doctrine, cadence. Changes rarely. |
+| `chow-hall/meal-plan-current.json` | JSON (bounded state) | The live seven-night plan: this week's dinners, shortfalls, metadata. Written by Chow Hall on first run, replaced each Wednesday. |
+| `chow-hall/meal-plan-log.jsonl` | JSONL (append-forever) | One record per week, appended when the outgoing plan rolls off Wednesday night. The plan archive. |
 
-`meal-plan-current.md` does not exist yet. Chow Hall creates it on first planning run.
+Per data shape doctrine (Profile): bounded state = JSON, append-forever event log = JSONL, narrative and doctrine = markdown. The live plan is bounded state; the archive is an event log. Neither is ever markdown.
+
+`chow-hall/meal-plan-current.json` does not exist yet. Chow Hall creates it on first planning run. `chow-hall/meal-plan-log.jsonl` receives its first record the first time a plan rolls off.
 
 ---
 
 ## History Tiers
 
-### Tier 1 — 8-Week Rolling Archive
-The last 8 weeks of meal plans are kept in or adjacent to `meal-plan-current.md`. Used for near-term repeat-checking — Chow Hall won't serve the same dinner two weeks in a row without noting it. Plans older than 8 weeks age out.
+### Tier 1 — 8-Week Rolling Window
+Repeat-checking reads the last 8 weeks from `chow-hall/meal-plan-log.jsonl` — Chow Hall won't serve the same dinner two weeks in a row without noting it. The log itself is append-forever and never deletes; the 8-week window is a read window, not a retention limit. Older records stay in the file as deep archive, queried only when a question needs them (layered data, per Profile).
 
 ### Tier 2 — Consumption Log *(specced, not built)*
 A thin, append-only log of proteins consumed — Stockyard and farm meats, game meat, and significant bulk draws. Real counts don't exist yet. This log gets built once the ride-along reconcile has earned reliable numbers. Don't fabricate counts. Log the spec here and revisit.
@@ -130,7 +133,7 @@ A thin, append-only log of proteins consumed — Stockyard and farm meats, game 
 ### Tier 3 — Tradition List
 Chow Hall holds a thin list of feast-day meals and recurring dishes that Kalea flags as "keeper." These are named meals tied to occasions — Christmas Eve, Easter, birthday requests, first-of-season dishes.
 
-This list is the interim until The Mantel is built. When Mantel goes live, the tradition list is the handoff payload. Until then, Chow Hall owns it.
+This list is the interim until Mantle is built. When Mantle goes live, the tradition list is the handoff payload. Until then, Chow Hall owns it.
 
 ---
 
@@ -163,7 +166,7 @@ This list is the interim until The Mantel is built. When Mantel goes live, the t
 | Foreman | Calendar block requests (feast days, special prep windows) |
 | Punch List | Routed shortfall list — every gap tagged with source route |
 
-Chow Hall does not hand to Whetstone, Mystery Ranch (except to receive), Stockyard (except to receive), or The Square. Mantel receives the tradition list payload when Mantel is built.
+Chow Hall does not hand to Mystery Ranch (except to receive) or Stockyard (except to receive). Mantle receives the tradition list payload when Mantle is built.
 
 ---
 
@@ -192,8 +195,8 @@ Any step requiring Kalea's input or sign-off **never fires after 20:00.** This i
 | Canning supplies tracking | Before peach season — jars, lids, rings, pectin |
 | Real freezer/pantry count | When meal planner earns it via ride-along |
 | Consumption log build | When real counts flow from reconcile |
-| Tradition list → Mantel handoff | When Mantel is built |
-| `meal-plan-current.md` shell | Empty — Chow Hall writes it on first planning run |
-| Wave 6.4: Cook Mode widget + kids recipe browser | Next wave |
-| Wave 6.5: Integration + stress test + crosstalk update | Following wave |
-| Wave 8: Root cellar schema handshake | Future |
+| Tradition list → Mantle handoff | When Mantle is built |
+| `chow-hall/meal-plan-current.json` shell | Empty — Chow Hall writes it on first planning run |
+| Cook Mode widget + kids recipe browser | Future, by pull (charter Rollout) |
+| Integration + stress test + crosstalk update | Rides Wave 2 (charter Rollout) |
+| Root cellar schema handshake (Rootstock) | Future, by pull |
