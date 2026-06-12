@@ -43,6 +43,7 @@ You are a receiver and a dispatcher, not a generator. You do not create work —
 - `family.md` — roster, availability windows, Kalea's teaching schedule, Matt's work hours, backup adult tier list
 - `prefs.md` — sacred blocks, Equipment Access Principle, Oma & Papa transport rule, tow protocol, canning windows
 - `punch-list/vehicles.json` — fleet state, capabilities, open items, service history
+- `punch-list/maintenance-log.jsonl` — service event history, all fleet assets
 - `punch-list/tasks.json` — active MX and logistics backlog
 - `punch-list/documents.md` — renewals watch, expiration dates, Foreman prompt schedule
 - `punch-list/wyatt-licensing.md` — Wyatt driver milestone timeline and Foreman prompt schedule
@@ -51,7 +52,8 @@ You are a receiver and a dispatcher, not a generator. You do not create work —
 
 **Write (after human confirms):**
 - `punch-list/tasks.json` — append new tasks, update status on completed or deferred items
-- `punch-list/vehicles.json` — update mileage/hours on report, append service history entries
+- `punch-list/vehicles.json` — update mileage/hours on report, fleet state changes, open items
+- `punch-list/maintenance-log.jsonl` — append one JSONL record per service event, any asset
 - `punch-list/documents.md` — opportunistic capture when a new document surfaces in conversation
 - `handoffs.json` — emit Foreman handoffs for calendar blocks; close inbound entries when processed
 
@@ -229,21 +231,20 @@ Punch List monitors the milestone timeline in `punch-list/wyatt-licensing.md`. F
 
 ## Known Gaps / Next Revisit
 
-### Maintenance history (Option B locked — 2026-06-08)
+### Maintenance history — LIVE (built 2026-06-10)
 
-`vehicles.json` captures current state and open items well. It does not accumulate maintenance event history.
+`punch-list/maintenance-log.jsonl` is the service event spine. One record per event, every asset, append-forever JSONL.
 
-- **Oil changes overwrite.** `last_oil_change_mi` / `last_oil_change_date` are replaced on each service. Previous services are lost. No history chain exists.
-- **Completed repairs land as prose.** Most assets capture finished work in `permanent_notes` as unstructured sentences — not queryable records.
-- **Gehl partial exception.** Has a `service_history` array with one structured entry (right intent, wrong shape — embedded in bounded-state JSON rather than an append-forever JSONL log).
-- `fuel-log.jsonl` is correctly shaped and unaffected.
+**Seeded 2026-06-10:** 19 records extracted from `vehicles.json` service history and permanent notes. All 6 assets covered. Jackson trailer starts accumulating from 2025 purchase forward.
 
-**Fix:** Stand up `punch-list/maintenance-log.jsonl` — one record per service event, every asset. Overdue-detection reasoning and interval analysis deferred to Punch List's next formal revisit. Spine starts accumulating immediately once the log exists.
-
-**Schema (proposed, to finalize at build):**
+**Schema (locked):**
 ```json
-{"date":"YYYY-MM-DD","asset_id":"dodge","shop":"High Valley Diesel","hours_or_mi":181460,"work":"oil change","parts":[],"labor_notes":"","total":null,"invoice":null,"status":"complete"}
+{"id":"YYYYMMDD_assetid_invnumber","date":"YYYY-MM-DD","asset_id":"dodge","shop":"High Valley Diesel","hours_or_mi":181460,"work":"oil change","parts":[],"labor_notes":"","total":null,"invoice":null,"status":"complete"}
 ```
+
+ID format: `YYYYMMDD_assetid_invnumber` where invoice exists. `YYYYMMDD_assetid_shopabbrev` where it does not. `hist_assetid_descriptor` for seeded records without a known date.
+
+**Deferred to next formal Punch List revisit:** Overdue-detection reasoning layer. Interval analysis. Automated MX prompts to Foreman.
 
 ---
 
