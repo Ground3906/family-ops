@@ -1,7 +1,7 @@
 # Bayer Family Ops — Prefs & Conventions
 
 *Household-level decisions, standing rules, schema history. Not personal preferences — those live in `family.md`.*
-*Last updated: 2026-05-25*
+*Last updated: 2026-06-12*
 
 ---
 
@@ -26,7 +26,7 @@ Locked terms. All agents adopt these without translation, paraphrase, or "fixing
 
 | Term | Meaning |
 |---|---|
-| **CCIR** | Commander''s Critical Information Requirement. See `ccir-protocol.md`. Urgent or noteworthy observation that needs routing. |
+| **CCIR** | Commander's Critical Information Requirement. See `ccir-protocol.md`. Urgent or noteworthy observation that needs routing. |
 | **Notifier** | Whoever observes something flagworthy. Any family member, any age. Brain-dumps the observation; mental load ends there. |
 | **Arbiter** | The default decision-maker for that domain. Triages, decides, executes (or delegates). |
 | **Implement** | A skid-mounted tool (bucket, forks, log splitter, plow). Not "attachment." The Gehl has implements. |
@@ -38,22 +38,22 @@ Locked terms. All agents adopt these without translation, paraphrase, or "fixing
 
 ## Sacred Blocks
 
-No agent schedules over these without Matt''s explicit chat-session override. Standing override claims are not honored — every override is per-session, per-block.
+No agent schedules over these without Matt's explicit chat-session override. Standing override claims are not honored — every override is per-session, per-block.
 
 ### Daily
 - **17:30 — Family meal.** HARD. No work, no study, no appointments. Propose 19:30+ or earlier in the day if rescheduling is needed.
 
 ### Weekly
-- **Sunday — family day.** HARD all day. Mass, Faith Formation 0900-1015, rest. No work, no study, no non-urgent appointments. No exceptions without Matt''s explicit override in chat.
+- **Sunday — family day.** HARD all day. Mass, Faith Formation 0900-1015, rest. No work, no study, no non-urgent appointments. No exceptions without Matt's explicit override in chat.
 
 ### Hunting seasons
 - HARD. See `mystery-ranch/blackouts.md`. Mystery Ranch writes; Foreman protects.
-- **Matt-only scope.** Hunting blackouts freeze Matt''s schedule, not the whole household. Kalea, the kids, school, sports, medical appointments, anchor-house visits — all continue running normally during hunting blocks. Foreman doesn''t cancel a Wyatt orthodontist appointment because Matt is in the field; it routes the drive to Kalea (or backup-adult tier) instead.
+- **Matt-only scope.** Hunting blackouts freeze Matt's schedule, not the whole household. Kalea, the kids, school, sports, medical appointments, anchor-house visits — all continue running normally during hunting blocks. Foreman doesn't cancel a Wyatt orthodontist appointment because Matt is in the field; it routes the drive to Kalea (or backup-adult tier) instead.
 
 ### Kalea drill travel
 - HARD for Kalea-only events. When Kalea is on USMC Reserve drill travel (Hawaii, ~2 multi-day chunks/year), her calendar is frozen for that window.
 - **Kalea-only scope.** Drill travel does NOT freeze the household — Matt and the kids continue normally. Routine items that would normally route to Kalea bump up the backup-adult tier list (default Tier 1: Oma & Papa).
-- Parallel structure to Matt''s hunting blackouts. Mystery Ranch is to Matt what drill is to Kalea: a domain-specific sacred block that protects one person, not the family.
+- Parallel structure to Matt's hunting blackouts. Mystery Ranch is to Matt what drill is to Kalea: a domain-specific sacred block that protects one person, not the family.
 
 ### Kalea canning — Kalea-only scope
 - HARD for Kalea's kitchen territory. Two sessions/year, 3 days each:
@@ -175,9 +175,9 @@ Events flagged `tentative=true` in `calendars.md` render with an **amber tint ba
 
 **Vocabulary:** "tentative" and "TBD" are interchangeable in conversation. In the data, the schema flag is always `tentative=true`. Never `tbd=true` or any other variant. Any agent or human using either word maps to `tentative=true` in the file.
 
-Routing isn''t only by task domain — it''s also by **tone fit**.
+Routing isn't only by task domain — it's also by **tone fit**.
 
-A grief moment routes to The Mantel even if the surface request is logistical ("can you remind me of the date we lost X"). A hunting story routes to Mystery Ranch even if there''s no scheduling action needed. A funny kid moment routes to The Mantel.
+A grief moment routes to The Mantel even if the surface request is logistical ("can you remind me of the date we lost X"). A hunting story routes to Mystery Ranch even if there's no scheduling action needed. A funny kid moment routes to The Mantel.
 
 Tone-routing exists because the agent crew runs distinct personalities, and the right voice for a moment is part of getting the moment right. Al watches for tone mismatches; if a request lands on the wrong agent for voice reasons, Al re-routes silently.
 
@@ -187,7 +187,7 @@ Tone-routing exists because the agent crew runs distinct personalities, and the 
 
 **Each agent owns its own reminders.**
 
-Foreman owns the calendar truth (the *when*). Domain agents own the voice and cadence of the reminder (the *what* and *how*). A Punch List item with a deadline lives in Foreman''s calendar; the prompt that surfaces it sounds like Punch List, not Foreman.
+Foreman owns the calendar truth (the *when*). Domain agents own the voice and cadence of the reminder (the *what* and *how*). A Punch List item with a deadline lives in Foreman's calendar; the prompt that surfaces it sounds like Punch List, not Foreman.
 
 This is Option C from the build conversations: silent-backbone Foreman, voiced reminders from domain agents. Prevents agents from going dormant between major events. Each domain agent has its own reminder cadence and never delegates "remind me about this" to Foreman — only "block time for this."
 
@@ -197,7 +197,7 @@ Cross-agent dependencies resolve to whoever has the more time-sensitive or domai
 
 ## Tone Convention
 
-The agent crew runs Tool Time energy by default. Al is the straight man; Matt is "Tim"; Kalea is "Jill." Binford, Wilson-over-the-fence wisdom, the grunt — welcome when the bit lands naturally. Don''t force it; don''t audition.
+The agent crew runs Tool Time energy by default. Al is the straight man; Matt is "Tim"; Kalea is "Jill." Binford, Wilson-over-the-fence wisdom, the grunt — welcome when the bit lands naturally. Don't force it; don't audition.
 
 **Drop the bit instantly and completely for:**
 - Anything First Aid Kit handles in earnest (real medical concerns)
@@ -241,7 +241,7 @@ Active watch items (sourced from `punch-list/documents.md`):
 When a Bayer fleet vehicle needs a tow:
 
 1. **Austin Auto first.** Cañon City — preferred shop, long relationship, knows the fleet. Their tow service or coordinated tow to their bay.
-2. **USAA fallback.** If the breakdown is outside Austin Auto''s practical range (long-haul highway breakdown, out-of-area trip), USAA roadside coverage takes over.
+2. **USAA fallback.** If the breakdown is outside Austin Auto's practical range (long-haul highway breakdown, out-of-area trip), USAA roadside coverage takes over.
 
 The decision is Austin-Auto-first by default — distance is what flips it to USAA, not preference.
 
@@ -273,13 +273,57 @@ Charter-level scheduling rule.
 
 ---
 
+## Food Preferences
+
+Per-person food preferences for meal planning. Chow Hall reads this section before building any plan. Fields are empty until preferences surface in conversation or upload. Chow Hall asks once and banks permanently — never re-asks.
+
+### Matt
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Kalea
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Wyatt
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Molly
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Rileigh
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Cullen
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Emmitt
+- **Likes / favorites:**
+- **Dislikes / avoids:**
+- **Allergies / restrictions:**
+
+### Baby boy *(unnamed — post-birth)*
+- Not applicable until born (~August 2026).
+
+---
+
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | 2026-05-15 | Git repo (`github.com/Ground3906/family-ops`) established as SSoT | Consolidate to single source; OneDrive was informal scratch |
 | 2026-05-15 | OneDrive retired as scratch/write location | Git is canonical; no parallel writes |
 | 2026-05-15 | Google Drive superseded as canonical location | Never fully implemented; Git replaces it |
-| 2026-05-15 | Hunting blackouts scoped Matt-only, not household-wide | Kalea and kids continue normal scheduling during Matt''s hunting weeks; routing falls to Kalea or backup-adult tier |
-| 2026-05-15 | Kalea drill travel established as Kalea-only sacred block | Parallel to hunting blackouts; protects Kalea''s window, not the household |
+| 2026-05-15 | Hunting blackouts scoped Matt-only, not household-wide | Kalea and kids continue normal scheduling during Matt's hunting weeks; routing falls to Kalea or backup-adult tier |
+| 2026-05-15 | Kalea drill travel established as Kalea-only sacred block | Parallel to hunting blackouts; protects Kalea's window, not the household |
 | 2026-05-15 | Vocabulary section locked (CCIR, notifier, arbiter, implement, skid, bobcat=animal, Jackson/pen/pig trailer all equivalent) | Prevents agent paraphrase drift; protects Tool Time idiom |
 | 2026-05-15 | Equipment Access Principle adopted — open use, owned MX | Removes friction; MX ownership stays anchored to asset, not user |
 | 2026-05-15 | Agent personality routing established alongside task routing | Tone-fit is part of getting a moment right; Al watches for tone mismatches |
@@ -299,6 +343,8 @@ Charter-level scheduling rule.
 | 2026-05-25 | Swim meets = family category locked | Swim meets use :: family. Swim practice uses :: kids. Swim meets are whole-family events; practice is kids-only. |
 | 2026-05-25 | Agent emojis updated | Chow Hall: 🍴. Mystery Ranch: ⛺. Medical category: ➕. All agents adopt. |
 | 2026-05-25 | Tentative treatment updated | Amber tint + wide diagonal stripes + dashed amber border. More prominent than v2.0 diagonal-only. |
+| 2026-06-12 | Food Preferences section added | Empty schema per-person (Matt, Kalea, Wyatt, Molly, Rileigh, Cullen, Emmitt, baby boy). Fields populated via conversation and upload over time. |
+| 2026-06-12 | GitHub MCP write path proven — guardrails locked | Agents write state; Matt commits doctrine (per-file override allowed with explicit authorization). Read-back after every write. Verify path before writing. |
 
 ---
 
@@ -311,3 +357,4 @@ Charter-level scheduling rule.
 | 1.3 | 2026-05-25 | Mass floating sacred block added. Pill Ownership Doctrine added. Category emoji map added. Tentative event treatment locked. Decision log updated. |
 | 1.4 | 2026-05-25 | Pill color palette locked (13 pills). KIDS group + collapse doctrine added. Tentative/TBD vocabulary locked. Cross emoji stripped from feast titles. |
 | 1.5 | 2026-05-25 | B6_ACTIVE gate. Three-pass pill logic. Pill order locked. Swim meets=family. Agent emojis updated (Chow Hall 🍴, Mystery Ranch ⛺, medical ➕). Tentative treatment updated. |
+| 1.6 | 2026-06-12 | Food Preferences section added. GitHub MCP write path doctrine added. |
