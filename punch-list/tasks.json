@@ -5,6 +5,48 @@
   "owner": "Punch List",
   "tasks": [
     {
+      "id": "gardyn-roots-check-cadence",
+      "type": "task",
+      "asset": "Gardyn",
+      "description": "Gardyn roots check \u2014 14-day rolling cadence. Kalea checked 2026-06-08. Reminder fires 2026-06-26 (14 days from capture 2026-06-12 per Matt). On each confirmed check, set the next reminder 14 days out. Rolling, not fixed-schedule.",
+      "priority": "routine",
+      "estimated_cost": null,
+      "shop": null,
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": "2026-06-26",
+      "notes": "Captured 2026-06-12 late session. Calendar reminder entry added to calendars.md same commit. Rolling-reminder behavior (confirm \u2192 reset +14d) belongs to Rootstock when built; until then, manual roll at each confirm. Voice: Rootstock.",
+      "status": "open"
+    },
+    {
+      "id": "kombucha-brew-log-2026-06-08",
+      "type": "task",
+      "asset": "Kitchen",
+      "description": "Kombucha brewed 2026-06-08 \u2014 logged with alert tag per Matt. Follow-up cadence (ferment check / bottling window) NOT defined yet \u2014 do not invent dates. Confirm desired alert timing with Matt or Kalea at next session.",
+      "priority": "routine",
+      "estimated_cost": null,
+      "shop": null,
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": null,
+      "notes": "Captured 2026-06-12 late session, voice-to-text. 'Alert tag' interpretation pending \u2014 surface at next session open. Likely Chow Hall territory.",
+      "status": "open"
+    },
+    {
+      "id": "cal-widget-sourdough-starter-button",
+      "type": "task",
+      "asset": "Cockpit calendar widget",
+      "description": "Feature request: button top-left of calendar widget \u2014 sourdough starter feed tracker. Push button when fed; highlights red if 3+ days without a feed. DO NOT BUILD until Matt brainstorm session \u2014 explicit hold per Matt 2026-06-12. Note: red-only state violates colorblind-safe doctrine \u2014 brainstorm must pick a colorblind-safe treatment (brightness/shape/label).",
+      "priority": "deferred",
+      "estimated_cost": null,
+      "shop": null,
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": null,
+      "notes": "Captured 2026-06-12 late session. HOLD \u2014 brainstorm gate. Surfaces when a cal-widget session opens.",
+      "status": "open"
+    },
+    {
       "id": "jackson-registration-oct-2026",
       "type": "task",
       "asset": "Jackson trailer",
