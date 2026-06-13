@@ -3,7 +3,7 @@
     "file": "punch-list/vehicles.json",
     "owner": "Punch List",
     "schema_version": 2,
-    "last_updated": "2026-06-03",
+    "last_updated": "2026-06-13",
     "seeded_from": "fleet-state-v1.md (intake 2026-05-14) + Punch List deep build (2026-05-15) + capability intake session",
     "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured \u2014 obtain and update when known."
   },
@@ -310,8 +310,8 @@
       "plate_note": "Prior plate AHO-550",
       "use_profile": "backup family hauler; solo/date-night rig; cheapest miles. Fall 2026: Wyatt Salida runs end, transition to ~8,000 mi/yr.",
       "tracking_unit": "miles",
-      "current_mileage": 182114,
-      "current_mileage_as_of": "2026-05-15",
+      "current_mileage": 184181,
+      "current_mileage_as_of": "2026-06-13",
       "registration_expiry": null,
       "registration_note": "Renewal month not captured \u2014 obtain and update",
       "oil_change_interval_mi": 7500,
@@ -367,9 +367,33 @@
         },
         {
           "id": "tahoe-wobble",
-          "description": "60 mph narrow-band wobble \u2014 extensive front-end work hasn't resolved it. Likely tire balance, tire shape, or driveshaft balance. Budget-deferred, monitor only.",
+          "description": "60 mph narrow-band wobble \u2014 extensive front-end work hasn't resolved it. Likely tire balance, tire shape, or driveshaft balance. Budget-deferred, monitor only. NOTE: New tires installed 2026-06-13 (265/70 R16 ROC Rocky Mountain All Terrain II x4) \u2014 reassess after first highway run. May be resolved.",
           "priority": "watch",
           "route": "TBD"
+        }
+      ],
+      "service_history": [
+        {
+          "invoice": "SO-5076845310",
+          "date": "2026-06-13",
+          "shop": "Discount Tire",
+          "shop_address": "2000 S Kipling Pkwy, Lakewood CO 80227",
+          "mileage": 184181,
+          "mileage_note": "Shop receipt shows 104,179 \u2014 keying error. Actual odometer confirmed 184,181.",
+          "total": 751.15,
+          "status": "paid",
+          "payment": "Visa",
+          "work": "New tires x4: 265/70 R16 112T SL SBL ROC Rocky Mountain All Terrain II. Installation + life-of-tire maintenance. Waste tire disposal x4. State tire fee. Road hazard/replacement certificates x4. Military discount applied.",
+          "parts": [
+            "265/70 R16 ROC Rocky Mountain All Terrain II x4"
+          ],
+          "tire_specs": {
+            "size": "265/70 R16",
+            "inflation_front_psi": 35,
+            "inflation_rear_psi": 35,
+            "torque_ft_lbs": 140,
+            "bolt_pattern_mm": "6-139.70"
+          }
         }
       ],
       "open_deferred_total": 962,
