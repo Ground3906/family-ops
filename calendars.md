@@ -275,6 +275,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
+[CAL] 2026-06-08 ALL-DAY [D] Kombucha brewed :: misc :: notes="Condition-based check - no time alert. Check when ready."
 [CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Cañon City, CO"
 [CAL] 2026-06-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-15 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
