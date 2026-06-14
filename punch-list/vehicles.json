@@ -5,7 +5,7 @@
     "schema_version": 2,
     "last_updated": "2026-06-13",
     "seeded_from": "fleet-state-v1.md (intake 2026-05-14) + Punch List deep build (2026-05-15) + capability intake session",
-    "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured \u2014 obtain and update when known."
+    "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured — obtain and update when known."
   },
   "assets": [
     {
@@ -17,7 +17,7 @@
       "make": "Nissan",
       "model": "NV3500 SL HD Passenger",
       "engine": "5.6L V8 VK56DE gas",
-      "special_config": "Titan front-end 4WD conversion \u2014 front/drivetrain = Nissan Titan catalog; rear/body = NV3500",
+      "special_config": "Titan front-end 4WD conversion — front/drivetrain = Nissan Titan catalog; rear/body = NV3500",
       "vin": "5BZAF0AA5HN853213",
       "plate": "DHU-K28 CO",
       "color": "Silver",
@@ -26,7 +26,7 @@
       "current_mileage": 103777,
       "current_mileage_as_of": "2026-05-05",
       "registration_expiry": null,
-      "registration_note": "Renewal month not captured \u2014 obtain and update",
+      "registration_note": "Renewal month not captured — obtain and update",
       "oil_change_interval_mi": 7500,
       "oil_type": "full synthetic",
       "last_oil_change_mi": 103777,
@@ -38,7 +38,7 @@
         "passenger_default": 9,
         "passenger_default_note": "3 seats removed from factory 12. Standard Bayer config.",
         "passenger_max_reconfigured": 12,
-        "passenger_max_note": "Full 12-seat config possible with pre-event reconfig. Requires advance task \u2014 not a morning-of decision.",
+        "passenger_max_note": "Full 12-seat config possible with pre-event reconfig. Requires advance task — not a morning-of decision.",
         "reconfig_lead_time_required": true,
         "carseat_config": {
           "cullen": "booster seat",
@@ -48,26 +48,26 @@
           "molly": "unassisted",
           "baby_b6": "infant carrier (post-Aug 2026)"
         },
-        "cargo_at_family_max": "collapsed \u2014 bread-on-Molly's-lap territory",
-        "cargo_at_2_adults": "Mesquite-proven \u2014 full family + coolers + gear inside when seats configured",
-        "cargo_note": "Seats are reasonably easy to remove and rearrange. Interior cargo only \u2014 no open bed.",
+        "cargo_at_family_max": "collapsed — bread-on-Molly's-lap territory",
+        "cargo_at_2_adults": "Mesquite-proven — full family + coolers + gear inside when seats configured",
+        "cargo_note": "Seats are reasonably easy to remove and rearrange. Interior cargo only — no open bed.",
         "trailer_rule": "NEVER. Hard rule. Not rated, not situational, not negotiable.",
         "long_haul_capable": true,
         "long_haul_note": "Only vehicle that can do Mesquite NV trip with full family + luggage. Single point of failure for long-haul family travel.",
         "weather_aware_cargo": false,
         "rotation_cadence": null
       },
-      "single_point_of_failure": "Full-family long-haul travel (Mesquite, CO Springs with full load). If NV is in shop, Tahoe absorbs family load \u2014 Costco postpones or 2-adult only.",
+      "single_point_of_failure": "Full-family long-haul travel (Mesquite, CO Springs with full load). If NV is in shop, Tahoe absorbs family load — Costco postpones or 2-adult only.",
       "open_items": [
         {
           "id": "nv-lf-lca",
-          "description": "LF lower control arm \u2014 cam bolt seized, full alignment not achievable until replaced",
+          "description": "LF lower control arm — cam bolt seized, full alignment not achievable until replaced",
           "priority": "watch",
           "route": "Austin Auto"
         },
         {
           "id": "nv-cyl7-tick",
-          "description": "Cyl 7 ticking \u2014 TSB suggests block replacement, monitor only. Oil consumption 1 qt/8k mi confirmed.",
+          "description": "Cyl 7 ticking — TSB suggests block replacement, monitor only. Oil consumption 1 qt/8k mi confirmed.",
           "priority": "research-flag",
           "route": "internal"
         },
@@ -102,13 +102,13 @@
       "current_mileage": 209661,
       "current_mileage_as_of": "2026-05-15",
       "registration_expiry": null,
-      "registration_note": "Renewal month not captured \u2014 obtain and update",
+      "registration_note": "Renewal month not captured — obtain and update",
       "oil_change_interval_mi": null,
-      "oil_change_interval_note": "Time-based MX dominates given ~1,000 mi/yr use profile. Last oil change 2024-11-26 at 207,950 mi \u2014 annual cadence means next was ~Nov 2025, likely overdue as of 2026-05-15. Confirm at next touch.",
+      "oil_change_interval_note": "Time-based MX dominates given ~1,000 mi/yr use profile. Last oil change 2024-11-26 at 207,950 mi — annual cadence means next was ~Nov 2025, likely overdue as of 2026-05-15. Confirm at next touch.",
       "last_oil_change_mi": 207950,
       "last_oil_change_date": "2024-11-26",
       "next_oil_change_mi": null,
-      "next_oil_change_note": "Flag as potentially overdue \u2014 last service Nov 2024, ~18 months ago as of 2026-05. Time-based annual interval.",
+      "next_oil_change_note": "Flag as potentially overdue — last service Nov 2024, ~18 months ago as of 2026-05. Time-based annual interval.",
       "preferred_shop": "Austin Automotive",
       "co_owned_by": [],
       "capability": {
@@ -118,11 +118,11 @@
         "passenger_max_note": "3 maximum, tight center belt.",
         "reconfig_lead_time_required": false,
         "carseat_config": {
-          "note": "No carseats compatible \u2014 single cab, no back seat. Matt-only or Matt + 1 adult."
+          "note": "No carseats compatible — single cab, no back seat. Matt-only or Matt + 1 adult."
         },
-        "cargo_at_family_max": "N/A \u2014 not a family vehicle",
+        "cargo_at_family_max": "N/A — not a family vehicle",
         "cargo_at_2_adults": "8-ft bed fully available",
-        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies \u2014 check radar before loading exposed cargo.",
+        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies — check radar before loading exposed cargo.",
         "trailer_rule": "Short trips and emergency only. Not primary haul rig.",
         "long_haul_capable": false,
         "weather_aware_cargo": true,
@@ -131,7 +131,7 @@
       },
       "open_items": [],
       "permanent_notes": [
-        "BATTERY DISCONNECT REQUIRED BEFORE ANY FIELD WELDING \u2014 PCM was fried by welding 2019, replaced at $1,979",
+        "BATTERY DISCONNECT REQUIRED BEFORE ANY FIELD WELDING — PCM was fried by welding 2019, replaced at $1,979",
         "2020-2024 paperwork gap but Tim confirms regular MX continued"
       ]
     },
@@ -151,7 +151,7 @@
       "current_mileage": 181460,
       "current_mileage_as_of": "2026-06-03",
       "registration_expiry": null,
-      "registration_note": "Renewal month not captured \u2014 obtain and update. Custer County rural \u2014 CO emissions exempt.",
+      "registration_note": "Renewal month not captured — obtain and update. Custer County rural — CO emissions exempt.",
       "oil_change_interval_mi": 15000,
       "oil_type": "15W-40 synthetic blend, 12 qt capacity",
       "last_oil_change_mi": 181460,
@@ -161,7 +161,7 @@
       "co_owned_by": [],
       "capability": {
         "passenger_default": 5,
-        "passenger_default_note": "Double cab, 4-door (not mega cab). 6 official (bench front + bench back). 5 realistic with boosters \u2014 gets tight.",
+        "passenger_default_note": "Double cab, 4-door (not mega cab). 6 official (bench front + bench back). 5 realistic with boosters — gets tight.",
         "passenger_max_reconfigured": 6,
         "passenger_max_note": "6 official max, very tight with carseats in back.",
         "reconfig_lead_time_required": false,
@@ -170,33 +170,33 @@
         },
         "cargo_at_family_max": "limited in-cab with max passengers",
         "cargo_at_2_adults": "8-ft bed fully available",
-        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies. Backpacks and cargo exposed on school runs \u2014 weather-aware.",
+        "cargo_note": "8-ft open bed, no topper. Weather-aware cargo applies. Backpacks and cargo exposed on school runs — weather-aware.",
         "trailer_rule": "Jackson confirmed. Deck confirmed. Primary haul rig.",
         "long_haul_capable": false,
         "long_haul_note": "Hunting rig and haul truck. Not a family long-haul vehicle.",
         "weather_aware_cargo": true,
         "rotation_cadence": "monthly",
-        "rotation_note": "Monthly drive cycle minimum \u2014 diesel should not sit. Natural form: school run with the littles (1 adult + 4 littles). Two-birds: maintenance run + kid taxi."
+        "rotation_note": "Monthly drive cycle minimum — diesel should not sit. Natural form: school run with the littles (1 adult + 4 littles). Two-birds: maintenance run + kid taxi."
       },
       "single_point_of_failure": "Only vehicle that can pull the Jackson trailer. If Dodge is down during a butcher window, pig haul stalls. Punch List flags proactively when Dodge is in shop near slaughter window.",
       "open_items": [
         {
           "id": "dodge-alignment",
-          "description": "Alignment still TBD. Rotation + balance completed 2026-06-09 at Les Schwab Ca\u00f1on City.",
+          "description": "Alignment still TBD. Rotation + balance completed 2026-06-09 at Les Schwab Cañon City.",
           "priority": "watch",
           "route": "High Valley Diesel"
         },
         {
           "id": "dodge-frontend-wear",
-          "description": "Ball joints + other front-end components showing early play \u2014 not at replacement threshold as of 2026-06-09. Monitor. Reassess 2027 based on mileage. Les Schwab quoted full front-end rebuild $4,000 on 2026-06-09 \u2014 declined as premature.",
+          "description": "Ball joints + other front-end components showing early play — not at replacement threshold as of 2026-06-09. Monitor. Reassess 2027 based on mileage. Les Schwab quoted full front-end rebuild $4,000 on 2026-06-09 — declined as premature.",
           "priority": "watch",
           "route": "High Valley Diesel"
         }
       ],
       "permanent_notes": [
-        "EMISSIONS DELETED \u2014 disclose to any shop. Custer County rural exempt from CO emissions testing; does not affect registration cycle.",
+        "EMISSIONS DELETED — disclose to any shop. Custer County rural exempt from CO emissions testing; does not affect registration cycle.",
         "Diesel-specific service intervals: 15W-40 synthetic blend, 12 qt capacity",
-        "DO NOT USE: Les Schwab Tires Ca\u00f1on City \u2014 $4,000 front-end rebuild upsell attempt 2026-06-09, declined. High Valley Diesel preferred for all Dodge work.",
+        "DO NOT USE: Les Schwab Tires Cañon City — $4,000 front-end rebuild upsell attempt 2026-06-09, declined. High Valley Diesel preferred for all Dodge work.",
         "Purchased ~2020 at ~110k mi",
         "Grid heater replaced ~150k mi (High Valley)",
         "Injectors replaced ~160k mi (High Valley)",
@@ -212,14 +212,7 @@
           "total": 2622.76,
           "status": "paid",
           "work": "Full front-end rebuild: ball joints upper/lower (x2 each), tie rod ends (x4), wheel bearings (x2), track bar bushings, steering stabilizer, hubs. Diagnose remote start.",
-          "parts": [
-            "wheel bearing x2",
-            "track bar bushings",
-            "ball joint upper x2",
-            "ball joint lower x2",
-            "tie rod end x4",
-            "steering stabilizer"
-          ]
+          "parts": ["wheel bearing x2","track bar bushings","ball joint upper x2","ball joint lower x2","tie rod end x4","steering stabilizer"]
         },
         {
           "invoice": "522",
@@ -229,13 +222,7 @@
           "total": 775.43,
           "status": "paid",
           "work": "Install remote start. Service truck. Found loose fuel filter (leak source). Oil/air/fuel filters + 3 gal Rotella 15W40.",
-          "parts": [
-            "remote start kit",
-            "oil filter 1607",
-            "air filter 6930",
-            "fuel filter 23733",
-            "Rotella 15W40 3 gal"
-          ]
+          "parts": ["remote start kit","oil filter 1607","air filter 6930","fuel filter 23733","Rotella 15W40 3 gal"]
         },
         {
           "invoice": "692",
@@ -244,11 +231,8 @@
           "mileage": null,
           "total": 3184.78,
           "status": "paid",
-          "work": "Diagnose low power \u2014 plugged air filter killed turbo. Replace turbo (D2013). Air filter.",
-          "parts": [
-            "D2013 turbocharger",
-            "air filter 6930"
-          ]
+          "work": "Diagnose low power — plugged air filter killed turbo. Replace turbo (D2013). Air filter.",
+          "parts": ["D2013 turbocharger","air filter 6930"]
         },
         {
           "invoice": "698",
@@ -257,11 +241,8 @@
           "mileage": null,
           "total": 504.3,
           "status": "paid",
-          "work": "Diagnose coolant temp issue \u2014 traced wiring ECM to sensor, faulty sensor confirmed. Replace thermostat + water temp sensor.",
-          "parts": [
-            "thermostat",
-            "water temp sensor"
-          ]
+          "work": "Diagnose coolant temp issue — traced wiring ECM to sensor, faulty sensor confirmed. Replace thermostat + water temp sensor.",
+          "parts": ["thermostat","water temp sensor"]
         },
         {
           "invoice": "760",
@@ -270,13 +251,8 @@
           "mileage": null,
           "total": 917.73,
           "status": "paid",
-          "work": "Diagnose coolant leak \u2014 system over-pressured, turbo feed hose leaking, water pump seized. Replace water pump + coolant line seals. Oil/air filters, DEX-COOL.",
-          "parts": [
-            "water pump 42291",
-            "oil filter 7620",
-            "air filter 6930",
-            "DEX-COOL antifreeze"
-          ]
+          "work": "Diagnose coolant leak — system over-pressured, turbo feed hose leaking, water pump seized. Replace water pump + coolant line seals. Oil/air filters, DEX-COOL.",
+          "parts": ["water pump 42291","oil filter 7620","air filter 6930","DEX-COOL antifreeze"]
         },
         {
           "invoice": "992",
@@ -286,13 +262,7 @@
           "total": 1471.48,
           "status": "paid",
           "work": "Replace right front hub + track bar. Service truck: fuel filter, oil filter, 3 gal Rotella 15W40.",
-          "parts": [
-            "wheel bearing Ftb930507",
-            "track bar",
-            "fuel filter 3733",
-            "oil filter 7620",
-            "Rotella 15W40 3 gal"
-          ]
+          "parts": ["wheel bearing Ftb930507","track bar","fuel filter 3733","oil filter 7620","Rotella 15W40 3 gal"]
         }
       ]
     },
@@ -310,10 +280,10 @@
       "plate_note": "Prior plate AHO-550",
       "use_profile": "backup family hauler; solo/date-night rig; cheapest miles. Fall 2026: Wyatt Salida runs end, transition to ~8,000 mi/yr.",
       "tracking_unit": "miles",
-      "current_mileage": 184181,
+      "current_mileage": 184506,
       "current_mileage_as_of": "2026-06-13",
       "registration_expiry": null,
-      "registration_note": "Renewal month not captured \u2014 obtain and update",
+      "registration_note": "Renewal month not captured — obtain and update",
       "oil_change_interval_mi": 7500,
       "oil_type": "full synthetic",
       "last_oil_change_mi": 176861,
@@ -331,43 +301,43 @@
         "passenger_default": 7,
         "passenger_default_note": "Full 3-row. Captain seats front, bench rows 2+3. All kids ride routinely.",
         "passenger_max_reconfigured": 9,
-        "passenger_max_note": "9-passenger rated. Family of 8 fits \u2014 backup family hauler when NV in shop.",
+        "passenger_max_note": "9-passenger rated. Family of 8 fits — backup family hauler when NV in shop.",
         "reconfig_lead_time_required": false,
         "carseat_config": {
           "note": "All kids ride in Tahoe routinely. Same carseat layout as NV3500."
         },
-        "cargo_at_family_max": "collapsed \u2014 bread-on-Molly's-lap territory. No meaningful cargo space.",
+        "cargo_at_family_max": "collapsed — bread-on-Molly's-lap territory. No meaningful cargo space.",
         "cargo_at_2_adults": "fold seats = Costco-capable. Full cargo access.",
         "cargo_note": "Foldable seats unlock cargo for 2-adult runs. Do not attempt Costco with full family in Tahoe.",
         "trailer_rule": "No large trailer.",
         "long_haul_capable": false,
-        "long_haul_note": "Not for long-haul with full family \u2014 cargo collapses. Denver day trips fine.",
+        "long_haul_note": "Not for long-haul with full family — cargo collapses. Denver day trips fine.",
         "weather_aware_cargo": false,
         "rotation_cadence": null,
         "dispatch_rules": [
           "When NV in shop: Tahoe absorbs family load. Costco postpones or goes to 2-adult-only config.",
-          "Solo or date-night: Tahoe default \u2014 cheapest miles.",
+          "Solo or date-night: Tahoe default — cheapest miles.",
           "Costco with 2 adults: Tahoe (fold seats) or NV3500 (seats configured)."
         ]
       },
       "open_items": [
         {
           "id": "tahoe-heater-hose",
-          "description": "Heater hose tees + coolant flush \u2014 $378 quoted Oct 2024 (19 mo stale). Deferred.",
+          "description": "Heater hose tees + coolant flush — $378 quoted Oct 2024 (19 mo stale). Deferred.",
           "priority": "watch",
           "estimated_cost": 378,
           "route": "Austin Auto"
         },
         {
           "id": "tahoe-axle-seals",
-          "description": "Front axle seals \u2014 $584 quoted 2025-04-10 (RO #43463, 13 mo stale). Deferred.",
+          "description": "Front axle seals — $584 quoted 2025-04-10 (RO #43463, 13 mo stale). Deferred.",
           "priority": "watch",
           "estimated_cost": 584,
           "route": "Austin Auto"
         },
         {
           "id": "tahoe-wobble",
-          "description": "60 mph narrow-band wobble \u2014 extensive front-end work hasn't resolved it. Likely tire balance, tire shape, or driveshaft balance. Budget-deferred, monitor only. NOTE: New tires installed 2026-06-13 (265/70 R16 ROC Rocky Mountain All Terrain II x4) \u2014 reassess after first highway run. May be resolved.",
+          "description": "60 mph narrow-band wobble — extensive front-end work hasn't resolved it. Likely tire balance, tire shape, or driveshaft balance. Budget-deferred, monitor only. NOTE: New tires installed 2026-06-13 (265/70 R16 ROC Rocky Mountain All Terrain II x4) — reassess after first highway run. May be resolved.",
           "priority": "watch",
           "route": "TBD"
         }
@@ -379,14 +349,12 @@
           "shop": "Discount Tire",
           "shop_address": "2000 S Kipling Pkwy, Lakewood CO 80227",
           "mileage": 184181,
-          "mileage_note": "Shop receipt shows 104,179 \u2014 keying error. Actual odometer confirmed 184,181.",
+          "mileage_note": "Shop receipt shows 104,179 — keying error. Actual odometer confirmed 184,181.",
           "total": 751.15,
           "status": "paid",
           "payment": "Visa",
           "work": "New tires x4: 265/70 R16 112T SL SBL ROC Rocky Mountain All Terrain II. Installation + life-of-tire maintenance. Waste tire disposal x4. State tire fee. Road hazard/replacement certificates x4. Military discount applied.",
-          "parts": [
-            "265/70 R16 ROC Rocky Mountain All Terrain II x4"
-          ],
+          "parts": ["265/70 R16 ROC Rocky Mountain All Terrain II x4"],
           "tire_specs": {
             "size": "265/70 R16",
             "inflation_front_psi": 35,
@@ -399,7 +367,7 @@
       "open_deferred_total": 962,
       "permanent_notes": [
         "Full Denver pre-trip workflow required: tires (pressure all four + spare), brakes (pedal feel), cooling (coolant level cold), charging (battery voltage if meter handy), fuel (top off)",
-        "A/C system fully overhauled Jan 2026 (condenser R&R + flush + recharge + blower motor) \u2014 should be solid going forward",
+        "A/C system fully overhauled Jan 2026 (condenser R&R + flush + recharge + blower motor) — should be solid going forward",
         "Water pump + belts replaced Jan 2026; serpentine and A/C belts under 12mo/12k warranty (exp 2027-01-27 or 188,861 mi)",
         "Purchased 2017-06 from Dellenbach Motors (Ft Collins) at 105,019 mi",
         "Tahoe is default vehicle for Denver days"
@@ -413,7 +381,7 @@
           "condition": "new",
           "date_received": "2026-06-03",
           "storage_note": "On/near glovebox",
-          "note": "Spare \u2014 on hand for future glovebox troubleshooting. GMT800 platform, also fits Avalanche."
+          "note": "Spare — on hand for future glovebox troubleshooting. GMT800 platform, also fits Avalanche."
         }
       ]
     },
@@ -427,14 +395,14 @@
       "model": "5640E Turbo skid steer loader",
       "engine": "Deutz BF4M2011, 82 HP diesel",
       "engine_number": "10276938",
-      "parts_catalog_source": "Deutz \u2014 not Gehl \u2014 for all engine parts lookups",
+      "parts_catalog_source": "Deutz — not Gehl — for all engine parts lookups",
       "serial": "GHL05640P00508639",
       "tires": "12-16.5 both axles",
       "tracking_unit": "hours",
       "current_hours": 2009,
       "current_hours_as_of": "2026-05-15",
       "registration_expiry": null,
-      "registration_note": "No road registration \u2014 off-road equipment only",
+      "registration_note": "No road registration — off-road equipment only",
       "oil_change_interval_hours": 250,
       "oil_type": "Delo 15W-40",
       "last_service_hours": null,
@@ -442,64 +410,32 @@
       "next_oil_change_hours": 2250,
       "next_oil_change_note": "Spring 2027 target per fleet-state calendar alert. Next 250-hr mark above 2,009 is 2,250 hrs.",
       "preferred_shop": "High Valley Diesel",
-      "preferred_shop_note": "High Valley mobile service. Faris Machinery (Commerce City / Colorado Springs) is dealer backup \u2014 2.5 hr drive.",
+      "preferred_shop_note": "High Valley mobile service. Faris Machinery (Commerce City / Colorado Springs) is dealer backup — 2.5 hr drive.",
       "co_owned_by": [],
       "capability": {
         "passenger_default": 0,
         "passenger_default_note": "Equipment only. No passenger capacity.",
-        "trailer_rule": "N/A \u2014 not a road vehicle.",
+        "trailer_rule": "N/A — not a road vehicle.",
         "rotation_cadence": "monthly",
         "rotation_note": "Monthly startup minimum. Longer run preferred. Diesel should not sit."
       },
       "implements": [
-        {
-          "name": "Bucket",
-          "type": "standard bucket",
-          "condition": "in service"
-        },
-        {
-          "name": "Pallet forks",
-          "type": "forks",
-          "condition": "in service"
-        },
-        {
-          "name": "Log splitter",
-          "type": "hydraulic log splitter",
-          "condition": "in service",
-          "wear_items": [
-            "hydraulic fittings",
-            "ram seals",
-            "wedge"
-          ]
-        },
-        {
-          "name": "Plow",
-          "type": "plow",
-          "condition": "in service",
-          "note": "Was the Ford F-250's old job, now lives on the skid"
-        }
+        {"name": "Bucket", "type": "standard bucket", "condition": "in service"},
+        {"name": "Pallet forks", "type": "forks", "condition": "in service"},
+        {"name": "Log splitter", "type": "hydraulic log splitter", "condition": "in service", "wear_items": ["hydraulic fittings","ram seals","wedge"]},
+        {"name": "Plow", "type": "plow", "condition": "in service", "note": "Was the Ford F-250's old job, now lives on the skid"}
       ],
       "open_items": [
-        {
-          "id": "gehl-door-switch",
-          "description": "Hydraulic lock door switch INOP \u2014 part on hand, Tim install pending",
-          "priority": "routine",
-          "route": "Tim DIY"
-        },
-        {
-          "id": "gehl-hyd-seeps",
-          "description": "Small hydraulic seeps \u2014 'nothing concerning' per Tim, monitor only",
-          "priority": "watch",
-          "route": "self"
-        }
+        {"id": "gehl-door-switch", "description": "Hydraulic lock door switch INOP — part on hand, Tim install pending", "priority": "routine", "route": "Tim DIY"},
+        {"id": "gehl-hyd-seeps", "description": "Small hydraulic seeps — 'nothing concerning' per Tim, monitor only", "priority": "watch", "route": "self"}
       ],
       "permanent_notes": [
-        "FUEL SYSTEM: gravity feed setup (5 gal). Factory lift pump removed after 2nd failure. Effective tank \u2260 factory spec. Affects long-job range planning.",
-        "Outside storage \u2014 no block heater use (Tim's call). Cold-start wear on glow plugs accepted as ongoing cost. Block heater present (Avon-era 2012 replacement) if ever needed.",
+        "FUEL SYSTEM: gravity feed setup (5 gal). Factory lift pump removed after 2nd failure. Effective tank ≠ factory spec. Affects long-job range planning.",
+        "Outside storage — no block heater use (Tim's call). Cold-start wear on glow plugs accepted as ongoing cost. Block heater present (Avon-era 2012 replacement) if ever needed.",
         "Engine catalog: Deutz for parts lookups, not Gehl",
         "Won at Public Surplus auction 2017-10-18 (27 bids) for $17,717.70. Picked up 2017-10-23 at ~1,300 hrs.",
-        "Former Town of Avon CO Parks & Rec fleet asset 2007-2017 (their Equipment #292) \u2014 10 years of 250-hr PM cycles under Avon",
-        "Fuel-from-sitting issues recurring under Avon ownership \u2014 resolved at Faris 2019 (full fuel system overhaul)"
+        "Former Town of Avon CO Parks & Rec fleet asset 2007-2017 (their Equipment #292) — 10 years of 250-hr PM cycles under Avon",
+        "Fuel-from-sitting issues recurring under Avon ownership — resolved at Faris 2019 (full fuel system overhaul)"
       ],
       "service_history": [
         {
@@ -510,11 +446,7 @@
           "total": 643.61,
           "status": "paid",
           "work": "On-site mobile service. Replace tilt cylinder. O-rings. Oil change 3 gal 15W40 DELO. 28-mile travel charge.",
-          "parts": [
-            "tilt cylinder",
-            "O-rings",
-            "15W40 DELO 3 gal"
-          ]
+          "parts": ["tilt cylinder","O-rings","15W40 DELO 3 gal"]
         }
       ]
     },
@@ -534,61 +466,37 @@
       "preferred_shop": "self",
       "co_owned_by": [],
       "capability": {
-        "tow_vehicles": [
-          "Dodge (preferred)",
-          "Ford (short trips / emergency only)"
-        ],
+        "tow_vehicles": ["Dodge (preferred)","Ford (short trips / emergency only)"],
         "trailer_rule": "Dodge preferred. Ford emergency/short only. NV3500 never.",
         "rotation_cadence": null
       },
       "open_items": [
-        {
-          "id": "deck-tire-dot",
-          "description": "Tire DOT date check \u2014 silent failure mode for low-use trailers. 9,000 ft UV + altitude accelerates dry-rot. Check annually.",
-          "priority": "watch",
-          "route": "self",
-          "cadence": "annual"
-        }
+        {"id": "deck-tire-dot", "description": "Tire DOT date check — silent failure mode for low-use trailers. 9,000 ft UV + altitude accelerates dry-rot. Check annually.", "priority": "watch", "route": "self", "cadence": "annual"}
       ],
       "permanent_notes": [
         "2018: axles repacked, spring packs replaced",
-        "Hardly used \u2014 time-based and tire-age checks dominate over mileage",
+        "Hardly used — time-based and tire-age checks dominate over mileage",
         "Pre-haul: tire DOT date check if >6 months since last check (altitude UV accelerates dry-rot)"
       ]
     },
     {
       "id": "jackson-trailer",
       "name": "Jackson trailer",
-      "aliases": [
-        "pen trailer",
-        "pig trailer",
-        "Jackson 8-pen livestock trailer"
-      ],
+      "aliases": ["pen trailer","pig trailer","Jackson 8-pen livestock trailer"],
       "type": "trailer",
       "year": 2020,
       "make": "Jackson",
       "model": "8-pen livestock trailer",
-      "upgrades": [
-        "Load E tires",
-        "upgraded rims"
-      ],
-      "auxiliary": [
-        "generator adapter",
-        "hardwired IR heater",
-        "fan outlets"
-      ],
+      "upgrades": ["Load E tires","upgraded rims"],
+      "auxiliary": ["generator adapter","hardwired IR heater","fan outlets"],
       "tracking_unit": "registration + electrical",
       "registration_expiry": "2026-10-31",
       "registration_note": "October renewal. Next due 2026-10. CLOSEST TIME-SENSITIVE ITEM IN FLEET. Foreman handoff target: 2026-09-01.",
       "preferred_shop": "self",
-      "co_owned_by": [
-        "Stockyard"
-      ],
+      "co_owned_by": ["Stockyard"],
       "co_ownership_note": "Punch List owns MX. Stockyard owns haul-readiness workflow ('is this rig ready to take pigs to butcher?'). Equipment Access Principle: open use, owned MX.",
       "capability": {
-        "tow_vehicles": [
-          "Dodge only"
-        ],
+        "tow_vehicles": ["Dodge only"],
         "trailer_rule": "Dodge only. No exceptions. No substitutions.",
         "single_point_of_failure": "Dodge is the only vehicle that can pull the Jackson. If Dodge is down during a butcher window, pig haul stalls. Flag proactively."
       },
