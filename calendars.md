@@ -289,8 +289,9 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-17 10:30 [W][K] School advisory apt :: appointments :: stripe=appt :: end=11:30
 [CAL] 2026-06-18 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-06-18 15:30 [D] Apt - Wentz Foot and Ankle :: appointments :: stripe=appt :: end=16:15 :: location="Salida, CO"
+[CAL] 2026-06-18 10:15 [D] Orthopedic apt :: appointments :: stripe=appt :: end=11:15 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: location="Pueblo, CO"
-[CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: tentative=true
+[CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 ALL-DAY [D] Scale certification :: misc :: location="Fairgrounds, Westcliffe, CO" :: notes="time TBD"
@@ -310,6 +311,8 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JULY 2026
 
+[CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
+[CAL] 2026-07-16 13:30 [K][D] New patient apt :: appointments :: stripe=appt :: end=14:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Cañon Family Dental, Cañon City, CO"
 [CAL] 2026-07-09 16:00 Fair cleanup :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
