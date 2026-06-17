@@ -3,7 +3,7 @@
     "file": "punch-list/vehicles.json",
     "owner": "Punch List",
     "schema_version": 2,
-    "last_updated": "2026-06-13",
+    "last_updated": "2026-06-17",
     "seeded_from": "fleet-state-v1.md (intake 2026-05-14) + Punch List deep build (2026-05-15) + capability intake session",
     "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured — obtain and update when known."
   },
@@ -181,12 +181,6 @@
       "single_point_of_failure": "Only vehicle that can pull the Jackson trailer. If Dodge is down during a butcher window, pig haul stalls. Punch List flags proactively when Dodge is in shop near slaughter window.",
       "open_items": [
         {
-          "id": "dodge-alignment",
-          "description": "Alignment still TBD. Rotation + balance completed 2026-06-09 at Les Schwab Cañon City.",
-          "priority": "watch",
-          "route": "High Valley Diesel"
-        },
-        {
           "id": "dodge-frontend-wear",
           "description": "Ball joints + other front-end components showing early play — not at replacement threshold as of 2026-06-09. Monitor. Reassess 2027 based on mileage. Les Schwab quoted full front-end rebuild $4,000 on 2026-06-09 — declined as premature.",
           "priority": "watch",
@@ -196,7 +190,8 @@
       "permanent_notes": [
         "EMISSIONS DELETED — disclose to any shop. Custer County rural exempt from CO emissions testing; does not affect registration cycle.",
         "Diesel-specific service intervals: 15W-40 synthetic blend, 12 qt capacity",
-        "DO NOT USE: Les Schwab Tires Cañon City — $4,000 front-end rebuild upsell attempt 2026-06-09, declined. High Valley Diesel preferred for all Dodge work.",
+        "DO NOT USE: Les Schwab Tires Canon City — $4,000 front-end rebuild upsell attempt 2026-06-09, declined. High Valley Diesel preferred for all Dodge work.",
+        "Alignment deferred 2026-06-17. Tire balance (2026-06-09 Les Schwab) resolved ~98% of wobble. Alignment deferred until next tire change — not worth aligning on current tires.",
         "Purchased ~2020 at ~110k mi",
         "Grid heater replaced ~150k mi (High Valley)",
         "Injectors replaced ~160k mi (High Valley)",
@@ -334,12 +329,6 @@
           "priority": "watch",
           "estimated_cost": 584,
           "route": "Austin Auto"
-        },
-        {
-          "id": "tahoe-wobble",
-          "description": "60 mph narrow-band wobble — extensive front-end work hasn't resolved it. Likely tire balance, tire shape, or driveshaft balance. Budget-deferred, monitor only. NOTE: New tires installed 2026-06-13 (265/70 R16 ROC Rocky Mountain All Terrain II x4) — reassess after first highway run. May be resolved.",
-          "priority": "watch",
-          "route": "TBD"
         }
       ],
       "service_history": [
@@ -370,7 +359,8 @@
         "A/C system fully overhauled Jan 2026 (condenser R&R + flush + recharge + blower motor) — should be solid going forward",
         "Water pump + belts replaced Jan 2026; serpentine and A/C belts under 12mo/12k warranty (exp 2027-01-27 or 188,861 mi)",
         "Purchased 2017-06 from Dellenbach Motors (Ft Collins) at 105,019 mi",
-        "Tahoe is default vehicle for Denver days"
+        "Tahoe is default vehicle for Denver days",
+        "Wobble closed 2026-06-17. New tires (265/70 R16 ROC Rocky Mountain AT II x4, installed 2026-06-13) resolved the wobble. No further action needed until next tire change."
       ],
       "parts_on_hand": [
         {
@@ -430,7 +420,7 @@
         {"id": "gehl-hyd-seeps", "description": "Small hydraulic seeps — 'nothing concerning' per Tim, monitor only", "priority": "watch", "route": "self"}
       ],
       "permanent_notes": [
-        "FUEL SYSTEM: gravity feed setup (5 gal). Factory lift pump removed after 2nd failure. Effective tank ≠ factory spec. Affects long-job range planning.",
+        "FUEL SYSTEM: gravity feed setup (5 gal). Factory lift pump removed after 2nd failure. Effective tank not equal to factory spec. Affects long-job range planning.",
         "Outside storage — no block heater use (Tim's call). Cold-start wear on glow plugs accepted as ongoing cost. Block heater present (Avon-era 2012 replacement) if ever needed.",
         "Engine catalog: Deutz for parts lookups, not Gehl",
         "Won at Public Surplus auction 2017-10-18 (27 bids) for $17,717.70. Picked up 2017-10-23 at ~1,300 hrs.",
