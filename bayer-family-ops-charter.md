@@ -1,8 +1,9 @@
-# Bayer Family Operations — Charter v2.2
+# Bayer Family Operations — Charter v2.3
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-06-10 — v2.2: Full-system audit close. **Automation layer carries no AI** (deterministic plumbing + heartbeats; all reasoning stays Interactive). **Mobile Wave** added to Rollout — Outlook publish via Microsoft Graph, strict one-pen, read-only shares, revert receipts, $0 recurring. Calendar Strategy rewritten: Google Calendars struck as never-deployed, fridge whiteboard formally retired, glass = Cockpit + Outlook. PK tier sharpened (binaries never; data files exit PK once the GitHub MCP read path is proven). Rollout supersedes the legacy 6.x wave series. Convenience roster and support network stripped to `family.md` pointers (Anti-Silo #5 debt paid). Engine routing pointed to Profile. Plan of action ratified 2026-06-10 — execution sequence and purge-wave deferred ledger ride the spin-up, not this file.
+**Last updated:** 2026-06-16 — v2.3: ThinkPad repo path pinned (`C:\Users\ThinkPad X1 Carbon\Documents\family-ops` — two machines, two folders, no conflict with Precision at `C:\dev\family-ops`). Cockpit refresh job designed: standalone `git pull` every 3 min, heartbeat-wrapped, two passive readers (HTTP server + future Outlook job). calendars.md format locked as markdown-only — JSONL migration evaluated and closed, append-only conflicts with event editing and cancellation.
+**Prior:** 2026-06-10 — v2.2: Full-system audit close. **Automation layer carries no AI** (deterministic plumbing + heartbeats; all reasoning stays Interactive). **Mobile Wave** added to Rollout — Outlook publish via Microsoft Graph, strict one-pen, read-only shares, revert receipts, $0 recurring. Calendar Strategy rewritten: Google Calendars struck as never-deployed, fridge whiteboard formally retired, glass = Cockpit + Outlook. PK tier sharpened (binaries never; data files exit PK once the GitHub MCP read path is proven). Rollout supersedes the legacy 6.x wave series. Convenience roster and support network stripped to `family.md` pointers (Anti-Silo #5 debt paid). Engine routing pointed to Profile. Plan of action ratified 2026-06-10 — execution sequence and purge-wave deferred ledger ride the spin-up, not this file.
 **Prior:** 2026-06-08 — v2.1: Added Agent Architecture (two-part machine doctrine) and Capture As You Go to Architecture section.
 **Prior:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
 **Prior:** 2026-06-01 — v1.9: Wave 6.5 complete. **Prior:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only.
@@ -225,7 +226,11 @@ Re-read before adding any agent.
 
 ### Calendar Widget
 
-Served locally via `python -m http.server 8080` from `C:\dev\family-ops`. Reads `calendars.md` live on load with `{cache:'no-store'}`.
+Served locally via `python -m http.server 8080` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`. Reads `calendars.md` live on load with `{cache:'no-store'}`.
+
+**Cockpit refresh job (designed 2026-06-16):** Standalone `git pull` runs every 3 min on the ThinkPad against `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`. Heartbeat-wrapped per Automation doctrine. Cockpit HTTP server and future Outlook publish job are passive readers — neither touches git. Mirrors the widget's 3-min re-fetch cadence. Unbuilt; build rides the next Sonnet execution session.
+
+**ThinkPad vs Precision paths (locked 2026-06-16):** ThinkPad clone = `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`. Precision = `C:\dev\family-ops`. Two machines, two folders, no conflict. `cockpit.md` carries a stale reference to the Precision path for the ThinkPad — corrected at the Purge Wave rewrite.
 
 **Filename convention:** `cal-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. No wave reference in filename. Full rewrite only — never surgical patches.
 
@@ -235,6 +240,7 @@ See `cal-widget.md` for full architecture, schema, and doctrine. (Current build 
 
 ## calendars.md Doctrine (locked)
 
+- **Format: markdown only.** JSONL migration evaluated and closed 2026-06-16 — append-only conflicts with event editing and cancellation. Not reopenable without Matt's explicit say.
 - **No em-dashes** in any calendar entry title or notes field. Hyphen (-) only.
 - **Swim meets = ALL-DAY always.** Never assign a time to a swim meet entry.
 - **end= times required** on all timed events for auto-conflict detection.
@@ -292,8 +298,8 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 **Support network & backup-adult tiers:** live in `family.md` only.
 
 **Technical environment:**
-- Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro
-- ThinkPad X1 Carbon — headless server role: Cockpit host + Automation-layer host + binary archive on a 2TB SSD
+- Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro — repo at `C:\dev\family-ops`
+- ThinkPad X1 Carbon — headless server role: Cockpit host + Automation-layer host + binary archive on a 2TB SSD — repo at `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`
 - OneDrive (M365 Family) — binary-archive transport to the ThinkPad; also hosts the Outlook mailbox carrying the Bayer Family Ops calendar (Mobile Wave)
 - GitHub: Ground3906 · Repo: github.com/Ground3906/family-ops
 - Terminal: PowerShell on Windows (never bash; no grep, use Select-String)
