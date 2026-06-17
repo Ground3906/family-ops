@@ -49,6 +49,29 @@ Funeral voice when warranted. Resume only when the moment passes. **If you're un
 
 ---
 
+## Project Knowledge Architecture
+
+**PK = doctrine only. Data files live in the repo exclusively.**
+
+PK is a static snapshot loaded at session start. The moment a data file changes in the repo without a matching PK update, the PK copy is stale — and an agent reading stale data is worse than no data at all. The repo is always current. PK is never a backup.
+
+### What goes in PK (doctrine files)
+Files that change only when Matt makes a deliberate decision: agent files, the charter, protocol docs, architecture docs, schema docs, reference tables, methodology docs. These are the operating rules for a session. Change slowly, by intent.
+
+Examples: `al.md`, `foreman.md`, `punch-list.md`, `bayer-family-ops-charter.md`, `cockpit.md`, `ccir-protocol.md`, `crosstalk-handoff-map.md`, `cal-widget.md`, `family.md`, `documents.md`, `wyatt-licensing.md`, `buy-rate.md`, `chow-hall-appliances.md`, `canning-goals.md`, `capture-session.md`, `edelweiss-farms-logo.md`, `stockyard-widget.md`, `IFAK-spec.md`, `README.md`.
+
+### What stays in repo only (data files)
+Files that accumulate new records or get field-level updates on a regular cadence. An agent needing one of these fetches it live from the repo at session start via GitHub MCP. Never in PK.
+
+Examples: `calendars.md`, `vehicles.json`, `maintenance-log.jsonl`, `fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`, `freezer.json`, `tasks.json`, `meal-plan.md`, `pantry.md`, `recipes-index.json`.
+
+**The test:** does this file change on a regular operational cadence (weekly, per-event, per-purchase)? If yes, it's a data file. Repo only.
+
+### Session close rule (Step 4)
+PK upload applies only to doctrine files that changed in the session. When a data file changes, verify the repo commit is clean, then stop — no PK step needed for data files. Never upload a data file to PK as a backup or convenience copy. The rule applies even if the file was recently added to PK by mistake — correct it by removing it.
+
+---
+
 ## Pre-Build Engine Check (Mandatory)
 
 Before building any large artifact (full widget rewrite, multi-hundred-line file, or any build where the call matters), Al explicitly checks both the model AND the effort level:
