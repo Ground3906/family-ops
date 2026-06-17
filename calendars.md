@@ -9,18 +9,14 @@ Future schema changes: bump `Schema version`, note migration in `prefs.md`.
 
 ---
 
-## Active Calendars (Phase 1)
+## Active Calendars
 
 | Calendar | Owner | Status |
 |---|---|---|
 | Whiteboard (fridge) | Family | **Authoritative for daily ops.** Tim/Jill hand-write. |
-| `calendars.md` (this file) | Foreman | Digital plan. Phase 1 = propose-only. |
-| Google Calendar — Matt | Matt | TBD — confirm whether in use |
-| Google Calendar — Kalea | Kalea | TBD |
-| Google Calendar — Family | Shared | TBD |
-| Google Calendar — Hunting | Matt | TBD |
+| `calendars.md` (this file) | Foreman | **Source of truth.** Cockpit fetches live via ThinkPad. |
 
-**Phase 1 sync model:** Foreman appends confirmed events to `## Upcoming Events` below. Tim/Jill mirror to the whiteboard. No automation, no external writes. Phase 2 revisits.
+**Sync model:** Foreman writes confirmed events via GitHub MCP. ThinkPad pull job (3-min cadence, pending build) keeps local repo current. Cockpit widget fetches live and reflects on refresh.
 
 ---
 

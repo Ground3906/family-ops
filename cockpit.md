@@ -1,7 +1,7 @@
 # cockpit.md — Bayer Family Ops Display System
 
-**Status:** Hardware PURCHASED. Software gates open. Installation pending.
-**Last updated:** 2026-05-27
+**Status:** Operational. ThinkPad headless. Widget live. Pull job pending — next build.
+**Last updated:** 2026-06-17
 
 ---
 
@@ -123,7 +123,7 @@ use a toggle bolt rated for 30+ lbs or mount a backing board across two studs fi
 ### Thin Client
 
 **None needed.** The PaitentPoint unit IS the computer. Android 13 onboard.
-Chrome browser runs the widget directly. No separate thin client, no separate
+Fully Kiosk Browser runs the widget directly. No separate thin client, no separate
 computer, no additional hardware. One box on the wall, one power cable, done.
 
 ---
@@ -139,24 +139,19 @@ The Cockpit doesn't run standalone. It pulls live data from the ThinkPad.
 | Machine | ThinkPad X1 Carbon |
 | Machine name | strayhawk-pc |
 | Windows user | ThinkPad X1 Carbon (with spaces — legacy) |
-| Role | Headless server — Cockpit host + Phase 2 automation host |
-| OS | Windows (transitioning to headless post-Precision validation) |
+| Role | Dedicated headless server — Cockpit host + automation host |
+| OS | Windows (headless — lid closed, always on) |
 | Location | Office |
 | Network | "7 Little Bears" Wi-Fi + wired Ethernet option |
-| Server software | Python HTTP server (`python -m http.server 8080`) Phase 1 |
-| Serves | `wave-4-5-widget-vX.X.html` and `calendars.md` from `C:\dev\family-ops` |
-| Cockpit reaches it via | Local LAN — Android Chrome on Cockpit → ThinkPad IP:8080 |
-| Phase 2 role | Hosts automation agents, GitHub MCP writes, scheduled jobs |
+| Static IP | 192.168.1.60 |
+| Server software | Python HTTP server (`python -m http.server 8080`) |
+| Serves | `cal-widget-current.html` and `calendars.md` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` |
+| Cockpit reaches it via | Local LAN — Fully Kiosk Browser on Cockpit → 192.168.1.60:8080 |
+| Automation | Scheduled pull job (git pull every 3 min) — pending build |
 
-**Transition path:** ThinkPad is currently active as primary machine (being replaced
-by Dell Precision 5690 "mbay"). Once Precision is validated and ThinkPad is
-demoted, it goes headless — lid closed, always on, always serving. Cockpit host
-is its permanent role. Cockpit Phase 1 runs before ThinkPad goes headless;
-Phase 2 automation runs after.
+**Current state:** ThinkPad X1 Carbon is the dedicated headless server. Dell Precision 5690 (mbay) is the primary workstation. ThinkPad runs lid closed, always on, always serving. Static IP 192.168.1.60 assigned.
 
-**Static IP:** Before going headless, assign the ThinkPad a static local IP
-(or DHCP reservation in the router) so the Cockpit's bookmark never breaks.
-Suggested: `192.168.X.100` — easy to remember, outside DHCP pool.
+**Pull job (pending):** ThinkPad will run a scheduled git pull against `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` every 3 minutes, heartbeat-wrapped. On failure: writes to a log file and surfaces to Matt. Build queued for this session immediately following Purge Wave close.
 
 ---
 
@@ -233,13 +228,13 @@ Firewalla Purple SE  ←── Matt's Android (Firewalla app — management)
     │
     ├── "7 Little Bears" Wi-Fi
     │       │
-    │       ├── ThinkPad X1 Carbon (headless, static IP)
-    │       │   ├── Python HTTP server :8080 → serves widget HTML + calendars.md
+    │       ├── ThinkPad X1 Carbon (headless, 192.168.1.60)
+    │       │   ├── Python HTTP server :8080 → serves cal-widget-current.html + calendars.md
     │       │   ├── GitHub MCP → writes calendars.md from agent calls
-    │       │   └── Phase 2 automation agents (scheduled jobs)
+    │       │   └── Scheduled pull job (git pull every 3 min — pending build)
     │       │
     │       ├── PaitentPoint Cockpit (Android 13, UNRESTRICTED in Firewalla)
-    │       │   └── Chrome → ThinkPad:8080/wave-4-5-widget-vX.X.html
+    │       │   └── Fully Kiosk Browser → 192.168.1.60:8080/cal-widget-current.html
     │       │
     │       ├── Dell Precision 5690 "mbay" (Matt's primary machine)
     │       ├── Kalea's device
@@ -264,43 +259,51 @@ Day of install:
 - [ ] Route single power cable down arm and into corner / behind counter
 - [ ] Connect to "7 Little Bears" Wi-Fi on first boot
 - [ ] Verify Android 13 is accessible (not locked into PatientPoint app)
-- [ ] Install Chrome if not present
-- [ ] Navigate to ThinkPad:8080/[widget filename] — confirm widget loads
-- [ ] Enable Android kiosk / pinned screen mode (Settings → Security → Screen Pinning)
+- [ ] Install Fully Kiosk Browser from Google Play
+- [ ] Configure Fully Kiosk Browser per settings below
+- [ ] Navigate to 192.168.1.60:8080/cal-widget-current.html — confirm widget loads
 - [ ] Set display to "Never sleep" (Settings → Display → Screen timeout → Never)
 - [ ] Set brightness to comfortable always-on level
 - [ ] Add Cockpit to Firewalla unrestricted group
 
 ---
 
-## Android Kiosk Setup (Phase 1)
+## Cockpit Software Configuration
 
-Phase 1 uses Android's native Screen Pinning — no MDM software needed.
+**Browser:** Fully Kiosk Browser (active)
+**Start URL:** `http://192.168.1.60:8080/cal-widget-current.html`
 
-1. Open Chrome, navigate to widget URL, go full screen
-2. Settings → Security → Screen Pinning → ON
-3. Open Recents, tap the pin icon on Chrome
-4. Screen is now pinned — exits only with Back + Recents held simultaneously
-5. Set as the boot default: add Chrome shortcut to home screen, set as default
-   launcher action if available
+| Setting | Value |
+|---------|-------|
+| Auto-reload idle | 86400s |
+| All 4 auto-reload triggers | ON |
+| Cache clear on reload | ON |
+| Web storage/history/cookies delete | OFF |
+| Load current page on reload | OFF |
+| Skip reload if showing start URL | OFF |
 
-**Phase 2 option:** Fully Kiosk Browser — runs best on Android 6–16,
-supports Android 13. Provides remote management, auto-restart, motion-triggered
-display wake, brightness scheduling, and lockdown to single URL.
-Free tier is sufficient for Cockpit use. Phase 2 upgrade if Phase 1 Screen Pinning
-proves insufficient.
+**Setup steps:**
+1. Install Fully Kiosk Browser from Google Play
+2. Set Start URL: `http://192.168.1.60:8080/cal-widget-current.html`
+3. Configure settings per table above
+4. Enable kiosk mode / lockdown to single URL
+5. Set display to "Never sleep" (Settings → Display → Screen timeout → Never)
+6. Set brightness to comfortable always-on level
+7. Add Cockpit to Firewalla unrestricted group
+
+**Fallback:** Android Screen Pinning (native) if Fully Kiosk proves insufficient. Open Chrome, navigate to widget URL, go full screen. Settings → Security → Screen Pinning → ON. Open Recents, tap the pin icon on Chrome. Exits only with Back + Recents held simultaneously.
 
 ---
 
-## Phase 2 Widget Design Constraints
+## Widget Design Constraints
 
-Every Phase 2 UI decision must be validated against these specs:
+Every UI decision must be validated against these specs:
 
 | Constraint | Value | Design implication |
 |------------|-------|--------------------|
 | Resolution | 1920×1080 | Design at 1080p exactly. No 4K assumptions ever. |
 | Screen size | 32" | Text must be legible at 8–10ft from bar stools |
-| OS | Android 13 / Chrome | No Windows APIs. Standard HTML/CSS/JS only. |
+| OS | Android 13 / Fully Kiosk Browser | No Windows APIs. Standard HTML/CSS/JS only. |
 | Touch | Capacitive multi-touch | Minimum 44px tap targets. Finger use, not stylus. |
 | Close viewing | 2–4ft (counter) | Font must not be overwhelming at arm's length |
 | Far viewing | 8–10ft (bar stools) | Key info must read without stepping closer |
@@ -309,21 +312,19 @@ Every Phase 2 UI decision must be validated against these specs:
 | Input | Touch only | No keyboard, no mouse, no forms. Ever. |
 | Always-on | Yes | Dark theme default. Low burn-in risk. |
 | Night mode | After 21:00 | Reduced brightness. Minimal stimulation. |
-| Audio | Integrated speakers | Phase 2: agent audio prompts are viable |
+| Audio | Integrated speakers | Phase 3: agent audio prompts |
 | Network | LAN only | Widget fetches from ThinkPad over local network |
 | Offline behavior | Must fail gracefully | Show last cached state if ThinkPad unreachable |
 
 ---
 
-## Software Gates — Install Readiness
+## Software Gates
 
-Hardware is purchased and in hand. Installation proceeds when software gates are green.
-Gates 1 and 4 cleared. Gates 2 and 3 still open — install can begin in parallel;
-real operational data entry holds until S8 durability fix ships.
+Hardware in hand. ThinkPad headless and serving. Installation can proceed. Real operational data entry holds until durability gates clear.
 
 | Gate | Description | Status |
 |------|-------------|--------|
-| 1 | Wave 4.5 widget loads clean — Kalea can use without instruction | ✅ GREEN — v2.9 |
+| 1 | Widget loads clean — Kalea can use without instruction | ✅ GREEN — v5.4+ |
 | 2 | At least 2 agents writing to `calendars.md` reliably via Foreman handoff | 🔲 OPEN |
 | 3 | Stockyard S8 durability fix shipped | 🔲 OPEN |
 | 4 | ThinkPad running headless clean for 1 full week without babysitting | ✅ GREEN |
@@ -351,12 +352,11 @@ It should be purchased and configured before Wyatt gets significant device freed
 
 ## Phase 3 North Star
 
-**Status:** Vision locked. No build until all Phase 1/2 gates are green.
+**Status:** Vision locked. No build until all prior gates are green.
 **Last captured:** 2026-05-27
 
-This section documents the full end-state vision for the Cockpit. Every Phase 1 and
-Phase 2 build decision should point toward this north star without overbuilding ahead
-of its time.
+This section documents the full end-state vision for the Cockpit. Every current
+build decision should point toward this north star without overbuilding ahead of its time.
 
 ---
 
@@ -461,9 +461,6 @@ Cockpit shows real farm state, not just calendar state.
 Screen sleeps at 21:00. Someone enters the kitchen — it wakes. No tap required.
 Fully Kiosk Browser handles this natively (free tier sufficient).
 
-Phase 2 upgrade: swap Android Screen Pinning for Fully Kiosk Browser if Phase 1
-proves insufficient. Motion wake is a Fully Kiosk feature.
-
 ---
 
 ### Foundation Placeholders — Wired in v2.9
@@ -494,4 +491,3 @@ These are in the widget now. Dormant. Do not activate without Phase 3 gate clear
 | Video calling | $0 | Android WebRTC / Google Meet |
 | USB camera | ~$30 one-time | Phase 3 hardware add |
 | **Phase 3 recurring** | **$22/mo** | |
-
