@@ -58,12 +58,12 @@ PK is a static snapshot loaded at session start. The moment a data file changes 
 ### What goes in PK (doctrine files)
 Files that change only when Matt makes a deliberate decision: agent files, the charter, protocol docs, architecture docs, schema docs, reference tables, methodology docs. These are the operating rules for a session. Change slowly, by intent.
 
-Examples: `al.md`, `foreman.md`, `punch-list.md`, `bayer-family-ops-charter.md`, `cockpit.md`, `ccir-protocol.md`, `crosstalk-handoff-map.md`, `cal-widget.md`, `family.md`, `documents.md`, `wyatt-licensing.md`, `buy-rate.md`, `chow-hall-appliances.md`, `canning-goals.md`, `capture-session.md`, `edelweiss-farms-logo.md`, `stockyard-widget.md`, `IFAK-spec.md`, `README.md`.
+Examples: `al.md`, `foreman.md`, `punch-list.md`, `chow-hall.md`, `roster.md`, `bayer-family-ops-charter.md`, `cockpit.md`, `ccir-protocol.md`, `crosstalk-handoff-map.md`, `cal-widget.md`, `family.md`, `documents.md`, `wyatt-licensing.md`, `buy-rate.md`, `chow-hall-appliances.md`, `canning-goals.md`, `capture-session.md`, `edelweiss-farms-logo.md`, `stockyard-widget.md`, `IFAK-spec.md`, `README.md`.
 
 ### What stays in repo only (data files)
 Files that accumulate new records or get field-level updates on a regular cadence. An agent needing one of these fetches it live from the repo at session start via GitHub MCP. Never in PK.
 
-Examples: `calendars.md`, `vehicles.json`, `maintenance-log.jsonl`, `fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`, `freezer.json`, `tasks.json`, `meal-plan.md`, `pantry.md`, `recipes-index.json`.
+Examples: `calendars.md`, `vehicles.json`, `maintenance-log.jsonl`, `fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`, `freezer.json`, `tasks.json`, `chow-hall/meal-plan-current.json`, `chow-hall/meal-plan-log.jsonl`, `pantry.md`, `recipes-index.json`.
 
 **The test:** does this file change on a regular operational cadence (weekly, per-event, per-purchase)? If yes, it's a data file. Repo only.
 

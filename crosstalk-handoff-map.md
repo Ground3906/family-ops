@@ -189,7 +189,7 @@ A handoff that bounces back unprocessed twice = stop and surface to the human vi
 | Documents / renewals | Punch List | `punch-list/documents.md` |
 | Wyatt licensing | Punch List | `punch-list/wyatt-licensing.md` |
 | CCIR routing doctrine | Household-wide | `ccir-protocol.md` |
-| Meals | Chow Hall | `chow-hall/meal-plan.md` |
+| Meals | Chow Hall | `chow-hall.md` |
 | Game meat | Chow Hall | `chow-hall/freezer.json` |
 | Hunting seasons | Mystery Ranch | `mystery-ranch/seasons.md` |
 | Livestock, eggs, feed | Stockyard | `stockyard/` (eggs-log, flock-config, pigs, turkeys) — *durability-gated* |

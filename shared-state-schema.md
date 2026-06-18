@@ -13,6 +13,8 @@
 ├── README.md                  ← What this is + how agents use it (cold-session read first)
 ├── al.md                      ← Al orchestrator definition
 ├── foreman.md                 ← Foreman calendar agent definition
+├── chow-hall.md               ← Chow Hall agent definition
+├── roster.md                  ← Agent roster — crew list, readiness flags, definition pointers
 ├── [other agent .md files]    ← Agent definitions live at repo root
 │
 ├── ccir-protocol.md           ← Household urgent-issue routing doctrine
@@ -58,9 +60,13 @@
 │   └── harvest-log.md         ← What''s coming in, when, how much
 │
 ├── chow-hall/
-│   ├── meal-plan.md           ← Current + upcoming weeks
-│   ├── pantry.json
-│   └── freezer.json           ← Game meat tracker
+│   ├── meal-plan-current.json ← Live weekly plan (bounded state — written on first run)
+│   ├── meal-plan-log.jsonl    ← Weekly plan archive (append-forever)
+│   ├── buy-rate.md            ← Buy-rate doctrine
+│   ├── chow-hall-appliances.md← Appliance specs + altitude doctrine
+│   ├── canning-goals.md       ← Canning targets
+│   ├── pantry.md              ← Pantry inventory (narrative)
+│   └── freezer.json           ← Protein inventory (bounded state)
 │
 ├── first-aid/                 ← SENSITIVE — see access notes
 │   ├── people/<initials>.md
@@ -296,7 +302,7 @@ Indoor hydroponic inventory. Matt-updated when planting or harvesting. Gardyn ap
 ```
 
 ### `chow-hall/freezer.json`
-Game meat inventory. Drives meal planning + butcher-trip timing.
+Protein inventory. Drives meal planning + butcher-trip timing.
 
 ```json
 {
