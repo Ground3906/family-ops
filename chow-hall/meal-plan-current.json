@@ -2,10 +2,34 @@
   "_meta": {
     "file": "chow-hall/meal-plan-current.json",
     "owner": "Chow Hall",
-    "status": "no-active-plan",
+    "status": "active",
     "week_of": null,
-    "note": "Cleared 2026-06-17 (test plan removed). Next plan is built live via Chow Hall + Kalea on her phone; on Kalea lock-in it publishes to calendars.md as [MEAL] entries, which the Cockpit reads."
+    "note": "Single-night entry locked via Al session 2026-06-18. Built live with Kalea, no Wednesday draft this cycle."
   },
-  "dinners": [],
+  "dinners": [
+    {
+      "date": "2026-06-18",
+      "meal": "Korean beef, rice, frozen broccoli",
+      "protein": {
+        "item": "Ground beef 80/20",
+        "source_id": "frz-ground-beef",
+        "category": "commercial-protein",
+        "qty_used_lbs": 1
+      },
+      "starch": {
+        "item": "White rice",
+        "source": "pantry bulk bin"
+      },
+      "vegetable": {
+        "item": "Frozen broccoli",
+        "source_id": "frz-frozen-broccoli",
+        "category": "commercial-produce",
+        "qty_used_bags": 1
+      },
+      "notes": "Soy sauce, brown sugar, garlic, ginger, sesame oil assumed on hand as untracked staples.",
+      "confirmed_by": "Kalea",
+      "locked_at": "2026-06-18"
+    }
+  ],
   "shortfalls": []
 }
