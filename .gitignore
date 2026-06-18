@@ -1,4 +1,4 @@
-﻿# OS junk
+# OS junk
 Thumbs.db
 .DS_Store
 
@@ -26,3 +26,6 @@ venv/
 *.log
 .claude/settings.local.json
 WAVE4-HANDOFF.md
+
+# Runtime state — written by pull-job, never committed
+last-pull.json
