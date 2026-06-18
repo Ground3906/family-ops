@@ -2,95 +2,10 @@
   "_meta": {
     "file": "chow-hall/meal-plan-current.json",
     "owner": "Chow Hall",
-    "plan_built": "2026-06-12",
-    "week_of": "2026-06-13 to 2026-06-19",
-    "status": "draft-pending-kalea-review",
-    "cadence_note": "FIRST PLANNING RUN — built Friday, off the Wednesday cadence. Normal Wed-build/Thu-review rhythm starts next week. Kalea review must happen in her morning/early-afternoon window.",
-    "preferences_state": "All preference fields in prefs.md are empty. Planned without constraints per doctrine. No guessing.",
-    "inventory_state": "Counts are starter estimates, not real numbers. Planned loose per Day-One Count Handling."
+    "status": "no-active-plan",
+    "week_of": null,
+    "note": "Cleared 2026-06-17 (test plan removed). Next plan is built live via Chow Hall + Kalea on her phone; on Kalea lock-in it publishes to calendars.md as [MEAL] entries, which the Cockpit reads."
   },
-  "dinners": [
-    {
-      "date": "2026-06-13",
-      "day": "Sat",
-      "meal": "Spaghetti and Meatballs",
-      "recipe_id": "spaghetti-and-meatballs",
-      "protein": "ground elk",
-      "calendar_context": "Wyatt home from Sweden. St. Anthony feast day (bread tradition). Fr. Joe + Uncle Doug birthdays.",
-      "notes": "Welcome-home dinner, family favorite. Sourdough dinner rolls on the side nod to the St. Anthony bread tradition."
-    },
-    {
-      "date": "2026-06-14",
-      "day": "Sun",
-      "meal": "Beef Roast (slow cooker)",
-      "recipe_id": "beef-roast-ema",
-      "protein": "elk roast (sub per recipe)",
-      "calendar_context": "SACRED Sunday. Mass 08:00, Wyatt + Molly serving.",
-      "notes": "Set the slow cooker before Mass. Zero work between church and the 17:30 plate."
-    },
-    {
-      "date": "2026-06-15",
-      "day": "Mon",
-      "meal": "Pulled pork sandwiches",
-      "recipe_id": null,
-      "protein": "pulled pork, cooked (freezer tub)",
-      "calendar_context": "DINNER CONFLICT: swim practice 17:30-19:30, five kids + Kalea at Florence Pool. Matt + Wyatt fairgrounds cleanup AM.",
-      "notes": "Zero-cook night. Thaw tub in fridge from Sunday. Swimmers eat on return ~19:45 or grab early. Uses 1 of 3 tubs on hand."
-    },
-    {
-      "date": "2026-06-16",
-      "day": "Tue",
-      "meal": "Enchiladas",
-      "recipe_id": "enchiladas",
-      "protein": "ground elk",
-      "calendar_context": "Wyatt dentist 12:00 Cañon City. Swim AM (W/C/E only). Molly + Rileigh art camp.",
-      "notes": "Heirloom. Kalea home in the PM. Check corn tortillas + canned red enchilada sauce in pantry — flagged on shortfall list."
-    },
-    {
-      "date": "2026-06-17",
-      "day": "Wed",
-      "meal": "Lasagna (frozen family pan)",
-      "recipe_id": "lasagna",
-      "protein": "elk (already in the pan)",
-      "calendar_context": "DINNER CONFLICT: swim practice 17:30-19:30. Kalea WIC recert 13:30, school advisory 10:30. Heavy day.",
-      "notes": "Freezer-to-oven night. Matt slides the pan in ~16:30, ready for early eaters and swimmers on return. Uses 1 of 2 pans on hand."
-    },
-    {
-      "date": "2026-06-18",
-      "day": "Thu",
-      "meal": "Korean Beef Rice Bowls",
-      "recipe_id": "korean-beef-rice-bowls",
-      "protein": "ground elk",
-      "calendar_context": "Kalea apt 13:00. Matt apt 15:30 Salida. Swim AM (W/C/E). Art camp.",
-      "notes": "Quick stovetop after a scattered appointment day. Rice in the cooker early."
-    },
-    {
-      "date": "2026-06-19",
-      "day": "Fri",
-      "meal": "Coke Burgers",
-      "recipe_id": "coke-burgers",
-      "protein": "ground elk",
-      "calendar_context": "Last day of art camp. Quiet evening before Saturday swim meet + livestock clinic.",
-      "notes": "Heirloom grill night to close the week. Buns on the shortfall list. Early night — Pueblo swim meet is an all-day Saturday."
-    }
-  ],
-  "shortfalls": [
-    { "item": "Corn tortillas", "route": "grocery", "for": "Enchiladas Tue", "flag": "pantry check first — may be on hand" },
-    { "item": "Red enchilada sauce, canned (2x 10oz)", "route": "grocery", "for": "Enchiladas Tue", "flag": "pantry check first" },
-    { "item": "Cheddar + Monterey Jack, shredded", "route": "grocery", "for": "Enchiladas Tue", "flag": "pantry/fridge check first" },
-    { "item": "Burger buns", "route": "grocery", "for": "Coke Burgers Fri", "flag": null },
-    { "item": "Spaghetti noodles + sauce ingredients", "route": "grocery", "for": "Spaghetti Sat", "flag": "pantry check first" },
-    { "item": "Green onions", "route": "grocery", "for": "Enchiladas Tue", "flag": "check Gardyn first per doctrine" }
-  ],
-  "protein_draw_estimate": {
-    "ground_elk_lbs": 6,
-    "elk_roast_lbs": 3,
-    "pulled_pork_tubs": 1,
-    "lasagna_pans": 1,
-    "note": "Estimates against starter inventory numbers. Reconcile is ride-along."
-  },
-  "gap_shop": {
-    "window": "Sunday 2026-06-14 after church",
-    "note": "Off-cadence first week: shortfall list goes to Punch List after Kalea's review, which must precede Sunday. Tight turnaround — review Saturday morning if possible."
-  }
+  "dinners": [],
+  "shortfalls": []
 }
