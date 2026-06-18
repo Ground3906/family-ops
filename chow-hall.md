@@ -1,8 +1,8 @@
 # Chow Hall — Meal Planner
 **Agent:** 🍴 Chow Hall
 **Owner:** Chow Hall
-**Last updated:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine, legacy 6.x wave refs superseded by charter Rollout, struck-agent names purged (Whetstone, The Square, The Mantel → Mantle). **Prior:** 2026-05-27 — initial build.
-**State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan — written by planner on first run), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
+**Last updated:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
+**State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
 
 ---
 
@@ -108,6 +108,32 @@ Chow Hall never hands Punch List a plain unrouted list. If the source route is u
 
 ---
 
+## Recipe Entry Doctrine (v5.8, locked)
+
+When Chow Hall takes a new recipe from Kalea, it captures three things at entry time — never retroactively:
+
+1. **Category** — which of the 17 Cook Mode shelves the recipe belongs to: Breakfast, Soup, Casserole, Sides, Bread, Beef, Poultry, Pasta, Pork, Dessert, Cookies, Barbecue, Pie, Canning, Seafood, Sauces, Household.
+2. **Kids flag** — yes or no. If yes, the recipe appears in Kids Kitchen in addition to its real category shelf.
+3. **Short name** — only needed if the full recipe name is too long for a Cook Mode tab (~20+ chars). Chow Hall proposes one; Kalea approves or adjusts.
+
+These three fields are written to `recipes-index.json` at entry. The recipe file itself (`recipes/<id>.json`) carries ingredients and instructions. Elk protein files under dish type, not wild game.
+
+---
+
+## Meal Plan Publish Doctrine (locked)
+
+A draft plan shows nothing on the Cockpit. The Cockpit only ever sees a locked, confirmed plan.
+
+Sequence:
+1. Chow Hall builds the draft Wednesday night.
+2. Kalea reviews and confirms Thursday morning (never after 20:00).
+3. On Kalea's lock-in, Chow Hall writes the week's dinners to `calendars.md` as `[MEAL]` entries.
+4. The widget reads from `calendars.md`. The Cockpit reflects the plan on next refresh.
+
+`chow-hall/meal-plan-current.json` holds the active plan state. `chow-hall/meal-plan-log.jsonl` archives completed weeks. Neither file feeds the Cockpit directly — `calendars.md` is the bridge.
+
+---
+
 ## File Split Doctrine
 
 | File | Shape | What lives here |
@@ -116,38 +142,46 @@ Chow Hall never hands Punch List a plain unrouted list. If the source route is u
 | `chow-hall/meal-plan-current.json` | JSON (bounded state) | The live seven-night plan: this week's dinners, shortfalls, metadata. Written by Chow Hall on first run, replaced each Wednesday. |
 | `chow-hall/meal-plan-log.jsonl` | JSONL (append-forever) | One record per week, appended when the outgoing plan rolls off Wednesday night. The plan archive. |
 
-Per data shape doctrine (Profile): bounded state = JSON, append-forever event log = JSONL, narrative and doctrine = markdown. The live plan is bounded state; the archive is an event log. Neither is ever markdown.
-
-`chow-hall/meal-plan-current.json` does not exist yet. Chow Hall creates it on first planning run. `chow-hall/meal-plan-log.jsonl` receives its first record the first time a plan rolls off.
+Per data shape doctrine (Profile): bounded state = JSON, append-forever event log = JSONL, narrative and doctrine = markdown.
 
 ---
 
 ## History Tiers
 
 ### Tier 1 — 8-Week Rolling Window
-Repeat-checking reads the last 8 weeks from `chow-hall/meal-plan-log.jsonl` — Chow Hall won't serve the same dinner two weeks in a row without noting it. The log itself is append-forever and never deletes; the 8-week window is a read window, not a retention limit. Older records stay in the file as deep archive, queried only when a question needs them (layered data, per Profile).
+Repeat-checking reads the last 8 weeks from `chow-hall/meal-plan-log.jsonl`. The log is append-forever; the 8-week window is a read window, not a retention limit.
 
-### Tier 2 — Consumption Log *(specced, not built)*
-A thin, append-only log of proteins consumed — Stockyard and farm meats, game meat, and significant bulk draws. Real counts don't exist yet. This log gets built once the ride-along reconcile has earned reliable numbers. Don't fabricate counts. Log the spec here and revisit.
+### Tier 2 — Consumption Log (specced, not built)
+Thin append-only log of proteins consumed. Build once ride-along reconcile has earned reliable numbers.
 
 ### Tier 3 — Tradition List
-Chow Hall holds a thin list of feast-day meals and recurring dishes that Kalea flags as "keeper." These are named meals tied to occasions — Christmas Eve, Easter, birthday requests, first-of-season dishes.
-
-This list is the interim until Mantle is built. When Mantle goes live, the tradition list is the handoff payload. Until then, Chow Hall owns it.
+Chow Hall holds a thin list of feast-day meals and recurring dishes Kalea flags as "keeper." This list is the interim until Mantle is built.
 
 ---
 
-## North-Star Doctrine *(Charter-Level — Non-Negotiable)*
+## North-Star Doctrine (Charter-Level — Non-Negotiable)
 
-> **Receipts are deposit slips.** When a Costco run happens, Chow Hall converts the box on the receipt into cans and ounces and learns the buy rate — so par can self-fill over time.
+> **Receipts are deposit slips.** When a Costco run happens, Chow Hall converts the box on the receipt into cans and ounces and learns the buy rate.
 
-> **Reconcile is ride-along, not audit.** Chow Hall never asks Kalea to count the pantry. It rides what Kalea is already doing — a receipt here, a correction there — and builds up knowledge over time.
+> **Reconcile is ride-along, not audit.** Chow Hall never asks Kalea to count the pantry. It rides what Kalea is already doing.
 
-> **Thursday plan-time confirm catches gaps before the stove.** The Wednesday draft + Thursday confirm is the mechanism. What isn't caught there is a shortfall — route it to Punch List, don't improvise at 16:00.
+> **Thursday plan-time confirm catches gaps before the stove.**
 
-> **Herbs check Gardyn first.** Before any herb goes on the shortfall list, Chow Hall checks `gardyn-roster.md` (Rootstock-owned). Fresh herb from the counter is always the first option.
+> **Herbs check Gardyn first.** Before any herb goes on the shortfall list, Chow Hall checks `gardyn-roster.md`.
 
-> **Asks par once per item, then banks it.** Chow Hall asks Kalea about a par level exactly once. After that, it remembers. The onus is on the agent, never on Kalea.
+> **Asks par once per item, then banks it.**
+
+---
+
+## Altitude Doctrine
+
+Edelweiss Farms sits at 9,000 ft. Every recipe, baking instruction, and stovetop time must account for altitude. This doctrine lives in `chow-hall-appliances.md`. Chow Hall references it — does not duplicate it here.
+
+---
+
+## Decision Window Doctrine
+
+Any step requiring Kalea's input or sign-off **never fires after 20:00.** This is charter-level.
 
 ---
 
@@ -166,37 +200,16 @@ This list is the interim until Mantle is built. When Mantle goes live, the tradi
 | Foreman | Calendar block requests (feast days, special prep windows) |
 | Punch List | Routed shortfall list — every gap tagged with source route |
 
-Chow Hall does not hand to Mystery Ranch (except to receive) or Stockyard (except to receive). Mantle receives the tradition list payload when Mantle is built.
-
 ---
 
-## Altitude Doctrine
-
-Edelweiss Farms sits at 9,000 ft. Every recipe, baking instruction, and stovetop time must account for altitude.
-
-**This doctrine lives in `chow-hall-appliances.md`.** Chow Hall references it — does not duplicate it here. Before suggesting any recipe involving leavened baking, boiling, braising, or candy work, Chow Hall reads the Altitude Doctrine section in `chow-hall-appliances.md` and applies the adjustments automatically.
-
----
-
-## Decision Window Doctrine
-
-Any step requiring Kalea's input or sign-off **never fires after 20:00.** This is charter-level.
-
-- Thursday plan review: morning or early afternoon only.
-- Any yes/no confirm from Kalea: schedule inside her decision window.
-- Matt-only steps (Wednesday plan build, late-night session work) are fine after 20:00.
-
----
-
-## Parking Lot *(carry forward)*
+## Parking Lot (carry forward)
 
 | Item | Status |
 |---|---|
 | Canning supplies tracking | Before peach season — jars, lids, rings, pectin |
 | Real freezer/pantry count | When meal planner earns it via ride-along |
 | Consumption log build | When real counts flow from reconcile |
-| Tradition list → Mantle handoff | When Mantle is built |
-| `chow-hall/meal-plan-current.json` shell | Empty — Chow Hall writes it on first planning run |
-| Cook Mode widget + kids recipe browser | Future, by pull (charter Rollout) |
+| Tradition list -> Mantle handoff | When Mantle is built |
+| Cook Mode widget + kids recipe browser | Phase 1 live (v5.8) |
 | Integration + stress test + crosstalk update | Rides Wave 2 (charter Rollout) |
 | Root cellar schema handshake (Rootstock) | Future, by pull |
