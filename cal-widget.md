@@ -1,7 +1,7 @@
 # cal-widget.md — Calendar Widget Reference
 
 **Filename convention:** `cal-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. No wave reference in filename. `wave-4-5-widget-*` naming fully retired.
-**Current version:** `cal-widget-v5.4.html`
+**Current version:** `cal-widget-v5.8.html`
 **Cockpit URL:** `http://192.168.1.60:8080/cal-widget-current.html` — NEVER changes. `cal-widget-current.html` always mirrors latest version.
 **Data sources:** `calendars.md` + `recipes-index.json` + `recipes/*.json` — all fetched live with `{cache:'no-store'}`
 
@@ -19,9 +19,9 @@
 
 ## Cockpit Hardware (locked)
 
-- **Device:** PatientPoint P-WAL-230-ELC-02 — Android 13, 1920×1080, 4GB RAM. Kitchen, Ergotron arm.
+- **Device:** PatientPoint P-WAL-230-ELC-02 — Android 13, 1920x1080, 4GB RAM. Kitchen, Ergotron arm.
 - **Browser:** Fully Kiosk Browser. Start URL: `http://192.168.1.60:8080/cal-widget-current.html`
-- **Fully Kiosk settings:** Auto-reload idle: 86400s. All 4 auto-reload triggers: ON. Cache clear on reload: ON. Web storage/history/cookies delete: OFF. Load current page on reload: OFF. Skip reload if showing start URL: OFF.
+- **Fully Kiosk settings:** Auto-reload idle: 86400s. Scheduled daily reload: 00:01. All 4 auto-reload triggers: ON. Cache clear on reload: ON. Web storage/history/cookies delete: OFF. Load current page on reload: OFF. Skip reload if showing start URL: OFF.
 - **Server:** ThinkPad X1 Carbon `192.168.1.60`, Python HTTP server on `:8080`, repo at `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`
 
 ## Cockpit Deploy Pattern (Option C, locked)
@@ -29,7 +29,7 @@
 Every session close:
 1. Build `cal-widget-vX.X.html`
 2. `Copy-Item cal-widget-vX.X.html cal-widget-current.html`
-3. `git add cal-widget-vX.X.html cal-widget-current.html` → commit → push
+3. `git add cal-widget-vX.X.html cal-widget-current.html` -> commit -> push
 4. ThinkPad: `git pull`
 5. Cockpit auto-refreshes via Fully Kiosk or manual reload — picks up new version. URL never changes.
 
@@ -39,19 +39,23 @@ Every session close:
 
 | Version | Date | Key Changes |
 |---------|------|-------------|
-| v2.0–v2.8 | 2026-05-25/26 | Wave 4.5 — calendar core, categories, conflict detection, cook mode stub |
+| v2.0-v2.8 | 2026-05-25/26 | Wave 4.5 — calendar core, categories, conflict detection, cook mode stub |
 | v3.0 | 2026-05-27 | Cook Mode full build — tabs, recipe cards, timers, worn recipe card theme |
-| v3.1–v3.5 | 2026-05-27 | Cook Mode recipe browser, manual timer, Kids Kitchen, servings, start recipe gate |
-| v3.6–v3.9 | 2026-05-28 | Timer auto-pop, 2×2 layout, 3-section nav ribbon, snap-to-today, antique placard, scripture launch |
-| v3.10 | 2026-05-29 | Two-layer nav family, 2-card cook center, Kids Kitchen → rail category, What's for Dinner added |
+| v3.1-v3.5 | 2026-05-27 | Cook Mode recipe browser, manual timer, Kids Kitchen, servings, start recipe gate |
+| v3.6-v3.9 | 2026-05-28 | Timer auto-pop, 2x2 layout, 3-section nav ribbon, snap-to-today, antique placard, scripture launch |
+| v3.10 | 2026-05-29 | Two-layer nav family, 2-card cook center, Kids Kitchen -> rail category, What's for Dinner added |
 | v3.11 | 2026-05-29 | 96px bars, marquee padding, gold hardware, height parity all bottom bar buttons |
 | v3.12 | 2026-05-29 | Cook Mode interior — servings bar, step layout, fonts, altitude, timer onclick, rail headers, emoji encoding |
 | v4.0 | 2026-05-29 | Ingredient grid unified, snap-to-today double rAF fix, Cook Mode scroll anchor |
 | v5.0 | 2026-06-01 | **Wave 6.5 — Meal Planner + Widget Integration.** [MEAL] tag parser, live recipe fetch, Meal Planner screen, What's for Dinner, Cook Mode splash, Coming Up rail, cancel= treatment, liturgical pill fix, span all-bottom stack |
-| v5.1 | 2026-06-02 | **Wave 6.6 Chunk A.** `--cell-h` dynamic 5-row grid, dnum 40→28px, cell-hdr-h 54→38px, banner midpoint fix, adjacent month fill, night mode white flash fix, agent buttons 62→72px, month first/last row border suppression |
+| v5.1 | 2026-06-02 | **Wave 6.6 Chunk A.** `--cell-h` dynamic 5-row grid, dnum 40->28px, cell-hdr-h 54->38px, banner midpoint fix, adjacent month fill, night mode white flash fix, agent buttons 62->72px, month first/last row border suppression |
 | v5.2 | 2026-06-02 | **Wave 6.6 Chunk B.** WFD rebuilt as month-view clone, week mode rebuilt (7-col events top / 7-col briefs bottom), Meal Planner rebuilt on buildWkRow, WebView sharpness CSS |
 | v5.3 | 2026-06-02 | **Wave 6.6 Chunk C.** Meal Planner font 14px, timer padding reduced, auto-refresh every 3 min, rolling 4-row, conflict flag penalty removed, week/meal planner unlimited events |
 | v5.4 | 2026-06-02 | **Wave 6.6 Chunk D.** Rolling 3-row / month+WFD 5-row split via `--cell-h`/`--cell-h-month`, `ROLL_MAX_EVENTS=7`, `MAX_EVENTS=4`, scroll restore on WFD/meal planner close, fixed 4-week arrow nav, refreshCalendar rolling fix |
+| v5.5 | 2026-06 | Wave 6.7 intermediate |
+| v5.6 | 2026-06-05 | **Wave 6.7 Bug Fixes (5).** Auto-shutoff no longer re-fires every 60s after manual wake. Month button always lands on current month. Cell-face location display reverted. Night button works from any screen/mode. Cook Mode undefined-undefined removed; lard-soap removed from index. |
+| v5.7 | 2026-06-05 | **Wave 6.7 Timer Numpad.** Manual timer input replaced with number pad (1-2-3 layout). Digits fill left-to-right: 1-2 = minutes, 3-4 = hours:minutes. HH and MM labeled segments. Backspace. Create button. Rail expansion at 4 timers. Numpad fixed 200px. |
+| v5.8 | 2026-06-17 | **Cook Mode recipe format fix + category rebuild.** Widget reads current recipe schema ({item,qty,unit,note} ingredients; instructions[] steps). Auto-timers extracted from step text, tappable. Right rail categories live. 3 new shelves (Seafood, Sauces, Household). Kids Kitchen wired. Short names in tabs. Undefined prefix removed. Midnight rollover guard added. |
 
 ---
 
@@ -60,7 +64,7 @@ Every session close:
 Wave numbers follow the **charter build order only**. No widget-specific wave numbering. Widget gets its own version number (`cal-widget-vX.X.html`) independent of wave.
 
 - Wave 6.5 = Meal Planner + Widget Integration (shipped)
-- Wave 6.6 = Cockpit hardware delivery + display optimization (shipped v5.1–v5.4)
+- Wave 6.6 = Cockpit hardware delivery + display optimization (shipped v5.1-v5.4)
 - Wave 6.7+ = remaining open PQs (unit conversion, ALT tags, Kalea altitude override, etc.)
 
 ---
@@ -73,6 +77,45 @@ Frame changes ship and proof before interior changes. Never mix frame and interi
 - **Interior:** cook mode layout, timers, recipe rail, emojis, functional behavior
 
 Build in chunks, verify on Cockpit hardware between chunks. Each chunk = one commit.
+
+---
+
+## Cook Mode Recipe Schema (v5.8, locked)
+
+### Recipe Index Architecture (locked)
+Display metadata lives in `recipes-index.json` (repo root). Cooking data lives in individual `recipes/<id>.json` files, fetched on tap. Split is intentional — the widget loads the index at launch (display only), then fetches the full recipe file only when a recipe is opened.
+
+**Index fields per entry:** `id`, `name`, `heirloom`, `file`, `tags`, `category`, `kids`, `short_name` (optional).
+
+**Individual recipe file fields:** `id`, `name`, `family_baseline`, `heirloom`, `tags`, `altitude_adjustments`, `ingredients` (array), `instructions` (array of strings).
+
+### Ingredient Schema (locked)
+Current format: `{item, qty, unit, note}`. The widget's `parseQty()` function parses qty strings (fractions, mixed numbers, ranges) for scaling. Note field renders italic in parentheses after the item name.
+
+Old format (`{name, amount, unit}`) also supported via fallback for backward compatibility.
+
+### Steps/Instructions Schema (locked)
+Current format: `instructions` — plain array of strings. Widget's `adaptInstructions()` normalizes to step objects with auto-extracted timers. Old format (`steps` array of objects with `{n, title, text, timer_seconds}`) also supported.
+
+### Auto-Timer Doctrine (locked)
+Widget reads time references from plain-text instruction strings and offers a tappable timer per step. Known to occasionally misread ambiguous text. Chow Hall owns corrections during recipe entry, applied with Kalea's guardrails at session time.
+
+### Category Shelves (17 total, locked)
+Original 14: Breakfast, Soup, Casserole, Sides, Bread, Beef, Poultry, Pasta, Pork, Dessert, Cookies, Barbecue, Pie, Canning.
+Added v5.8: Seafood, Sauces, Household.
+
+**Elk = ground beef rule (locked):** Elk dishes categorize by dish type, not by protein. Chili, burgers, enchiladas file under Beef or Barbecue. No game shelf.
+
+**Category assignments:** All 35 current recipes assigned in `recipes-index.json`. Pork, Pie, Canning are empty shelves — room to grow.
+
+### Kids Kitchen (locked)
+`kids` boolean in `recipes-index.json`, same pattern as `heirloom`. Recipe stays in its real category shelf. Kids Kitchen displays duplicates. Flag is add/remove — Kalea manages it as kids grow. Starts with Mac & Cheese and Sloppy Joes.
+
+### Short Names (locked)
+`short_name` field in `recipes-index.json`, optional. When present: tabs use `short_name`, title bar uses full `name`. 16 recipes carry short names. Borderline cases confirmed against real tab at first load.
+
+### Day Rollover Guard (v5.8, locked)
+`refreshCalendar()` checks current date against `TODAY_STR` on every 3-minute tick. If date has drifted past midnight since page load, fires `location.reload()`. Primary fix: Fully Kiosk 00:01 scheduled reload. Code guard is backup.
 
 ---
 
@@ -107,7 +150,7 @@ All Cook Mode text: `#f0c880`. Amber accent: `#f0c060`. No divergence.
 ```
 
 ### Parchment Cards
-SVG `feTurbulence` filter, `fractalNoise`, `baseFrequency="0.009 0.015"`, `numOctaves="4"`. Lightness: alpha `0.14`. Gradient: `#f5edd8 → #eee0b8 → #e4d098 → #d4bc78`. 8 burn patterns.
+SVG `feTurbulence` filter, `fractalNoise`, `baseFrequency="0.009 0.015"`, `numOctaves="4"`. Lightness: alpha `0.14`. Gradient: `#f5edd8 -> #eee0b8 -> #e4d098 -> #d4bc78`. 8 burn patterns.
 
 ### Two-Card Cook Mode Center
 Left card (flex:1 ~33%): ingredients + altitude collapsible. Right card (flex:2 ~67%): method steps.
@@ -128,13 +171,13 @@ Fixed `80px` quantity column. Two-column layout inside left card. Scrollable ind
 Default: expanded. Strip at bottom of left card: teal `#287888`. Per-session per-tab state.
 
 ### Manual Timer
-Dark shell. Timer card accent: teal `#287888`. "Create" button → idle card → Start from card.
+Dark shell. Timer card accent: teal `#287888`. "Create" button -> idle card -> Start from card.
 
 ### Timer Done Behavior
-Done state: "🔕 Silence" + X. Silenced: "Silenced" + X. X always visible in done/silenced.
+Done state: "Silence" + X. Silenced: "Silenced" + X. X always visible in done/silenced.
 
 ### Timer Layout (v5.3)
-2-column vertical. Col 1: first 6. Col 2: 7th+. State-sorted: running → idle → done → silenced. Rail: `224px` / `448px`.
+2-column vertical. Col 1: first 6. Col 2: 7th+. State-sorted: running -> idle -> done -> silenced. Rail: `224px` / `448px`.
 Card padding reduced in v5.3 — 5 timers fit in single column before two-column expansion.
 
 ### Night Mode
@@ -157,7 +200,7 @@ Fixed `220px`. Timers stack top-to-bottom. Tap snaps to Cook Mode.
 - `_spanSlotMap` populated per-day for connector calculation
 
 ### cancel= Treatment (v5.0, locked)
-- `cancel=pending`: warm bg `#1c1814`, dashed warm border `rgba(160,120,80,.30)`, 2px amber strikethrough, ⊘ right, no pills, no time — full opacity
+- `cancel=pending`: warm bg `#1c1814`, dashed warm border `rgba(160,120,80,.30)`, 2px amber strikethrough, no pills, no time — full opacity
 - `cancel=confirmed`: filtered from parser entirely, line stays in `calendars.md` as audit trail
 
 ### Liturgical Pill Logic (v5.0, locked)
@@ -165,77 +208,42 @@ Fixed `220px`. Timers stack top-to-bottom. Tap snaps to Cook Mode.
 - Timed liturgical events (Serve at Mass): pills render normally
 
 ### Per-View Cell Heights (v5.4, locked)
-- **Rolling:** `--cell-h` = `floor((innerHeight - 96 - 96 - dhH) / 3)` ≈ 289px at 1080px. 3 rows visible. Set by `syncHdrH()`.
-- **Month + WFD:** `--cell-h-month` = `floor((innerHeight - 96 - 96 - dhH) / 5)` ≈ 173px at 1080px. 5 rows always. Scoped via `#month-scr .cell` and `#dinner-scr .cell`.
-- **Week + Meal Planner:** `height:100%` via layout class — not affected by CSS variables.
-- Adjacent month days fill leading/trailing empty slots in month and WFD (dimmed date number, no events).
-- First/last row border suppression: `nth-child(2)` cells no `border-top`; `nth-child(6)` row no `border-bottom`. Scoped to `#month-scr` and `#dinner-scr`.
+- **Rolling:** `--cell-h` = `floor((innerHeight - 96 - 96 - dhH) / 3)` approx 289px at 1080px. 3 rows visible.
+- **Month + WFD:** `--cell-h-month` = `floor((innerHeight - 96 - 96 - dhH) / 5)` approx 173px at 1080px. 5 rows always.
+- **Week + Meal Planner:** `height:100%` via layout class.
 
 ### Per-View Event Caps (v5.4, locked)
-- **Rolling:** `ROLL_MAX_EVENTS=7` — up to 7 events per cell, "+N more — tap" if exceeded
-- **Month/WFD:** `MAX_EVENTS=4` — up to 4 events per cell
-- **Week/Meal Planner:** `showAll=true` — all events shown, no cap, no "+N more" ever
-- Conflict flag no longer penalizes event slot count (`maxEv` = `MAX_EVENTS` always, no `-1`)
-- `maxEvts` param flows: `buildWkRow` → `renderCell`. Rolling passes `ROLL_MAX_EVENTS`; week/meal planner pass `undefined` (triggers `showAll`)
+- **Rolling:** `ROLL_MAX_EVENTS=7`
+- **Month/WFD:** `MAX_EVENTS=4`
+- **Week/Meal Planner:** `showAll=true` — no cap
 
 ### Week Mode (v5.2, locked)
-- **Top 50%:** `#weeks` — single `.wrow` × 7 `.cell`, same structure as rolling. Font: 14px, `white-space:normal`. Unlimited events, no truncation.
-- **Bottom 50%:** `#week-briefs` — 7 `.wb-col` columns, one per day. Always visible. No tapping required. `buildBriefHtml()` populates each column.
-- `applyWeekLayout()` positions `#cal-wrap` fixed, then calls `renderWeekBriefs()`. Both run on week switch and week navigation.
-- Old `#week-detail` single-panel: hidden via `display:none!important` in week-layout CSS. Not removed from DOM.
-- `clearWeekLayout()` removes `week-layout` class; `#week-briefs` hides automatically via CSS.
+Top 50%: 7-col events. Bottom 50%: `#week-briefs` — 7 brief columns, always visible.
 
 ### Meal Planner (v5.2, locked)
-- Rebuilt on `buildWkRow(mealPlannerWi, false, true)` — identical cell structure to rolling/week view
-- Full height via `.mp-weeks{flex:1}` — no brief pane, no 55/45 split
-- `[MEAL]` entries render as amber `mp-meal-evt` tiles via `isMealPlanner=true` flag in `renderCell`, appended to cell body after regular events
-- Font: 14px (matching week mode), `white-space:normal` — wrapping enabled
-- Day headers: `mgrid-dows` + `dhdr` — identical to month/WFD
-- Banner: "Mon / Mon" for cross-month weeks; year shown
-- Tap meal tile → Cook Mode with recipe (existing behavior)
+Rebuilt on `buildWkRow`. `[MEAL]` entries render as amber tiles. Tap tile -> Cook Mode.
 
 ### What's for Dinner (v5.2, locked)
-- Rebuilt as month-view clone — identical structure: `mgrid-dows` + 5×`wrow` + `.cell`
-- `renderDinnerCell(date, meals)` helper — same `.dnum`, feast days in `.hdr-slot`, today brackets identical to month view
-- `#dinner-scr`: `padding:0; gap:0; overflow:hidden` — matches `#month-scr` exactly
-- Meal tile uses `mp-meal-evt` class (amber, same as Meal Planner)
-- Adjacent month fill: previous/next month days dimmed in leading/trailing slots
-- Meals-only content — no regular events in cell body
-- Read-only kids view. Left/right arrows page by month.
-- Scroll position preserved when closing: `_overlayScrollY` saved on open, restored via `requestAnimationFrame` on close
+Month-view clone. Meals-only content. Read-only kids view. Arrows page by month.
 
 ### Cook Mode Splash (v5.0)
-- Bible verse centered
-- Today's planned meals (from [MEAL] entries) preloaded below verse as tappable recipe tiles
-- Coming Up rail: next 1-2 days of planned meals live from allMeals
+Bible verse centered. Today's planned meals preloaded as tappable tiles. Coming Up rail: next 1-2 days.
 
 ### Auto-Refresh (v5.3, locked)
-- `refreshCalendar()` runs every 3 minutes via `setInterval`
-- Re-fetches `calendars.md`, repopulates `allEvts`, `allMeals`, `allBriefs` via `parseSrc()`
-- **Guards:** returns immediately if `cookOn || nightOn` — never interrupts Cook Mode or Night Mode
-- Rebuilds current view **in place** — rolling preserves `window.scrollY`, no scroll reset
-- Rolling refresh: rebuilds visible rows (`viewTopWi` → `viewBotWi`), restores scroll. **Does NOT call `render()`** — `render()` is week-mode-only
-- Cook Mode: data updated silently in memory, no re-render until user exits Cook Mode
+Every 3 minutes. Guards: returns immediately if `cookOn || nightOn`.
 
 ---
 
 ## Architecture
 
 ### Top bar
-- Sticky, fixed height `--hh:96px` — enforced by `syncHdrH()`
-- Left: wordmark placard
-- Center: month/year banner; Cook Mode shows recipe name
-- Right: egg card + agent grid (6 agents, 3×2, 72px buttons)
+Sticky, fixed height `--hh:96px`. Left: wordmark placard. Center: month/year banner. Right: egg card + agent grid.
 
 ### Nav ribbon — 3 fixed sections
-- **Left:** What's for Dinner + Meal Planner
-- **Center:** ← Home **Cook Mode** Night →
-- **Right:** Rolling / Week / Month
+Left: What's for Dinner + Meal Planner. Center: <- Home Cook Mode Night ->. Right: Rolling / Week / Month.
 
 ### Cook Mode layout
-- **Left rail:** Timer stack + manual timer (fixed bottom)
-- **Center:** servings bar (52px sticky) + 2-card area
-- **Right rail:** Recipe browser (categories 18px, entries 14px); Kids Kitchen pinned bottom; Coming Up pinned top
+Left rail: Timer stack + manual timer. Center: servings bar + 2-card area. Right rail: Recipe browser (categories + Kids Kitchen + Coming Up).
 
 ---
 
@@ -255,18 +263,16 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 
 | Cat key | Emoji | Use |
 |---------|-------|-----|
-| liturgical | ✝️ | Feast days, Holy Days, Mass |
-| kids | 🚸 | Kids events, swim practice, Faith Formation |
-| family | 🏠 | Whole-family events, swim meets |
-| animals | 🐾 | Farm/animal events |
-| appointments | ➕ | Medical, dental, therapy |
-| 4h | 🍀 | 4H events, fair |
-| rootstock | 🌱 | Garden, orchard |
-| prompt | ⏰ | Reminders, milestone pings |
-| meetings | 📋 | KoC, Fairboard, any recurring meeting |
+| liturgical | cross | Feast days, Holy Days, Mass |
+| kids | children crossing | Kids events, swim practice, Faith Formation |
+| family | house | Whole-family events, swim meets |
+| animals | paw | Farm/animal events |
+| appointments | plus | Medical, dental, therapy |
+| 4h | clover | 4H events, fair |
+| rootstock | seedling | Garden, orchard |
+| prompt | alarm clock | Reminders, milestone pings |
+| meetings | clipboard | KoC, Fairboard, any recurring meeting |
 | misc | (none) | Catch-all |
-
-Emoji must use Unicode escape sequences in JS or HTML entities — never raw emoji in Python heredocs.
 
 ---
 
@@ -292,7 +298,7 @@ Emoji must use Unicode escape sequences in JS or HTML entities — never raw emo
 | travel=true | boolean | Person physically away. Triggers pill suppression. |
 | span= | YYYY-MM-DD | End date for multi-day span |
 | tentative=true | boolean | Diagonal amber stripe hatching |
-| cancel=pending | string | Strikethrough, ⊘, warm bg, no pills. Awaiting confirmation. |
+| cancel=pending | string | Strikethrough, no pills. Awaiting confirmation. |
 | cancel=confirmed | string | Filtered from parser. Line preserved as audit trail. |
 | skip= | YYYY-MM-DD,... | CAL-RECUR only. Suppresses specific dates. |
 | stripe=appt | string | Red-tinted appointment background |
@@ -308,7 +314,7 @@ Only two CAL-RECUR entries permitted: Sunday Mass 08:00 and Daily Mass Wed 10:00
 
 ## Parked Questions (PQs)
 
-PQs are future-session items — parked until conditions are right to address them. Never conflated with session work Items. Session Items are numbered Item 1, Item 2, etc. during intake and are worked and closed within the session.
+PQs are future-session items — parked until conditions are right to address them. Never conflated with session work Items.
 
 | PQ | Description | Target |
 |----|-------------|--------|
@@ -322,9 +328,8 @@ PQs are future-session items — parked until conditions are right to address th
 | PQ-34 | Unit conversion per ingredient — tap-to-convert, per-session | Wave 6.7+ |
 | PQ-35 | Inline ALT tags per ingredient/step — requires recipe schema update | Wave 6.7+ |
 | PQ-36 | Kalea altitude override — save per recipe, flag as user edit | Wave 6.7+ |
+| PQ-GUS | Sourdough starter feed tracker — timer-reset tap, not data entry. Cockpit read-only constraint applies. Design conversation needed. Colorblind-safe treatment required (not red-only). | Future brainstorm |
 | PQ-PHASE2 | sessionStorage timer persistence on Home reload | Phase 2 |
-
-**Closed this wave:** PQ-33 (WFD meal name — built v5.2), PQ-37 (week mode — rebuilt v5.2), PQ-38 (rolling rows — fixed v5.1/v5.4), PQ-39 (month 5 rows — fixed v5.1), PQ-40 (snap blip — verified non-issue on hardware)
 
 ---
 
@@ -337,24 +342,16 @@ Auto-export to repo via GitHub MCP. Blocks real flock data entry. Not built. Not
 ## calendars.md Reversion Watch
 
 Three categories that have reverted across session rewrites — verify on every rewrite:
-- **Knights of Columbus** → must be `meetings`
-- **Fairboard meeting** → must be `meetings`
-- **Fair cleanup** → must be `4h`
+- **Knights of Columbus** -> must be `meetings`
+- **Fairboard meeting** -> must be `meetings`
+- **Fair cleanup** -> must be `4h`
 
 ---
 
 ## CSS Variables
 
-- `--hh` — header height. Fixed `96px`, enforced by `syncHdrH()`.
+- `--hh` — header height. Fixed `96px`.
 - `--nh` — nav height. Fixed `96px`.
-- `--cell-hdr-h` — cell header height. `38px` (reduced from 54px in v5.1).
-- `--cell-h` — rolling row height. Dynamic: `floor((innerHeight - 96 - 96 - dhH) / 3)`. ~289px at 1080px. Set by `syncHdrH()`.
-- `--cell-h-month` — month/WFD row height. Dynamic: `floor((innerHeight - 96 - 96 - dhH) / 5)`. ~173px at 1080px. Set by `syncHdrH()`. Scoped to `#month-scr .cell` and `#dinner-scr .cell`.
-
-`syncHdrH()` sets all variables and JS-matches left zone **minWidth** to right zone width.
-
-### initRolling snap-to-today
-Starts at `viewTopWi=-3`. Scrolls via double `requestAnimationFrame`. Snap blip verified non-issue on Cockpit hardware (PQ-40 closed).
-
-### Overlay scroll preservation (v5.4)
-`_overlayScrollY` saves `window.scrollY` when WFD or Meal Planner opens (hiding `#cal-wrap`). Restored via `requestAnimationFrame` on close. Prevents rolling view jumping to top (April) on overlay close.
+- `--cell-hdr-h` — cell header height. `38px`.
+- `--cell-h` — rolling row height. Dynamic: `floor((innerHeight - 96 - 96 - dhH) / 3)`.
+- `--cell-h-month` — month/WFD row height. Dynamic: `floor((innerHeight - 96 - 96 - dhH) / 5)`.
