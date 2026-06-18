@@ -1,5 +1,5 @@
-<!-- v5.8 - 2026-06-17
-     Bayer Family Ops | Edelweiss Farms — Family Ops — Wave 6.7
+﻿<!-- v5.8 - 2026-06-17
+     Bayer Family Ops | Edelweiss Farms â€” Family Ops â€” Wave 6.7
      v5.8: COOK MODE RECIPE FORMAT FIX + CATEGORY REBUILD
      - Recipe format: widget now reads {item,qty,unit,note} ingredient schema
      - Recipe format: widget now reads instructions[] array (plain strings)
@@ -9,8 +9,8 @@
      - Kids Kitchen: reads kids boolean from index; launches with Mac & Cheese + Sloppy Joes
      - Short names: tabs use short_name from index, title bar keeps full name
      - "undefined" prefix removed from all recipe list items (icon field dropped)
-     - Day rollover: midnight check added to refresh cycle — page reloads if date drifts
-     - Numpad fixed at 200px — does not expand with rail
+     - Day rollover: midnight check added to refresh cycle â€” page reloads if date drifts
+     - Numpad fixed at 200px â€” does not expand with rail
      v5.6: BUG FIXES (5 bugs from Wave 6.7 backlog)
      - Bug 1: Auto-shutoff no longer re-fires every 60s after manual wake;
               poll now stands down while rolling curfew timer is pending
@@ -28,7 +28,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Edelweiss Farms — Family Ops v5.7</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Edelweiss Farms â€” Family Ops v5.7</title>
 <style>
 :root{
   --bg:#141210;--surf:#1e1c18;--surf2:#252218;--brd:#2e2820;
@@ -51,11 +54,11 @@
 html{font-size:13px;}
 body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI',Roboto,system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;padding-bottom:96px;scrollbar-gutter:stable;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
 
-/* HEADER — fixed 80px */
+/* HEADER â€” fixed 80px */
 #hdr{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px solid var(--brd);height:96px;overflow:hidden;padding:0 10px;display:flex;align-items:stretch;}
 .hdr-top{flex:1;display:flex;align-items:stretch;gap:8px;}
 
-/* WORDMARK — two-layer nav family */
+/* WORDMARK â€” two-layer nav family */
 .wordmark-zone{display:flex;align-items:stretch;flex-shrink:0;z-index:1;}
 .wordmark-placard{position:relative;padding:3px;display:flex;align-items:stretch;flex-shrink:0;background:#0c0a06;border-radius:3px;border-top:2px solid #502e0c;border-left:2px solid #502e0c;border-right:2px solid #000;border-bottom:3px solid #000;box-shadow:0 4px 14px rgba(0,0,0,.8),inset 0 0 16px rgba(0,0,0,.4);}
 .wordmark-face{background:#6a3e10;border-radius:2px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:12px 18px;display:flex;align-items:center;flex:1;box-shadow:inset 0 0 16px rgba(0,0,0,.32);}
@@ -74,14 +77,14 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .logo-div{height:1px;background:#f0c880;opacity:0.4;margin:3px 0;width:100%;}
 .logo-s{font-family:Georgia,serif;font-size:14px;font-weight:700;color:#f0c880;letter-spacing:2.5px;text-transform:uppercase;line-height:1.1;opacity:.8;text-align:right;}
 
-/* CENTER BANNER — two-layer, fills bar */
+/* CENTER BANNER â€” two-layer, fills bar */
 .month-banner{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:stretch;justify-content:center;pointer-events:none;z-index:0;top:0;bottom:0;}
 .month-placard{position:relative;padding:3px;display:flex;align-items:stretch;background:#0c0a06;border-radius:3px;border-top:2px solid #502e0c;border-left:2px solid #502e0c;border-right:2px solid #000;border-bottom:3px solid #000;box-shadow:0 4px 14px rgba(0,0,0,.8),inset 0 0 16px rgba(0,0,0,.4);}
 .month-face{background:#6a3e10;border-radius:2px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:12px 28px;display:flex;align-items:center;gap:10px;flex:1;box-shadow:inset 0 0 16px rgba(0,0,0,.32);}
 .month-name{font-family:Georgia,serif;font-size:58px;font-weight:700;color:#f0c880;letter-spacing:.06em;line-height:1;text-shadow:0 0 12px rgba(200,100,20,.3),0 1px 4px rgba(0,0,0,.9);position:relative;z-index:1;}
 .month-year{font-family:Georgia,serif;font-size:18px;font-weight:600;color:#f0c880;letter-spacing:.2em;line-height:1;position:relative;z-index:1;opacity:.8;}
 
-/* EGG CARD — unchanged, now in right zone */
+/* EGG CARD â€” unchanged, now in right zone */
 .egg-card{display:flex;flex-direction:column;align-items:center;padding:4px 10px 4px;background:var(--cream);border:1px solid #c8b88a;border-radius:2px;cursor:pointer;position:relative;flex-shrink:0;box-shadow:1px 2px 5px rgba(0,0,0,.55);transform:rotate(-1.5deg);transform-origin:top center;margin-top:4px;z-index:1;}
 .egg-card::before{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;background:linear-gradient(225deg,#b8a870 45%,var(--cream) 45%);border-radius:0 0 2px 0;}
 .tack{position:absolute;top:-4px;left:44%;width:9px;height:9px;background:radial-gradient(circle at 35% 30%,#c88050,#7a4a1e);border-radius:50%;box-shadow:0 0 2px rgba(0,0,0,.9);z-index:2;}
@@ -96,7 +99,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 /* RIGHT ZONE */
 .right-zone{display:flex;align-items:center;justify-content:flex-end;flex-shrink:0;margin-left:auto;z-index:1;padding:8px 0;}
 .agent-grid{display:grid;grid-template-columns:repeat(3,72px);gap:4px;align-content:center;}
-/* AGENT BUTTONS — nav family two-layer */
+/* AGENT BUTTONS â€” nav family two-layer */
 .agent{padding:0;background:transparent;border:none;box-shadow:none;cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:center;}
 .agent-inner{background:#6a3e10;border-radius:8px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:3px solid #1e0e04;border-right:1px solid #2e1004;padding:5px 7px;text-align:center;box-shadow:0 3px 8px rgba(0,0,0,.6),inset 0 0 8px rgba(0,0,0,.3);display:flex;flex-direction:column;align-items:center;gap:2px;transition:background .15s;width:72px;}
 .agent:hover .agent-inner{background:#7a4a1a;}
@@ -171,54 +174,54 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .eloc{font-size:10px;color:#6a6050;font-style:italic;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:100%;padding-top:1px;}
 .sep{font-size:10px;color:#6a6050;flex-shrink:0;}
 
-/* BOTTOM NAV — fixed 80px, nav family */
+/* BOTTOM NAV â€” fixed 80px, nav family */
 #bottom{position:fixed;bottom:0;left:0;right:0;z-index:100;border-top:0.5px solid var(--brd);background:var(--bg);height:96px;overflow:hidden;padding:0 10px;display:flex;align-items:center;gap:0;transform:translateZ(0);will-change:transform;}
 .nav-left-zone{display:flex;align-items:center;justify-content:flex-start;gap:6px;flex-shrink:0;padding-right:8px;border-right:0.5px solid var(--brd);}
 .nav-center-zone{display:flex;align-items:center;justify-content:center;gap:6px;flex:1;}
 .nav-right-zone{display:flex;align-items:center;gap:4px;flex-shrink:0;padding-left:8px;border-left:0.5px solid var(--brd);}
-/* NAV VIEW BUTTONS — two-layer nav family */
+/* NAV VIEW BUTTONS â€” two-layer nav family */
 .nav-view-btn{padding:4px;background:#0c0a06;border:1.5px solid #3a1e06;border-top-color:#502e0c;border-left-color:#502e0c;border-bottom-color:#000;border-right-color:#000;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.7);cursor:pointer;user-select:none;}
 .nav-view-face{background:#6a3e10;border-radius:6px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:22px 12px;text-align:center;box-shadow:inset 0 0 12px rgba(0,0,0,.32);transition:background .15s;}
 .nav-view-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c880;line-height:1;letter-spacing:.05em;}
 .nav-view-btn.on .nav-view-face{background:#4a2c0a;}
-/* NAV ARROWS — two-layer nav family */
+/* NAV ARROWS â€” two-layer nav family */
 .nav-arrow-btn{padding:5px;background:#1a1610;border:1.5px solid #3e3428;border-top-color:#54462e;border-left-color:#54462e;border-bottom-color:#0c0a06;border-right-color:#0c0a06;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.6);cursor:pointer;user-select:none;}
 .nav-arrow-face{background:#252015;border-radius:8px;border-top:1px solid #4e4020;border-bottom:1px solid #060400;padding:10px 16px;text-align:center;box-shadow:inset 0 0 10px rgba(0,0,0,.3);}
 .nav-arrow-lbl{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--cb);line-height:1;opacity:.85;}
-/* HOME — unchanged */
+/* HOME â€” unchanged */
 #home-btn{padding:5px;background:#0c0a06;border:1.5px solid #0e2810;border-top-color:#183a1a;border-left-color:#183a1a;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;min-width:70px;}
 #home-face{background:#2a5418;border-radius:8px;border-top:1px solid #5a9030;border-left:1px solid #4a8024;border-bottom:1px solid #060e00;border-right:1px solid #0c1a04;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4),inset 0 4px 10px rgba(0,0,0,.3);transition:background .15s;}
 .home-house{font-size:16px;line-height:1;margin-bottom:3px;color:#c8dcaa;}
 .home-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:#c8dcaa;text-transform:uppercase;}
-/* COOK — unchanged */
+/* COOK â€” unchanged */
 #cook-btn{padding:5px;background:#0c0a06;border:1.5px solid #3a2e14;border-top-color:#4e3e1c;border-left-color:#4e3e1c;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;user-select:none;}
 #cook-face{background:var(--cream);border-radius:8px;border-top:1px solid #f4eccc;border-left:1px solid #ecdfc0;border-bottom:1px solid #a09050;border-right:1px solid #b8a060;padding:14px 10px;text-align:center;box-shadow:inset 0 0 22px rgba(0,0,0,.32),inset 0 3px 8px rgba(0,0,0,.20);transition:background .15s;}
 #cook-btn.cook-active #cook-face{background:#d4c898;}
 .cook-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#6a5a18;text-transform:uppercase;margin-bottom:2px;text-shadow:0 0 3px rgba(255,255,220,.55);}
 .cook-main{font-family:Georgia,serif;font-size:20px;font-weight:700;color:#261c06;letter-spacing:.03em;line-height:1;text-shadow:0 0 4px rgba(255,255,230,.70);}
-/* NIGHT — unchanged */
+/* NIGHT â€” unchanged */
 #night-btn{padding:5px;background:#0c0a06;border:1.5px solid #3a1810;border-top-color:#4e2418;border-left-color:#4e2418;border-bottom-color:#000;border-right-color:#000;border-radius:12px;box-shadow:0 5px 14px rgba(0,0,0,.8);cursor:pointer;min-width:60px;user-select:none;}
 #night-face{background:#7a2010;border-radius:8px;border-top:1px solid #c04030;border-left:1px solid #a03020;border-bottom:1px solid #380800;border-right:1px solid #580e08;padding:14px 10px;text-align:center;box-shadow:inset 0 0 18px rgba(0,0,0,.4);transition:background .15s;}
 #night-btn.night-active #night-face{background:#5a1808;}
 .night-moon{font-size:16px;line-height:1;margin-bottom:3px;}
 .night-lbl{font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.15em;color:#ffcca0;text-transform:uppercase;text-shadow:0 0 4px rgba(255,120,60,.5);}
-/* MEAL PLANNER — moves to bottom bar */
+/* MEAL PLANNER â€” moves to bottom bar */
 #meal-btn{padding:4px;background:#0c0a06;border:1.5px solid #3a1e06;border-top-color:#502e0c;border-left-color:#502e0c;border-bottom-color:#000;border-right-color:#000;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.8);cursor:pointer;flex-shrink:0;user-select:none;}
 #meal-face{background:#6a3e10;border-radius:6px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:17px 14px;text-align:center;box-shadow:inset 0 0 16px rgba(0,0,0,.32);transition:background .15s;}
 #meal-btn.meal-active #meal-face{background:#4a2c0a;}
 .meal-sub{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.3em;color:#c07830;text-transform:uppercase;margin-bottom:2px;}
 .meal-main{font-family:Georgia,serif;font-size:12px;font-weight:700;color:#f0c880;letter-spacing:.03em;line-height:1;white-space:nowrap;}
-/* WHAT'S FOR DINNER — new, same structure as meal-btn */
+/* WHAT'S FOR DINNER â€” new, same structure as meal-btn */
 #dinner-btn{padding:4px;background:#0c0a06;border:1.5px solid #3a1e06;border-top-color:#502e0c;border-left-color:#502e0c;border-bottom-color:#000;border-right-color:#000;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.8);cursor:pointer;flex-shrink:0;user-select:none;margin-left:0;}
 #dinner-face{background:#6a3e10;border-radius:6px;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:17px 14px;text-align:center;box-shadow:inset 0 0 16px rgba(0,0,0,.32);transition:background .15s;}
 #dinner-btn.dinner-active #dinner-face{background:#4a2c0a;}
-/* Per-view cell height — month/WFD lock to 5 rows, rolling uses --cell-h (3 rows) */
+/* Per-view cell height â€” month/WFD lock to 5 rows, rolling uses --cell-h (3 rows) */
 #month-scr .cell{height:var(--cell-h-month,173px);}
 #dinner-scr .cell{height:var(--cell-h-month,173px);}
-/* Item 4 carry — month + WFD first/last row border suppression (nth-child(2) = first wrow after mgrid-dows header) */
+/* Item 4 carry â€” month + WFD first/last row border suppression (nth-child(2) = first wrow after mgrid-dows header) */
 #month-scr .wrow:nth-child(2) .cell,#dinner-scr .wrow:nth-child(2) .cell{border-top:none;}
 #month-scr .wrow:nth-child(6),#dinner-scr .wrow:nth-child(6){border-bottom:none;}
-/* Item 4 — WFD last row border suppression */
+/* Item 4 â€” WFD last row border suppression */
 #dn-month-grid .dn-cell:nth-last-child(-n+7){border-bottom:none;}
 body.night-dim{background:#000000!important;}
 body.night-dim #hdr{filter:brightness(0.03);pointer-events:none;}
@@ -234,7 +237,7 @@ body.night-dim #week-briefs{filter:brightness(0.03);pointer-events:none;}
 #night-wake{display:none;position:fixed;inset:0;z-index:999;cursor:pointer;}
 /* COOK MODE */
 #cm-left{display:flex;flex-direction:column;flex-shrink:0;border-right:2px solid var(--paper-brd2);background:var(--cook-surf);overflow:hidden;min-width:224px;transition:width .2s ease;}
-/* RAIL HEADERS — 52px Cook Mode family */
+/* RAIL HEADERS â€” 52px Cook Mode family */
 #cm-left-timer-hdr{height:72px;flex-shrink:0;padding:4px;background:#0c0a06;border-top:2px solid #502e0c;border-left:2px solid #502e0c;border-right:2px solid #000;border-bottom:3px solid #000;display:flex;align-items:stretch;box-shadow:0 4px 10px rgba(0,0,0,.7);}
 .cm-left-hdr{height:72px;flex-shrink:0;padding:4px;background:#0c0a06;border-top:2px solid #502e0c;border-left:2px solid #502e0c;border-right:2px solid #000;border-bottom:3px solid #000;display:flex;align-items:stretch;box-shadow:0 4px 10px rgba(0,0,0,.7);}
 .rail-hdr-face{background:#6a3e10;border-top:1px solid #c07030;border-left:1px solid #a05a20;border-bottom:1px solid #180800;border-right:1px solid #2e1004;padding:0 16px;display:flex;align-items:center;justify-content:center;flex:1;font-family:Georgia,serif;font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f0c060;box-shadow:inset 0 0 12px rgba(0,0,0,.32);}
@@ -373,7 +376,7 @@ body.night-dim #week-briefs{filter:brightness(0.03);pointer-events:none;}
 .agent-filter-btn{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;border:1px solid var(--brd);background:transparent;color:var(--txt2);cursor:pointer;transition:all .15s;}
 .agent-filter-btn.on{background:rgba(207,184,124,.15);border-color:var(--cb);color:var(--cb);}
 .dev-loc{font-size:11px;color:#5a7090;margin-top:3px;padding-left:2px;display:flex;align-items:center;gap:4px;}
-.dev-loc::before{content:'📍';font-size:10px;}
+.dev-loc::before{content:'ðŸ“';font-size:10px;}
 .dev-notes{font-size:11px;color:var(--txt3);margin-top:3px;padding-left:2px;line-height:1.4;font-style:italic;}
 .evt-collapse{position:absolute;top:7px;right:8px;font-size:9px;color:var(--txt3);cursor:pointer;padding:2px 4px;user-select:none;z-index:2;}
 .day-evt.collapsed .dev-loc,.day-evt.collapsed .dev-notes,.day-evt.collapsed .dpills{display:none;}
@@ -391,7 +394,7 @@ body.night-dim #week-briefs{filter:brightness(0.03);pointer-events:none;}
 #cal-wrap.week-layout #weeks{flex:0 0 50%;overflow:hidden;}
 #cal-wrap.week-layout #weeks .wrow{height:100%;}
 #cal-wrap.week-layout #weeks .cell{height:100%;}
-/* Item 6 — hide old single-day detail panel, show 7-col briefs instead */
+/* Item 6 â€” hide old single-day detail panel, show 7-col briefs instead */
 #cal-wrap.week-layout #week-detail{display:none!important;}
 #week-briefs{display:none;border-top:1.5px solid var(--brd);background:var(--surf2);overflow:hidden;}
 #cal-wrap.week-layout #week-briefs{flex:0 0 50%;display:flex!important;min-height:0;}
@@ -399,16 +402,16 @@ body.night-dim #week-briefs{filter:brightness(0.03);pointer-events:none;}
 .wb-col:last-child{border-right:none;}
 .wb-col.wb-today{background:rgba(42,64,128,.07);}
 .wb-dow{font-family:Georgia,serif;font-size:9px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--txt2);margin-bottom:4px;padding-bottom:4px;border-bottom:0.5px solid var(--brd);}
-/* Item 7 — Meal Planner week row container */
+/* Item 7 â€” Meal Planner week row container */
 .mp-weeks{flex:1;overflow:hidden;min-height:0;}
 .mp-weeks .wrow{height:100%;}
 .mp-weeks .cell{height:100%;overflow-y:auto;}
-/* Item 6+7 — event font scaling and wrapping for week + meal planner views */
+/* Item 6+7 â€” event font scaling and wrapping for week + meal planner views */
 #cal-wrap.week-layout .ettl{font-size:14px;white-space:normal;}
 #cal-wrap.week-layout .etime{font-size:14px;}
 #meal-scr .ettl{font-size:14px;white-space:normal;}
 #meal-scr .etime{font-size:14px;}
-/* Item 7 — amber meal event tile */
+/* Item 7 â€” amber meal event tile */
 .mp-meal-evt{background:#201c18;border-left:3px solid #c87818;border-radius:3px;margin-bottom:3px;padding:4px 6px;}
 .mp-meal-evt .ettl{color:#f0c880!important;font-weight:700;}
 #modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:600;align-items:center;justify-content:center;}
@@ -732,7 +735,7 @@ function buildSpanAt(e,slotIdx){
   if(e.span==='end'){const arrH=e.end?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.end}</span>`:'';return`<div style="position:absolute;bottom:${bottomPx}px;left:-1px;right:8px;border-right:7px solid ${sc};border-bottom:7px solid ${sc};border-bottom-right-radius:14px;background:${sb};min-height:${SPAN_BKT_H}px;display:flex;align-items:center;justify-content:flex-end;padding:4px 4px 3px 8px;overflow:hidden;z-index:${zIdx};${sepStyle}"><div class="eline" style="justify-content:flex-end;">${ph}${arrH}<span class="ettl">${ttl}</span></div></div>`;}
   return'';
 }
-// Legacy stub — kept for any stale call sites
+// Legacy stub â€” kept for any stale call sites
 function buildSpan(e,pos){return buildSpanAt(e,pos==='top'?1:0);}
 function renderEvtBlock(e,abbrev,dp){
   const sc=e.stripe?(e.stripe==='appt'?' sa':''):'';const tentH=e.tentative?' tentative':'';
@@ -795,14 +798,14 @@ function renderCell(date,isWeekView,isMealPlanner,maxEvts){
   // Meal Planner: inject amber meal tiles time-sorted into body
   if(isMealPlanner){const ds2=fmtD(date);const dayMeals=allMeals.filter(m=>m.date===ds2&&m.mealType!=='prep');dayMeals.sort((a,b)=>(a.time||'').localeCompare(b.time||''));dayMeals.forEach(m=>{const tH=m.time?`<span class="etime">${m.time}</span>`:'';innerBody+=`<div class="evt mp-meal-evt"><div class="eline">${tH}<span class="ettl">${m.title}</span></div></div>`;});}
   const bodyH=`<div${bodyStyle}>${innerBody}</div>`;
-  // SPAN RENDERING — all bottom-stack, sorted by _startDate asc (oldest=s0=bottom)
+  // SPAN RENDERING â€” all bottom-stack, sorted by _startDate asc (oldest=s0=bottom)
   let spanH='';
   if(allSpanEvts.length>0){
     const sortedSpans=[...allSpanEvts].sort((a,b)=>(a._startDate||a.date).localeCompare(b._startDate||b.date));
     // Store slot map for drop connector calculation in buildWkRow
     _spanSlotMap[ds]=sortedSpans.map((e,i)=>({startDate:e._startDate||e.date,slotIdx:i,spanType:e.span,color:e._spanColor||spanColor(e.pills,e.cat),bottomPx:i*SPAN_SLOT_H}));
     sortedSpans.forEach((e,i)=>{
-      // On return days, bars at higher slots pass through the return bracket — render at z-index 10+i
+      // On return days, bars at higher slots pass through the return bracket â€” render at z-index 10+i
       const lowerHasReturn=sortedSpans.slice(0,i).some(s=>s.span==='end');
       const passThrough=lowerHasReturn&&e.span==='mid';
       const zOverride=passThrough?10+i:i+1;
@@ -825,7 +828,7 @@ function buildWkRow(wi,isWeekView,isMealPlanner){
   for(let d=0;d<7;d++){const ds=fmtD(addD(ws,d));_spanSlotMap[ds]=[];}
   for(let d=0;d<7;d++){const day=addD(ws,d);cells+=renderCell(day,isWeekView||false,isMealPlanner||false,rowMaxEvts);if(day.getMonth()===0&&day.getDate()===1&&d>0){jan1Col=d;jan1Year=day.getFullYear();}}
   const stair=jan1Col>0?buildYrStair(jan1Col,jan1Year):'';
-  // Drop connectors — vertical lines on cell borders when a span changes slot position
+  // Drop connectors â€” vertical lines on cell borders when a span changes slot position
   let connectors='';
   const cellPct=100/7;
   for(let d=0;d<6;d++){
@@ -941,8 +944,8 @@ function prependWeeks(n){
   for(let i=0;i<n;i++){if(viewTopWi<=FLOOR_WI)break;viewTopWi--;el.insertAdjacentHTML('afterbegin',buildWkRow(viewTopWi));}
   window.scrollTo(0,sy+(el.offsetHeight-hb));reobserveEdges();
 }
-// Item 7 — scroll listener replaces IntersectionObserver (WebView compat)
-function reobserveEdges(){/* no-op — scroll listener in init() handles edge detection */}
+// Item 7 â€” scroll listener replaces IntersectionObserver (WebView compat)
+function reobserveEdges(){/* no-op â€” scroll listener in init() handles edge detection */}
 let _scrollEdgeTimer=null;
 function _onScrollEdge(){
   if(_scrollEdgeTimer)return;
@@ -991,7 +994,7 @@ let monthViewDate=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
 function setMonthViewFromRolling(){
   const hh=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hh'))||80;
   for(const row of document.querySelectorAll('#weeks .wrow')){if(row.getBoundingClientRect().bottom>hh+4){monthViewDate=new Date(parseInt(row.dataset.year),parseInt(row.dataset.month),1);return;}}
-  // Fallback: rolling rows not visible (entering from Cook Mode etc.) — use current month
+  // Fallback: rolling rows not visible (entering from Cook Mode etc.) â€” use current month
   monthViewDate=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);
 }
 function renderMonthGrid(){
@@ -1043,15 +1046,15 @@ function switchView(view){
   else{calWrap.style.display='';dhdrs.style.display='';monthScr.style.display='none';weekDetailDs=null;render();}
 }
 function jumpNav(dir){
-  // Meal Planner — page by week
+  // Meal Planner â€” page by week
   if(mealOn){mealPlannerWi+=dir;renderMealPlanner();return;}
-  // What's for Dinner — page by month
+  // What's for Dinner â€” page by month
   if(dinnerOn){if(!dinnerMonthDate)dinnerMonthDate=new Date(TODAY.getFullYear(),TODAY.getMonth(),1);dinnerMonthDate=new Date(dinnerMonthDate.getFullYear(),dinnerMonthDate.getMonth()+dir,1);renderDinnerGrid();return;}
   if(!['rolling','week','month'].includes(curView))return;
   _exitOverlays();
   if(curView==='month'){monthViewDate=new Date(monthViewDate.getFullYear(),monthViewDate.getMonth()+dir,1);renderMonthGrid();return;}
   if(curView==='week'){weekViewWi+=dir;weekDetailDs=null;render();return;}
-  // Rolling: fixed 4-week jump per tap — predictable, consistent
+  // Rolling: fixed 4-week jump per tap â€” predictable, consistent
   const targetWi=rollingAnchorWi+dir*4;
   rollingAnchorWi=targetWi;
   if(edgeObserver){edgeObserver.disconnect();edgeObserver=null;}
@@ -1147,7 +1150,7 @@ document.getElementById('modal-bg').addEventListener('click',function(e){if(e.ta
 // COOK MODE v3.10
 // ============================================================
 // ============================================================
-// RECIPES — live fetch from recipes-index.json + individual files
+// RECIPES â€” live fetch from recipes-index.json + individual files
 // Index carries display metadata (category, kids, short_name).
 // Individual files carry cooking data (ingredients, instructions).
 // Loader merges both so RECIPES entries have everything.
@@ -1228,19 +1231,19 @@ function parseQty(s){
   if(s===null||s===undefined)return null;
   s=String(s).trim();
   if(!s)return null;
-  const fracs={'½':0.5,'¼':0.25,'¾':0.75,'⅓':1/3,'⅔':2/3,'⅛':0.125,'⅜':0.375,'⅝':0.625,'⅞':0.875};
+  const fracs={'Â½':0.5,'Â¼':0.25,'Â¾':0.75,'â…“':1/3,'â…”':2/3,'â…›':0.125,'â…œ':0.375,'â…':0.625,'â…ž':0.875};
   // plain number
   if(/^\d+(\.\d+)?$/.test(s))return parseFloat(s);
   // bare fraction char
   if(fracs[s]!==undefined)return fracs[s];
-  // mixed number: "1½"
-  const mx=/^(\d+)([½¼¾⅓⅔⅛⅜⅝⅞])$/.exec(s);
+  // mixed number: "1Â½"
+  const mx=/^(\d+)([Â½Â¼Â¾â…“â…”â…›â…œâ…â…ž])$/.exec(s);
   if(mx)return parseInt(mx[1])+(fracs[mx[2]]||0);
-  // mixed with space: "1 ½"
-  const mx2=/^(\d+)\s+([½¼¾⅓⅔⅛⅜⅝⅞])$/.exec(s);
+  // mixed with space: "1 Â½"
+  const mx2=/^(\d+)\s+([Â½Â¼Â¾â…“â…”â…›â…œâ…â…ž])$/.exec(s);
   if(mx2)return parseInt(mx2[1])+(fracs[mx2[2]]||0);
-  // range "8-12" — use lower bound
-  const rng=/^(\d+(?:\.\d+)?)\s*[-–]\s*\d+/.exec(s);
+  // range "8-12" â€” use lower bound
+  const rng=/^(\d+(?:\.\d+)?)\s*[-â€“]\s*\d+/.exec(s);
   if(rng)return parseFloat(rng[1]);
   // approx "3+"
   const apr=/^(\d+(?:\.\d+)?)\+$/.exec(s);
@@ -1348,7 +1351,7 @@ function renderCookMode(){
   const rc=recipeColor(tab.recipeId);
   _paperSeedIdx=0;
 
-  // SERVINGS BAR — horizontal, 52px, near-black cook family
+  // SERVINGS BAR â€” horizontal, 52px, near-black cook family
   const btnStyle=`background:#0c0a06;border-top:1px solid #c07830;border-left:1px solid #a05a20;border-right:1px solid #3a1808;border-bottom:3px solid #1e0e04;border-radius:8px;color:#f0c060;font-family:Georgia,serif;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.5);transition:transform .07s,border-bottom-width .07s;`;
   const srvBarHtml=`<div style="height:72px;flex-shrink:0;display:flex;align-items:center;padding:0 14px;background:#241c10;border-bottom:2px solid var(--paper-brd2);gap:10px;z-index:10;">
     <span style="font-family:Georgia,serif;font-size:11px;font-weight:700;color:#f0c880;letter-spacing:2.5px;text-transform:uppercase;flex-shrink:0;cursor:pointer;border-bottom:1px dotted rgba(240,200,128,.4);" onclick="cmResetServings()" title="Reset">Servings</span>
@@ -1414,7 +1417,7 @@ function renderCookMode(){
   const stepsHtml=steps.map(s=>{
     const hasTimer=s.timer_seconds&&s.timer_seconds>0;
     const timerLbl=(s.timer_label||fmtTime(s.timer_seconds)||'').replace(/'/g,'');
-    const timerBtn=hasTimer?` <span onclick="event.stopPropagation();cmAddTimer('${timerLbl}',${s.timer_seconds},'${recipe.id}',${s.n})" style="display:inline-flex;align-items:center;gap:4px;font-family:Georgia,serif;font-size:20px;color:var(--amber);font-style:italic;cursor:pointer;border-bottom:1px dotted var(--amber);user-select:none;">⏱ ${s.timer_label||fmtTime(s.timer_seconds)}</span>`:'';
+    const timerBtn=hasTimer?` <span onclick="event.stopPropagation();cmAddTimer('${timerLbl}',${s.timer_seconds},'${recipe.id}',${s.n})" style="display:inline-flex;align-items:center;gap:4px;font-family:Georgia,serif;font-size:20px;color:var(--amber);font-style:italic;cursor:pointer;border-bottom:1px dotted var(--amber);user-select:none;">â± ${s.timer_label||fmtTime(s.timer_seconds)}</span>`:'';
     const titleHtml=s.title?`<span style="font-family:Georgia,serif;font-size:34px;font-weight:700;color:var(--ink);line-height:1.2;">${s.title}${timerBtn}</span>`:'';
     const bodyText=s.text||(s.title?'':'Step '+s.n);
     const textHtml=`<span style="font-size:28px;color:var(--ink2);line-height:1.4;overflow-wrap:break-word;word-break:break-word;">${bodyText}${!s.title?timerBtn:''}</span>`;
@@ -1466,13 +1469,13 @@ function renderRightRail(){
   const el=document.getElementById('cm-recipe-browser');if(!el)return;
   const comingUpEl=document.getElementById('cm-coming-up-pin');
   const kidsEl=document.getElementById('cm-kids-kitchen-pin');
-  // Kids Kitchen — always render pin, show placeholder if no kids recipes loaded
+  // Kids Kitchen â€” always render pin, show placeholder if no kids recipes loaded
   const kidsRecs=RECIPES.filter(r=>r.kids);
   const kidsHtml=`<div class="cm-cat-section">
     <div class="cm-cat-hdr" onclick="cmToggleCat('__kids__')"><span class="cm-cat-name">&#128104;&#8205;&#127859; Kids Kitchen</span><span class="cm-cat-toggle">${cmExpandedCats.has('__kids__')?'\u2212':'+'}</span></div>
     <div class="cm-cat-recipes${cmExpandedCats.has('__kids__')?'':' collapsed'}">${kidsRecs.length?kidsRecs.map(r=>`<div class="cm-recipe-entry" onclick="cmLaunchRecipe('${r.id}')">${r.name}</div>`).join(''):`<div class="cm-recipe-entry" style="font-style:italic;color:var(--ink3);cursor:default;">No kids recipes loaded</div>`}</div>
   </div>`;
-  // Coming Up — next 1-2 days of planned meals
+  // Coming Up â€” next 1-2 days of planned meals
   const tomorrow=fmtD(addD(TODAY,1));const dayAfter=fmtD(addD(TODAY,2));
   const upcomingMeals=allMeals.filter(m=>(m.date===tomorrow||m.date===dayAfter)&&m.mealType!=='prep'&&m.recipeId);
   let comingUpItems='';
@@ -1507,7 +1510,7 @@ function cmPopulateTimers(recipe){
   timedSteps.forEach(s=>{const exists=activeTimers.some(t=>t.recipeId===recipe.id&&t.stepN===s.n);if(!exists){const id=++cmTimerId;activeTimers.push({id,label:(s.timer_label||fmtTime(s.timer_seconds)).slice(0,15),total:s.timer_seconds,elapsed:0,state:'idle',intervalId:null,recipeId:recipe.id,stepN:s.n});}});
   renderTimerStack();renderNumpad();
 }
-// TIMER NUMPAD — v5.7: number pad replaces bump buttons
+// TIMER NUMPAD â€” v5.7: number pad replaces bump buttons
 function renderNumpad(){
   _mtBuf=[];
   const el=document.getElementById('cm-manual-zone');if(!el)return;
@@ -1606,14 +1609,14 @@ function cmSwitchTab(i){cmActiveTab=i;delete cmAltExpanded[i];renderCookMode();}
 function cmCloseTab(i){cmTabs.splice(i,1);if(cmActiveTab>=cmTabs.length)cmActiveTab=cmTabs.length-1;renderCookMode();}
 function cmAddRecipe(){renderCookLaunch();cmActiveTab=-1;renderCmTabs();}
 // ============================================================
-// MEAL PLANNER — v5.2 rebuilt on buildWkRow
+// MEAL PLANNER â€” v5.2 rebuilt on buildWkRow
 // Same skin as week view. Full height, no brief pane.
 // [MEAL] entries render as amber event tiles via isMealPlanner flag.
 // ============================================================
 function renderMealPlanner(){
   const el=document.getElementById('meal-scr');if(!el)return;
   const ws=addD(wkStart(TODAY),mealPlannerWi*7);
-  // Day headers — identical to month/week view
+  // Day headers â€” identical to month/week view
   let html=`<div class="mgrid-dows">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d,i)=>`<div class="dhdr${i===0?' sun':''}">${d}</div>`).join('')}</div>`;
   // Full-height week row via buildWkRow with isMealPlanner=true
   html+=`<div class="mp-weeks">${buildWkRow(mealPlannerWi,false,true)}</div>`;
@@ -1639,7 +1642,7 @@ function mpLaunchMeal(recipeId){
   cmLaunchRecipe(recipeId);
 }
 // ============================================================
-// WHAT'S FOR DINNER — v5.2 rebuilt as month-view clone
+// WHAT'S FOR DINNER â€” v5.2 rebuilt as month-view clone
 // Identical structure to renderMonthGrid. Meals-only cell content.
 // ============================================================
 function renderDinnerCell(date,meals){
@@ -1663,7 +1666,7 @@ function renderDinnerGrid(){
   const yr=dinnerMonthDate.getFullYear(),mo=dinnerMonthDate.getMonth();
   const firstDay=new Date(yr,mo,1);const lastDay=new Date(yr,mo+1,0);
   const monthMeals=allMeals.filter(m=>m.mealType!=='prep'&&m.date.startsWith(`${yr}-${String(mo+1).padStart(2,'0')}`));
-  // Day headers — identical to month view
+  // Day headers â€” identical to month view
   let html=`<div class="mgrid-dows">${['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((d,i)=>`<div class="dhdr${i===0?' sun':''}">${d}</div>`).join('')}</div>`;
   const cells=[];
   // Leading: previous month days (dimmed)
@@ -1713,7 +1716,7 @@ function toggleCook(){
   document.getElementById('meal-scr').style.display='none';document.getElementById('month-scr').style.display='none';document.getElementById('dinner-scr').style.display='none';
   document.getElementById('cook-btn').classList.toggle('cook-active',cookOn);
   if(!cookOn){const banner=document.getElementById('month-name');const bannerYear=document.getElementById('month-year');if(banner&&_cmBannerSaved){banner.textContent=_cmBannerSaved;_cmBannerSaved=null;}if(bannerYear)bannerYear.style.display='';
-    // Item 10 — always return to today rolling view on Cook Mode exit
+    // Item 10 â€” always return to today rolling view on Cook Mode exit
     curView='rolling';
     document.querySelectorAll('.nav-view-btn').forEach(b=>b.classList.toggle('on',b.dataset.view==='rolling'));
     initRolling();
@@ -1792,7 +1795,7 @@ function updateEggCard(){
   const ec=document.getElementById('egg-count');const es=document.getElementById('egg-sub');const est=document.getElementById('egg-stale');
   if(ec)ec.textContent=47;if(es)es.textContent='Yesterday';if(est)est.style.display=h>=16?'block':'none';
 }
-// syncHdrH — v5.1: enforces fixed 96px hh/nh, calculates --cell-h for 5 full rows
+// syncHdrH â€” v5.1: enforces fixed 96px hh/nh, calculates --cell-h for 5 full rows
 function syncHdrH(){
   document.documentElement.style.setProperty('--hh','96px');
   document.documentElement.style.setProperty('--nh','96px');
@@ -1815,7 +1818,7 @@ async function loadCalendar(){
 }
 function showFetchError(){let el=document.getElementById('fetch-err');if(!el){el=document.createElement('div');el.id='fetch-err';el.style.cssText='background:#3a1a1a;color:#e07878;padding:8px 14px;font-size:12px;border-bottom:1px solid #5a2a2a;text-align:center;letter-spacing:.5px;';el.textContent='Calendar data unavailable \u2014 check server connection';document.getElementById('hdr').after(el);}el.style.display='block';}
 function hideFetchError(){const el=document.getElementById('fetch-err');if(el)el.style.display='none';}
-// AUTO-REFRESH — re-fetches calendars.md every 3 min, re-renders current view in place
+// AUTO-REFRESH â€” re-fetches calendars.md every 3 min, re-renders current view in place
 async function refreshCalendar(){
   // Midnight rollover guard: if the date has changed since page load, reload
   const nowStr=fmtD(new Date());if(nowStr!==TODAY_STR){location.reload();return;}
@@ -1826,11 +1829,11 @@ async function refreshCalendar(){
   if(mealOn){renderMealPlanner();return;}
   if(curView==='month'){renderMonthGrid();return;}
   if(curView==='week'){
-    // Rebuild week row + briefs in place — no layout recalc needed
+    // Rebuild week row + briefs in place â€” no layout recalc needed
     document.getElementById('weeks').innerHTML=buildWkRow(weekViewWi,true);
     renderWeekBriefs();return;
   }
-  // Rolling — rebuild visible rows, preserve scroll position
+  // Rolling â€” rebuild visible rows, preserve scroll position
   const y=window.scrollY;
   let html='';for(let wi=viewTopWi;wi<=viewBotWi;wi++)html+=buildWkRow(wi);
   document.getElementById('weeks').innerHTML=html;
@@ -1853,7 +1856,7 @@ async function init(){
     if(el.dataset.action==='togglepane'){}
   });
 }
-// AUDIO LAYER — Phase 3 hooks, DORMANT
+// AUDIO LAYER â€” Phase 3 hooks, DORMANT
 const VOICE_CAST={al:null,foreman:null,chowhall:null,punchlist:null,whetstone:null,mysteranch:null,stockyard:null,rootstock:null};
 const SOUNDS={boot:null,morePower:null,argh:null,binfordJingle:null,arghApproval:null,idontThinkSo:null,flockAnomaly:null,frostAlert:null};
 function speak(text,agent='al'){console.log('[speak] DORMANT | agent:'+agent+' | text:'+text);}
