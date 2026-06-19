@@ -386,13 +386,13 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 <!-- Filter: Holy Days of Obligation + feasts with food tradition or significant family observance. Voice: Mantel. -->
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
-[CAL] 2026-01-06 ALL-DAY Epiphany :: liturgical :: notes="king cake"
-[CAL] 2026-02-02 ALL-DAY Candlemas :: liturgical :: notes="crepes"
+[CAL] 2026-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
+[CAL] 2026-02-02 ALL-DAY Candlemas 🍞 :: liturgical :: notes="crepes"
 [CAL] 2026-02-03 ALL-DAY St. Blaise - throat blessing :: liturgical
 [CAL] 2026-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2026-02-14 ALL-DAY St. Valentine :: liturgical
-[CAL] 2026-03-17 ALL-DAY St. Patrick :: liturgical :: notes="corned beef, soda bread"
-[CAL] 2026-03-19 ALL-DAY St. Joseph :: liturgical :: notes="zeppole, pasta"
+[CAL] 2026-03-17 ALL-DAY St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
+[CAL] 2026-03-19 ALL-DAY St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
 [CAL] 2026-03-25 ALL-DAY Annunciation :: liturgical
 [CAL] 2026-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
@@ -402,13 +402,13 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-05-17 ALL-DAY Ascension of the Lord - Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2026-05-24 ALL-DAY Pentecost Sunday - Holy Day :: liturgical
 [CAL] 2026-06-07 ALL-DAY Corpus Christi - Holy Day :: liturgical
-[CAL] 2026-06-13 ALL-DAY St. Anthony :: liturgical :: notes="bread of St. Anthony"
-[CAL] 2026-06-24 ALL-DAY Birth of St. John the Baptist :: liturgical :: notes="bonfire feast, summer foods"
-[CAL] 2026-06-29 ALL-DAY Sts. Peter and Paul :: liturgical :: notes="fish"
+[CAL] 2026-06-13 ALL-DAY St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
+[CAL] 2026-06-24 ALL-DAY Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
+[CAL] 2026-06-29 ALL-DAY Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
 [CAL] 2026-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
 [CAL] 2026-07-22 ALL-DAY St. Mary Magdalene :: liturgical
 [CAL] 2026-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
-[CAL] 2026-08-06 ALL-DAY Transfiguration :: liturgical :: notes="grapes, first fruits"
+[CAL] 2026-08-06 ALL-DAY Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
 [CAL] 2026-08-15 ALL-DAY Assumption of Mary - Holy Day of Obligation :: liturgical
 [CAL] 2026-08-22 ALL-DAY Queenship of Mary :: liturgical
 [CAL] 2026-09-08 ALL-DAY Birth of Mary :: liturgical
@@ -421,15 +421,15 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2026-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2026-11-01 ALL-DAY All Saints Day - Holy Day of Obligation :: liturgical
-[CAL] 2026-11-02 ALL-DAY All Souls Day :: liturgical :: notes="pan de muerto"
-[CAL] 2026-11-11 ALL-DAY St. Martin of Tours :: liturgical :: notes="goose, wine"
+[CAL] 2026-11-02 ALL-DAY All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
+[CAL] 2026-11-11 ALL-DAY St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
 [CAL] 2026-11-22 ALL-DAY St. Cecilia :: liturgical
 [CAL] 2026-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
-[CAL] 2026-12-06 ALL-DAY St. Nicholas :: liturgical :: notes="treats in shoes"
+[CAL] 2026-12-06 ALL-DAY St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
 [CAL] 2026-12-08 ALL-DAY Immaculate Conception - Holy Day of Obligation :: liturgical
-[CAL] 2026-12-12 ALL-DAY Our Lady of Guadalupe :: liturgical :: notes="tamales"
-[CAL] 2026-12-13 ALL-DAY St. Lucy :: liturgical :: notes="saffron buns"
-[CAL] 2026-12-25 ALL-DAY Christmas - Nativity of the Lord :: liturgical :: notes="Mass attendance"
+[CAL] 2026-12-12 ALL-DAY Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
+[CAL] 2026-12-13 ALL-DAY St. Lucy 🍞 :: liturgical :: notes="saffron buns"
+[CAL] 2026-12-25 ALL-DAY Christmas - Nativity of the Lord 🍞 :: liturgical :: notes="Christmas dinner"
 [CAL] 2026-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2026-12-28 ALL-DAY Holy Innocents :: liturgical
 
@@ -438,13 +438,13 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### LITURGICAL - Curated Feasts 2027
 
 [CAL] 2027-01-01 ALL-DAY Mary, Mother of God :: liturgical
-[CAL] 2027-01-06 ALL-DAY Epiphany :: liturgical :: notes="king cake"
-[CAL] 2027-02-02 ALL-DAY Candlemas :: liturgical :: notes="crepes"
+[CAL] 2027-01-06 ALL-DAY Epiphany 🍞 :: liturgical :: notes="king cake"
+[CAL] 2027-02-02 ALL-DAY Candlemas 🍞 :: liturgical :: notes="crepes"
 [CAL] 2027-02-03 ALL-DAY St. Blaise - throat blessing :: liturgical
 [CAL] 2027-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2027-02-14 ALL-DAY St. Valentine :: liturgical
-[CAL] 2027-03-17 ALL-DAY St. Patrick :: liturgical :: notes="corned beef, soda bread"
-[CAL] 2027-03-19 ALL-DAY St. Joseph :: liturgical :: notes="zeppole, pasta"
+[CAL] 2027-03-17 ALL-DAY St. Patrick 🍞 :: liturgical :: notes="corned beef, soda bread"
+[CAL] 2027-03-19 ALL-DAY St. Joseph 🍞 :: liturgical :: notes="zeppole, pasta"
 [CAL] 2027-03-25 ALL-DAY Annunciation :: liturgical
 [CAL] 2027-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2027-05-01 ALL-DAY St. Joseph the Worker :: liturgical
@@ -454,13 +454,13 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-06-06 ALL-DAY Ascension of the Lord - Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2027-06-13 ALL-DAY Pentecost Sunday - Holy Day :: liturgical
 [CAL] 2027-06-27 ALL-DAY Corpus Christi - Holy Day :: liturgical
-[CAL] 2027-06-13 ALL-DAY St. Anthony :: liturgical :: notes="bread of St. Anthony"
-[CAL] 2027-06-24 ALL-DAY Birth of St. John the Baptist :: liturgical :: notes="bonfire feast, summer foods"
-[CAL] 2027-06-29 ALL-DAY Sts. Peter and Paul :: liturgical :: notes="fish"
+[CAL] 2027-06-13 ALL-DAY St. Anthony 🍞 :: liturgical :: notes="bread of St. Anthony"
+[CAL] 2027-06-24 ALL-DAY Birth of St. John the Baptist 🍞 :: liturgical :: notes="bonfire feast, summer foods"
+[CAL] 2027-06-29 ALL-DAY Sts. Peter and Paul 🍞 :: liturgical :: notes="fish"
 [CAL] 2027-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
 [CAL] 2027-07-22 ALL-DAY St. Mary Magdalene :: liturgical
 [CAL] 2027-07-26 ALL-DAY Sts. Joachim and Anne :: liturgical
-[CAL] 2027-08-06 ALL-DAY Transfiguration :: liturgical :: notes="grapes, first fruits"
+[CAL] 2027-08-06 ALL-DAY Transfiguration 🍞 :: liturgical :: notes="grapes, first fruits"
 [CAL] 2027-08-15 ALL-DAY Assumption of Mary - Holy Day of Obligation :: liturgical
 [CAL] 2027-08-22 ALL-DAY Queenship of Mary :: liturgical
 [CAL] 2027-09-08 ALL-DAY Birth of Mary :: liturgical
@@ -473,15 +473,15 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2027-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2027-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2027-11-01 ALL-DAY All Saints Day - Holy Day of Obligation :: liturgical
-[CAL] 2027-11-02 ALL-DAY All Souls Day :: liturgical :: notes="pan de muerto"
-[CAL] 2027-11-11 ALL-DAY St. Martin of Tours :: liturgical :: notes="goose, wine"
+[CAL] 2027-11-02 ALL-DAY All Souls Day 🍞 :: liturgical :: notes="pan de muerto"
+[CAL] 2027-11-11 ALL-DAY St. Martin of Tours 🍞 :: liturgical :: notes="goose, wine"
 [CAL] 2027-11-22 ALL-DAY St. Cecilia :: liturgical
 [CAL] 2027-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
-[CAL] 2027-12-06 ALL-DAY St. Nicholas :: liturgical :: notes="treats in shoes"
+[CAL] 2027-12-06 ALL-DAY St. Nicholas 🍞 :: liturgical :: notes="treats in shoes"
 [CAL] 2027-12-08 ALL-DAY Immaculate Conception - Holy Day of Obligation :: liturgical
-[CAL] 2027-12-12 ALL-DAY Our Lady of Guadalupe :: liturgical :: notes="tamales"
-[CAL] 2027-12-13 ALL-DAY St. Lucy :: liturgical :: notes="saffron buns"
-[CAL] 2027-12-25 ALL-DAY Christmas - Nativity of the Lord :: liturgical :: notes="Mass attendance"
+[CAL] 2027-12-12 ALL-DAY Our Lady of Guadalupe 🍞 :: liturgical :: notes="tamales"
+[CAL] 2027-12-13 ALL-DAY St. Lucy 🍞 :: liturgical :: notes="saffron buns"
+[CAL] 2027-12-25 ALL-DAY Christmas - Nativity of the Lord 🍞 :: liturgical :: notes="Christmas dinner"
 [CAL] 2027-12-27 ALL-DAY St. John the Apostle :: liturgical
 [CAL] 2027-12-28 ALL-DAY Holy Innocents :: liturgical
 
