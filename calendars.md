@@ -297,7 +297,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-20 16:00 Mass - Sacred Heart Chapel Pueblo :: liturgical :: end=17:00 :: location="Sacred Heart Chapel, Pueblo, CO"
 [CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
-[CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: birthdays
+[CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 ALL-DAY [D] Scale certification :: misc :: location="Fairgrounds, Westcliffe, CO" :: notes="time TBD"
