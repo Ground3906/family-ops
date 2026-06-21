@@ -294,10 +294,10 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-19 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: span=2026-06-21 :: travel=true :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
-[CAL] 2026-06-21 ALL-DAY [FAM] Mass - location TBD :: liturgical :: tentative=true :: flag=true
-[CAL] 2026-06-22 09:30 [K] OB appointment :: appointments :: stripe=appt :: end=10:30
+[CAL] 2026-06-20 16:00 Mass - Sacred Heart Chapel Pueblo :: liturgical :: end=17:00 :: location="Sacred Heart Chapel, Pueblo, CO"
+[CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
-[CAL] 2026-06-23 17:00 [R] Rileigh birthday dinner :: birthdays
+[CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: birthdays
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 ALL-DAY [D] Scale certification :: misc :: location="Fairgrounds, Westcliffe, CO" :: notes="time TBD"
