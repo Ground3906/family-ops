@@ -314,6 +314,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JULY 2026
 
+[CAL] 2026-07-07 14:00 [K] OB appointment :: appointments :: stripe=appt :: end=15:00
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
 [CAL] 2026-07-09 12:15 [D] Shoulder appt - Westcliffe :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO"
