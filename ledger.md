@@ -29,8 +29,11 @@ Schema fields available for Ledger queries:
 
 Ledger does not write to this file. Ledger does not handle receipt intake. When a fuel receipt is uploaded, the routing is Punch List — not Ledger.
 
-### `feed-log.jsonl` — READ ONLY (file not yet created)
-**Owner: TBD (Stockyard likely).** Feed purchases, quantities, per-unit cost. Will be Ledger's primary input for feed cost per animal class and cost-of-production math.
+### `chow-hall/buy-rate.md` → future `chow-hall/buy-rate.jsonl` — READ ONLY
+**Owner: Chow Hall.** Household grocery purchase history. Currently stored as markdown tables — NOT yet queryable by Ledger. Conversion to `chow-hall/buy-rate.jsonl` (JSONL, one record per line item) is a required build task before Ledger can hook food spend data. See Known Gaps.
+
+### `stockyard/feed-log.jsonl` — READ ONLY
+**Owner: Stockyard.** Feed purchases, quantities, per-unit cost. Ledger's primary input for feed cost per animal class and cost-of-production math.
 
 ### `income-log.jsonl` — READ/WRITE (file not yet created)
 **Owner: Ledger.** Farm income events — egg sales, livestock sales, produce sales. Ledger owns intake and appends. One record per transaction.
@@ -66,7 +69,7 @@ These are the known requirements as of 2026-06-20. Locked in this stub so the bu
 ### 2. Feed cost tracking
 - Per-animal-class feed cost (chickens, pigs, turkeys separately)
 - Feed cost per dozen eggs produced (cross-reference with Stockyard egg log)
-- Reads `feed-log.jsonl` (file pending Stockyard build)
+- Reads `stockyard/feed-log.jsonl`
 
 ### 3. Farm income logging
 - Intake workflow for egg sales, livestock sales, produce
@@ -83,6 +86,11 @@ These are the known requirements as of 2026-06-20. Locked in this stub so the bu
 - Kalea uploads → Ledger extracts → appends to appropriate log
 - File type TBD at build time — may be a `supply-log.jsonl`
 
+### 6. Grocery food spend hook
+- Read `chow-hall/buy-rate.jsonl` (once converted from markdown) for household food spend totals
+- Per-store spend, per-month totals, SNAP vs. out-of-pocket split
+- Blocked on buy-rate.md → JSONL conversion (see Known Gaps)
+
 ---
 
 ## What Ledger Does NOT Own
@@ -92,6 +100,7 @@ These are the known requirements as of 2026-06-20. Locked in this stub so the bu
 - Stockyard egg/flock logs — Stockyard owns, Ledger reads for cost-per-dozen math
 - Any vehicle MX decisions — Punch List's call
 - Calendar entries — Foreman's call
+- Grocery purchase history — Chow Hall owns, Ledger reads
 
 ---
 
@@ -103,18 +112,10 @@ Tone is dry and precise. Ledger is not alarmed by the numbers — it just report
 
 ---
 
-## Known Gaps (at stub time, 2026-06-20)
+## Known Gaps (at stub time, 2026-06-20; updated 2026-06-22)
 
-- `feed-log.jsonl` not created — pending Stockyard build or standalone Ledger session
+- **`chow-hall/buy-rate.md` → JSONL conversion: REQUIRED BEFORE LEDGER CAN HOOK FOOD SPEND.** Purchase history is in `chow-hall/buy-rate.md` as markdown tables. Must be converted to `chow-hall/buy-rate.jsonl` (JSONL, one record per line item) for Chow Hall query capability and Ledger food spend hook. Design session required: schema lock, existing record conversion, Ledger read hook definition. **Surface this gap at every Chow Hall or Ledger session open until resolved.**
 - `income-log.jsonl` not created — Ledger owns this, build at first income-tracking session
-- Farm vs. personal fuel allocation logic not yet defined — needs Matt's input at build time (what percentage of Dodge miles are farm vs. personal?)
-- LLC formal accounting integration (QuickBooks, etc.) not scoped — out of range until operations scale
-- Kalea receipt intake workflow for farm supplies not built — stub notes it as a priority given she's already asking about receipts
-
----
-
-## Anti-Drift
-
-- Ledger reads domain files. It does not rewrite them, does not take over their schemas, and does not route intake that belongs to another agent.
-- When a receipt comes in: fuel goes to Punch List, feed goes to Stockyard (or Ledger if Stockyard isn't built yet — flag the gap), income goes to Ledger.
-- If a data source doesn't exist yet, Ledger surfaces the gap to Matt rather than improvising.
+- Farm vs. personal fuel allocation logic not yet defined — needs Matt's input at build time
+- LLC formal accounting integration not scoped — out of range until operations scale
+- Kalea receipt intake workflow for farm supplies not built

@@ -16,6 +16,8 @@
 - `[partial]` = line item partially legible on receipt — data approximate
 - `[flag]` = price or quantity warrants a second look
 
+**Format note:** This file is markdown pending conversion to `chow-hall/buy-rate.jsonl`. See ledger.md Known Gaps for tracking. Log new trips here until conversion is complete.
+
 ---
 
 ## Lowes #109 — Westcliffe, CO
@@ -400,6 +402,78 @@
 
 ---
 
+### Trip: 2026-06-22 — SNAP + [other TBD] (total $324.04; SNAP BAL DUE $268.66 — payment split unclear: may be $268.66 SNAP + ~$55 other, or full $324.04 SNAP with $268.66 remaining card balance; flag for clarification)
+
+**GROCERY:**
+
+| Item | You Pay | Shelf | Savings | Notes |
+|---|---|---|---|---|
+| Gushers Blu/RV | $2.99 | $3.98 | Member -$1.00 | |
+| Kraft Dressing | $2.99 | $4.49 | Member -$1.50 | |
+| SIG Distilled Water | $1.49 | $1.49 | — | |
+| SIG Dressing Blue | $2.99 | $2.99 | — | |
+| SIG Dijon Mustard | $1.00 | $1.00 | — | |
+| SIG Lentils Bean | $2.19 | $2.19 | — | |
+| Quaker Oatm Squar | ~$4.49 | ~$5.99 | Member -$1.00 | [partial] exact price approx |
+| Quaker Oatm Hay M | ~$4.49 | ~$5.99 | Member -$1.50 | [partial] |
+| Quaker Chewy Dipps | ~$8.99 | ~$9.99 | Member -$1.00 | |
+| Kellogg's P&F variety | ~$2.99 | ~$3.49 | Member -$0.50 | [partial] |
+| PT Frsto Ban Sgr | $4.99 | $4.99 | — | Pop-Tarts Frosted Brown Sugar |
+| PT Frsto Smores | $4.09 | $4.09 | — | Pop-Tarts Frosted S'mores |
+| Kelloggs Pop-Tarts | $2.99 | $3.49 | Member -$0.50 | |
+| Kelloggs Pop-Tarts (2nd) | $2.99 | $3.49 | Member -$0.50 | |
+| Kellog Pop-Tarts 3 | $4.89 | $4.89 | — | 3-pack |
+| Ken's Dressing | $3.99 | $4.28 | Member -$0.30 | |
+| 2# NBC Chicken in Bis | $6.98 | $13.58 | Member -$6.80 | heavily discounted |
+| NBC Wafers Nilla | $5.49 | $5.79 | Member savings | |
+| 4# NBC Teddy Graham | ~$9.00 | ~$9.98 | Member savings | |
+| NBC Triscuit CRK | $4.29 | $4.49 | Member -$0.20 | |
+| Wheat Thins Party | $6.99 | $7.99 | Member -$1.00 | |
+| MC Chili Pwd 7.5oz | $7.87 | $10.48 | Member -$2.62 | |
+| Meiji Cookie Hello | $3.50 | $4.20 | Member -$0.70 | |
+| Mission Trtla Yell | $3.29 | $3.29 | — | |
+| Mrs Cubbisons Crou | $2.99 | $2.99 | — | |
+| Bobos Oat Bar | $5.49 | $5.49 | — | |
+| Bloom Pop 4pk 12oz | $7.89 | $9.69 | Member -$1.70 | |
+
+**REFRIG/FROZEN:**
+
+| Item | You Pay | Shelf | Savings | Notes |
+|---|---|---|---|---|
+| 2# Chse Mozzarla | $5.38 | $5.38 | — | |
+| Luc Greek Yogurt | $4.99 | $4.99 | — | |
+| 2# Silk Soy HG | $9.58 | $9.58 | — | |
+| 3# Two Good Greek Yog | $20.37 | $22.47 | Member -$2.10 | |
+| 2# Frigo Variety Pack | $11.98 | $12.98 | Member -$1.00 | |
+| Nutella 3.0 Cone G | $3.99 | $6.99 | Member -$3.00 | |
+| 2# Promised Land Milk | $12.98 | $13.98 | — | |
+| Greek Gods Yogurt | $7.98 | $9.98 | Member -$2.00 | |
+| 2# O Org Milk Whole D | $15.98 | $15.98 | — | |
+| 3# Ripple Milk Plant | $20.97 | $20.97 | — | |
+
+**PRODUCE:**
+
+| Item | You Pay | Shelf | Savings | Notes |
+|---|---|---|---|---|
+| Orange Bell Pepper | $0.99 | $1.69 | Member -$0.70 | |
+| 4# Cucumbers | $3.96 | $3.96 | — | |
+| Zucchini Squash | $5.15 | $7.14 | Member savings | |
+| Reduced Bananas | $2.94 | — | — | 5.99 lb @ $0.49/lb |
+| 2# Red Bell Peppers | $1.99 | $3.38 | Member -$1.40 | |
+| 2# Yellow Bell Pepper | $1.99 | $3.38 | Member -$1.40 | |
+| Bananas | $2.90 | $2.90 | — | 4.82 lb @ $0.60/lb |
+| Iceberg Lettuce | $2.79 | $2.79 | — | |
+| 2# Strawberries 2lb | $7.98 | $15.98 | forU coupon -$8.00 | |
+| Picasso Melon | $6.27 | $6.27 | — | 4.86 lb @ $1.29/lb |
+| 2# Avocados Hass LRG | $1.98 | $5.98 | Member -$4.00 | |
+| OO Baby Spinach | $5.49 | $5.49 | — | |
+| Cttn Candy Grapes | $20.46 | $20.46 | — | 4.10 lb @ $4.99/lb |
+| Cttn Candy Grapes | $12.03 | $12.03 | — | 2.41 lb @ $4.99/lb |
+| Yellow Onions | $0.85 | $0.85 | — | 0.86 lb @ $0.99/lb |
+| Apples Cosmic CRSP | $6.89 | $7.44 | Member -$0.75 | 3.74 lb @ $1.78/lb |
+
+---
+
 ## Safeway — Pueblo, CO
 1231 S. Prairie | 719-561-1234
 *Store 3729. Pueblo runs — tertiary grocery. SNAP accepted.*
@@ -453,3 +527,4 @@
 | KS Butter 14 boxes | Costco 05/05 | Two separate SKUs, 7 of each — confirm not a receipt print error |
 | 2× 25 lb Flour | Costco 05/05 | Two flour line items, same price — same item doubled or two different varieties |
 | Lowes 04/15 cash mid-section | Lowes 04/15 | Several lines obscured by fold — confirm nothing critical missing |
+| Safeway Cañon City 06/22 payment split | Safeway 3728 06/22 | SNAP BAL DUE $268.66 shown on $324.04 total — unclear if $268.66 is amount charged to SNAP or remaining SNAP card balance after full charge |
