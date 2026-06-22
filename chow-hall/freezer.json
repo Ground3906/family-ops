@@ -2,7 +2,7 @@
   "_meta": {
     "file": "chow-hall/freezer.json",
     "owner": "Chow Hall",
-    "last_updated": "2026-06-18",
+    "last_updated": "2026-06-22",
     "purpose": "One running list of everything in the seven freezers. A single number says how much is on hand; the file knows what is low and who refills it.",
     "data_state": "STARTER EXAMPLES -- not a real count. Real numbers load when meal planning earns it (Kalea ride-along checks + Costco receipts).",
     "naming_rule": "Name each item the plain way you would say it out loud, and keep the name identical here and in pantry.md so the shopping list and recipes line up.",
@@ -164,14 +164,15 @@
       "id": "frz-chicken-breasts",
       "name": "Chicken breasts",
       "category": "commercial-protein",
-      "on_hand": 10,
+      "on_hand": 7,
       "unit_weight": 1,
       "uom": "lbs",
       "source": "Costco",
       "date_in": "2026-05-10",
-      "last_reconciled": "2026-05-22",
+      "last_reconciled": "2026-06-22",
       "restock_qty": 12,
-      "par": null
+      "par": null,
+      "note": "3 lbs reserved for Rileigh birthday orange chicken, 2026-06-23."
     },
     {
       "id": "frz-frozen-broccoli",
@@ -237,13 +238,14 @@
       "id": "frz-lasagna",
       "name": "Lasagna, family pan",
       "category": "home-prep",
-      "on_hand": 2,
+      "on_hand": 1,
       "unit_label": "pans",
       "source": "Home kitchen",
       "date_in": "2026-05-04",
-      "last_reconciled": "2026-05-22",
+      "last_reconciled": "2026-06-22",
       "restock_qty": 3,
-      "par": null
+      "par": null,
+      "note": "1 pan drawn for dinner 2026-06-22. Low - next batch should make more."
     },
     {
       "id": "frz-pulled-pork",
