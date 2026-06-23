@@ -4,8 +4,8 @@
 
 $ClientId  = "eec121fa-f054-4214-af52-aa83371128ac"
 $Scope     = "Calendars.ReadWrite User.Read offline_access"
-$DeviceUrl = "https://login.microsoftonline.com/consumers/oauth2/v2.0/devicecode"
-$TokenUrl  = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
+$DeviceUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/devicecode"
+$TokenUrl  = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
 $TokenFile = Join-Path $PSScriptRoot "graph-token.json"
 
 # Request device code
