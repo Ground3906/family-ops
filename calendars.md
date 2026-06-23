@@ -313,6 +313,9 @@ Last batch: 2026-06-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
 [CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
+[CAL] 2026-06-30 12:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=13:00 :: location="Mesquite, NV"
+[CAL] 2026-06-30 15:15 [K][M][R] Pedicure - Rio Salon :: family :: end=16:15 :: location="Rio Salon, Mesquite, NV"
+[CAL] 2026-07-01 09:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=10:00 :: location="Mesquite, NV"
 
 ---
 
