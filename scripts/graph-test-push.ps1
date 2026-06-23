@@ -4,7 +4,7 @@
 # Auto-refreshes token if near expiry.
 
 $ClientId  = "eec121fa-f054-4214-af52-aa83371128ac"
-$TokenUrl  = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
+$TokenUrl  = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
 $TokenFile = Join-Path $PSScriptRoot "graph-token.json"
 $CalName   = "Bayer Family Ops"
 $Graph     = "https://graph.microsoft.com/v1.0"
