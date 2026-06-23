@@ -135,7 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-06-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-06-23. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -321,6 +321,8 @@ Last batch: 2026-06-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JULY 2026
 
+[CAL] 2026-07-03 ALL-DAY [D] VA appt prep - gather docs ⏰ :: prompt :: notes="Bring to VA (07-06): DD-214 Member 4 copy + presumptive conditions documentation"
+[CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
