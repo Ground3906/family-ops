@@ -3,7 +3,7 @@
     "file": "punch-list/vehicles.json",
     "owner": "Punch List",
     "schema_version": 2,
-    "last_updated": "2026-06-17",
+    "last_updated": "2026-06-22",
     "seeded_from": "fleet-state-v1.md (intake 2026-05-14) + Punch List deep build (2026-05-15) + capability intake session",
     "note": "v2 adds full Bayer-reality capability fields: passenger counts, carseat config, trailer rules, cargo notes, rotation cadence, single-point-of-failure flags. Registration renewal months for NV3500, Ford, Dodge, Tahoe still not captured — obtain and update when known."
   },
@@ -23,8 +23,8 @@
       "color": "Silver",
       "use_profile": "primary family hauler",
       "tracking_unit": "miles",
-      "current_mileage": 103777,
-      "current_mileage_as_of": "2026-05-05",
+      "current_mileage": 104060,
+      "current_mileage_as_of": "2026-06-11",
       "registration_expiry": null,
       "registration_note": "Renewal month not captured — obtain and update",
       "oil_change_interval_mi": 7500,
@@ -60,22 +60,16 @@
       "single_point_of_failure": "Full-family long-haul travel (Mesquite, CO Springs with full load). If NV is in shop, Tahoe absorbs family load — Costco postpones or 2-adult only.",
       "open_items": [
         {
-          "id": "nv-lf-lca",
-          "description": "LF lower control arm — cam bolt seized, full alignment not achievable until replaced",
-          "priority": "watch",
-          "route": "Austin Auto"
-        },
-        {
           "id": "nv-cyl7-tick",
-          "description": "Cyl 7 ticking — TSB suggests block replacement, monitor only. Oil consumption 1 qt/8k mi confirmed.",
-          "priority": "research-flag",
+          "description": "Cyl 7 ticking -- Austin Auto confirmed 2026-06-11 (RO48260): internal, noisy lifter, quiet after warm-up. Monitor. Oil consumption 1 qt/8k mi confirmed. TSB block replacement not recommended at this time.",
+          "priority": "monitor",
           "route": "internal"
         },
         {
-          "id": "nv-alignment-delta",
-          "description": "Analyze alignment printouts 80,417 mi vs 103,773 mi for wear-pattern deltas",
-          "priority": "post-deploy task",
-          "route": "Punch List internal"
+          "id": "nv-oil-flush",
+          "description": "Oil flush at next oil change -- Austin Auto recommendation 2026-06-11 (RO48260) to attempt to free sticking lifter (cyl 7 tick). Next oil change due 111,277 mi.",
+          "priority": "next-service",
+          "route": "Austin Automotive"
         }
       ],
       "permanent_notes": [
@@ -83,7 +77,8 @@
         "USAA lien matures 2034-09-17",
         "Purchased 2024-07-13 from Forrest Motors LLC (Orem UT) at 77,106 mi for $46,500",
         "CO title processed 2024-09-17",
-        "2024-2026: cats + O2 sensors completed, AWD diagnostic codes clear"
+        "2024-2026: cats + O2 sensors completed, AWD diagnostic codes clear",
+        "DO NOT USE: Car Muffler Pros -- 2026-05-05 work left all tie rods and adjusting sleeves loose, driver's side missing two bolts. Confirmed by Austin Auto 2026-06-11 (RO48260). Avoid all future work."
       ]
     },
     {
@@ -234,7 +229,7 @@
           "date": "2024-09-19",
           "shop": "High Valley Diesel",
           "mileage": null,
-          "total": 504.3,
+          "total": 504.30,
           "status": "paid",
           "work": "Diagnose coolant temp issue — traced wiring ECM to sensor, faulty sensor confirmed. Replace thermostat + water temp sensor.",
           "parts": ["thermostat","water temp sensor"]
