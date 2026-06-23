@@ -286,7 +286,7 @@ function Expand-CalRecur {
 # ---------------------------------------------------------------
 function Parse-CalendarsFile {
     param([string]$Path)
-    $events = [ordered]@{}
+    $events = @{}
     foreach ($line in (Get-Content $Path -Encoding UTF8)) {
         $t = $line.Trim()
         if ($t.StartsWith('[CAL] ')) {
