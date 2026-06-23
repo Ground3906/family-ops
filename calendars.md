@@ -301,6 +301,7 @@ Last batch: 2026-06-23. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
 [CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
+[CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
