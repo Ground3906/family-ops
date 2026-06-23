@@ -4,7 +4,7 @@
 # Foreign edits are detected, reverted, and logged to graph-sync-revert.log.
 # Runs every 3 min via Scheduled Task. See setup-sync-task.ps1.
 
-Set-StrictMode -Version Latest
+Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
 
 # ---------------------------------------------------------------
@@ -183,9 +183,9 @@ function Parse-CalEntry {
     $f     = Parse-Fields ($parts | Select-Object -Skip 1)
 
     $isAllDay = ($time -eq 'ALL-DAY')
-    $cancel   = if ($f.cancel) { $f.cancel } else { '' }
+    $cancel   = if ($f['cancel'])   { $f['cancel'] }   else { '' }
     $pending  = ($cancel -eq 'pending')
-    $optional = ($f.optional -eq 'true')
+    $optional = ($f['optional'] -eq 'true')
 
     # Subject line: pills + title + pending flag
     $pillStr = ($pills | ForEach-Object { "[$_]" }) -join ''
@@ -195,15 +195,15 @@ function Parse-CalEntry {
     # Start / end
     if ($isAllDay) {
         $startDT = $date
-        $endDT   = if ($f.span) {
-            ([datetime]::ParseExact($f.span, 'yyyy-MM-dd', $null)).AddDays(1).ToString('yyyy-MM-dd')
+        $endDT   = if ($f['span']) {
+            ([datetime]::ParseExact($f['span'], 'yyyy-MM-dd', $null)).AddDays(1).ToString('yyyy-MM-dd')
         } else {
             ([datetime]::ParseExact($date, 'yyyy-MM-dd', $null)).AddDays(1).ToString('yyyy-MM-dd')
         }
     } else {
         $startDT = "${date}T${time}:00"
-        $endDT   = if ($f.end) {
-            "${date}T$($f.end):00"
+        $endDT   = if ($f['end']) {
+            "${date}T$($f['end']):00"
         } else {
             ([datetime]::ParseExact("${date}T${time}", 'yyyy-MM-ddTHH:mm', $null)).AddHours(1).ToString('yyyy-MM-ddTHH:mm:ss')
         }
@@ -218,11 +218,11 @@ function Parse-CalEntry {
         startDT   = $startDT
         endDT     = $endDT
         isAllDay  = $isAllDay
-        location  = if ($f.location) { $f.location } else { '' }
-        notes     = if ($f.notes)    { $f.notes }    elseif ($f.note) { $f.note } else { '' }
-        category  = if ($f.category) { $f.category } else { '' }
+        location  = if ($f['location']) { $f['location'] } else { '' }
+        notes     = if ($f['notes'])    { $f['notes'] }    elseif ($f['note']) { $f['note'] } else { '' }
+        category  = if ($f['category']) { $f['category'] } else { '' }
         cancel    = $cancel
-        tentative = ($f.tentative -eq 'true')
+        tentative = ($f['tentative'] -eq 'true')
         optional  = $optional
     }
 }
@@ -256,7 +256,7 @@ function Expand-CalRecur {
     while ($current -le $RecurHorizon) {
         $d = $current.ToString('yyyy-MM-dd')
         if ($d -notin $skipDates) {
-            $endDT = if ($f.end) { "${d}T$($f.end):00" } else {
+            $endDT = if ($f['end']) { "${d}T$($f['end']):00" } else {
                 $current.AddHours([timespan]::Parse($time).TotalHours + 1).ToString('yyyy-MM-ddTHH:mm:ss')
             }
             $results.Add(@{
@@ -268,12 +268,12 @@ function Expand-CalRecur {
                 startDT   = "${d}T${time}:00"
                 endDT     = $endDT
                 isAllDay  = $false
-                location  = if ($f.location) { $f.location } else { '' }
+                location  = if ($f['location']) { $f['location'] } else { '' }
                 notes     = ''
-                category  = if ($f.category) { $f.category } else { '' }
+                category  = if ($f['category']) { $f['category'] } else { '' }
                 cancel    = ''
                 tentative = $false
-                optional  = ($f.optional -eq 'true')
+                optional  = ($f['optional'] -eq 'true')
             })
         }
         $current = $current.AddDays(7)
