@@ -1,14 +1,20 @@
 # graph-auth.ps1 - Browser-based OAuth for Microsoft Graph
 # Device code flow is blocked for personal Microsoft accounts in Default Directory tenants.
 # This script opens a browser on the local machine, captures the callback, saves the token.
-# Run ONCE on a machine with a browser (Precision). Copy graph-token.json to ThinkPad after.
+# Run ONCE on a machine with a browser (Precision). Copy token file to ThinkPad after.
+#
+# Usage:
+#   .\graph-auth.ps1                            # saves to graph-token.json (Matt)
+#   .\graph-auth.ps1 -Out graph-token-kalea.json  # saves to separate file (Kalea)
+
+param([string]$Out = "graph-token.json")
 
 $ClientId    = "eec121fa-f054-4214-af52-aa83371128ac"
 $RedirectUri = "http://localhost:8888/"
 $Scope       = "Calendars.ReadWrite User.Read offline_access"
 $AuthUrl     = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
 $TokenUrl    = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
-$TokenFile   = Join-Path $PSScriptRoot "graph-token.json"
+$TokenFile   = Join-Path $PSScriptRoot $Out
 
 # Build auth URL
 $State       = [System.Guid]::NewGuid().ToString("N")
@@ -32,7 +38,7 @@ try {
 
 # Open browser
 Write-Host "Opening browser for sign-in..."
-Write-Host "Sign in as matthew.bayer@outlook.com"
+Write-Host "Sign in with the Microsoft account for: $Out"
 Write-Host "Waiting for callback..." -NoNewline
 Start-Process $FullAuthUrl
 
@@ -85,4 +91,9 @@ Write-Host ""
 Write-Host "=== AUTH COMPLETE ==="
 Write-Host "Token saved: $TokenFile"
 Write-Host ""
-Write-Host "Run graph-test-push.ps1 to push the test event."
+if ($Out -eq "graph-token.json") {
+    Write-Host "Run graph-test-push.ps1 to push the test event."
+} else {
+    Write-Host "Copy $TokenFile to the ThinkPad scripts/ folder."
+    Write-Host "graph-sync.ps1 will pick it up automatically on the next run."
+}
