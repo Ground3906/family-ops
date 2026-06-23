@@ -24,7 +24,8 @@ $CalName       = "Bayer Family Ops"
 $GraphBase     = "https://graph.microsoft.com/v1.0"
 $TZ            = "America/Denver"
 $RecurHorizon  = (Get-Date).AddYears(2)
-$KaleaEmail    = "kalea.bayer.co@outlook.com"
+$KaleaEmail      = "kalea.bayer.co@outlook.com"
+$KaleaTokenFile  = Join-Path $ScriptDir "graph-token-kalea.json"
 
 $PillNames = @{
     D = 'Matt'; K = 'Kalea'; W = 'Wyatt'; M = 'Molly'
@@ -159,15 +160,12 @@ function New-LocalId {
 
 function New-ContentHash {
     param($Ev)
-    # Strip non-BMP before hashing so content hash matches what Outlook actually stores
     $raw   = "$(Strip-NonBmp $Ev.subject)|$($Ev.startDT)|$($Ev.endDT)|$($Ev.isAllDay)|$($Ev.location)|$($Ev.notes)|$($Ev.category)"
     $bytes = [System.Text.Encoding]::UTF8.GetBytes($raw)
     $hash  = [System.Security.Cryptography.SHA256]::Create().ComputeHash($bytes)
     return -join ($hash | ForEach-Object { $_.ToString('x2') })
 }
 
-# Strip Unicode above U+FFFF (non-BMP: emoji like bread loaf, alarm clock, etc.)
-# Outlook cannot store non-BMP characters in event subjects - returns ?? instead.
 function Strip-NonBmp {
     param([string]$S)
     return ($S -replace "[^\u0000-\uFFFF]", "").Trim()
@@ -195,12 +193,10 @@ function Parse-CalEntry {
     $pending  = ($cancel -eq 'pending')
     $optional = ($f['optional'] -eq 'true')
 
-    # Subject line: pills + title + pending flag
     $pillStr = ($pills | ForEach-Object { "[$_]" }) -join ''
     $subject = if ($pillStr) { "$pillStr $title" } else { $title }
     if ($pending) { $subject = "$subject (PENDING)" }
 
-    # Start / end
     if ($isAllDay) {
         $startDT = $date
         $endDT   = if ($f['span']) {
@@ -331,7 +327,6 @@ function Build-GraphBody {
     if ($Ev.category) { $lines.Add("Category: $($Ev.category)") }
     $desc = $lines -join "`n"
 
-    # optional events show as free; tentative show as tentative
     $showAs = if ($Ev.optional) { 'free' } elseif ($Ev.tentative) { 'tentative' } else { 'busy' }
 
     $body = @{
@@ -426,13 +421,43 @@ function Write-Receipt {
 }
 
 # ---------------------------------------------------------------
+# KALEA TOKEN (optional - push category colors to her account)
+# ---------------------------------------------------------------
+function Get-KaleaAccessToken {
+    if (-not (Test-Path $KaleaTokenFile)) { return $null }
+    try {
+        $t   = Get-Content $KaleaTokenFile -Raw | ConvertFrom-Json
+        $tok = $t.access_token
+        if ((Get-Date) -ge [datetime]::Parse($t.expires_at).AddMinutes(-5)) {
+            $r = Invoke-RestMethod -Method Post -Uri $TokenUrl `
+                -ContentType "application/x-www-form-urlencoded" `
+                -Body @{
+                    grant_type    = "refresh_token"
+                    client_id     = $ClientId
+                    refresh_token = $t.refresh_token
+                    scope         = "Calendars.ReadWrite User.Read offline_access"
+                }
+            $tok = $r.access_token
+            @{
+                access_token  = $r.access_token
+                refresh_token = $r.refresh_token
+                expires_at    = (Get-Date).AddSeconds([int]$r.expires_in).ToString("o")
+            } | ConvertTo-Json | Set-Content $KaleaTokenFile -Encoding UTF8
+        }
+        return $tok
+    } catch {
+        Write-Warning "[kalea-token] Refresh failed - re-run graph-auth.ps1 -Out graph-token-kalea.json: $_"
+        return $null
+    }
+}
+
+# ---------------------------------------------------------------
 # OUTLOOK CATEGORY COLORS
 # ---------------------------------------------------------------
 function Ensure-OutlookCategories {
     param([string]$Tok)
     $h = @{ Authorization = "Bearer $Tok" }
 
-    # Locked color map. Preset IDs are Outlook built-ins.
     $colorMap = [ordered]@{
         liturgical   = 'preset8'   # Purple
         kids         = 'preset7'   # Blue
@@ -445,7 +470,7 @@ function Ensure-OutlookCategories {
         meals        = 'preset0'   # Red
         farm         = 'preset19'  # Dark Green
         prompt       = 'preset13'  # Dark Gray
-        misc         = 'preset13'  # Dark Gray (same as prompt - collapsed)
+        misc         = 'preset13'  # Dark Gray (same as prompt)
     }
 
     try {
@@ -497,8 +522,12 @@ try {
     # 2. One-time share with Kalea (no-op if already shared)
     Ensure-KaleaShare $tok $calId
 
-    # 2b. Push Outlook category color definitions (no-op when already set)
+    # 2b. Push Outlook category color definitions to Matt's account (no-op when already set)
     Ensure-OutlookCategories $tok
+
+    # 2c. Push same category colors to Kalea's account if her token exists
+    $kaleaTok = Get-KaleaAccessToken
+    if ($kaleaTok) { Ensure-OutlookCategories $kaleaTok }
 
     # 3. Parse calendars.md
     if (-not (Test-Path $CalFile)) { throw "calendars.md not found at $CalFile" }
@@ -506,7 +535,6 @@ try {
     $desired = Parse-CalendarsFile $CalFile
     Write-Host "[sync] $($desired.Count) events parsed from calendars.md"
 
-    # Guard: never wipe the calendar if the parse produces nothing
     if ($desired.Count -eq 0) {
         throw "calendars.md parsed to zero events. Aborting to protect existing calendar data."
     }
@@ -515,8 +543,7 @@ try {
     $state = Load-State
     if (-not $state.calendar_id) { $state.calendar_id = $calId }
 
-    # 5a. Clean slate guard: if state is empty but calendar already has events,
-    #      delete everything first so we don't stack on top of a previous run.
+    # 5a. Clean slate guard
     if ($state.events.Count -eq 0) {
         $existing = Get-AllGraphEvents $calId $tok
         if ($existing.Count -gt 0) {
@@ -550,9 +577,7 @@ try {
         $newHash = New-ContentHash $ev
 
         if (-not $state.events.ContainsKey($id)) {
-            # Create
             try {
-                # transactionId: stable per-event GUID to help deduplicate retries
                 $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
                 $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$calId/events" $tok $gBody
                 $state.events[$id] = @{
@@ -569,7 +594,6 @@ try {
             }
         } else {
             if ($state.events[$id].contentHash -ne $newHash) {
-                # Update (or recreate if Graph event was deleted outside our control)
                 $gid = $state.events[$id].graphId
                 try {
                     Invoke-Graph 'Patch' "$GraphBase/me/calendars/$calId/events/$gid" $tok $gBody | Out-Null
@@ -579,7 +603,6 @@ try {
                     $updated++
                 } catch {
                     if ($_ -match '(404|itemNotFound)') {
-                        # Graph event vanished - recreate
                         try {
                             $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
                             $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$calId/events" $tok $gBody
@@ -602,14 +625,13 @@ try {
     }
     Write-Host "[sync] Created: $created  Updated: $updated  No-change: $skipped  Deleted: $($toDelete.Count)"
 
-    # 7. Foreign event sweep: detect + remove anything not written by this script
+    # 7. Foreign event sweep
     $allGraph     = Get-AllGraphEvents $calId $tok
     $knownGids    = @($state.events.Values | ForEach-Object { $_.graphId })
     $foreignCount = 0
 
     foreach ($gev in $allGraph) {
         if ($gev.id -notin $knownGids) {
-            # Unknown event - not created by us
             Write-Warning "[foreign-create] '$($gev.subject)' - deleting and logging receipt"
             Write-Receipt 'foreign_create' $gev.id $gev.subject 'deleted'
             try {
@@ -618,10 +640,6 @@ try {
             } catch {
                 Write-Warning "Foreign delete failed ($($gev.id)): $_"
             }
-        } else {
-            # Known event: it was created by us, calendar is correct.
-            # Subject comparison disabled - state mapping verified clean on rebuild.
-            # TODO v2: restore subject enforcement after state rebuild implementation.
         }
     }
     if ($foreignCount -gt 0) {
