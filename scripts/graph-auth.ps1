@@ -1,69 +1,88 @@
-# graph-auth.ps1 -- One-time device-code sign-in for Microsoft Graph
-# Run once on the ThinkPad. Saves token to scripts/graph-token.json (gitignored).
-# Re-run any time the token stops working.
+# graph-auth.ps1 - Browser-based OAuth for Microsoft Graph
+# Device code flow is blocked for personal Microsoft accounts in Default Directory tenants.
+# This script opens a browser on the local machine, captures the callback, saves the token.
+# Run ONCE on a machine with a browser (Precision). Copy graph-token.json to ThinkPad after.
 
-$ClientId  = "eec121fa-f054-4214-af52-aa83371128ac"
-$Scope     = "Calendars.ReadWrite User.Read offline_access"
-$DeviceUrl = "https://login.microsoftonline.com/common/oauth2/v2.0/devicecode"
-$TokenUrl  = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
-$TokenFile = Join-Path $PSScriptRoot "graph-token.json"
+$ClientId    = "eec121fa-f054-4214-af52-aa83371128ac"
+$RedirectUri = "http://localhost:8888/"
+$Scope       = "Calendars.ReadWrite User.Read offline_access"
+$AuthUrl     = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
+$TokenUrl    = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+$TokenFile   = Join-Path $PSScriptRoot "graph-token.json"
 
-# Request device code
-Write-Host "Requesting device code..." -NoNewline
-$DC = Invoke-RestMethod -Method Post -Uri $DeviceUrl `
-    -ContentType "application/x-www-form-urlencoded" `
-    -Body @{ client_id = $ClientId; scope = $Scope }
-Write-Host " done."
+# Build auth URL
+$State       = [System.Guid]::NewGuid().ToString("N")
+$FullAuthUrl = $AuthUrl +
+    "?client_id=$ClientId" +
+    "&response_type=code" +
+    "&redirect_uri=$([uri]::EscapeDataString($RedirectUri))" +
+    "&scope=$([uri]::EscapeDataString($Scope))" +
+    "&state=$State" +
+    "&prompt=select_account"
 
-Write-Host ""
-Write-Host "=== ACTION REQUIRED ==="
-Write-Host "1. Open any browser and go to:  $($DC.verification_uri)"
-Write-Host "2. Enter this code:             $($DC.user_code)"
-Write-Host "3. Sign in as matthew.bayer@outlook.com"
-Write-Host "========================"
-Write-Host ""
-Write-Host "Waiting for sign-in" -NoNewline
-
-# Poll for token
-$Interval  = [int]$DC.interval
-$ExpiresAt = (Get-Date).AddSeconds([int]$DC.expires_in)
-$Token     = $null
-
-while ((Get-Date) -lt $ExpiresAt) {
-    Start-Sleep -Seconds $Interval
-    try {
-        $Token = Invoke-RestMethod -Method Post -Uri $TokenUrl `
-            -ContentType "application/x-www-form-urlencoded" `
-            -Body @{
-                grant_type  = "urn:ietf:params:oauth2:grant-type:device_code"
-                client_id   = $ClientId
-                device_code = $DC.device_code
-            } -ErrorAction Stop
-        break
-    } catch {
-        $Err = $null
-        try { $Err = $_.ErrorDetails.Message | ConvertFrom-Json } catch {}
-        if ($Err -and $Err.error -eq "authorization_pending") { Write-Host "." -NoNewline; continue }
-        if ($Err -and $Err.error -eq "slow_down")             { $Interval += 5; continue }
-        Write-Host ""
-        Write-Host "Auth error: $($Err.error) -- $($Err.error_description)"
-        exit 1
-    }
-}
-
-if (-not $Token) {
-    Write-Host ""
-    Write-Host "Timed out. Run the script again."
+# Start local listener
+$Listener = [System.Net.HttpListener]::new()
+$Listener.Prefixes.Add("http://localhost:8888/")
+try {
+    $Listener.Start()
+} catch {
+    Write-Host "Could not start listener on port 8888. Check if another process is using it."
     exit 1
 }
 
-# Save token
+# Open browser
+Write-Host "Opening browser for sign-in..."
+Write-Host "Sign in as matthew.bayer@outlook.com"
+Write-Host "Waiting for callback..." -NoNewline
+Start-Process $FullAuthUrl
+
+# Block until Microsoft redirects back
+$Context  = $Listener.GetContext()
+$Code     = $Context.Request.QueryString["code"]
+$RetState = $Context.Request.QueryString["state"]
+$ErrParam = $Context.Request.QueryString["error"]
+
+# Close browser tab gracefully
+$Html  = "<html><body style='font-family:sans-serif;padding:40px'><h2>Sign-in complete.</h2><p>You can close this window and return to PowerShell.</p></body></html>"
+$Bytes = [System.Text.Encoding]::UTF8.GetBytes($Html)
+$Context.Response.ContentLength64 = $Bytes.Length
+$Context.Response.OutputStream.Write($Bytes, 0, $Bytes.Length)
+$Context.Response.Close()
+$Listener.Stop()
+
+Write-Host " done."
+
+if ($ErrParam) { Write-Host "Auth error from Microsoft: $ErrParam"; exit 1 }
+if (-not $Code) { Write-Host "No auth code received. Try again."; exit 1 }
+if ($RetState -ne $State) { Write-Host "State mismatch. Aborting."; exit 1 }
+
+# Exchange code for tokens
+Write-Host "Exchanging code for tokens..." -NoNewline
+try {
+    $T = Invoke-RestMethod -Method Post -Uri $TokenUrl `
+        -ContentType "application/x-www-form-urlencoded" `
+        -Body @{
+            grant_type   = "authorization_code"
+            client_id    = $ClientId
+            code         = $Code
+            redirect_uri = $RedirectUri
+            scope        = $Scope
+        } -ErrorAction Stop
+} catch {
+    Write-Host ""
+    Write-Host "Token exchange failed: $_"
+    exit 1
+}
+
 @{
-    access_token  = $Token.access_token
-    refresh_token = $Token.refresh_token
-    expires_at    = (Get-Date).AddSeconds([int]$Token.expires_in).ToString("o")
+    access_token  = $T.access_token
+    refresh_token = $T.refresh_token
+    expires_at    = (Get-Date).AddSeconds([int]$T.expires_in).ToString("o")
 } | ConvertTo-Json | Set-Content -Path $TokenFile -Encoding UTF8
 
+Write-Host " done."
 Write-Host ""
-Write-Host "Auth complete. Token saved to $TokenFile"
-Write-Host "Run graph-test-push.ps1 next."
+Write-Host "=== AUTH COMPLETE ==="
+Write-Host "Token saved: $TokenFile"
+Write-Host ""
+Write-Host "Run graph-test-push.ps1 to push the test event."
