@@ -27,5 +27,8 @@ venv/
 .claude/settings.local.json
 WAVE4-HANDOFF.md
 
-# Runtime state — written by pull-job, never committed
+# Runtime state -- written by pull-job, never committed
 last-pull.json
+
+# Graph auth token -- written by graph-auth.ps1, never committed
+scripts/graph-token.json
