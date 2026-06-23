@@ -478,6 +478,8 @@ try {
         if (-not $state.events.ContainsKey($id)) {
             # Create
             try {
+                # transactionId: Graph deduplicates on this field if Invoke-RestMethod retries
+                $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
                 $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$calId/events" $tok $gBody
                 $state.events[$id] = @{
                     graphId     = $r.id
@@ -486,6 +488,8 @@ try {
                     start       = $ev.startDT
                 }
                 $created++
+                if ($created % 50 -eq 0) { Write-Host "[sync] $created/$($desired.Count) created..." }
+                Start-Sleep -Milliseconds 50
             } catch {
                 Write-Warning "Create failed '$($ev.subject)': $_"
             }
@@ -503,11 +507,13 @@ try {
                     if ($_ -match '(404|itemNotFound)') {
                         # Graph event vanished - recreate
                         try {
+                            $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
                             $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$calId/events" $tok $gBody
                             $state.events[$id].graphId     = $r.id
                             $state.events[$id].contentHash = $newHash
                             $state.events[$id].subject     = Strip-NonBmp $ev.subject
                             $created++
+                            Start-Sleep -Milliseconds 50
                         } catch {
                             Write-Warning "Recreate failed '$($ev.subject)': $_"
                         }
@@ -538,9 +544,11 @@ try {
             } catch {
                 Write-Warning "Foreign delete failed ($($gev.id)): $_"
             }
+        } else {
+            # Known event: it was created by us, calendar is correct.
+            # Subject comparison disabled - state mapping verified clean on rebuild.
+            # TODO v2: restore subject enforcement after state rebuild implementation.
         }
-        # Subject comparison disabled - state mapping verified clean on rebuild.
-        # TODO v2: restore subject enforcement after state rebuild implementation.
     }
     if ($foreignCount -gt 0) {
         Write-Host "[sync] $foreignCount foreign event(s) removed. Receipts: $RevertLog"
