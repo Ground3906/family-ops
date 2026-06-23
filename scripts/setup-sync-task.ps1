@@ -1,13 +1,24 @@
-# setup-sync-task.ps1 - Register BayerFamilyOps-GraphSync scheduled task on ThinkPad.
-# Run once on the ThinkPad. Open PowerShell as Administrator, then:
+# setup-sync-task.ps1 - Register BayerFamilyOps-GraphSync scheduled task.
+# Must run from an ADMINISTRATOR PowerShell on the ThinkPad:
+#   Right-click PowerShell -> Run as administrator
 #   cd "C:\Users\ThinkPad X1 Carbon\Documents\family-ops\scripts"
 #   .\setup-sync-task.ps1
 #
-# Task runs graph-sync.ps1 every 3 min, hidden, as the current logged-in user.
-# Re-run to update (Force flag overwrites existing registration).
+# Uses schtasks.exe (avoids PS version quirks with Trigger.Repetition).
+# Runs as SYSTEM - no password prompt, always available on headless machine.
+# Re-run anytime to update the registration.
 
 $TaskName   = "BayerFamilyOps-GraphSync"
 $ScriptPath = Join-Path $PSScriptRoot "graph-sync.ps1"
+
+# --- Admin check ---
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host ""
+    Write-Host "ERROR: This script must run as Administrator."
+    Write-Host "Right-click PowerShell -> Run as administrator, then re-run."
+    Write-Host ""
+    exit 1
+}
 
 if (-not (Test-Path $ScriptPath)) {
     Write-Host "ERROR: graph-sync.ps1 not found at $ScriptPath"
@@ -18,61 +29,61 @@ Write-Host "Registering '$TaskName'..."
 Write-Host "Script: $ScriptPath"
 Write-Host ""
 
-$Action = New-ScheduledTaskAction `
-    -Execute "powershell.exe" `
-    -Argument "-NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$ScriptPath`""
+# Remove existing registration (ignore errors)
+& schtasks /Delete /TN $TaskName /F 2>&1 | Out-Null
 
-# Trigger: once (immediately), repeat every 3 min indefinitely
-$Trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddSeconds(10)
-$Trigger.Repetition.Interval = "PT3M"
-$Trigger.Repetition.Duration = ""  # empty = indefinite
+# Register: every 3 min, SYSTEM account, highest privilege
+$TRCmd = "powershell.exe -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$ScriptPath`""
 
-$Settings = New-ScheduledTaskSettingsSet `
-    -MultipleInstances      IgnoreNew `
-    -ExecutionTimeLimit     ([timespan]::FromMinutes(2)) `
-    -StartWhenAvailable `
-    -DontStopIfGoingOnBatteries `
-    -RunOnlyIfNetworkAvailable
+$out = & schtasks /Create `
+    /TN $TaskName `
+    /SC MINUTE /MO 3 `
+    /TR $TRCmd `
+    /RU SYSTEM `
+    /RL HIGHEST `
+    /F 2>&1
 
-# Run as current interactive user - no password required on auto-login machine
-$Principal = New-ScheduledTaskPrincipal `
-    -UserId    "$env:USERDOMAIN\$env:USERNAME" `
-    -LogonType Interactive `
-    -RunLevel  Highest
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "ERROR: schtasks /Create failed (exit $LASTEXITCODE):"
+    Write-Host $out
+    exit 1
+}
+Write-Host $out
 
-Register-ScheduledTask `
-    -TaskName   $TaskName `
-    -Action     $Action `
-    -Trigger    $Trigger `
-    -Settings   $Settings `
-    -Principal  $Principal `
-    -Description "Bayer Family Ops: sync calendars.md to Outlook every 3 min." `
-    -Force | Out-Null
+# Fire first run immediately
+Write-Host "Firing first run..."
+& schtasks /Run /TN $TaskName | Out-Null
 
-Write-Host "Task registered. Firing first run now..."
-Start-ScheduledTask -TaskName $TaskName
-
-# Wait and check heartbeat
-$hb = Join-Path $PSScriptRoot "graph-sync-heartbeat.txt"
+# Check heartbeat (allow up to 90 sec - first run after cleanup can take a while)
+$hb     = Join-Path $PSScriptRoot "graph-sync-heartbeat.txt"
+$before = Get-Date
 $waited = 0
-while (-not (Test-Path $hb) -and $waited -lt 30) {
-    Start-Sleep -Seconds 2
-    $waited += 2
-    Write-Host "  ...waiting ($waited s)"
+while ($waited -lt 90) {
+    Start-Sleep -Seconds 3
+    $waited += 3
+    Write-Host "  ...waiting ($waited s)" -NoNewline
+    if (Test-Path $hb) {
+        $hbTs = [datetime]::Parse((Get-Content $hb -Raw).Split(' ')[0])
+        if ($hbTs -gt $before) {
+            Write-Host " - heartbeat written!"
+            break
+        }
+    }
+    Write-Host ""
 }
 
-if (Test-Path $hb) {
-    Write-Host ""
+Write-Host ""
+if ((Test-Path $hb) -and ([datetime]::Parse((Get-Content $hb -Raw).Split(' ')[0]) -gt $before)) {
     Write-Host "=== SUCCESS ==="
     Write-Host "Heartbeat: $(Get-Content $hb)"
+    Write-Host "Task is live. Runs every 3 min."
 } else {
-    Write-Host ""
-    Write-Host "=== HEARTBEAT NOT YET WRITTEN ==="
-    Write-Host "Check: $PSScriptRoot\graph-sync-error.log"
+    Write-Host "=== HEARTBEAT NOT WRITTEN IN TIME ==="
+    Write-Host "Check: $(Join-Path $PSScriptRoot 'graph-sync-error.log')"
     Write-Host "Or run manually: powershell -File `"$ScriptPath`""
 }
 
 Write-Host ""
-Write-Host "Verify task: Get-ScheduledTaskInfo -TaskName '$TaskName'"
+Write-Host "Query task:  schtasks /Query /TN '$TaskName' /FO LIST"
 Write-Host "Heartbeat:   $hb"
 Write-Host "Revert log:  $(Join-Path $PSScriptRoot 'graph-sync-revert.log')"
