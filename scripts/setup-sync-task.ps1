@@ -1,12 +1,11 @@
 # setup-sync-task.ps1 - Register BayerFamilyOps-GraphSync scheduled task.
-# Must run from an ADMINISTRATOR PowerShell on the ThinkPad:
+# Run from Administrator PowerShell on ThinkPad:
 #   Right-click PowerShell -> Run as administrator
 #   cd "C:\Users\ThinkPad X1 Carbon\Documents\family-ops\scripts"
 #   .\setup-sync-task.ps1
 #
-# Uses schtasks.exe (avoids PS version quirks with Trigger.Repetition).
-# Runs as SYSTEM - no password prompt, always available on headless machine.
-# Re-run anytime to update the registration.
+# Uses Register-ScheduledTask -Xml to avoid schtasks.exe quoting issues
+# with paths that contain spaces. Runs as SYSTEM (no password prompt).
 
 $TaskName   = "BayerFamilyOps-GraphSync"
 $ScriptPath = Join-Path $PSScriptRoot "graph-sync.ps1"
@@ -14,9 +13,8 @@ $ScriptPath = Join-Path $PSScriptRoot "graph-sync.ps1"
 # --- Admin check ---
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host ""
-    Write-Host "ERROR: This script must run as Administrator."
+    Write-Host "ERROR: Must run as Administrator."
     Write-Host "Right-click PowerShell -> Run as administrator, then re-run."
-    Write-Host ""
     exit 1
 }
 
@@ -29,61 +27,108 @@ Write-Host "Registering '$TaskName'..."
 Write-Host "Script: $ScriptPath"
 Write-Host ""
 
-# Remove existing registration (ignore errors)
-& schtasks /Delete /TN $TaskName /F 2>&1 | Out-Null
+# Build Task XML directly.
+# &quot; in XML element content decodes to " for Task Scheduler,
+# which correctly quotes the path with spaces for PowerShell.
+# S-1-5-18 = SYSTEM account (no password, always available headless).
+$startTime = (Get-Date).AddSeconds(30).ToString("yyyy-MM-ddTHH:mm:ss")
+$taskXml = @"
+<?xml version="1.0" encoding="UTF-16"?>
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Bayer Family Ops - sync calendars.md to Outlook every 3 min.</Description>
+  </RegistrationInfo>
+  <Triggers>
+    <TimeTrigger>
+      <Repetition>
+        <Interval>PT3M</Interval>
+        <StopAtDurationEnd>false</StopAtDurationEnd>
+      </Repetition>
+      <StartBoundary>$startTime</StartBoundary>
+      <Enabled>true</Enabled>
+    </TimeTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <UserId>S-1-5-18</UserId>
+      <RunLevel>HighestAvailable</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <ExecutionTimeLimit>PT2M</ExecutionTimeLimit>
+    <Enabled>true</Enabled>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <StartWhenAvailable>true</StartWhenAvailable>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>powershell.exe</Command>
+      <Arguments>-NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File &quot;$ScriptPath&quot;</Arguments>
+    </Exec>
+  </Actions>
+</Task>
+"@
 
-# Register: every 3 min, SYSTEM account, highest privilege
-$TRCmd = "powershell.exe -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$ScriptPath`""
-
-$out = & schtasks /Create `
-    /TN $TaskName `
-    /SC MINUTE /MO 3 `
-    /TR $TRCmd `
-    /RU SYSTEM `
-    /RL HIGHEST `
-    /F 2>&1
-
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "ERROR: schtasks /Create failed (exit $LASTEXITCODE):"
-    Write-Host $out
+try {
+    Register-ScheduledTask -TaskName $TaskName -Xml $taskXml -Force | Out-Null
+    Write-Host "Task registered successfully."
+} catch {
+    Write-Host "ERROR registering task: $_"
     exit 1
 }
-Write-Host $out
 
-# Fire first run immediately
 Write-Host "Firing first run..."
-& schtasks /Run /TN $TaskName | Out-Null
+try {
+    Start-ScheduledTask -TaskName $TaskName
+} catch {
+    Write-Host "Warning: Could not fire immediate run: $_"
+    Write-Host "Task is still registered and will fire at next 3-min interval."
+}
 
-# Check heartbeat (allow up to 90 sec - first run after cleanup can take a while)
+# Wait for a fresh heartbeat (90 sec max - first run after rebuild takes ~60 sec)
 $hb     = Join-Path $PSScriptRoot "graph-sync-heartbeat.txt"
 $before = Get-Date
 $waited = 0
+Write-Host "Waiting for heartbeat..."
 while ($waited -lt 90) {
     Start-Sleep -Seconds 3
     $waited += 3
-    Write-Host "  ...waiting ($waited s)" -NoNewline
+    Write-Host "  ...($waited s)" -NoNewline
     if (Test-Path $hb) {
-        $hbTs = [datetime]::Parse((Get-Content $hb -Raw).Split(' ')[0])
-        if ($hbTs -gt $before) {
-            Write-Host " - heartbeat written!"
-            break
-        }
+        try {
+            $hbLine = (Get-Content $hb -Raw).Trim()
+            $hbTs   = [datetime]::Parse($hbLine.Split(' ')[0])
+            if ($hbTs -gt $before) { Write-Host " fresh!"; break }
+        } catch { }
     }
     Write-Host ""
 }
 
-Write-Host ""
-if ((Test-Path $hb) -and ([datetime]::Parse((Get-Content $hb -Raw).Split(' ')[0]) -gt $before)) {
-    Write-Host "=== SUCCESS ==="
-    Write-Host "Heartbeat: $(Get-Content $hb)"
-    Write-Host "Task is live. Runs every 3 min."
-} else {
-    Write-Host "=== HEARTBEAT NOT WRITTEN IN TIME ==="
-    Write-Host "Check: $(Join-Path $PSScriptRoot 'graph-sync-error.log')"
-    Write-Host "Or run manually: powershell -File `"$ScriptPath`""
+# Result
+$fresh = $false
+if (Test-Path $hb) {
+    try {
+        $hbLine = (Get-Content $hb -Raw).Trim()
+        $hbTs   = [datetime]::Parse($hbLine.Split(' ')[0])
+        $fresh  = ($hbTs -gt $before)
+    } catch { }
 }
 
 Write-Host ""
-Write-Host "Query task:  schtasks /Query /TN '$TaskName' /FO LIST"
-Write-Host "Heartbeat:   $hb"
-Write-Host "Revert log:  $(Join-Path $PSScriptRoot 'graph-sync-revert.log')"
+if ($fresh) {
+    Write-Host "=== SUCCESS ==="
+    Write-Host "Heartbeat: $(Get-Content $hb -Raw)"
+    Write-Host "Task is live. Runs every 3 min."
+} else {
+    Write-Host "=== NO FRESH HEARTBEAT YET ==="
+    Write-Host "Task is registered. First SYSTEM run may take a few more minutes."
+    Write-Host "Check: Get-Content '$hb'"
+    Write-Host "Error: $(Join-Path $PSScriptRoot 'graph-sync-error.log')"
+}
+
+Write-Host ""
+Write-Host "Query:     Get-ScheduledTaskInfo -TaskName '$TaskName'"
+Write-Host "Heartbeat: $hb"
