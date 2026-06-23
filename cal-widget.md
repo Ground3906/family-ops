@@ -1,7 +1,7 @@
 # cal-widget.md — Calendar Widget Reference
 
 **Filename convention:** `cal-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. No wave reference in filename. `wave-4-5-widget-*` naming fully retired.
-**Current version:** `cal-widget-v5.8.html`
+**Current version:** v5.8.2 (live: `cal-widget-current.html`). Archive: `cal-widget-v5.8.html`.
 **Cockpit URL:** `http://192.168.1.60:8080/cal-widget-current.html` — NEVER changes. `cal-widget-current.html` always mirrors latest version.
 **Data sources:** `calendars.md` + `recipes-index.json` + `recipes/*.json` — all fetched live with `{cache:'no-store'}`
 
@@ -12,7 +12,8 @@
 - **Stockyard S8 durability fix** — still open. No real flock data entry until fixed.
 - **COCKPIT IS READ-ONLY.** No entry tool, no form, no keyboard on Cockpit. Ever.
 - **NEVER patch data files to work around code bugs.** Fix the code.
-- **Full rewrite only** — never surgical patches to widget HTML. Version up, full file.
+- **Full rewrite for design/feature changes.** Version up to a new file (e.g. v5.9). Surgical PowerShell patches are permitted for infrastructure additions only (cache tags, footer, etc.) — commit as a patch version (v5.8.1, v5.8.2). Never patch data logic or UI layout surgically.
+- **Large-file push via PowerShell only.** Widget HTML is too large for MCP inline push. Use PowerShell `Replace()` patches locally, commit and push from ThinkPad or Precision. MCP handles doctrine files and small scripts only. Never attempt to pass widget content as MCP inline parameter.
 - **Filename dots, never underscores.** `v5.4`, `v5.5` — no exceptions.
 
 ---
@@ -26,12 +27,14 @@
 
 ## Cockpit Deploy Pattern (Option C, locked)
 
-Every session close:
+Every session close (full version):
 1. Build `cal-widget-vX.X.html`
 2. `Copy-Item cal-widget-vX.X.html cal-widget-current.html`
 3. `git add cal-widget-vX.X.html cal-widget-current.html` -> commit -> push
 4. ThinkPad: `git pull`
 5. Cockpit auto-refreshes via Fully Kiosk or manual reload — picks up new version. URL never changes.
+
+**Patch version deploy (v5.8.1+):** PowerShell `Replace()` patches on `cal-widget-current.html` directly. No new versioned archive file. Commit and push from local machine. MCP not used for widget file.
 
 ---
 
@@ -56,6 +59,8 @@ Every session close:
 | v5.6 | 2026-06-05 | **Wave 6.7 Bug Fixes (5).** Auto-shutoff no longer re-fires every 60s after manual wake. Month button always lands on current month. Cell-face location display reverted. Night button works from any screen/mode. Cook Mode undefined-undefined removed; lard-soap removed from index. |
 | v5.7 | 2026-06-05 | **Wave 6.7 Timer Numpad.** Manual timer input replaced with number pad (1-2-3 layout). Digits fill left-to-right: 1-2 = minutes, 3-4 = hours:minutes. HH and MM labeled segments. Backspace. Create button. Rail expansion at 4 timers. Numpad fixed 200px. |
 | v5.8 | 2026-06-17 | **Cook Mode recipe format fix + category rebuild.** Widget reads current recipe schema ({item,qty,unit,note} ingredients; instructions[] steps). Auto-timers extracted from step text, tappable. Right rail categories live. 3 new shelves (Seafood, Sauces, Household). Kids Kitchen wired. Short names in tabs. Undefined prefix removed. Midnight rollover guard added. |
+| v5.8.1 | 2026-06-22 | No-cache meta tags (`Cache-Control`, `Pragma`, `Expires`) in `<head>` — prevents Fully Kiosk from serving stale widget after pull job updates file. |
+| v5.8.2 | 2026-06-22 | Sync footer — fixed bottom strip shows "Last sync: X min ago." Amber + "Sync stale" label when last pull >10 min. `checkSyncStatus()` on load and every 60s, reads `last-pull.json`. |
 
 ---
 
@@ -77,6 +82,20 @@ Frame changes ship and proof before interior changes. Never mix frame and interi
 - **Interior:** cook mode layout, timers, recipe rail, emojis, functional behavior
 
 Build in chunks, verify on Cockpit hardware between chunks. Each chunk = one commit.
+
+---
+
+## Sync Footer (v5.8.2, locked)
+
+Fixed strip at bottom of all screens. Shows time since last successful ThinkPad pull.
+
+- **Normal state:** `rgba(0,0,0,0.3)` bg, `#aaa` text — "Last sync: X min ago"
+- **Stale state (>10 min):** `#b8860b` amber bg, white bold — "Sync stale - X min ago"
+- **Unknown:** "Sync: unknown" — `last-pull.json` not found or fetch failed (expected on first load before pull job runs)
+- `checkSyncStatus()` fires on `DOMContentLoaded` and every 60 seconds
+- Fetches `last-pull.json?t=[timestamp]` (cache-busted) from ThinkPad server root
+- `last-pull.json` written by `pull-job.ps1` on every exit-0 pull — gitignored, runtime state only
+- Colorblind-safe: distinction uses amber color + label change + text content, never color alone
 
 ---
 

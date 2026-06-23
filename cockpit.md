@@ -1,7 +1,7 @@
 # cockpit.md — Bayer Family Ops Display System
 
-**Status:** Operational. ThinkPad headless. Widget v5.8 live. Pull job active (3-min cadence). Fully Kiosk 00:01 reload set.
-**Last updated:** 2026-06-17
+**Status:** Operational. ThinkPad headless. Widget v5.8.2 live. Pull job active (3-min cadence), writes `last-pull.json` on each OK. Fully Kiosk 00:01 reload set.
+**Last updated:** 2026-06-22
 
 **Tablet clock confirmed (2026-06-17):** Mountain Daylight Time, network time ON, 24h format. Device clock is not a source of timing issues. Night dim at 21:00 is working as designed — widget dims and shows wake prompt, never fully powers off. Day rollover guard added to v5.8 as code backup to the 00:01 reload.
 
@@ -89,11 +89,13 @@ It is the family's single source of truth for the day, the week, and what's comi
 | OS | Windows (headless — lid closed, always on) |
 | Static IP | 192.168.1.60 |
 | Server software | Python HTTP server (`python -m http.server 8080`) |
-| Serves | `cal-widget-current.html`, `calendars.md`, `recipes-index.json`, `recipes/*.json` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` |
+| Serves | `cal-widget-current.html`, `calendars.md`, `recipes-index.json`, `recipes/*.json`, `last-pull.json` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` |
 | Cockpit reaches it via | Local LAN — Fully Kiosk Browser on Cockpit -> 192.168.1.60:8080 |
-| Automation | Scheduled pull job (git pull every 3 min) — LIVE. `scripts/pull-job.ps1`, heartbeat at `logs/pull-heartbeat.log`. |
+| Automation | Scheduled pull job (git pull every 3 min) — LIVE. `scripts/pull-job.ps1`, heartbeat at `logs/pull-heartbeat.log`. Writes `last-pull.json` on every exit-0 pull (gitignored — runtime state only). |
 
-**Current state:** ThinkPad is the dedicated headless server. Pull job is live, confirmed with two consecutive OK entries. Static IP 192.168.1.60 assigned.
+**ThinkPad pull job history (2026-06-18):** Confirmed FAIL logging worked correctly during a 3-hour outage caused by untracked `scripts/pull-job.ps1` blocking merges. Fixed by removing untracked file before pull. First OK at 07:40. Pull job reliable since.
+
+**`last-pull.json`:** Written to repo root by pull-job on every successful pull. Format: `{"last_ok": "YYYY-MM-DD HH:MM:SS"}`. Gitignored — never committed. Widget reads it via `checkSyncStatus()` to drive the sync footer.
 
 ---
 
@@ -110,7 +112,7 @@ It is the family's single source of truth for the day, the week, and what's comi
 ```
 INTERNET -> Starlink -> Firewalla Purple SE
   -> "7 Little Bears" Wi-Fi
-      -> ThinkPad X1 Carbon (192.168.1.60) [Python HTTP :8080, git pull every 3 min]
+      -> ThinkPad X1 Carbon (192.168.1.60) [Python HTTP :8080, git pull every 3 min, writes last-pull.json on OK]
       -> PatientPoint Cockpit (Android 13) [Fully Kiosk -> 192.168.1.60:8080]
       -> Dell Precision 5690 "mbay" (Matt's primary)
       -> Kalea's device
@@ -156,7 +158,7 @@ INTERNET -> Starlink -> Firewalla Purple SE
 
 | Gate | Description | Status |
 |------|-------------|--------|
-| 1 | Widget loads clean — Kalea can use without instruction | GREEN — v5.8+ |
+| 1 | Widget loads clean — Kalea can use without instruction | GREEN — v5.8.2 |
 | 2 | At least 2 agents writing to `calendars.md` reliably via Foreman handoff | OPEN |
 | 3 | Stockyard S8 durability fix shipped | OPEN |
 | 4 | ThinkPad running headless clean for 1 full week without babysitting | GREEN |
