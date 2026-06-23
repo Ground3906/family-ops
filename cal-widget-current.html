@@ -437,6 +437,10 @@ body.night-dim #week-briefs{filter:brightness(0.03);pointer-events:none;}
 #cal-wrap{flex:1;overflow-anchor:none;}
 ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--brd);border-radius:4px;}
 </style>
+<style>
+#sync-footer{position:fixed;bottom:0;left:0;right:0;text-align:center;font-size:11px;padding:3px 8px;background:rgba(0,0,0,0.3);color:#aaa;z-index:1000;}
+#sync-footer.stale{background:#b8860b;color:#fff;font-weight:bold;}
+</style>
 </head>
 <body>
 <div id="night-wake" onclick="wakeFromNight()"></div>
@@ -1864,7 +1868,13 @@ function playSound(key){console.log('[playSound] DORMANT | key:'+key);}
 function scheduleMorningBriefing(){console.log('[morningBriefing] DORMANT');}
 function ccirAlert(text){console.log('[ccirAlert] DORMANT | '+text);}
 function dinnerReminder(){console.log('[dinnerReminder] DORMANT');}
-document.addEventListener('DOMContentLoaded',init);
+async function checkSyncStatus(){try{const r=await fetch('last-pull.json?t='+Date.now());if(!r.ok)throw new Error();const d=await r.json();const lastOk=new Date(d.last_ok.replace(' ','T'));const mins=Math.floor((Date.now()-lastOk.getTime())/60000);const el=document.getElementById('sync-footer');if(mins>10){el.textContent='Sync stale - '+mins+' min ago';el.classList.add('stale');}else{el.textContent='Last sync: '+mins+' min ago';el.classList.remove('stale');}}catch(e){const el=document.getElementById('sync-footer');if(el)el.textContent='Sync: unknown';}}
+setInterval(checkSyncStatus,60000);
+document.addEventListener('DOMContentLoaded',function(){init();checkSyncStatus();});
 </script>
+<div id="sync-footer">Last sync: checking...</div>
 </body>
 </html>
+
+
+
