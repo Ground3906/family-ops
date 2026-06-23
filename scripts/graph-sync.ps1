@@ -454,6 +454,19 @@ try {
     $state = Load-State
     if (-not $state.calendar_id) { $state.calendar_id = $calId }
 
+    # 5a. Clean slate guard: if state is empty but calendar already has events,
+    #      delete everything first so we don't stack on top of a previous run.
+    if ($state.events.Count -eq 0) {
+        $existing = Get-AllGraphEvents $calId $tok
+        if ($existing.Count -gt 0) {
+            Write-Host "[sync] State is empty but calendar has $($existing.Count) events. Clearing first..."
+            foreach ($gev in $existing) {
+                try { Invoke-Graph 'Delete' "$GraphBase/me/calendars/$calId/events/$($gev.id)" $tok } catch {}
+            }
+            Write-Host "[sync] Calendar cleared. Creating fresh."
+        }
+    }
+
     # 5. Delete events no longer in calendars.md
     $toDelete = @($state.events.Keys | Where-Object { -not $desired.ContainsKey($_) })
     foreach ($id in $toDelete) {
