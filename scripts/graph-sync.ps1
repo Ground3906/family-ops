@@ -426,6 +426,64 @@ function Write-Receipt {
 }
 
 # ---------------------------------------------------------------
+# OUTLOOK CATEGORY COLORS
+# ---------------------------------------------------------------
+function Ensure-OutlookCategories {
+    param([string]$Tok)
+    $h = @{ Authorization = "Bearer $Tok" }
+
+    # Locked color map. Preset IDs are Outlook built-ins.
+    $colorMap = [ordered]@{
+        liturgical   = 'preset8'   # Purple
+        kids         = 'preset7'   # Blue
+        appointments = 'preset1'   # Orange
+        family       = 'preset5'   # Teal
+        '4h'         = 'preset4'   # Green
+        meetings     = 'preset12'  # Gray
+        holidays     = 'preset3'   # Yellow / Gold
+        birthdays    = 'preset9'   # Cranberry
+        meals        = 'preset0'   # Red
+        farm         = 'preset19'  # Dark Green
+        prompt       = 'preset13'  # Dark Gray
+        misc         = 'preset13'  # Dark Gray (same as prompt - collapsed)
+    }
+
+    try {
+        $existing = Invoke-RestMethod -Method Get `
+            -Uri "$GraphBase/me/outlook/masterCategories" -Headers $h
+        $existingMap = @{}
+        foreach ($c in $existing.value) { $existingMap[$c.displayName] = @{ id = $c.id; color = $c.color } }
+    } catch {
+        Write-Warning "[categories] Could not read master categories: $_"
+        return
+    }
+
+    $added = 0; $updated = 0
+    foreach ($cat in $colorMap.Keys) {
+        $preset = $colorMap[$cat]
+        if (-not $existingMap.ContainsKey($cat)) {
+            try {
+                $body = @{ displayName = $cat; color = $preset } | ConvertTo-Json
+                Invoke-RestMethod -Method Post -Uri "$GraphBase/me/outlook/masterCategories" `
+                    -Headers $h -ContentType "application/json" -Body $body | Out-Null
+                $added++
+            } catch { Write-Warning "[categories] Create '$cat' failed: $_" }
+        } elseif ($existingMap[$cat].color -ne $preset) {
+            try {
+                $body = @{ color = $preset } | ConvertTo-Json
+                Invoke-RestMethod -Method Patch `
+                    -Uri "$GraphBase/me/outlook/masterCategories/$($existingMap[$cat].id)" `
+                    -Headers $h -ContentType "application/json" -Body $body | Out-Null
+                $updated++
+            } catch { Write-Warning "[categories] Update '$cat' failed: $_" }
+        }
+    }
+    if ($added -gt 0 -or $updated -gt 0) {
+        Write-Host "[categories] Added: $added  Updated: $updated"
+    }
+}
+
+# ---------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------
 try {
@@ -438,6 +496,9 @@ try {
 
     # 2. One-time share with Kalea (no-op if already shared)
     Ensure-KaleaShare $tok $calId
+
+    # 2b. Push Outlook category color definitions (no-op when already set)
+    Ensure-OutlookCategories $tok
 
     # 3. Parse calendars.md
     if (-not (Test-Path $CalFile)) { throw "calendars.md not found at $CalFile" }
@@ -491,7 +552,7 @@ try {
         if (-not $state.events.ContainsKey($id)) {
             # Create
             try {
-                # transactionId: Graph deduplicates on this field if Invoke-RestMethod retries
+                # transactionId: stable per-event GUID to help deduplicate retries
                 $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
                 $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$calId/events" $tok $gBody
                 $state.events[$id] = @{
