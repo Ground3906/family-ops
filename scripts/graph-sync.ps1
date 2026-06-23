@@ -330,9 +330,10 @@ function Build-GraphBody {
     $showAs = if ($Ev.optional) { 'free' } elseif ($Ev.tentative) { 'tentative' } else { 'busy' }
 
     $body = @{
-        subject = Strip-NonBmp $Ev.subject
-        body    = @{ contentType = 'text'; content = $desc }
-        showAs  = $showAs
+        subject        = Strip-NonBmp $Ev.subject
+        body           = @{ contentType = 'text'; content = $desc }
+        showAs         = $showAs
+        isReminderOn   = $false
     }
 
     if ($Ev.isAllDay) {
