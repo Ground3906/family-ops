@@ -300,7 +300,7 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
-[CAL] 2026-06-25 ALL-DAY [D] Scale certification :: misc :: location="Fairgrounds, Westcliffe, CO" :: notes="time TBD"
+[CAL] 2026-06-25 08:00 [D] Scale certification :: misc :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
