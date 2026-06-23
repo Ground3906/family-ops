@@ -135,7 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-06-22. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -291,16 +291,20 @@ Last batch: 2026-06-01. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-18 10:15 [D] Orthopedic apt :: appointments :: stripe=appt :: end=11:15 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-06-18 13:00 [D] Fairgrounds water mx :: misc :: end=14:00 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-06-18 15:30 [D] Apt - Wentz Foot and Ankle :: appointments :: stripe=appt :: end=16:15 :: location="Salida, CO"
+[CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00
 [CAL] 2026-06-19 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: span=2026-06-21 :: travel=true :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
 [CAL] 2026-06-20 16:00 Mass - Sacred Heart Chapel Pueblo :: liturgical :: end=17:00 :: location="Sacred Heart Chapel, Pueblo, CO"
 [CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30
+[CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
+[CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
+[CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
