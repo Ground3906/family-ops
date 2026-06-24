@@ -26,6 +26,7 @@ $TZ            = "America/Denver"
 $RecurHorizon  = (Get-Date).AddYears(2)
 $KaleaEmail      = "kalea.bayer.co@outlook.com"
 $KaleaTokenFile  = Join-Path $ScriptDir "graph-token-kalea.json"
+$KaleaStateFile  = Join-Path $ScriptDir "graph-sync-state-kalea.json"
 
 $PillNames = @{
     D = 'Matt'; K = 'Kalea'; W = 'Wyatt'; M = 'Molly'
@@ -74,6 +75,19 @@ function Get-CalendarId {
     $cal = $r.value | Where-Object { $_.name -eq $CalName }
     if (-not $cal) {
         Write-Host "[calendar] '$CalName' not found. Creating..."
+        $cal = Invoke-RestMethod -Method Post -Uri "$GraphBase/me/calendars" -Headers $h `
+            -ContentType "application/json" -Body (@{ name = $CalName } | ConvertTo-Json)
+    }
+    return $cal.id
+}
+
+function Get-KaleaCalendarId {
+    param([string]$Tok)
+    $h   = @{ Authorization = "Bearer $Tok" }
+    $r   = Invoke-RestMethod -Method Get -Uri "$GraphBase/me/calendars" -Headers $h
+    $cal = $r.value | Where-Object { $_.name -eq $CalName }
+    if (-not $cal) {
+        Write-Host "[kalea-calendar] '$CalName' not found. Creating..."
         $cal = Invoke-RestMethod -Method Post -Uri "$GraphBase/me/calendars" -Headers $h `
             -ContentType "application/json" -Body (@{ name = $CalName } | ConvertTo-Json)
     }
@@ -377,9 +391,10 @@ function Get-AllGraphEvents {
 # STATE FILE
 # ---------------------------------------------------------------
 function Load-State {
-    if (-not (Test-Path $StateFile)) { return @{ calendar_id = ''; events = @{} } }
+    param([string]$Path = $StateFile)
+    if (-not (Test-Path $Path)) { return @{ calendar_id = ''; events = @{} } }
     try {
-        $j = Get-Content $StateFile -Raw | ConvertFrom-Json
+        $j = Get-Content $Path -Raw | ConvertFrom-Json
         $s = @{ calendar_id = $j.calendar_id; events = @{} }
         foreach ($p in $j.events.PSObject.Properties) {
             $s.events[$p.Name] = @{
@@ -391,18 +406,18 @@ function Load-State {
         }
         return $s
     } catch {
-        Write-Warning "State file unreadable. Starting fresh. Error: $_"
+        Write-Warning "[load-state] File unreadable at $Path. Starting fresh. Error: $_"
         return @{ calendar_id = ''; events = @{} }
     }
 }
 
 function Save-State {
-    param($S)
+    param($S, [string]$Path = $StateFile)
     @{
         calendar_id = $S.calendar_id
         last_run    = (Get-Date -Format 'o')
         events      = $S.events
-    } | ConvertTo-Json -Depth 5 | Set-Content $StateFile -Encoding UTF8
+    } | ConvertTo-Json -Depth 5 | Set-Content $Path -Encoding UTF8
 }
 
 # ---------------------------------------------------------------
@@ -647,7 +662,87 @@ try {
         Write-Host "[sync] $foreignCount foreign event(s) removed. Receipts: $RevertLog"
     }
 
-    # 8. Heartbeat + save state
+    # 8. Kalea dual-push (if her token exists)
+    if ($kaleaTok) {
+        Write-Host "[kalea-sync] Syncing $($desired.Count) events to Kalea's owned calendar..."
+        $kaleaCalId = Get-KaleaCalendarId $kaleaTok
+        $kaleaState = Load-State $KaleaStateFile
+        if (-not $kaleaState.calendar_id) { $kaleaState.calendar_id = $kaleaCalId }
+
+        # Clean slate guard
+        if ($kaleaState.events.Count -eq 0) {
+            $kaleaExisting = Get-AllGraphEvents $kaleaCalId $kaleaTok
+            if ($kaleaExisting.Count -gt 0) {
+                Write-Host "[kalea-sync] State empty, calendar has $($kaleaExisting.Count) events. Clearing..."
+                foreach ($gev in $kaleaExisting) {
+                    try { Invoke-Graph 'Delete' "$GraphBase/me/calendars/$kaleaCalId/events/$($gev.id)" $kaleaTok } catch {}
+                }
+                Write-Host "[kalea-sync] Calendar cleared. Creating fresh."
+            }
+        }
+
+        # Delete pass
+        $kaleaToDelete = @($kaleaState.events.Keys | Where-Object { -not $desired.ContainsKey($_) })
+        foreach ($id in $kaleaToDelete) {
+            $gid = $kaleaState.events[$id].graphId
+            try { Invoke-Graph 'Delete' "$GraphBase/me/calendars/$kaleaCalId/events/$gid" $kaleaTok } catch {}
+            $kaleaState.events.Remove($id)
+        }
+
+        # Create/update pass
+        $kCreated = 0; $kUpdated = 0; $kSkipped = 0
+        foreach ($id in $desired.Keys) {
+            $ev      = $desired[$id]
+            $gBody   = Build-GraphBody $ev
+            $newHash = New-ContentHash $ev
+
+            if (-not $kaleaState.events.ContainsKey($id)) {
+                try {
+                    $gBody['transactionId'] = "$($id.Substring(0,8))-$($id.Substring(8,4))-$($id.Substring(12,4))-$($id.Substring(16,4))-$($id.Substring(20,12))"
+                    $r = Invoke-Graph 'Post' "$GraphBase/me/calendars/$kaleaCalId/events" $kaleaTok $gBody
+                    $kaleaState.events[$id] = @{
+                        graphId     = $r.id
+                        contentHash = $newHash
+                        subject     = Strip-NonBmp $ev.subject
+                        start       = $ev.startDT
+                    }
+                    $kCreated++
+                    if ($kCreated % 50 -eq 0) { Write-Host "[kalea-sync] $kCreated/$($desired.Count) created..." }
+                    Start-Sleep -Milliseconds 50
+                } catch { Write-Warning "[kalea-sync] Create failed '$($ev.subject)': $_" }
+            } else {
+                if ($kaleaState.events[$id].contentHash -ne $newHash) {
+                    $gid = $kaleaState.events[$id].graphId
+                    try {
+                        Invoke-Graph 'Patch' "$GraphBase/me/calendars/$kaleaCalId/events/$gid" $kaleaTok $gBody | Out-Null
+                        $kaleaState.events[$id].contentHash = $newHash
+                        $kaleaState.events[$id].subject     = Strip-NonBmp $ev.subject
+                        $kaleaState.events[$id].start       = $ev.startDT
+                        $kUpdated++
+                    } catch { Write-Warning "[kalea-sync] Update failed '$($ev.subject)': $_" }
+                } else { $kSkipped++ }
+            }
+        }
+        Write-Host "[kalea-sync] Created: $kCreated  Updated: $kUpdated  No-change: $kSkipped  Deleted: $($kaleaToDelete.Count)"
+
+        # Foreign sweep for Kalea's calendar
+        $kaleaAllGraph  = Get-AllGraphEvents $kaleaCalId $kaleaTok
+        $kaleaKnownGids = @($kaleaState.events.Values | ForEach-Object { $_.graphId })
+        $kForeignCount  = 0
+        foreach ($gev in $kaleaAllGraph) {
+            if ($gev.id -notin $kaleaKnownGids) {
+                try { Invoke-Graph 'Delete' "$GraphBase/me/calendars/$kaleaCalId/events/$($gev.id)" $kaleaTok; $kForeignCount++ } catch {}
+            }
+        }
+        if ($kForeignCount -gt 0) { Write-Host "[kalea-sync] $kForeignCount foreign event(s) removed." }
+
+        Save-State $kaleaState $KaleaStateFile
+        Write-Host "[kalea-sync] Done."
+    } else {
+        Write-Warning "[kalea-sync] No token found at $KaleaTokenFile. Skipping Kalea calendar push."
+    }
+
+    # 9. Heartbeat + save state
     "$(Get-Date -Format 'o') OK events=$($desired.Count)" | Set-Content $HeartbeatFile -Encoding UTF8
     Save-State $state
 
