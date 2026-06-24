@@ -1,12 +1,9 @@
-# Bayer Family Operations — Charter v2.3
+# Bayer Family Operations — Charter v2.7
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-06-23 — v2.6: Mobile Wave chunk 1 complete. Auth method corrected: device code flow is blocked for personal MSA accounts in Azure Default Directory tenants; browser-based auth code flow with localhost redirect is the confirmed path. Azure App Registration `FamilyOps-Calendar` fully configured (see Reference Context). Bayer Family Ops calendar created in Matt's Outlook; test event pushed and confirmed on phone 2026-06-23 08:53 MT. **Prior:** 2026-06-18 — v2.5: Kalea interface corrected: no PK files, custom instructions + GitHub MCP only; `family.md` and `roster.md` fetched live from repo at session start. **Prior:** 2026-06-17 — v2.4: Chow Hall renamed from chow-hall/meal-plan.md to chow-hall.md at repo root; roster.md created; Kalea rollout executed 2026-06-17 (ahead of mid-July target). **Prior:** 2026-06-16 — v2.3: ThinkPad repo path pinned (`C:\Users\ThinkPad X1 Carbon\Documents\family-ops` — two machines, two folders, no conflict with Precision at `C:\dev\family-ops`). Cockpit refresh job designed: standalone `git pull` every 3 min, heartbeat-wrapped, two passive readers (HTTP server + future Outlook job). calendars.md format locked as markdown-only — JSONL migration evaluated and closed, append-only conflicts with event editing and cancellation.
-**Prior:** 2026-06-10 — v2.2: Full-system audit close. **Automation layer carries no AI** (deterministic plumbing + heartbeats; all reasoning stays Interactive). **Mobile Wave** added to Rollout — Outlook publish via Microsoft Graph, strict one-pen, read-only shares, revert receipts, $0 recurring. Calendar Strategy rewritten: Google Calendars struck as never-deployed, fridge whiteboard formally retired, glass = Cockpit + Outlook. PK tier sharpened (binaries never; data files exit PK once the GitHub MCP read path is proven). Rollout supersedes the legacy 6.x wave series. Convenience roster and support network stripped to `family.md` pointers (Anti-Silo #5 debt paid). Engine routing pointed to Profile. Plan of action ratified 2026-06-10 — execution sequence and purge-wave deferred ledger ride the spin-up, not this file.
-**Prior:** 2026-06-08 — v2.1: Added Agent Architecture (two-part machine doctrine) and Capture As You Go to Architecture section.
-**Prior:** 2026-06-05 — v2.0: Major reorientation. Added the Vision (crown + statement) at the top. Replaced the two-phase model with the **Three-Layer Architecture** (Data / Interactive / Automation, build-as-you-go). Added **Storage Tiers** (PK / repo / ThinkPad-2TB archive) and **extract-then-file**; OneDrive reinstated as binary-archive transport (supersedes README "retired" note). Roster reshaped to **9 agents**: reordered by priority, Whetstone / The Square / Footings struck, First Aid Kit renamed **IFAK**, The Mantel renamed **Mantle**, new **Ledger** (financial) added; bare-article naming convention locked. Added **Chow Hall Doctrine** (she-leads / Kalea-responds, rough-not-precise, gated producer handoff) and the **Rollout** strategy. Three event logs converted to JSONL (`fuel-log`, `feed-log`, `income-log`). Data-handling doctrine (layered data, data shape, extract-then-file) promoted to **Profile** and pointed to here, not restated. Volatile build-status table removed — live status lives in the spin-up per the SPINE.
-**Prior:** 2026-06-01 — v1.9: Wave 6.5 complete. **Prior:** 2026-05-27 — v1.8: Interaction Doctrine stripped to project-specific rules only.
+**Last updated:** 2026-06-24 — v2.7: Mobile Wave COMPLETE. `graph-sync.ps1` live on ThinkPad, `BayerFamilyOps-GraphSync` scheduled task running every 3 min as SYSTEM. 537 events in Bayer Family Ops calendar. Shared read-only to `kalea.bayer.co@outlook.com`. 12 Outlook category colors defined on both accounts. `isReminderOn = $false` locked in `Build-GraphBody` — reminders suppressed permanently. `graph-auth.ps1` carries `-Out` param for multi-account auth; Kalea token at `scripts/graph-token-kalea.json` (gitignored, ThinkPad only). Two carry-forwards to Outlook Push Build 2.0: (1) dual calendar push — push events to Kalea-owned calendar so tile colors render without click; (2) emoji cleanup — replace `??` placeholders in calendars.md with BMP-safe emoji. Outlook shared calendar tile color limitation confirmed: viewer must OWN the calendar for tile colors to render in Outlook Web and mobile — read-only shares suppress tile color regardless of category definitions on viewer's account. Dual calendar is the locked architectural answer.
+**Prior:** 2026-06-23 — v2.6: Mobile Wave chunk 1 complete. Auth method corrected: device code flow is blocked for personal MSA accounts in Azure Default Directory tenants; browser-based auth code flow with localhost redirect is the confirmed path. Azure App Registration `FamilyOps-Calendar` fully configured. Bayer Family Ops calendar created in Matt's Outlook; test event pushed and confirmed on phone 2026-06-23 08:53 MT. **Prior:** 2026-06-18 — v2.5: Kalea interface corrected. **Prior:** 2026-06-17 — v2.4: Chow Hall renamed; roster.md created; Kalea rollout executed. **Prior:** 2026-06-16 — v2.3: ThinkPad repo path pinned; calendars.md format locked markdown-only. **Prior:** 2026-06-10 — v2.2: Full-system audit close. Mobile Wave added to Rollout. **Prior:** 2026-06-08 — v2.1. **Prior:** 2026-06-05 — v2.0.
 
 ---
 
@@ -148,7 +145,7 @@ The interactive-layer rollout, in waves. Live build status and the current execu
 - **Wave 1 — Chow Hall core.** Meal planning + rough pantry sense + the dinner screen, live on the Cockpit, Kalea driving from her phone. This is the pipe-proof: it carries the highest-value payoff *while* proving the phone → repo → Cockpit loop. Scoped rough-not-precise — no inventory engine on the critical path.
 - **Wave 2 — Chow Hall keystone.** The receipt watcher (Automation queue-feeder — files move, Chow Hall thinks on next open) → rough inventory → Punch List grocery routing. Bolts onto a Chow Hall that's already proven and adopted.
 - **Wave 3 — Foreman phone-ready.** Calendar writes from the phone. A step up from the glass already showing the calendar, not a revolution — earns its turn after the food problem is solved.
-- **Mobile Wave — the calendar in every pocket *(Automation job #1; locked 2026-06-10; may run ahead of agent waves — it's plumbing, not reasoning; target pre-baby).*** A dedicated **Bayer Family Ops** calendar in Matt's Outlook mailbox (M365 Family — never the Microsoft family-group calendar; its API footing is unreliable). A deterministic sync job on the ThinkPad publishes `calendars.md` to it via Microsoft Graph every few minutes. **Strict one-pen:** `calendars.md` is truth; the glass reconciles to match; every foreign edit the sync reverts is written to a **revert receipt** in the log — nothing dies silently. Kalea views read-only with full event detail in her Outlook app; additional viewers (Oma, tier adults) are a 30-second read-only share invite, zero code change. Live shared view requires the viewer hold a (free) Microsoft account; non-Microsoft addresses fall back to a slow-refresh published link — acceptable for extended family, never for Matt or Kalea. **Auth: one-time browser-based sign-in (authorization code flow, `http://localhost:8888/` redirect) — device code flow is blocked for personal MSA accounts in Azure Default Directory tenants. Token stored at `scripts/graph-token.json` (gitignored), auto-refreshes via refresh token; re-auth = re-run `graph-auth.ps1` on any machine with a browser.** $0 recurring. **Chunk 1 COMPLETE 2026-06-23:** Bayer Family Ops calendar created, test event pushed and confirmed on phone. Chunk 2 = parse `calendars.md`, push all real events, scheduled task on ThinkPad cadence, share calendar with Kalea.
+- **Mobile Wave — COMPLETE 2026-06-24.** `graph-sync.ps1` live on ThinkPad. `BayerFamilyOps-GraphSync` scheduled task runs every 3 min as SYSTEM. 537 events pushed to Bayer Family Ops calendar in Matt's Outlook. Shared read-only to `kalea.bayer.co@outlook.com`. 12 category color definitions pushed to both accounts via separate OAuth tokens. `isReminderOn = $false` on all synced events. **Carry-forwards to Outlook Push Build 2.0:** (1) dual calendar push — Kalea gets her own owned calendar with identical events so category tile colors render natively; (2) BMP-safe emoji cleanup pass in calendars.md. **Architectural finding (locked):** Outlook Web and mobile suppress category tile color rendering on shared (read-only) calendars regardless of category definitions on the viewer's account. The viewer must own the calendar. Dual push is the correct fix.
 - **Then the rest, by pull** — one phone-ready wave at a time, in priority order, only when there's a real need.
 
 **Kalea's interface:** her own Claude Pro account + a light project (custom instructions + GitHub MCP — no PK files; `family.md` and `roster.md` are fetched live from repo at session start), independent of Matt's project, same repo as truth. Her PK stays empty; the repo carries everything. Kalea rollout executed 2026-06-17.
@@ -253,6 +250,7 @@ See `cal-widget.md` for full architecture, schema, and doctrine. (Current build 
 - **cancel=confirmed:** parser skips entirely. Line stays in file forever as audit trail. Never delete a confirmed-cancel line.
 - **skip= on CAL-RECUR:** comma-separated dates suppress specific occurrences without killing the series. e.g. `skip=2026-06-07`
 - **[MEAL] entries:** `[MEAL] YYYY-MM-DD HH:MM Title :: recipe-id=X :: meal-type=dinner/breakfast/lunch/prep`
+- **Emoji in event subjects:** only BMP-safe Unicode (U+0000 to U+FFFF). Non-BMP characters (emoji above U+FFFF) are stripped by `graph-sync.ps1` before pushing to Outlook. Use ✝️ ⭐ 📅 style emoji; avoid bread loaf, alarm clock, and similar non-BMP. `??` placeholders in existing entries are a known debt — cleanup pass is Outlook Push Build 2.0 item 2.
 
 ---
 
@@ -305,8 +303,27 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 - isFallbackPublicClient: true
 - Redirect URI: `http://localhost:8888/` (Mobile and desktop applications platform)
 - Permissions: User.Read + Calendars.ReadWrite (delegated)
-- Token file: `scripts/graph-token.json` (gitignored; lives on ThinkPad; auto-refreshes)
-- Auth script: `scripts/graph-auth.ps1` — run on any machine with a browser to re-auth
+- Matt token: `scripts/graph-token.json` (gitignored; ThinkPad; auto-refreshes)
+- Kalea token: `scripts/graph-token-kalea.json` (gitignored; ThinkPad; auto-refreshes; used to push category colors to her account)
+- Auth script: `scripts/graph-auth.ps1 [-Out filename]` — run on any machine with a browser; `-Out` param targets alternate token file (e.g. `-Out graph-token-kalea.json` for Kalea's account)
+
+**graph-sync.ps1 key design (locked):**
+- State file: `scripts/graph-sync-state.json` (gitignored) — maps localId to graphId + contentHash
+- `isReminderOn = $false` on every event — reminders suppressed permanently
+- Clean-slate guard: if state empty but calendar has events, deletes all before creating fresh
+- Foreign sweep: deletes any event not in state; subject comparison disabled (TODO v2)
+- 50ms sleep between creates — prevents duplicate creation on rapid bulk POST to personal MSA
+- `transactionId` set per event for retry deduplication
+- CAL-RECUR expanded 2 years as individual events
+
+**PowerShell on Windows — gotchas (locked 2026-06-24):**
+- `Set-StrictMode -Version Latest` throws on dot notation for missing hashtable keys — use Version 1 or bracket notation `$h['key']`
+- `[ordered]@{}` returns `OrderedDictionary`, not `Hashtable` — lacks `ContainsKey()` — use `@{}` unless order is required
+- `schtasks.exe` breaks on paths with spaces — use `Register-ScheduledTask -Xml` instead
+- Microsoft Graph personal MSA: rapid bulk POSTs (~500+) cause duplicate events — mitigate with 50ms rate limit between creates and clean-slate guard on empty state
+
+**Git discipline — Precision (locked 2026-06-24):**
+- `git pull --rebase` on Precision is mandatory before any `git push`. Precision local commits have overwritten MCP pushes twice. Hard rule, no exceptions.
 
 **Technical environment:**
 - Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro — repo at `C:\dev\family-ops`
