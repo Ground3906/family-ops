@@ -1,40 +1,8 @@
-# OS junk
-Thumbs.db
-.DS_Store
-
-# IDE/editor
-.vscode/
-.idea/
-*.swp
-
-# Environments and secrets - NEVER commit these
-.env
-.env.*
-*.key
-*.pem
-credentials*
-secrets*
-
-# Python (Phase 2)
-__pycache__/
-*.pyc
-.venv/
-venv/
-*.egg-info/
-
-# Logs
-*.log
-.claude/settings.local.json
-WAVE4-HANDOFF.md
-
-# Runtime state -- written by pull-job, never committed
-last-pull.json
-
-# Graph auth tokens -- written by graph-auth.ps1, never committed
+# Graph sync runtime (ThinkPad only — never commit)
 scripts/graph-token.json
 scripts/graph-token-kalea.json
-
-# Graph sync runtime -- written by graph-sync.ps1, never committed
 scripts/graph-sync-state.json
-scripts/graph-sync-heartbeat.txt
 scripts/graph-sync-state-kalea.json
+scripts/graph-sync-revert.log
+scripts/graph-sync-heartbeat.txt
+scripts/graph-sync-error.log
