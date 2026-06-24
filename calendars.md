@@ -311,6 +311,9 @@ Last batch: 2026-06-24. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
+[CAL] 2026-06-27 04:00 [W][M] Leave for Jackpot - Monte Vista :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
+[CAL] 2026-06-27 09:00 [W][M] Lamb show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
+[CAL] 2026-06-27 14:00 [W][M] Pig show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 [CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Swim beach plus Dinosaur Trackway trail. Overnight Vernal."
 [CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
