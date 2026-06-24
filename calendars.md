@@ -135,7 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-06-23. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-06-24. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -302,9 +302,11 @@ Last batch: 2026-06-23. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
 [CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
 [CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-06-25 ALL-DAY [D] Stop by Doug's - pick up ammo :: prompt
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
+[CAL] 2026-06-25 10:30 [D] K of C - Call Brandon Nelson :: meetings
 [CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
