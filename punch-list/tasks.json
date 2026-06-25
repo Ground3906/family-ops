@@ -357,6 +357,26 @@
       "prompt_date": "2026-07-03",
       "notes": "Punch List owns the reminder. Once DD-214 Member 4 location is confirmed, capture in punch-list/documents.md. Presumptive conditions doc - confirm format and location with Matt.",
       "status": "open"
+    },
+    {
+      "id": "fair-scale-small-animal-reweigh-2027",
+      "type": "task",
+      "asset": "Custer County Fair — small animal scale",
+      "description": "Small animal scale (700 lb WW Livestock Systems calf scale, Rice Lake IQ Plus 850-86 indicator) requires Colorado Dept of Agriculture reweigh before 2027 Custer County Fair. Also: bring certified test weights to the fairgrounds for the reweigh — inspector needs them onsite. Fair board coordination item — discuss logistics and timing with fair board.",
+      "priority": "routine",
+      "estimated_cost": null,
+      "shop": "Everweigh Scale Industries (Pueblo, 719-547-7075)",
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": "2027-04-01",
+      "contact": "Fair board (Custer County Fairgrounds)",
+      "what_is_needed": [
+        "Coordinate reweigh date with fair board before 2027 fair",
+        "Bring certified test weights to fairgrounds on reweigh day",
+        "Contact Everweigh Scale Industries (719-547-7075) if CDA inspector not already scheduled"
+      ],
+      "notes": "2026 inspection result: 700 lb scale tested with 300 lbs certified weight — found accurate, approved. 2000 lb scale also approved (substitution test, read 644 on 643 lb load). CDA inspector comes to the fairgrounds. Prompt fires 2027-04-01 to get ahead of fair scheduling. Captured 2026-06-25.",
+      "status": "open"
     }
   ]
 }
