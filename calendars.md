@@ -303,18 +303,19 @@ Last batch: 2026-06-26. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
 [CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-25 ALL-DAY [D] Stop by Doug's - pick up ammo :: prompt
-[CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
+[CAL] 2026-06-25 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-25 10:45 [D] Linux Essentials 010 exam :: misc :: end=11:45
-[CAL] 2026-06-25 12:00 [D] K of C - Call Brandon Nelson :: meetings :: end=12:30
+[CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 14:00 [K] Pick up chicken feed - Tractor Supply :: farm
+[CAL] 2026-06-25 16:00 [R] Haircut :: kids
 [CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00
+[CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-26 09:00 [D] Pig trailer prep :: farm :: end=10:00
+[CAL] 2026-06-26 10:00 [D] K of C - Call Brandon Nelson :: meetings :: end=10:30
 [CAL] 2026-06-26 13:00 [K] Library, Ace, Oma's :: errands :: end=15:00 :: flag=true :: notes="Overlaps Jackpot prep (Gonzalez) 1400-1500 - confirm coverage"
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 17:00 [D] Pig wash and load :: farm :: end=18:00
-[CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
 [CAL] 2026-06-27 04:00 [W][M] Leave for Jackpot - Monte Vista :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
 [CAL] 2026-06-27 09:00 [W][M] Lamb show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
@@ -322,8 +323,8 @@ Last batch: 2026-06-26. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 [CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Swim beach plus Dinosaur Trackway trail. Overnight Vernal."
 [CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT" :: notes="Pizza dinner following Red Fleet stop. Also Rileigh's birthday - confirm if this doubles as birthday dinner."
-[CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
 [CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
+[CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-30 12:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=13:00 :: location="Mesquite, NV"
 [CAL] 2026-06-30 15:15 [K][M][R] Pedicure - Rio Salon :: family :: end=16:15 :: location="Rio Salon, Mesquite, NV"
