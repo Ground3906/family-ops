@@ -367,7 +367,7 @@ Last batch: 2026-06-25. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### OCTOBER 2026
 
-[CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO"
+[CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: flag=true :: notes="Bring retainer"
 
 ---
 
