@@ -20,6 +20,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - **Ford F-250 + pig trailer:** dogs ride secured in the pig trailer (confirm tie-down/kennel method inside trailer).
 - **NV3500:** kids + gear + cats (see pet kit below).
 - **Gear bins:** ride in truck beds (Dodge, Ford) — not passenger cabs.
+- **Gas cans (secured):** ride in the truck beds alongside the gear bins.
 - **Oma & Papa:** driving out to help. Which vehicle they take isn't pinned down yet — flagged, not blocking. Confirm with Matt when convenient.
 
 ---
@@ -163,3 +164,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added canned food + dedicated can opener to Chow Hall's emergency food list | Deliberate exception to the no-opener-needed rule of thumb; Kalea wants it in. |
 | 2026-07-02 | Added headlamp explicitly alongside flashlight; split sentimental tier into individual lines (Guns, Hunting gear, Rosaries, Wedding cross, Stained glass, Baptism candles); dropped "time allows" qualifier on guns; removed Family heirlooms line | Kalea wants each item standing on its own, no bundling, no soft qualifiers. |
 | 2026-07-02 | Added 7 pairs of clothes and a water bottle per kid to Kid-specific | Kalea request — more clothing depth than the general per-person bag spec, kid-scoped. |
+| 2026-07-02 | Added gas cans to truck bed load-out | Rides secured alongside gear bins, Dodge and Ford. |
