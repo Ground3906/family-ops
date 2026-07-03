@@ -1,7 +1,7 @@
 # Bayer Family — Roster
 
 *Source of truth for family membership and extended-network operational data. Do not duplicate elsewhere — reference this file.*
-*Last updated: 2026-05-22*
+*Last updated: 2026-07-02*
 
 ---
 
@@ -53,6 +53,14 @@
 ### Baby boy *(sixth child, unnamed)*
 - Due: August 2026 — Parkview Hospital, Pueblo
 - Refer to as "baby boy" or "sixth child" only until a name is assigned. Do not invent a name.
+
+---
+
+## Pets
+
+- **Dogs:** 2
+- **Cats:** 4
+- Chickens/flock live under Stockyard (`roster.md`) — separate from household pets, gated for real data entry.
 
 ---
 
