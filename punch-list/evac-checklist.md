@@ -55,6 +55,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 - 7+ day supply of prescription meds, everyone
 - First-aid kit
+- Kid medicine — children's fever reducer/pain reliever, dosed for ages 6-14
 - Glasses/contacts spares
 - If baby has arrived: OB/newborn records travel with the bag, not left for last
 
@@ -167,3 +168,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added 7 pairs of clothes and a water bottle per kid to Kid-specific | Kalea request — more clothing depth than the general per-person bag spec, kid-scoped. |
 | 2026-07-02 | Added gas cans to truck bed load-out | Rides secured alongside gear bins, Dodge and Ford. |
 | 2026-07-02 | Added camp chairs to truck bed load-out | Same beds as gear bins and gas cans. |
+| 2026-07-02 | Added kid medicine to Medical section | Children's fever reducer/pain reliever, dosed for ages 6-14. |
