@@ -80,8 +80,9 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Trail mix, dried fruit
 - Nut butter packets, protein bars
 - Instant oatmeal packets — only if hot water is realistic
+- Canned food (soup, chili, vegetables) — dedicated can opener packed with it
 - Baby: ready-to-feed formula (no mixing) once he's here; pouches once on solids
-- Rule of thumb: if it needs a stove, can opener, or fridge, it doesn't go in the bag
+- Rule of thumb otherwise: if it needs a stove or fridge, it doesn't go in the bag — canned food above is the deliberate exception, opener travels with it
 
 ---
 
@@ -157,3 +158,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Vehicle plan replaced with real fleet assignment — Dodge+trailer (skid/ATV), Ford+pig trailer (dogs), NV3500 (kids/gear/cats), Oma & Papa driving out to help | Kalea specified actual logistics over the generic Car 1/Car 2 placeholder. Driver-to-vehicle pairing for Oma & Papa still open — flagged, not blocking. |
 | 2026-07-02 | Added current-use laptops (school/work) to immediate grab-and-go | Distinct from the old laptops/desktop tower already in the sentimental tier for archival data. |
 | 2026-07-02 | Removed medical devices (inhalers, EpiPens, glucose monitors) from grab-and-go and medical sections | Household has none. Prescription meds and first-aid kit stay. |
+| 2026-07-02 | Added canned food + dedicated can opener to Chow Hall's emergency food list | Deliberate exception to the no-opener-needed rule of thumb; Kalea wants it in. |
