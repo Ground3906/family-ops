@@ -33,7 +33,6 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Laptops (school/work, current use)
 - 3+ day supply of prescription meds, humans and pets
 - House keys, spare keys for both vehicles
-- Glasses, contacts, lens solution
 
 ---
 
@@ -69,7 +68,6 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Protective clothing: sturdy boots, long pants, cotton long-sleeve (avoid synthetics)
 - Hygiene: toilet paper, wet wipes, hand sanitizer, heavy-duty trash bags
 - Tools/comm: NOAA weather radio, flashlight/headlamp per person + batteries, whistle, paper county map
-- Phone charger / battery pack
 
 ### Chow Hall — emergency food, no stove/no fridge required
 
@@ -170,3 +168,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added camp chairs to truck bed load-out | Same beds as gear bins and gas cans. |
 | 2026-07-02 | Added kid medicine to Medical section | Children's fever reducer/pain reliever, dosed for ages 6-14. |
 | 2026-07-02 | Moved cats (in repurposed dog crates) from NV3500 to truck bed or pig trailer | Kalea correction — NV3500 carries kids and gear only now. |
+| 2026-07-02 | Removed duplicates — glasses/contacts (kept under Medical only), phone charger/battery pack (kept under Immediate grab-and-go only) | Same item was listed in two sections; consolidated to one home each. |
