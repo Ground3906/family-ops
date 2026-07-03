@@ -135,7 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-06-27. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-07-02. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -388,6 +388,8 @@ Last batch: 2026-06-27. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-12-15 ALL-DAY Wyatt driver ed cert check :: prompt
 [CAL] 2027-01-01 ALL-DAY Wyatt DMV permit appt :: prompt
 [CAL] 2027-02-27 ALL-DAY [K] CO DL renewal reminder :: prompt
+[CAL] 2027-05-01 ALL-DAY Fire season prep - refresh evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md. Annual - re-add for following years each session this fires."
+[CAL] 2027-06-01 ALL-DAY Fire season prep - second check, evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md. Annual - re-add for following years each session this fires."
 [CAL] 2027-04-22 ALL-DAY Wyatt permit checkpoint - 3 mo :: prompt
 [CAL] 2027-07-22 ALL-DAY Wyatt permit checkpoint - 6 mo :: prompt
 [CAL] 2027-10-22 ALL-DAY Wyatt permit checkpoint - 9 mo :: prompt
