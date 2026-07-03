@@ -135,7 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-07-02. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -335,6 +335,7 @@ Last batch: 2026-07-02. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### JULY 2026
 
 [CAL] 2026-07-03 ALL-DAY [D] VA appt prep - gather docs ⏰ :: prompt :: notes="Bring to VA (07-06): DD-214 Member 4 copy + presumptive conditions documentation"
+[CAL] 2026-07-04 14:00 [D] Linux LPI exam :: misc :: end=15:30 :: notes="Check-in 14:00, start 14:30"
 [CAL] 2026-07-04 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
