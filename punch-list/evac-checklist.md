@@ -16,9 +16,11 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 ## Vehicle & role assignments
 
-- **Adult 1 (Car 1):** Loads cat carriers (x4), cat gear bag, and the documents folder.
-- **Adult 2 (Car 2):** Loads dogs, dog gear bag, and kids' food/supply bags.
-- **Wyatt + Molly:** Grab their own go-bags, then walk Rileigh, Cullen, and Emmitt directly to Car 2.
+- **Dodge (Ram 2500) + 20' trailer:** hauls skid steer and ATV.
+- **Ford F-250 + pig trailer:** dogs ride secured in the pig trailer (confirm tie-down/kennel method inside trailer).
+- **NV3500:** kids + gear + cats (see pet kit below).
+- **Gear bins:** ride in truck beds (Dodge, Ford) — not passenger cabs.
+- **Oma & Papa:** driving out to help. Which vehicle they take isn't pinned down yet — flagged, not blocking. Confirm with Matt when convenient.
 
 ---
 
@@ -86,14 +88,12 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 ## 5. Pet evacuation kit (2 dogs, 4 cats)
 
-- 6 hard-sided carriers/crates, labeled with name + phone number
-- Dog collars with tags (in case a leash slips), 2 heavy-duty leashes/harnesses
-- 4 secure cat harnesses
+- Dogs: ride secured in the Ford's pig trailer — confirm tie-down/kennel setup inside trailer before loading
+- Cats (4): travel in repurposed dog crates, riding in the NV3500 with the kids
+- Dog collars with tags, 2 leashes/harnesses (for loading/unloading, not trailer transit)
+- 7-day pet food, airtight; 6 gal dedicated pet water
+- Disposable litter pan, litter, scoop, waste bags, towels for the cat crates
 - Chargers for any powered pet gear
-- 7-day pet food supply, airtight/waterproof
-- 6 gal dedicated pet water, separate from human supply
-- Sanitation: disposable roasting pan (litter box), small bag of litter, scoop, 3 rolls dog waste bags
-- 6 small towels (one per carrier), paper towels
 
 ---
 
@@ -143,8 +143,9 @@ If the order is immediate, skip this section entirely and leave.
 
 ## 10. Vehicles
 
+- Fleet plan: Dodge + 20' trailer (skid steer, ATV), Ford + pig trailer (dogs), NV3500 (kids, gear, cats). See role assignments above.
 - Keep tanks above half during fire season, standing rule
-- Know in advance which two vehicles carry which people/animals if the household splits
+- Oma & Papa driving out to help — extra hands when the household is running 3+ vehicle-trailer combos at once
 
 ---
 
@@ -154,3 +155,4 @@ If the order is immediate, skip this section entirely and leave.
 |---|---|---|
 | 2026-07-02 | Evac checklist established under Punch List | Standing reference so bag-building isn't rebuilt from memory each fire season. |
 | 2026-07-02 | Full rewrite — added Chow Hall food list, coop-release action, dog collars/chargers, cats (4), sentimental tier, home-defense section, vehicle/role assignments | Session build-out with Kalea. Cats confirmed real and added to `family.md`. |
+| 2026-07-02 | Vehicle plan replaced with real fleet assignment — Dodge+trailer (skid/ATV), Ford+pig trailer (dogs), NV3500 (kids/gear/cats), Oma & Papa driving out to help | Kalea specified actual logistics over the generic Car 1/Car 2 placeholder. Driver-to-vehicle pairing for Oma & Papa still open — flagged, not blocking. |
