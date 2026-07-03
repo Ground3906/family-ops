@@ -65,7 +65,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - 3-day food supply — see Chow Hall list below
 - Protective clothing: sturdy boots, long pants, cotton long-sleeve (avoid synthetics)
 - Hygiene: toilet paper, wet wipes, hand sanitizer, heavy-duty trash bags
-- Tools/comm: NOAA weather radio, flashlight per person + batteries, whistle, paper county map
+- Tools/comm: NOAA weather radio, flashlight/headlamp per person + batteries, whistle, paper county map
 - Phone charger / battery pack
 
 ### Chow Hall — emergency food, no stove/no fridge required
@@ -109,13 +109,13 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Physical photo albums, vintage portraits not backed up digitally
 - External drives, old laptops, household desktop tower — family video/archives
 - Each of the 5 kids picks one item that fits their own backpack (blanket, stuffed animal, memory book)
-- Family heirlooms — jewelry, medals, generational keepsakes
 - Kids' handmade art/keepsake projects
 - Rosaries
 - Wedding cross
 - Stained glass
 - Baptism candles
-- Guns and hunting gear (Mystery Ranch's gear — grab if time allows, not a bag-packing priority)
+- Guns
+- Hunting gear
 
 **Pre-order pro-tip:** if there's warning before an order, walk every room with a phone and photograph it, upload to cloud immediately. Zero cargo space, full insurance record if the house is lost.
 
@@ -159,3 +159,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added current-use laptops (school/work) to immediate grab-and-go | Distinct from the old laptops/desktop tower already in the sentimental tier for archival data. |
 | 2026-07-02 | Removed medical devices (inhalers, EpiPens, glucose monitors) from grab-and-go and medical sections | Household has none. Prescription meds and first-aid kit stay. |
 | 2026-07-02 | Added canned food + dedicated can opener to Chow Hall's emergency food list | Deliberate exception to the no-opener-needed rule of thumb; Kalea wants it in. |
+| 2026-07-02 | Added headlamp explicitly alongside flashlight; split sentimental tier into individual lines (Guns, Hunting gear, Rosaries, Wedding cross, Stained glass, Baptism candles); dropped "time allows" qualifier on guns; removed Family heirlooms line | Kalea wants each item standing on its own, no bundling, no soft qualifiers. |
