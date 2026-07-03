@@ -31,7 +31,6 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Laptops (school/work, current use)
 - 3+ day supply of prescription meds, humans and pets
 - House keys, spare keys for both vehicles
-- Medical devices (inhalers, EpiPens, glucose monitors)
 - Glasses, contacts, lens solution
 
 ---
@@ -54,7 +53,6 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 - 7+ day supply of prescription meds, everyone
 - First-aid kit
-- EpiPens/inhalers if applicable
 - Glasses/contacts spares
 - If baby has arrived: OB/newborn records travel with the bag, not left for last
 
@@ -158,3 +156,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Full rewrite — added Chow Hall food list, coop-release action, dog collars/chargers, cats (4), sentimental tier, home-defense section, vehicle/role assignments | Session build-out with Kalea. Cats confirmed real and added to `family.md`. |
 | 2026-07-02 | Vehicle plan replaced with real fleet assignment — Dodge+trailer (skid/ATV), Ford+pig trailer (dogs), NV3500 (kids/gear/cats), Oma & Papa driving out to help | Kalea specified actual logistics over the generic Car 1/Car 2 placeholder. Driver-to-vehicle pairing for Oma & Papa still open — flagged, not blocking. |
 | 2026-07-02 | Added current-use laptops (school/work) to immediate grab-and-go | Distinct from the old laptops/desktop tower already in the sentimental tier for archival data. |
+| 2026-07-02 | Removed medical devices (inhalers, EpiPens, glucose monitors) from grab-and-go and medical sections | Household has none. Prescription meds and first-aid kit stay. |
