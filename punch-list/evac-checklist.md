@@ -31,7 +31,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 - Wallets, driver's licenses, passports, extra cash
 - Phones, charging cables, portable battery banks
 - Laptops (school/work, current use)
-- 3+ day supply of prescription meds, humans and pets
+- 7+ day meds
 - House keys, spare keys for both vehicles
 
 ---
@@ -52,7 +52,6 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 ## 3. Medical — pack first
 
-- 7+ day supply of prescription meds, everyone
 - First-aid kit
 - Kid medicine — children's fever reducer/pain reliever, dosed for ages 6-14
 - Glasses/contacts spares
@@ -169,3 +168,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added kid medicine to Medical section | Children's fever reducer/pain reliever, dosed for ages 6-14. |
 | 2026-07-02 | Moved cats (in repurposed dog crates) from NV3500 to truck bed or pig trailer | Kalea correction — NV3500 carries kids and gear only now. |
 | 2026-07-02 | Removed duplicates — glasses/contacts (kept under Medical only), phone charger/battery pack (kept under Immediate grab-and-go only) | Same item was listed in two sections; consolidated to one home each. |
+| 2026-07-02 | Meds line changed to 7+ days (was 3+), dropped "humans and pets" wording; removed duplicate 7+ day meds line under Medical | Kalea standardized to one meds line, 7-day supply, no duplicate. |
