@@ -2,11 +2,13 @@
 
 **Locked:** 2026-06-27 — Session 1 design lock (Opus). This document is gospel for Session 2. No design decisions remain open. Session 2 builds exactly this.
 
+**Drive spec confirmed:** 2026-07-03 — ThinkPad pre-flight complete. Hardware is Samsung MZVLW512HMJP 512GB NVMe SSD (475.57 GB usable, 226.34 GB free). Charter "2TB SSD" designation was incorrect and has been corrected in v2.9.
+
 ---
 
 ## What This Is
 
-The binary archive transport layer for Bayer Family Ops. Matt and Kalea drop receipts, repair orders, insurance docs, scanned recipe cards, and whiteboard photos from any device into a shared OneDrive folder. The ThinkPad syncs everything down to the 2TB drive. Agents extract facts to JSONL logs on first read; the original stays in the archive for warranty, resale, or dispute.
+The binary archive transport layer for Bayer Family Ops. Matt and Kalea drop receipts, repair orders, insurance docs, scanned recipe cards, and whiteboard photos from any device into a shared OneDrive folder. The ThinkPad syncs everything down to the 512GB NVMe SSD. Agents extract facts to JSONL logs on first read; the original stays in the archive for warranty, resale, or dispute.
 
 This is the OneDrive side only. The ThinkPad local archive, the watcher automation, and the doctrine writeup are Sessions 2, 3, and 4 respectively.
 
@@ -20,7 +22,7 @@ This is the OneDrive side only. The ThinkPad local archive, the watcher automati
 - Location: Matt's OneDrive root (My Files root level)
 - Owner: Matt's account
 - Shared to: `kalea.bayer.co@outlook.com` (read-write)
-- Synced to: ThinkPad 2TB drive (configured in Session 2)
+- Synced to: ThinkPad 512GB NVMe SSD (Samsung MZVLW512HMJP, 475.57 GB usable; confirmed 2026-07-03)
 - Path note: the folder name contains a space. Every script that references it quotes the path. No exceptions.
 
 ### 2. Structure
@@ -45,7 +47,7 @@ None. `Inbox` doubles as the queue. There is no intermediate queue folder. A com
 
 **Grabs:** PDFs (`.pdf`) and images (`.jpg`, `.jpeg`, `.png`). These are the file types in scope: receipts, repair orders, insurance docs, scanned recipe cards, whiteboard photos.
 
-**Ignores:** OneDrive temp files (`.tmp`, `~$*`), lock files, zero-byte files, online-only placeholders not yet downloaded to the 2TB.
+**Ignores:** OneDrive temp files (`.tmp`, `~$*`), lock files, zero-byte files, online-only placeholders not yet downloaded to the 512GB SSD.
 
 **Ready signal (both gates must clear before the watcher touches a file):**
 1. Placeholder check: the file is marked fully downloaded locally by the OneDrive client, not online-only or still-syncing.
@@ -69,34 +71,23 @@ Rationale: gate 1 is cheap and kills obvious junk. Gate 2 is the backstop that g
 
 Run in this order. Each step has a verification before moving on.
 
-**Pre-flight: verify drive specs on the ThinkPad**
-Before touching OneDrive, run these two commands on the ThinkPad and paste results. PQ `archive-disk-monitor` needs real numbers, and the charter's "2TB SSD" designation is unverified against hardware.
+**Pre-flight: verify drive specs on the ThinkPad** — COMPLETE 2026-07-03
+Hardware confirmed: Samsung MZVLW512HMJP 512GB NVMe SSD, 475.57 GB usable, 226.34 GB free. Charter corrected to v2.9.
 
-```powershell
-Get-PhysicalDisk | Select-Object DeviceId, FriendlyName, MediaType, BusType, @{n='SizeGB';e={[math]::Round($_.Size/1GB,2)}} | Format-Table -AutoSize
-```
+**Step 1. Create the folders in OneDrive** — COMPLETE 2026-07-03
+- `Filing Cabinet` created at My Files root in Matt's OneDrive
+- `Inbox` created inside `Filing Cabinet`
+- OneDrive storage confirmed: 1TB (M365 Family, per-account, not pooled)
 
-```powershell
-Get-Volume | Where-Object { $_.DriveLetter -and $_.Size -gt 0 } | Select-Object DriveLetter, FileSystemLabel, @{n='SizeGB';e={[math]::Round($_.Size/1GB,2)}}, @{n='FreeGB';e={[math]::Round($_.SizeRemaining/1GB,2)}}, @{n='PctFree';e={[math]::Round(($_.SizeRemaining/$_.Size)*100,0)}} | Format-Table -AutoSize
-```
-
-If hardware contradicts "2TB SSD" in the charter, flag it and correct the charter storage tier line before building anything.
-
-**Step 1. Create the folders in OneDrive**
-- In OneDrive (web or app on any device), create `Filing Cabinet` at My Files root
-- Inside `Filing Cabinet`, create `Inbox`
-- Verify both show at the right level
-
-**Step 2. Share to Kalea**
-- Right-click `Filing Cabinet`, Share, enter `kalea.bayer.co@outlook.com`, set to Can edit
-- Kalea opens the invite on her Android, accepts, taps "Add to my OneDrive"
-- Verify the folder appears in her OneDrive tree
+**Step 2. Share to Kalea** — COMPLETE (pending Kalea acceptance)
+- `Filing Cabinet` shared to `kalea.bayer.co@outlook.com`, Can edit
+- Kalea to accept invite on her Android and tap "Add to my OneDrive"
 
 **Step 3. Configure ThinkPad OneDrive sync**
 - On the ThinkPad, confirm OneDrive client is signed into Matt's account
 - Locate `Filing Cabinet` in the OneDrive folder tree
 - Right-click, "Always keep on this device"
-- Wait for sync to complete, verify `Filing Cabinet` and `Inbox` exist on the 2TB at the expected path
+- Wait for sync to complete, verify `Filing Cabinet` and `Inbox` exist locally on C: at the discovered OneDrive sync path (record actual path here)
 
 **Step 4. Smoke test**
 - Matt drops a test PDF into `Inbox` from his phone via the share sheet
@@ -107,7 +98,6 @@ If hardware contradicts "2TB SSD" in the charter, flag it and correct the charte
 
 **Step 5. Update the charter**
 - Add the confirmed local ThinkPad path to `Filing Cabinet` in the charter Storage Tiers section
-- Correct the drive type if the pre-flight revealed hardware that contradicts "2TB SSD"
 - Commit via MCP
 
 ---
@@ -115,12 +105,7 @@ If hardware contradicts "2TB SSD" in the charter, flag it and correct the charte
 ## Parked Items (Surface in Session 3)
 
 **PQ `archive-disk-monitor`**
-Free-space monitoring on the archive drive. Build note: this check rides the watcher heartbeat, not a standalone script. Alert fires via the existing Microsoft Graph email hookup when free space drops below threshold. Threshold TBD based on real drive capacity confirmed in Session 2 pre-flight. Cloud side (OneDrive 1TB per account, not pooled) is already handled by Microsoft's own usage alerts.
-
-Verification steps that surface in Session 2 pre-flight:
-- Confirm real drive capacity and type (SSD vs. HDD) via the two PowerShell commands above
-- Check current OneDrive usage at onedrive.live.com/options/managestorage
-- Update the charter storage tier with confirmed specs
+Free-space monitoring on the archive drive. Build note: this check rides the watcher heartbeat, not a standalone script. Alert fires via the existing Microsoft Graph email hookup when free space drops below threshold. Threshold TBD — drive capacity confirmed at 475.57 GB usable, 226.34 GB free as of 2026-07-03. Set threshold in Session 3 based on expected accumulation rate. Cloud side (1TB per account, not pooled) is already handled by Microsoft's own usage alerts.
 
 **Watcher stability interval**
 The exact number of seconds for the size-stability check is tuned in Session 3 against a real test drop. Not a lock for Session 1 or 2.
@@ -131,5 +116,5 @@ The exact number of seconds for the size-stability check is tuned in Session 3 a
 
 - Archive is binary-only. No structured data, no JSONL, no text files go into `Filing Cabinet`. Those live in the repo.
 - The repo is still the source of truth. OneDrive only carries what the repo should never carry.
-- Extract-then-file doctrine stands. Agents work from JSONL extracts; originals are pulled from the cabinet only on deliberate need.
+- Extract-then-file doctrine stands. Agents work from JSONL extracts; originals are pulled from the cabinet only on deliberate need (warranty, resale, dispute).
 - Automation layer carries no AI. The watcher is deterministic plumbing. Reasoning stays in the Interactive layer.
