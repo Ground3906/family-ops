@@ -18,7 +18,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 - **Dodge (Ram 2500) + 20' trailer:** hauls skid steer and ATV.
 - **Ford F-250 + pig trailer:** dogs ride secured in the pig trailer (confirm tie-down/kennel method inside trailer).
-- **NV3500:** kids + gear + cats (see pet kit below).
+- **NV3500:** kids + gear.
 - **Gear bins:** ride in truck beds (Dodge, Ford) — not passenger cabs.
 - **Gas cans (secured):** ride in the truck beds alongside the gear bins.
 - **Camp chairs:** ride in the truck beds too.
@@ -92,7 +92,7 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 ## 5. Pet evacuation kit (2 dogs, 4 cats)
 
 - Dogs: ride secured in the Ford's pig trailer — confirm tie-down/kennel setup inside trailer before loading
-- Cats (4): travel in repurposed dog crates, riding in the NV3500 with the kids
+- Cats (4): repurposed dog crates, secured in a truck bed or the pig trailer — not the NV3500
 - Dog collars with tags, 2 leashes/harnesses (for loading/unloading, not trailer transit)
 - 7-day pet food, airtight; 6 gal dedicated pet water
 - Disposable litter pan, litter, scoop, waste bags, towels for the cat crates
@@ -148,7 +148,7 @@ If the order is immediate, skip this section entirely and leave.
 
 ## 10. Vehicles
 
-- Fleet plan: Dodge + 20' trailer (skid steer, ATV), Ford + pig trailer (dogs), NV3500 (kids, gear, cats). See role assignments above.
+- Fleet plan: Dodge + 20' trailer (skid steer, ATV), Ford + pig trailer (dogs, and cats if trailer has room), NV3500 (kids, gear). See role assignments above.
 - Keep tanks above half during fire season, standing rule
 - Oma & Papa driving out to help — extra hands when the household is running 3+ vehicle-trailer combos at once
 
@@ -169,3 +169,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Added gas cans to truck bed load-out | Rides secured alongside gear bins, Dodge and Ford. |
 | 2026-07-02 | Added camp chairs to truck bed load-out | Same beds as gear bins and gas cans. |
 | 2026-07-02 | Added kid medicine to Medical section | Children's fever reducer/pain reliever, dosed for ages 6-14. |
+| 2026-07-02 | Moved cats (in repurposed dog crates) from NV3500 to truck bed or pig trailer | Kalea correction — NV3500 carries kids and gear only now. |
