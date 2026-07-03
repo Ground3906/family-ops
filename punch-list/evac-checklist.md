@@ -99,6 +99,8 @@ Pets: 2 dogs, 4 cats. Chickens are Stockyard's — see Livestock section below.
 
 ## 6. Kid-specific
 
+- 7 pairs of clothes each, all 5 kids
+- Water bottles, one per kid
 - Cullen, Emmitt, Rileigh — comfort item, diapers/pull-ups if in use, no-prep snacks
 - Wyatt — owns and packs his own bag
 
@@ -160,3 +162,4 @@ If the order is immediate, skip this section entirely and leave.
 | 2026-07-02 | Removed medical devices (inhalers, EpiPens, glucose monitors) from grab-and-go and medical sections | Household has none. Prescription meds and first-aid kit stay. |
 | 2026-07-02 | Added canned food + dedicated can opener to Chow Hall's emergency food list | Deliberate exception to the no-opener-needed rule of thumb; Kalea wants it in. |
 | 2026-07-02 | Added headlamp explicitly alongside flashlight; split sentimental tier into individual lines (Guns, Hunting gear, Rosaries, Wedding cross, Stained glass, Baptism candles); dropped "time allows" qualifier on guns; removed Family heirlooms line | Kalea wants each item standing on its own, no bundling, no soft qualifiers. |
+| 2026-07-02 | Added 7 pairs of clothes and a water bottle per kid to Kid-specific | Kalea request — more clothing depth than the general per-person bag spec, kid-scoped. |
