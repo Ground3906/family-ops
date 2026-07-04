@@ -1,7 +1,7 @@
 # Chow Hall — Pantry
 
 **Owner:** Chow Hall (🍴)
-**Last updated:** 2026-05-27
+**Last updated:** 2026-07-03
 **Data state:** STARTER EXAMPLES — not a real count. Real numbers load when meal planning earns it (Kalea ride-along checks + Costco receipts).
 
 **Naming rule:** Name each item the plain way you'd say it out loud, and keep the name identical here and in `freezer.json` so the shopping list and recipes line up.
@@ -15,6 +15,8 @@ Pantry is the shelf-stable food, sorted by how you count it:
 **"Low at"** is the point where an item counts as low. Blank means Chow Hall hasn't learned that line yet — it asks Kalea once when the item comes up, then remembers. **"Restock to"** is the back-to-normal amount the shopping list buys up to.
 
 Home-canned items (Kalea's jars) refill by re-canning, not a store run — season targets live in `canning-goals.md`.
+
+**Source key:** `Costco` (bulk protein/freezer/paper), `Walmart` (everyday fill-in), `Safeway` (sale-cycle only), `Azure Standard` (monthly drop-point order — bulk dry staples: flour, grains, legumes, oils), `Edelweiss / home` (farm or home-canned).
 
 ---
 
@@ -38,14 +40,16 @@ Home-canned items (Kalea's jars) refill by re-canning, not a store run — seaso
 
 Tracked by how full the bin is, not a count: **full / half / low / out.**
 
-| Item | Status | Restock to |
-|---|---|---|
-| All-purpose flour | full | back to full |
-| Sugar | half | back to full |
-| White rice | full | back to full |
-| Rolled oats | low | back to full |
-| Salt | full | back to full |
-| Dried pinto beans | half | back to full |
+| Item | Status | Source | Restock to |
+|---|---|---|---|
+| All-purpose flour | full | Azure Standard | back to full |
+| Sugar | half | Azure Standard | back to full |
+| White rice | full | Azure Standard | back to full |
+| Rolled oats | low | Azure Standard | back to full |
+| Salt | full | Costco | back to full |
+| Dried pinto beans | half | Azure Standard | back to full |
+
+*Bulk-bin restocks route to Azure Standard by default — it's a monthly drop-point order, not an on-demand run. If a bin goes low between drops and can't wait, Costco or Walmart covers the gap.*
 
 ---
 
