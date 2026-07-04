@@ -120,6 +120,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=pending:** Event displays with strikethrough title and symbol. Awaiting Matt or Kalea confirmation. Both have equal authority to propose or confirm.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
+- **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 
 ---
 
@@ -149,6 +150,7 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ### SWIM PRACTICE - Canon City Pirates Summer Season 2026
 <!-- Mon+Wed 17:30-19:30. Tue+Thu 09:30-12:00. Florence Pool. Kalea drives+coaches. -->
 <!-- Exceptions: Jun 16+18 M+R at art camp. Jul 15 W+M at fair (swine show). Jul 16 M at fair (sheep show). -->
+<!-- CANONICAL SOURCE. Do not duplicate individual swim practice dates in monthly sections. -->
 [CAL] 2026-06-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-02 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-03 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
@@ -304,7 +306,6 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-25 ALL-DAY [D] Stop by Doug's - pick up ammo :: prompt
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
-[CAL] 2026-06-25 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-25 10:45 [D] Linux Essentials 010 exam :: misc :: end=11:45
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 14:00 [K] Pick up chicken feed - Tractor Supply :: farm
@@ -343,7 +344,6 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: errands :: end=09:00 :: location="Westcliffe, CO"
-[CAL] 2026-07-09 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
