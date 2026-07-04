@@ -136,7 +136,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-07-04. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -250,11 +250,25 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
+### MARCH 2026
+
+[CAL] 2026-03-21 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
+
+---
+
+### APRIL 2026
+
+[CAL] 2026-04-25 ALL-DAY Loretto Chapel day - sacred memory :: liturgical
+[CAL] 2026-04-25 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
+
+---
+
 ### MAY 2026
 
 [CAL] 2026-05-05 10:00 [K][D] Prenatal apt - Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-05-14 08:00 [W] Field trip - Sky Zone :: kids :: location="Colorado Springs, CO"
 [CAL] 2026-05-14 ALL-DAY [M][R][C][E] PJ Day :: kids
+[CAL] 2026-05-16 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
 [CAL] 2026-05-16 11:00 [R] Haircut :: kids
 [CAL] 2026-05-16 11:00 [W] Art :: kids
 [CAL] 2026-05-16 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
@@ -271,6 +285,7 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
 [CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
+[CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
 [CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
 [CAL] 2026-06-08 ALL-DAY [D] Kombucha brewed :: misc :: notes="Condition-based check - no time alert. Check when ready."
@@ -324,9 +339,8 @@ Last batch: 2026-07-03. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 [CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Swim beach plus Dinosaur Trackway trail. Overnight Vernal."
 [CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT" :: notes="Pizza dinner following Red Fleet stop. Also Rileigh's birthday - confirm if this doubles as birthday dinner."
-[CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
+[CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: notes="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
 [CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
-[CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: note="Stockyard reminder - deworming day"
 [CAL] 2026-06-30 12:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=13:00 :: location="Mesquite, NV"
 [CAL] 2026-06-30 15:15 [K][M][R] Pedicure - Rio Salon :: family :: end=16:15 :: location="Rio Salon, Mesquite, NV"
 [CAL] 2026-07-01 09:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=10:00 :: location="Mesquite, NV"
