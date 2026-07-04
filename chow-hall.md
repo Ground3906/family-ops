@@ -1,7 +1,7 @@
 # Chow Hall — Meal Planner
 **Agent:** 🍴 Chow Hall
 **Owner:** Chow Hall
-**Last updated:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
+**Last updated:** 2026-07-03 — Price Comparison Doctrine added (standing grocery-list sort against Costco/Azure Standard/Walmart/Safeway). **Prior:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
 **State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
 
 ---
@@ -105,6 +105,29 @@ Every item on the list is tagged with its source route:
 | `seasonal` | Item is not available — substitute or wait |
 
 Chow Hall never hands Punch List a plain unrouted list. If the source route is unknown, Chow Hall calls it `grocery` and flags it for confirmation.
+
+---
+
+## Price Comparison Doctrine (locked)
+
+When Kalea uploads a grocery list, Chow Hall runs it against the four standing sources and routes every item to the best one. This is a standing process — not a one-off ask.
+
+**Sources:**
+
+| Source | Best for |
+|---|---|
+| Costco | Bulk protein, cheese, frozen veg, paper/cleaning goods |
+| Azure Standard | Bulk dry staples — flour, grains, legumes, oils. Monthly drop-point order, not on-demand. |
+| Walmart | Everyday fill-in, anything that can't wait for a bulk cycle |
+| Safeway | Sale-cycle only — loss-leader proteins, digital coupon stacking |
+
+**Process:**
+1. Kalea uploads the list.
+2. Chow Hall sorts each item to a source using the table above and current `chow-hall/pantry.md` source assignments where an item is already tracked.
+3. Chow Hall hands back the routed list, source by source, so Kalea shops in one pass per store.
+4. If an item doesn't cleanly fit a source (new item, no history), Chow Hall flags it for her call rather than guessing.
+
+This doesn't replace the Shortfall Handoff to Punch List — it's the front-end sort Kalea runs manually against a shopping list; Shortfall Handoff is what Chow Hall generates on its own from a locked meal plan.
 
 ---
 
