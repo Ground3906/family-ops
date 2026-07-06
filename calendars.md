@@ -348,11 +348,12 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### JULY 2026
 
-[CAL] 2026-07-03 ALL-DAY [D] VA appt prep - gather docs ⏰ :: prompt :: notes="Bring to VA (07-06): DD-214 Member 4 copy + presumptive conditions documentation"
+[CAL] 2026-07-03 ALL-DAY [D] VA appt prep - gather docs :: prompt :: notes="Bring to VA (07-06): DD-214 Member 4 copy + presumptive conditions documentation"
 [CAL] 2026-07-04 14:00 [D] Linux LPI exam :: misc :: end=15:30 :: notes="Check-in 14:00, start 14:30"
 [CAL] 2026-07-04 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
+[CAL] 2026-07-06 17:30 [MEAL] Leftover pork and beans :: meals :: end=19:00
 [CAL] 2026-07-07 07:45 [D] Mentor meeting :: meetings
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
