@@ -136,7 +136,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
 **Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-07-05. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
@@ -208,7 +208,6 @@ Last batch: 2026-07-05. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ### FAIRBOARD MEETING - 2026-27 (2nd Monday monthly)
 [CAL] 2026-06-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
-[CAL] 2026-07-06 16:30 [D] Fairboard meeting :: meetings :: end=17:30 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-09-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-10-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
@@ -354,6 +353,7 @@ Last batch: 2026-07-05. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-04 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
+[CAL] 2026-07-07 07:15 [D] Mentor meeting :: meetings
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
