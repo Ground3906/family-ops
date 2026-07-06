@@ -39,7 +39,7 @@ Lead runs the sink. Second assists. Table crew sets and clears.
 
 ---
 
-## Weekly Zones — Older/Younger Pairs (swap Mondays)
+## Weekly Zones — Older/Younger Pairs (swap Sundays)
 
 | Week | Bathrooms (wipe-down) | Floors (sweep/vacuum common areas) |
 |---|---|---|
@@ -47,9 +47,19 @@ Lead runs the sink. Second assists. Table crew sets and clears.
 | B | Molly + Emmitt | Wyatt + Cullen |
 
 **Design notes:**
+- Zone weeks run Sunday to Saturday. The swap fires on the Sunday dinner tile (see Calendar Display below).
 - Twins anchor zone pairs — earned it on bathroom work.
 - Rileigh carries no weekly zone; her two fixed daily jobs (trash + sweep) are her zone, run daily instead of weekly.
 - Rileigh's after-dinner sweep = daily maintenance. Floors pair = weekly full pass. No overlap.
+
+---
+
+## Calendar Display — Dinner Tile Rides
+
+This chart is the source of truth. The calendar carries no standalone chore tiles. Instead:
+
+- **Every `[MEAL]` entry** in `calendars.md` carries the night's dish crew and table crew in `notes=`, day-derived from the rotation table above. Chow Hall writes it at meal-plan lock time (see Dish Crew Doctrine in `chow-hall.md`).
+- **Sunday `[MEAL]` entries** carry actual names for lead/second (resolved from the alternation at lock time — never "alternates, see chart") **plus** the incoming zone week and pair assignments.
 
 ---
 
