@@ -353,7 +353,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-04 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
-[CAL] 2026-07-07 07:15 [D] Mentor meeting :: meetings
+[CAL] 2026-07-07 07:45 [D] Mentor meeting :: meetings
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
