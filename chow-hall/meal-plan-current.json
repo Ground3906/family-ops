@@ -4,28 +4,15 @@
     "owner": "Chow Hall",
     "status": "active",
     "week_of": null,
-    "note": "Batch added via Al session 2026-06-18 - Rileigh birthday week."
+    "note": "Batch added via Al session 2026-06-18 - Rileigh birthday week. July entries appended as locked."
   },
   "dinners": [
     {
       "date": "2026-06-18",
       "meal": "Korean beef, rice, frozen broccoli",
-      "protein": {
-        "item": "Ground beef 80/20",
-        "source_id": "frz-ground-beef",
-        "category": "commercial-protein",
-        "qty_used_lbs": 1
-      },
-      "starch": {
-        "item": "White rice",
-        "source": "pantry bulk bin"
-      },
-      "vegetable": {
-        "item": "Frozen broccoli",
-        "source_id": "frz-frozen-broccoli",
-        "category": "commercial-produce",
-        "qty_used_bags": 1
-      },
+      "protein": {"item": "Ground beef 80/20", "source_id": "frz-ground-beef", "category": "commercial-protein", "qty_used_lbs": 1},
+      "starch": {"item": "White rice", "source": "pantry bulk bin"},
+      "vegetable": {"item": "Frozen broccoli", "source_id": "frz-frozen-broccoli", "category": "commercial-produce", "qty_used_bags": 1},
       "notes": "Soy sauce, brown sugar, garlic, ginger, sesame oil assumed on hand as untracked staples.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-06-18"
@@ -33,12 +20,7 @@
     {
       "date": "2026-06-22",
       "meal": "Lasagna",
-      "protein": {
-        "item": "Lasagna, family pan",
-        "source_id": "frz-lasagna",
-        "category": "home-prep",
-        "qty_used_pans": 1
-      },
+      "protein": {"item": "Lasagna, family pan", "source_id": "frz-lasagna", "category": "home-prep", "qty_used_pans": 1},
       "notes": "Pulled from freezer home-prep stock. 1 pan remaining after this draw.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-06-18"
@@ -47,31 +29,27 @@
       "date": "2026-06-23",
       "meal": "Orange chicken and honey cake - Rileigh's birthday celebration",
       "occasion": "Rileigh birthday",
-      "protein": {
-        "item": "Chicken breasts",
-        "source_id": "frz-chicken-breasts",
-        "category": "commercial-protein",
-        "qty_used_lbs": 3
-      },
-      "dessert": {
-        "item": "Honey cake",
-        "source": "from-scratch bake",
-        "needs": ["honey", "eggs", "flour"]
-      },
-      "notes": "Honey cake is from-scratch, not a tracked pantry/freezer pull. Flour bin is full. Honey and eggs not in current pantry tracking - need confirmation before bake day.",
+      "protein": {"item": "Chicken breasts", "source_id": "frz-chicken-breasts", "category": "commercial-protein", "qty_used_lbs": 3},
+      "dessert": {"item": "Honey cake", "source": "from-scratch bake", "needs": ["honey", "eggs", "flour"]},
+      "notes": "Honey cake is from-scratch. Flour bin full. Honey and eggs untracked - confirm before bake day.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-06-18"
     },
     {
       "date": "2026-06-25",
       "meal": "Zucchini boats",
-      "vegetable": {
-        "item": "Zucchini",
-        "source": "grocery - not in current freezer/pantry tracking"
-      },
-      "notes": "Fresh produce dish, not pulled from tracked inventory. Filling/cheese needs to be specified or assumed standard (ground meat, mozzarella, breadcrumbs).",
+      "vegetable": {"item": "Zucchini", "source": "grocery - not in current freezer/pantry tracking"},
+      "notes": "Fresh produce dish. Full grocery pull required.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-06-18"
+    },
+    {
+      "date": "2026-07-06",
+      "meal": "Leftover pork and beans",
+      "protein": {"item": "Leftovers", "source": "home kitchen", "category": "home-prep"},
+      "notes": "No freezer draw. Leftovers only.",
+      "confirmed_by": "Kalea",
+      "locked_at": "2026-07-06"
     }
   ],
   "shortfalls": [
