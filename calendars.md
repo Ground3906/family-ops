@@ -372,6 +372,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
 [CAL] 2026-07-08 15:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=17:00
+[CAL] 2026-07-08 17:00 [D] WGU D281 Overview - cohort :: misc :: end=18:00
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: errands :: end=09:00 :: location="Westcliffe, CO"
 [CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO"
@@ -454,6 +455,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### LITURGICAL - Curated Feasts 2026
+<!-- Filter: Holy Days of Obligation + feasts with food tradition or significant family observance. Voice: Mantel. -->
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
 [CAL] 2026-01-06 ALL-DAY Epiphany ★ :: liturgical :: notes="king cake"
