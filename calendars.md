@@ -121,6 +121,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
+- **[MEAL] entries belong to the meals category only. Never place [MEAL] entries in the main calendar sections alongside appointments and family events. Chore crew and zone week go in notes= on the [MEAL] entry.**
 
 ---
 
@@ -249,6 +250,19 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
+### WHAT'S FOR DINNER - Meal Plan + Chore Crew
+<!-- [MEAL] entries ONLY. meals category only. Never appears on main calendar. -->
+<!-- Chore crew derived from punch-list/chore-chart.md. Zone week noted on each entry. -->
+<!-- Week A zones: Bathrooms = Wyatt + Cullen. Floors = Molly + Emmitt. Week starts 2026-07-06. -->
+
+[CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table)"
+[CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00 :: notes="Dishes: Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)"
+[CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)"
+[CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)"
+[CAL] 2026-07-06 17:30 [MEAL] Leftover pork and beans :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table) | Week A zones: Bathrooms - Wyatt + Cullen / Floors - Molly + Emmitt"
+
+---
+
 ### MARCH 2026
 
 [CAL] 2026-03-21 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
@@ -307,16 +321,13 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-18 10:15 [D] Orthopedic apt :: appointments :: stripe=appt :: end=11:15 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-06-18 13:00 [D] Fairgrounds water mx :: misc :: end=14:00 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-06-18 15:30 [D] Apt - Wentz Foot and Ankle :: appointments :: stripe=appt :: end=16:15 :: location="Salida, CO"
-[CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00
 [CAL] 2026-06-19 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: span=2026-06-21 :: travel=true :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
 [CAL] 2026-06-20 16:00 Mass - Sacred Heart Chapel Pueblo :: liturgical :: end=17:00 :: location="Sacred Heart Chapel, Pueblo, CO"
 [CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30
-[CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
-[CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
 [CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-25 ALL-DAY [D] Stop by Doug's - pick up ammo :: prompt
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
@@ -324,7 +335,6 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 14:00 [K] Pick up chicken feed - Tractor Supply :: farm
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
-[CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00
 [CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
 [CAL] 2026-06-26 09:00 [W][M] Pig trailer prep :: farm :: end=10:00
 [CAL] 2026-06-26 10:00 [D] K of C - Call Brandon Nelson :: meetings :: end=10:30
@@ -353,7 +363,6 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-04 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
-[CAL] 2026-07-06 17:30 [MEAL] Leftover pork and beans :: meals :: end=19:00
 [CAL] 2026-07-07 07:45 [D] Mentor meeting :: meetings
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
