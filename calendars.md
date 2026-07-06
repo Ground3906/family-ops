@@ -121,15 +121,13 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
-- **[MEAL] entries: meals category only. Never in main calendar sections. No chore data on [MEAL] entries - chores live on [CHORE-WEEK] blocks only.**
-- **[CHORE-WEEK] entries: meals category (What's for Dinner view only). Always-on. One active block at a time. Update week= and zone assignments when week flips. Source of truth: punch-list/chore-chart.md.**
-- **WIDGET CODE FLAG (Tim): HOME view must exclude meals category to prevent [MEAL] and [CHORE-WEEK] entries from appearing on main calendar.**
+- **[MEAL] entries: meals category only. Never in main calendar sections.**
+- **Chore rotation lives as a standard [CAL] ALL-DAY entry tagged meals, spanning the current week. Update when week flips. Source: punch-list/chore-chart.md.**
+- **WIDGET CODE FLAG (Tim): HOME view must exclude meals category.**
 
 ---
 
 ## Travel / Extended Absences
-
-Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, etc. Capture confirmed travel here as soft blocks; surface conflicts at session start. Kalea USMC drill travel is a sub-category - Kalea-only scope sacred block.
 
 *(Populated as confirmed.)*
 
@@ -137,9 +135,7 @@ Whiteboard regularly marks `Mom Leaves`, `Mom Returns`, `K Hawaii`, `M+K gone`, 
 
 ## Upcoming Events
 
-Foreman appends here only after Tim/Jill confirm proposals. Phase 1: copy to whiteboard after committing.
-**Doctrine: It always makes the calendar. Unresolved items get flag=true. Nothing stays off pending resolution.**
-Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
+Last batch: 2026-07-06.
 
 ---
 
@@ -151,8 +147,6 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### SWIM PRACTICE - Canon City Pirates Summer Season 2026
-<!-- Mon+Wed 17:30-19:30. Tue+Thu 09:30-12:00. Florence Pool. Kalea drives+coaches. -->
-<!-- Exceptions: Jun 16+18 M+R at art camp. Jul 15 W+M at fair (swine show). Jul 16 M at fair (sheep show). -->
 <!-- CANONICAL SOURCE. Do not duplicate individual swim practice dates in monthly sections. -->
 [CAL] 2026-06-01 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-06-02 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
@@ -225,21 +219,18 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### FAITH FORMATION - School Year 2026-27
-<!-- Start date TBD - individual entries pending parish confirmation. PQ-20 logged. -->
 [CAL] 2026-08-01 ALL-DAY Faith Formation individual entries pending - confirm start date :: prompt
 
 ---
 
 ### YOUTH GROUP - 2026 Season
-<!-- Seasonal only - NOT year-round. Season end confirmed May 2026. -->
 [CAL] 2026-05-14 18:30 Youth Group :: kids :: end=21:30
 [CAL] 2026-05-21 18:30 Youth Group :: kids :: end=21:30
 [CAL] 2026-05-28 18:30 Youth Group :: kids :: end=21:30
 
 ---
 
-### TRASH PICKUP - Jul 2026 to Jan 2027 (every 4 weeks)
-
+### TRASH PICKUP
 [CAL] 2026-05-06 ALL-DAY trash-day :: misc
 [CAL] 2026-07-01 ALL-DAY trash-day :: misc
 [CAL] 2026-07-29 ALL-DAY trash-day :: misc
@@ -252,12 +243,11 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
-### WHAT'S FOR DINNER - Meal Plan + Chore Rotation
-<!-- meals category ONLY. Never on HOME view. Widget: exclude meals from HOME. -->
-<!-- [MEAL] = dinner entries. [CHORE-WEEK] = standing always-on chore rotation block. -->
-<!-- Source for chore data: punch-list/chore-chart.md -->
+### WHAT'S FOR DINNER - Meals and Chore Rotation
+<!-- meals category ONLY. What's for Dinner view. Not HOME. -->
+<!-- Chore rotation = standard [CAL] ALL-DAY entry spanning current week. Update when week flips. -->
 
-[CHORE-WEEK] week=A :: meals :: active=true :: bathrooms="Wyatt + Cullen" :: floors="Molly + Emmitt" :: dishes_mon="Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table)" :: dishes_tue="Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)" :: dishes_wed="Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)" :: dishes_thu="Molly (lead) / Rileigh (second) / Cullen + Emmitt (table)" :: dishes_fri="Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)" :: dishes_sat="Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)" :: dishes_sun="Wyatt (lead, Week A) / Rileigh (second) / Cullen + Emmitt (table)" :: fixed="Emmitt+Cullen unload dishwasher every morning | Rileigh trash daily | Rileigh sweep after dinner daily | Everyone room reset before bed"
+[CAL] 2026-07-06 ALL-DAY Chore rotation Week A - Zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt - Dishes Mon: Wyatt lead / Rileigh 2nd / Cullen+Emmitt table - Dishes Tue: Wyatt lead / Cullen 2nd / Rileigh+Emmitt table - Dishes Wed: Molly lead / Emmitt 2nd / Rileigh+Cullen table - Dishes Thu: Molly lead / Rileigh 2nd / Cullen+Emmitt table - Dishes Fri: Wyatt lead / Cullen 2nd / Rileigh+Emmitt table - Dishes Sat: Molly lead / Emmitt 2nd / Rileigh+Cullen table - Fixed: Emmitt+Cullen unload dishwasher every morning / Rileigh trash daily / Rileigh sweep after dinner / Everyone room reset before bed :: meals :: span=2026-07-12
 
 [CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00
 [CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00
@@ -304,8 +294,8 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
 [CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
-[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO" :: notes="Corpus Christi obligation fulfilled via anticipated Mass Jun 6 17:00 St. Joseph's Salida"
-[CAL] 2026-06-08 ALL-DAY [D] Kombucha brewed :: misc :: notes="Condition-based check - no time alert. Check when ready."
+[CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO"
+[CAL] 2026-06-08 ALL-DAY [D] Kombucha brewed :: misc
 [CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Canon City, CO"
 [CAL] 2026-06-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
@@ -319,7 +309,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-17 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-17 13:30 [K] WIC Recertification :: appointments :: stripe=appt
 [CAL] 2026-06-17 10:30 [W][K] School advisory apt :: appointments :: stripe=appt :: end=11:30
-[CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true :: note="Date unconfirmed - June 17 or 24. Jun 17: Molly art camp ends 15:00 - conflict. Jun 24 cleaner."
+[CAL] 2026-06-17 14:00 [M][W] 4H volunteer event :: kids :: end=15:00 :: flag=true
 [CAL] 2026-06-18 10:00 [M][R] Art camp :: kids :: end=15:00 :: location="Westcliffe, CO"
 [CAL] 2026-06-18 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-06-18 10:15 [D] Orthopedic apt :: appointments :: stripe=appt :: end=11:15 :: location="Westcliffe Clinic, Westcliffe, CO"
@@ -339,10 +329,10 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-25 13:30 [W] Ortho :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-25 14:00 [K] Pick up chicken feed - Tractor Supply :: farm
 [CAL] 2026-06-25 16:00 [R] Haircut :: kids
-[CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt :: notes="14-day rolling cadence. Last checked 2026-06-08 by Kalea. On confirm, set next check +14 days. Voice: Rootstock."
+[CAL] 2026-06-26 ALL-DAY [K] Gardyn roots check :: prompt
 [CAL] 2026-06-26 09:00 [W][M] Pig trailer prep :: farm :: end=10:00
 [CAL] 2026-06-26 10:00 [D] K of C - Call Brandon Nelson :: meetings :: end=10:30
-[CAL] 2026-06-26 13:00 [K] Library, Ace, Oma's :: errands :: end=15:00 :: flag=true :: notes="Overlaps Jackpot prep (Gonzalez) 1400-1500 - confirm coverage"
+[CAL] 2026-06-26 13:00 [K] Library, Ace, Oma's :: errands :: end=15:00 :: flag=true
 [CAL] 2026-06-26 14:00 [M] Jackpot prep - Gonzalez :: kids :: end=16:00
 [CAL] 2026-06-26 17:00 [W][M] Pig wash and load :: farm :: end=18:00
 [CAL] 2026-06-27 ALL-DAY [W][M] Jackpot - Monte Vista :: 4h :: location="Monte Vista, CO"
@@ -350,10 +340,10 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-27 09:00 [W][M] Lamb show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
 [CAL] 2026-06-27 14:00 [W][M] Pig show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
-[CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Swim beach plus Dinosaur Trackway trail. Overnight Vernal."
-[CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT" :: notes="Pizza dinner following Red Fleet stop."
+[CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT"
+[CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT"
 [CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: notes="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
-[CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
+[CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT"
 [CAL] 2026-06-30 12:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=13:00 :: location="Mesquite, NV"
 [CAL] 2026-06-30 15:15 [K][M][R] Pedicure - Rio Salon :: family :: end=16:15 :: location="Rio Salon, Mesquite, NV"
 [CAL] 2026-07-01 09:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=10:00 :: location="Mesquite, NV"
@@ -387,7 +377,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-07-19 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: tentative=true
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
-[CAL] 2026-07-21 13:00 [K] ID card renewal 🪪 :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
+[CAL] 2026-07-21 13:00 [K] ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
@@ -423,8 +413,8 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-12-15 ALL-DAY Wyatt driver ed cert check :: prompt
 [CAL] 2027-01-01 ALL-DAY Wyatt DMV permit appt :: prompt
 [CAL] 2027-02-27 ALL-DAY [K] CO DL renewal reminder :: prompt
-[CAL] 2027-05-01 ALL-DAY Fire season prep - refresh evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md. Annual - re-add for following years each session this fires."
-[CAL] 2027-06-01 ALL-DAY Fire season prep - second check, evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md. Annual - re-add for following years each session this fires."
+[CAL] 2027-05-01 ALL-DAY Fire season prep - refresh evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md."
+[CAL] 2027-06-01 ALL-DAY Fire season prep - second check, evac bags and documents folder :: prompt :: notes="Voice: Punch List. See punch-list/evac-checklist.md."
 [CAL] 2027-04-22 ALL-DAY Wyatt permit checkpoint - 3 mo :: prompt
 [CAL] 2027-07-22 ALL-DAY Wyatt permit checkpoint - 6 mo :: prompt
 [CAL] 2027-10-22 ALL-DAY Wyatt permit checkpoint - 9 mo :: prompt
@@ -455,7 +445,6 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### LITURGICAL - Curated Feasts 2026
-<!-- Filter: Holy Days of Obligation + feasts with food tradition or significant family observance. Voice: Mantel. -->
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
 [CAL] 2026-01-06 ALL-DAY Epiphany ★ :: liturgical :: notes="king cake"
