@@ -121,7 +121,9 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
-- **[MEAL] entries belong to the meals category only. Never place [MEAL] entries in the main calendar sections alongside appointments and family events. Chore crew and zone week go in notes= on the [MEAL] entry.**
+- **[MEAL] entries: meals category only. Never in main calendar sections. No chore data on [MEAL] entries - chores live on [CHORE-WEEK] blocks only.**
+- **[CHORE-WEEK] entries: meals category (What's for Dinner view only). Always-on. One active block at a time. Update week= and zone assignments when week flips. Source of truth: punch-list/chore-chart.md.**
+- **WIDGET CODE FLAG (Tim): HOME view must exclude meals category to prevent [MEAL] and [CHORE-WEEK] entries from appearing on main calendar.**
 
 ---
 
@@ -250,16 +252,18 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 
 ---
 
-### WHAT'S FOR DINNER - Meal Plan + Chore Crew
-<!-- [MEAL] entries ONLY. meals category only. Never appears on main calendar. -->
-<!-- Chore crew derived from punch-list/chore-chart.md. Zone week noted on each entry. -->
-<!-- Week A zones: Bathrooms = Wyatt + Cullen. Floors = Molly + Emmitt. Week starts 2026-07-06. -->
+### WHAT'S FOR DINNER - Meal Plan + Chore Rotation
+<!-- meals category ONLY. Never on HOME view. Widget: exclude meals from HOME. -->
+<!-- [MEAL] = dinner entries. [CHORE-WEEK] = standing always-on chore rotation block. -->
+<!-- Source for chore data: punch-list/chore-chart.md -->
 
-[CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table)"
-[CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00 :: notes="Dishes: Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)"
-[CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)"
-[CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)"
-[CAL] 2026-07-06 17:30 [MEAL] Leftover pork and beans :: meals :: end=19:00 :: notes="Dishes: Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table) | Week A zones: Bathrooms - Wyatt + Cullen / Floors - Molly + Emmitt"
+[CHORE-WEEK] week=A :: meals :: active=true :: bathrooms="Wyatt + Cullen" :: floors="Molly + Emmitt" :: dishes_mon="Wyatt (lead) / Rileigh (second) / Cullen + Emmitt (table)" :: dishes_tue="Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)" :: dishes_wed="Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)" :: dishes_thu="Molly (lead) / Rileigh (second) / Cullen + Emmitt (table)" :: dishes_fri="Wyatt (lead) / Cullen (second) / Rileigh + Emmitt (table)" :: dishes_sat="Molly (lead) / Emmitt (second) / Rileigh + Cullen (table)" :: dishes_sun="Wyatt (lead, Week A) / Rileigh (second) / Cullen + Emmitt (table)" :: fixed="Emmitt+Cullen unload dishwasher every morning | Rileigh trash daily | Rileigh sweep after dinner daily | Everyone room reset before bed"
+
+[CAL] 2026-06-18 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00
+[CAL] 2026-06-22 17:30 [MEAL] Lasagna :: meals :: end=19:00
+[CAL] 2026-06-23 17:30 [MEAL] Orange chicken and honey cake - Rileigh's birthday :: meals :: end=19:00
+[CAL] 2026-06-25 17:30 [MEAL] Zucchini boats :: meals :: end=19:00
+[CAL] 2026-07-06 17:30 [MEAL] Leftover pork and beans :: meals :: end=19:00
 
 ---
 
@@ -347,7 +351,7 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 [CAL] 2026-06-27 14:00 [W][M] Pig show :: 4h :: location="2335 Sherman Avenue, Monte Vista, CO"
 [CAL] 2026-06-28 ALL-DAY [FAM] Mesquite trip - Nevada :: family :: span=2026-07-02 :: travel=true
 [CAL] 2026-06-28 15:30 [FAM] Vernal stop - Red Fleet State Park :: family :: end=18:00 :: location="Red Fleet State Park, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Swim beach plus Dinosaur Trackway trail. Overnight Vernal."
-[CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT" :: notes="Pizza dinner following Red Fleet stop. Also Rileigh's birthday - confirm if this doubles as birthday dinner."
+[CAL] 2026-06-28 18:30 [FAM] Dinner - Antica Forma :: meals :: end=19:30 :: location="Antica Forma, Vernal, UT" :: notes="Pizza dinner following Red Fleet stop."
 [CAL] 2026-06-29 08:00 [D] Deworm pigs :: farm :: notes="Stockyard reminder - deworming day. Last dewormed 2026-06-08, moved from 06-27 per Matt."
 [CAL] 2026-06-29 09:00 [FAM] Vernal stop - Utah Field House and Dinosaur Garden :: family :: end=12:30 :: location="Utah Field House of Natural History State Park Museum, Vernal, UT" :: notes="Side trip waypoint en route to Mesquite. Depart Vernal 13:00, continue toward Mesquite."
 [CAL] 2026-06-30 12:00 [FAM] Daily Mass - Mesquite :: liturgical :: end=13:00 :: location="Mesquite, NV"
@@ -450,7 +454,6 @@ Last batch: 2026-07-06. All entries widget-readable [CAL] / [CAL-RECUR] format.
 ---
 
 ### LITURGICAL - Curated Feasts 2026
-<!-- Filter: Holy Days of Obligation + feasts with food tradition or significant family observance. Voice: Mantel. -->
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
 [CAL] 2026-01-06 ALL-DAY Epiphany ★ :: liturgical :: notes="king cake"
