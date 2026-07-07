@@ -121,8 +121,8 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
-- **[MEAL] entries use the real `[MEAL] YYYY-MM-DD HH:MM Title :: meal-type=X` line-type prefix, never a `[CAL]` line dressed up with a decorative [MEAL] pill and a `:: meals` category. `meals` is not, and never was, a real category (locked list: liturgical, kids, family, animals, appointments, 4h, rootstock, prompt, meetings, misc).**
-- **[CHORE] entries: own line type, own parser array (`allChores`), rendered folded into What's for Dinner alongside the day's meal tile - no separate Chore Board screen. Sunday/week-open gets one ALL-DAY zone-assignment reference, no pills. Each day gets one dishes entry, pills for that day's lead/2nd/table crew only. Source: punch-list/chore-chart.md.**
+- **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`.**
+- **[CHORE] entries: own line type, written by Foreman from Punch List's determination. Full schema and status: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Ownership: `punch-list.md`.**
 
 ---
 
@@ -246,7 +246,7 @@ Last batch: 2026-07-06.
 <!-- [MEAL] entries: real line-type prefix, meal-type= only, never a :: meals category. -->
 <!-- [CHORE] entries: own line type. Sunday/week-open = zone reference, no pills. Daily = dishes entry, pills for that day's crew. Renders folded into What's for Dinner - no separate screen. -->
 
-[CHORE] 2026-07-06 ALL-DAY Week A zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt / Fixed: Emmitt+Cullen unload dishwasher every morning, Rileigh trash daily, Rileigh sweep after dinner, everyone room reset before bed :: span=2026-07-12
+[CHORE] 2026-07-06 ALL-DAY Week A zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt / Fixed: Emmitt+Cullen unload dishwasher every morning, Rileigh trash daily, Rileigh sweep after dinner, Wyatt+Molly own laundry, Rileigh+Cullen+Emmitt fold family laundry on wash days, everyone room reset before bed :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [W][R][C][E] Dishes: Wyatt lead, Rileigh 2nd, Cullen+Emmitt table
 [CHORE] 2026-07-07 ALL-DAY [W][C][R][E] Dishes: Wyatt lead, Cullen 2nd, Rileigh+Emmitt table
 [CHORE] 2026-07-08 ALL-DAY [M][E][R][C] Dishes: Molly lead, Emmitt 2nd, Rileigh+Cullen table
