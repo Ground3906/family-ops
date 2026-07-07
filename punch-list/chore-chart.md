@@ -54,12 +54,13 @@ Lead runs the sink. Second assists. Table crew sets and clears.
 
 ---
 
-## Calendar Display — Dinner Tile Rides
+## Calendar Display — SUPERSEDED 2026-07-06 (same day, later session)
 
-This chart is the source of truth. The calendar carries no standalone chore tiles. Instead:
+This chart remains the source of truth for the rotation data itself: fixed duties, dishes lead/second/table, zone pairs. That part hasn't changed.
 
-- **Every `[MEAL]` entry** in `calendars.md` carries the night's dish crew and table crew in `notes=`, day-derived from the rotation table above. Chow Hall writes it at meal-plan lock time (see Dish Crew Doctrine in `chow-hall.md`).
-- **Sunday `[MEAL]` entries** carry actual names for lead/second (resolved from the alternation at lock time — never "alternates, see chart") **plus** the incoming zone week and pair assignments.
+The display mechanism has. Chores now render via their own `[CHORE]` calendar line type in `calendars.md`, folded into What's for Dinner, not via `notes=` on the `[MEAL]` entry. Punch List determines the day's or week's assignment from this chart; Foreman writes the `[CHORE]` line. See `cal-widget.md` for the format (data format locked, widget parser support pending) and `punch-list.md` for ownership.
+
+`chow-hall.md`'s original Dish Crew Doctrine (also approved same day) is superseded the same way — see that file.
 
 ---
 

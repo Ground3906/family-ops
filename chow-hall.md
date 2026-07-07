@@ -1,7 +1,7 @@
 # Chow Hall — Meal Planner
 **Agent:** 🍴 Chow Hall
 **Owner:** Chow Hall
-**Last updated:** 2026-07-06 — Dish Crew Doctrine added ([MEAL] entries carry dish/table crew; Sunday tiles carry zone swap). **Prior:** 2026-07-03 — Price Comparison Doctrine added (standing grocery-list sort against Costco/Azure Standard/Walmart/Safeway). **Prior:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
+**Last updated:** 2026-07-06 — Dish Crew Doctrine superseded ([CHORE] calendar line type wins over the notes= approach; see `cal-widget.md` and `punch-list.md`). **Prior:** 2026-07-06 — Dish Crew Doctrine added ([MEAL] entries carry dish/table crew; Sunday tiles carry zone swap). **Prior:** 2026-07-03 — Price Comparison Doctrine added (standing grocery-list sort against Costco/Azure Standard/Walmart/Safeway). **Prior:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
 **State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
 
 ---
@@ -157,21 +157,13 @@ Sequence:
 
 ---
 
-## Dish Crew Doctrine (locked 2026-07-06)
+## Dish Crew Doctrine — SUPERSEDED 2026-07-06 (same day, later session)
 
-Dish duty rides the dinner tile. No standalone chore entries on the calendar — the "what's for dinner" view is the whole story: what's cooking, who's cleaning.
+Dish and table crew no longer ride in `[MEAL]` entry `notes=`. Chow Hall does not write crew information into meal entries.
 
-**Source of truth:** `punch-list/chore-chart.md` (Punch List domain). Chow Hall reads it; never modifies it.
+Chore display now happens through its own `[CHORE]` calendar line type, written by Foreman from Punch List's determination against `punch-list/chore-chart.md`. See `cal-widget.md` for the format (data format locked, widget parser support pending) and `punch-list.md` for ownership.
 
-**Rules:**
-1. **Every `[MEAL]` entry carries the night's crew in `notes=`** — dishes lead + second, then table crew. Day-derived from the chore chart rotation, so it's mechanical: the weekday determines the crew.
-   - Format: `notes="Dishes: <Lead> + <Second>. Table: <Name> + <Name>"`
-   - Example: `[CAL] 2026-07-08 17:30 [MEAL] Korean beef, rice, frozen broccoli :: meals :: end=19:00 :: notes="Dishes: Molly + Emmitt. Table: Rileigh + Cullen"`
-2. **Written at lock time, same commit** as the `[MEAL]` entries — this extends the standing rule that every locked dinner gets a `[MEAL]` calendar entry in the same commit as the JSON update.
-3. **Sunday tiles resolve rotations to real names.** The Sunday lead alternation (Wyatt ↔ Molly) and second rotation (Rileigh → Cullen → Emmitt) are resolved at lock time. Never write "alternates" or "see chart" on a tile.
-4. **Sunday tiles also carry the zone swap.** Zone weeks run Sunday to Saturday. The Sunday `[MEAL]` entry announces the incoming week's zone assignments.
-   - Format: `notes="Dishes: <Lead> + <Second>. Table: <Name> + <Name>. Zone week <A|B>: Bathrooms <pair>, Floors <pair>"`
-5. **Track the rotations in `chow-hall/meal-plan-current.json`** — the active plan records which Sunday lead, which Sunday second, and which zone week the current week carries, so the next lock derives the next state without archaeology.
+Chow Hall's only remaining tie to chores: none. This was a same-day doctrine correction — two sessions independently designed the same feature and landed on different answers before either read the other's work. The `[CHORE]` line-type design is the one that stands.
 
 ---
 
@@ -244,7 +236,7 @@ Any step requiring Kalea's input or sign-off **never fires after 20:00.** This i
 ### Reads (no handoff)
 | File | Why |
 |---|---|
-| `punch-list/chore-chart.md` | Dish crew + zone assignments for `[MEAL]` entry notes (Dish Crew Doctrine). Read-only — Punch List owns the chart. |
+| — | Chow Hall no longer reads `punch-list/chore-chart.md`. That handshake moved to Punch List and Foreman when the Dish Crew Doctrine was superseded — see above. |
 
 ---
 
