@@ -151,8 +151,15 @@ When a Sunday or Holy Day of Obligation has a scheduling conflict, Foreman flags
 
 When flagging a Holy Day conflict, Foreman always names the specific adjudication path in the `notes=` field. Example: `notes="🚩 [Event] same day. Adjudication: anticipated Mass [date] 17:00 St. Joseph's Salida"`.
 
-
 The Cockpit is a read-only display. No keyboard, no form, no entry tool on the Cockpit. Calendar write flow: agent on phone → Foreman → writes `[CAL]` entry to `calendars.md` via GitHub MCP → widget fetches live from repo → Cockpit reflects on refresh. Never suggest an entry tool or form on the Cockpit.
+
+### Screens Doctrine — Payroll (locked 2026-07-06)
+
+**Payroll** is a standalone interactive screen — commission job logging, deductions, jar balances, month-end payout — that sits alongside the Cockpit in navigation, not inside it. It is the one exception to "no keyboard, no form" because it isn't the Cockpit: the Cockpit calendar view stays strictly read-only as above, and Payroll is a separate screen a tap away, same tier as the What's for Dinner view.
+
+- **Owner:** Punch List domain. Foreman holds no data for Payroll and doesn't voice its reminders — same Option C split as everything else.
+- **Source of truth:** `ledger/allowance.md` (rate menu, split ratios, quality-gate policy). Payroll's on-screen state (job log, jar totals) lives in its own persistent storage, not in `calendars.md`.
+- **No calendar entries.** Commission work and allowance payouts do not generate `[CAL]` entries. If a future need arises (e.g., a payout reminder), that reminder would voice as Punch List, per Option C — Foreman would hold the date only.
 
 ---
 
