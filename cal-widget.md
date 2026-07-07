@@ -243,7 +243,7 @@ Top 50%: 7-col events. Bottom 50%: `#week-briefs` — 7 brief columns, always vi
 Rebuilt on `buildWkRow`. `[MEAL]` entries render as amber tiles. Tap tile -> Cook Mode.
 
 ### What's for Dinner (v5.2, locked)
-Month-view clone. Meals-only content. Read-only kids view. Arrows page by month.
+Month-view clone. Meals-only content today; will also render `[CHORE]` entries folded into the same cell once the parser ships — see `[CHORE]` entry doctrine below. Read-only kids view. Arrows page by month.
 
 ### Cook Mode Splash (v5.0)
 Bible verse centered. Today's planned meals preloaded as tappable tiles. Coming Up rail: next 1-2 days.
@@ -293,6 +293,8 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 | meetings | clipboard | KoC, Fairboard, any recurring meeting |
 | misc | (none) | Catch-all |
 
+`[MEAL]` and `[CHORE]` entries are not `:: category`-tagged lines — they're their own line types (see schema below) and don't route through this emoji map.
+
 ---
 
 ## calendars.md Schema
@@ -305,6 +307,7 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 [CAL-RECUR weekly start=YYYY-MM-DD day=dow skip=YYYY-MM-DD,...] HH:MM [PILLS] Title :: category :: opt=val
 [BRIEF] YYYY-MM-DD [AgentName] text
 [MEAL] YYYY-MM-DD HH:MM Title :: recipe-id=X :: meal-type=dinner/breakfast/lunch/prep
+[CHORE] YYYY-MM-DD ALL-DAY [PILLS] Title :: opt=val
 ```
 
 ### Supported options
@@ -329,6 +332,26 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 ### Recurring entry doctrine (locked)
 Only two CAL-RECUR entries permitted: Sunday Mass 08:00 and Daily Mass Wed 10:00. Everything else = individual [CAL] entries. CAL-RECUR for seasonal events is forbidden.
 
+### [CHORE] entry doctrine (data format locked 2026-07-06, widget parser support PENDING)
+
+Two shapes, same line type:
+
+```
+[CHORE] YYYY-MM-DD ALL-DAY Title :: span=YYYY-MM-DD
+[CHORE] YYYY-MM-DD ALL-DAY [PILLS] Title
+```
+
+- **Weekly zone reference** (no pills): one entry per zone week, posted on the week's Sunday-to-Saturday span, naming the bathrooms/floors pairs and the fixed daily duties for the week. Reference text, not a task assignment to any one person that day.
+- **Daily dishes entry** (pills required): one entry per day, carrying the pills for that day's lead, second, and table crew. Dishes is the only chore that rotates day to day, so it's the only one that needs a fresh line every day.
+
+**Source of truth for the rotation itself is `punch-list/chore-chart.md`** — fixed duties, dishes rotation, zone pairs, approved by Kalea. Punch List reads that chart and determines the day's or week's assignment; Foreman writes the actual `[CHORE]` line to `calendars.md`, same as every other calendar write — Foreman is the universal calendar sink (see `foreman.md`). `[CHORE]` entries are never written directly by any agent other than Foreman.
+
+**Render target:** folded into What's for Dinner, alongside the day's `[MEAL]` tile. No separate Chore Board screen.
+
+**Status: data format and doctrine are locked. The widget parser (`allChores` array, WFD fold-in render) has NOT been built.** Until that ships, `[CHORE]` lines are correct data sitting inert in the file — nothing on the Cockpit reflects them yet. Do not claim otherwise in any session summary.
+
+**History note:** this line type was designed independently of, and briefly conflicted with, a same-day Dish Crew Doctrine in `chow-hall.md` that put crew info in `[MEAL]` `notes=` instead. `[CHORE]` is the design that stands; `chow-hall.md` and `punch-list/chore-chart.md` were corrected to match on discovery of the conflict.
+
 ---
 
 ## Parked Questions (PQs)
@@ -349,6 +372,7 @@ PQs are future-session items — parked until conditions are right to address th
 | PQ-36 | Kalea altitude override — save per recipe, flag as user edit | Wave 6.7+ |
 | PQ-GUS | Sourdough starter feed tracker — timer-reset tap, not data entry. Cockpit read-only constraint applies. Design conversation needed. Colorblind-safe treatment required (not red-only). | Future brainstorm |
 | PQ-PHASE2 | sessionStorage timer persistence on Home reload | Phase 2 |
+| PQ-CHORE | Widget parser build: `allChores` array + WFD fold-in render for `[CHORE]` entries. Design pending — targeted for a dedicated Opus design session, then a Sonnet build session. Not started. | Next available design session |
 
 ---
 
