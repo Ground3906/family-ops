@@ -121,8 +121,8 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
-- **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`.**
-- **[CHORE] entries: own line type, written by Foreman from Punch List's determination. Full schema and status: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Ownership: `punch-list.md`.**
+- **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
+- **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 
 ---
 
@@ -242,7 +242,8 @@ Last batch: 2026-07-07.
 
 ---
 
-### WHAT'S FOR DINNER - Meals and Chores
+### WHAT'S FOR DINNER
+<!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
 
 [CHORE] 2026-07-06 ALL-DAY Week A zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt / Fixed: Emmitt+Cullen unload dishwasher every morning, Rileigh trash daily, Rileigh sweep after dinner, Wyatt+Molly own laundry, Rileigh+Cullen+Emmitt fold family laundry on wash days, everyone room reset before bed :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [W][R][C][E] Dishes: Wyatt lead, Rileigh 2nd, Cullen+Emmitt table
@@ -252,40 +253,8 @@ Last batch: 2026-07-07.
 [CHORE] 2026-07-10 ALL-DAY [W][C][R][E] Dishes: Wyatt lead, Cullen 2nd, Rileigh+Emmitt table
 [CHORE] 2026-07-11 ALL-DAY [M][E][R][C] Dishes: Molly lead, Emmitt 2nd, Rileigh+Cullen table
 
-[MEAL] 2026-06-18 17:30 Korean beef, rice, frozen broccoli :: meal-type=dinner
-[MEAL] 2026-06-22 17:30 Lasagna :: meal-type=dinner
-[MEAL] 2026-06-23 17:30 Orange chicken and honey cake - Rileigh's birthday :: meal-type=dinner
-[MEAL] 2026-06-25 17:30 Zucchini boats :: meal-type=dinner
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
-
----
-
-### MARCH 2026
-
-[CAL] 2026-03-21 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
-
----
-
-### APRIL 2026
-
-[CAL] 2026-04-25 ALL-DAY Loretto Chapel day - sacred memory :: liturgical
-[CAL] 2026-04-25 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
-
----
-
-### MAY 2026
-
-[CAL] 2026-05-05 10:00 [K][D] Prenatal apt - Pueblo :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-05-14 08:00 [W] Field trip - Sky Zone :: kids :: location="Colorado Springs, CO"
-[CAL] 2026-05-14 ALL-DAY [M][R][C][E] PJ Day :: kids
-[CAL] 2026-05-16 08:00 [D] Deworm pigs :: farm :: notes="Stockyard audit record"
-[CAL] 2026-05-16 11:00 [R] Haircut :: kids
-[CAL] 2026-05-16 11:00 [W] Art :: kids
-[CAL] 2026-05-16 17:00 Mass :: liturgical :: location="St. Joseph's, Salida"
-[CAL] 2026-05-18 10:00 [K] Apt - Gina :: appointments :: stripe=appt
-[CAL] 2026-05-19 08:00 [M][R] Triathlon - Westcliffe :: kids :: location="Westcliffe, CO"
-[CAL] 2026-05-22 ALL-DAY [D] Pick up wood shavings - Ryan Stover :: misc :: notes="In town"
-[CAL] 2026-05-23 11:00 [R][M] Apt - Tacey :: appointments :: stripe=appt
+[MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
 
 ---
 
