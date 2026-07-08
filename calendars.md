@@ -136,7 +136,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-07.
+Last batch: 2026-07-08.
 
 ---
 
@@ -246,8 +246,6 @@ Last batch: 2026-07-07.
 
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
-<!-- [CHORE] zone entries: chore-zone=X opt, pills per zone pair, span= for week. -->
-<!-- [CHORE] dish/table entries: chore-type=dishes or chore-type=table, pills for assigned kids only. -->
 
 [CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-07-12
@@ -384,6 +382,12 @@ Last batch: 2026-07-07.
 ### OCTOBER 2026
 
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: flag=true :: notes="Bring retainer"
+
+---
+
+### FEBRUARY 2027
+
+[CAL] 2027-02-04 09:30 [K] Dentist :: appointments :: stripe=appt :: end=10:30 :: location="Canon Family Dental, Canon City, CO"
 
 ---
 
