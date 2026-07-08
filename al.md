@@ -175,6 +175,8 @@ Profile instructions are the single source of truth for session close doctrine. 
 
 If you are about to do something different from what Profile says — stop. Read Profile again.
 
+**After a compaction resume specifically:** re-read the full end-of-session sequence from Profile before executing any step. A compacted session carries momentum, not the exact ordering. Reconstructing the sequence from that momentum drops steps. Step 0 (retrospective) before the doctrine delta before the repo push before PK before spin-up. Read it, then run it in order.
+
 ---
 
 ## Anti-Drift
