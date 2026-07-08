@@ -123,6 +123,8 @@ Confirm exact times each season; this is the shape, not the truth.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
+- **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
+- **[CHORE] dish/table entries: use `chore-type=dishes` or `chore-type=table` opt. Two lines per day: one for dishes crew (lead + 2nd), one for table crew. Pills only - no prose description.**
 
 ---
 
@@ -244,14 +246,23 @@ Last batch: 2026-07-07.
 
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
+<!-- [CHORE] zone entries: chore-zone=X opt, pills per zone pair, span= for week. -->
+<!-- [CHORE] dish/table entries: chore-type=dishes or chore-type=table, pills for assigned kids only. -->
 
-[CHORE] 2026-07-06 ALL-DAY Week A zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt / Fixed: Emmitt+Cullen unload dishwasher every morning, Rileigh trash daily, Rileigh sweep after dinner, Wyatt+Molly own laundry, Rileigh+Cullen+Emmitt fold family laundry on wash days, everyone room reset before bed :: span=2026-07-12
-[CHORE] 2026-07-06 ALL-DAY [W][R][C][E] Dishes: Wyatt lead, Rileigh 2nd, Cullen+Emmitt table
-[CHORE] 2026-07-07 ALL-DAY [W][C][R][E] Dishes: Wyatt lead, Cullen 2nd, Rileigh+Emmitt table
-[CHORE] 2026-07-08 ALL-DAY [M][E][R][C] Dishes: Molly lead, Emmitt 2nd, Rileigh+Cullen table
-[CHORE] 2026-07-09 ALL-DAY [M][R][C][E] Dishes: Molly lead, Rileigh 2nd, Cullen+Emmitt table
-[CHORE] 2026-07-10 ALL-DAY [W][C][R][E] Dishes: Wyatt lead, Cullen 2nd, Rileigh+Emmitt table
-[CHORE] 2026-07-11 ALL-DAY [M][E][R][C] Dishes: Molly lead, Emmitt 2nd, Rileigh+Cullen table
+[CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
+[CHORE] 2026-07-06 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-07-12
+[CHORE] 2026-07-06 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-06 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-07 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-07 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-08 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-08 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-09 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-09 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-10 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-10 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-11 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-11 ALL-DAY [R][C] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
