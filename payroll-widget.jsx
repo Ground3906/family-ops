@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import {
   Home, Sprout, Trash2, Snowflake, Clock, Car, Sparkles,
   UtensilsCrossed, BookOpen, Boxes, Armchair, DoorOpen, X, Stamp,
-  Gift, PiggyBank, Wallet, MinusCircle, CheckCircle2, CalendarPlus, Edit3
+  Gift, PiggyBank, Wallet, MinusCircle, CheckCircle2, CalendarPlus, Edit3, Baby
 } from "lucide-react";
 
 const C = {
@@ -30,16 +30,17 @@ const KIDS = [
 
 const JOBS = [
   { id: "coop", label: "Coop deep-clean", rate: 5, unit: "flat", icon: Home },
-  { id: "garden", label: "Garden bed weeded", rate: 3, unit: "flat", icon: Sprout },
+  { id: "garden", label: "Garden bed weeded", rate: 2, unit: "flat", icon: Sprout },
   { id: "yard", label: "Yard cleanup", rate: 1, unit: "flat", icon: Trash2 },
-  { id: "snow", label: "Snow shovel", rate: 2, unit: "flat", icon: Snowflake },
+  { id: "diaper", label: "Take out diaper trash", rate: 1, unit: "flat", icon: Baby },
+  { id: "snow", label: "Snow shovel", rate: 1, unit: "flat", icon: Snowflake },
   { id: "chip", label: "Wood chipping", rate: 15, unit: "hour", icon: Clock, restrictedTo: ["wyatt"] },
   { id: "vehicle", label: "Clean the car", rate: 2, unit: "flat", icon: Car },
   { id: "windows", label: "Windows, per room", rate: 1, unit: "flat", icon: Sparkles },
   { id: "drawers", label: "Kitchen drawers organized", rate: 1, unit: "flat", icon: UtensilsCrossed },
-  { id: "zone-books", label: "Zone: Books & art table", rate: 2, unit: "flat", icon: BookOpen },
-  { id: "zone-down", label: "Zone: Downstairs", rate: 2, unit: "flat", icon: Boxes },
-  { id: "zone-common", label: "Zone: Common room", rate: 2, unit: "flat", icon: Armchair },
+  { id: "zone-books", label: "Zone: Books & art table", rate: 1, unit: "flat", icon: BookOpen },
+  { id: "zone-down", label: "Zone: Downstairs", rate: 1, unit: "flat", icon: Boxes },
+  { id: "zone-common", label: "Zone: Common room", rate: 1, unit: "flat", icon: Armchair },
   { id: "mudroom", label: "Mud room reset", rate: 2, unit: "flat", icon: DoorOpen },
 ];
 
