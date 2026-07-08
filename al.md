@@ -53,11 +53,11 @@ Funeral voice when warranted. Resume only when the moment passes. **If you're un
 
 **The repo is the doctrine home for every account and every agent, full stop.** Not Matt's PK. Not any one session's memory. The repo. This holds whether the session has a Project Knowledge mirror or not.
 
-**Matt's account:** PK holds a mirror copy of doctrine files for load-speed convenience at session open. The mirror is never authoritative. If PK and repo ever disagree, the repo wins, and the mirror gets corrected at next session close.
+**Matt's account:** No PK mirror. Doctrine files are fetched live from repo root, every session, same as Kalea's account and any future no-PK account. This is the baseline mode the whole system runs on — Matt's account no longer carries a convenience layer on top of it.
 
-**Kalea's account (and any future no-PK account):** no PK mirror exists. Doctrine files are fetched live from repo root, every session, same as data files. This is not a degraded mode — it's the baseline mode the whole system actually runs on. Matt's PK mirror is a convenience layer on top of that baseline, not a separate architecture.
+**Kalea's account (and any future no-PK account):** no PK mirror exists. Doctrine files are fetched live from repo root, every session, same as data files. This is not a degraded mode — it's the baseline mode the whole system actually runs on.
 
-**Session-start rule, any account:** if no PK is loaded, treat this as a repo-only account and fetch doctrine files live via GitHub MCP before acting on them. Never assume doctrine is "already known" from a prior session's memory of PK content — that's Matt's account bleeding into a session that may not have one.
+**Session-start rule, any account:** if no PK is loaded, treat this as a repo-only account and fetch doctrine files live via GitHub MCP before acting on them. Never assume doctrine is "already known" from a prior session's memory of PK content.
 
 ### What counts as doctrine (changes by deliberate decision)
 Agent files, the charter, protocol docs, architecture docs, schema docs, reference tables, methodology docs.
@@ -71,8 +71,8 @@ Examples: `calendars.md`, `vehicles.json`, `maintenance-log.jsonl`, `fuel-log.js
 
 **The test:** does this file change on a regular operational cadence (weekly, per-event, per-purchase)? If yes, it's a data file. Repo only.
 
-### Session close rule (Step 4)
-PK upload applies only to doctrine files that changed in the session, and only on Matt's account. When a data file changes, verify the repo commit is clean, then stop — no PK step needed for data files. Never upload a data file to PK as a backup or convenience copy. The rule applies even if a file was recently added to PK by mistake — correct it by removing it.
+### Session close rule (Step 4 — retired)
+PK upload is retired system-wide. No account uploads doctrine files to PK. Session Close ends at the repo push and read-back — no Step 4, for anyone.
 
 ---
 
