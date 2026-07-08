@@ -1,7 +1,7 @@
 # cal-widget.md — Calendar Widget Reference
 
 **Filename convention:** `cal-widget-v[MAJOR].[MINOR].html` — DOT notation always, NEVER underscore. No wave reference in filename. `wave-4-5-widget-*` naming fully retired.
-**Current version:** v5.8.2 (live: `cal-widget-current.html`). Archive: `cal-widget-v5.8.html`.
+**Current version:** v5.9 (live: `cal-widget-current.html`). Archive: `cal-widget-v5.8.html`.
 **Cockpit URL:** `http://192.168.1.60:8080/cal-widget-current.html` — NEVER changes. `cal-widget-current.html` always mirrors latest version.
 **Data sources:** `calendars.md` + `recipes-index.json` + `recipes/*.json` — all fetched live with `{cache:'no-store'}`
 
@@ -61,6 +61,7 @@ Every session close (full version):
 | v5.8 | 2026-06-17 | **Cook Mode recipe format fix + category rebuild.** Widget reads current recipe schema ({item,qty,unit,note} ingredients; instructions[] steps). Auto-timers extracted from step text, tappable. Right rail categories live. 3 new shelves (Seafood, Sauces, Household). Kids Kitchen wired. Short names in tabs. Undefined prefix removed. Midnight rollover guard added. |
 | v5.8.1 | 2026-06-22 | No-cache meta tags (`Cache-Control`, `Pragma`, `Expires`) in `<head>` — prevents Fully Kiosk from serving stale widget after pull job updates file. |
 | v5.8.2 | 2026-06-22 | Sync footer — fixed bottom strip shows "Last sync: X min ago." Amber + "Sync stale" label when last pull >10 min. `checkSyncStatus()` on load and every 60s, reads `last-pull.json`. |
+| v5.9 | 2026-07-07 | **PQ-CHORE — [CHORE] widget parser + WFD fold-in.** `parseChoreLine()` builds `allChores` array from both locked shapes (weekly zone reference / daily dishes). Fetch filter updated to include `[CHORE]` lines (previously dropped silently before reaching the parser). What's for Dinner (`renderDinnerCell`/`renderDinnerGrid`) folds chores in: zone banner pinned to the Sunday cell of its span week (bordered strip, no fill, house icon, auto-derived "X Crew" badges), daily dishes tile stacks below the meal tile (flag-tab shape, teal accent, sponge icon, lead pill first). Colorblind-safe throughout — shape and icon carry meaning, not hue. Meal Planner screen untouched; fold-in is WFD-only per doctrine. |
 
 ---
 
@@ -240,10 +241,10 @@ Fixed `220px`. Timers stack top-to-bottom. Tap snaps to Cook Mode.
 Top 50%: 7-col events. Bottom 50%: `#week-briefs` — 7 brief columns, always visible.
 
 ### Meal Planner (v5.2, locked)
-Rebuilt on `buildWkRow`. `[MEAL]` entries render as amber tiles. Tap tile -> Cook Mode.
+Rebuilt on `buildWkRow`. `[MEAL]` entries render as amber tiles. Tap tile -> Cook Mode. `[CHORE]` fold-in does NOT apply here — Meal Planner and What's for Dinner are separate screens; chore fold-in is WFD-only per the v5.9 lock.
 
-### What's for Dinner (v5.2, locked)
-Month-view clone. Meals-only content today; will also render `[CHORE]` entries folded into the same cell once the parser ships — see `[CHORE]` entry doctrine below. Read-only kids view. Arrows page by month.
+### What's for Dinner (v5.2, rebuilt v5.9, locked)
+Month-view clone. Read-only kids view. Arrows page by month. As of v5.9, folds `[CHORE]` entries in alongside the day's `[MEAL]` tile — see `[CHORE] entry doctrine` and `[CHORE] Widget Render (v5.9, locked)` below.
 
 ### Cook Mode Splash (v5.0)
 Bible verse centered. Today's planned meals preloaded as tappable tiles. Coming Up rail: next 1-2 days.
@@ -251,49 +252,16 @@ Bible verse centered. Today's planned meals preloaded as tappable tiles. Coming 
 ### Auto-Refresh (v5.3, locked)
 Every 3 minutes. Guards: returns immediately if `cookOn || nightOn`.
 
----
+### [CHORE] Widget Render (v5.9, locked)
+Ships PQ-CHORE. Applies only to `renderDinnerCell`/`renderDinnerGrid` (the What's for Dinner screen) — never the Meal Planner screen.
 
-## Architecture
-
-### Top bar
-Sticky, fixed height `--hh:96px`. Left: wordmark placard. Center: month/year banner. Right: egg card + agent grid.
-
-### Nav ribbon — 3 fixed sections
-Left: What's for Dinner + Meal Planner. Center: <- Home Cook Mode Night ->. Right: Rolling / Week / Month.
-
-### Cook Mode layout
-Left rail: Timer stack + manual timer. Center: servings bar + 2-card area. Right rail: Recipe browser (categories + Kids Kitchen + Coming Up).
-
----
-
-## Pill Colors (locked)
-
-```
-D=#9a5828  K=#1a50e0  W=#cc2233  M=#9944cc  R=#f040b8
-C=#2070b8  E=#156e2a  B6=#faa030  OMA=#7755cc  PAPA=#6ec898
-GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
-```
-
-`B6_ACTIVE=false` — flip post-birth (~2026-08-15).
-
----
-
-## Category Emoji Map (locked)
-
-| Cat key | Emoji | Use |
-|---------|-------|-----|
-| liturgical | cross | Feast days, Holy Days, Mass |
-| kids | children crossing | Kids events, swim practice, Faith Formation |
-| family | house | Whole-family events, swim meets |
-| animals | paw | Farm/animal events |
-| appointments | plus | Medical, dental, therapy |
-| 4h | clover | 4H events, fair |
-| rootstock | seedling | Garden, orchard |
-| prompt | alarm clock | Reminders, milestone pings |
-| meetings | clipboard | KoC, Fairboard, any recurring meeting |
-| misc | (none) | Catch-all |
-
-`[MEAL]` and `[CHORE]` entries are not `:: category`-tagged lines — they're their own line types (see schema below) and don't route through this emoji map.
+- **Parser:** `parseChoreLine(line)` builds `allChores` from both locked shapes in `calendars.md`. `isZone` flag distinguishes weekly zone reference (no pills, `span=` present) from daily dishes (pills present, no `span=`).
+- **Fetch filter:** the live-fetch line filter must include `[CHORE]` alongside `[CAL`, `[BRIEF]`, `<!--`, `[MEAL]` — a line type never reaching the fetch filter never reaches the parser, regardless of parser correctness. This was the actual gap prior to v5.9; the doctrine and data were correct, the fetch allowlist was not.
+- **Fold order:** meal tile first, daily dishes tile stacks immediately below it, same cell.
+- **Zone banner placement:** a weekly zone-reference entry spans `date` to `span=`. The widget computes the Sunday that falls within that inclusive range (`choreZoneSunday()`) and renders the banner only on that date's cell — not necessarily the entry's start date, since the zone week doesn't always start on Sunday in practice.
+- **Dishes tile styling:** flag-tab left edge (`clip-path` notch), teal accent (`#2088a0`), sponge icon, pills render in source order (lead pill first, matching the bracket order already written in `calendars.md`).
+- **Zone banner styling:** bordered strip, no fill, house icon, auto-derived "X Crew" badge per zone pairing (first word of the pairing description, singularized, + "Crew"), pulled from the free-text reference title. A `Week X zones:` prefix is stripped before parsing pairs.
+- **Colorblind-safe:** meal, dishes, and zone tiles are differentiated by shape and icon, never by hue alone.
 
 ---
 
@@ -332,7 +300,7 @@ GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
 ### Recurring entry doctrine (locked)
 Only two CAL-RECUR entries permitted: Sunday Mass 08:00 and Daily Mass Wed 10:00. Everything else = individual [CAL] entries. CAL-RECUR for seasonal events is forbidden.
 
-### [CHORE] entry doctrine (data format locked 2026-07-06, widget parser support PENDING)
+### [CHORE] entry doctrine (data format locked 2026-07-06, widget parser SHIPPED v5.9)
 
 Two shapes, same line type:
 
@@ -341,14 +309,14 @@ Two shapes, same line type:
 [CHORE] YYYY-MM-DD ALL-DAY [PILLS] Title
 ```
 
-- **Weekly zone reference** (no pills): one entry per zone week, posted on the week's Sunday-to-Saturday span, naming the bathrooms/floors pairs and the fixed daily duties for the week. Reference text, not a task assignment to any one person that day.
+- **Weekly zone reference** (no pills): one entry per zone week, posted on the week's span, naming the bathrooms/floors pairs and the fixed daily duties for the week. Reference text, not a task assignment to any one person that day.
 - **Daily dishes entry** (pills required): one entry per day, carrying the pills for that day's lead, second, and table crew. Dishes is the only chore that rotates day to day, so it's the only one that needs a fresh line every day.
 
 **Source of truth for the rotation itself is `punch-list/chore-chart.md`** — fixed duties, dishes rotation, zone pairs, approved by Kalea. Punch List reads that chart and determines the day's or week's assignment; Foreman writes the actual `[CHORE]` line to `calendars.md`, same as every other calendar write — Foreman is the universal calendar sink (see `foreman.md`). `[CHORE]` entries are never written directly by any agent other than Foreman.
 
-**Render target:** folded into What's for Dinner, alongside the day's `[MEAL]` tile. No separate Chore Board screen.
+**Render target:** folded into What's for Dinner, alongside the day's `[MEAL]` tile. No separate Chore Board screen. See `[CHORE] Widget Render (v5.9, locked)` above for the shipped implementation.
 
-**Status: data format and doctrine are locked. The widget parser (`allChores` array, WFD fold-in render) has NOT been built.** Until that ships, `[CHORE]` lines are correct data sitting inert in the file — nothing on the Cockpit reflects them yet. Do not claim otherwise in any session summary.
+**Status: data format, doctrine, and widget parser are all locked and shipped as of v5.9 (2026-07-07).** `[CHORE]` lines now render on the Cockpit.
 
 **History note:** this line type was designed independently of, and briefly conflicted with, a same-day Dish Crew Doctrine in `chow-hall.md` that put crew info in `[MEAL]` `notes=` instead. `[CHORE]` is the design that stands; `chow-hall.md` and `punch-list/chore-chart.md` were corrected to match on discovery of the conflict.
 
@@ -372,7 +340,8 @@ PQs are future-session items — parked until conditions are right to address th
 | PQ-36 | Kalea altitude override — save per recipe, flag as user edit | Wave 6.7+ |
 | PQ-GUS | Sourdough starter feed tracker — timer-reset tap, not data entry. Cockpit read-only constraint applies. Design conversation needed. Colorblind-safe treatment required (not red-only). | Future brainstorm |
 | PQ-PHASE2 | sessionStorage timer persistence on Home reload | Phase 2 |
-| PQ-CHORE | Widget parser build: `allChores` array + WFD fold-in render for `[CHORE]` entries. Design pending — targeted for a dedicated Opus design session, then a Sonnet build session. Not started. | Next available design session |
+
+**PQ-CHORE — CLOSED v5.9 (2026-07-07).** Widget parser build: `allChores` array + WFD fold-in render for `[CHORE]` entries. Shipped — see Version History and `[CHORE] Widget Render (v5.9, locked)` above.
 
 ---
 
