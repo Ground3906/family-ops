@@ -2,7 +2,7 @@
 
 **Status:** Ledger agent is unbuilt. This file is a standalone placeholder until Ledger stands up. No agent definition, no automation — just doctrine + a running ledger that Al maintains on request. The interactive **Payroll** screen (React artifact, persistent storage) implements everything below; this file is its doctrine of record.
 
-**Last updated:** 2026-07-06
+**Last updated:** 2026-07-08
 
 ---
 
@@ -45,21 +45,22 @@ Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "A
 
 Commission is extra, on top of the fixed allowance — never a substitute for it. **Work is optional. No one is required to take a job.**
 
-### Rate Menu
+### Rate Menu (updated 2026-07-08)
 
 | Job | Rate | Notes |
 |---|---|---|
 | Coop deep-clean | $5 | |
-| Garden bed weeded | $3 | |
+| Garden bed weeded | $2 | |
 | Yard cleanup | $1 | |
-| Snow shovel | $2 | |
+| Take out diaper trash | $1 | |
+| Snow shovel | $1 | |
 | Wood chipping | $15/hr | Wyatt only |
 | Clean the car | $2 | |
 | Windows, per room | $1 | |
 | Kitchen drawers organized | $1 | |
-| Zone: Books & art table | $2 | |
-| Zone: Downstairs | $2 | |
-| Zone: Common room | $2 | |
+| Zone: Books & art table | $1 | |
+| Zone: Downstairs | $1 | |
+| Zone: Common room | $1 | |
 | Mud room reset | $2 | |
 | Flex / "Something else" | Set by Jill at log time | Off-menu job, custom amount |
 
