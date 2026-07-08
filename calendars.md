@@ -333,6 +333,7 @@ Last batch: 2026-07-07.
 [CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
+[CAL] 2026-07-08 11:30 [D] Video consultation :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-08 15:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=17:00
 [CAL] 2026-07-08 17:00 [D] WGU D281 Overview - cohort :: misc :: end=18:00
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: errands :: end=09:00 :: location="Westcliffe, CO"
