@@ -134,7 +134,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-06.
+Last batch: 2026-07-07.
 
 ---
 
@@ -243,8 +243,6 @@ Last batch: 2026-07-06.
 ---
 
 ### WHAT'S FOR DINNER - Meals and Chores
-<!-- [MEAL] entries: real line-type prefix, meal-type= only, never a :: meals category. -->
-<!-- [CHORE] entries: own line type. Sunday/week-open = zone reference, no pills. Daily = dishes entry, pills for that day's crew. Renders folded into What's for Dinner - no separate screen. -->
 
 [CHORE] 2026-07-06 ALL-DAY Week A zones: Bathrooms Wyatt+Cullen / Floors Molly+Emmitt / Fixed: Emmitt+Cullen unload dishwasher every morning, Rileigh trash daily, Rileigh sweep after dinner, Wyatt+Molly own laundry, Rileigh+Cullen+Emmitt fold family laundry on wash days, everyone room reset before bed :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [W][R][C][E] Dishes: Wyatt lead, Rileigh 2nd, Cullen+Emmitt table
@@ -383,7 +381,9 @@ Last batch: 2026-07-06.
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: tentative=true
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
 [CAL] 2026-07-21 13:00 [K] ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
+[CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
+[CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
 ---
@@ -391,7 +391,10 @@ Last batch: 2026-07-06.
 ### AUGUST 2026
 
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
+[CAL] 2026-08-06 13:30 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=14:30
+[CAL] 2026-08-10 ALL-DAY [K][D] Gus - evacuation :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
+[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
