@@ -50,6 +50,16 @@
       "notes": "No freezer draw. Leftovers only.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-07-06"
+    },
+    {
+      "date": "2026-07-07",
+      "meal": "Crockpot beef, bread, and carrots",
+      "protein": {"item": "Elk roast or beef roast", "source_id": "frz-elk-roast", "category": "game", "qty_used_lbs": 3},
+      "vegetable": {"item": "Carrots", "source": "pantry or grocery"},
+      "starch": {"item": "Bread", "source": "from-scratch or pantry"},
+      "notes": "Crockpot - start morning. Prenatal appt 14:00 - good day for a slow cooker meal.",
+      "confirmed_by": "Kalea",
+      "locked_at": "2026-07-06"
     }
   ],
   "shortfalls": [
@@ -62,6 +72,11 @@
       "date": "2026-06-25",
       "item": "Zucchini + boat filling ingredients",
       "reason": "Fresh produce dish, full grocery pull required - not in freezer/pantry"
+    },
+    {
+      "date": "2026-07-07",
+      "item": "Carrots, bread",
+      "reason": "Not confirmed in pantry or freezer tracking - verify on hand"
     }
   ]
 }
