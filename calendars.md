@@ -382,6 +382,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
