@@ -348,7 +348,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-07-08 15:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=17:00
 [CAL] 2026-07-08 17:00 [D] WGU D281 Overview - cohort :: misc :: end=18:00
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: errands :: end=09:00 :: location="Westcliffe, CO"
-[CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO"
+[CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed
 [CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO"
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17
@@ -379,6 +379,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
