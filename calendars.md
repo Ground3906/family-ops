@@ -360,9 +360,11 @@ Last batch: 2026-07-08.
 [CAL] 2026-07-19 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: tentative=true
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
+[CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-21 13:00 [K] ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
+[CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
@@ -370,12 +372,14 @@ Last batch: 2026-07-08.
 
 ### AUGUST 2026
 
+[CAL] 2026-08-03 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
 [CAL] 2026-08-06 13:30 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=14:30
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
