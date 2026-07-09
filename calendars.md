@@ -375,7 +375,8 @@ Last batch: 2026-07-09.
 
 [CAL] 2026-08-03 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
-[CAL] 2026-08-06 13:30 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=14:30
+[CAL] 2026-08-06 13:20 [D] Gastro appt :: appointments :: stripe=appt :: location="Woodman, Colorado Springs, CO"
+[CAL] 2026-08-06 13:30 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: flag=true :: notes="flag=conflict - Gastro appt same day 13:20 in Colorado Springs"
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
