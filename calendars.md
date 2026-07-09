@@ -117,8 +117,8 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Travel spans:** `travel=true` on any span where a person is physically away from home. Foreman asks "Are they traveling?" on all multi-day absence entries.
 - **No em-dashes in any calendar entry title or notes field. Hyphen (-) only.**
 - **Swim meets = ALL-DAY always.** Never assign a time to a swim meet entry.
-- **cancel=pending:** Event displays with strikethrough title and symbol. Awaiting Matt or Kalea confirmation. Both have equal authority to propose or confirm.
-- **cancel=confirmed:** Parser skips the entry entirely. Line stays in this file permanently as audit trail. Never delete a confirmed-cancel line.
+- **cancel=pending:** Event displays with strikethrough title and symbol on Cockpit. Line stays in file.
+- **cancel=confirmed:** Parser skips entry entirely - removed from Cockpit display. Line stays in file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
@@ -348,7 +348,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-07-08 17:00 [D] WGU D281 Overview - cohort :: misc :: end=18:00
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: errands :: end=09:00 :: location="Westcliffe, CO"
 [CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed
-[CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: cancel=confirmed
+[CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: cancel=pending
 [CAL] 2026-07-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17
