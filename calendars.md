@@ -265,6 +265,7 @@ Last batch: 2026-07-09.
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
 [MEAL] 2026-07-09 17:30 Cobb salad :: meal-type=dinner
+[MEAL] 2026-07-10 17:30 Spaghetti and meatballs :: meal-type=dinner
 
 ---
 
