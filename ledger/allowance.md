@@ -45,15 +45,15 @@ Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "A
 
 *Al updates this table by hand after every Commission Log entry, every Expenditures Log entry, and every monthly accrual — until Payroll widget or Ledger agent is live and doing it automatically. This is the current-truth balance; the "Outstanding" table above is the fixed starting point it was built from.*
 
-| Kid | Give | Save | Spend | As of |
-|---|---|---|---|---|
-| Wyatt | $2 | $0 | $0 tracked — $5 owed via bank, see note | 2026-07-09 |
-| Molly | $2 | $0 | $0 tracked — $11 owed via bank, see note | 2026-07-09 |
-| Rileigh | $2 | $2 | $1.00 | 2026-07-09 |
-| Cullen | $2 | $2 | $3.00 | 2026-07-09 |
-| Emmitt | $2 | $2 | $8 | 2026-07-09 |
+*Wyatt and Molly's Spend runs through their bank accounts, not a cash jar — a negative here means money owed against that account, not a jar shortfall. Pending Commission is stamped work sitting in the Commission Log below, not yet folded into Spend/Save/Give — it moves into those jars only when month-end Payout runs.*
 
-**Note — Wyatt & Molly Spend:** their Spend money pays out to their bank accounts, not held in this jar system, so the tracked figure stays $0 regardless. Their Walmart totals below ($5 and $11) are what they owe against their bank accounts — Al tracks the items and totals here so they know what they bought, but doesn't touch a jar balance for them. Flagged previously for a starting bank balance if you want fuller tracking — still open.
+| Kid | Give | Save | Spend | Pending Commission (unpaid) | As of |
+|---|---|---|---|---|---|
+| Wyatt | $2 | $0 | **-$5** (owed via bank) | $0 | 2026-07-09 |
+| Molly | $2 | $0 | **-$11** (owed via bank) | $0 | 2026-07-09 |
+| Rileigh | $2 | $2 | $1.00 | **$3.00** | 2026-07-09 |
+| Cullen | $2 | $2 | $3.00 | $0 | 2026-07-09 |
+| Emmitt | $2 | $2 | $8 | $0 | 2026-07-09 |
 
 ---
 
@@ -100,33 +100,35 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 
 ### Commission Log
 
-*Append-only, mirrors the `entries` data model from `payroll-widget.md` (kid, type job/deduct, label, rate, amount, date) so this manual log can port straight into Payroll once it's wired into the Cockpit. Stamped = cleared the Quality Gate. Unpaid entries accumulate here until month-end Payout is run by hand; once paid, mark Payout column with the month.*
+*Append-only, mirrors the `entries` data model from `payroll-widget.md` (kid, type job/deduct, label, rate, amount, date) so this manual log can port straight into Payroll once it's wired into the Cockpit. Stamped = cleared the Quality Gate. Sits here unpaid — feeding the "Pending Commission" column in Running Jar Balances above — until month-end Payout is run by hand; once paid, mark Payout column with the month and it drops out of Pending.*
 
 | Date | Kid | Job | Rate | Qty/Hrs | Amount | Stamped | Payout |
 |---|---|---|---|---|---|---|---|
 | 2026-07-09 | Rileigh | Car unload | — | 1 | $1.00 | Yes | Pending |
 | 2026-07-09 | Rileigh | Car cleanout | — | 1 | $2.00 | Yes | Pending |
 
+**Rileigh unpaid commission total: $3.00** — this is the source of the $3.00 in Pending Commission above. It isn't in her Spend/Save/Give balances yet; it moves there only when Payout runs for her.
+
 ---
 
-## Expenditures — Store Purchases (Spend Jar)
+## Expenditures — Store Purchases (Spend)
 
-*Tracks money kids actually spend so Spend balances stay accurate against real life. Entries are tagged by store and consolidated per kid per trip — total and item list, not itemized per purchase. Amounts round to the nearest dollar. Rileigh and Cullen's totals debit their Spend balance in Running Jar Balances immediately; Wyatt and Molly's totals are what they owe via bank (see note above) — tracked for the record, not decremented from a jar.*
+*Tracks money kids actually spend so Spend balances stay accurate against real life. Entries are tagged by store and consolidated per kid per trip — total and item list, not itemized per purchase. Amounts round to the nearest dollar.*
 
 | Date | Kid | Store | Items | Total (rounded) | Spend Balance After |
 |---|---|---|---|---|---|
-| 2026-07-09 | Molly | Walmart | Tic tacs, Dr Pepper, candy | $11 | $0 tracked — owed via bank |
-| 2026-07-09 | Wyatt | Walmart | Slim Jims, Celsius, Dr Pepper | $5 | $0 tracked — owed via bank |
+| 2026-07-09 | Molly | Walmart | Tic tacs, Dr Pepper, candy | $11 | **-$11** (owed via bank) |
+| 2026-07-09 | Wyatt | Walmart | Slim Jims, Celsius, Dr Pepper | $5 | **-$5** (owed via bank) |
 | 2026-07-09 | Rileigh | Walmart | Skittles, Tic Tacs | $9 | $1.00 |
 | 2026-07-09 | Cullen | Walmart | Handcuffs (toy) | $5 | $3.00 |
 
-**Total expenditures this trip: $30** (Molly $11 + Wyatt $5 + Rileigh $9 + Cullen $5), all Spend-jar money.
+**Total expenditures this trip: $30** (Molly $11 + Wyatt $5 + Rileigh $9 + Cullen $5) — all Spend money.
 
 **How this works:**
 - Al logs a row per kid per trip — store tag, item list, total rounded to the nearest dollar. Doesn't need to reconcile to the penny against individual items.
-- Rileigh and Cullen's totals come straight out of their tracked Spend balance in Running Jar Balances.
-- Wyatt and Molly's totals are recorded the same way for visibility (so they know what they bought) but represent money owed against their bank accounts, not a jar debit — flag to Jill if that should change.
-- If a purchase would take a tracked Spend balance (Rileigh/Cullen/Emmitt) negative, flag it to Jill rather than logging it.
+- Rileigh and Cullen's totals come straight out of their tracked cash Spend jar in Running Jar Balances.
+- Wyatt and Molly have no cash Spend jar — their Spend money lives in the bank, so a purchase shows as a **negative balance** (money owed against that account) rather than a jar debit. Still flagged: give Al a starting bank balance for either of them and this can track a real running total instead of resetting to $0/-purchase each time.
+- If a purchase would take Rileigh, Cullen, or Emmitt's tracked cash Spend jar negative, flag it to Jill rather than logging it — that rule doesn't apply to Wyatt/Molly since bank-based Spend is expected to run negative between deposits.
 
 ---
 
