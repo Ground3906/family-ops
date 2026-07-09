@@ -47,11 +47,13 @@ Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "A
 
 | Kid | Give | Save | Spend | As of |
 |---|---|---|---|---|
-| Wyatt | $2 | $0 | $0 | 2026-07-09 |
-| Molly | $2 | $0 | $0 | 2026-07-09 |
-| Rileigh | $2 | $2 | $10 | 2026-07-09 |
-| Cullen | $2 | $2 | $8 | 2026-07-09 |
+| Wyatt | $2 | $0 | $0 — see note | 2026-07-09 |
+| Molly | $2 | $0 | $0 — see note | 2026-07-09 |
+| Rileigh | $2 | $2 | $0.77 | 2026-07-09 |
+| Cullen | $2 | $2 | $3.00 | 2026-07-09 |
 | Emmitt | $2 | $2 | $8 | 2026-07-09 |
+
+**Note — Wyatt & Molly Spend, flagged for Jill:** their tracked Spend balance shows $0 because their Spend money pays out to their bank accounts, not held in this jar system — the $0 is "nothing pending accrual here," not "no money." Their purchases below (Molly $10.72, Wyatt $5.34) are logged for the record but not decremented from the $0 tracked figure, since that would show a false negative. If you want their real bank-held Spend balance tracked here too so the ledger stays fully accurate, give me a starting bank balance for each and I'll fold it in.
 
 ---
 
@@ -102,22 +104,32 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 
 | Date | Kid | Job | Rate | Qty/Hrs | Amount | Stamped | Payout |
 |---|---|---|---|---|---|---|---|
-| — | — | — | — | — | — | — | Seed row — no entries logged yet |
+| 2026-07-09 | Rileigh | Car unload | — | 1 | $1.00 | Yes | Pending |
+| 2026-07-09 | Rileigh | Car cleanout | — | 1 | $2.00 | Yes | Pending |
 
 ---
 
 ## Expenditures — Store Purchases (Spend Jar)
 
-*New. Tracks money kids actually spend so Spend jar balances stay accurate against real life, not just accrual math. Each entry debits the kid's Spend balance in the Running Jar Balances table above immediately on logging — this is real-time, not deferred to month-end like behavior deductions.*
+*Tracks money kids actually spend so Spend jar balances stay accurate against real life, not just accrual math. Each entry debits the kid's Spend balance in the Running Jar Balances table above immediately on logging — this is real-time, not deferred to month-end like behavior deductions.*
 
 | Date | Kid | Item | Amount | Spend Balance After | Notes |
 |---|---|---|---|---|---|
-| — | — | — | — | — | Seed row — no purchases logged yet |
+| 2026-07-09 | Molly | Store purchase | $2.58 | — | bank-tracked, see note above |
+| 2026-07-09 | Molly | Store purchase | $3.48 | — | bank-tracked, see note above |
+| 2026-07-09 | Molly | Store purchase | $4.66 | — | bank-tracked, see note above |
+| 2026-07-09 | Wyatt | Store purchase | $1.97 | — | bank-tracked, see note above |
+| 2026-07-09 | Wyatt | Store purchase | $1.00 | — | bank-tracked, see note above |
+| 2026-07-09 | Wyatt | Store purchase | $2.37 | — | bank-tracked, see note above |
+| 2026-07-09 | Rileigh | Store purchase | $4.66 | $6.11 | |
+| 2026-07-09 | Rileigh | Store purchase | $4.57 | $0.77 | |
+| 2026-07-09 | Cullen | Store purchase | $5.00 | $3.00 | |
 
 **How this works:**
 - Al logs a row here the moment a purchase is reported, and updates that kid's Spend figure in Running Jar Balances in the same edit.
 - This debits from whatever Spend balance already exists (fixed allowance + commission payouts to date) — it does not touch Give or Save.
 - If a purchase would take Spend negative, flag it to Jill rather than logging it — don't let a kid's tracked balance go below $0 without her call.
+- Wyatt and Molly's rows above are recorded for history but not decremented from a jar balance, since their Spend money lives in the bank — see the flag under Running Jar Balances.
 
 ---
 
