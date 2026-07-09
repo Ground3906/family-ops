@@ -47,13 +47,13 @@ Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "A
 
 | Kid | Give | Save | Spend | As of |
 |---|---|---|---|---|
-| Wyatt | $2 | $0 | $0 — see note | 2026-07-09 |
-| Molly | $2 | $0 | $0 — see note | 2026-07-09 |
-| Rileigh | $2 | $2 | $0.77 | 2026-07-09 |
+| Wyatt | $2 | $0 | $0 tracked — $5 owed via bank, see note | 2026-07-09 |
+| Molly | $2 | $0 | $0 tracked — $11 owed via bank, see note | 2026-07-09 |
+| Rileigh | $2 | $2 | $1.00 | 2026-07-09 |
 | Cullen | $2 | $2 | $3.00 | 2026-07-09 |
 | Emmitt | $2 | $2 | $8 | 2026-07-09 |
 
-**Note — Wyatt & Molly Spend, flagged for Jill:** their tracked Spend balance shows $0 because their Spend money pays out to their bank accounts, not held in this jar system — the $0 is "nothing pending accrual here," not "no money." Their purchases below (Molly $10.72, Wyatt $5.34) are logged for the record but not decremented from the $0 tracked figure, since that would show a false negative. If you want their real bank-held Spend balance tracked here too so the ledger stays fully accurate, give me a starting bank balance for each and I'll fold it in.
+**Note — Wyatt & Molly Spend:** their Spend money pays out to their bank accounts, not held in this jar system, so the tracked figure stays $0 regardless. Their Walmart totals below ($5 and $11) are what they owe against their bank accounts — Al tracks the items and totals here so they know what they bought, but doesn't touch a jar balance for them. Flagged previously for a starting bank balance if you want fuller tracking — still open.
 
 ---
 
@@ -111,25 +111,22 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 
 ## Expenditures — Store Purchases (Spend Jar)
 
-*Tracks money kids actually spend so Spend jar balances stay accurate against real life, not just accrual math. Each entry debits the kid's Spend balance in the Running Jar Balances table above immediately on logging — this is real-time, not deferred to month-end like behavior deductions.*
+*Tracks money kids actually spend so Spend balances stay accurate against real life. Entries are tagged by store and consolidated per kid per trip — total and item list, not itemized per purchase. Amounts round to the nearest dollar. Rileigh and Cullen's totals debit their Spend balance in Running Jar Balances immediately; Wyatt and Molly's totals are what they owe via bank (see note above) — tracked for the record, not decremented from a jar.*
 
-| Date | Kid | Item | Amount | Spend Balance After | Notes |
+| Date | Kid | Store | Items | Total (rounded) | Spend Balance After |
 |---|---|---|---|---|---|
-| 2026-07-09 | Molly | Store purchase | $2.58 | — | bank-tracked, see note above |
-| 2026-07-09 | Molly | Store purchase | $3.48 | — | bank-tracked, see note above |
-| 2026-07-09 | Molly | Store purchase | $4.66 | — | bank-tracked, see note above |
-| 2026-07-09 | Wyatt | Store purchase | $1.97 | — | bank-tracked, see note above |
-| 2026-07-09 | Wyatt | Store purchase | $1.00 | — | bank-tracked, see note above |
-| 2026-07-09 | Wyatt | Store purchase | $2.37 | — | bank-tracked, see note above |
-| 2026-07-09 | Rileigh | Store purchase | $4.66 | $6.11 | |
-| 2026-07-09 | Rileigh | Store purchase | $4.57 | $0.77 | |
-| 2026-07-09 | Cullen | Store purchase | $5.00 | $3.00 | |
+| 2026-07-09 | Molly | Walmart | Tic tacs, Dr Pepper, candy | $11 | $0 tracked — owed via bank |
+| 2026-07-09 | Wyatt | Walmart | Slim Jims, Celsius, Dr Pepper | $5 | $0 tracked — owed via bank |
+| 2026-07-09 | Rileigh | Walmart | Skittles, Tic Tacs | $9 | $1.00 |
+| 2026-07-09 | Cullen | Walmart | Handcuffs (toy) | $5 | $3.00 |
+
+**Total expenditures this trip: $30** (Molly $11 + Wyatt $5 + Rileigh $9 + Cullen $5), all Spend-jar money.
 
 **How this works:**
-- Al logs a row here the moment a purchase is reported, and updates that kid's Spend figure in Running Jar Balances in the same edit.
-- This debits from whatever Spend balance already exists (fixed allowance + commission payouts to date) — it does not touch Give or Save.
-- If a purchase would take Spend negative, flag it to Jill rather than logging it — don't let a kid's tracked balance go below $0 without her call.
-- Wyatt and Molly's rows above are recorded for history but not decremented from a jar balance, since their Spend money lives in the bank — see the flag under Running Jar Balances.
+- Al logs a row per kid per trip — store tag, item list, total rounded to the nearest dollar. Doesn't need to reconcile to the penny against individual items.
+- Rileigh and Cullen's totals come straight out of their tracked Spend balance in Running Jar Balances.
+- Wyatt and Molly's totals are recorded the same way for visibility (so they know what they bought) but represent money owed against their bank accounts, not a jar debit — flag to Jill if that should change.
+- If a purchase would take a tracked Spend balance (Rileigh/Cullen/Emmitt) negative, flag it to Jill rather than logging it.
 
 ---
 
