@@ -2,7 +2,7 @@
 
 **Status:** Ledger agent is unbuilt. This file is a standalone placeholder until Ledger stands up. No agent definition, no automation — just doctrine + a running ledger that Al maintains on request. The interactive **Payroll** screen (React artifact, persistent storage) implements everything below; this file is its doctrine of record.
 
-**Last updated:** 2026-07-08
+**Last updated:** 2026-07-09
 
 ---
 
@@ -37,7 +37,21 @@ Rates reset automatically on birthday — update this table when a kid ages up. 
 | Cullen | $2 | $2 | $8 |
 | Emmitt | $2 | $2 | $8 |
 
-Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "Add this month" action.
+Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "Add this month" action. **Superseded going forward by Running Jar Balances below** — this table stays as the historical seed point.
+
+---
+
+## Running Jar Balances (live)
+
+*Al updates this table by hand after every Commission Log entry, every Expenditures Log entry, and every monthly accrual — until Payroll widget or Ledger agent is live and doing it automatically. This is the current-truth balance; the "Outstanding" table above is the fixed starting point it was built from.*
+
+| Kid | Give | Save | Spend | As of |
+|---|---|---|---|---|
+| Wyatt | $2 | $0 | $0 | 2026-07-09 |
+| Molly | $2 | $0 | $0 | 2026-07-09 |
+| Rileigh | $2 | $2 | $10 | 2026-07-09 |
+| Cullen | $2 | $2 | $8 | 2026-07-09 |
+| Emmitt | $2 | $2 | $8 | 2026-07-09 |
 
 ---
 
@@ -82,6 +96,29 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 - Split amounts add into the same jar totals the fixed allowance feeds. One set of totals per kid, two income streams.
 - Guarded so a given kid's month can't be paid out twice; "Run all" processes every kid with a pending balance in one action.
 
+### Commission Log
+
+*Append-only, mirrors the `entries` data model from `payroll-widget.md` (kid, type job/deduct, label, rate, amount, date) so this manual log can port straight into Payroll once it's wired into the Cockpit. Stamped = cleared the Quality Gate. Unpaid entries accumulate here until month-end Payout is run by hand; once paid, mark Payout column with the month.*
+
+| Date | Kid | Job | Rate | Qty/Hrs | Amount | Stamped | Payout |
+|---|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — | Seed row — no entries logged yet |
+
+---
+
+## Expenditures — Store Purchases (Spend Jar)
+
+*New. Tracks money kids actually spend so Spend jar balances stay accurate against real life, not just accrual math. Each entry debits the kid's Spend balance in the Running Jar Balances table above immediately on logging — this is real-time, not deferred to month-end like behavior deductions.*
+
+| Date | Kid | Item | Amount | Spend Balance After | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | Seed row — no purchases logged yet |
+
+**How this works:**
+- Al logs a row here the moment a purchase is reported, and updates that kid's Spend figure in Running Jar Balances in the same edit.
+- This debits from whatever Spend balance already exists (fixed allowance + commission payouts to date) — it does not touch Give or Save.
+- If a purchase would take Spend negative, flag it to Jill rather than logging it — don't let a kid's tracked balance go below $0 without her call.
+
 ---
 
 ## Notes
@@ -89,3 +126,4 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 - Update the rate table when a kid has a birthday — commission split ratios move with it automatically since they're derived from the same numbers.
 - Update the Rate Menu here first if a job is added, removed, or repriced; Payroll's menu should match this table.
 - If Ledger stands up as a full agent later, this file becomes its seed data — don't rebuild from scratch.
+- Commission Log and Expenditures Log are both manual/append-only until Payroll widget or Ledger agent goes live — Al maintains both on request, same pattern as everything else in this file.
