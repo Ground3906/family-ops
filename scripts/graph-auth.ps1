@@ -1,7 +1,8 @@
 # graph-auth.ps1 - Browser-based OAuth for Microsoft Graph
 # Device code flow is blocked for personal Microsoft accounts in Default Directory tenants.
 # This script opens a browser on the local machine, captures the callback, saves the token.
-# Run ONCE on a machine with a browser (Precision). Copy token file to ThinkPad after.
+# Run ONCE on a machine with a browser (Precision or ThinkPad with active session).
+# Copy token file to ThinkPad after if run on Precision.
 #
 # Usage:
 #   .\graph-auth.ps1                            # saves to graph-token.json (Matt)
@@ -11,7 +12,7 @@ param([string]$Out = "graph-token.json")
 
 $ClientId    = "eec121fa-f054-4214-af52-aa83371128ac"
 $RedirectUri = "http://localhost:8888/"
-$Scope       = "Calendars.ReadWrite User.Read offline_access"
+$Scope       = "Calendars.ReadWrite Mail.Send User.Read offline_access"
 $AuthUrl     = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize"
 $TokenUrl    = "https://login.microsoftonline.com/common/oauth2/v2.0/token"
 $TokenFile   = Join-Path $PSScriptRoot $Out
@@ -92,6 +93,7 @@ Write-Host "=== AUTH COMPLETE ==="
 Write-Host "Token saved: $TokenFile"
 Write-Host ""
 if ($Out -eq "graph-token.json") {
+    Write-Host "Token includes Mail.Send scope. inbox-watcher.ps1 email alerts are now enabled."
     Write-Host "Run graph-test-push.ps1 to push the test event."
 } else {
     Write-Host "Copy $TokenFile to the ThinkPad scripts/ folder."
