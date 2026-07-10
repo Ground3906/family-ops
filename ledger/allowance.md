@@ -1,6 +1,6 @@
 # Allowance & Payroll — Ledger
 
-**Status:** Ledger agent is unbuilt. This file is a standalone placeholder until Ledger stands up. No agent definition, no automation — just doctrine + a running ledger that Al maintains on request. The interactive **Payroll** screen (React artifact, persistent storage) implements everything below; this file is its doctrine of record.
+**Status:** Ledger agent is unbuilt. This file is a standalone placeholder until Ledger stands up. No agent definition, no automation — just doctrine + a running ledger that Al maintains on request. The interactive **Payroll** screen (React artifact, persistent storage) implements everything below; this file is its doctrine of record. Live day-to-day tracking (color-coded, per-kid tabs, rolling Give/Save/Spend balances) now lives in `allowance-ledger.xlsx` — this file stays the doctrine layer the two are kept in sync against.
 
 **Last updated:** 2026-07-09
 
@@ -10,7 +10,7 @@
 
 - **Amount:** Age in dollars per month. A kid's monthly allowance = their current age.
 - **Split:** Dave Ramsey three-jar method — Give / Save / Spend. Ratios below are exact to each kid's established rate, not a rounded universal percentage.
-- **Cadence:** Monthly. Accrual is a manual action in Payroll ("Add this month"), guarded so it can't fire twice in the same month.
+- **Cadence:** Monthly, **posts at month's end, not the beginning.** Accrual is a manual action in Payroll ("Add this month"), guarded so it can't fire twice in the same month.
 - **Payment method:**
   - **Wyatt & Molly** — Save and Spend still pay out directly to their bank accounts each month, same as always. **The Payroll tracker now also records Save/Spend for them** (previously Give-only) so their on-screen totals stay accurate once commission money — which does split three ways for them — lands in the same jars.
   - **Rileigh, Cullen, Emmitt** — all three jars cash-tracked, no bank accounts yet.
@@ -27,7 +27,7 @@
 
 Rates reset automatically on birthday — update this table when a kid ages up. The same give/save/spend numbers double as each kid's commission split ratio (see below) — one rate table, two jobs.
 
-### Outstanding as of 2026-07-04 (seed balance in Payroll)
+### Outstanding as of 2026-07-04 (seed balance)
 
 | Kid | Give | Save | Spend |
 |---|---|---|---|
@@ -37,23 +37,21 @@ Rates reset automatically on birthday — update this table when a kid ages up. 
 | Cullen | $2 | $2 | $8 |
 | Emmitt | $2 | $2 | $8 |
 
-Reflects May + June owed as of 2026-07-04. July onward runs through Payroll's "Add this month" action. **Superseded going forward by Running Jar Balances below** — this table stays as the historical seed point.
+Reflects May + June owed as of 2026-07-04. Historical seed point only — superseded by Running Jar Balances below.
 
 ---
 
-## Running Jar Balances (live)
+## Running Jar Balances (live, rounded to nearest dollar)
 
-*Al updates this table by hand after every Commission Log entry, every Expenditures Log entry, and every monthly accrual — until Payroll widget or Ledger agent is live and doing it automatically. This is the current-truth balance; the "Outstanding" table above is the fixed starting point it was built from.*
+*Mirrors the rolling Give/Save/Spend balances in `allowance-ledger.xlsx`. Wyatt and Molly's Save/Spend are real bank-jar totals now (deposits accumulate monthly, purchases and commission shares move against them) — not a "not tracked" placeholder anymore.*
 
-*Wyatt and Molly's Spend runs through their bank accounts, not a cash jar — a negative here means money owed against that account, not a jar shortfall. Pending Commission is stamped work sitting in the Commission Log below, not yet folded into Spend/Save/Give — it moves into those jars only when month-end Payout runs.*
-
-| Kid | Give | Save | Spend | Pending Commission (unpaid) | As of |
+| Kid | Give | Save | Spend | Total | As of |
 |---|---|---|---|---|---|
-| Wyatt | $2 | $0 | **-$5** (owed via bank) | $0 | 2026-07-09 |
-| Molly | $2 | $0 | **-$11** (owed via bank) | $0 | 2026-07-09 |
-| Rileigh | $2 | $2 | $1.00 | **$3.00** | 2026-07-09 |
-| Cullen | $2 | $2 | $3.00 | $0 | 2026-07-09 |
-| Emmitt | $2 | $2 | $8 | $0 | 2026-07-09 |
+| Wyatt | $3 | $9 | $25 | $37 | 2026-07-09 |
+| Molly | $3 | $6 | **-$3** | $6 | 2026-07-09 |
+| Rileigh | $4 | $4 | $9 | $16 | 2026-07-09 |
+| Cullen | $3 | $3 | $6 | $12 | 2026-07-09 |
+| Emmitt | $3 | $3 | $11 | $17 | 2026-07-09 |
 
 ---
 
@@ -78,6 +76,8 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 | Zone: Downstairs | $1 | |
 | Zone: Common room | $1 | |
 | Mud room reset | $2 | |
+| Unload dishes | $1 | |
+| Unload car | $1 | |
 | Flex / "Something else" | Set by Jill at log time | Off-menu job, custom amount |
 
 ### Quality Gate (locked)
@@ -100,35 +100,40 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 
 ### Commission Log
 
-*Append-only, mirrors the `entries` data model from `payroll-widget.md` (kid, type job/deduct, label, rate, amount, date) so this manual log can port straight into Payroll once it's wired into the Cockpit. Stamped = cleared the Quality Gate. Sits here unpaid — feeding the "Pending Commission" column in Running Jar Balances above — until month-end Payout is run by hand; once paid, mark Payout column with the month and it drops out of Pending.*
+*Append-only, mirrors the `entries` data model from `payroll-widget.md` (kid, type job/deduct, label, rate, amount, date). Stamped = cleared the Quality Gate. Sits unpaid until month-end Payout is run by hand; once paid, mark Payout column with the month.*
 
-| Date | Kid | Job | Rate | Qty/Hrs | Amount | Stamped | Payout |
-|---|---|---|---|---|---|---|---|
-| 2026-07-09 | Rileigh | Car unload | — | 1 | $1.00 | Yes | Pending |
-| 2026-07-09 | Rileigh | Car cleanout | — | 1 | $2.00 | Yes | Pending |
+| Date | Kid | Job | Amount | Stamped | Payout |
+|---|---|---|---|---|---|
+| 2026-07-09 | Rileigh | Car unload | $1.00 | Yes | Pending |
+| 2026-07-09 | Rileigh | Car cleanout | $2.00 | Yes | Pending |
+| 2026-07-09 | Rileigh | Unload dishes | $1.00 | Yes | Pending |
+| 2026-07-09 | Molly | Unload car | $1.00 | Yes | Pending |
+| 2026-07-09 | Cullen | Deduction — attitude | **-$1.00** | — | Pending |
+| 2026-07-09 | Emmitt | Deduction — attitude | **-$1.00** | — | Pending |
 
-**Rileigh unpaid commission total: $3.00** — this is the source of the $3.00 in Pending Commission above. It isn't in her Spend/Save/Give balances yet; it moves there only when Payout runs for her.
+**Unpaid commission totals this month:** Rileigh $4.00, Molly $1.00, Cullen -$1.00, Emmitt -$1.00. None of this is in Spend/Save/Give balances yet — it moves there only when Payout runs.
 
 ---
 
 ## Expenditures — Store Purchases (Spend)
 
-*Tracks money kids actually spend so Spend balances stay accurate against real life. Entries are tagged by store and consolidated per kid per trip — total and item list, not itemized per purchase. Amounts round to the nearest dollar.*
+*Tracks money kids actually spend so Spend balances stay accurate against real life. Entries are tagged by store and consolidated per kid per trip — total and item list, not itemized per purchase. Amounts round to the nearest dollar. Comes out of Spend only, unless noted otherwise.*
 
-| Date | Kid | Store | Items | Total (rounded) | Spend Balance After |
-|---|---|---|---|---|---|
-| 2026-07-09 | Molly | Walmart | Tic tacs, Dr Pepper, candy | $11 | **-$11** (owed via bank) |
-| 2026-07-09 | Wyatt | Walmart | Slim Jims, Celsius, Dr Pepper | $5 | **-$5** (owed via bank) |
-| 2026-07-09 | Rileigh | Walmart | Skittles, Tic Tacs | $9 | $1.00 |
-| 2026-07-09 | Cullen | Walmart | Handcuffs (toy) | $5 | $3.00 |
+| Date | Kid | Store | Items | Total (rounded) |
+|---|---|---|---|---|
+| 2026-07-09 | Molly | Walmart | Tic tacs, Dr Pepper, candy | $11 |
+| 2026-07-09 | Molly | Amazon | Dumpling (plush) | $14 |
+| 2026-07-09 | Wyatt | Walmart | Slim Jims, Celsius, Dr Pepper | $5 |
+| 2026-07-09 | Rileigh | Walmart | Skittles, Tic Tacs | $9 |
+| 2026-07-09 | Cullen | Walmart | Handcuffs (toy) | $5 |
 
-**Total expenditures this trip: $30** (Molly $11 + Wyatt $5 + Rileigh $9 + Cullen $5) — all Spend money.
+**Total expenditures logged: $44** — all Spend money.
 
 **How this works:**
-- Al logs a row per kid per trip — store tag, item list, total rounded to the nearest dollar. Doesn't need to reconcile to the penny against individual items.
-- Rileigh and Cullen's totals come straight out of their tracked cash Spend jar in Running Jar Balances.
-- Wyatt and Molly have no cash Spend jar — their Spend money lives in the bank, so a purchase shows as a **negative balance** (money owed against that account) rather than a jar debit. Still flagged: give Al a starting bank balance for either of them and this can track a real running total instead of resetting to $0/-purchase each time.
-- If a purchase would take Rileigh, Cullen, or Emmitt's tracked cash Spend jar negative, flag it to Jill rather than logging it — that rule doesn't apply to Wyatt/Molly since bank-based Spend is expected to run negative between deposits.
+- Al logs a row per kid per trip/order — store tag, item list, total rounded to the nearest dollar. Doesn't need to reconcile to the penny against individual items.
+- Comes out of Spend only, unless Jill says otherwise for a specific purchase.
+- Wyatt and Molly's Spend is a real running bank-jar total now (see Running Jar Balances) — a purchase can and does take it negative, same as the cash-tracked kids. Molly's two July purchases ($11 + $14) put her Spend at -$3.
+- If a purchase would take any kid's Spend balance negative, that's expected and gets logged as-is — flag to Jill only if it looks like a mistake, not because it's negative.
 
 ---
 
@@ -138,3 +143,4 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 - Update the Rate Menu here first if a job is added, removed, or repriced; Payroll's menu should match this table.
 - If Ledger stands up as a full agent later, this file becomes its seed data — don't rebuild from scratch.
 - Commission Log and Expenditures Log are both manual/append-only until Payroll widget or Ledger agent goes live — Al maintains both on request, same pattern as everything else in this file.
+- `allowance-ledger.xlsx` is now the live day-to-day tracker (color-coded by kid, five individual kid tabs, rolling Give/Save/Spend balances). Al keeps this file's tables in sync with it after each xlsx update.
