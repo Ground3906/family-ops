@@ -125,6 +125,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
 - **[CHORE] dish/table entries: use `chore-type=dishes` or `chore-type=table` opt. Two lines per day: one for dishes crew (lead + 2nd), one for table crew. Pills only - no prose description.**
+- **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section - it will double-render alongside the block entry for that date.**
 
 ---
 
@@ -380,7 +381,6 @@ Last batch: 2026-07-09.
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
-[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
