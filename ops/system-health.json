@@ -1,0 +1,12 @@
+{
+  "last_updated": null,
+  "note": "Written by watchdog.ps1 on each run (08:00, 14:00, 20:00). Pushed to repo Sundays 06:05 by WeeklyPush. Al reads this at session open for the weekly synthesis.",
+  "checks": {
+    "inbox_watcher": { "status": "unknown", "age_hours": null },
+    "graph_sync":    { "status": "unknown", "age_hours": null },
+    "pull_job":      { "status": "unknown", "age_hours": null },
+    "night_watch":   { "status": "unknown", "age_hours": null }
+  },
+  "disk_free_gb": null,
+  "total_alerts": 0
+}
