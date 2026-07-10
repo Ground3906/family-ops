@@ -1,8 +1,9 @@
-# Bayer Family Operations — Charter v2.10
+# Bayer Family Operations — Charter v2.11
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-07-07 — v2.10: OneDrive Archive Session 2 COMPLETE. Filing Cabinet and Inbox created in Matt's OneDrive. Shared to kalea.bayer.co@outlook.com (Can edit; Kalea accepted). ThinkPad OneDrive client configured: Filing Cabinet set to Always keep on this device. Confirmed local path: `C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet`. Smoke test passed: both Matt and Kalea dropped test files from Android; both landed in Inbox as fully pinned local copies (Attributes: Archive + ReparsePoint + Pinned). Test files cleaned up. OneDrive 1TB per account confirmed (not pooled). Session 3 is next: PowerShell receipt watcher on ThinkPad.
+**Last updated:** 2026-07-09 — v2.11: OneDrive Session 3 COMPLETE. Inbox watcher, watchdog, and setup scripts built and committed to repo. backup-and-recovery.md doctrine added to docs/. Cockpit gate C (ThinkPad Ubuntu Server conversion) struck: ThinkPad stays Windows permanently. External Archive Drive (2TB SSD) designated as quarterly cold backup target for bare-metal ThinkPad image. Storage Tiers updated. archive/ directory created in repo.
+**Prior:** 2026-07-07 — v2.10: OneDrive Archive Session 2 COMPLETE. Filing Cabinet and Inbox created in Matt's OneDrive. Shared to kalea.bayer.co@outlook.com (Can edit; Kalea accepted). ThinkPad OneDrive client configured: Filing Cabinet set to Always keep on this device. Confirmed local path: `C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet`. Smoke test passed: both Matt and Kalea dropped test files from Android; both landed in Inbox as fully pinned local copies (Attributes: Archive + ReparsePoint + Pinned). Test files cleaned up. OneDrive 1TB per account confirmed (not pooled). Session 3 is next: PowerShell receipt watcher on ThinkPad.
 **Prior:** 2026-07-03 — v2.9: ThinkPad drive spec confirmed via pre-flight. Charter "2TB SSD" designation was incorrect — verified hardware is Samsung MZVLW512HMJP 512GB NVMe SSD (475.57 GB usable, 226.34 GB free as of 2026-07-03). No spare 2TB exists; OneDrive transport (M365 Family) is the redundancy layer. Storage Tiers and Technical Environment corrected.
 **Prior:** 2026-06-27 — v2.8: Outlook Push Build 2.0 COMPLETE. Dual calendar push live: graph-sync.ps1 Kalea sync block pushes all 537 events to Kalea-owned calendar; category tile colors render natively on her account. calendars.md BMP-safe emoji cleanup complete: 28x U+1F35E (bread loaf) replaced with ★ (U+2605 black star). .gitignore graph-sync runtime block live: 7 files covered (both token files, both state files, revert log, heartbeat, error log). OneDrive archive gap formally identified: transport architecture designed in charter, nothing implemented. Four-session build plan locked: Session 1 design lock (Opus) — folder structure, inbox zone, queue zone, watcher trigger rules; Session 2 setup build (Sonnet) — shared OneDrive folder creation, Kalea share, ThinkPad sync to 512GB NVMe SSD, smoke test; Session 3 receipt watcher (Sonnet) — PowerShell watcher on ThinkPad, heartbeat-wrapped, deterministic plumbing only; Session 4 doctrine (Sonnet) — charter update + archive-workflow.md in repo.
 **Prior:** 2026-06-24 — v2.7: Mobile Wave COMPLETE. `graph-sync.ps1` live on ThinkPad, `BayerFamilyOps-GraphSync` scheduled task running every 3 min as SYSTEM. 537 events in Bayer Family Ops calendar. Shared read-only to `kalea.bayer.co@outlook.com`. 12 Outlook category colors defined on both accounts. `isReminderOn = $false` locked in `Build-GraphBody` — reminders suppressed permanently. `graph-auth.ps1` carries `-Out` param for multi-account auth; Kalea token at `scripts/graph-token-kalea.json` (gitignored, ThinkPad only). Two carry-forwards to Outlook Push Build 2.0: (1) dual calendar push — push events to Kalea-owned calendar so tile colors render without click; (2) emoji cleanup — replace `??` placeholders in calendars.md with BMP-safe emoji. Outlook shared calendar tile color limitation confirmed: viewer must OWN the calendar for tile colors to render in Outlook Web and mobile — read-only shares suppress tile color regardless of category definitions on viewer's account. Dual calendar is the locked architectural answer.
@@ -70,11 +71,11 @@ Three tiers, each holding one kind of thing. This is the household-specific appl
 
 - **Project (PK)** — doctrine only: Charter, agent definitions, guides. Starved on purpose; never grows — every loaded token shrinks the session's usage window, so starvation is also the Pro-plan survival strategy. **Binaries never.** Data files, event logs, and widget source are repo-only; any still in PK exit as soon as the GitHub MCP read path is proven live (verify at the Purge Wave).
 - **Repo (GitHub `Ground3906/family-ops`)** — structured data + code. Text only, no binaries. Stays lean via the layered-data tally/archive split. The source of truth.
-- **Archive (ThinkPad + 512GB NVMe SSD)** — binaries: repair-order PDFs, insurance docs, scanned recipe cards, whiteboard photos. Grows freely; OneDrive transport (M365 Family) provides cloud-side redundancy. No separate local backup drive. Confirmed local sync path: `C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet` (Always keep on this device; verified 2026-07-07).
+- **Archive (ThinkPad + 512GB NVMe SSD)** — binaries: repair-order PDFs, insurance docs, scanned recipe cards, whiteboard photos. Grows freely; OneDrive transport (M365 Family) provides cloud-side redundancy. Cold backup: quarterly bare-metal image to External Archive Drive (2TB SSD), physically disconnected between runs — see `docs/backup-and-recovery.md`. Confirmed local sync path: `C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet` (Always keep on this device; verified 2026-07-07).
 
 **Transport — OneDrive (supersedes the README "retired" note).** M365 Family. One shared folder; Matt and Kalea drop binaries from any device; it self-syncs to the ThinkPad archive. The repo stays the source of truth — OneDrive only ever holds binaries the repo should never carry. No contradiction with the README; reconciled there. Storage: 1TB per account, not pooled; Microsoft's own alerts handle cloud-side usage.
 
-**OneDrive archive build plan.** Four sessions: (1) design lock — COMPLETE 2026-06-27; (2) setup build — COMPLETE 2026-07-07: Filing Cabinet + Inbox created, shared to Kalea (Can edit), ThinkPad sync configured and smoke-tested; (3) receipt watcher — PowerShell automation on ThinkPad, heartbeat-wrapped, deterministic plumbing only, no AI; (4) doctrine — archive-workflow.md in repo, charter updated with actual paths. Session 3 is next.
+**OneDrive archive build plan.** Four sessions: (1) design lock — COMPLETE 2026-06-27; (2) setup build — COMPLETE 2026-07-07: Filing Cabinet + Inbox created, shared to Kalea (Can edit), ThinkPad sync configured and smoke-tested; (3) receipt watcher — COMPLETE 2026-07-09: inbox-watcher.ps1, watchdog.ps1, setup-watcher-tasks.ps1 built and committed; (4) doctrine — COMPLETE 2026-07-09: backup-and-recovery.md added, charter updated.
 
 **Extract-then-file (Profile rule, applied):** a document is read once on intake — facts pulled to the lean log, the original filed to the archive. Agents work from the extract; originals are pulled only on deliberate need (warranty, resale, dispute).
 
@@ -83,6 +84,7 @@ Three tiers, each holding one kind of thing. This is the household-specific appl
 - `feed-log.jsonl` — one feed line item per line: `date, sku, item, qty, size, price_each, total, saved, payment, station, location, station_ref, notes`.
 - `income-log.jsonl` — one farm-income event per line: `date, type, buyer, qty, rate, total, notes`.
 - `maintenance-log.jsonl` — one service event per line (Punch List; established 2026-06-08 to stop overwrite data loss in `vehicles.json`).
+- `archive/receipts-log.jsonl` — one receipt per line: `ts, filename, size_bytes, file_type, source_path, dest_path, extracted_facts`.
 
 ---
 
@@ -267,7 +269,7 @@ The Cockpit is the Interactive layer's wall display — read-only, no keyboard o
 
 B. Stockyard durability fix — open
 
-C. ThinkPad headless conversion — open (Ubuntu Server target)
+C. ThinkPad headless conversion — STRUCK 2026-07-09. ThinkPad stays Windows permanently. Ubuntu target retired; OneDrive has no first-party Linux client, machine runs stably headless on Windows.
 
 D. Kalea usability — Matt's call
 
@@ -333,6 +335,7 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 **Technical environment:**
 - Primary machine: Dell Precision 5690, user `strayhawk`, machine `mbay`, Win11 Pro — repo at `C:\dev\family-ops`
 - ThinkPad X1 Carbon — headless server role: Cockpit host + Automation-layer host + binary archive on 512GB NVMe SSD (Samsung MZVLW512HMJP, 475.57 GB usable, 226.34 GB free as of 2026-07-03) — repo at `C:\Users\ThinkPad X1 Carbon\Documents\family-ops`
+- External Archive Drive (2TB SSD) — quarterly cold backup target for bare-metal ThinkPad image; physically disconnected between runs; capacity unverified (pre-flight required before first backup)
 - OneDrive (M365 Family) — binary-archive transport to the ThinkPad; also hosts the Outlook mailbox carrying the Bayer Family Ops calendar (Mobile Wave)
 - GitHub: Ground3906 · Repo: github.com/Ground3906/family-ops
 - Terminal: PowerShell on Windows (never bash; no grep, use Select-String)
