@@ -2,13 +2,17 @@
 # Runs at 0800, 1400, 2000 daily via BayerFamilyOps-Watchdog scheduled task.
 # No in-script time gate: the schedule IS the window.
 #
-# Three checks per run:
-#   1. Watcher staleness: email if watcher-heartbeat.txt is older than 6 hours.
-#   2. Disk free space:   email if C: drops below 75 GB free.
-#   3. File count:        email if Filing Cabinet root loses files since last check.
+# Checks per run:
+#   1. InboxWatcher staleness   — archive\watcher-heartbeat.txt         (6h threshold)
+#   2. GraphSync staleness      — scripts\graph-sync-heartbeat.txt       (6h threshold)
+#   3. PullJob staleness        — last-pull.json                         (6h threshold)
+#   4. NightWatch staleness     — archive\night-watch-heartbeat.txt     (25h threshold)
+#   5. Disk free space          — C: drive below 75 GB
+#   6. Filing Cabinet count     — root file count dropped
 #
 # State persisted in archive\watchdog-state.json.
-# All emails via Microsoft Graph sendMail.
+# Health snapshot written to ops\system-health.json (pushed to repo Sundays by WeeklyPush).
+# All alerts via Microsoft Graph sendMail.
 #
 # NOTE: Email alerts require Mail.Send scope on the Graph token.
 # If alerts are silent, re-run graph-auth.ps1 to re-authorize with Mail.Send.
@@ -25,16 +29,27 @@ $ScriptDir       = $PSScriptRoot
 $RepoRoot        = Split-Path $ScriptDir -Parent
 $TokenFile       = Join-Path $ScriptDir "graph-token.json"
 $ArchiveDir      = Join-Path $RepoRoot "archive"
+$OpsDir          = Join-Path $RepoRoot "ops"
 $HeartbeatFile   = Join-Path $ArchiveDir "watcher-heartbeat.txt"
+$GraphSyncHB     = Join-Path $ScriptDir "graph-sync-heartbeat.txt"
+$PullJobSync     = Join-Path $RepoRoot "last-pull.json"
+$NightWatchHB    = Join-Path $ArchiveDir "night-watch-heartbeat.txt"
 $WatchdogState   = Join-Path $ArchiveDir "watchdog-state.json"
 $WatchdogLog     = Join-Path $ArchiveDir "watchdog-log.jsonl"
+$HealthFile      = Join-Path $OpsDir "system-health.json"
 $CabinetRoot     = "C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet"
 $AlertTo         = "matthew.bayer@outlook.com"
-$StalenessHours  = 6
-$DiskThresholdGB = 75
 
-# Ensure archive directory exists
-if (-not (Test-Path $ArchiveDir)) { New-Item -ItemType Directory -Path $ArchiveDir | Out-Null }
+# Thresholds
+$InboxStalenessHours   = 6
+$GraphSyncStalenessHours = 6
+$PullJobStalenessHours = 6
+$NightWatchStalenessHours = 25   # Only runs 21:30–06:00; max gap between nights is ~15.5h
+$DiskThresholdGB       = 75
+
+foreach ($d in @($ArchiveDir, $OpsDir)) {
+    if (-not (Test-Path $d)) { New-Item -ItemType Directory -Path $d | Out-Null }
+}
 
 # ---------------------------------------------------------------
 # GRAPH TOKEN
@@ -97,12 +112,25 @@ function Write-WatchdogLog {
 }
 
 # ---------------------------------------------------------------
+# HEARTBEAT CHECK HELPER
+# Returns age in hours, or -1 if file missing, -2 on parse error.
+# ---------------------------------------------------------------
+function Get-HeartbeatAgeHours {
+    param([string]$FilePath)
+    if (-not (Test-Path $FilePath)) { return -1 }
+    try {
+        $content = (Get-Content $FilePath -Raw -ErrorAction Stop).Trim()
+        $ts      = [datetime]::Parse($content.Split(' ')[0])
+        return ([datetime]::Now - $ts).TotalHours
+    } catch { return -2 }
+}
+
+# ---------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------
 try {
     Write-Host "[watchdog] $(Get-Date -Format 'HH:mm:ss') Running checks..."
 
-    # Load state
     $state = if (Test-Path $WatchdogState) {
         Get-Content $WatchdogState -Raw | ConvertFrom-Json
     } else {
@@ -111,40 +139,153 @@ try {
 
     $alerts = 0
 
-    # Check 1: Watcher staleness
-    if (-not (Test-Path $HeartbeatFile)) {
-        $msg = "Heartbeat file not found at $HeartbeatFile. Watcher may never have started or crashed before first write."
+    # Health snapshot — populated as checks run
+    $health = @{
+        last_updated = (Get-Date -Format 'o')
+        checks       = @{
+            inbox_watcher = @{ status = "unknown"; age_hours = $null }
+            graph_sync    = @{ status = "unknown"; age_hours = $null }
+            pull_job      = @{ status = "unknown"; age_hours = $null }
+            night_watch   = @{ status = "unknown"; age_hours = $null }
+        }
+        disk_free_gb  = $null
+        total_alerts  = 0
+    }
+
+    # ------------------------------------------------------------------
+    # CHECK 1: InboxWatcher heartbeat
+    # ------------------------------------------------------------------
+    $inboxAge = Get-HeartbeatAgeHours $HeartbeatFile
+    if ($inboxAge -eq -1) {
+        $msg = "Heartbeat file not found at $HeartbeatFile. InboxWatcher may never have started or crashed before first write."
         Write-Warning "[watchdog] $msg"
-        Send-Alert "[FamilyOps] Watcher: no heartbeat file" $msg
-        Write-WatchdogLog "heartbeat_missing" "File not found"
+        Send-Alert "[FamilyOps] InboxWatcher: no heartbeat file" $msg
+        Write-WatchdogLog "inbox_heartbeat_missing" "File not found"
+        $health.checks.inbox_watcher.status = "missing"
         $alerts++
+    } elseif ($inboxAge -eq -2) {
+        Write-Warning "[watchdog] Could not parse InboxWatcher heartbeat."
+        Write-WatchdogLog "inbox_heartbeat_parse_error" "Parse failed"
+        $health.checks.inbox_watcher.status = "parse_error"
     } else {
-        try {
-            $hbContent = (Get-Content $HeartbeatFile -Raw -ErrorAction Stop).Trim()
-            $hbTime    = [datetime]::Parse($hbContent.Split(' ')[0])
-            $ageHours  = ([datetime]::UtcNow - $hbTime.ToUniversalTime()).TotalHours
-            Write-Host "[watchdog] Heartbeat age: $([math]::Round($ageHours, 1)) hours"
-            if ($ageHours -gt $StalenessHours) {
-                $msg = "Watcher heartbeat is $([math]::Round($ageHours, 1)) hours old (threshold: $StalenessHours h). Last beat: $hbContent"
-                Send-Alert "[FamilyOps] Watcher stale: check ThinkPad" $msg
-                Write-WatchdogLog "heartbeat_stale" "Age: $([math]::Round($ageHours, 2)) h"
-                $alerts++
-            } else {
-                Write-WatchdogLog "heartbeat_ok" "Age: $([math]::Round($ageHours, 2)) h"
-            }
-        } catch {
-            Write-Warning "[watchdog] Could not parse heartbeat file: $_"
-            Write-WatchdogLog "heartbeat_parse_error" "$_"
+        $health.checks.inbox_watcher.age_hours = [math]::Round($inboxAge, 2)
+        Write-Host "[watchdog] InboxWatcher heartbeat age: $([math]::Round($inboxAge, 1))h"
+        if ($inboxAge -gt $InboxStalenessHours) {
+            $msg = "InboxWatcher heartbeat is $([math]::Round($inboxAge, 1))h old (threshold: $InboxStalenessHours h)."
+            Send-Alert "[FamilyOps] InboxWatcher stale: check ThinkPad" $msg
+            Write-WatchdogLog "inbox_heartbeat_stale" "Age: $([math]::Round($inboxAge, 2))h"
+            $health.checks.inbox_watcher.status = "stale"
+            $alerts++
+        } else {
+            Write-WatchdogLog "inbox_heartbeat_ok" "Age: $([math]::Round($inboxAge, 2))h"
+            $health.checks.inbox_watcher.status = "ok"
         }
     }
 
-    # Check 2: Disk free space on C:
+    # ------------------------------------------------------------------
+    # CHECK 2: GraphSync heartbeat
+    # ------------------------------------------------------------------
+    $graphAge = Get-HeartbeatAgeHours $GraphSyncHB
+    if ($graphAge -eq -1) {
+        $msg = "GraphSync heartbeat not found at $GraphSyncHB. GraphSync task may not be running."
+        Write-Warning "[watchdog] $msg"
+        Send-Alert "[FamilyOps] GraphSync: no heartbeat file" $msg
+        Write-WatchdogLog "graph_sync_heartbeat_missing" "File not found"
+        $health.checks.graph_sync.status = "missing"
+        $alerts++
+    } elseif ($graphAge -eq -2) {
+        Write-Warning "[watchdog] Could not parse GraphSync heartbeat."
+        Write-WatchdogLog "graph_sync_heartbeat_parse_error" "Parse failed"
+        $health.checks.graph_sync.status = "parse_error"
+    } else {
+        $health.checks.graph_sync.age_hours = [math]::Round($graphAge, 2)
+        Write-Host "[watchdog] GraphSync heartbeat age: $([math]::Round($graphAge, 1))h"
+        if ($graphAge -gt $GraphSyncStalenessHours) {
+            $msg = "GraphSync heartbeat is $([math]::Round($graphAge, 1))h old (threshold: $GraphSyncStalenessHours h). Calendar sync may be down."
+            Send-Alert "[FamilyOps] GraphSync stale: calendar sync may be down" $msg
+            Write-WatchdogLog "graph_sync_stale" "Age: $([math]::Round($graphAge, 2))h"
+            $health.checks.graph_sync.status = "stale"
+            $alerts++
+        } else {
+            Write-WatchdogLog "graph_sync_ok" "Age: $([math]::Round($graphAge, 2))h"
+            $health.checks.graph_sync.status = "ok"
+        }
+    }
+
+    # ------------------------------------------------------------------
+    # CHECK 3: PullJob — reads last-pull.json {"last_ok": "YYYY-MM-DD HH:mm:ss"}
+    # ------------------------------------------------------------------
+    $pullAge = $null
+    if (-not (Test-Path $PullJobSync)) {
+        $msg = "last-pull.json not found at $PullJobSync. Pull job may never have succeeded."
+        Write-Warning "[watchdog] $msg"
+        Send-Alert "[FamilyOps] PullJob: no last-pull.json" $msg
+        Write-WatchdogLog "pull_job_missing" "File not found"
+        $health.checks.pull_job.status = "missing"
+        $alerts++
+    } else {
+        try {
+            $pj      = Get-Content $PullJobSync -Raw | ConvertFrom-Json
+            $pjTime  = [datetime]::Parse($pj.last_ok)
+            $pullAge = ([datetime]::Now - $pjTime).TotalHours
+            $health.checks.pull_job.age_hours = [math]::Round($pullAge, 2)
+            Write-Host "[watchdog] PullJob last-ok age: $([math]::Round($pullAge, 1))h"
+            if ($pullAge -gt $PullJobStalenessHours) {
+                $msg = "Pull job last success was $([math]::Round($pullAge, 1))h ago (threshold: $PullJobStalenessHours h). Cockpit may be serving stale data."
+                Send-Alert "[FamilyOps] PullJob stale: Cockpit data may be old" $msg
+                Write-WatchdogLog "pull_job_stale" "Age: $([math]::Round($pullAge, 2))h"
+                $health.checks.pull_job.status = "stale"
+                $alerts++
+            } else {
+                Write-WatchdogLog "pull_job_ok" "Age: $([math]::Round($pullAge, 2))h"
+                $health.checks.pull_job.status = "ok"
+            }
+        } catch {
+            Write-Warning "[watchdog] Could not parse last-pull.json: $_"
+            Write-WatchdogLog "pull_job_parse_error" "$_"
+            $health.checks.pull_job.status = "parse_error"
+        }
+    }
+
+    # ------------------------------------------------------------------
+    # CHECK 4: NightWatch heartbeat (25h threshold — only runs at night)
+    # ------------------------------------------------------------------
+    $nwAge = Get-HeartbeatAgeHours $NightWatchHB
+    if ($nwAge -eq -1) {
+        # First run before NightWatch has ever executed — not an alert condition.
+        # Become an alert after NightWatch is registered and has had a night to run.
+        Write-Host "[watchdog] NightWatch heartbeat not yet present (task may not be registered)."
+        Write-WatchdogLog "night_watch_heartbeat_not_yet" "File absent — task may not be registered"
+        $health.checks.night_watch.status = "not_started"
+    } elseif ($nwAge -eq -2) {
+        Write-Warning "[watchdog] Could not parse NightWatch heartbeat."
+        Write-WatchdogLog "night_watch_heartbeat_parse_error" "Parse failed"
+        $health.checks.night_watch.status = "parse_error"
+    } else {
+        $health.checks.night_watch.age_hours = [math]::Round($nwAge, 2)
+        Write-Host "[watchdog] NightWatch heartbeat age: $([math]::Round($nwAge, 1))h"
+        if ($nwAge -gt $NightWatchStalenessHours) {
+            $msg = "NightWatch heartbeat is $([math]::Round($nwAge, 1))h old (threshold: $NightWatchStalenessHours h). NightWatch task may have stopped."
+            Send-Alert "[FamilyOps] NightWatch stale: task may be down" $msg
+            Write-WatchdogLog "night_watch_stale" "Age: $([math]::Round($nwAge, 2))h"
+            $health.checks.night_watch.status = "stale"
+            $alerts++
+        } else {
+            Write-WatchdogLog "night_watch_ok" "Age: $([math]::Round($nwAge, 2))h"
+            $health.checks.night_watch.status = "ok"
+        }
+    }
+
+    # ------------------------------------------------------------------
+    # CHECK 5: Disk free space on C:
+    # ------------------------------------------------------------------
     try {
         $disk   = Get-PSDrive -Name C -ErrorAction Stop
         $freeGB = [math]::Round($disk.Free / 1GB, 2)
+        $health.disk_free_gb = $freeGB
         Write-Host "[watchdog] C: free: $freeGB GB (threshold: $DiskThresholdGB GB)"
         if ($freeGB -lt $DiskThresholdGB) {
-            $msg = "C: has $freeGB GB free. Threshold is $DiskThresholdGB GB. Check what is consuming disk space on the ThinkPad before the archive is impacted."
+            $msg = "C: has $freeGB GB free. Threshold is $DiskThresholdGB GB. Check disk usage on ThinkPad before the archive is impacted."
             Send-Alert "[FamilyOps] Low disk: $freeGB GB free on ThinkPad" $msg
             Write-WatchdogLog "disk_low" "Free: $freeGB GB"
             $alerts++
@@ -156,25 +297,33 @@ try {
         Write-WatchdogLog "disk_check_error" "$_"
     }
 
-    # Check 3: Filing Cabinet root file count
+    # ------------------------------------------------------------------
+    # CHECK 6: Filing Cabinet root file count
+    # ------------------------------------------------------------------
     try {
         $currentCount = (Get-ChildItem -LiteralPath $CabinetRoot -File -ErrorAction Stop).Count
         Write-Host "[watchdog] Filing Cabinet root: $currentCount files (last known: $($state.last_file_count))"
         if ($state.last_file_count -ge 0 -and $currentCount -lt $state.last_file_count) {
             $dropped = $state.last_file_count - $currentCount
-            $msg     = "Filing Cabinet root dropped from $($state.last_file_count) to $currentCount files. $dropped file(s) missing. Check OneDrive for deleted or moved items. If within 30 days, use Files Restore at onedrive.com."
+            $msg     = "Filing Cabinet root dropped from $($state.last_file_count) to $currentCount files. $dropped file(s) missing. Check OneDrive — use Files Restore at onedrive.com if within 30 days."
             Send-Alert "[FamilyOps] Filing Cabinet: $dropped file(s) disappeared" $msg
             Write-WatchdogLog "file_count_dropped" "Was: $($state.last_file_count)  Now: $currentCount  Dropped: $dropped"
             $alerts++
         } else {
             Write-WatchdogLog "file_count_ok" "Count: $currentCount"
         }
-        # Always update the stored count to current (even after a drop, so we track the new baseline)
         $state.last_file_count = $currentCount
     } catch {
         Write-Warning "[watchdog] File count check failed: $_"
         Write-WatchdogLog "file_count_error" "$_"
     }
+
+    # ------------------------------------------------------------------
+    # WRITE HEALTH SNAPSHOT
+    # ------------------------------------------------------------------
+    $health.total_alerts = $alerts
+    $health | ConvertTo-Json -Depth 4 | Set-Content $HealthFile -Encoding UTF8
+    Write-Host "[watchdog] system-health.json written."
 
     # Save state and log run
     $state.last_run = (Get-Date -Format 'o')
