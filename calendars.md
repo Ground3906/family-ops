@@ -273,7 +273,7 @@ Last batch: 2026-07-09.
 
 [CAL] 2026-06-01 ALL-DAY [W] Sweden trip :: kids :: span=2026-06-13 :: travel=true :: flag=true :: notes="F-05 drop-off pickup chaperone logistics unresolved"
 [CAL] 2026-06-03 ALL-DAY [D][K] NV drop - Austin Auto :: misc :: location="Austin Automotive" :: notes="Kalea drives Tahoe, Matt drives NV. Pickup day = Tahoe drop day TBD"
-[CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt
+[CAL] 2026-06-04 13:40 [K][D] Prenatal apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-06-05 ALL-DAY [W][M] Jackpot - Castle Rock :: 4h :: location="Castle Rock, CO"
 [CAL] 2026-06-06 08:00 [D] Deworm pigs :: 4h :: notes="Stockyard audit record"
 [CAL] 2026-06-06 16:00 Mass - St. Benedict's, Florence :: liturgical :: end=18:00
@@ -302,7 +302,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-06-20 ALL-DAY [FAM] Swim meet - Pueblo County :: family :: span=2026-06-21 :: travel=true :: location="Pueblo, CO"
 [CAL] 2026-06-20 08:00 [W][M] Livestock clinic - Florence :: misc :: location="Florence, CO" :: cancel=confirmed
 [CAL] 2026-06-20 16:00 Mass - Sacred Heart Chapel Pueblo :: liturgical :: end=17:00 :: location="Sacred Heart Chapel, Pueblo, CO"
-[CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30
+[CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30 :: location="Pueblo, CO"
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
 [CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
@@ -341,7 +341,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-07-05 09:00 [W][M] 4H show - Gonzalez's :: 4h
 [CAL] 2026-07-06 08:30 [D] VA Appointment :: appointments :: end=10:00 :: stripe=appt :: notes="Bring: DD-214 Member 4 copy + presumptive conditions documentation"
 [CAL] 2026-07-07 07:45 [D] Mentor meeting :: meetings
-[CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: notes="Matt attending with Kalea - ask about scheduling induction"
+[CAL] 2026-07-07 14:00 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=15:00 :: location="Pueblo, CO" :: notes="Matt attending with Kalea - ask about scheduling induction"
 [CAL] 2026-07-08 09:30 [D] Optometrist :: appointments :: stripe=appt :: end=10:30 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-07-08 10:20 [K] Dentist :: appointments :: stripe=appt :: location="Canon Family Dental, Canon City, CO"
 [CAL] 2026-07-08 11:30 [D] Video consultation :: appointments :: stripe=appt :: end=12:00
@@ -363,10 +363,10 @@ Last batch: 2026-07-09.
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-21 13:00 [K] ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
-[CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10
+[CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
-[CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50
+[CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
 ---
@@ -377,7 +377,7 @@ Last batch: 2026-07-09.
 [CAL] 2026-08-03 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
 [CAL] 2026-08-06 13:20 [D] Gastro appt :: appointments :: stripe=appt :: location="Woodman, Colorado Springs, CO"
-[CAL] 2026-08-06 13:30 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: flag=true :: notes="flag=conflict - Gastro appt same day 13:20 in Colorado Springs"
+[CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
