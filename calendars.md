@@ -126,6 +126,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
 - **[CHORE] dish/table entries: use `chore-type=dishes` or `chore-type=table` opt. Two lines per day: one for dishes crew (lead + 2nd), one for table crew. Pills only - no prose description.**
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section - it will double-render alongside the block entry for that date.**
+- **Individual months within the FAIRBOARD MEETING block can be suppressed with `cancel=confirmed` on that specific line without touching the rest of the block - this is how a single canceled meeting is handled without breaking the monthly pattern.**
 
 ---
 
@@ -207,7 +208,7 @@ Last batch: 2026-07-09.
 
 ### FAIRBOARD MEETING - 2026-27 (2nd Monday monthly)
 [CAL] 2026-06-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
-[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30
+[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30 :: cancel=confirmed
 [CAL] 2026-09-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-10-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-11-09 16:30 [D] Fairboard meeting :: meetings :: end=17:30
