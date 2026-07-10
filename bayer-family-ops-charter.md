@@ -1,8 +1,9 @@
-# Bayer Family Operations — Charter v2.11
+# Bayer Family Operations — Charter v2.12
 
 The foundational document for the household multi-agent system. Upload this to project knowledge. Updated as decisions are made.
 
-**Last updated:** 2026-07-09 — v2.11: OneDrive Session 3 COMPLETE. Inbox watcher, watchdog, and setup scripts built and committed to repo. backup-and-recovery.md doctrine added to docs/. Cockpit gate C (ThinkPad Ubuntu Server conversion) struck: ThinkPad stays Windows permanently. External Archive Drive (2TB SSD) designated as quarterly cold backup target for bare-metal ThinkPad image. Storage Tiers updated. archive/ directory created in repo.
+**Last updated:** 2026-07-09 — v2.12: OneDrive receipt watcher LIVE. Mail.Send scope added to graph-auth.ps1; graph-token.json re-authorized with Mail.Send included. BayerFamilyOps-InboxWatcher and BayerFamilyOps-Watchdog tasks registered on ThinkPad as SYSTEM. Smoke test passed 2026-07-09 21:02 MT: test PDF filed to Cabinet root, receipts-log.jsonl entry written, heartbeat confirmed fresh. Kalea CAC DEERS appointment scheduled (done 2026-07-09). OneDrive archive build plan fully complete — all four sessions done.
+**Prior:** 2026-07-09 — v2.11: OneDrive Session 3 COMPLETE. Inbox watcher, watchdog, and setup scripts built and committed to repo. backup-and-recovery.md doctrine added to docs/. Cockpit gate C (ThinkPad Ubuntu Server conversion) struck: ThinkPad stays Windows permanently. External Archive Drive (2TB SSD) designated as quarterly cold backup target for bare-metal ThinkPad image. Storage Tiers updated. archive/ directory created in repo.
 **Prior:** 2026-07-07 — v2.10: OneDrive Archive Session 2 COMPLETE. Filing Cabinet and Inbox created in Matt's OneDrive. Shared to kalea.bayer.co@outlook.com (Can edit; Kalea accepted). ThinkPad OneDrive client configured: Filing Cabinet set to Always keep on this device. Confirmed local path: `C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet`. Smoke test passed: both Matt and Kalea dropped test files from Android; both landed in Inbox as fully pinned local copies (Attributes: Archive + ReparsePoint + Pinned). Test files cleaned up. OneDrive 1TB per account confirmed (not pooled). Session 3 is next: PowerShell receipt watcher on ThinkPad.
 **Prior:** 2026-07-03 — v2.9: ThinkPad drive spec confirmed via pre-flight. Charter "2TB SSD" designation was incorrect — verified hardware is Samsung MZVLW512HMJP 512GB NVMe SSD (475.57 GB usable, 226.34 GB free as of 2026-07-03). No spare 2TB exists; OneDrive transport (M365 Family) is the redundancy layer. Storage Tiers and Technical Environment corrected.
 **Prior:** 2026-06-27 — v2.8: Outlook Push Build 2.0 COMPLETE. Dual calendar push live: graph-sync.ps1 Kalea sync block pushes all 537 events to Kalea-owned calendar; category tile colors render natively on her account. calendars.md BMP-safe emoji cleanup complete: 28x U+1F35E (bread loaf) replaced with ★ (U+2605 black star). .gitignore graph-sync runtime block live: 7 files covered (both token files, both state files, revert log, heartbeat, error log). OneDrive archive gap formally identified: transport architecture designed in charter, nothing implemented. Four-session build plan locked: Session 1 design lock (Opus) — folder structure, inbox zone, queue zone, watcher trigger rules; Session 2 setup build (Sonnet) — shared OneDrive folder creation, Kalea share, ThinkPad sync to 512GB NVMe SSD, smoke test; Session 3 receipt watcher (Sonnet) — PowerShell watcher on ThinkPad, heartbeat-wrapped, deterministic plumbing only; Session 4 doctrine (Sonnet) — charter update + archive-workflow.md in repo.
@@ -47,7 +48,7 @@ The system is built in three layers. There is no "graduation," no someday-migrat
 
 **2. Interactive — phone + GitHub MCP + the glass.** The product Matt and Kalea actually use. They talk to the agents in plain language, by voice; agents read and write the repo through GitHub MCP; the Cockpit and the phones reflect on refresh. No backend required. This layer delivers most of the value and is the simple part. **All reasoning lives here, inside the subscriptions.**
 
-**3. Automation — optional, one job at a time, and it carries no AI.** Background jobs are deterministic plumbing only — sync, serve, move, pull — built only when a specific task genuinely must run without a person starting it. Each one self-contained, with a heartbeat so a silent failure can't happen. A job that needs to *think* is not an automation job; it's a queue feeding an agent. Job #1 is the Outlook calendar publish (see Mobile Wave). The receipt watcher, when it comes, moves files into a queue — Chow Hall does the thinking the next time she's opened. This layer is never stood up speculatively.
+**3. Automation — optional, one job at a time, and it carries no AI.** Background jobs are deterministic plumbing only — sync, serve, move, pull — built only when a specific task genuinely must run without a person starting it. Each one self-contained, with a heartbeat so a silent failure can't happen. A job that needs to *think* is not an automation job; it's a queue feeding an agent. Job #1 is the Outlook calendar publish (see Mobile Wave). The receipt watcher moves files into a queue — Chow Hall does the thinking the next time she's opened. This layer is never stood up speculatively.
 
 Data handling — how growing datasets are shaped and stored — follows the **SPINE in Profile** (layered data, data shape, extract-then-file, capture as you go). It is not restated here. This household's specific wiring is in Storage Tiers below.
 
@@ -75,7 +76,7 @@ Three tiers, each holding one kind of thing. This is the household-specific appl
 
 **Transport — OneDrive (supersedes the README "retired" note).** M365 Family. One shared folder; Matt and Kalea drop binaries from any device; it self-syncs to the ThinkPad archive. The repo stays the source of truth — OneDrive only ever holds binaries the repo should never carry. No contradiction with the README; reconciled there. Storage: 1TB per account, not pooled; Microsoft's own alerts handle cloud-side usage.
 
-**OneDrive archive build plan.** Four sessions: (1) design lock — COMPLETE 2026-06-27; (2) setup build — COMPLETE 2026-07-07: Filing Cabinet + Inbox created, shared to Kalea (Can edit), ThinkPad sync configured and smoke-tested; (3) receipt watcher — COMPLETE 2026-07-09: inbox-watcher.ps1, watchdog.ps1, setup-watcher-tasks.ps1 built and committed; (4) doctrine — COMPLETE 2026-07-09: backup-and-recovery.md added, charter updated.
+**OneDrive archive build plan — ALL FOUR SESSIONS COMPLETE.** (1) design lock — COMPLETE 2026-06-27; (2) setup build — COMPLETE 2026-07-07: Filing Cabinet + Inbox created, shared to Kalea (Can edit), ThinkPad sync configured and smoke-tested; (3) receipt watcher — COMPLETE 2026-07-09: inbox-watcher.ps1, watchdog.ps1, setup-watcher-tasks.ps1 built and committed; (4) deploy and doctrine — COMPLETE 2026-07-09: Mail.Send scope added, graph-token.json re-authorized, BayerFamilyOps-InboxWatcher and BayerFamilyOps-Watchdog tasks registered on ThinkPad as SYSTEM, smoke test passed 21:02 MT, backup-and-recovery.md added, charter updated. Watcher is live.
 
 **Extract-then-file (Profile rule, applied):** a document is read once on intake — facts pulled to the lean log, the original filed to the archive. Agents work from the extract; originals are pulled only on deliberate need (warranty, resale, dispute).
 
@@ -210,7 +211,7 @@ Re-read before adding any agent.
 ### Pill Palette (locked)
 
 | Pill | Person | Color |
-|------|--------|-------|
+|------|--------|---------|
 | D | Matt (Dad) | `#9a5828` |
 | K | Kalea | `#1a50e0` |
 | W | Wyatt | `#cc2233` |
@@ -309,7 +310,8 @@ Project-specific volatile blockers. Surface these the moment the relevant topic 
 - signInAudience: AzureADandPersonalMicrosoftAccount
 - isFallbackPublicClient: true
 - Redirect URI: `http://localhost:8888/` (Mobile and desktop applications platform)
-- Permissions: User.Read + Calendars.ReadWrite (delegated)
+- Permissions: User.Read + Calendars.ReadWrite + Mail.Send (delegated)
+- Auth scope: `Calendars.ReadWrite Mail.Send User.Read offline_access` (Mail.Send added 2026-07-09)
 - Matt token: `scripts/graph-token.json` (gitignored; ThinkPad; auto-refreshes)
 - Kalea token: `scripts/graph-token-kalea.json` (gitignored; ThinkPad; auto-refreshes; used to push category colors to her account)
 - Auth script: `scripts/graph-auth.ps1 [-Out filename]` — run on any machine with a browser; `-Out` param targets alternate token file (e.g. `-Out graph-token-kalea.json` for Kalea's account)
