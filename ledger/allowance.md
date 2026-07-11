@@ -43,15 +43,15 @@ Reflects May + June owed as of 2026-07-04. Historical seed point only — supers
 
 ## Running Jar Balances (live, rounded to nearest dollar)
 
-*Mirrors the rolling Give/Save/Spend balances in `allowance-ledger.xlsx`. Wyatt and Molly's Save/Spend are real bank-jar totals now (deposits accumulate monthly, purchases and commission shares move against them) — not a "not tracked" placeholder anymore.*
+*Mirrors the rolling Give/Save/Spend balances in `allowance-ledger.xlsx`. Wyatt and Molly's Save/Spend are real bank-jar totals now (deposits accumulate monthly, purchases and commission shares move against them) — not a "not tracked" placeholder anymore. **July's fixed allowance Due has not posted yet** — it lands 7/31, month's end. These balances are June-end plus July commission and expenditures only.*
 
 | Kid | Give | Save | Spend | Total | As of |
 |---|---|---|---|---|---|
-| Wyatt | $3 | $9 | $25 | $37 | 2026-07-09 |
-| Molly | $3 | $6 | **-$3** | $6 | 2026-07-09 |
-| Rileigh | $4 | $4 | $9 | $16 | 2026-07-09 |
-| Cullen | $3 | $3 | $6 | $12 | 2026-07-09 |
-| Emmitt | $3 | $3 | $11 | $17 | 2026-07-09 |
+| Wyatt | $2 | $6 | $15 | $23 | 2026-07-09 |
+| Molly | $2 | $4 | **-$10** | -$4 | 2026-07-09 |
+| Rileigh | $3 | $3 | $4 | $9 | 2026-07-09 |
+| Cullen | $2 | $2 | $2 | $6 | 2026-07-09 |
+| Emmitt | $2 | $2 | $7 | $11 | 2026-07-09 |
 
 ---
 
@@ -111,7 +111,7 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 | 2026-07-09 | Cullen | Deduction — attitude | **-$1.00** | — | Pending |
 | 2026-07-09 | Emmitt | Deduction — attitude | **-$1.00** | — | Pending |
 
-**Unpaid commission totals this month:** Rileigh $4.00, Molly $1.00, Cullen -$1.00, Emmitt -$1.00. None of this is in Spend/Save/Give balances yet — it moves there only when Payout runs.
+**Unpaid commission totals this month:** Rileigh $4.00, Molly $1.00, Cullen -$1.00, Emmitt -$1.00. These are already reflected in the Running Jar Balances above (commission counts as soon as it's earned) — only the fixed allowance Due waits for month's end.
 
 ---
 
@@ -132,7 +132,7 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 **How this works:**
 - Al logs a row per kid per trip/order — store tag, item list, total rounded to the nearest dollar. Doesn't need to reconcile to the penny against individual items.
 - Comes out of Spend only, unless Jill says otherwise for a specific purchase.
-- Wyatt and Molly's Spend is a real running bank-jar total now (see Running Jar Balances) — a purchase can and does take it negative, same as the cash-tracked kids. Molly's two July purchases ($11 + $14) put her Spend at -$3.
+- Wyatt and Molly's Spend is a real running bank-jar total now (see Running Jar Balances) — a purchase can and does take it negative, same as the cash-tracked kids.
 - If a purchase would take any kid's Spend balance negative, that's expected and gets logged as-is — flag to Jill only if it looks like a mistake, not because it's negative.
 
 ---
@@ -144,3 +144,4 @@ Commission is extra, on top of the fixed allowance — never a substitute for it
 - If Ledger stands up as a full agent later, this file becomes its seed data — don't rebuild from scratch.
 - Commission Log and Expenditures Log are both manual/append-only until Payroll widget or Ledger agent goes live — Al maintains both on request, same pattern as everything else in this file.
 - `allowance-ledger.xlsx` is now the live day-to-day tracker (color-coded by kid, five individual kid tabs, rolling Give/Save/Spend balances). Al keeps this file's tables in sync with it after each xlsx update.
+- **Fixed allowance Due posts at month's end (e.g. 7/31), not day one of the month.** Commission and expenditures count immediately when they happen; the monthly Give/Save/Spend accrual doesn't land in the balance until the month actually closes.
