@@ -16,6 +16,27 @@
 
 ---
 
+## PowerShell scripts are ASCII-only
+
+**Any `.ps1` file written to this repo must contain pure ASCII. No em-dashes, no en-dashes, no smart quotes, no Unicode of any kind — in code OR in comments.**
+
+Why: content is written through a UTF-8 MCP pipe, but the ThinkPad runs Windows PowerShell 5.1, which reads script files as Windows-1252 by default. A UTF-8 em-dash becomes multi-byte mojibake (`â€"`), and when that garbage lands inside a string literal or comment, the 5.1 parser derails with "string is missing the terminator" and "missing closing brace" errors far from the real cause. The script will not run at all.
+
+This bit on 2026-07-12 building NightWatch: em-dashes in comments and one in a `Write-Host` string killed the whole file. The fix was stripping every non-ASCII byte:
+```
+(Get-Content $p -Raw) -replace '[^\x00-\x7F]', '-' | Set-Content $p -Encoding ASCII
+```
+
+Rules:
+- Use `-` (hyphen) instead of any dash. Use straight `'` and `"` only.
+- When writing a `.ps1` through MCP, do not use Unicode punctuation even where it would read nicely.
+- If a `.ps1` throws a parser error near a comment or string, suspect mojibake first: `Select-String -Path $file -Pattern '[^\x00-\x7F]'` finds it, and the one-liner above strips it.
+- `Set-Content -Encoding ASCII` is the safe write encoding for these files.
+
+This applies to `.ps1` specifically. Markdown files are read by tools that handle UTF-8, so em-dashes are fine there — the ban is PowerShell-only. (Note: em-dashes remain banned in any content Matt authors under his name — emails, papers, documents — for a separate reason: they read as AI, not Matt. That rule lives in Profile.)
+
+---
+
 ## Known failure modes
 
 - **`push_files` accepts placeholder content without error.** Verify every content field is real before firing.
@@ -28,7 +49,9 @@
 
 ## JSONL append discipline
 
-Append-only logs (`fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`, `maintenance-log.jsonl`, and any future one): fetch the full file, append the new line, push the complete file back. Never patch a data file to work around a code bug — log the bug, fix the code, and get Matt's explicit permission for any exception to that rule.
+Append-only logs (`fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`, `maintenance-log.jsonl`, `night-watch.jsonl`, and any future one): fetch the full file, append the new line, push the complete file back. Never patch a data file to work around a code bug — log the bug, fix the code, and get Matt's explicit permission for any exception to that rule.
+
+Note on machine-written logs: `night-watch.jsonl` and `ops/system-health.json` are written on the ThinkPad and pushed by WeeklyPush, not through MCP. They are `!`-negated in `.gitignore` so that push works. Do not remove those negations, and do not hand-edit these files through MCP — they are machine-owned. See `ops/watcher-layer.md`.
 
 ---
 
