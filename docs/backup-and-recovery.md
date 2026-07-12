@@ -1,6 +1,7 @@
 # Backup and Recovery — Bayer Family Ops
 
 **Locked:** 2026-07-09 — OneDrive Session 3 (Opus design, Sonnet execution).
+**Updated:** 2026-07-12 — Watchdog now covers six checks (was three); detection layer cross-referenced to `ops/watcher-layer.md`; "silence is health" corrected to the liveness doctrine.
 
 ---
 
@@ -27,7 +28,7 @@ These cover the ordinary disasters: the wrong-phone delete, the accidental overw
 
 ### What Microsoft 365 does not cover
 
-1. The ThinkPad itself. Windows, scheduled tasks, scripts, Graph tokens, static IP config, the repo clone. None of it is in OneDrive. ThinkPad SSD dies: receipts survive in the cloud, the server is a weekend of rebuilding from memory.
+1. The ThinkPad itself. Windows, scheduled tasks, scripts, Graph tokens, static IP config, the repo clone. None of it is in OneDrive. ThinkPad SSD dies: receipts survive in the cloud, the server is a weekend of rebuilding from memory. (This is the same single-point-of-failure noted in `cockpit.md` and `ops/watcher-layer.md` — the whole watcher layer shares this machine's fate.)
 2. Subscription lapse. Card expires, nobody notices, Microsoft enforces the free 5 GB tier. This is the most likely way the archive gets compromised. Not dramatic, not sudden.
 3. Account compromise. Attacker owns `matthew.bayer@outlook.com`, they own both OneDrive copies simultaneously.
 4. The 30-day window closing. A quiet corruption on an unwatched headless machine has 30 days to become permanent. The watchdog file-count check is the mitigation.
@@ -65,15 +66,20 @@ The drive does not stay plugged in between runs. Unplugged means unreachable.
 
 ## Detection Layer
 
-The watchdog (`scripts/watchdog.ps1`) runs at 0800, 1400, 2000 daily via the `BayerFamilyOps-Watchdog` scheduled task. Three checks per run:
+The watchdog (`scripts/watchdog.ps1`) runs at 08:00, 14:00, 20:00 daily via the `BayerFamilyOps-Watchdog` scheduled task. As of 2026-07-12 it runs **six checks** per run — it supervises the entire on-box watcher layer, not just the receipt watcher. Full architecture in `ops/watcher-layer.md`.
 
 | Check | Condition | Action |
 |---|---|---|
-| Watcher staleness | `watcher-heartbeat.txt` older than 6 hours | Email alert |
+| InboxWatcher staleness | `archive/watcher-heartbeat.txt` older than 6h | Email alert |
+| GraphSync staleness | `scripts/graph-sync-heartbeat.txt` older than 6h | Email alert |
+| PullJob staleness | `last-pull.json` `last_ok` older than 6h | Email alert |
+| NightWatch staleness | `archive/night-watch-heartbeat.txt` older than 25h | Email alert |
 | Disk free space | C: drive below 75 GB free | Email alert |
 | File count | Filing Cabinet root loses files since last check | Email alert |
 
-Silence is health. An email means something needs attention.
+Each run also writes `ops/system-health.json`, the snapshot Al reads at session open.
+
+**Silence is not health.** A watcher that has stopped is silent, and an always-on process's silence must be indistinguishable from failure and treated as such — which is why every watcher stamps a heartbeat and the watchdog alarms on staleness rather than trusting quiet. The one thing the watchdog cannot catch is its own machine dying (it runs on the ThinkPad it watches); that gap is covered by the Cockpit going dark at 00:01. See `ops/watcher-layer.md` for the full liveness model.
 
 ### Disk threshold context
 
@@ -120,10 +126,18 @@ Resolved and closed 2026-07-09. Overflow concept retired. External Archive Drive
 | File | Purpose |
 |---|---|
 | `scripts/inbox-watcher.ps1` | Polls Filing Cabinet Inbox, gates and files receipts |
-| `scripts/watchdog.ps1` | Health checks: heartbeat staleness, disk space, file count |
-| `scripts/setup-watcher-tasks.ps1` | Registers both scheduled tasks. Run once as Admin on ThinkPad. |
+| `scripts/watchdog.ps1` | Health checks: supervises all watchers + disk + file count; writes `ops/system-health.json` |
+| `scripts/night-watch.ps1` | LAN activity monitor, night window (see `ops/watcher-layer.md`) |
+| `scripts/weekly-push.ps1` | Sunday push of NightWatch log + health snapshot to repo |
+| `scripts/pull-job.ps1` | Cockpit git pull every 3 min; writes `last-pull.json` + `data-age.json` |
+| `scripts/setup-watcher-tasks.ps1` | Registers InboxWatcher + Watchdog. Run once as Admin. |
+| `scripts/setup-nightwatch-task.ps1` | Registers NightWatch + WeeklyPush. Run once as Admin. |
+| `ops/system-health.json` | Watchdog health snapshot; Al reads at session open |
+| `ops/watcher-layer.md` | Full watcher-layer architecture, heartbeat map, session-open protocol |
 | `archive/receipts-log.jsonl` | Append-only log of every filed receipt |
-| `archive/watcher-heartbeat.txt` | Timestamp written by watcher on every 60-second cycle |
+| `archive/watcher-heartbeat.txt` | Timestamp written by InboxWatcher on every 60-second cycle |
+| `archive/night-watch-heartbeat.txt` | Timestamp written by NightWatch each run |
 | `archive/watcher-error.log` | Processing errors logged by watcher |
 | `archive/watchdog-state.json` | Persistent watchdog state: last file count, last run |
 | `archive/watchdog-log.jsonl` | Append-only health check log |
+| `logs/night-watch.jsonl` | Append-only LAN activity observations |
