@@ -1,9 +1,9 @@
 # cockpit.md — Bayer Family Ops Display System
 
-**Status:** Operational. ThinkPad headless. Widget v5.8.2 live. Pull job active (3-min cadence), writes `last-pull.json` on each OK. Fully Kiosk 00:01 reload set.
-**Last updated:** 2026-06-22
+**Status:** Operational. ThinkPad headless. Pull job active (3-min cadence), writes `last-pull.json` and `data-age.json` on each OK. Fully Kiosk 00:01 reload set.
+**Last updated:** 2026-07-12
 
-**Tablet clock confirmed (2026-06-17):** Mountain Daylight Time, network time ON, 24h format. Device clock is not a source of timing issues. Night dim at 21:00 is working as designed — widget dims and shows wake prompt, never fully powers off. Day rollover guard added to v5.8 as code backup to the 00:01 reload.
+**Tablet clock confirmed:** Mountain Daylight Time, network time ON, 24h format. Device clock is not a source of timing issues. Night dim at 21:00 is working as designed — widget dims and shows wake prompt, never fully powers off. Day rollover guard exists as code backup to the 00:01 reload.
 
 ---
 
@@ -24,6 +24,14 @@ It is the family's single source of truth for the day, the week, and what's comi
 - **Always on.** Night mode after 21:00 (brightness down), never powered off.
 - **Kalea adoption is the bar.** If she won't use it without instruction, it failed.
 - **Touch is the only input.** Tap targets minimum 44px. Kids will use this.
+
+### Silence is not health
+
+Any always-on process must assert liveness, or its silence must be indistinguishable from failure and treated as such. A screen that has stopped updating but still renders is worse than a dark screen: a dark screen is honest, a stale screen lies. This principle drives two design facts on the Cockpit:
+
+1. **The 00:01 hard-reload is the dead-man switch for the entire watcher layer.** It clears cache and re-fetches from the ThinkPad. If the ThinkPad is down, the fetch fails against an empty cache and the Cockpit goes dark. A dark Cockpit is how the household learns the ThinkPad died — because nothing on the ThinkPad can report its own death. Do NOT change the reload to "fail gracefully to cached state" without replacing this dead-man with something else. See `ops/watcher-layer.md`.
+
+2. **The widget must show its own data age.** A running pull job proves the widget can reach the ThinkPad; it does not prove the data is fresh. The sync banner reads `data-age.json` (calendars.md's true last-modified time) and shows how old the calendar actually is — in text and shape, never color alone (Matt is red-green colorblind). Fetch-success is not data-age.
 
 ---
 
@@ -86,37 +94,59 @@ It is the family's single source of truth for the day, the week, and what's comi
 | Machine | ThinkPad X1 Carbon |
 | Windows user | ThinkPad X1 Carbon (with spaces — legacy) |
 | Role | Dedicated headless server — Cockpit host + automation host |
-| OS | Windows (headless — lid closed, always on) |
+| OS | Windows (PowerShell 5.1, headless — lid closed, always on) |
 | Static IP | 192.168.1.60 |
 | Server software | Python HTTP server (`python -m http.server 8080`) |
-| Serves | `cal-widget-current.html`, `calendars.md`, `recipes-index.json`, `recipes/*.json`, `last-pull.json` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` |
+| Serves | `cal-widget-current.html`, `calendars.md`, `recipes-index.json`, `recipes/*.json`, `last-pull.json`, `data-age.json` from `C:\Users\ThinkPad X1 Carbon\Documents\family-ops` |
 | Cockpit reaches it via | Local LAN — Fully Kiosk Browser on Cockpit -> 192.168.1.60:8080 |
-| Automation | Scheduled pull job (git pull every 3 min) — LIVE. `scripts/pull-job.ps1`, heartbeat at `logs/pull-heartbeat.log`. Writes `last-pull.json` on every exit-0 pull (gitignored — runtime state only). |
+| Automation | ThinkPad is the automation host for the entire watcher layer. See `ops/watcher-layer.md` for the full roster (PullJob, GraphSync, InboxWatcher, Watchdog, NightWatch, WeeklyPush). |
 
-**ThinkPad pull job history (2026-06-18):** Confirmed FAIL logging worked correctly during a 3-hour outage caused by untracked `scripts/pull-job.ps1` blocking merges. Fixed by removing untracked file before pull. First OK at 07:40. Pull job reliable since.
+**The ThinkPad is a single point of failure for everything.** Cockpit data, calendar sync, receipt filing, and all monitoring run on this one machine. If it dies, they all die together, and the only signal is the Cockpit going dark at 00:01. This is a known and accepted architecture — the Cockpit dead-man is the mitigation. Bare-metal imaging of this machine is an open PQ (`backup-imaging-tool`).
 
-**`last-pull.json`:** Written to repo root by pull-job on every successful pull. Format: `{"last_ok": "YYYY-MM-DD HH:MM:SS"}`. Gitignored — never committed. Widget reads it via `checkSyncStatus()` to drive the sync footer.
+**Pull job:** `scripts/pull-job.ps1`, runs every 3 min via `BayerFamilyOps-PullJob`. Heartbeat at `logs/pull-heartbeat.log`. On every exit-0 pull, writes `last-pull.json` (Watchdog reads this for staleness) and `data-age.json` (widget reads this for the sync banner — carries `calendars.md`'s true last-modified time). Both are gitignored runtime state.
 
 ---
 
 ## Network Infrastructure
 
-- ISP: Starlink / Wi-Fi: "7 Little Bears"
-- **Firewalla Purple SE** targeted deploy weekend 2026-07-11/12, before homeschool starts in August.
-- Cockpit must be in unrestricted device group in Firewalla — it is not a child's device.
+- **ISP:** Starlink. **Wi-Fi:** "7 Little Bears" (5 GHz) / "7LittleBears 2.4" (2.4 GHz).
+- **Topology:** Starlink Gen 2 Standard Actuated dish -> Gen 2 router (main, office) -> second Gen 2 router running as a mesh node (kitchen). Wireless backhaul, no wired link between them (~-72 dBm). House is ~25x70 ft; main router serves the office half, mesh node serves the kitchen half. Cockpit is on the kitchen/mesh side.
+- **Subnet:** 192.168.1.0/24, gateway .1. Starlink app CAN change the subnet (confirmed 2026-07-12: options include 192.168.x.1/24 and 10.x.0.1/16). This matters for any future router-in-front deployment — moving Starlink's subnet is how the ThinkPad keeps 192.168.1.60.
+- **CGNAT:** Starlink public IP is carrier-grade NAT (100.64.x.x/10). No inbound reach, no port forwarding, no VPN server. All remote access is repo-mediated by design.
+- **No cell service at the property.** Wi-Fi is the only internet path. Mobile-data bypass of any network control is physically impossible here — a real advantage for parental control, and the reason NightWatch (network monitoring) is viable at all.
+
+### Starlink hardware is US-made — FCC-exempt
+
+Starlink routers are manufactured at SpaceX's Bastrop, Texas facility. The March 2026 FCC action added all *foreign-produced* consumer routers to the Covered List, with firmware/security updates on previously authorized foreign models cut off after **March 1, 2027**. Starlink hardware is domestic and exempt from that cliff. Practical consequence: the two Starlink routers are the safest networking hardware in the house and are NOT disposable. Any third-party security appliance (e.g. Firewalla — see below) must be checked for production origin before purchase, because a security box that stops receiving patches in March 2027 is not a security box.
+
+### Firewalla — evaluated, deferred (NOT purchased, NOT spec-confirmed)
+
+A Firewalla was evaluated for per-device parental control and network security. It is **deferred**, not planned-imminent. Corrections to prior notes in this file, all verified 2026-07-12:
+
+- **Purple SE does NOT have built-in Wi-Fi.** It needs a separate access point (Firewalla AP7, or a third-party AP in bridge mode). Earlier claims of built-in Wi-Fi were wrong.
+- **CPU is 4-core, not 6-core.** (The non-SE Purple is 6-core.)
+- **Price is not "~$329."** Verified direct: Purple SE $279, Orange $389, AP7 $369 each. Never quote from memory.
+- **It cannot "work alongside" the Starlink routers.** Putting any third-party router in front requires Starlink Bypass mode, which kills BOTH Starlink routers' Wi-Fi (the Gen 2 router has no Ethernet port — needs the Starlink Ethernet Adapter) AND kills the mesh node (mesh nodes only work with the Starlink router). So a Firewalla deploy means it must supply 100% of household Wi-Fi. On a no-wired-backhaul house, that's ~$600+ in hardware.
+- **VPN server does not work behind CGNAT.** The listed "VPN for remote access" benefit is dead on this connection (inbound). Outbound VPN *client* on a laptop is unaffected but is software on the laptop, not a Firewalla function.
+- **Regulatory status unconfirmed.** Firewalla's production origin and whether it holds an FCC Conditional Approval are unverified. Email them before any purchase. (Open PQ.)
+
+**Why deferred:** The actual need is one school Chromebook, inbound, remote-school, that the district's MDM leaves unrestricted at night. The cheap controls all fail because Wyatt knows the house Wi-Fi password and Android devices display it in plain text, and because ChromeOS randomizes its MAC per network (defeating MAC filtering and Starlink's per-device Pause). The chosen path is NightWatch (detect) + a physical drawer lock (control offline use) — not a $600 network rebuild five weeks before a baby, on a part-time income. Firewalla revisits in ~2 years when more kids have school machines and the money is easier.
+
+**If Firewalla is ever deployed:** the Cockpit MUST be placed in an unrestricted device group — it is not a child's device and must reach 192.168.1.60 without interference.
 
 ---
 
 ## Full System Architecture
 
 ```
-INTERNET -> Starlink -> Firewalla Purple SE
-  -> "7 Little Bears" Wi-Fi
-      -> ThinkPad X1 Carbon (192.168.1.60) [Python HTTP :8080, git pull every 3 min, writes last-pull.json on OK]
+INTERNET -> Starlink dish (Gen 2) -> Starlink Gen 2 router (main, office) [CGNAT, 192.168.1.0/24]
+  -> "7 Little Bears" Wi-Fi (office half)
+  -> Starlink Gen 2 mesh node (kitchen half, wireless backhaul)
+      -> ThinkPad X1 Carbon (192.168.1.60) [Python HTTP :8080; watcher layer host]
       -> PatientPoint Cockpit (Android 13) [Fully Kiosk -> 192.168.1.60:8080]
       -> Dell Precision 5690 "mbay" (Matt's primary)
       -> Kalea's device
-      -> Wyatt's device [Firewalla parental rules]
+      -> Wyatt's school Chromebook [NightWatch observes; drawer lock controls offline]
 ```
 
 ---
@@ -129,7 +159,7 @@ INTERNET -> Starlink -> Firewalla Purple SE
 | Setting | Value |
 |---------|-------|
 | Auto-reload idle | 86400s |
-| Scheduled daily reload | 00:01 (confirmed set 2026-06-17) |
+| Scheduled daily reload | 00:01 |
 | All 4 auto-reload triggers | ON |
 | Cache clear on reload | ON |
 | Web storage/history/cookies delete | OFF |
@@ -151,6 +181,9 @@ INTERNET -> Starlink -> Firewalla Purple SE
 | Always-on | Dark theme default |
 | Night mode | After 21:00 — brightness down, wake prompt on tap |
 | Network | LAN only — widget fetches from ThinkPad |
+| Colorblind | Never red-vs-green alone for meaning — pair with brightness, shape, or label (Matt is red-green deficient) |
+
+**Widget MCP limit:** The widget HTML is ~167KB and CANNOT be pushed via MCP. It is patched manually on the Precision (PowerShell) and pushed via git in a dedicated commit, separate from repo writes. Precision has a history of overwriting MCP commits — always `git pull --rebase` on Precision before pushing. See `cal-widget.md`.
 
 ---
 
@@ -158,7 +191,7 @@ INTERNET -> Starlink -> Firewalla Purple SE
 
 | Gate | Description | Status |
 |------|-------------|--------|
-| 1 | Widget loads clean — Kalea can use without instruction | GREEN — v5.8.2 |
+| 1 | Widget loads clean — Kalea can use without instruction | GREEN |
 | 2 | At least 2 agents writing to `calendars.md` reliably via Foreman handoff | OPEN |
 | 3 | Stockyard S8 durability fix shipped | OPEN |
 | 4 | ThinkPad running headless clean for 1 full week without babysitting | GREEN |
@@ -174,7 +207,8 @@ INTERNET -> Starlink -> Firewalla Purple SE
 | PatientPoint 32" Android Wallboard | PURCHASED | $349.99 |
 | Ergotron LX Wall Mount (used) | PURCHASED | $64.99 |
 | **Cockpit total** | | **$414.98** |
-| Firewalla Purple SE | Planned (July 2026) | ~$329.00 |
+| Firewalla | Deferred (~2 years) | — |
+| Habit Control drawer lock (Wyatt) | Planned | $81 (standalone lock) |
 
 ---
 
@@ -184,4 +218,4 @@ INTERNET -> Starlink -> Firewalla Purple SE
 
 Full Home Improvement voice cast (ElevenLabs Creator $22/mo), sound layer (local files, Web Audio API), daily liturgical briefing (Wilson/Foreman), video calling station (USB camera + WebRTC), weather integration (Foreman owns), sensor feeds (Stockyard + farm), motion-triggered wake (Fully Kiosk native).
 
-Foundation placeholders wired in widget v2.9: `speak()`, `playSound()`, `VOICE_CAST`, `scheduleMorningBriefing()`, `ccirAlert()`, `dinnerReminder()`. All dormant. Do not activate without Phase 3 gate clearance.
+Foundation placeholders wired in widget: `speak()`, `playSound()`, `VOICE_CAST`, `scheduleMorningBriefing()`, `ccirAlert()`, `dinnerReminder()`. All dormant. Do not activate without Phase 3 gate clearance.
