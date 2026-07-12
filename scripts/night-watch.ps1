@@ -1,18 +1,18 @@
-# night-watch.ps1 — LAN activity monitor, night window 21:30–06:00
+# night-watch.ps1 --- LAN activity monitor, night window 21:30---06:00
 # Runs every 5 min via BayerFamilyOps-NightWatch Task Scheduler task.
 #
 # BASELINE MODE: logs all unknown-device activity. No alerts, no digest.
 # Thresholds and digest added after Chromebook baseline week completes.
 #
 # Observation types written to night-watch.jsonl:
-#   blip    — device seen in < 3 consecutive 5-min checks (< 15 min sustained)
-#   session — device seen in 3+ consecutive checks (>= 15 min sustained)
-#   error   — scan failure
+#   blip    --- device seen in < 3 consecutive 5-min checks (< 15 min sustained)
+#   session --- device seen in 3+ consecutive checks (>= 15 min sustained)
+#   error   --- scan failure
 #
-# Output files (local to ThinkPad — pushed to repo weekly by WeeklyPush):
-#   archive\night-watch-heartbeat.txt   — last-run timestamp (read by Watchdog)
-#   archive\night-watch-session.json    — inter-run session tracking state
-#   logs\night-watch.jsonl              — observation log
+# Output files (local to ThinkPad --- pushed to repo weekly by WeeklyPush):
+#   archive\night-watch-heartbeat.txt   --- last-run timestamp (read by Watchdog)
+#   archive\night-watch-session.json    --- inter-run session tracking state
+#   logs\night-watch.jsonl              --- observation log
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -46,7 +46,7 @@ foreach ($d in @($ArchiveDir, $LogDir)) {
 }
 
 # ---------------------------------------------------------------
-# KNOWN-GOOD DEVICES — never log these
+# KNOWN-GOOD DEVICES --- never log these
 # KnownMacs: Starlink hardware (confirmed from Starlink app)
 # KnownHostPatterns: household workstations (matched against DNS hostname)
 # Add household device MACs here after baseline week identifies them.
@@ -170,10 +170,13 @@ try {
     # Persist session state
     $sessions | ConvertTo-Json -Depth 3 | Set-Content $SessionFile -Encoding UTF8
 
-    Write-Host "[night-watch] $($NowLocal.ToString('HH:mm')) — Unknown devices logged: $scanned"
+    Write-Host "[night-watch] $($NowLocal.ToString('HH:mm')) --- Unknown devices logged: $scanned"
 
 } catch {
     Write-Warning "[night-watch] Scan error: $_"
     Write-NightLog @{ ts = $NowLocal.ToString("o"); type = "error"; detail = "$_" }
     exit 1
 }
+
+
+
