@@ -1,4 +1,6 @@
-# Graph sync runtime (ThinkPad only — never commit)
+# =========================================================
+# Graph sync runtime (ThinkPad only -- never commit)
+# =========================================================
 scripts/graph-token.json
 scripts/graph-token-kalea.json
 scripts/graph-sync-state.json
@@ -6,3 +8,37 @@ scripts/graph-sync-state-kalea.json
 scripts/graph-sync-revert.log
 scripts/graph-sync-heartbeat.txt
 scripts/graph-sync-error.log
+
+# =========================================================
+# Machine-local runtime state (ThinkPad only -- never commit)
+# Heartbeats, session state, and local logs change every few
+# minutes on the ThinkPad. Committing them fights the running
+# scheduled tasks and creates pull conflicts.
+# =========================================================
+archive/night-watch-heartbeat.txt
+archive/night-watch-session.json
+archive/watcher-heartbeat.txt
+archive/watchdog-state.json
+archive/watchdog-log.jsonl
+archive/receipts-log.jsonl
+data-age.json
+last-pull.json
+logs/pull-heartbeat.log
+logs/push-heartbeat.log
+
+# =========================================================
+# Session batons -- spin-up prompts do NOT live in the repo.
+# Session state in a markdown file rots the moment it lands.
+# =========================================================
+wave4-handoff.md
+*-handoff.md
+
+# =========================================================
+# WeeklyPush payload -- these MUST reach the repo.
+# Negated so the household-ops data pipeline works:
+#   logs/night-watch.jsonl  -> Al reads for the weekly synthesis
+#   ops/system-health.json  -> Watchdog snapshot, Al reads at session open
+# Do not remove these negations.
+# =========================================================
+!logs/night-watch.jsonl
+!ops/system-health.json
