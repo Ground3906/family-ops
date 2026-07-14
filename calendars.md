@@ -263,6 +263,18 @@ Last batch: 2026-07-13.
 [CHORE] 2026-07-10 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-11 ALL-DAY [M][E] Dishes :: chore-type=dishes
 [CHORE] 2026-07-11 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-13 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-13 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-14 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-15 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-15 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-16 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-16 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-17 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-17 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-18 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-18 ALL-DAY [R][C] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
