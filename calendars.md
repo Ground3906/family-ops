@@ -186,7 +186,7 @@ Last batch: 2026-07-13.
 [CAL] 2026-07-27 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-07-28 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
 [CAL] 2026-07-29 17:30 [W][M][R][C][E] Swim practice :: kids :: end=19:30 :: location="Florence Pool, Florence, CO"
-[CAL] 2026-07-30 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO"
+[CAL] 2026-07-30 09:30 [W][M][R][C][E] Swim practice :: kids :: end=12:00 :: location="Florence Pool, Florence, CO" :: cancel=confirmed
 
 ---
 
