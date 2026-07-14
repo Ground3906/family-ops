@@ -263,6 +263,8 @@ Last batch: 2026-07-13.
 [CHORE] 2026-07-10 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-11 ALL-DAY [M][E] Dishes :: chore-type=dishes
 [CHORE] 2026-07-11 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-13 ALL-DAY [M][C] Bathrooms :: chore-zone=B :: span=2026-07-19
+[CHORE] 2026-07-13 ALL-DAY [W][R] Floors :: chore-zone=B :: span=2026-07-19
 [CHORE] 2026-07-13 ALL-DAY [W][R] Dishes :: chore-type=dishes
 [CHORE] 2026-07-13 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
@@ -275,11 +277,19 @@ Last batch: 2026-07-13.
 [CHORE] 2026-07-17 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-18 ALL-DAY [M][E] Dishes :: chore-type=dishes
 [CHORE] 2026-07-18 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-19 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-19 ALL-DAY [C][E] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
 [MEAL] 2026-07-09 17:30 Cobb salad :: meal-type=dinner
 [MEAL] 2026-07-10 17:30 Spaghetti and meatballs :: meal-type=dinner
+[MEAL] 2026-07-14 17:30 BLTs :: meal-type=dinner :: notes="4H picnic at 15:00 - BLTs at home after"
+[MEAL] 2026-07-15 17:00 4H pork dinner - fairgrounds :: meal-type=dinner :: notes="Defrost pulled pork today for 7/17"
+[MEAL] 2026-07-16 17:30 Pork tacos :: meal-type=dinner :: notes="Start pulled pork in crockpot overnight tonight for 7/17"
+[MEAL] 2026-07-17 17:30 Pulled pork :: meal-type=dinner
+[MEAL] 2026-07-18 17:30 Salad :: meal-type=dinner :: tentative=true
+[MEAL] 2026-07-19 17:30 Gyros :: meal-type=dinner :: tentative=true
 
 ---
 
