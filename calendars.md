@@ -125,6 +125,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
 - **[CHORE] dish/table entries: use `chore-type=dishes` or `chore-type=table` opt. Two lines per day: one for dishes crew (lead + 2nd), one for table crew. Pills only - no prose description.**
+- **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone - her fixed daily trash + sweep are her zone equivalent.**
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section - it will double-render alongside the block entry for that date.**
 - **Individual months within the FAIRBOARD MEETING block can be suppressed with `cancel=confirmed` on that specific line without touching the rest of the block - this is how a single canceled meeting is handled without breaking the monthly pattern.**
 
@@ -248,6 +249,10 @@ Last batch: 2026-07-13.
 
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
+<!-- Zone week source: punch-list/chore-chart.md -->
+<!-- Week A: Bathrooms=Wyatt+Cullen / Floors=Molly+Emmitt -->
+<!-- Week B: Bathrooms=Molly+Emmitt / Floors=Wyatt+Cullen -->
+<!-- Rileigh: no zone. Fixed daily = trash + sweep. -->
 
 [CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-07-12
@@ -263,8 +268,8 @@ Last batch: 2026-07-13.
 [CHORE] 2026-07-10 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-11 ALL-DAY [M][E] Dishes :: chore-type=dishes
 [CHORE] 2026-07-11 ALL-DAY [R][C] Table :: chore-type=table
-[CHORE] 2026-07-13 ALL-DAY [M][C] Bathrooms :: chore-zone=B :: span=2026-07-19
-[CHORE] 2026-07-13 ALL-DAY [W][R] Floors :: chore-zone=B :: span=2026-07-19
+[CHORE] 2026-07-13 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-07-19
+[CHORE] 2026-07-13 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-07-19
 [CHORE] 2026-07-13 ALL-DAY [W][R] Dishes :: chore-type=dishes
 [CHORE] 2026-07-13 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
