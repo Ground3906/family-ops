@@ -397,7 +397,7 @@ Last batch: 2026-07-13.
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
-[CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Clinic, Westcliffe, CO"
+[CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
@@ -416,6 +416,7 @@ Last batch: 2026-07-13.
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
