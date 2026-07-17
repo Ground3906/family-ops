@@ -398,8 +398,8 @@ Last batch: 2026-07-13.
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
-[CAL] 2026-07-30 12:50 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO" :: flag=true :: notes="flag=conflict - overlaps 13:30 VA Audiology exam, Colorado Springs, different city same window"
-[CAL] 2026-07-30 13:30 [D] VA Audiology exam :: appointments :: stripe=appt :: end=14:30 :: location="1330 Inverness Drive STE 445, Colorado Springs, CO 80910" :: flag=true :: notes="flag=conflict - overlaps 12:50 Kalea prenatal, Pueblo, different city same window. Prep: keep ears clean/debris-free or exam may be delayed."
+[CAL] 2026-07-30 12:50 [K] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
+[CAL] 2026-07-30 13:30 [D] VA Audiology exam :: appointments :: stripe=appt :: end=14:30 :: location="1330 Inverness Drive STE 445, Colorado Springs, CO 80910" :: notes="Prep: keep ears clean/debris-free or exam may be delayed."
 [CAL] 2026-07-31 ALL-DAY [FAM] Swim meet - State Championship :: family :: location="Alamosa, CO" :: span=2026-08-02
 
 ---
