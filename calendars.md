@@ -428,6 +428,12 @@ Last batch: 2026-07-13.
 
 ---
 
+### NOVEMBER 2026
+
+[CAL] 2026-11-07 ALL-DAY [D] 3rd Rifle Elk Season :: misc :: span=2026-11-15 :: travel=true :: flag=true :: notes="Matt-only hunting blackout per family.md backup-adult tier. Span overlaps Nov 8 wedding anniversary (Family Sacred Date) - confirm with Matt/Kalea how anniversary is handled this year."
+
+---
+
 ### FEBRUARY 2027
 
 [CAL] 2027-02-04 09:30 [K] Dentist :: appointments :: stripe=appt :: end=10:30 :: location="Canon Family Dental, Canon City, CO"
