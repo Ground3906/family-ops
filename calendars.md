@@ -128,6 +128,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone - her fixed daily trash + sweep are her zone equivalent.**
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section - it will double-render alongside the block entry for that date.**
 - **Individual months within the FAIRBOARD MEETING block can be suppressed with `cancel=confirmed` on that specific line without touching the rest of the block - this is how a single canceled meeting is handled without breaking the monthly pattern.**
+- **Hunting season spans (Mystery Ranch) do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks - he tracks those himself.**
 
 ---
 
@@ -425,12 +426,13 @@ Last batch: 2026-07-13.
 ### OCTOBER 2026
 
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: flag=true :: notes="Bring retainer"
+[CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 
 ---
 
 ### NOVEMBER 2026
 
-[CAL] 2026-11-07 ALL-DAY [D] 3rd Rifle Elk Season :: misc :: span=2026-11-15 :: travel=true :: flag=true :: notes="Matt-only hunting blackout per family.md backup-adult tier. Span overlaps Nov 8 wedding anniversary (Family Sacred Date) - confirm with Matt/Kalea how anniversary is handled this year."
+[CAL] 2026-11-07 ALL-DAY [D] 3rd Rifle Elk Season :: misc :: span=2026-11-15 :: travel=true
 
 ---
 
