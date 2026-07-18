@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-13.
+Last batch: 2026-07-18.
 
 ---
 
@@ -397,6 +397,7 @@ Last batch: 2026-07-13.
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
+[CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-07-30 12:50 [K] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
