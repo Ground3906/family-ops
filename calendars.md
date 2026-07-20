@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-19.
+Last batch: 2026-07-20.
 
 ---
 
@@ -397,6 +397,7 @@ Last batch: 2026-07-19.
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-21 15:00 [K] Pick up generator :: errands :: flag=true :: notes="Location TBD - confirm pickup point"
+[CAL] 2026-07-22 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
 [CAL] 2026-07-22 17:00 [D] WGU D281 Overview - LPI cohort live event :: meetings :: end=18:00
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
