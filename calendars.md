@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-18.
+Last batch: 2026-07-19.
 
 ---
 
@@ -394,6 +394,7 @@ Last batch: 2026-07-18.
 [CAL] 2026-07-20 15:00 [K] Meeting - Altitude Fitness - swim team proposal :: meetings :: end=16:00 :: location="Altitude Fitness, Westcliffe, CO"
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
+[CAL] 2026-07-21 15:00 [K] Pick up generator :: errands :: flag=true :: notes="Location TBD - confirm pickup point"
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
