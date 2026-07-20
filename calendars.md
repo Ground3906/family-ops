@@ -391,11 +391,14 @@ Last batch: 2026-07-19.
 [CAL] 2026-07-19 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: cancel=confirmed
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
+[CAL] 2026-07-20 08:30 [D] WGU Program mentoring appt - Teresa Jackson :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf #GQS1G9H4D"
 [CAL] 2026-07-20 15:00 [K] Meeting - Altitude Fitness - swim team proposal :: meetings :: end=16:00 :: location="Altitude Fitness, Westcliffe, CO"
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-21 15:00 [K] Pick up generator :: errands :: flag=true :: notes="Location TBD - confirm pickup point"
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
+[CAL] 2026-07-22 17:00 [D] WGU D281 Overview - LPI cohort live event :: meetings :: end=18:00
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26
 [CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
