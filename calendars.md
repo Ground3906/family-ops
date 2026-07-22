@@ -124,11 +124,10 @@ Confirm exact times each season; this is the shape, not the truth.
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
-- **[CHORE] dish/table entries: use `chore-type=dishes` or `chore-type=table` opt. Two lines per day: one for dishes crew (lead + 2nd), one for table crew. Pills only - no prose description.**
-- **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone - her fixed daily trash + sweep are her zone equivalent.**
-- **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section - it will double-render alongside the block entry for that date.**
-- **Individual months within the FAIRBOARD MEETING block can be suppressed with `cancel=confirmed` on that specific line without touching the rest of the block - this is how a single canceled meeting is handled without breaking the monthly pattern.**
-- **Hunting season spans (Mystery Ranch) do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks - he tracks those himself.**
+- **[CHORE] dish entries: chore-type=dishes. Animal entries: chore-type=animals. Table entries: chore-type=table. Three lines per day. Pills only.**
+- **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone.**
+- **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section.**
+- **Hunting season spans do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks.**
 
 ---
 
@@ -140,7 +139,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-20.
+Last batch: 2026-07-21.
 
 ---
 
@@ -250,41 +249,129 @@ Last batch: 2026-07-20.
 
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
-<!-- Zone week source: punch-list/chore-chart.md -->
-<!-- Week A: Bathrooms=Wyatt+Cullen / Floors=Molly+Emmitt -->
-<!-- Week B: Bathrooms=Molly+Emmitt / Floors=Wyatt+Cullen -->
-<!-- Rileigh: no zone. Fixed daily = trash + sweep. -->
+<!-- Zone: Week A=Bathrooms W+C/Floors M+E. Week B=Bathrooms M+E/Floors W+C. Rileigh no zone. -->
+<!-- Dishes rotation source: punch-list/chore-chart.md -->
+<!-- Animal prep rotation source: punch-list/chore-chart.md - lead always opposite dishes lead -->
 
+<!-- WEEK A: 7/6-7/12 -->
 [CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-07-12
 [CHORE] 2026-07-06 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-06 ALL-DAY [M][C] Animals :: chore-type=animals
 [CHORE] 2026-07-06 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-07 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-07 ALL-DAY [M][E] Animals :: chore-type=animals
 [CHORE] 2026-07-07 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-08 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-08 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-07-08 ALL-DAY [R][C] Table :: chore-type=table
 [CHORE] 2026-07-09 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-09 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-07-09 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-10 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-10 ALL-DAY [M][E] Animals :: chore-type=animals
 [CHORE] 2026-07-10 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-11 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-11 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-07-11 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK B: 7/13-7/19 -->
 [CHORE] 2026-07-13 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-07-19
 [CHORE] 2026-07-13 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-07-19
 [CHORE] 2026-07-13 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-13 ALL-DAY [M][C] Animals :: chore-type=animals
 [CHORE] 2026-07-13 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-14 ALL-DAY [M][E] Animals :: chore-type=animals
 [CHORE] 2026-07-14 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-15 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-15 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-07-15 ALL-DAY [R][C] Table :: chore-type=table
 [CHORE] 2026-07-16 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-16 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-07-16 ALL-DAY [C][E] Table :: chore-type=table
 [CHORE] 2026-07-17 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-17 ALL-DAY [M][E] Animals :: chore-type=animals
 [CHORE] 2026-07-17 ALL-DAY [R][E] Table :: chore-type=table
 [CHORE] 2026-07-18 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-18 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-07-18 ALL-DAY [R][C] Table :: chore-type=table
 [CHORE] 2026-07-19 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-19 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-07-19 ALL-DAY [C][E] Table :: chore-type=table
+
+<!-- WEEK A: 7/20-7/26 -->
+[CHORE] 2026-07-20 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-26
+[CHORE] 2026-07-20 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-07-26
+[CHORE] 2026-07-20 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-20 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-07-20 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-21 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-21 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-07-21 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-22 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-22 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-07-22 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-23 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-23 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-07-23 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-24 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-24 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-07-24 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-25 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-25 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-07-25 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK B: 7/27-8/2 -->
+[CHORE] 2026-07-27 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-08-02
+[CHORE] 2026-07-27 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-08-02
+[CHORE] 2026-07-27 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-27 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-07-27 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-28 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-28 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-07-28 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-07-29 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-07-29 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-07-29 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-07-30 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-07-30 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-07-30 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-07-31 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-07-31 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-07-31 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-01 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-01 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-01 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK A: 8/3-8/9 -->
+[CHORE] 2026-08-03 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-09
+[CHORE] 2026-08-03 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-08-09
+[CHORE] 2026-08-03 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-03 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-08-03 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-04 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-04 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-04 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-05 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-05 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-05 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-08-06 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-06 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-08-06 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-07 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-07 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-07 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-08 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-08 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-08 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK B: 8/10 -->
+[CHORE] 2026-08-10 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-08-16
+[CHORE] 2026-08-10 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-08-16
+[CHORE] 2026-08-10 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-10 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-08-10 ALL-DAY [C][E] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
@@ -296,6 +383,8 @@ Last batch: 2026-07-20.
 [MEAL] 2026-07-17 17:30 Pulled pork :: meal-type=dinner
 [MEAL] 2026-07-18 17:30 Salad :: meal-type=dinner :: tentative=true
 [MEAL] 2026-07-19 17:30 Gyros :: meal-type=dinner :: tentative=true
+[MEAL] 2026-07-21 17:30 Pulled pork, Caesar salad, rolls :: meal-type=dinner
+[MEAL] 2026-07-23 17:30 Gyros :: meal-type=dinner
 
 ---
 
@@ -391,7 +480,7 @@ Last batch: 2026-07-20.
 [CAL] 2026-07-19 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: cancel=confirmed
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
-[CAL] 2026-07-20 08:30 [D] WGU Program mentoring appt - Teresa Jackson :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf #GQS1G9H4D"
+[CAL] 2026-07-20 08:30 [D] WGU Program mentoring appt - Teresa Jackson :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf GQS1G9H4D"
 [CAL] 2026-07-20 15:00 [K] Meeting - Altitude Fitness - swim team proposal :: meetings :: end=16:00 :: location="Altitude Fitness, Westcliffe, CO"
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
