@@ -748,7 +748,7 @@ function parseChoreLine(line){
   const isZone=!!opts.chorezone;
   const zoneLabel=opts.chorezone||null;
   const choreType=opts.choretype||null;
-  return{id:gid(),date,pills:ps,title,span:opts.span||null,isZone,zoneLabel,choreType};
+  return{id:gid(),date,pills:ps,title,span:opts.span||null,isZone,zoneLabel,choreType,hist:[]};
 }
 function choreZoneSunday(entry){
   // Return the Sunday on or before the span start — the Sunday that kicks off that zone week
@@ -1854,7 +1854,7 @@ function nightController(trigger){
   }
   if(trigger==='timerDismissed'||trigger==='hourly'||trigger==='startup'||trigger==='manual'){
     if(nightOn)return; // already in night mode
-    if(h<NIGHT_HOUR)return; // not night time yet
+    if(trigger!=='manual'&&h<NIGHT_HOUR)return; // not night time yet
     if(_hasActiveTimers())return; // timers still running/active
     // All clear - engage night
     nightOn=true;
@@ -1969,6 +1969,7 @@ document.addEventListener('DOMContentLoaded',function(){init();checkSyncStatus()
 <div id="sync-footer">Last sync: checking...</div>
 </body>
 </html>
+
 
 
 
