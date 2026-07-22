@@ -139,7 +139,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-21.
+Last batch: 2026-07-22.
 
 ---
 
@@ -250,8 +250,7 @@ Last batch: 2026-07-21.
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
 <!-- Zone: Week A=Bathrooms W+C/Floors M+E. Week B=Bathrooms M+E/Floors W+C. Rileigh no zone. -->
-<!-- Dishes rotation source: punch-list/chore-chart.md -->
-<!-- Animal prep rotation source: punch-list/chore-chart.md - lead always opposite dishes lead -->
+<!-- Dishes/animal rotation source: punch-list/chore-chart.md -->
 
 <!-- WEEK A: 7/6-7/12 -->
 [CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
@@ -385,6 +384,9 @@ Last batch: 2026-07-21.
 [MEAL] 2026-07-19 17:30 Gyros :: meal-type=dinner :: tentative=true
 [MEAL] 2026-07-21 17:30 Pulled pork, Caesar salad, rolls :: meal-type=dinner
 [MEAL] 2026-07-23 17:30 Gyros :: meal-type=dinner
+[MEAL] 2026-07-24 17:30 Enchiladas :: meal-type=dinner :: notes="Pull from freezer"
+[MEAL] 2026-07-25 17:30 Bowtie noodles, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
+[MEAL] 2026-07-26 17:30 Grill dinner :: meal-type=dinner
 
 ---
 
