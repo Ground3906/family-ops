@@ -128,6 +128,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone.**
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section.**
 - **Hunting season spans do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks.**
+- **A time overlap is only a real conflict if the pills share a person. Check pills before flagging - two events at the same time involving different people is not a conflict, it's just two things happening.**
 
 ---
 
@@ -491,7 +492,7 @@ Last batch: 2026-07-22.
 [CAL] 2026-07-21 15:00 [K] Pick up generator :: errands :: flag=true :: notes="Location TBD - confirm pickup point"
 [CAL] 2026-07-22 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
-[CAL] 2026-07-22 14:30 [D] WGU 3rd attempt Essentials exam call - Randy Stauber :: meetings :: end=14:45 :: flag=true :: notes="Conf NJD21G8K1. Randy calling (719) 306-9606. Direct time conflict with sports physical same window - confirm who covers what."
+[CAL] 2026-07-22 14:30 [D] WGU 3rd attempt Essentials exam call - Randy Stauber :: meetings :: end=14:45 :: notes="Conf NJD21G8K1. Randy calling (719) 306-9606."
 [CAL] 2026-07-22 17:00 [D] WGU D281 Overview - LPI cohort live event :: meetings :: end=18:00
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 16:30 [D] Fairboard Emergency Meeting :: meetings :: location="Westcliffe, CO" :: flag=true :: notes="Location TBD, confirm exact venue"
