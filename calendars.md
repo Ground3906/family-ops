@@ -387,6 +387,7 @@ Last batch: 2026-07-22.
 [MEAL] 2026-07-24 17:30 Enchiladas :: meal-type=dinner :: notes="Pull from freezer"
 [MEAL] 2026-07-25 17:30 Bowtie noodles, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
 [MEAL] 2026-07-26 17:30 Grill dinner :: meal-type=dinner
+[MEAL] 2026-08-06 17:30 Dinner with fruit spread :: meal-type=dinner :: notes="Transfiguration - grapes and first fruits at table. Bless before dinner."
 
 ---
 
