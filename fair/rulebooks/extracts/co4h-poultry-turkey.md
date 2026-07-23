@@ -1,0 +1,17 @@
+# Colorado 4-H State Fair Contest Requirements — Poultry / Turkey — NOT FOUND
+
+**Status: no live document located after genuine search. No PDF downloaded. This file documents the search trail only — it contains no fabricated rule content.**
+
+## What was checked
+1. **URL pattern guess, verified by direct request (not reported as real):** Tried `.../statefair/StateFairContestReq-Poultry.pdf` and `-Turkey.pdf` variants, plus several 2026-era filename/path guesses modeled on the confirmed working Dog URL pattern (`State-4-H-Poultry-2026.pdf`, `Poultry-ContestReq.2026.pdf` under `/wp-content/uploads/sites/27/2026/{02,05,06}/` and `/2025/11/`) — **all returned HTTP 404**.
+2. **Master Contest Requirements doc** (`ContestReq.Master.2026.pdf`, the current replacement for the old generic `StateFairContestReq.pdf`) — its table of contents has no Poultry or Turkey section (confirmed: only Cake Decorating, Cat Show, Creative Cooks, Digital Photo, Fashion Revue, Public Presentations, Rocket Fly Day).
+3. **Colorado 4-H State Fair hub page** (`co4h.colostate.edu/colorado-4-h-state-fair/`) and **State Fair Information page** — score-sheet/contest listings cover Cat, Dog, Horse, Horseless Horse, Veterinary Science only; no poultry/turkey show or contest referenced anywhere.
+4. **Poultry Project page** (`co4h.colostate.edu/4h-project/4-h-poultry-project/`) confirms turkey is a sub-category of the Poultry project ("Show Chickens, Market & Breeding Chickens, Market & Breeding Turkeys, Geese, Ducks, Pigeons, Game birds") but links only general project materials — Poultry-Handbook.pdf, Poultry-RaisingTurkeys.pdf, Poultry-PT.pdf — none of which are State Fair contest-requirements/rules documents.
+5. **Livestock judging contest doc** (a separate current contest PDF) covers only cattle/sheep/goats — no poultry judging class.
+6. A distinct, smaller **"Colorado State 4-H Poultry Show"** event (separate from the August State Fair) is listed for **July 8, 2026 at Gunnison County Fairgrounds** via `extension.colostate.edu/event/4-h-poultry-show/`, but the listing itself says **"Event details TBA"** and links no rules/requirements document.
+
+## Likely explanation (supported by external evidence, not just absence)
+Web search surfaced multiple news items confirming Colorado State Fair poultry shows have been cancelled/suspended in recent years due to **Highly Pathogenic Avian Influenza (HPAI)** biosecurity concerns (e.g., "Poultry Shows a No-Go At 2022 Colorado State Fair" — ag.colorado.gov; "Avian flu outbreak prompts cancellation of poultry shows at Colorado State Fair" — 9News/CBS Colorado), and HPAI-driven poultry-exhibition restrictions are an active, recurring national issue as of 2026 (e.g. contemporaneous Wisconsin DATCP poultry-show suspension notice). This is consistent with — and plausibly explains — why Colorado 4-H currently has no standing State-Fair-level Poultry/Turkey contest-requirements document analogous to Dog/Cat, and why Custer County's own poultry department is described as near-dormant.
+
+## Recommendation for the revival project
+No current state-level contest-requirements text exists to compare against. If reviving the department, county planners should (a) contact CSU Extension/Colorado 4-H state office directly to confirm current poultry/turkey exhibition policy given HPAI status, and (b) treat the Poultry-Handbook.pdf / Poultry-RaisingTurkeys.pdf project-guide materials (links above) as the only current state-level poultry reference material, pending any updated state fair contest rules.
