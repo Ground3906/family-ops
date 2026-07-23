@@ -10,6 +10,11 @@ Fair Board operational support for Matt Bayer, Custer County Fair Board member. 
 - GitHub cannot hold an empty directory: a folder exists only once a file is committed into it
 - Session state: spin-up prompt only — never in markdown files
 
+## Content Rules
+- Any document Matt will present under his own name (board leave-behinds, proposals, letters) is subject to the Profile em-dash ban. Run a dash check before shipping — periods, commas, or colons instead of em dashes, no exceptions for headers or titles either.
+- Board-facing language stays collaborative, never directive: proposals are discussion items, framed as alignment, never criticism of prior decisions. Past calls made in good faith stay framed that way, no attribution to named individuals for what went wrong.
+- Verify binary assets exist in the repo (`get_file_contents`) before documenting them as present in the charter or any doctrine file. Do not write intended-but-unconfirmed files into the directory structure.
+
 ## Directory Structure
 ```
 fair/
