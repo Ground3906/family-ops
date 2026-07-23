@@ -157,15 +157,19 @@ body {
 .panel { display: none; width: 100%; height: 100%; }
 .panel.active { display: flex; }
 
-/* -- CARD (parchment panel) -- */
+/* -- CARD (parchment panel, two-layer shell) -- */
 .card {
   background: linear-gradient(175deg, var(--parch) 0%, var(--parch-mid) 50%, var(--parch-dk) 100%);
-  border-radius: var(--radius);
+  border-radius: 3px;
   border-top: 1px solid #d4b870;
   border-left: 1px solid #c4a858;
   border-right: 1px solid #8a7030;
   border-bottom: 2px solid #6a5020;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.45);
+  box-shadow:
+    0 0 0 3px #0c0a06,
+    0 0 0 5px #502e0c,
+    0 8px 20px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.45);
   padding: 20px;
 }
 
@@ -380,7 +384,7 @@ body {
 
 /* -- BOARD TAB -- */
 #panel-board { flex-direction: column; padding: 20px 24px 16px 24px; gap: 16px; overflow: hidden; }
-#kid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+#kid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .kid-card { padding: 18px 18px; }
 .kc-name { font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin-bottom: 8px; text-shadow: 0 1px 0 rgba(255,255,255,0.3); }
 .kc-month-lbl { font-size: 10px; font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-soft); }
@@ -420,7 +424,7 @@ body {
 .btn-payout-action:not(:disabled):active { transform: translateY(2px); box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px #502e0c, 0 1px 4px rgba(0,0,0,0.6); border-bottom-width: 1px; }
 .btn-payout-action:disabled { opacity: 0.3; cursor: not-allowed; }
 
-#payout-kids { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+#payout-kids { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .payout-kid-card { padding: 14px 16px; }
 .pkc-name { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); margin-bottom: 4px; text-shadow: 0 1px 0 rgba(255,255,255,0.3); }
 .pkc-net { font-size: 26px; font-family: ui-monospace, Consolas, monospace; color: #8a3020; margin-bottom: 4px; }
