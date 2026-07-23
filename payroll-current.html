@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Payroll</title>
+<style>
+:root {
+  --pine:      #182420;
+  --pine-deep: #101B17;
+  --kraft:     #EAD9AE;
+  --kraft-dk:  #DAC48F;
+  --ink:       #2B2620;
+  --ink-soft:  #5A5245;
+  --barn:      #9A3324;
+  --barn-dk:   #7A2A1D;
+  --brass:     #B98B2A;
+  --chalk:     #EDE6D6;
+  --chalk-dim: #B9B2A2;
+  --line:      rgba(237,230,214,0.14);
+  --radius:    10px;
+  --hdr:       80px;
+  --tab:       64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--pine-deep);
+  color: var(--chalk);
+  font-family: system-ui, -apple-system, sans-serif;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+/* -- HEADER -- */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--hdr);
+  padding: 0 28px;
+  background: var(--pine-deep);
+  border-bottom: 1px solid var(--line);
+}
+#btn-home {
+  height: 52px;
+  padding: 0 28px;
+  background: transparent;
+  border: 1px solid var(--brass);
+  border-radius: var(--radius);
+  color: var(--brass);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+#btn-home:active { background: rgba(185,139,42,0.18); }
+.hdr-center { text-align: center; }
+.hdr-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.hdr-title {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--chalk);
+  line-height: 1;
+}
+#save-status {
+  min-width: 220px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--chalk-dim);
+  letter-spacing: 0.04em;
+}
+#save-status.saving { color: var(--brass); }
+#save-status.error  { color: #D4694F; }
+
+/* -- TABS -- */
+#tab-bar {
+  display: flex;
+  height: var(--tab);
+  background: var(--pine);
+  border-bottom: 1px solid var(--line);
+}
+.tab-btn {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--chalk-dim);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tab-btn.active {
+  color: var(--brass);
+  border-bottom-color: var(--brass);
+}
+
+/* -- PANELS -- */
+#content {
+  height: calc(1080px - var(--hdr) - var(--tab));
+  overflow: hidden;
+}
+.panel { display: none; width: 100%; height: 100%; }
+.panel.active { display: flex; }
+
+/* -- CARD -- */
+.card {
+  background: var(--kraft);
+  border-radius: var(--radius);
+  border: 1px solid var(--kraft-dk);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+  padding: 20px;
+}
+
+/* -- LOG TAB -- */
+#panel-log {
+  display: none;
+  flex-direction: row;
+  gap: 0;
+  padding: 0;
+  height: 100%;
+}
+#log-left {
+  width: 460px;
+  min-width: 460px;
+  background: var(--pine);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 16px 20px;
+  gap: 14px;
+  overflow: hidden;
+}
+#log-right {
+  flex: 1;
+  background: var(--pine-deep);
+  padding: 20px 24px;
+  overflow-y: auto;
+}
+
+/* Kid row */
+#kid-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.kid-btn {
+  height: 68px;
+  border-radius: 8px;
+  border: none;
+  background: var(--kraft-dk);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s;
+}
+.kid-btn.active { background: var(--barn); color: var(--chalk); }
+
+/* Mode toggle */
+#mode-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.mode-btn {
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--chalk-dim);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s, border-color 0.13s;
+}
+.mode-btn[data-mode="job"].active  { background: var(--brass);  color: var(--pine-deep); border-color: var(--brass); }
+.mode-btn[data-mode="deduct"].active { background: var(--barn); color: var(--chalk);     border-color: var(--barn); }
+
+/* Amount display */
+#amount-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(234,217,174,0.06);
+  border: 1px solid var(--line);
+}
+.amount-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--chalk-dim);
+}
+#amount-display {
+  font-size: 36px;
+  font-weight: 900;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--brass);
+}
+#amount-display.deduct-mode { color: #D4694F; }
+
+/* Action button */
+#btn-action {
+  height: 64px;
+  border-radius: 8px;
+  border: none;
+  background: var(--brass);
+  color: var(--pine-deep);
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+#btn-action:disabled { opacity: 0.38; cursor: not-allowed; }
+#btn-action.deduct-mode { background: var(--barn); color: var(--chalk); }
+
+/* Date row */
+#date-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.date-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--chalk-dim);
+  white-space: nowrap;
+}
+#log-date {
+  flex: 1;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--kraft-dk);
+  background: var(--kraft);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+/* Conditional fields */
+#cond-fields { display: flex; flex-direction: column; gap: 10px; }
+.cond-input {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--kraft-dk);
+  background: var(--kraft);
+  color: var(--ink);
+  font-size: 15px;
+  padding: 0 12px;
+}
+.cond-input::placeholder { color: var(--ink-soft); opacity: 0.7; }
+.cond-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--chalk-dim);
+  margin-bottom: 4px;
+}
+
+/* Recent tickets */
+#recent-wrap {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+.recent-hdr {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--chalk-dim);
+  margin-bottom: 8px;
+}
+.ticket-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-radius: 7px;
+  background: rgba(234,217,174,0.06);
+  border: 1px solid var(--line);
+  margin-bottom: 6px;
+}
+.ticket-item.new-flash { animation: stampIn 0.42s cubic-bezier(.34,1.56,.64,1); }
+.ticket-kid { font-size: 13px; font-weight: 700; color: var(--chalk); }
+.ticket-label { font-size: 13px; color: var(--chalk-dim); }
+.ticket-date { font-size: 11px; color: var(--chalk-dim); opacity: 0.65; }
+.ticket-amt {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--brass);
+  white-space: nowrap;
+}
+.ticket-amt.neg { color: #D4694F; }
+.ticket-del {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--chalk-dim);
+  opacity: 0.55;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 4px;
+  transition: opacity 0.13s;
+}
+.ticket-del:hover { opacity: 1; }
+
+/* Log right: job grid */
+.job-grid-hdr {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--chalk-dim);
+  margin-bottom: 14px;
+}
+#job-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.job-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--kraft-dk);
+  background: rgba(43,38,32,0.06);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.13s, border-color 0.13s;
+  min-height: 80px;
+}
+.job-btn.active { background: var(--barn); border-color: var(--barn); }
+.job-btn .job-icon { font-size: 22px; margin-bottom: 6px; }
+.job-btn .job-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.job-btn.active .job-name { color: var(--chalk); }
+.job-btn .job-price {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.job-btn.active .job-price { color: rgba(237,230,214,0.75); }
+
+/* Deduct fields (right side in deduct mode) */
+#deduct-fields {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 600px;
+}
+#deduct-fields.visible { display: flex; }
+
+/* -- BOARD TAB -- */
+#panel-board {
+  flex-direction: column;
+  padding: 20px 24px 16px 24px;
+  gap: 16px;
+  overflow: hidden;
+}
+#kid-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.kid-card { padding: 18px 20px; }
+.kc-name {
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.kc-month-lbl {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+.kc-month-amt {
+  font-size: 34px;
+  font-weight: 900;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--barn);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.kc-jars {
+  display: flex;
+  gap: 0;
+  border-top: 1px dashed var(--kraft-dk);
+  padding-top: 10px;
+}
+.kc-jar {
+  flex: 1;
+  text-align: center;
+}
+.jar-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  letter-spacing: 0.1em;
+}
+.jar-amt {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--ink);
+  margin-top: 2px;
+}
+.jar-amt.neg { color: var(--barn); }
+.kc-bank-note {
+  font-size: 11px;
+  margin-top: 8px;
+  color: var(--ink-soft);
+  opacity: 0.72;
+  line-height: 1.3;
+}
+
+/* Rate card */
+#rate-card { padding: 14px 20px; }
+.rate-card-hdr {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+.rate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  padding-right: 20px;
+  font-size: 12px;
+}
+.rate-item-name { color: var(--ink); opacity: 0.85; }
+.rate-item-price { color: var(--ink-soft); font-weight: 700; }
+.rate-note {
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.65;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--kraft-dk);
+}
+
+/* -- PAYOUT TAB -- */
+#panel-payout {
+  flex-direction: column;
+  padding: 20px 24px 16px 24px;
+  gap: 14px;
+  overflow: hidden;
+}
+#payout-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.payout-hdr-card { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
+.payout-hdr-lbl {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-soft);
+}
+.payout-hdr-sub { font-size: 15px; color: var(--ink); margin-top: 2px; }
+.btn-payout-action {
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--brass);
+  color: var(--pine-deep);
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-payout-action:disabled { opacity: 0.38; cursor: not-allowed; }
+
+#payout-kids {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+.payout-kid-card { padding: 16px 18px; }
+.pkc-name {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.pkc-net {
+  font-size: 28px;
+  font-weight: 900;
+  font-family: ui-monospace, Consolas, monospace;
+  color: var(--barn);
+  margin-bottom: 6px;
+}
+.pkc-ratio {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.btn-run {
+  width: 100%;
+  height: 44px;
+  border-radius: 7px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--kraft);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.13s;
+}
+.btn-run:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn-run.paid { background: transparent; color: var(--ink-soft); border-color: var(--kraft-dk); }
+
+#payout-activity { flex: 1; overflow-y: auto; min-height: 0; }
+.activity-hdr {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--chalk-dim);
+  margin-bottom: 8px;
+}
+.activity-item {
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: rgba(234,217,174,0.06);
+  border: 1px solid var(--line);
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--chalk-dim);
+}
+.activity-item strong { color: var(--chalk); font-weight: 700; }
+
+/* -- ANIMATION -- */
+@keyframes stampIn {
+  0%   { transform: scale(2.2) rotate(-14deg); opacity: 0; }
+  60%  { transform: scale(0.95) rotate(-6deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+  <button id="btn-home">&#8592; Home</button>
+  <div class="hdr-center">
+    <div class="hdr-eyebrow">Punch List &middot; Payroll</div>
+    <div class="hdr-title">Payroll</div>
+  </div>
+  <div id="save-status"></div>
+</div>
+
+<!-- TABS -->
+<div id="tab-bar">
+  <button class="tab-btn" data-tab="log">Log a Job</button>
+  <button class="tab-btn active" data-tab="board">Earnings Board</button>
+  <button class="tab-btn" data-tab="payout">Payout</button>
+</div>
+
+<!-- CONTENT -->
+<div id="content">
+
+  <!-- LOG TAB -->
+  <section id="panel-log" class="panel">
+    <div id="log-left">
+      <!-- Kid row -->
+      <div id="kid-row">
+        <button class="kid-btn" data-kid="wyatt">Wyatt</button>
+        <button class="kid-btn" data-kid="molly">Molly</button>
+        <button class="kid-btn" data-kid="rileigh">Rileigh</button>
+        <button class="kid-btn" data-kid="cullen">Cullen</button>
+        <button class="kid-btn" data-kid="emmitt">Emmitt</button>
+      </div>
+      <!-- Mode -->
+      <div id="mode-row">
+        <button class="mode-btn active" data-mode="job">&#128190; Job</button>
+        <button class="mode-btn" data-mode="deduct">&#8722; Deduction</button>
+      </div>
+      <!-- Conditional inputs -->
+      <div id="cond-fields"></div>
+      <!-- Amount -->
+      <div id="amount-row">
+        <div>
+          <div class="amount-label">Amount</div>
+          <div id="amount-display">$0.00</div>
+        </div>
+        <button id="btn-action" disabled>Stamp It</button>
+      </div>
+      <!-- Date -->
+      <div id="date-row">
+        <span class="date-label">Date</span>
+        <input type="date" id="log-date">
+      </div>
+      <!-- Recent tickets -->
+      <div id="recent-wrap">
+        <div class="recent-hdr">Recent tickets</div>
+        <div id="recent-list"></div>
+      </div>
+    </div>
+
+    <div id="log-right">
+      <!-- Job grid (job mode) -->
+      <div id="job-grid-wrap">
+        <div class="job-grid-hdr">Which job?</div>
+        <div id="job-grid"></div>
+      </div>
+      <!-- Deduction fields (deduct mode) -->
+      <div id="deduct-fields">
+        <div>
+          <div class="cond-label">Amount to deduct</div>
+          <input type="number" id="deduct-amt" class="cond-input" min="0" step="0.25" placeholder="e.g. 1.00">
+        </div>
+        <div>
+          <div class="cond-label">Reason (optional)</div>
+          <input type="text" id="deduct-note" class="cond-input" placeholder="Attitude deduction">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOARD TAB -->
+  <section id="panel-board" class="panel active">
+    <div id="kid-cards"></div>
+    <div class="card" id="rate-card">
+      <div class="rate-card-hdr">Rate card</div>
+      <div class="rate-grid" id="rate-grid"></div>
+      <div class="rate-note">* Wyatt only &nbsp;&middot;&nbsp; Not up to Al's standards? I don't think so, Tim. No stamp, no pay.</div>
+    </div>
+  </section>
+
+  <!-- PAYOUT TAB -->
+  <section id="panel-payout" class="panel">
+    <div id="payout-top">
+      <div class="card payout-hdr-card" id="payout-accrual-card"></div>
+      <div class="card payout-hdr-card" id="payout-commission-card"></div>
+    </div>
+    <div id="payout-kids"></div>
+    <div id="payout-activity">
+      <div class="activity-hdr">Recent activity</div>
+      <div id="activity-list"></div>
+    </div>
+  </section>
+
+</div><!-- /content -->
+
+<script>
+// -- CONSTANTS --
+var HOME_URL  = 'http://192.168.1.60:8080/cal-widget-current.html';
+var DATA_URL  = 'http://192.168.1.60:8080/payroll/payroll-data.json';
+var WRITE_URL = 'http://192.168.1.60:8081/save';
+
+var KIDS = [
+  { id: 'wyatt',   name: 'Wyatt',   age: 14 },
+  { id: 'molly',   name: 'Molly',   age: 10 },
+  { id: 'rileigh', name: 'Rileigh', age: 8  },
+  { id: 'cullen',  name: 'Cullen',  age: 6  },
+  { id: 'emmitt',  name: 'Emmitt',  age: 6  },
+];
+
+var RATES = {
+  wyatt:   { give: 1, save: 3, spend: 10, bank: ['save','spend'] },
+  molly:   { give: 1, save: 2, spend: 7,  bank: ['save','spend'] },
+  rileigh: { give: 1, save: 1, spend: 6,  bank: [] },
+  cullen:  { give: 1, save: 1, spend: 4,  bank: [] },
+  emmitt:  { give: 1, save: 1, spend: 4,  bank: [] },
+};
+
+var JOBS = [
+  { id: 'coop',      label: 'Coop deep-clean',      rate: 5,  unit: 'flat', icon: '\uD83C\uDFE0' },
+  { id: 'garden',    label: 'Garden bed weeded',     rate: 2,  unit: 'flat', icon: '\uD83C\uDF3F' },
+  { id: 'yard',      label: 'Yard cleanup',          rate: 1,  unit: 'flat', icon: '\uD83C\uDF42' },
+  { id: 'diaper',    label: 'Take out diaper trash', rate: 1,  unit: 'flat', icon: '\uD83D\uDDD1' },
+  { id: 'snow',      label: 'Snow shovel',           rate: 1,  unit: 'flat', icon: '\u2744' },
+  { id: 'chip',      label: 'Wood chipping',         rate: 15, unit: 'hour', icon: '\uD83E\uDEB5', only: 'wyatt' },
+  { id: 'car',       label: 'Clean the car',         rate: 2,  unit: 'flat', icon: '\uD83D\uDE97' },
+  { id: 'windows',   label: 'Windows, per room',     rate: 1,  unit: 'flat', icon: '\u2728' },
+  { id: 'drawers',   label: 'Kitchen drawers',       rate: 1,  unit: 'flat', icon: '\uD83E\uDDF9' },
+  { id: 'books',     label: 'Zone: Books & art',     rate: 1,  unit: 'flat', icon: '\uD83D\uDCDA' },
+  { id: 'down',      label: 'Zone: Downstairs',      rate: 1,  unit: 'flat', icon: '\uD83D\uDCE6' },
+  { id: 'common',    label: 'Zone: Common room',     rate: 1,  unit: 'flat', icon: '\uD83D\uDECB' },
+  { id: 'mudroom',   label: 'Mud room reset',        rate: 2,  unit: 'flat', icon: '\uD83D\uDEAA' },
+  { id: 'dishes',    label: 'Unload dishes',         rate: 1,  unit: 'flat', icon: '\uD83C\uDF7D' },
+  { id: 'unloadcar', label: 'Unload car',            rate: 1,  unit: 'flat', icon: '\uD83C\uDF92' },
+  { id: 'custom',    label: 'Something else',        rate: null, unit: 'custom', icon: '\u270F' },
+];
+
+// -- UI STATE --
+var activeTab = 'board';
+var selKid    = null;
+var selJob    = null;
+var logMode   = 'job';
+var logHours  = '';
+var custLabel = '';
+var custAmt   = '';
+var dedAmt    = '';
+var dedNote   = '';
+var stampFlash = false;
+var newTicketId = null;
+
+// -- DATA STATE --
+var gData = null;
+var saving = false;
+var saveErr = null;
+
+// -- HELPERS --
+function todayStr() { return new Date().toISOString().slice(0,10); }
+function monthKey(d) { return d.slice(0,7); }
+function monthLabel(mk) {
+  var p = mk.split('-');
+  return new Date(parseInt(p[0]), parseInt(p[1])-1, 1)
+    .toLocaleString('default', { month: 'long', year: 'numeric' });
+}
+function uid() { return Date.now() + '-' + Math.random().toString(36).slice(2,7); }
+function ratio(kidId) {
+  var r = RATES[kidId];
+  var t = r.give + r.save + r.spend;
+  return { give: r.give/t, save: r.save/t, spend: r.spend/t };
+}
+function netThisMonth(kidId) {
+  if (!gData) return 0;
+  var mk = monthKey(todayStr());
+  var net = 0;
+  for (var i = 0; i < gData.entries.length; i++) {
+    var e = gData.entries[i];
+    if (e.kidId !== kidId || monthKey(e.date) !== mk) continue;
+    net += e.type === 'deduct' ? -e.amount : e.amount;
+  }
+  return parseFloat(net.toFixed(2));
+}
+function computedAmt() {
+  if (!selJob) return 0;
+  if (selJob.id === 'custom') {
+    var a = parseFloat(custAmt);
+    return isNaN(a) ? 0 : parseFloat(a.toFixed(2));
+  }
+  if (selJob.unit === 'hour') {
+    var h = parseFloat(logHours);
+    return isNaN(h) ? 0 : parseFloat((h * selJob.rate).toFixed(2));
+  }
+  return selJob.rate;
+}
+function canStamp() {
+  if (!selKid || !selJob) return false;
+  if (selJob.id === 'custom') return custLabel.trim().length > 0 && parseFloat(custAmt) > 0;
+  if (selJob.unit === 'hour') return parseFloat(logHours) > 0;
+  return true;
+}
+function canDeduct() {
+  return !!selKid && parseFloat(dedAmt) > 0;
+}
+function jobsForKid(kidId) {
+  return JOBS.filter(function(j) { return !j.only || j.only === kidId; });
+}
+function fmtDollars(n) {
+  var abs = Math.abs(n).toFixed(2);
+  return (n < 0 ? '-' : '') + '$' + abs;
+}
+
+// -- SEED DATA --
+function seedData() {
+  return {
+    entries: [
+      { id:'seed-001', kidId:'rileigh', type:'job',    label:'Car unload',         rate:1,    unit:'flat',   hours:null, amount:1,  date:'2026-07-09' },
+      { id:'seed-002', kidId:'rileigh', type:'job',    label:'Car cleanout',        rate:2,    unit:'flat',   hours:null, amount:2,  date:'2026-07-09' },
+      { id:'seed-003', kidId:'rileigh', type:'job',    label:'Unload dishes',       rate:1,    unit:'flat',   hours:null, amount:1,  date:'2026-07-09' },
+      { id:'seed-004', kidId:'molly',   type:'job',    label:'Unload car',          rate:1,    unit:'flat',   hours:null, amount:1,  date:'2026-07-09' },
+      { id:'seed-005', kidId:'cullen',  type:'deduct', label:'Attitude deduction',  rate:null, unit:'custom', hours:null, amount:1,  date:'2026-07-09' },
+      { id:'seed-006', kidId:'emmitt',  type:'deduct', label:'Attitude deduction',  rate:null, unit:'custom', hours:null, amount:1,  date:'2026-07-09' },
+    ],
+    categories: {
+      totals: {
+        wyatt:   { give:2, save:6,  spend:15  },
+        molly:   { give:2, save:4,  spend:-11 },
+        rileigh: { give:2, save:2,  spend:1   },
+        cullen:  { give:2, save:2,  spend:3   },
+        emmitt:  { give:2, save:2,  spend:8   },
+      },
+      log: [],
+      lastAccrualMonth: '2026-06',
+      lastPayoutMonth: {},
+    }
+  };
+}
+
+// -- PERSISTENCE --
+async function loadData() {
+  try {
+    var res = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (res.ok) { gData = await res.json(); }
+    else { gData = seedData(); }
+  } catch(e) { gData = seedData(); }
+}
+
+async function persist() {
+  if (!gData) return;
+  saving = true;
+  updateSaveStatus();
+  try {
+    var res = await fetch(WRITE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': '*/*',
+      },
+      body: JSON.stringify(gData),
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    saveErr = null;
+  } catch(e) {
+    saveErr = 'Save failed - check ThinkPad';
+  } finally {
+    saving = false;
+    updateSaveStatus();
+  }
+}
+
+// -- SAVE STATUS --
+function updateSaveStatus() {
+  var el = document.getElementById('save-status');
+  if (saving) {
+    el.textContent = 'Saving...';
+    el.className = 'saving';
+  } else if (saveErr) {
+    el.textContent = saveErr;
+    el.className = 'error';
+  } else {
+    el.textContent = '';
+    el.className = '';
+  }
+}
+
+// -- TAB SWITCHING --
+function switchTab(tab) {
+  activeTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.tab === tab);
+  });
+  document.querySelectorAll('.panel').forEach(function(p) {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
+  var panel = document.getElementById('panel-' + tab);
+  if (panel) {
+    panel.classList.add('active');
+    panel.style.display = 'flex';
+  }
+  if (tab === 'board')  renderBoard();
+  if (tab === 'payout') renderPayout();
+}
+
+// -- LOG TAB: KID SELECTION --
+function selectKid(kidId) {
+  selKid = kidId;
+  selJob = null;
+  document.querySelectorAll('.kid-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.kid === kidId);
+  });
+  renderJobGrid();
+  renderCondFields();
+  updateAmountDisplay();
+  updateActionBtn();
+  renderRecentTickets();
+}
+
+// -- LOG TAB: MODE TOGGLE --
+function setMode(mode) {
+  logMode = mode;
+  selJob  = null;
+  dedAmt  = '';
+  dedNote = '';
+  document.querySelectorAll('.mode-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.mode === mode);
+  });
+  var jw = document.getElementById('job-grid-wrap');
+  var df = document.getElementById('deduct-fields');
+  if (mode === 'job') {
+    jw.style.display = 'block';
+    df.classList.remove('visible');
+  } else {
+    jw.style.display = 'none';
+    df.classList.add('visible');
+    document.getElementById('deduct-amt').value  = '';
+    document.getElementById('deduct-note').value = '';
+  }
+  var btn = document.getElementById('btn-action');
+  if (mode === 'deduct') {
+    btn.textContent = 'Deduct';
+    btn.classList.add('deduct-mode');
+    document.getElementById('amount-display').classList.add('deduct-mode');
+  } else {
+    btn.textContent = 'Stamp It';
+    btn.classList.remove('deduct-mode');
+    document.getElementById('amount-display').classList.remove('deduct-mode');
+  }
+  renderCondFields();
+  updateAmountDisplay();
+  updateActionBtn();
+}
+
+// -- LOG TAB: JOB GRID --
+function renderJobGrid() {
+  var grid = document.getElementById('job-grid');
+  if (!selKid) { grid.innerHTML = ''; return; }
+  var jobs = jobsForKid(selKid);
+  grid.innerHTML = jobs.map(function(j) {
+    var price = j.id === 'custom' ? 'Set your own' : ('$' + j.rate + (j.unit === 'hour' ? '/hr' : ''));
+    var active = selJob && selJob.id === j.id ? ' active' : '';
+    return '<button class="job-btn' + active + '" data-jobid="' + j.id + '">' +
+      '<span class="job-icon">' + j.icon + '</span>' +
+      '<span class="job-name">' + j.label + '</span>' +
+      '<span class="job-price">' + price + '</span>' +
+      '</button>';
+  }).join('');
+}
+
+function selectJob(jobId) {
+  selJob    = JOBS.find(function(j) { return j.id === jobId; }) || null;
+  logHours  = '';
+  custLabel = '';
+  custAmt   = '';
+  document.querySelectorAll('.job-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.jobid === jobId);
+  });
+  renderCondFields();
+  updateAmountDisplay();
+  updateActionBtn();
+}
+
+// -- LOG TAB: CONDITIONAL FIELDS --
+function renderCondFields() {
+  var el = document.getElementById('cond-fields');
+  if (logMode === 'deduct') { el.innerHTML = ''; return; }
+  if (!selJob) { el.innerHTML = ''; return; }
+  var html = '';
+  if (selJob.unit === 'hour') {
+    html = '<div class="cond-label">Hours worked</div>' +
+      '<input type="number" id="inp-hours" class="cond-input" min="0" step="0.25" placeholder="e.g. 1.5" value="' + logHours + '">';
+  } else if (selJob.id === 'custom') {
+    html = '<div class="cond-label">What was the job?</div>' +
+      '<input type="text" id="inp-custom-label" class="cond-input" placeholder="Describe the job" value="' + custLabel + '">' +
+      '<div class="cond-label" style="margin-top:8px;">Amount ($)</div>' +
+      '<input type="number" id="inp-custom-amt" class="cond-input" min="0" step="0.25" placeholder="0.00" value="' + custAmt + '">';
+  }
+  el.innerHTML = html;
+  var ih = document.getElementById('inp-hours');
+  if (ih) {
+    ih.addEventListener('input', function() { logHours = ih.value; updateAmountDisplay(); updateActionBtn(); });
+    ih.focus();
+  }
+  var icl = document.getElementById('inp-custom-label');
+  if (icl) {
+    icl.addEventListener('input', function() { custLabel = icl.value; updateActionBtn(); });
+  }
+  var ica = document.getElementById('inp-custom-amt');
+  if (ica) {
+    ica.addEventListener('input', function() { custAmt = ica.value; updateAmountDisplay(); updateActionBtn(); });
+  }
+}
+
+// -- LOG TAB: AMOUNT DISPLAY --
+function updateAmountDisplay() {
+  var el = document.getElementById('amount-display');
+  if (logMode === 'deduct') {
+    var a = parseFloat(dedAmt) || 0;
+    el.textContent = '-$' + a.toFixed(2);
+  } else {
+    el.textContent = '$' + computedAmt().toFixed(2);
+  }
+}
+
+// -- LOG TAB: ACTION BUTTON --
+function updateActionBtn() {
+  var btn = document.getElementById('btn-action');
+  var ok = logMode === 'job' ? canStamp() : canDeduct();
+  btn.disabled = !ok;
+}
+
+// -- LOG TAB: STAMP --
+async function doStamp() {
+  if (!canStamp() || !gData) return;
+  var isCustom = selJob.id === 'custom';
+  var entry = {
+    id:     uid(),
+    kidId:  selKid,
+    type:   'job',
+    label:  isCustom ? custLabel.trim() : selJob.label,
+    rate:   isCustom ? null : selJob.rate,
+    unit:   isCustom ? 'custom' : selJob.unit,
+    hours:  (selJob.unit === 'hour') ? parseFloat(logHours) : null,
+    amount: computedAmt(),
+    date:   document.getElementById('log-date').value || todayStr(),
+  };
+  newTicketId = entry.id;
+  gData.entries.unshift(entry);
+  selJob    = null;
+  logHours  = '';
+  custLabel = '';
+  custAmt   = '';
+  renderJobGrid();
+  renderCondFields();
+  updateAmountDisplay();
+  updateActionBtn();
+  renderRecentTickets();
+  persist();
+}
+
+// -- LOG TAB: DEDUCT --
+async function doDeduct() {
+  if (!canDeduct() || !gData) return;
+  var a = parseFloat(parseFloat(dedAmt).toFixed(2));
+  var entry = {
+    id:     uid(),
+    kidId:  selKid,
+    type:   'deduct',
+    label:  (document.getElementById('deduct-note').value.trim()) || 'Attitude deduction',
+    rate:   null,
+    unit:   'custom',
+    hours:  null,
+    amount: a,
+    date:   document.getElementById('log-date').value || todayStr(),
+  };
+  newTicketId = entry.id;
+  gData.entries.unshift(entry);
+  dedAmt  = '';
+  dedNote = '';
+  document.getElementById('deduct-amt').value  = '';
+  document.getElementById('deduct-note').value = '';
+  updateAmountDisplay();
+  updateActionBtn();
+  renderRecentTickets();
+  persist();
+}
+
+// -- LOG TAB: DELETE TICKET --
+async function deleteTicket(id) {
+  if (!gData) return;
+  gData.entries = gData.entries.filter(function(e) { return e.id !== id; });
+  renderRecentTickets();
+  persist();
+}
+
+// -- LOG TAB: RECENT TICKETS --
+function renderRecentTickets() {
+  var el = document.getElementById('recent-list');
+  if (!gData || gData.entries.length === 0) {
+    el.innerHTML = '<div style="font-size:13px;color:var(--chalk-dim);padding:10px 0;">Nothing logged yet.</div>';
+    return;
+  }
+  var sorted = gData.entries.slice().sort(function(a,b) {
+    return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
+  });
+  var recent = sorted.slice(0, 10);
+  el.innerHTML = recent.map(function(e) {
+    var kid  = KIDS.find(function(k) { return k.id === e.kidId; });
+    var isDed = e.type === 'deduct';
+    var amtCls = isDed ? ' neg' : '';
+    var prefix  = isDed ? '-' : '';
+    var flash   = (e.id === newTicketId) ? ' new-flash' : '';
+    return '<div class="ticket-item' + flash + '">' +
+      '<div>' +
+        '<span class="ticket-kid">' + (kid ? kid.name : e.kidId) + '</span>' +
+        '<span class="ticket-label"> &middot; ' + e.label + '</span>' +
+        '<div class="ticket-date">' + e.date + (e.hours ? ' &middot; ' + e.hours + 'hr' : '') + '</div>' +
+      '</div>' +
+      '<div style="display:flex;align-items:center;gap:10px;">' +
+        '<span class="ticket-amt' + amtCls + '">' + prefix + '$' + e.amount.toFixed(2) + '</span>' +
+        '<button class="ticket-del" data-del="' + e.id + '" title="Remove">&#10005;</button>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+  if (newTicketId) {
+    setTimeout(function() { newTicketId = null; }, 500);
+  }
+}
+
+// -- BOARD TAB --
+function renderBoard() {
+  if (!gData) return;
+  var cards = document.getElementById('kid-cards');
+  cards.innerHTML = KIDS.map(function(k) {
+    var net  = netThisMonth(k.id);
+    var tots = gData.categories.totals[k.id] || { give:0, save:0, spend:0 };
+    var r    = RATES[k.id];
+    var bankNote = r.bank.length > 0
+      ? '<div class="kc-bank-note">Fixed ' + r.bank.join(' &amp; ') + ' pays to the bank each month &mdash; tracked here too so commission adds up right.</div>'
+      : '';
+    return '<div class="card kid-card">' +
+      '<div class="kc-name">' + k.name + '</div>' +
+      '<div class="kc-month-lbl">This month</div>' +
+      '<div class="kc-month-amt">$' + Math.max(0, net).toFixed(2) + '</div>' +
+      '<div class="kc-jars">' +
+        ['give','save','spend'].map(function(jar) {
+          var v = tots[jar];
+          var cls = v < 0 ? ' neg' : '';
+          return '<div class="kc-jar">' +
+            '<div class="jar-label">' + jar.charAt(0).toUpperCase() + jar.slice(1) + '</div>' +
+            '<div class="jar-amt' + cls + '">' + fmtDollars(v) + '</div>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+      bankNote +
+    '</div>';
+  }).join('');
+
+  var rg = document.getElementById('rate-grid');
+  rg.innerHTML = JOBS.filter(function(j) { return j.id !== 'custom'; }).map(function(j) {
+    var restricted = j.only ? ' *' : '';
+    var price = '$' + j.rate + (j.unit === 'hour' ? '/hr' : '');
+    return '<div class="rate-item">' +
+      '<span class="rate-item-name">' + j.label + restricted + '</span>' +
+      '<span class="rate-item-price">' + price + '</span>' +
+    '</div>';
+  }).join('');
+}
+
+// -- PAYOUT TAB --
+function renderPayout() {
+  if (!gData) return;
+  var cats = gData.categories;
+  var mk   = monthKey(todayStr());
+  var ml   = monthLabel(mk);
+
+  var alreadyAccrued = cats.lastAccrualMonth === mk;
+  document.getElementById('payout-accrual-card').innerHTML =
+    '<div>' +
+      '<div class="payout-hdr-lbl">Fixed monthly allowance</div>' +
+      '<div class="payout-hdr-sub">' + ml + '</div>' +
+    '</div>' +
+    '<button class="btn-payout-action" id="btn-add-month"' + (alreadyAccrued ? ' disabled' : '') + '>' +
+    '&#128197; ' + (alreadyAccrued ? 'Already added' : 'Add this month') + '</button>';
+
+  var anyPending = KIDS.some(function(k) {
+    return Math.max(0, netThisMonth(k.id)) > 0 && cats.lastPayoutMonth[k.id] !== mk;
+  });
+  document.getElementById('payout-commission-card').innerHTML =
+    '<div>' +
+      '<div class="payout-hdr-lbl">Commission payout</div>' +
+      '<div class="payout-hdr-sub">Splits net into the jars &mdash; zeroes the month</div>' +
+    '</div>' +
+    '<button class="btn-payout-action" id="btn-run-all"' + (!anyPending ? ' disabled' : '') + '>&#10003; Run all</button>';
+
+  document.getElementById('payout-kids').innerHTML = KIDS.map(function(k) {
+    var net  = Math.max(0, netThisMonth(k.id));
+    var done = cats.lastPayoutMonth[k.id] === mk;
+    var r    = ratio(k.id);
+    var gPct = Math.round(r.give * 100);
+    var sPct = Math.round(r.save * 100);
+    var xPct = Math.round(r.spend * 100);
+    var disabled = (net <= 0 || done) ? ' disabled' : '';
+    var btnCls   = done ? ' paid' : '';
+    return '<div class="card payout-kid-card">' +
+      '<div class="pkc-name">' + k.name + '</div>' +
+      '<div class="pkc-net">$' + net.toFixed(2) + '</div>' +
+      '<div class="pkc-ratio">Give ' + gPct + '% &middot; Save ' + sPct + '% &middot; Spend ' + xPct + '%</div>' +
+      '<button class="btn-run' + btnCls + '"' + disabled + ' data-run="' + k.id + '">' + (done ? 'Paid' : 'Run') + '</button>' +
+    '</div>';
+  }).join('');
+
+  var log = (cats.log || []).slice(0, 12);
+  document.getElementById('activity-list').innerHTML = log.length === 0
+    ? '<div style="font-size:13px;color:var(--chalk-dim);padding:8px 0;">Nothing logged yet.</div>'
+    : log.map(function(l) {
+        var kid = KIDS.find(function(k) { return k.id === l.kidId; });
+        return '<div class="activity-item"><strong>' + (kid ? kid.name : l.kidId) + '</strong> &middot; ' + l.note + '</div>';
+      }).join('');
+
+  var bam = document.getElementById('btn-add-month');
+  if (bam) bam.addEventListener('click', doAddMonth);
+  var bra = document.getElementById('btn-run-all');
+  if (bra) bra.addEventListener('click', doRunAll);
+}
+
+// -- PAYOUT: ADD MONTH --
+async function doAddMonth() {
+  if (!gData) return;
+  var cats = gData.categories;
+  var mk   = monthKey(todayStr());
+  if (cats.lastAccrualMonth === mk) return;
+  KIDS.forEach(function(k) {
+    var r   = RATES[k.id];
+    var bal = cats.totals[k.id];
+    bal.give  = parseFloat((bal.give  + r.give).toFixed(2));
+    bal.save  = parseFloat((bal.save  + r.save).toFixed(2));
+    bal.spend = parseFloat((bal.spend + r.spend).toFixed(2));
+    cats.log.unshift({
+      id:    uid(),
+      kidId: k.id,
+      type:  'accrue',
+      note:  monthLabel(mk) + ' allowance added',
+      date:  todayStr(),
+    });
+  });
+  cats.lastAccrualMonth = mk;
+  renderPayout();
+  persist();
+}
+
+// -- PAYOUT: RUN KID --
+async function doRunKid(kidId) {
+  if (!gData) return;
+  var cats = gData.categories;
+  var mk   = monthKey(todayStr());
+  if (cats.lastPayoutMonth[kidId] === mk) return;
+  var net  = Math.max(0, netThisMonth(kidId));
+  if (net <= 0) return;
+  var r    = ratio(kidId);
+  var give = parseFloat((net * r.give).toFixed(2));
+  var save = parseFloat((net * r.save).toFixed(2));
+  var spend = parseFloat((net - give - save).toFixed(2));
+  var bal  = cats.totals[kidId];
+  bal.give  = parseFloat((bal.give  + give).toFixed(2));
+  bal.save  = parseFloat((bal.save  + save).toFixed(2));
+  bal.spend = parseFloat((bal.spend + spend).toFixed(2));
+  cats.log.unshift({
+    id:    uid(),
+    kidId: kidId,
+    type:  'payout',
+    note:  monthLabel(mk) + ' commission - Give $' + give.toFixed(2) +
+           ', Save $' + save.toFixed(2) + ', Spend $' + spend.toFixed(2),
+    date:  todayStr(),
+  });
+  cats.lastPayoutMonth[kidId] = mk;
+  renderPayout();
+  persist();
+}
+
+// -- PAYOUT: RUN ALL --
+async function doRunAll() {
+  if (!gData) return;
+  var mk = monthKey(todayStr());
+  for (var i = 0; i < KIDS.length; i++) {
+    var k = KIDS[i];
+    if (gData.categories.lastPayoutMonth[k.id] !== mk && Math.max(0, netThisMonth(k.id)) > 0) {
+      await doRunKid(k.id);
+    }
+  }
+}
+
+// -- EVENT DELEGATION --
+document.addEventListener('click', function(e) {
+  if (e.target.id === 'btn-home') { window.location.href = HOME_URL; return; }
+  var tabBtn = e.target.closest('.tab-btn');
+  if (tabBtn) { switchTab(tabBtn.dataset.tab); return; }
+  if (e.target.classList.contains('kid-btn')) { selectKid(e.target.dataset.kid); return; }
+  if (e.target.classList.contains('mode-btn')) { setMode(e.target.dataset.mode); return; }
+  if (e.target.closest('.job-btn')) { selectJob(e.target.closest('.job-btn').dataset.jobid); return; }
+  if (e.target.id === 'btn-action') {
+    if (logMode === 'job') doStamp();
+    else doDeduct();
+    return;
+  }
+  if (e.target.dataset.del) { deleteTicket(e.target.dataset.del); return; }
+  if (e.target.dataset.run) { doRunKid(e.target.dataset.run); return; }
+});
+
+document.getElementById('deduct-amt').addEventListener('input', function() {
+  dedAmt = this.value;
+  updateAmountDisplay();
+  updateActionBtn();
+});
+document.getElementById('deduct-note').addEventListener('input', function() {
+  dedNote = this.value;
+});
+
+// -- INIT --
+(async function init() {
+  document.getElementById('log-date').value = todayStr();
+  await loadData();
+  renderBoard();
+  renderRecentTickets();
+  switchTab('board');
+})();
+</script>
+</body>
+</html>
