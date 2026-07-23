@@ -19,6 +19,8 @@ fair/
     beef-showmanship-split-public.md  ← public exhibitor list (no contact info)
   show-ring/
     setup-instructions.md             ← Show Ring Setup Instructions (livestock sale building)
+  swine-show/
+    handoff.md                        ← 2026 Swine Show fairboard handoff doc (cadence, stall policy, capital asks)
   maps/                               ← binary assets, add manually
     Sheep_Goat_Barn_Map_REV6.png      ← sheep/goat barn map, REV6
     CusterCountyFairgroundsBriefing.pdf ← fairgrounds briefing

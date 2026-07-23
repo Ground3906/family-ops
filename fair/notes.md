@@ -8,6 +8,7 @@ Running list. Add to this as things come up during the season, don't lose them i
 
 - **Pen policy change:** push for 1 pen per participant per species, not per animal. Solves the limited pen count/size issue directly. *(added 7/16/2026)*
 - **Handicap parking, west and east lots.** Currently no assigned ADA parking at either fairgrounds entrance. Prompted by an actual incident, someone in a wheelchair had to force-park without a designated spot. Also a liability/CYA issue for the fair board. Thinking 2 assigned handicap spots on the west side and 2 on the east side, 4 total. Needs signage and probably board approval on exact placement. *(added 7/16/2026)*
+- **Capital improvement — holding pens.** Need replacement/new units. Lead / procurement owner: Enjoli. *(added 7/22/2026, see fair/swine-show/handoff.md)*
 
 ---
 
@@ -18,6 +19,7 @@ Running list. Add to this as things come up during the season, don't lose them i
 - **Map Beef Barn.** *(added 7/16/2026)*
 - **Build Sale Day ring map.** Separate ring config from the Show Ring already documented. Raw capture so far, not locked: small exit gate next to stage; a panel run mentioning two 12' panels plus an unclear "morning 7 ft" fragment (possible dictation error, needs re-confirm); a second phrase describing entrance gate + six 12' panels to the stage, unclear if this replaces the first fragment or describes a different side. Needs a fresh walkaround/re-dictation to resolve before mapping. *(added 7/17/2026)*
 - **Sale Day sponsor signage setup.** Raw capture, not locked: (1) stage boards get reinstalled first, they were pulled for the swine show; (2) sponsor tier signage mounts to stage once boards are back — Gold, Silver, Bronze, Custer County Livestock Sale board, Custer County Buyers Group 2026 sponsors board, mounting method (screwed/tacked/other) not yet decided; (3) sponsor banners get zip-tied to the ring panels inside the ring, separate from the stage signage. One phrase, "custard cutting," didn't parse, likely dictation error, needs clarification. *(added 7/17/2026)*
+- **Swine stall assignment policy.** Once assigned, a stall stays with an exhibitor until vacated/graduation. Joey assigns, per this intent. Flagged as political/upsetting/drama-prone — recurring flashpoint, not one-time. *(added 7/22/2026, see fair/swine-show/handoff.md)*
 
 ---
 
