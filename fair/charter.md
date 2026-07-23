@@ -6,7 +6,8 @@ Fair Board operational support for Matt Bayer, Custer County Fair Board member. 
 ## Repo Pattern
 - Repo: `Ground3906/family-ops`, path: `/fair/`
 - SSI: repo is truth; PK stays starved
-- Binary assets (barn maps, PDFs): referenced below; add manually to `/fair/maps/` — cannot push via MCP text tool
+- Binary assets (maps, schedules, PDFs) live in `/fair/maps/` — cannot push via MCP text tool, upload manually through the GitHub web UI
+- GitHub cannot hold an empty directory: a folder exists only once a file is committed into it
 - Session state: spin-up prompt only — never in markdown files
 
 ## Directory Structure
@@ -24,14 +25,16 @@ fair/
     handoff.md                        ← 2026 Swine Show fairboard handoff doc (cadence, stall policy, capital asks)
   sheep-goat-barn/
     optimization-brief.md             ← layout optimization design brief for Cowork handoff (constraints, phases, deliverable spec)
-  maps/                               ← binary assets, add manually
-    Sheep_Goat_Barn_Map_REV6.png      ← sheep/goat barn map, REV6 (BASELINE for optimization brief)
-    CusterCountyFairgroundsBriefing.pdf ← fairgrounds briefing
+  rulebooks/                          ← rulebooks subsystem (parallel workstream)
+  maps/                               ← binary visual assets, manual upload
+    README.md                         ← asset index, update when assets are added or revised
+    Sheep_Goat_Barn_Map_REV6.png      ← sheep/goat barn, REV6. BASELINE for optimization-brief.md
+    Fair_Events_Schedule_2026.png     ← 2026 Fair Events schedule, July 13-18
+    CusterCountyFairgroundsBriefing.pdf ← fairgrounds briefing (not yet uploaded)
 ```
 
 ## Known Gaps
-- `maps/Sheep_Goat_Barn_Map_REV6.png` — referenced by `sheep-goat-barn/optimization-brief.md` but **not yet uploaded to repo**. Binary, manual upload required. Cowork cannot work from source until this lands.
-- Fair schedule (2026 Fair Events, July 13-18) — used to build the phase sequence in the optimization brief, not yet in repo.
+- `maps/CusterCountyFairgroundsBriefing.pdf` — referenced in the maps index but not yet uploaded to the repo. Binary, manual upload required.
 
 ## Session Spine
 At session open: `get_file_contents` repo HEAD before any build work. Pull `charter.md` and `notes.md` first. Spin-up baton is the only session state carrier between sessions.
