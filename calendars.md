@@ -489,7 +489,7 @@ Last batch: 2026-07-22.
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
-[CAL] 2026-07-21 15:00 [K] Pick up generator :: errands :: flag=true :: notes="Location TBD - confirm pickup point"
+[CAL] 2026-07-21 15:00 [K] Pick up generator :: errands
 [CAL] 2026-07-22 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
 [CAL] 2026-07-22 14:30 [D] WGU 3rd attempt Essentials exam call - Randy Stauber :: meetings :: end=14:45 :: notes="Conf NJD21G8K1. Randy calling (719) 306-9606."
