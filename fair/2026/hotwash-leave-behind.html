@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custer County Fair — Board Hot Wash 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #1B3A5C;
+    --amber:  #B87D2E;
+    --slate:  #4A6281;
+    --mist:   #EEF2F6;
+    --rule:   #C8D0DA;
+    --ink:    #1A1A1A;
+    --soft:   #5A6473;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: #fff;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+  }
+
+  .doc-header {
+    border-top: 4px solid var(--navy);
+    padding-top: 20px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .doc-header h1 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+  .doc-header .sub { font-size: 12px; color: var(--soft); margin-top: 4px; }
+  .doc-header .date { font-size: 12px; color: var(--soft); text-align: right; white-space: nowrap; }
+
+  .section { margin-bottom: 32px; }
+  .section-label { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .section-label h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--slate);
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  .item { display: grid; grid-template-columns: 3px 1fr; gap: 0 14px; margin-bottom: 16px; page-break-inside: avoid; }
+  .item-bar { border-radius: 2px; }
+  .bar-proposal { background: var(--navy); }
+  .bar-capital  { background: var(--amber); }
+  .bar-ops      { background: var(--slate); }
+  .bar-strategic{ background: #2E6B4A; }
+
+  .item-body { background: var(--mist); border-radius: 4px; padding: 12px 14px; }
+  .item-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+  .item-title { font-weight: 600; font-size: 13.5px; color: var(--navy); }
+
+  .tag { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; white-space: nowrap; }
+  .tag-proposal  { background: #D6E4F0; color: var(--navy); }
+  .tag-capital   { background: #F5EAD6; color: #7A4F10; }
+  .tag-ops       { background: #E2E8F0; color: #334155; }
+  .tag-strategic { background: #D6EDE3; color: #1E4F35; }
+  .tag-flag      { background: #FDECEA; color: #8B1A1A; }
+
+  .item-body p { font-size: 12.5px; color: #3A4150; margin-bottom: 4px; }
+  .item-body p:last-child { margin-bottom: 0; }
+  .item-body .owner { font-size: 11.5px; color: var(--soft); margin-top: 4px; }
+
+  .notes-box { border: 1px solid var(--rule); border-radius: 4px; padding: 10px 14px; min-height: 44px; background: #fff; }
+  .notes-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--soft); margin-bottom: 4px; }
+
+  .doc-footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 11px; color: #8A94A0; display: flex; justify-content: space-between; }
+
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 28px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--soft); }
+  .legend-bar { width: 10px; height: 10px; border-radius: 1px; }
+
+  @media print {
+    body { padding: 24px 28px 40px; font-size: 12.5px; }
+    .doc-header h1 { font-size: 19px; }
+    .item { page-break-inside: avoid; }
+    .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="doc-header">
+  <div>
+    <h1>Custer County Fair<br>Board Hot Wash — 2026</h1>
+    <div class="sub">Prepared for fair board debrief and action planning</div>
+  </div>
+  <div class="date">July 2026<br>Matt Bayer</div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-bar" style="background:var(--navy)"></div> Board Proposal</div>
+  <div class="legend-item"><div class="legend-bar" style="background:var(--amber)"></div> Capital Improvement</div>
+  <div class="legend-item"><div class="legend-bar" style="background:var(--slate)"></div> Operational</div>
+  <div class="legend-item"><div class="legend-bar" style="background:#2E6B4A"></div> Strategic</div>
+</div>
+
+<!-- SECTION 1: Board Proposals -->
+<div class="section">
+  <div class="section-label"><h2>Proposals for Board Action</h2></div>
+
+  <div class="item">
+    <div class="item-bar bar-proposal"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Pen Policy Change</span>
+        <span class="tag tag-proposal">Proposal</span>
+      </div>
+      <p>Worth discussing whether the board would consider moving to 1 pen per participant per species, rather than per animal. This could help address the limited pen count and size challenges, and might make assignments more manageable as entry numbers change year to year. Open to the board's thoughts on whether this is the right direction.</p>
+      <div class="notes-label">Notes / Board discussion</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-proposal"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">ADA Parking — West &amp; East Lots</span>
+        <span class="tag tag-proposal">Proposal</span>
+        <span class="tag tag-flag">Liability</span>
+      </div>
+      <p>Currently there are no assigned handicap parking spots at either fairgrounds entrance. An attendee in a wheelchair had to make do without a designated space this year, which prompted this item. A possible starting point might be 2 spots on the west side and 2 on the east side, 4 total. Signage and exact placement would naturally need board input and approval.</p>
+      <p>This feels like both a genuine access need and a reasonable precaution for the board to have on record.</p>
+      <div class="notes-label">Notes / Board discussion</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-proposal"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Swine Stall Assignment — Board Awareness</span>
+        <span class="tag tag-proposal">Discussion</span>
+        <span class="tag tag-flag">Recurring</span>
+      </div>
+      <p>The current understanding is that once a stall is assigned, it stays with that exhibitor until they voluntarily vacate or age out of the program. Joey manages assignments as swine superintendent. This topic has surfaced before and may come up again. No formal motion or rule change is being suggested — just hoping to make sure everyone on the board is familiar with how it works, so there's a consistent and comfortable response ready if questions come in from exhibitors or families.</p>
+      <p class="owner">Questions: Joey (Swine Superintendent)</p>
+      <div class="notes-label">Notes / Board discussion</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: Capital Improvements -->
+<div class="section">
+  <div class="section-label"><h2>Capital Improvements</h2></div>
+
+  <div class="item">
+    <div class="item-bar bar-capital"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Holding Pens Replacement</span>
+        <span class="tag tag-capital">Capital</span>
+      </div>
+      <p>The swine show holding pens are in need of replacement or supplementation with new units. Enjoli has been asked if she would be willing to take the lead on procurement, pending her agreement. This would benefit from board awareness and a budget conversation before next year's fair.</p>
+      <p class="owner">Potential lead: Enjoli (pending her confirmation)</p>
+      <div class="notes-label">Notes / Board discussion</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-capital"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Show Ring — Spare Gates (x2)</span>
+        <span class="tag tag-capital">Capital</span>
+      </div>
+      <p>It might be worth looking into picking up one additional gate of each style — a 6' passthrough (entrance style) and a 4' passthrough (exit style). Having spares on hand would give the setup crew a fallback if something is broken or missing, without having to improvise on show day.</p>
+      <div class="notes-label">Notes / Source / Cost</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-capital"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Beef Chute — Market Sale Day Safety</span>
+        <span class="tag tag-capital">Capital</span>
+        <span class="tag tag-flag">Safety</span>
+      </div>
+      <p>During the 2026 market sale, spectators including kids and parents were entering the beef chute area, which created a real safety concern and required active management on the day. Worth bringing to the board to discuss how to better address this going forward.</p>
+      <p>Two areas to think through together:</p>
+      <p><strong>1. Physical barrier:</strong> Some form of railing, panel fencing, or secured barrier along the chute would go a long way toward keeping folks out of the area without needing someone stationed there the whole time.</p>
+      <p><strong>2. Announcements:</strong> It would also help to have a chute safety reminder built into the announcer's script — ideally before the sale opens and again at a natural break during the event. Happy to help draft language if that would be useful.</p>
+      <div class="notes-label">Notes / Barrier ideas / Announcement approach</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: Operational -->
+<div class="section">
+  <div class="section-label"><h2>Operational Open Items</h2></div>
+
+  <div class="item">
+    <div class="item-bar bar-ops"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Sheep Barn Setup — Opportunities to Improve for 2027</span>
+        <span class="tag tag-ops">Operational</span>
+        <span class="tag tag-flag">Safety / Welfare</span>
+      </div>
+      <p>The 2026 sheep barn setup ran into a few challenges that are worth discussing as a group, with an eye toward doing things differently next year:</p>
+      <p><strong>Electrical:</strong> With outlets only on the exterior walls, extension cords ended up running across animal cages to reach interior areas. Beyond being untidy, it created tripping concerns and wasn't ideal from an animal welfare standpoint either.</p>
+      <p><strong>Space:</strong> The pen arrangement left a fair amount of unused space. There's likely a better way to lay out the footprint that gets more utility out of the barn.</p>
+      <p><strong>Heat / Holding Pens:</strong> By mutual agreement between superintendents, swine holding pens were relocated outside during the fair. The intent was to solve a space problem, and the decision was made in good faith. In practice, outdoor conditions were too warm to be a workable solution for the animals. This is a planning and setup issue, not a personnel one — the right answer is a barn layout that doesn't put superintendents in a position where that trade-off has to be made at all.</p>
+      <p>A fresh look at the overall layout before next year seems worthwhile. Flagging for board awareness — the actual layout work would be done separately and brought back to the group.</p>
+      <div class="notes-label">Notes / Board discussion</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-ops"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">Info Board Location — Sale Day</span>
+        <span class="tag tag-ops">Operational</span>
+      </div>
+      <p>This past year the info board was positioned at the beef chute, and it drew a lot of public foot traffic right into that area. Combined with the chute safety concerns noted above, it created some congestion in a spot that really needed to stay clear.</p>
+      <p>One idea worth considering: splitting into two boards serving two different audiences.</p>
+      <p><strong>1. Public-facing board:</strong> Somewhere visible and accessible to general attendees, away from animal movement areas. Location would be up to the group to decide.</p>
+      <p><strong>2. Participant board:</strong> Inside the sheep barn for exhibitors and families who need the working details — class order, times, pen assignments, and so on.</p>
+      <div class="notes-label">Notes / Proposed locations</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-bar bar-ops"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">State Fair Rulebook vs. Local Fair Book</span>
+        <span class="tag tag-ops">Operational</span>
+      </div>
+      <p>Something on the to-do list: pulling the Colorado State Fair rulebook and comparing it alongside the local Custer County fair book to see where they align and where there might be gaps or differences worth addressing. Not yet done — flagged here as an open item.</p>
+      <div class="notes-label">Notes</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: Strategic -->
+<div class="section">
+  <div class="section-label"><h2>Strategic</h2></div>
+
+  <div class="item">
+    <div class="item-bar bar-strategic"></div>
+    <div class="item-body">
+      <div class="item-head">
+        <span class="item-title">New Fairgrounds — A Painted View Ranch</span>
+        <span class="tag tag-strategic">Strategic</span>
+      </div>
+      <p>A property worth being aware of: 159.8 acres at 3115 County Road 160, Westcliffe, currently listed at $7.25M. A briefing document has been put together that outlines a possible funding approach — Congressionally Directed Spending (Senators Bennet and Hickenlooper, Rep. Pettersen CO-7), GOCO Land Acquisition, DOLA EIAF, USDA Rural Development Community Facilities, conservation easement through San Isabel Land Protection Trust, Wet Mountain Valley Community Foundation, the Conservation Trust Fund lottery, and a bridge financing structure to handle the timing gap between a live listing and grant cycles.</p>
+      <p>The intent is to frame this as an opportunity for the board and commissioners to consider, not a funding problem they're being handed. If there's interest, a fuller conversation with the BOCC could be worth exploring. November 2027 is likely a more realistic window than 2026 for any ballot measure, if that path is pursued.</p>
+      <div class="notes-label">Notes / Next step</div>
+      <div class="notes-box"></div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-footer">
+  <span>Custer County Fair Board — Internal Use</span>
+  <span>July 2026</span>
+</div>
+
+</body>
+</html>
