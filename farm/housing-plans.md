@@ -82,6 +82,32 @@ All 5 pig pens equal at 50 sq ft.
 
 ---
 
+## Garage Option 3
+
+**Garage:** 23' x 23' (529 sq ft)
+
+**Layout:** All 5 pig pens run along the top wall, 10' deep, with the garage width (23') split evenly five ways instead of at a fixed 5' each. Below the pen row, the full remaining depth opens up as one continuous floor. No sheep pen in this version.
+
+| Element | Dimensions | Area |
+|---|---|---|
+| Pig 1 | 4'7.2" x 10' | 46 sq ft |
+| Pig 2 | 4'7.2" x 10' | 46 sq ft |
+| Pig 3 | 4'7.2" x 10' | 46 sq ft |
+| Pig 4 | 4'7.2" x 10' | 46 sq ft |
+| Pig 5 | 4'7.2" x 10' | 46 sq ft |
+| Open floor (bottom) | 23' x 13' | 299 sq ft |
+
+**Width check:** 5 x 4.6' (4'7.2") = 23' ✓
+**Depth check:** 10' (pens) + 13' (open floor) = 23' ✓
+
+All 5 pig pens equal at 46 sq ft.
+
+**Open item:** no sheep pen — lambs need a home elsewhere if this option is chosen.
+
+*(Scaled SVG drawing: farm/housing-garage-option-3.svg)*
+
+---
+
 ## Status
 
-Three options drafted — Container Option 1, Garage Option 1 (with sheep), Garage Option 2 (5 pig pens, no sheep). Not yet finalized. If Garage Option 2 is the direction, lamb housing still needs to be resolved separately.
+Four options drafted — Container Option 1, Garage Option 1 (with sheep), Garage Option 2 (5 pig pens, left/right split, no sheep), Garage Option 3 (5 equal pig pens evenly dividing the top wall, no sheep). Not yet finalized. If either no-sheep garage option is the direction, lamb housing still needs to be resolved separately.
