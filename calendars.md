@@ -497,6 +497,7 @@ Last batch: 2026-07-22.
 [CAL] 2026-07-23 12:10 [K][D] Prenatal appt :: appointments :: stripe=appt :: end=13:10 :: location="Pueblo, CO"
 [CAL] 2026-07-24 16:30 [D] Fairboard Emergency Meeting :: meetings :: location="Stockmens Bank Conference Room, Westcliffe, CO"
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26 :: cancel=confirmed
+[CAL] 2026-07-25 08:00 [D] Linux Essentials Exam 010 v1.6 :: misc :: notes="Check-in 07:30 MDT"
 [CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
