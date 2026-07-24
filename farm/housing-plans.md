@@ -54,6 +54,34 @@ Working doctrine for housing 3 market pigs and 3 market lambs, comparing a 40' c
 
 ---
 
+## Garage Option 2
+
+**Garage:** 23' x 23' (529 sq ft)
+
+**Layout:** Left wall unchanged from Option 1 — Pig 1, 2, 3 stacked flush to the top wall. Right side reworked: Pig 4 and Pig 5 sit side by side across the upper right, both 5'x10', matching the other three. No sheep pen in this version.
+
+| Element | Dimensions | Area |
+|---|---|---|
+| Pig 1 (left wall) | 5' x 10' | 50 sq ft |
+| Pig 2 (left wall) | 5' x 10' | 50 sq ft |
+| Pig 3 (left wall) | 5' x 10' | 50 sq ft |
+| Pig 4 (upper right) | 5' x 10' | 50 sq ft |
+| Pig 5 (upper right) | 5' x 10' | 50 sq ft |
+| Center aisle | 3' wide x 23' | — |
+| Open floor, left side (bottom) | 10' x 8' | 80 sq ft |
+| Open floor, right side (bottom) | 10' x 13' | 130 sq ft |
+
+**Width check:** 10' (left) + 3' (aisle) + 5' + 5' (right, Pig4+Pig5) = 23' ✓
+**Depth check:** left wall 15' pens + 8' open = 23' ✓ | right side: 10' pens + 13' open = 23' ✓
+
+All 5 pig pens equal at 50 sq ft.
+
+**Open item:** no sheep pen — lambs need a home elsewhere (container, or a future revision of this layout) if this option is chosen.
+
+*(Scaled SVG drawing: farm/housing-garage-option-2.svg)*
+
+---
+
 ## Status
 
-Both options are drafts for comparison — container vs. garage, or a possible split (some animals in each). Not yet finalized. A third garage variant (3 pig pens left wall unchanged, 2 pig pens in upper right corner, no sheep pen) is in progress as of this session.
+Three options drafted — Container Option 1, Garage Option 1 (with sheep), Garage Option 2 (5 pig pens, no sheep). Not yet finalized. If Garage Option 2 is the direction, lamb housing still needs to be resolved separately.
