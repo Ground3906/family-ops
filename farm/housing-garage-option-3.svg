@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="800" font-family="Arial, sans-serif">
+  <!-- Scale: 1 foot = 25px. Garage 23'x23' = 575x575px -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="black"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" font-size="20" font-weight="bold" text-anchor="middle">Garage Option 3 — 5 Equal Pig Pens Along Top Wall</text>
+  <text x="450" y="50" font-size="13" text-anchor="middle" fill="#555">Scale: 1 ft = 25px | Garage: 23' x 23'</text>
+
+  <rect x="100" y="100" width="575" height="575" fill="none" stroke="black" stroke-width="3"/>
+
+  <g stroke="#ddd" stroke-width="1">
+    <line x1="225" y1="100" x2="225" y2="675"/>
+    <line x1="350" y1="100" x2="350" y2="675"/>
+    <line x1="475" y1="100" x2="475" y2="675"/>
+    <line x1="600" y1="100" x2="600" y2="675"/>
+    <line x1="100" y1="225" x2="675" y2="225"/>
+    <line x1="100" y1="350" x2="675" y2="350"/>
+    <line x1="100" y1="475" x2="675" y2="475"/>
+    <line x1="100" y1="600" x2="675" y2="600"/>
+  </g>
+
+  <text x="90" y="90" font-size="12" text-anchor="end" fill="#900">TOP WALL</text>
+
+  <rect x="100" y="100" width="115" height="250" fill="#f5d9c8" stroke="black" stroke-width="2"/>
+  <text x="157.5" y="215" font-size="13" text-anchor="middle" font-weight="bold">PIG 1</text>
+  <text x="157.5" y="232" font-size="10" text-anchor="middle">4'7.2" x 10'</text>
+
+  <rect x="215" y="100" width="115" height="250" fill="#f5d9c8" stroke="black" stroke-width="2"/>
+  <text x="272.5" y="215" font-size="13" text-anchor="middle" font-weight="bold">PIG 2</text>
+  <text x="272.5" y="232" font-size="10" text-anchor="middle">4'7.2" x 10'</text>
+
+  <rect x="330" y="100" width="115" height="250" fill="#f5d9c8" stroke="black" stroke-width="2"/>
+  <text x="387.5" y="215" font-size="13" text-anchor="middle" font-weight="bold">PIG 3</text>
+  <text x="387.5" y="232" font-size="10" text-anchor="middle">4'7.2" x 10'</text>
+
+  <rect x="445" y="100" width="115" height="250" fill="#f5d9c8" stroke="black" stroke-width="2"/>
+  <text x="502.5" y="215" font-size="13" text-anchor="middle" font-weight="bold">PIG 4</text>
+  <text x="502.5" y="232" font-size="10" text-anchor="middle">4'7.2" x 10'</text>
+
+  <rect x="560" y="100" width="115" height="250" fill="#f5d9c8" stroke="black" stroke-width="2"/>
+  <text x="617.5" y="215" font-size="13" text-anchor="middle" font-weight="bold">PIG 5</text>
+  <text x="617.5" y="232" font-size="10" text-anchor="middle">4'7.2" x 10'</text>
+
+  <rect x="100" y="350" width="575" height="325" fill="#eeeeee" stroke="black" stroke-width="2"/>
+  <text x="387.5" y="510" font-size="16" text-anchor="middle" font-weight="bold">OPEN FLOOR / AISLE</text>
+  <text x="387.5" y="530" font-size="13" text-anchor="middle">23' x 13'</text>
+
+  <line x1="100" y1="75" x2="675" y2="75" stroke="black" stroke-width="1" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="387.5" y="68" font-size="13" text-anchor="middle">23' 0" (garage width)</text>
+
+  <line x1="100" y1="100" x2="100" y2="70" stroke="black"/>
+  <line x1="215" y1="100" x2="215" y2="70" stroke="black"/>
+  <line x1="330" y1="100" x2="330" y2="70" stroke="black"/>
+  <line x1="445" y1="100" x2="445" y2="70" stroke="black"/>
+  <line x1="560" y1="100" x2="560" y2="70" stroke="black"/>
+  <line x1="675" y1="100" x2="675" y2="70" stroke="black"/>
+  <text x="157.5" y="90" font-size="10" text-anchor="middle">4.6'</text>
+  <text x="272.5" y="90" font-size="10" text-anchor="middle">4.6'</text>
+  <text x="387.5" y="90" font-size="10" text-anchor="middle">4.6'</text>
+  <text x="502.5" y="90" font-size="10" text-anchor="middle">4.6'</text>
+  <text x="617.5" y="90" font-size="10" text-anchor="middle">4.6'</text>
+
+  <line x1="60" y1="100" x2="60" y2="675" stroke="black" stroke-width="1" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="35" y="390" font-size="13" text-anchor="middle" transform="rotate(-90 35,390)">23' 0" (garage depth)</text>
+
+  <line x1="90" y1="100" x2="60" y2="100" stroke="black"/>
+  <line x1="90" y1="350" x2="60" y2="350" stroke="black"/>
+  <line x1="90" y1="675" x2="60" y2="675" stroke="black"/>
+  <text x="80" y="230" font-size="10" text-anchor="end">10'</text>
+  <text x="80" y="518" font-size="10" text-anchor="end">13'</text>
+
+  <text x="100" y="705" font-size="12" fill="#333">Width check: 5 x 4.6' (4'7.2") = 23' ✓</text>
+  <text x="100" y="723" font-size="12" fill="#333">Depth check: 10' (pens) + 13' (open floor) = 23' ✓</text>
+  <text x="100" y="741" font-size="12" fill="#333">Pig pens: 4.6' x 10' = 46 sq ft each — all 5 equal</text>
+  <text x="100" y="759" font-size="12" fill="#900">No sheep pen in this version — lambs need a home elsewhere</text>
+</svg>
