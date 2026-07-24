@@ -34,7 +34,14 @@ Edelweiss Farms — Custer County Fair 2027. Printable version: `fair-prep-check
 - [ ] Bungee cords
 - [ ] Buckets
 - [ ] Tarp + washers/screws
-- [ ] Marker (label everything)
+- [ ] Permanent marker
+- [ ] Zip ties
+- [ ] Laminated labels
+
+## Labeling Prep
+- [ ] Print/laminate labels (pens, stalls, buckets, gear)
+- [ ] Label all buckets, crocks, and totes
+- [ ] Label pens/stalls per animal
 
 ## Animal Care
 - [ ] Feed
