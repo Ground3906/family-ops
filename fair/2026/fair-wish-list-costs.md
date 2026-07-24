@@ -6,6 +6,7 @@ Edelweiss Farms — ballpark figures, not vendor quotes. Printable version: `fai
 |---|---|---|
 | Weaver show box (used) | ~$350 | In range for a smaller/hanging model used; new mini hanging boxes run $310–$530 |
 | Lamb stand | $150–$300 | Steel fitting stand, new |
+| Show lamb clippers | $200–$450 | Fitting machine with sheep head + blades (Wahl/Andis/Lister); basic body clippers run lower, dedicated show fitting machines run higher |
 | Buckets (need ~10) | $50–$100 total | Standard 2–3 gal flat-back livestock buckets, ~$5–10 each |
 | Water sprayer | $20–$60 | Handheld livestock sprayer/wand |
 | Concrete slab (wash rack pad) | $1,500–$4,000+ | Highly dependent on size and whether you hire a pour or DIY |
