@@ -484,7 +484,7 @@ Last batch: 2026-07-25.
 [CAL] 2026-07-19 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-07-19 ALL-DAY [FAM] Swim meet - Salida :: family :: location="Salida, CO" :: cancel=confirmed
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
-[CAL] 2026-07-20 08:30 [D] WGU Program mentoring appt - Teresa Jackson :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf GQS1G9H4D"
+[CAL] 2026-07-20 08:30 [D] WGU mentor meeting :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf GQS1G9H4D"
 [CAL] 2026-07-20 15:00 [K] Meeting - Altitude Fitness - swim team proposal :: meetings :: end=16:00 :: location="Altitude Fitness, Westcliffe, CO"
 [CAL] 2026-07-20 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
@@ -499,11 +499,11 @@ Last batch: 2026-07-25.
 [CAL] 2026-07-24 ALL-DAY [FAM] Swim meet - SECAL Championship :: family :: location="Las Animas, CO" :: span=2026-07-26 :: cancel=confirmed
 [CAL] 2026-07-25 08:00 [D] Linux Essentials Exam 010 v1.6 :: misc :: notes="Check-in 07:30 MDT"
 [CAL] 2026-07-25 10:00 [W] Phone call - art trip :: kids
-[CAL] 2026-07-27 08:00 [D] WGU Program mentoring appt - Teresa Jackson :: meetings :: end=08:15 :: notes="Weekly sync. Linux Essentials Exam 010 passed. Conf NXL234DYY"
+[CAL] 2026-07-27 08:00 [D] WGU mentor meeting :: meetings :: end=08:15 :: notes="Weekly sync. Linux Essentials Exam 010 passed. Conf NXL234DYY"
 [CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
-[CAL] 2026-07-28 18:00 [D] WGU D315/C172 Getting Started with Network and Security Foundations - cohort live event :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
+[CAL] 2026-07-28 18:00 [D] WGU D315 Cohort :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
 [CAL] 2026-07-29 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-30 12:50 [K] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
 [CAL] 2026-07-30 13:30 [D] VA Audiology exam :: appointments :: stripe=appt :: end=14:30 :: location="1330 Inverness Drive STE 445, Colorado Springs, CO 80910" :: notes="Provider: Kurt Smith MA Audiology. LSGS contact: (833) 832-7077. Prep: keep ears clean/debris-free or exam may be delayed."
