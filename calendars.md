@@ -384,10 +384,12 @@ Last batch: 2026-07-25.
 [MEAL] 2026-07-18 17:30 Salad :: meal-type=dinner :: tentative=true
 [MEAL] 2026-07-19 17:30 Gyros :: meal-type=dinner :: tentative=true
 [MEAL] 2026-07-21 17:30 Pulled pork, Caesar salad, rolls :: meal-type=dinner
-[MEAL] 2026-07-23 17:30 Gyros :: meal-type=dinner
-[MEAL] 2026-07-24 17:30 Lasagna :: meal-type=dinner :: notes="Pull from freezer"
-[MEAL] 2026-07-25 17:30 Bowtie noodles, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
-[MEAL] 2026-07-26 17:30 Grill dinner :: meal-type=dinner
+[MEAL] 2026-07-23 17:30 Lasagna :: meal-type=dinner
+[MEAL] 2026-07-24 17:30 Popcorn and apples :: meal-type=dinner
+[MEAL] 2026-07-25 17:30 Hamburgers with Doug and Deb :: meal-type=dinner
+[MEAL] 2026-07-26 17:30 Brauts :: meal-type=dinner
+[MEAL] 2026-07-27 17:30 Gyros :: meal-type=dinner
+[MEAL] 2026-07-28 17:30 Bowtie pasta, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
 [MEAL] 2026-08-06 17:30 Dinner with fruit spread :: meal-type=dinner :: notes="Transfiguration - grapes and first fruits at table. Bless before dinner."
 
 ---
@@ -598,20 +600,24 @@ Last batch: 2026-07-25.
 
 [CAL] 2026-01-01 ALL-DAY Mary, Mother of God :: liturgical
 [CAL] 2026-01-06 ALL-DAY Epiphany ★ :: liturgical :: notes="king cake"
+[CAL] 2026-01-25 ALL-DAY Conversion of St. Paul ★ :: liturgical :: notes="bean soup - traditional Roman feast day food"
 [CAL] 2026-02-02 ALL-DAY Candlemas ★ :: liturgical :: notes="crepes"
 [CAL] 2026-02-03 ALL-DAY St. Blaise - throat blessing :: liturgical
+[CAL] 2026-02-05 ALL-DAY St. Agatha ★ :: liturgical :: notes="blessed bread - round loaves brought to church"
 [CAL] 2026-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2026-02-14 ALL-DAY St. Valentine :: liturgical
 [CAL] 2026-03-17 ALL-DAY St. Patrick ★ :: liturgical :: notes="corned beef, soda bread"
 [CAL] 2026-03-19 ALL-DAY St. Joseph ★ :: liturgical :: notes="zeppole, pasta"
 [CAL] 2026-03-25 ALL-DAY Annunciation :: liturgical
+[CAL] 2026-04-06 ALL-DAY Easter Monday ★ :: liturgical :: notes="lamb, eggs, spring foods"
 [CAL] 2026-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2026-05-01 ALL-DAY St. Joseph the Worker :: liturgical
+[CAL] 2026-05-03 ALL-DAY Sts. Philip and James ★ :: liturgical :: notes="pretzels - traditional German feast day bread"
 [CAL] 2026-05-13 ALL-DAY Our Lady of Fatima :: liturgical
 [CAL] 2026-05-15 ALL-DAY St. Isidore - patron of Edelweiss :: liturgical
-[CAL] 2026-05-31 ALL-DAY Visitation :: liturgical
 [CAL] 2026-05-17 ALL-DAY Ascension of the Lord - Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2026-05-24 ALL-DAY Pentecost Sunday - Holy Day :: liturgical
+[CAL] 2026-05-31 ALL-DAY Visitation :: liturgical
 [CAL] 2026-06-07 ALL-DAY Corpus Christi - Holy Day :: liturgical
 [CAL] 2026-06-13 ALL-DAY St. Anthony ★ :: liturgical :: notes="bread of St. Anthony"
 [CAL] 2026-06-24 ALL-DAY Birth of St. John the Baptist ★ :: liturgical :: notes="bonfire feast, summer foods"
@@ -622,20 +628,23 @@ Last batch: 2026-07-25.
 [CAL] 2026-08-06 ALL-DAY Transfiguration ★ :: liturgical :: notes="grapes, first fruits"
 [CAL] 2026-08-15 ALL-DAY Assumption of Mary - Holy Day of Obligation :: liturgical
 [CAL] 2026-08-22 ALL-DAY Queenship of Mary :: liturgical
+[CAL] 2026-08-28 ALL-DAY St. Augustine ★ :: liturgical :: notes="pears - connected to his Confessions garden conversion scene"
 [CAL] 2026-09-08 ALL-DAY Birth of Mary :: liturgical
 [CAL] 2026-09-14 ALL-DAY Exaltation of the Holy Cross :: liturgical
-[CAL] 2026-09-29 ALL-DAY Sts. Michael, Gabriel, Raphael :: liturgical
+[CAL] 2026-09-29 ALL-DAY Michaelmas - Sts. Michael, Gabriel, Raphael ★ :: liturgical :: notes="goose, blackberries - traditional Michaelmas harvest feast"
 [CAL] 2026-10-01 ALL-DAY St. Therese of Lisieux :: liturgical
 [CAL] 2026-10-02 ALL-DAY Guardian Angels :: liturgical
 [CAL] 2026-10-04 ALL-DAY St. Francis - animal blessing :: liturgical
 [CAL] 2026-10-07 ALL-DAY Our Lady of the Rosary :: liturgical
+[CAL] 2026-10-18 ALL-DAY St. Luke ★ :: liturgical :: notes="autumn harvest foods - ox as his symbol; hearty fall meal"
 [CAL] 2026-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2026-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2026-11-01 ALL-DAY All Saints Day - Holy Day of Obligation :: liturgical
 [CAL] 2026-11-02 ALL-DAY All Souls Day ★ :: liturgical :: notes="pan de muerto"
 [CAL] 2026-11-11 ALL-DAY St. Martin of Tours ★ :: liturgical :: notes="goose, wine"
 [CAL] 2026-11-22 ALL-DAY St. Cecilia :: liturgical
-[CAL] 2026-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
+[CAL] 2026-11-25 ALL-DAY St. Catherine of Alexandria ★ :: liturgical :: notes="Catherine wheels - spiced wheel-shaped cookies"
+[CAL] 2026-12-04 ALL-DAY St. Barbara ★ :: liturgical :: notes="wheat sprouts and grain dishes - wheat set to sprout on her feast"
 [CAL] 2026-12-06 ALL-DAY St. Nicholas ★ :: liturgical :: notes="treats in shoes"
 [CAL] 2026-12-08 ALL-DAY Immaculate Conception - Holy Day of Obligation :: liturgical
 [CAL] 2026-12-12 ALL-DAY Our Lady of Guadalupe ★ :: liturgical :: notes="tamales"
@@ -650,23 +659,27 @@ Last batch: 2026-07-25.
 
 [CAL] 2027-01-01 ALL-DAY Mary, Mother of God :: liturgical
 [CAL] 2027-01-06 ALL-DAY Epiphany ★ :: liturgical :: notes="king cake"
+[CAL] 2027-01-25 ALL-DAY Conversion of St. Paul ★ :: liturgical :: notes="bean soup - traditional Roman feast day food"
 [CAL] 2027-02-02 ALL-DAY Candlemas ★ :: liturgical :: notes="crepes"
 [CAL] 2027-02-03 ALL-DAY St. Blaise - throat blessing :: liturgical
+[CAL] 2027-02-05 ALL-DAY St. Agatha ★ :: liturgical :: notes="blessed bread - round loaves brought to church"
 [CAL] 2027-02-11 ALL-DAY Our Lady of Lourdes :: liturgical
 [CAL] 2027-02-14 ALL-DAY St. Valentine :: liturgical
 [CAL] 2027-03-17 ALL-DAY St. Patrick ★ :: liturgical :: notes="corned beef, soda bread"
 [CAL] 2027-03-19 ALL-DAY St. Joseph ★ :: liturgical :: notes="zeppole, pasta"
 [CAL] 2027-03-25 ALL-DAY Annunciation :: liturgical
+[CAL] 2027-04-05 ALL-DAY Easter Monday ★ :: liturgical :: notes="lamb, eggs, spring foods"
 [CAL] 2027-04-23 ALL-DAY St. George :: liturgical
 [CAL] 2027-05-01 ALL-DAY St. Joseph the Worker :: liturgical
+[CAL] 2027-05-03 ALL-DAY Sts. Philip and James ★ :: liturgical :: notes="pretzels - traditional German feast day bread"
 [CAL] 2027-05-13 ALL-DAY Our Lady of Fatima :: liturgical
 [CAL] 2027-05-15 ALL-DAY St. Isidore - patron of Edelweiss :: liturgical
 [CAL] 2027-05-31 ALL-DAY Visitation :: liturgical
 [CAL] 2027-06-06 ALL-DAY Ascension of the Lord - Holy Day of Obligation :: liturgical :: notes="US transfer to Sunday"
 [CAL] 2027-06-13 ALL-DAY Pentecost Sunday - Holy Day :: liturgical
-[CAL] 2027-06-27 ALL-DAY Corpus Christi - Holy Day :: liturgical
 [CAL] 2027-06-13 ALL-DAY St. Anthony ★ :: liturgical :: notes="bread of St. Anthony"
 [CAL] 2027-06-24 ALL-DAY Birth of St. John the Baptist ★ :: liturgical :: notes="bonfire feast, summer foods"
+[CAL] 2027-06-27 ALL-DAY Corpus Christi - Holy Day :: liturgical
 [CAL] 2027-06-29 ALL-DAY Sts. Peter and Paul ★ :: liturgical :: notes="fish"
 [CAL] 2027-07-16 ALL-DAY Our Lady of Mount Carmel :: liturgical
 [CAL] 2027-07-22 ALL-DAY St. Mary Magdalene :: liturgical
@@ -674,20 +687,23 @@ Last batch: 2026-07-25.
 [CAL] 2027-08-06 ALL-DAY Transfiguration ★ :: liturgical :: notes="grapes, first fruits"
 [CAL] 2027-08-15 ALL-DAY Assumption of Mary - Holy Day of Obligation :: liturgical
 [CAL] 2027-08-22 ALL-DAY Queenship of Mary :: liturgical
+[CAL] 2027-08-28 ALL-DAY St. Augustine ★ :: liturgical :: notes="pears - connected to his Confessions garden conversion scene"
 [CAL] 2027-09-08 ALL-DAY Birth of Mary :: liturgical
 [CAL] 2027-09-14 ALL-DAY Exaltation of the Holy Cross :: liturgical
-[CAL] 2027-09-29 ALL-DAY Sts. Michael, Gabriel, Raphael :: liturgical
+[CAL] 2027-09-29 ALL-DAY Michaelmas - Sts. Michael, Gabriel, Raphael ★ :: liturgical :: notes="goose, blackberries - traditional Michaelmas harvest feast"
 [CAL] 2027-10-01 ALL-DAY St. Therese of Lisieux :: liturgical
 [CAL] 2027-10-02 ALL-DAY Guardian Angels :: liturgical
 [CAL] 2027-10-04 ALL-DAY St. Francis - animal blessing :: liturgical
 [CAL] 2027-10-07 ALL-DAY Our Lady of the Rosary :: liturgical
+[CAL] 2027-10-18 ALL-DAY St. Luke ★ :: liturgical :: notes="autumn harvest foods - ox as his symbol; hearty fall meal"
 [CAL] 2027-10-28 ALL-DAY Sts. Simon and Jude :: liturgical
 [CAL] 2027-10-31 ALL-DAY All Hallows Eve :: liturgical
 [CAL] 2027-11-01 ALL-DAY All Saints Day - Holy Day of Obligation :: liturgical
 [CAL] 2027-11-02 ALL-DAY All Souls Day ★ :: liturgical :: notes="pan de muerto"
 [CAL] 2027-11-11 ALL-DAY St. Martin of Tours ★ :: liturgical :: notes="goose, wine"
 [CAL] 2027-11-22 ALL-DAY St. Cecilia :: liturgical
-[CAL] 2027-11-25 ALL-DAY St. Catherine of Alexandria :: liturgical
+[CAL] 2027-11-25 ALL-DAY St. Catherine of Alexandria ★ :: liturgical :: notes="Catherine wheels - spiced wheel-shaped cookies"
+[CAL] 2027-12-04 ALL-DAY St. Barbara ★ :: liturgical :: notes="wheat sprouts and grain dishes - wheat set to sprout on her feast"
 [CAL] 2027-12-06 ALL-DAY St. Nicholas ★ :: liturgical :: notes="treats in shoes"
 [CAL] 2027-12-08 ALL-DAY Immaculate Conception - Holy Day of Obligation :: liturgical
 [CAL] 2027-12-12 ALL-DAY Our Lady of Guadalupe ★ :: liturgical :: notes="tamales"
