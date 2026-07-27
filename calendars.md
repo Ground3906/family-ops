@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-25.
+Last batch: 2026-07-27.
 
 ---
 
@@ -505,6 +505,7 @@ Last batch: 2026-07-25.
 [CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
 [CAL] 2026-07-27 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
+[CAL] 2026-07-28 13:00 [K] Massage :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-07-28 18:00 [D] WGU D315 Cohort :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
 [CAL] 2026-07-29 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-30 08:00 [D] KofC meeting - Bob Baxter :: meetings
