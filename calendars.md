@@ -508,6 +508,7 @@ Last batch: 2026-07-28.
 [CAL] 2026-07-28 13:00 [K] Massage :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-07-28 18:00 [D] WGU D315 Cohort :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
 [CAL] 2026-07-29 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-07-29 16:00 [D] WGU D315 Study Smarter Tactics :: meetings :: end=17:00 :: notes="Peer coaching live event. Not recorded."
 [CAL] 2026-07-30 08:00 [D] KofC meeting - Bob Baxter :: meetings
 [CAL] 2026-07-30 12:50 [K] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
 [CAL] 2026-07-30 13:30 [D] VA Audiology exam :: appointments :: stripe=appt :: end=14:30 :: location="1330 Inverness Drive STE 445, Colorado Springs, CO 80910" :: notes="Provider: Kurt Smith MA Audiology. LSGS contact: (833) 832-7077. Prep: keep ears clean/debris-free or exam may be delayed."
