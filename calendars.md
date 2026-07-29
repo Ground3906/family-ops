@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-28.
+Last batch: 2026-07-29.
 
 ---
 
@@ -526,6 +526,7 @@ Last batch: 2026-07-28.
 [CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="Woodman, Colorado Springs, CO" :: notes="rescheduled back from 2026-08-24"
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
+[CAL] 2026-08-10 18:00 [D] WGU C172/D315 Bootcamp - Part 1 :: meetings :: end=19:15 :: notes="End of Term Bootcamp, part 1 of 2. OSI Model, Network Commands, Virtualization/Cloud Computing. Bring study guide. Monthly series, 2nd Monday."
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
