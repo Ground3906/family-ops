@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-07-29.
+Last batch: 2026-07-30.
 
 ---
 
@@ -251,7 +251,6 @@ Last batch: 2026-07-29.
 ### WHAT'S FOR DINNER
 <!-- [MEAL] and [CHORE] line types ONLY. Schema: cal-widget.md. Never [CAL]. -->
 <!-- Zone: Week A=Bathrooms W+C/Floors M+E. Week B=Bathrooms M+E/Floors W+C. Rileigh no zone. -->
-<!-- Dishes/animal rotation source: punch-list/chore-chart.md -->
 
 <!-- WEEK A: 7/6-7/12 -->
 [CHORE] 2026-07-06 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-07-12
@@ -531,6 +530,7 @@ Last batch: 2026-07-29.
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
+[CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
