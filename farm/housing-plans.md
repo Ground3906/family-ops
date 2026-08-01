@@ -108,6 +108,28 @@ All 5 pig pens equal at 46 sq ft.
 
 ---
 
+## Odor & Ventilation Risk — Garage Options Only
+
+Applies to Garage Options 1, 2, and 3 (not the container, which is a detached structure). The garage shares walls, and often ceiling joists, with the house itself — that's the core risk the container doesn't have.
+
+**Why it's a real risk:**
+- Shared walls/ceiling joists mean odor has a direct path into living space, not just through air but through the structure itself
+- Every time the house-to-garage entry door opens, air exchanges directly between the two spaces
+- Animal respiration and urine create high humidity, which traps odor against drywall and ceiling in a closed 529 sq ft room rather than dissipating
+
+**Modifications needed to make any garage option livable long-term:**
+- **Negative pressure ventilation** — heavy-duty exhaust fan running continuously, pulling air out to the outdoors so air never flows garage-to-house
+- **Seal the entry door** — commercial-grade weatherstripping and a tight sweep on the house-to-garage door
+- **Floor barriers** — thick rubber stall mats over the concrete, seams sealed, to keep urine from soaking into the porous floor
+- **Ammonia absorbents** — hydrated lime or stall dry powder under shavings, applied during daily cleaning
+
+**Still to work out, regardless of which garage option is chosen:**
+- Daily waste volume estimate (bagging/removal planning)
+- Pen layout relative to the house entry door — keeping pens as far from that door as the 23'x23' footprint allows
+- Correct exhaust fan CFM rating for the space
+
+---
+
 ## Status
 
-Four options drafted — Container Option 1, Garage Option 1 (with sheep), Garage Option 2 (5 pig pens, left/right split, no sheep), Garage Option 3 (5 equal pig pens evenly dividing the top wall, no sheep). Not yet finalized. If either no-sheep garage option is the direction, lamb housing still needs to be resolved separately.
+Four layout options drafted — Container Option 1, Garage Option 1 (with sheep), Garage Option 2 (5 pig pens, left/right split, no sheep), Garage Option 3 (5 equal pig pens evenly dividing the top wall, no sheep). Not yet finalized. If either no-sheep garage option is the direction, lamb housing still needs to be resolved separately. Odor/ventilation mitigation (above) is a prerequisite for any garage option, not yet costed or scheduled.
