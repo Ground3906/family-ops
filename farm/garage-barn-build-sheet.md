@@ -11,7 +11,7 @@
 
 | # | Item | Spec | Price | Status |
 |---|------|------|-------|--------|
-| 1 | Vent fan | Hessaire 16SF3-H, 16" gravity-louver shutter fan, through-wall NE corner, timer-run. Made-USA, IP55, UL705, weatherstripped self-sealing louvers (winter envelope) | $138 list | ORDERED 2026-08-03 (HD, see Order 5) |
+| 1 | Vent fan | Hessaire 16SF3-H, 16" gravity-louver shutter fan, through-wall NE corner, timer-run. Made-USA, IP55, UL705, weatherstripped self-sealing louvers (winter envelope) | $113.02 PAID | ORDERED 2026-08-03 (HD #WH40364049) |
 | 2 | Livestock fans x5 | DuraFan 18" indoor/outdoor sealed-motor, 3 ceiling (north pens) + 2 east-wall (south pens) | $105/ea at 5-qty = $525 | Firm, + tax/freight |
 | 3 | Epoxy system | ArmorClad 600+300 sq ft kits, primer (mandatory over grind), 2-pt military urethane topcoat, non-skid additive. Floor 529 + stem walls 138 = 667 sq ft | $1,100-1,400 configured | Range, free ship, ask military discount |
 | 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), crack putty, PPE | ~$200 allowance (EST) + putty $134+ if used | Rate at HD rental desk |
@@ -22,10 +22,11 @@
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD. Still to order |
-| 8 | Lighting (Phase 1) | Westinghouse 4-ft 40W integrated LED linkable shop light, 4,500 lumens/ea, 5000K daylight, x4 = ~18,000 lumens. Target was 21-32k (40-60 lm/sqft); 4 fixtures land ~34 lm/sqft, the FLOOR. Aim panels around the 3 ceiling DuraFan sweeps. PHASE 1: live with 4 a week, expect to add a second 4-pack over the work zone | ORDERED 2026-08-03 (HD, see Order 5) | Headroom noted for phase 2 |
+| 8 | Lighting (Phase 1) | Westinghouse 4-ft 40W integrated LED linkable shop light, 4,500 lumens/ea, 5000K daylight, x4 = ~18,000 lumens. Target was 21-32k (40-60 lm/sqft); 4 fixtures land ~34 lm/sqft, the FLOOR. Aim panels around the 3 ceiling DuraFan sweeps. PHASE 1: live with 4 a week, expect to add a second 4-pack over the work zone | $90.00 PAID | ORDERED 2026-08-03 (HD #WH40364049). Headroom noted for phase 2 |
 
-**Priced hardware subtotal:** ~$2,200-2,550 (heater package $289.36 paid; fan+lighting $208.55 paid)
-**Allowances (EST):** ~$500
+**Priced hardware subtotal:** heater package $289.36 paid; HD fan+lighting $213.28 paid (order #WH40364049)
+**Total paid to date:** $602.64 (heater $100, QC parts $149.36, HD fan+lights $213.28, + heater acquisition already in the $289.36... net cash out: heater $100 + QC $149.36 + HD $213.28 = $462.64)
+**Allowances (EST):** ~$500 remaining
 **Open lines:** AquaChief x5, window, PEX/vent/install consumables, epoxy, DuraFans, optional diesel backup, optional lighting phase 2
 **Working all-in estimate:** ~$2,700-3,250 plus waterers
 
@@ -54,7 +55,7 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
 ### Order 5: Home Depot (10% military discount applies)
-- DONE 2026-08-03: Hessaire 16SF3-H fan + Westinghouse 4-ft shop light x4. Subtotal $225.58, DD-214 -$22.56, tax $5.53, free delivery = $208.55 PAID. Fan arrives Aug 6-10, lights Aug 6
+- DONE 2026-08-03: order #WH40364049. Hessaire 16SF3-H fan $113.02 (arrives Aug 6-10) + Westinghouse 4-ft shop light x4 $90.00 (arrives Aug 6). Order total $213.28 PAID, free delivery
 - STILL TO ORDER / STORE RUN:
   - Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
   - Thermostat: 2-wire 24V heat-only stat from the aisle, or STN701 $40 at hvacdirect.com
