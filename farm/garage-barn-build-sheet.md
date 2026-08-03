@@ -3,6 +3,8 @@
 **Locked:** 2026-08-02 | **Mission:** 23x23 garage to barn, 3 hogs + 3 sheep, Feb-Jul occupancy, summer 2027 fair year. Temp solution, ~3 year horizon.
 **Deadline law:** epoxy complete NLT 2026-09-30. Grind ~Sep 19-20, coat by Sep 24, heavy loads on floor at cure day 5.
 
+**How to find products:** search the vendor site by the MODEL NUMBER or search term given. Deep links rot; model numbers do not. Phone numbers listed where calling beats clicking.
+
 ---
 
 ## BUDGET LIST
@@ -17,12 +19,13 @@
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
 | 5 | Heater | Modine HD30, LP (NG unit + 53079 kit), single-pipe side-wall vent | $1,057 ($1,100 budgeted) | Firm at HVACDirect |
 | 5a | Heater riders | Thermostat STN701 $40; vent pipe parts ~$150 allowance (EST); high-altitude orifice CONFIRM at order (9,000 ft); pro install required for 10-yr exchanger warranty | $190 + labor quote | Labor = open line |
+| 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | VEVOR-class 8kW diesel all-in-one: sealed combustion, exhaust plumbed outside, altitude mode on controller. Dual duty: elk camp Sep-Dec, barn cold-snap backup Feb. Real output ~12-14k BTU altitude-tuned | $106-135, ~$95-120 after 10% | Price on page, HD; not yet locked |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
 
 **Priced hardware subtotal:** ~$3,100-3,400
 **Allowances (EST):** ~$500
-**Open lines:** AquaChief x5, heater install labor, tax and freight
+**Open lines:** AquaChief x5, heater install labor, tax and freight, optional diesel backup
 **Working all-in estimate:** ~$3,700-4,300 plus waterers and labor
 
 Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
@@ -31,30 +34,28 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
 ## PURCHASE LIST (by order)
 
-### Order 1: QC Supply
-- DuraFan 18" x5 (3 will ceiling-mount via yoke to joists, 2 wall-mount): $525
-- Link: https://www.qcsupply.com/products/durafan-r-indoor-outdoor-non-oscillating-wall-mount-fan-18
+### Order 1: QC Supply (qcsupply.com)
+- Search: DURAFAN 18. QC part #10432 (white) or #10455 (black). Qty 5: $525
+- 3 ceiling-mount via yoke to joists, 2 wall-mount
 
-### Order 2: HVACDirect (1-800-397-1392)
-- Modine HD30 LP bundle (HD30AS0111FDAN / 53079): $1,057
-- ACiQ STN701 thermostat: $40
-- Phone riders: confirm high-altitude orifice spec for 9,000 ft; scan warehouse-deals page for scratch-and-dent HD units first
-- Link: https://hvacdirect.com/brands/modine-unit-heaters/modine-hot-dawg-series-garage-heaters.html
-- Alt vendor: https://www.qcsupply.com/products/modine-hot-dawg-r-heater-model-hd (free ship, gas type selectable)
+### Order 2: HVACDirect (hvacdirect.com, 1-800-397-1392)
+- Search: HD30. Model HD30AS0111FDAN + LP conversion kit 53079: $1,057
+- Search: STN701 thermostat: $40
+- Phone riders: confirm high-altitude orifice spec for 9,000 ft; ask about scratch-and-dent HD units on their warehouse-deals page first
+- Alt vendor: qcsupply.com, search: Modine Hot Dawg (free ship, gas type selectable on page)
 
-### Order 3: ArmorPoxy (888-755-7361)
-- ArmorClad 600 sq ft kit + 300 sq ft add-on, WITH primer, 2-part military-grade urethane topcoat, non-skid additive in clear
-- Crack Repair Epoxy Putty if slab check warrants: $134-299
+### Order 3: ArmorPoxy (armorpoxy.com, 888-755-7361)
+- Search: ArmorClad kit. Configure: 600 sq ft kit + 300 sq ft add-on, WITH primer, 2-part military-grade urethane topcoat, non-skid additive in clear
+- Search: crack repair epoxy putty, if slab check warrants: $134-299
 - Ask: military discount (DD-214)
-- Links: https://armorpoxy.com/armorclad-epoxy-floor-kit | https://armorpoxy.com/crack-repair-epoxy-putty-2-part/
 
-### Order 4: Hog Slat (800-949-4647)
-- AquaChief Pig Water Cup base unit x5 (price on page)
-- Link: https://www.hogslat.com/aquachief-pig-water-cup-base-unit
+### Order 4: Hog Slat (hogslat.com, 800-949-4647)
+- Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
 ### Order 5: Home Depot store run (10% discount applies)
-- Hessaire 16SF3-H 16" shutter fan: https://www.homedepot.com/p/Hessaire-1325-CFM-Shutter-Exhaust-Fan-Wall-Mounted-16-in-Propeller-16SF3-H/305621435
-- American Craftsman 70 Series 36x24 slider, BUCK frame: https://www.homedepot.com/p/American-Craftsman-36-in-x-24-in-70-Series-Universal-Reversible-Sliding-White-Vinyl-Window-with-Buck-Frame-70-SLIDER-BUCK/203157489
+- Search: Hessaire 16SF3 (16" shutter fan, model 16SF3-H)
+- Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
+- Optional: search VEVOR diesel air heater all in one (8kW class; listing SKUs churn weekly, any $100-135 all-in-one variant is the same machine)
 - PEX trunk + drops, manifold, blowout fitting (air quick-connect), pipe hangers, 1/2" adapters for AquaChief pipe tops
 - Heater vent pipe parts (single-pipe side-wall, per HD30 manual)
 - Fan install: lumber for bay blocking, exterior sealant, screws
