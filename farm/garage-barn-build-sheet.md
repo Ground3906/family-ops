@@ -17,16 +17,16 @@
 | 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), crack putty, PPE | ~$200 allowance (EST) + putty $134+ if used | Rate at HD rental desk |
 | 4 | Waterers x5 | Hog Slat AquaChief base units (cup + 48" SS pipe + nipple), panel-mounted on gating | Price on page x5 | Open line |
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
-| 5 | Heater | USED Modine 80k BTU class, bought 2026-08-02, model number TBD off data plate. ~46k BTU delivered at 9,000 ft vs ~20k design load: oversized, will short-cycle, acceptable in a barn | $100 PAID | ACQUIRED. Supersedes HD30 plan, ~$950 saved |
-| 5a | Heater riders | (1) LP conversion kit, part number by model, Matt orders and installs. (2) HIGH-ALTITUDE ORIFICE for 9,000 ft, spec by model, non-negotiable. (3) Heat exchanger flashlight inspection BEFORE first fire: rust-through, cracks, heavy scale = do not run. (4) Vent type by model: power-vent = side-wall pipe; gravity-vent = vertical B-vent through roof (bigger parts bill). (5) Thermostat: STN701 $40 or HD equivalent | Kit + orifice + vent parts TBD by model, ~$150 vent allowance (EST) | Model number pending |
+| 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
+| 5a | Heater riders | (1) LP conversion kit Modine 53080 (HD100/HDS100, spark ignition): $72.53 HD Internet #202812676 (~$65 w/10%) or $92.95 PexUniverse. Matt installs. (2) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328 with model + serial + 9,000 ft, get spec from derate table. Non-negotiable. (3) Exchanger flashlight inspection BEFORE first fire: rust-through, cracks, heavy scale = do not run. (4) Vent: 4" Cat III side-wall parts per HD100 manual. (5) Thermostat: any 2-wire 24V stat; STN701 $40 or HD aisle | ~$65 kit + $40 stat + ~$150 vent allowance (EST) | Kit sourced, call pending |
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
 
-**Priced hardware subtotal:** ~$2,050-2,400 (heater now $100, was $1,057)
+**Priced hardware subtotal:** ~$2,150-2,500 (heater $100 + kit ~$65 + stat $40)
 **Allowances (EST):** ~$500
-**Open lines:** AquaChief x5, LP conversion kit + orifice (by model), vent parts if gravity-type, tax and freight, optional diesel backup
-**Working all-in estimate:** ~$2,600-3,200 plus waterers and open lines
+**Open lines:** AquaChief x5, altitude orifice guidance, tax and freight, optional diesel backup
+**Working all-in estimate:** ~$2,650-3,200 plus waterers
 
 Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
@@ -38,11 +38,10 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Search: DURAFAN 18. QC part #10432 (white) or #10455 (black). Qty 5: $525
 - 3 ceiling-mount via yoke to joists, 2 wall-mount
 
-### Order 2: Heater parts (vendor by model number, pending data plate)
-- LP conversion kit for used Modine 80k, exact part by model number
-- High-altitude orifice spec for 9,000 ft, per Modine altitude tables for that model
-- Thermostat: STN701 at hvacdirect.com ($40) or HD-aisle 2-wire equivalent
-- Modine parts sources: hvacdirect.com 1-800-397-1392, or Modine distributor lookup by model
+### Order 2: Modine tech call (800-828-4328, number is on the data plate)
+- Script: "HD100AS0111, serial 39010017094211-4531, converting to LP with kit 53080, installing at 9,000 ft elevation. Need the high-altitude LP orifice spec from your derate table."
+- Outcome: either kit orifices + manifold pressure adjustment, or a specified orifice drill size
+- Weekday business hours
 
 ### Order 3: ArmorPoxy (armorpoxy.com, 888-755-7361)
 - Search: ArmorClad kit. Configure: 600 sq ft kit + 300 sq ft add-on, WITH primer, 2-part military-grade urethane topcoat, non-skid additive in clear
@@ -53,18 +52,20 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
 ### Order 5: Home Depot store run (10% discount applies)
+- Search: M53080 or Internet #202812676 (Modine 53080 NG-to-LP kit for HD100): $72.53, ~$65 after discount
 - Search: Hessaire 16SF3 (16" shutter fan, model 16SF3-H)
 - Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
-- Optional: search VEVOR diesel air heater all in one (8kW class; listing SKUs churn weekly) if clone route chosen over quality tier for 5b
+- Thermostat: 2-wire 24V heat-only stat from the aisle, or STN701 $40 at hvacdirect.com
+- 4" Cat III side-wall vent parts per HD100 manual (terminal, pipe, wall thimble)
 - PEX trunk + drops, manifold, blowout fitting (air quick-connect), pipe hangers, 1/2" adapters for AquaChief pipe tops
-- Heater vent pipe parts, type per data-plate check (side-wall power-vent pipe OR vertical B-vent + roof flashing)
 - Fan install: lumber for bay blocking, exterior sealant, screws
 - Window install: trim, flashing tape, sealant
 - Rental desk: walk-behind floor grinder + diamond cup wheel for angle grinder; P100 masks
 - Ask at register: does the 10% touch rentals
+- Optional 5b: search VEVOR diesel air heater all in one (8kW class) if clone route chosen over quality tier
 
 ### Heater install: Matt (DIY)
-- LP conversion + orifice swap: Matt. Gas tee off NW propane supply, vent penetration, commissioning: Matt, installer optional. No-warranty unit, no warranty rider.
+- 53080 kit + orifice swap: Matt. Gas tee off NW propane supply, 4" vent penetration, commissioning: Matt, installer optional. No-warranty unit.
 - Exchanger inspection before first fire, no exceptions
 
 ---
