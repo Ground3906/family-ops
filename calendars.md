@@ -140,7 +140,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-06.
+Last batch: 2026-08-03.
 
 ---
 
@@ -519,8 +519,10 @@ Last batch: 2026-08-06.
 
 [CAL] 2026-08-03 09:20 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-03 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-04 08:00 [W] Cross country :: kids
 [CAL] 2026-08-04 08:30 [D] VA Appointment :: appointments :: stripe=appt :: end=10:00 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
+[CAL] 2026-08-06 08:00 [W] Cross country :: kids
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="St Peregrine Clinic, 6031 E Woodman Rd Ste 100, Colorado Springs, CO 80923" :: notes="rescheduled back from 2026-08-24. Phone 719-635-7321. Must pre-register/confirm online before arrival."
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
@@ -533,6 +535,7 @@ Last batch: 2026-08-06.
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-17 17:00 [D] Appt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
+[CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
