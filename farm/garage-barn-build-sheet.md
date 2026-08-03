@@ -18,15 +18,15 @@
 | 4 | Waterers x5 | Hog Slat AquaChief base units (cup + 48" SS pipe + nipple), panel-mounted on gating | Price on page x5 | Open line |
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
 | 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
-| 5a | Heater riders | (1) LP conversion kit Modine 53080 (HD100/HDS100, spark ignition): $72.53 HD Internet #202812676 (~$65 w/10%), $92.95 PexUniverse, or QC Supply price on page. (2) NEW IGNITOR Modine 5H79636 direct spark (= plate 5H079636 = 5H0796360000, fits HD30-HD125): $49.95 PropaneProducts, $74.48 SupplyHouse, QC #20888 price on page. WARNING: do NOT buy 5H75032 hot-surface igniter, wrong ignition type. (3) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328 with model + serial + 9,000 ft. Non-negotiable. (4) Exchanger flashlight inspection BEFORE first fire: rust-through, cracks, heavy scale = do not run. (5) Vent: 4" Cat III side-wall parts per HD100 manual. (6) Thermostat: any 2-wire 24V stat; STN701 $40 or HD aisle | ~$65 kit + ~$50-75 ignitor + $40 stat + ~$150 vent allowance (EST) | Kit + ignitor sourced, call pending |
+| 5a | Heater parts | ORDERED 2026-08-03, QC Supply order #95541: 53080 conversion kit $89.99 + spark igniter 5H79636 $64.99, code HELLOC20 -$20, ship $7.46, tax $6.92 = $149.36 PAID. Remaining riders: (1) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328 with model + serial + 9,000 ft, non-negotiable, do before install day. (2) Exchanger flashlight inspection BEFORE first fire: rust-through, cracks, heavy scale = do not run. (3) Vent: 4" Cat III side-wall parts per HD100 manual. (4) Thermostat: any 2-wire 24V stat; STN701 $40 or HD aisle | $149.36 PAID + $40 stat + ~$150 vent allowance (EST) | Parts shipping, altitude call pending |
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
 
-**Priced hardware subtotal:** ~$2,200-2,575 (heater $100 + kit ~$65 + ignitor ~$50-75 + stat $40)
+**Priced hardware subtotal:** ~$2,200-2,550 (heater package now $289.36 paid + stat + vent parts)
 **Allowances (EST):** ~$500
-**Open lines:** AquaChief x5, altitude orifice guidance, tax and freight, optional diesel backup
-**Working all-in estimate:** ~$2,700-3,275 plus waterers
+**Open lines:** AquaChief x5, tax and freight on remaining orders, optional diesel backup
+**Working all-in estimate:** ~$2,700-3,250 plus waterers
 
 Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
@@ -34,15 +34,15 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
 ## PURCHASE LIST (by order)
 
-### Order 1: QC Supply (qcsupply.com) - ONE-BOX CANDIDATE
-- Search: DURAFAN 18. QC part #10432 (white) or #10455 (black). Qty 5: $525
+### Order 1: QC Supply (qcsupply.com)
+- DONE 2026-08-03: order #95541, 53080 kit + 5H79636 igniter, $149.36 paid (HELLOC20 first-order code, -$20)
+- STILL TO ORDER: DuraFan 18" x5. QC part #10432 (white) or #10455 (black). $105/ea at 5-qty = $525. Check for a live promo code before checkout
 - 3 ceiling-mount via yoke to joists, 2 wall-mount
-- OPTION: add ignitor QC #20888 (search: Modine spark igniter) and 53080 kit (search: Hot Dawg propane conversion HD100), prices on page. One order, one freight. Promo code HEAT10 seen on their site
 
 ### Order 2: Modine tech call (800-828-4328, number is on the data plate)
 - Script: "HD100AS0111, serial 39010017094211-4531, converting to LP with kit 53080, installing at 9,000 ft elevation. Need the high-altitude LP orifice spec from your derate table."
 - Outcome: either kit orifices + manifold pressure adjustment, or a specified orifice drill size
-- Weekday business hours
+- Weekday business hours. Do this before the kit install day
 
 ### Order 3: ArmorPoxy (armorpoxy.com, 888-755-7361)
 - Search: ArmorClad kit. Configure: 600 sq ft kit + 300 sq ft add-on, WITH primer, 2-part military-grade urethane topcoat, non-skid additive in clear
@@ -53,7 +53,6 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
 ### Order 5: Home Depot store run (10% discount applies)
-- Search: M53080 or Internet #202812676 (Modine 53080 NG-to-LP kit for HD100): $72.53, ~$65 after discount. Cheapest kit if not doing QC one-box
 - Search: Hessaire 16SF3 (16" shutter fan, model 16SF3-H)
 - Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
 - Thermostat: 2-wire 24V heat-only stat from the aisle, or STN701 $40 at hvacdirect.com
@@ -64,10 +63,6 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Rental desk: walk-behind floor grinder + diamond cup wheel for angle grinder; P100 masks
 - Ask at register: does the 10% touch rentals
 - Optional 5b: search VEVOR diesel air heater all in one (8kW class) if clone route chosen over quality tier
-
-### Alt parts vendors (ignitor)
-- PropaneProducts: search Modine 5H79636, $49.95 (cheapest standalone)
-- SupplyHouse: search 5H0796360000, $74.48
 
 ### Heater install: Matt (DIY)
 - 53080 kit + orifice swap + new ignitor: Matt. Gas tee off NW propane supply, 4" vent penetration, commissioning: Matt, installer optional. No-warranty unit.
