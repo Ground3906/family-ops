@@ -522,7 +522,7 @@ Last batch: 2026-07-31.
 [CAL] 2026-08-04 08:30 [D] VA Appointment :: appointments :: stripe=appt :: end=10:00 :: location="Westcliffe Clinic, Westcliffe, CO"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
-[CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="Woodman, Colorado Springs, CO" :: notes="rescheduled back from 2026-08-24"
+[CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="St Peregrine Clinic, 6031 E Woodman Rd Ste 100, Colorado Springs, CO 80923" :: notes="rescheduled back from 2026-08-24. Phone 719-635-7321. Must pre-register/confirm online before arrival."
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
