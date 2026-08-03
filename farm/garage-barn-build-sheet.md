@@ -17,8 +17,8 @@
 | 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), crack putty, PPE | ~$200 allowance (EST) + putty $134+ if used | Rate at HD rental desk |
 | 4 | Waterers x5 | Hog Slat AquaChief base units (cup + 48" SS pipe + nipple), panel-mounted on gating | Price on page x5 | Open line |
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
-| 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
-| 5a | Heater parts | ORDERED 2026-08-03, QC Supply order #95541: 53080 conversion kit $89.99 + spark igniter 5H79636 $64.99, code HELLOC20 -$20, ship $7.46, tax $6.92 = $149.36 PAID. VENT: 4" B-vent kit priced $127.48 = VERTICAL Cat I route through roof (pending Matt route confirm); riders if vertical: ceiling firestop spacer, roof flashing, storm collar, cap height per roof-pitch table, snow-country tall termination. Supersedes side-wall Cat III plan on confirm. Remaining: (1) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328 with model + serial + 9,000 ft, non-negotiable, before install day. (2) Exchanger flashlight inspection BEFORE first fire. (3) Thermostat: any 2-wire 24V stat; STN701 $40 or HD aisle | $149.36 PAID + $127.48 vent kit + ~$50 roof-penetration bits (EST) + $40 stat | Parts shipping, vent route + altitude call pending |
+| 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable. Hang: allthread on Sammys into joists | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
+| 5a | Heater parts | ORDERED 2026-08-03, QC Supply order #95541: 53080 conversion kit $89.99 + spark igniter 5H79636 $64.99, code HELLOC20 -$20, ship $7.46, tax $6.92 = $149.36 PAID. VENT (LOCKED): Horizontal Cat III per Modine manual's named config, downward pitch, condensate drips out end. 4" B-vent, straight shot, no mid-run joints, $127.48. Riders: 3 ft minimum total length; 1/4" per ft down-slope to exterior; collar adapter joint screwed + sealed; ~11" projection past wall face with screened horizontal end (NOT a vertical rain cap); wall pass-through at B-vent 1" clearance; keep termination clear of sliders and Hessaire intake side; VERIFY pitch/projection numbers against manual venting pages before cutting. If the $127.48 kit is a roof kit, return flashing/storm collar. Remaining: (1) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328, model + serial + 9,000 ft, before install day. (2) Exchanger flashlight inspection BEFORE first fire. (3) Thermostat: 2-wire 24V; STN701 $40 or HD aisle | $149.36 PAID + $127.48 vent + $40 stat | Parts shipping, altitude call pending |
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
@@ -54,7 +54,8 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
 ### Order 5: Home Depot store run (10% discount applies)
-- Vent (if vertical confirmed): 4" B-vent kit $127.48 + ceiling firestop spacer, roof flashing, storm collar, snow-tall cap per pitch table
+- Vent: 4" B-vent pipe (3 ft min run), collar adapter, wall thimble, screened horizontal termination. $127.48 kit priced; return roof flashing/storm collar if kit includes them
+- Heater hang: 3/8" allthread + Sammy anchors x4, nuts/washers
 - Lighting (if item 8 locks A): Feit ADJ8000/5K/LED x4, Internet #315258709
 - Search: Hessaire 16SF3 (16" shutter fan, model 16SF3-H)
 - Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
@@ -67,8 +68,9 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 - Optional 5b: search VEVOR diesel air heater all in one (8kW class) if clone route chosen over quality tier
 
 ### Heater install: Matt (DIY)
-- 53080 kit + orifice swap + new ignitor: Matt. Gas tee off NW propane supply, vent per confirmed route, commissioning: Matt, installer optional. No-warranty unit.
+- 53080 kit + orifice swap + new ignitor: Matt. Gas tee off NW propane supply, horizontal B-vent per manual config, commissioning: Matt. No-warranty unit.
 - Exchanger inspection before first fire, no exceptions
+- Verify vent pitch/projection against the manual's venting pages before cutting the wall
 
 ---
 
