@@ -5,29 +5,33 @@
 
 **How to find products:** search the vendor site by the MODEL NUMBER or search term given. Deep links rot; model numbers do not. Phone numbers listed where calling beats clicking.
 
+**PAID TO DATE: $462.64** (heater $100 + QC parts $149.36 + HD order $213.28)
+
 ---
 
 ## BUDGET LIST
 
 | # | Item | Spec | Price | Status |
 |---|------|------|-------|--------|
-| 1 | Vent fan | Hessaire 16SF3-H, 16" gravity-louver shutter fan, through-wall NE corner, timer-run | $138 list, ~$124 after 10% | Price on page, HD |
-| 2 | Livestock fans x5 | DuraFan 18" indoor/outdoor sealed-motor, 3 ceiling (north pens) + 2 east-wall (south pens) | $105/ea at 5-qty = $525 | Firm, + tax/freight |
+| 1 | Vent fan | Hessaire 16SF3-H, 16" 1325 CFM gravity-louver shutter fan, through-wall NE corner, timer-run. HD SKU #1003253951 | $125.58 | ORDERED 2026-08-03, HD, delivery ~Aug 6 |
+| 2 | Livestock fans x5 | DuraFan 18" indoor/outdoor sealed-motor, 3 ceiling (north pens) + 2 east-wall (south pens) | $105/ea at 5-qty = $525 | Firm, + tax/freight, TO ORDER at QC |
 | 3 | Epoxy system | ArmorClad 600+300 sq ft kits, primer (mandatory over grind), 2-pt military urethane topcoat, non-skid additive. Floor 529 + stem walls 138 = 667 sq ft | $1,100-1,400 configured | Range, free ship, ask military discount |
 | 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), crack putty, PPE | ~$200 allowance (EST) + putty $134+ if used | Rate at HD rental desk |
 | 4 | Waterers x5 | Hog Slat AquaChief base units (cup + 48" SS pipe + nipple), panel-mounted on gating | Price on page x5 | Open line |
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
 | 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable. Hang: allthread on Sammys into joists | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
-| 5a | Heater parts | ORDERED 2026-08-03, QC Supply order #95541: 53080 conversion kit $89.99 + spark igniter 5H79636 $64.99, code HELLOC20 -$20, ship $7.46, tax $6.92 = $149.36 PAID. VENT (LOCKED): Horizontal Cat III per Modine manual's named config, downward pitch, condensate drips out end. 4" B-vent, straight shot, no mid-run joints, $127.48. Riders: 3 ft minimum total length; 1/4" per ft down-slope to exterior; collar adapter joint screwed + sealed; ~11" projection past wall face with screened horizontal end (NOT a vertical rain cap); wall pass-through at B-vent 1" clearance; keep termination clear of sliders and Hessaire intake side; VERIFY pitch/projection numbers against manual venting pages before cutting. If the $127.48 kit is a roof kit, return flashing/storm collar. Remaining: (1) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328, model + serial + 9,000 ft, before install day. (2) Exchanger flashlight inspection BEFORE first fire. (3) Thermostat: 2-wire 24V; STN701 $40 or HD aisle | $149.36 PAID + $127.48 vent + $40 stat | Parts shipping, altitude call pending |
+| 5a | Heater parts | ORDERED 2026-08-03, QC Supply order #95541: 53080 conversion kit $89.99 + spark igniter 5H79636 $64.99, code HELLOC20 -$20, ship $7.46, tax $6.92 = $149.36 PAID. VENT (LOCKED): Horizontal Cat III per Modine manual's named config, downward pitch, condensate drips out end. 4" B-vent double-wall, continuous run, no mid-run joints, wall thimble, $127.48. Riders: 3 ft minimum total length; 1/4" per ft down-slope to exterior; collar adapter joint screwed + sealed; ~11" projection past wall face with screened horizontal end (NOT a vertical rain cap); B-vent 1" clearance at wall; keep termination clear of sliders and Hessaire intake side; VERIFY pitch/projection against manual venting pages before cutting. Remaining: (1) HIGH-ALTITUDE LP ORIFICE: call Modine 800-828-4328, model + serial + 9,000 ft, before install day. (2) Exchanger flashlight inspection BEFORE first fire. (3) Thermostat: 2-wire 24V; STN701 $40 or HD aisle | $149.36 PAID + $127.48 vent + $40 stat | Parts shipping, altitude call pending |
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
-| 8 | Lighting (UNLOCKED, options presented) | Target ~32,000 lm at 5000K over 529 sq ft from 4 existing E26 sockets. Al's pick pending Matt's word: Feit ADJ8000/5K/LED screw-in x4 (8,000 lm ea, adjustable panels, HD Internet #315258709, price on page, 10% applies). Alt: 4-ft linkable shop lights x6-8 off socket adapters; vapor-tight demoted. Aim panels around DuraFan sweeps to avoid strobe over pens | Price on page x4 | Options presented, not locked |
+| 8 | Lighting | Westinghouse 4-ft 40W 4,500 lm integrated LED linkable shop lights x4, HD SKU #1007019222, fed from 4 existing E26 sockets. Delivered: 18,000 lm (~5-6x the old bulbs). Linkable = plug more fixtures end-to-end later if pen row wants more. Needs E26-to-outlet screw-in adapters x4 (HD run) unless hardwired. Hang clear of DuraFan sweeps | $100.00 ($25/ea) | ORDERED 2026-08-03, HD, delivery ~Aug 6 |
 
-**Priced hardware subtotal:** ~$2,350-2,700 (heater package $416.84 paid/priced + stat)
+HD order 2026-08-03 receipt: Hessaire $125.58 + Westinghouse x4 $100.00, discounts -$22.56, tax $10.26, free delivery = $213.28 PAID, card -2003, delivery est Aug 6.
+
+**Priced hardware subtotal:** ~$2,350-2,700
 **Allowances (EST):** ~$550
-**Open lines:** AquaChief x5, lighting (unlocked), tax and freight on remaining orders, optional diesel backup
-**Working all-in estimate:** ~$2,900-3,450 plus waterers and lighting
+**Open lines:** AquaChief x5, tax and freight on remaining orders, optional diesel backup
+**Working all-in estimate:** ~$2,900-3,450 plus waterers
 
 Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
@@ -53,18 +57,9 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 ### Order 4: Hog Slat (hogslat.com, 800-949-4647)
 - Search: AquaChief. Base unit (cup + 48" SS pipe + nipple) x5, price on page
 
-### Order 5: Home Depot store run (10% discount applies)
-- Vent: 4" B-vent pipe (3 ft min run), collar adapter, wall thimble, screened horizontal termination. $127.48 kit priced; return roof flashing/storm collar if kit includes them
-- Heater hang: 3/8" allthread + Sammy anchors x4, nuts/washers
-- Lighting (if item 8 locks A): Feit ADJ8000/5K/LED x4, Internet #315258709
-- Search: Hessaire 16SF3 (16" shutter fan, model 16SF3-H)
-- Search: 70 slider buck (American Craftsman 70 Series 36x24, BUCK frame = retrofit, no fin)
-- Thermostat: 2-wire 24V heat-only stat from the aisle, or STN701 $40 at hvacdirect.com
-- PEX trunk + drops, manifold, blowout fitting (air quick-connect), pipe hangers, 1/2" adapters for AquaChief pipe tops
-- Fan install: lumber for bay blocking, exterior sealant, screws
-- Window install: trim, flashing tape, sealant
-- Rental desk: walk-behind floor grinder + diamond cup wheel for angle grinder; P100 masks
-- Ask at register: does the 10% touch rentals
+### Order 5: Home Depot (10% discount applies)
+- DONE 2026-08-03 (delivery ~Aug 6): Hessaire 16SF3-H $125.58 + Westinghouse 4-ft linkable LED x4 $100.00 = $213.28 paid w/ discounts + tax
+- STILL ON THE RUN: 4" B-vent (3 ft min), collar adapter, wall thimble, screened horizontal termination ($127.48 priced); E26-to-outlet screw-in adapters x4 for shop lights; 3/8" allthread + Sammy anchors x4 + nuts/washers; 70 slider buck window; 2-wire 24V thermostat; PEX trunk + drops + manifold + blowout fitting + hangers + 1/2" adapters; bay-blocking lumber + exterior sealant + screws; window trim + flashing tape + sealant; rental desk grinder + diamond cup wheel + P100 masks (ask if 10% touches rentals)
 - Optional 5b: search VEVOR diesel air heater all in one (8kW class) if clone route chosen over quality tier
 
 ### Heater install: Matt (DIY)
