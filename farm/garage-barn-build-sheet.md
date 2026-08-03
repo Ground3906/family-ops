@@ -24,11 +24,17 @@
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD. Still to order |
 | 8 | Lighting (Phase 1) | Westinghouse 4-ft 40W integrated LED linkable shop light, 4,500 lumens/ea, 5000K daylight, x4 = ~18,000 lumens. Target was 21-32k (40-60 lm/sqft); 4 fixtures land ~34 lm/sqft, the FLOOR. Aim panels around the 3 ceiling DuraFan sweeps. PHASE 1: live with 4 a week, expect to add a second 4-pack over the work zone | $90.00 PAID | ORDERED 2026-08-03 (HD #WH40364049). Headroom noted for phase 2 |
 
-**Priced hardware subtotal:** heater package $289.36 paid; HD fan+lighting $213.28 paid (order #WH40364049)
-**Total paid to date:** $602.64 (heater $100, QC parts $149.36, HD fan+lights $213.28, + heater acquisition already in the $289.36... net cash out: heater $100 + QC $149.36 + HD $213.28 = $462.64)
-**Allowances (EST):** ~$500 remaining
-**Open lines:** AquaChief x5, window, PEX/vent/install consumables, epoxy, DuraFans, optional diesel backup, optional lighting phase 2
-**Working all-in estimate:** ~$2,700-3,250 plus waterers
+## PAID TO DATE
+
+| Order | Items | Paid |
+|-------|-------|------|
+| (private sale) | Used Modine HD100 heater | $100.00 |
+| QC #95541 | 53080 kit + 5H79636 igniter | $149.36 |
+| HD #WH40364049 | Hessaire fan + Westinghouse lights x4 | $213.28 |
+| **Net cash out** | | **$462.64** |
+
+**Still open:** AquaChief x5, window, epoxy system, DuraFans x5, PEX/vent/install consumables, thermostat; optional diesel backup (5b), optional lighting phase 2.
+**Working all-in estimate:** ~$2,700-3,250 plus waterers.
 
 Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
