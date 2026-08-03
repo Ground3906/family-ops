@@ -18,7 +18,7 @@ Five 4x10 panel pens, linked in a row against the east stem wall, gates on the 4
 2. **Makeup air:** two east-wall 3x2 sliders + south door perimeter leakage. New window sits south half of east wall so intake sweeps the pen row before the NE fan.
 3. **Circulation:** DuraFan 18" sealed-motor fans x5. Three ceiling-hung over north pens, two east-wall mounted over south pens (door tracks preclude ceiling there).
 4. **Water:** PEX from pressure tank through west wall, ceiling run to manifold, five drops to Hog Slat AquaChief cup units panel-mounted on gating. Blowout fitting at supply end, low-point fall, line drained outside occupancy. Room heat is freeze defense; insulated envelope + animal heat buy outage hours; compressor blowout is the backstop.
-5. **Heat:** Used Modine 80k BTU class unit heater (model TBD off data plate), acquired 2026-08-02 for $100. LP conversion + high-altitude orifice by Matt. Delivers ~46k BTU/hr at 9,000 ft vs ~20k design load: oversized, short-cycles, acceptable. Target 60 F with margin everywhere on the calendar. Exchanger inspection before first fire; vent type (side-wall vs roof B-vent) set by model. Optional diesel air heater as backup/camp dual-duty unit: decision pending.
+5. **Heat:** Used Modine HD100AS0111 Hot Dawg (serial 39010017094211-4531), acquired 2026-08-02 for $100. NG as bought; LP conversion via Modine kit 53080 plus high-altitude orifice per Modine tech line, by Matt. Direct spark, 115V, power-vented Cat I or III, 4" side-wall vent. Delivers ~52k BTU/hr at 9,000 ft (plate derate) vs ~20k design load: oversized, short-cycles, acceptable. Target 60 F with margin everywhere on the calendar. Exchanger inspection before first fire. Optional diesel air heater as backup/camp dual-duty unit: decision pending.
 6. **Floor:** ArmorClad 100% solids epoxy + primer + 2-pt military urethane topcoat with non-skid, over diamond-ground slab. Covers floor and east/north stem walls (667 sq ft). Seals slab against urine; supersedes the stall-mat prescription (mats now optional comfort only).
 7. **House door:** sealed (complete, pre-existing).
 
@@ -26,7 +26,7 @@ Five 4x10 panel pens, linked in a row against the east stem wall, gates on the 4
 Original risk analysis stands: shared structure with the house is the core exposure. Mitigation now built into spec: negative-pressure exhaust (system 1), sealed house door (7), sealed slab (6), pens on the far wall from the house door. Remaining operational practice: ammonia absorbents under bedding, daily waste removal rhythm (volume estimate still open).
 
 ## Open Items
-- Heater model number off data plate: unlocks LP kit part, orifice spec, vent type
+- Modine altitude call: high-altitude LP orifice spec (script in build sheet, Order 2)
 - Pen species assignment at stocking
 - Daily waste volume estimate
 - Diesel backup/camp heater decision (research staged in build sheet 5b)
