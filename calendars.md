@@ -535,6 +535,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-10 18:00 [D] WGU C172/D315 Bootcamp - Part 1 :: meetings :: end=19:15 :: notes="End of Term Bootcamp, part 1 of 2. OSI Model, Network Commands, Virtualization/Cloud Computing. Bring study guide. Monthly series, 2nd Monday."
 [CAL] 2026-08-12 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
+[CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
@@ -543,6 +544,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-26 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-31 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
