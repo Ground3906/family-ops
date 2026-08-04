@@ -555,7 +555,8 @@ Last batch: 2026-08-04.
 
 ### OCTOBER 2026
 
-[CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: flag=true :: notes="Bring retainer"
+[CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
+[CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 
 ---
