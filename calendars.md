@@ -405,7 +405,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-06-07 ALL-DAY [FAM] Swim meet - Las Animas :: family :: location="Las Animas, CO"
 [CAL] 2026-06-08 ALL-DAY [D] Kombucha brewed :: misc
 [CAL] 2026-06-09 09:00 [D] Dodge - tire rotation/balance/alignment :: misc :: location="Les Schwab Tires, Canon City, CO"
-[CAL] 2026-06-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-06-10 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-11 ALL-DAY [D] Meet up with Tom :: misc :: span=2026-06-12 :: tentative=true
 [CAL] 2026-06-13 ALL-DAY Fr. Joe birthday :: misc
 [CAL] 2026-06-13 ALL-DAY Uncle Doug birthday :: misc
@@ -430,7 +430,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-06-22 09:30 [D][K] Prenatal Appt :: appointments :: stripe=appt :: end=10:30 :: location="Pueblo, CO"
 [CAL] 2026-06-23 08:30 [D] VA Rep - Westcliffe :: meetings :: end=09:30 :: location="Westcliffe, CO"
 [CAL] 2026-06-23 17:00 [FAM] Rileigh birthday dinner :: family
-[CAL] 2026-06-24 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-06-24 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-06-25 ALL-DAY [D] Stop by Doug's - pick up ammo :: prompt
 [CAL] 2026-06-25 08:00 [D] Scale certification :: 4h :: end=09:00 :: location="Fairgrounds, Westcliffe, CO"
 [CAL] 2026-06-25 10:45 [D] Linux Essentials 010 exam :: misc :: end=11:45
@@ -474,7 +474,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-07-09 08:00 [K] Azure grocery pickup :: family :: end=09:00 :: location="Westcliffe, CO"
 [CAL] 2026-07-09 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed
 [CAL] 2026-07-09 16:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: cancel=pending
-[CAL] 2026-07-10 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-07-10 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-11 ALL-DAY [FAM] Swim meet - Piranhas home meet :: family :: location="Pueblo, CO"
 [CAL] 2026-07-14 ALL-DAY [GUEST] Adam and Bethany :: misc :: span=2026-07-17
 [CAL] 2026-07-14 15:00 [W][M] Weigh-in / Picnic :: 4h :: location="Westcliffe, CO"
@@ -492,7 +492,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-21 15:00 [K] Pick up generator :: errands
-[CAL] 2026-07-22 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-07-22 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-22 14:30 [K][W][M] Sports physical :: appointments :: stripe=appt :: end=16:00
 [CAL] 2026-07-22 14:30 [D] WGU 3rd attempt Essentials exam call - Randy Stauber :: meetings :: end=14:45 :: notes="Conf NJD21G8K1. Randy calling (719) 306-9606."
 [CAL] 2026-07-22 17:00 [D] WGU D281 Overview - LPI cohort live event :: meetings :: end=18:00
@@ -507,7 +507,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-07-28 13:00 [K] Massage :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-07-28 18:00 [D] WGU D315 Cohort :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
-[CAL] 2026-07-29 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-07-29 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-07-29 16:00 [D] WGU D315 Study Smarter Tactics :: meetings :: end=17:00 :: notes="Peer coaching live event. Not recorded."
 [CAL] 2026-07-30 08:00 [D] KofC meeting - Bob Baxter :: meetings
 [CAL] 2026-07-30 12:50 [K] Prenatal appt :: appointments :: stripe=appt :: end=13:50 :: location="Pueblo, CO"
@@ -523,7 +523,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-04 07:15 [D] Coffee - Jason/Jonathan :: meetings :: end=08:15 :: location="Westcliffe, CO"
 [CAL] 2026-08-04 08:00 [W] Cross country :: kids
 [CAL] 2026-08-04 08:30 [D] VA Appointment :: appointments :: stripe=appt :: end=10:00 :: location="Westcliffe Clinic, Westcliffe, CO"
-[CAL] 2026-08-05 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
+[CAL] 2026-08-05 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-05 16:30 [FAM] Venting P/U - Winsupply :: farm :: location="Winsupply, Canon City, CO" :: notes="Before swim party"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
 [CAL] 2026-08-06 08:00 [W] Cross country :: kids
@@ -533,11 +533,13 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-10 18:00 [D] WGU C172/D315 Bootcamp - Part 1 :: meetings :: end=19:15 :: notes="End of Term Bootcamp, part 1 of 2. OSI Model, Network Commands, Virtualization/Cloud Computing. Bring study guide. Monthly series, 2nd Monday."
+[CAL] 2026-08-12 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-17 17:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-26 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
