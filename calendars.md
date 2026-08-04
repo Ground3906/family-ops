@@ -523,6 +523,7 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-04 07:15 [D] Coffee - Jason/Jonathan :: meetings :: end=08:15 :: location="Westcliffe, CO"
 [CAL] 2026-08-04 08:00 [W] Cross country :: kids
 [CAL] 2026-08-04 08:30 [D] VA Appointment :: appointments :: stripe=appt :: end=10:00 :: location="Westcliffe Clinic, Westcliffe, CO"
+[CAL] 2026-08-05 10:00 [M][R] Apt - Tacey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-05 16:30 [FAM] Venting P/U - Winsupply :: farm :: location="Winsupply, Canon City, CO" :: notes="Before swim party"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
 [CAL] 2026-08-06 08:00 [W] Cross country :: kids
