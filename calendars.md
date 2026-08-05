@@ -526,6 +526,7 @@ Last batch: 2026-08-05.
 [CAL] 2026-08-05 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-05 16:30 [FAM] Venting P/U - Winsupply :: farm :: location="Winsupply, Canon City, CO" :: notes="Before swim party"
 [CAL] 2026-08-05 17:00 [FAM] Swim team end of season party :: family :: end=19:00
+[CAL] 2026-08-06 08:00 [D] WGU Network and Security Foundations exam :: misc :: notes="Online test"
 [CAL] 2026-08-06 08:00 [W] Cross country :: kids
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="St Peregrine Clinic, 6031 E Woodman Rd Ste 100, Colorado Springs, CO 80923" :: notes="rescheduled back from 2026-08-24. Phone 719-635-7321. Must pre-register/confirm online before arrival."
