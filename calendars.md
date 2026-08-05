@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-04.
+Last batch: 2026-08-05.
 
 ---
 
@@ -545,6 +545,10 @@ Last batch: 2026-08-04.
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-26 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
+[CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-31 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
