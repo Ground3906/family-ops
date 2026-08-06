@@ -533,7 +533,7 @@ Last batch: 2026-08-05.
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
-[CAL] 2026-08-10 18:00 [D] WGU C172/D315 Bootcamp - Part 1 :: meetings :: end=19:15 :: notes="End of Term Bootcamp, part 1 of 2. OSI Model, Network Commands, Virtualization/Cloud Computing. Bring study guide. Monthly series, 2nd Monday."
+[CAL] 2026-08-11 17:30 [D] WGU Cohort - IPV6 Introduction D325 :: meetings :: end=18:30
 [CAL] 2026-08-12 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
 [CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
