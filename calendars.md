@@ -567,6 +567,7 @@ Last batch: 2026-08-06.
 
 ### OCTOBER 2026
 
+[CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
