@@ -550,7 +550,7 @@ Last batch: 2026-08-05.
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
-[CAL] 2026-08-30 ALL-DAY [W][C][E] Boys camping trip - with Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
+[CAL] 2026-08-30 ALL-DAY [C][E] Boys camping trip - with Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-31 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
