@@ -1,13 +1,18 @@
 # inbox-watcher.ps1 - Receipt watcher for Bayer Family Ops.
 # Polls Filing Cabinet\Inbox every 60 seconds for PDF and image files.
 # Two-gate ready check: placeholder (not an OneDrive stub) + 15-second size stability.
-# On clear: writes placeholder JSONL record to archive\receipts-log.jsonl, moves file to Cabinet root.
+# On clear: writes placeholder JSONL record to archive\receipts-log.jsonl, pushes it to the
+# repo immediately (git add/commit/push, same pattern as payroll-write.ps1), moves file to
+# Cabinet root.
 # Writes heartbeat to archive\watcher-heartbeat.txt on every cycle.
 # Emails via Microsoft Graph on any processing failure.
 # Runs as SYSTEM via BayerFamilyOps-InboxWatcher scheduled task (boot trigger, no time limit).
 #
 # NOTE: Email alerts require Mail.Send scope on the Graph token.
 # If alerts are silent, re-run graph-auth.ps1 to re-authorize with Mail.Send.
+#
+# NOTE: git push requires push credentials configured on this box (Windows Credential
+# Manager PAT for github.com). Already proven working here by payroll-write.ps1.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -166,6 +171,21 @@ function Invoke-ProcessFile {
     } catch {
         Send-Alert "[FamilyOps] Watcher: log write failed" "Could not write JSONL for $leaf`: $_"
         return
+    }
+
+    # Push the new record to the repo immediately. Local-only writes are invisible to Al;
+    # this is Item 1 of the 2026-08-06 archive-pipeline fix. Same pattern as payroll-write.ps1.
+    try {
+        Push-Location $RepoRoot
+        $null = git add archive/receipts-log.jsonl 2>&1
+        $null = git commit -m "watcher: receipt logged $leaf" 2>&1
+        $null = git push 2>&1
+        Pop-Location
+        Write-Host "[watcher] Pushed receipts-log.jsonl to repo."
+    } catch {
+        Pop-Location
+        "$(Get-Date -Format 'o') GIT-PUSH-FAIL for $leaf`: $_" | Add-Content $ErrorLog -Encoding UTF8
+        Send-Alert "[FamilyOps] Watcher: git push failed" "Record for $leaf written locally but push to repo failed: $_"
     }
 
     # Move to Filing Cabinet root.
