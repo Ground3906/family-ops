@@ -562,6 +562,7 @@ Last batch: 2026-08-06.
 
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 
 ---
 
