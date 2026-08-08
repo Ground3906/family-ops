@@ -16,7 +16,7 @@
 | 1 | Vent fan | Hessaire 16SF3-H, 16" 1325 CFM gravity-louver shutter fan, through-wall NE corner, timer-run. HD SKU #1003253951 | $125.58 | ORDERED 2026-08-03, HD, delivery ~Aug 6 |
 | 2 | Livestock fans x5 | DuraFan 18" indoor/outdoor sealed-motor, 3 ceiling (north pens) + 2 east-wall (south pens) | $105/ea at 5-qty = $525 | Firm, + tax/freight, TO ORDER at QC |
 | 3 | Epoxy system | ArmorClad 600+300 sq ft kits, primer (mandatory over grind), 2-pt military urethane topcoat, non-skid additive. Floor 529 + stem walls 138 = 667 sq ft | $1,100-1,400 configured | Range, free ship, ask military discount |
-| 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), crack putty, PPE | ~$200 allowance (EST) + putty $134+ if used | Rate at HD rental desk |
+| 3a | Floor prep | Diamond grind: walk-behind rental (floor) + angle grinder cup wheel (stem walls), PPE. SPALL REPAIR (2 small spots): post-grind card-edge test; shallow saucers flood level with primer, no filler. Catching-edge divots get KIT-MORTAR: cup of ArmorClad primer + clean dry sand, troweled at prime stage (ask ArmorPoxy tech to bless ratio on order call). Backup: Rust-Oleum EpoxyShield 24-oz Concrete Patch, HD, price on page, paintable in 8 hrs. ArmorPoxy putty ($134+) NOT needed at this scale | ~$200 allowance (EST) + sand bag ~$5 | Rate at HD rental desk |
 | 4 | Waterers x5 | Hog Slat AquaChief base units (cup + 48" SS pipe + nipple), panel-mounted on gating | Price on page x5 | Open line |
 | 4a | Water line | PEX from west-wall punch at pressure tank, ceiling run, manifold, 5 drops to 1/2" pipe tops, blowout fitting at supply, low-point fall | ~$150 allowance (EST) | HD store run |
 | 5 | Heater | USED Modine HD100AS0111 Hot Dawg, acquired 2026-08-02. NG as bought, direct spark, 115V/4.7A, power-vented Cat I or III, 4" vent, 100k in / 82k out (82% eff). At 9,000 ft (plate derate 4%/1,000 ft = 36%): ~52k BTU/hr delivered vs ~20k design load. Oversized, short-cycles, acceptable; set stat differential wide if adjustable. Hang: allthread on Sammys into joists | $100 PAID | ACQUIRED. Serial 39010017094211-4531 |
@@ -24,7 +24,7 @@
 | 5b | Diesel backup/camp heater (OPTIONAL, unlocked) | Quality-tier research staged: Espar M2 D4L $1,834 (auto-altitude to 9,900 ft), Espar M3 D4L $2,399 (auto to 18,000 ft), Autoterm Air 4D-HA ~$965-1,125 US (factory-rated to 4,200 m / 13,780 ft). Dual duty: elk camp Sep-Dec, barn backup Feb | Not locked | Decision pending |
 | 6 | House door seal | Already sealed | $0 | COMPLETE |
 | 7 | Window | American Craftsman 70 Series slider, buck frame (retrofit, no fin), 36x24, east wall south half, sill 4'+ above stem wall | $154-209, ~$139-188 after 10% | Price on page, HD |
-| 8 | Lighting | Westinghouse 4-ft 40W 4,500 lm integrated LED linkable shop lights x4, HD SKU #1007019222, fed from 4 existing E26 sockets. Delivered: 18,000 lm (~5-6x the old bulbs). Linkable = plug more fixtures end-to-end later if pen row wants more. Needs E26-to-outlet screw-in adapters x4 (HD run) unless hardwired. Hang clear of DuraFan sweeps | $100.00 ($25/ea) | ORDERED 2026-08-03, HD, delivery ~Aug 6 |
+| 8 | Lighting | Westinghouse 4-ft 40W 4,500 lm integrated LED linkable shop lights x4, HD SKU #1007019222 (model 410001, Internet #318777192), 2-prong plugs confirmed. Feed: receptacle-swap route chosen — grounded duplex in each ceiling box + 4" round duplex cover plates (Kyle Switch Plates white / HD Southwire 54C40-UPC / Mulberry). Check box depth: shallow pancake box needs extension ring. Delivered: 18,000 lm (~5-6x old bulbs). Linkable = plug more end-to-end later. Hang on chains clear of DuraFan sweeps; wall switch controls all four | $100.00 ($25/ea) + covers/receptacles x4 | ORDERED 2026-08-03, HD, delivery ~Aug 6; outlet parts to buy |
 
 HD order 2026-08-03 receipt: Hessaire $125.58 + Westinghouse x4 $100.00, discounts -$22.56, tax $10.26, free delivery = $213.28 PAID, card -2003, delivery est Aug 6.
 
@@ -51,7 +51,7 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
 ### Order 3: ArmorPoxy (armorpoxy.com, 888-755-7361)
 - Search: ArmorClad kit. Configure: 600 sq ft kit + 300 sq ft add-on, WITH primer, 2-part military-grade urethane topcoat, non-skid additive in clear
-- Search: crack repair epoxy putty, if slab check warrants: $134-299
+- Crack putty NOT ordered: 2 small spalls handled by primer flood or primer+sand kit-mortar. Ask tech to bless the sand-mortar ratio on this call
 - Ask: military discount (DD-214)
 
 ### Order 4: Hog Slat (hogslat.com, 800-949-4647)
@@ -59,7 +59,7 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
 ### Order 5: Home Depot (10% discount applies)
 - DONE 2026-08-03 (delivery ~Aug 6): Hessaire 16SF3-H $125.58 + Westinghouse 4-ft linkable LED x4 $100.00 = $213.28 paid w/ discounts + tax
-- STILL ON THE RUN: 4" B-vent (3 ft min), collar adapter, wall thimble, screened horizontal termination ($127.48 priced); E26-to-outlet screw-in adapters x4 for shop lights; 3/8" allthread + Sammy anchors x4 + nuts/washers; 70 slider buck window; 2-wire 24V thermostat; PEX trunk + drops + manifold + blowout fitting + hangers + 1/2" adapters; bay-blocking lumber + exterior sealant + screws; window trim + flashing tape + sealant; rental desk grinder + diamond cup wheel + P100 masks (ask if 10% touches rentals)
+- STILL ON THE RUN: 4" B-vent (3 ft min), collar adapter, wall thimble, screened horizontal termination ($127.48 priced); ceiling outlet conversion: spec-grade 15A grounded duplex x4 + 4" round duplex cover plates x4 (Southwire 54C40-UPC at HD, or Kyle Switch Plates online); extension rings if boxes run shallow; 3/8" allthread + Sammy anchors x4 + nuts/washers; 70 slider buck window; 2-wire 24V thermostat; PEX trunk + drops + manifold + blowout fitting + hangers + 1/2" adapters; clean dry sand bag (spall kit-mortar); optional Rust-Oleum EpoxyShield 24-oz patch (backup filler); bay-blocking lumber + exterior sealant + screws; window trim + flashing tape + sealant; rental desk grinder + HEPA dust extractor + diamond cup wheel + P100 masks (ask if 10% touches rentals)
 - Optional 5b: search VEVOR diesel air heater all in one (8kW class) if clone route chosen over quality tier
 
 ### Heater install: Matt (DIY)
@@ -71,7 +71,7 @@ Panels (five 4x10, gates on 4' ends): already purchased, not on this budget.
 
 ## SEQUENCING LAW
 1. Wall work any time: fan, window, freezer relocation prep
-2. Grind weekend ~Sep 19-20, coat by Sep 24, NOTHING on the floor until cure day 5
+2. Grind ~Sep 19-20; card-test + kit-mortar the spalls post-grind; coat by Sep 24; NOTHING on the floor until cure day 5
 3. Panels, freezers, waterer install AFTER cure
 4. Heater hung before deep winter; waterers plumb after floor, before Feb stocking
 5. February: animals arrive, timer ventilation winter setting, system live
