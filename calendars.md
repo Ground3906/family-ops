@@ -211,7 +211,7 @@ Last batch: 2026-08-06.
 
 ### FAIRBOARD MEETING - 2026-27 (2nd Monday monthly)
 [CAL] 2026-06-08 16:30 [D] Fairboard meeting :: meetings :: end=17:30
-[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30 :: cancel=confirmed
+[CAL] 2026-08-10 16:30 [D] Fairboard meeting :: meetings :: end=17:30 :: notes="Matt not attending - conflicts with W first day of school"
 [CAL] 2026-09-14 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-10-12 16:30 [D] Fairboard meeting :: meetings :: end=17:30
 [CAL] 2026-11-09 16:30 [D] Fairboard meeting :: meetings :: end=17:30
