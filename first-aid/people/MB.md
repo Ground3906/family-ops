@@ -1,7 +1,7 @@
 # Matt Bayer (MB) — Health Profile
 
 **Date created:** 2026-06-13
-**Last updated:** 2026-06-13
+**Last updated:** 2026-08-07
 **Owner:** IFAK
 **Status:** Active
 
@@ -77,6 +77,17 @@
 
 ---
 
+## Labs
+
+### 2026-07-28 - Salida Hospital District (ordered by Caitlin Tremblay NP)
+
+- **HbA1c:** 5.5% (ref 4.5-5.6) - normal, upper end of range. Trend-watch at next annual panel. eAG 111.2 mg/dL flagged high by lab = artifact (fasting reference range applied to a 3-month average value); carries no independent information beyond the A1c.
+- **Lipid panel (fasting):** Total cholesterol 211 (ref <200), Triglycerides 222 (ref 30-150), HDL 39 (ref 40-60), Direct LDL 115 (ref <100), Chol/HDL ratio 5.41. High-TG + low-HDL pattern alongside upper-normal A1c = early insulin-resistance signature. Plan: lifestyle-first (reduce refined carbs/sugar, sustained physical work), recheck in 3-6 months. Statin conversation possible with provider.
+- **Thyroid:** TSH 2.800 uIU/mL (ref 0.465-4.68) - normal. Free T4 0.77 ng/dL (ref 0.78-2.19) - low by 0.01, most likely lab variation given normal TSH. Recheck only if symptoms or on next panel.
+- **CBC differential:** %MONO 11.6 (ref 1-10), %EOS 7.7 (ref 0-5) - both mildly elevated, nonspecific in isolation. Mild eosinophilia is a flag for the GI appointment given chronic reflux + IBS-M overlap (eosinophil-driven GI conditions live in that presentation space). %BASO 1.1 (ref 0-2) - normal.
+
+---
+
 ## Surgical History
 
 | Date | Procedure | Notes |
@@ -133,7 +144,7 @@
 | Maternal grandmother (Mary Jo Koch) | Diabetes | |
 | Older brother | Hypertension | On medication. 18 months older than Matt. |
 
-**IFAK flags:** Monitor for prostate health, cardiovascular health, and blood glucose as Matt ages.
+**IFAK flags:** Monitor for prostate health, cardiovascular health, and blood glucose as Matt ages. 2026-07-28 lipid panel is the first concrete cardiovascular data point - see Labs section.
 
 ---
 
@@ -146,6 +157,8 @@
 
 ## Open Actions
 
+- [ ] Raise mild eosinophilia (%EOS 7.7, 2026-07-28 panel) at upcoming GI appointment (Associates in Gastro, Peregrine) alongside reflux + IBS-M presentation.
+- [ ] Lipid recheck in 3-6 months (target: triglycerides, HDL). Discuss lifestyle-first vs. statin with provider.
 - [ ] Find gastroenterologist in Colorado Springs accepting TRICARE Reserve Select. Schedule GERD consult.
 - [ ] Find dermatologist accepting TRICARE Reserve Select. Renew prescriptions for ketoconazole, Nystatin, ketoconazole/triamcinolone creams.
 - [ ] Find optometrist accepting TRICARE Reserve Select. Schedule eye exam, update prescription, order blue light filtering glasses.
