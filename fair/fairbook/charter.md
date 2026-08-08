@@ -25,7 +25,8 @@ Verbatim rules:
 - Entity/scale swaps are mandatory on adoption, not optional: CSF staff titles, CSU Extension nomination machinery, "the Fair" meaning Pueblo — all swap to Custer equivalents. Every swap logged in the delta entry.
 - Numbers are never verbatim by default. Fees, weights, windows, deadlines are each a decision in the pass, not a copy.
 - REWORDED only where CSF's own wording genuinely fails; logged with reason. Deliberate softening of CSF mandatory language to discretionary ("will be tested" to "may be tested") is a REWORDED decision and carries its reason in the log.
-- The draft is a Matt-authored public document: the em-dash ban applies to `draft.md` and the addendum (see `fair/charter.md` content rules).
+- Em dashes are permitted in `draft.md` and the addendum. These are documents of record, not Matt's authored voice. The Profile em-dash ban reaches text Matt sends or publishes under his own name (emails, letters, messages), not rulebooks, policy drafts, logs, or reference files. Revised 8/8/2026; the prior line read the ban as applying here and was stale.
+- Not every paragraph adopts a CSF rule. Where the base text belongs to another body — the 4-H and FFA Code of Conduct, owned by CSU Extension and FFA, who collect the signatures — the county text is retained as base and no adoption sentence is printed. The Fair Board rewriting another organization's instrument in CSF's voice is a harder sell to the working group than any rule inside it. Logged in the delta entry as a base-text note.
 
 ## Annual update cycle (the point of the structure)
 
@@ -37,7 +38,7 @@ When CSF publishes a new year: diff the verbatim layer against the new state tex
 fair/fairbook/
   charter.md        (this file)
   delta-log.md      (every change; the walkthrough document — seeded, passes populate in book order)
-  draft.md          (the clean book — reads exactly as it prints)   [lands via execution passes, not yet committed]
+  draft.md          (the clean book — reads exactly as it prints; PENDING markers show unworked sections mid-pass)
   addendum-2026.md  (volatile layer: dates, times, fees, names, locations) [lands via execution passes, not yet committed]
 ```
 
@@ -48,7 +49,7 @@ Per change: stable ID · exact old Custer text · exact new text · CSF cite · 
 ## Staging
 
 - `draft.md` ships stripped: exception blocks empty, all local flavor held as FLAVOR-CANDIDATE entries in the delta log.
-- Walkthrough copy is a generated conversion pass, not committed structure. Greyed-in-place applies to ANY undecided item: FLAVOR-CANDIDATE entries and DISCUSS-AT-WALKTHROUGH proposed adoptions both print greyed directly beneath their home paragraph, so the group sees exactly where each would land if sponsored in or adopted.
+- Walkthrough copy is a generated conversion pass, not committed structure. Greyed-in-place applies to ANY undecided item: FLAVOR-CANDIDATE entries and DISCUSS-AT-WALKTHROUGH proposed adoptions both print greyed directly beneath their home paragraph, so the group sees exactly where each would land if sponsored in or adopted. Proposed language is carried at full refined wording in the delta entry, never thinned to a placeholder: the group discusses and adopts the actual text.
 
 ## Vet scope of work (generated deliverable)
 
