@@ -53,7 +53,7 @@ Every annually-volatile line in the county book (dates, times, deadlines, fees, 
 
 ## Propagation gate
 
-This mission ends at the three deliverables. The disposition fields make the divergence map the staging artifact. The county book rewrite is a separate future mission, gated on the board conversation, seeded by the map. The addendum page build lives in the rewrite mission. The schedule rework is a parked future mission (see fair/notes.md) and consumes the volatility inventory.
+This mission ended at the three deliverables; all three are complete and live in this tree. The county book rewrite mission opened 2026-08-08 at `fair/fairbook/` (doctrine in its own charter). The sequence inverted from the original gate: the draft plus delta log are now the vehicle for the board conversation rather than gated on it — Custer flavor returns through a working-group walkthrough, sponsored in item by item. The divergence map remains the staging artifact seeding that rewrite. The addendum build lives in the rewrite mission, as planned. The schedule rework remains a parked future mission (see fair/notes.md) and consumes the volatility inventory.
 
 ## Session state
 

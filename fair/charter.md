@@ -30,7 +30,9 @@ fair/
     handoff.md                        ← 2026 Swine Show fairboard handoff doc (cadence, stall policy, capital asks)
   sheep-goat-barn/
     optimization-brief.md             ← layout optimization design brief for Cowork handoff (constraints, phases, deliverable spec)
-  rulebooks/                          ← rulebooks subsystem (parallel workstream)
+  rulebooks/                          ← rulebooks subsystem: delta framework (complete)
+  fairbook/                           ← fair book rewrite + annual update system (mission opened 2026-08-08)
+    charter.md                        ← mission doctrine: paragraph template, delta schema, staging, addendum
   maps/                               ← binary visual assets, manual upload
     README.md                         ← asset index, update when assets are added or revised
     Sheep_Goat_Barn_Map_REV6.png      ← sheep/goat barn, REV6. BASELINE for optimization-brief.md
