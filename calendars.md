@@ -129,7 +129,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section.**
 - **Hunting season spans do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks.**
 - **A time overlap is only a real conflict if the pills share a person. Check pills before flagging.**
-- **Mark Allsman LPC sessions ("Appt. Mark") are telehealth regardless of what the source booking confirmation lists as location. Never populate a location field for these.**
+- **Mark Allsman LPC sessions ("Apt - Mark") are telehealth regardless of what the source booking confirmation lists as location. Never populate a location field for these.**
 
 ---
 
@@ -488,7 +488,7 @@ Last batch: 2026-08-06.
 [CAL] 2026-07-19 12:00 [W][M] Fair cleanup :: 4h :: location="Westcliffe, CO" :: notes="W+M at fair cleanup - cannot attend Salida swim meet same day"
 [CAL] 2026-07-20 08:30 [D] WGU mentor meeting :: meetings :: end=08:45 :: notes="Weekly sync, course order correction per Lori Davis, requesting instructor transfer in Linux course. Conf GQS1G9H4D"
 [CAL] 2026-07-20 15:00 [K] Meeting - Altitude Fitness - swim team proposal :: meetings :: end=16:00 :: location="Altitude Fitness, Westcliffe, CO"
-[CAL] 2026-07-20 17:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-07-20 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-20 18:00 [D] WGU Focused Study Session - cohort :: meetings :: end=19:30
 [CAL] 2026-07-21 13:00 [K] DEERS ID card renewal :: appointments :: stripe=appt :: end=14:00 :: location="USAFA, Colorado Springs, CO"
 [CAL] 2026-07-21 15:00 [K] Pick up generator :: errands
@@ -503,7 +503,7 @@ Last batch: 2026-08-06.
 [CAL] 2026-07-25 10:00 [W] Phone call - art trip :: kids
 [CAL] 2026-07-27 08:00 [D] WGU mentor meeting :: meetings :: end=08:15 :: notes="Weekly sync. Linux Essentials Exam 010 passed. Conf NXL234DYY"
 [CAL] 2026-07-27 16:00 [W][M] 4H record books due :: 4h :: notes="Drop off by 1600"
-[CAL] 2026-07-27 17:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-07-27 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-07-28 08:20 [D] Fasting labs :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-07-28 13:00 [K] Massage :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-07-28 18:00 [D] WGU D315 Cohort :: meetings :: end=19:00 :: notes="Tuesday evening cohort"
@@ -519,7 +519,7 @@ Last batch: 2026-08-06.
 ### AUGUST 2026
 
 [CAL] 2026-08-03 09:20 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
-[CAL] 2026-08-03 17:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-03 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-04 07:15 [D] Coffee - Jason/Jonathan :: meetings :: end=08:15 :: location="Westcliffe, CO"
 [CAL] 2026-08-04 08:00 [W] Cross country :: kids
 [CAL] 2026-08-04 08:30 [D] VA Appointment :: appointments :: stripe=appt :: end=10:00 :: location="Westcliffe Clinic, Westcliffe, CO"
@@ -540,11 +540,11 @@ Last batch: 2026-08-06.
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
-[CAL] 2026-08-17 17:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-17 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
-[CAL] 2026-08-26 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
@@ -553,7 +553,7 @@ Last batch: 2026-08-06.
 [CAL] 2026-08-30 ALL-DAY [C][E] Boys camping trip - with Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
 [CAL] 2026-08-31 07:45 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO"
 [CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
-[CAL] 2026-08-31 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-08-31 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
@@ -561,7 +561,7 @@ Last batch: 2026-08-06.
 ### SEPTEMBER 2026
 
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
-[CAL] 2026-09-09 16:00 [D] Appt. Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 
 ---
