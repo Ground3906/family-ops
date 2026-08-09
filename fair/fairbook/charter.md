@@ -29,6 +29,9 @@ The default is not a comment on quality. Well-built proposals still go to the bo
 
 - **Map the decision surface before opening an item.** Every decision inside a paragraph gets enumerated before the first one is presented, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces. It never appears inside a running summary as though it had always been there.
 - **One decision per message.** Findings of record, verification results, and status may batch. Decisions never do. This holds under every framing, including reconciliation, conflict-naming, merged-state review, and efficiency. A batch of decisions cannot be acted on and is not a delivery.
+- **Consolidation standard.** Where the same rule prints twice, merge it — redundancy is where drift breeds. An effect-neutral union (every behavior previously covered remains covered, nothing new added) counts as cleanup-class and lands in the draft; the superseded lines are quoted in the delta entry. Set 8/8/2026 on the property-lines merge; the default is merge, not preserve-in-place.
+- **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices, line numbers, and other extraction notation live only in repo records for traceability; they never carry meaning in the working conversation. Set 8/8/2026.
+- **Book promises print minimal.** Where the book commits the fair to something (publication, timing, process), promise the least that solves the problem; operational specificity stays in practice and committee documents. Matches the veterans' existing instinct (the deliberately unnamed auction platform) and the volatility doctrine. Set 8/8/2026; confirmed under the session's blanket confirm — strike on Matt's word if that read was wrong.
 
 ## Paragraph template (load-bearing)
 
