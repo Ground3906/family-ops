@@ -89,3 +89,63 @@ Compliance with this protest and appeal process is mandatory prior to seeking re
 **F. Immediate action situations**
 
 4-H, FFA, or extension staff may take immediate action to remove a participant from the fairgrounds and other action as needed, where there is an emergency or significant risk of continuing misconduct. In those cases, the immediate action is temporary discipline and 4-H, FFA, or extension staff must arrange for the procedures set out under Disciplinary Procedures above as soon as possible but in no event longer than seven days from the temporary discipline.
+
+---
+
+## Livestock Sale
+
+### 4-H & FFA Livestock Sale
+
+Sale date and time: Saturday, July 18, 2026, 12:00 pm.
+
+All livestock exhibits not being sold need to be removed from the fairgrounds before 9:00 am on Saturday.
+
+**General rules**
+
+Market livestock sale rules will be reviewed on an annual basis with changes made as needed.
+
+An exhibitor may sell no more than two market animals at the Market Livestock Sale, and they must be of different species. In addition, an exhibitor may sell one meat pen of rabbits.
+
+All Grand Champion and Reserve Grand Champion market animals will sell. This applies in every market species and is not limited by the sale limit above. An exhibitor who wins championships in more than two species will sell all of those champions.
+
+The only case in which one exhibitor sells two market animals of the same species is when that exhibitor owns both the Grand Champion and the Reserve Grand Champion of that species. Both animals will sell.
+
+The sale order will be determined by the sale committee or Fair Board.
+
+In order to sell market beef animals, each exhibitor must present a bill of sale to the brand inspector prior to the sale.
+
+The sale weight will be the weight established at the weigh-in.
+
+Market goats (wethers or does) must weigh a minimum of 55 lbs. and must be a milk-tooth goat to be eligible to sell.
+
+Market swine must weigh a minimum of 220 lbs. and a maximum of 290 lbs. If swine is over 290 lbs, it can still be sold, but is not eligible for competition.
+
+Market sheep must weigh a minimum of 105 lbs. and no maximum.
+
+Market beef must weigh a minimum of 1,000 lbs. and no maximum.
+
+All exhibitors must notify the sale committee of the animals they will sell. Deadline for this notification will be one hour after the conclusion of the beef show. Failure to comply may result in the lightest weight animal being sold.
+
+**Marketing:** Open competitive marketing will prevail. Animals are sold to the highest bidder. Once the animal is sold in the rings, all sales are final.
+
+Market animals do not have to be sold. However, if sold, the project is terminated. Project termination is defined as the animal may not be exhibited in any other show or competition.
+
+Animals cannot be withdrawn from the sale after they have entered the sale ring.
+
+Arrangements for the payment, trucking, slaughter, and processing of private sale animals must be taken care of by the exhibitor.
+
+Only bona fide 4-H age youth (no associate member 4-H youth) and FFA youth are eligible to sell at the market livestock sale.
+
+### United States Department of Agriculture Wholesome Meat Act
+
+All members participating in the Livestock Sale must sign and return a copy of this act to the fair office with their sale slip. Both are provided in your livestock folders.
+
+The United States Department of Agriculture Wholesome Meat Act applies to the sale of market livestock sold during the Custer County Fair as follows:
+
+- Animals must be in good health and carcasses free of drug or chemical residues.
+- Antibiotics and sulfonamides have required withdrawal periods.
+- Drug label directions for use and withdrawal periods apply.
+
+If drug or other chemical residues are found in the tissue of carcasses, the entire carcass may be condemned. If drug or other chemical residues are found in the tissue of carcasses of animals sold through sales connected with the Custer County Fair, said show will in no way be liable or responsible for the condition of carcass or sale price of animal. Exhibitor forfeits all rights to the sale price. Before administering antibiotics and/or sulfonamides, consult a licensed and practicing veterinarian, or label directions of the drug.
+
+To be eligible to sell market animals, all exhibitors and parents are required to sign a copy of the Wholesome Meat Act Disclosure. This is to be turned into the sale committee no later than one hour after the market beef show.
