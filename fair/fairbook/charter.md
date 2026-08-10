@@ -25,6 +25,8 @@ Default status by origin:
 
 The default is not a comment on quality. Well-built proposals still go to the board as proposals. Writing session-authored material into the draft as settled is the failure this rule exists to prevent.
 
+**Applying the default under real stakes (set 8/9/2026):** "direct CSF adoption" means verbatim text plus logged entity/scale swaps and nothing else invented; the moment a proposal adds Custer-authored machinery CSF does not print, or reverses an existing county assignment of responsibility or liability rather than filling a silence, it is a hybrid and defaults to DISCUSS-AT-WALKTHROUGH even where most of its sentences are verbatim CSF. High-consequence direct adoptions (a multi-year exhibition bar, for one) are still routed to DISCUSS-AT-WALKTHROUGH where the session flagged them for walkthrough visibility rather than silent adoption; the mechanical default is a floor, not a ceiling, and the person running the pass names the judgment call rather than applying the rule silently either way.
+
 ## Working method for the passes
 
 - **Map the decision surface before opening an item.** Every decision inside a paragraph gets enumerated before the first one is presented, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces. It never appears inside a running summary as though it had always been there.
@@ -32,6 +34,15 @@ The default is not a comment on quality. Well-built proposals still go to the bo
 - **Consolidation standard.** Where the same rule prints twice, merge it — redundancy is where drift breeds. An effect-neutral union (every behavior previously covered remains covered, nothing new added) counts as cleanup-class and lands in the draft; the superseded lines are quoted in the delta entry. Set 8/8/2026 on the property-lines merge; the default is merge, not preserve-in-place.
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices, line numbers, and other extraction notation live only in repo records for traceability; they never carry meaning in the working conversation. Set 8/8/2026.
 - **Book promises print minimal.** Where the book commits the fair to something (publication, timing, process), promise the least that solves the problem; operational specificity stays in practice and committee documents. Matches the veterans' existing instinct (the deliberately unnamed auction platform) and the volatility doctrine. Set 8/8/2026; confirmed under the session's blanket confirm — strike on Matt's word if that read was wrong.
+- **Versioning system.** The Fair Book carries a version number only, never a year; its number moves only on an adopted rule change. All volatile facts, including every date, fee, and form, live in a separate companion Addendum, dated and revision-numbered, with fixed section numbers that never renumber across years. Full design proposed at `delta-log.md` FB-VERSION-01; adopted status pending walkthrough. Set 8/9/2026, in direct response to two versions of the 2026 Fair Book circulating with no way to tell which was current.
+
+## Publish deadline
+
+The Fair Book (not the Addendum) publishes by **October 2026**. Families begin buying and committing to market beef projects for the 2027 fair in the fall of 2026, so the book's rules must be settled and printed before that buying decision, not after. This is the mission's governing clock: every general-rules and department pass, and the board working-group walkthrough itself, is sequenced to close before the October deadline. The Addendum's first populated instance (2027 facts: schedule, roster, fees) follows separately in spring 2027, once those facts exist; it is not part of the October deliverable. Department passes cycle through superintendents to hone their section's specifics ahead of the deadline, one department at a time, general rules and the sections it depends on (Livestock Sale, Poultry) first. Set 8/9/2026.
+
+## Sequencing
+
+The terminal-sale and online-conduct proposals both respond to the same underlying 2026 pattern (private resale surfacing on social media), and presenting them separately at the walkthrough risks reading as a coordinated crackdown rather than the CSF-alignment argument the whole mission rests on. Decided: one package, presented together, inside the CSF-alignment frame, rather than split across sessions or led with the sale changes standalone. The frame carries everything or it carries nothing. This is bound by the publish deadline above: the walkthrough must complete before the sale committee's own spring cycle (auctioneer secured January, interest letters end of March, RFP by June) bids the 2027 floor-buyer relationship, since SALE-TERMINAL-01 changes what that relationship actually is. The floor-buyer brief (`fair/sale-committee/floor-buyer-brief.md`) circulates to the sale committee as operational preparation regardless of the walkthrough's adoption timing, since the committee's own annual cycle does not wait on board adoption. Set 8/9/2026.
 
 ## Paragraph template (load-bearing)
 
@@ -47,6 +58,7 @@ Verbatim rules:
 - REWORDED only where CSF's own wording genuinely fails; logged with reason. Deliberate softening of CSF mandatory language to discretionary ("will be tested" to "may be tested") is a REWORDED decision and carries its reason in the log.
 - Em dashes are permitted in `draft.md` and the addendum. These are documents of record, not Matt's authored voice. The Profile em-dash ban reaches text Matt sends or publishes under his own name (emails, letters, messages), not rulebooks, policy drafts, logs, or reference files. Revised 8/8/2026; the prior line read the ban as applying here and was stale.
 - Not every paragraph adopts a CSF rule. Where the base text belongs to another body — the 4-H and FFA Code of Conduct, owned by CSU Extension and FFA, who collect the signatures — the county text is retained as base and no adoption sentence is printed. The Fair Board rewriting another organization's instrument in CSF's voice is a harder sell to the working group than any rule inside it. Logged in the delta entry as a base-text note.
+- CSF text built on a standing on-call veterinarian or direct contact with the Colorado State Veterinarian's Office swaps to Custer's actual reporting chain on adoption: the exhibitor's one call goes to a Fair Board member or the relevant superintendent, who contacts the Authority's veterinarian; the veterinarian's own professional reporting duties to the state run separately, on her own scope of work, never printed as a family's obligation. Set 8/9/2026, first applied at POULTRY-01's health gate; applies to every adopted CSF line built on the same assumption, including the illness/injury/medication provisions in SALE-TERMINAL-01.
 
 ## Annual update cycle (the point of the structure)
 
@@ -57,10 +69,11 @@ When CSF publishes a new year: diff the verbatim layer against the new state tex
 ```
 fair/fairbook/
   charter.md        (this file)
-  delta-log.md      (every change; the walkthrough document — seeded, passes populate in book order)
+  delta-log.md       (every change; the walkthrough document — seeded, passes populate in book order)
   draft.md          (the clean book — reads exactly as it prints; PENDING markers show unworked sections mid-pass)
-  addendum-2026.md  (volatile layer: dates, times, fees, names, locations) [lands via execution passes, not yet committed]
 ```
+
+The Addendum is not a fixed filename. Per the versioning system above (full design at `delta-log.md` FB-VERSION-01), each year's populated Addendum lands as its own file once that year's facts exist, e.g. `addendum-2027-r1.md` for the 2027 Addendum's first revision, never a single evergreen `addendum-2026.md`. No populated Addendum instance exists yet; the 2027 Addendum is future work, targeted for spring 2027 once 2027 schedule, roster, and fee facts are set.
 
 ## Delta entry schema (delta-log.md)
 
@@ -73,13 +86,13 @@ Per change: stable ID · exact old Custer text · exact new text · CSF cite · 
 
 ## Vet scope of work (generated deliverable)
 
-The enforced-by assignments that accumulate during the passes convert into a vet-facing engagement document: what the fair asks the vet to check (CVI verification on arrival, arrival inspection, mouthing for age where invoked, sale-ring health gate, on-grounds medication administration, specimen collection if testing is exercised), so the vet can scope and fee the work as a professional engagement. CSF supplies the cost-recovery model and it is printable: arrival inspection charged to the exhibitor when the CVI is missing; testing costs deducted from sale proceeds.
+The enforced-by assignments that accumulate during the passes convert into a vet-facing engagement document: what the fair asks the vet to check (CVI verification on arrival, arrival inspection, mouthing for age where invoked, sale-ring health gate, on-grounds medication administration, specimen collection if testing is exercised, illness/injury/death and medication-withdrawal certification for sale-eligibility purposes), so the vet can scope and fee the work as a professional engagement. CSF supplies the cost-recovery model and it is printable: arrival inspection charged to the exhibitor when the CVI is missing; testing costs deducted from sale proceeds.
 
-Audience lane: this is a third lane — professional/vendor-facing. The document carries scope and fee basis only. Internal rationale (formalizing what was previously informal) stays in internal doctrine; board-facing framing is no-blame ("formalizing existing practice so expectations and fees are clear for both sides"); nothing about exhibitor behavior trends prints anywhere. Generated from the delta log after the passes populate it, not hand-built ahead of them.
+Audience lane: this is a third lane — professional/vendor-facing. The document carries scope and fee basis only. Internal rationale (formalizing what was previously informal) stays in internal doctrine; board-facing framing is no-blame ("formalizing existing practice so expectations and fees are clear for both sides"); nothing about exhibitor behavior trends prints anywhere. Generated from the delta log after the passes populate it, not hand-built ahead of them. As of 8/9/2026, SALE-TERMINAL-01 and POULTRY-01 have populated real enforced-by fields (veterinary certification for illness/injury/death/withdrawal; arrival inspection and illness reporting for poultry); assembling the actual document is still future work, triggered once more department passes add their own enforced-by lines.
 
 ## Addendum
 
-Built during the passes with `fair/rulebooks/volatility-inventory.md` in hand: volatile lines replaced in `draft.md` with pointers ("see Fair Schedule Addendum"), the data lands in `addendum-2026.md`. Future years add `addendum-YYYY.md`; the book itself stays untouched.
+Built during the passes with `fair/rulebooks/volatility-inventory.md` in hand: volatile lines replaced in `draft.md` with pointers ("see the current Addendum"), the data lands in that year's Addendum file. Full section structure (fixed numbering, forms placement) proposed at `delta-log.md` FB-VERSION-01. Future years add their own Addendum file; the Fair Book itself stays untouched except on an actual rule change.
 
 ## Execution pattern
 
