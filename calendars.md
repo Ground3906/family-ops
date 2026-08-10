@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-06.
+Last batch: 2026-08-10.
 
 ---
 
@@ -537,6 +537,8 @@ Last batch: 2026-08-06.
 [CAL] 2026-08-11 17:30 [D] WGU Cohort - IPV6 Introduction D325 :: meetings :: end=18:30
 [CAL] 2026-08-12 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
+[CAL] 2026-08-14 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
+[CAL] 2026-08-15 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
 [CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
