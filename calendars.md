@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-10.
+Last batch: 2026-08-31 (chore rotation extended through end of August).
 
 ---
 
@@ -366,12 +366,78 @@ Last batch: 2026-08-10.
 [CHORE] 2026-08-08 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-08-08 ALL-DAY [R][C] Table :: chore-type=table
 
-<!-- WEEK B: 8/10 -->
+<!-- WEEK B: 8/10-8/16 -->
 [CHORE] 2026-08-10 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-08-16
 [CHORE] 2026-08-10 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-08-16
 [CHORE] 2026-08-10 ALL-DAY [W][R] Dishes :: chore-type=dishes
 [CHORE] 2026-08-10 ALL-DAY [M][C] Animals :: chore-type=animals
 [CHORE] 2026-08-10 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-11 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-11 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-11 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-12 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-12 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-12 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-08-13 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-13 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-08-13 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-14 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-14 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-15 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-15 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-15 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK A: 8/17-8/23 -->
+[CHORE] 2026-08-17 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-23
+[CHORE] 2026-08-17 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-08-23
+[CHORE] 2026-08-17 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-17 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-08-17 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-18 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-18 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-18 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-19 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-19 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-19 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-08-20 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-20 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-08-20 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-21 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-21 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-21 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-22 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-22 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-22 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK B: 8/24-8/30 -->
+[CHORE] 2026-08-24 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-08-30
+[CHORE] 2026-08-24 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-08-30
+[CHORE] 2026-08-24 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-24 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-08-24 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-25 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-25 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-25 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-26 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-26 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-26 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-08-27 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-27 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-08-27 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-28 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-08-28 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-08-28 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-08-29 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-08-29 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-08-29 ALL-DAY [R][C] Table :: chore-type=table
+
+<!-- WEEK A: 8/31-9/6 -->
+[CHORE] 2026-08-31 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-09-06
+[CHORE] 2026-08-31 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-09-06
+[CHORE] 2026-08-31 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-31 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-08-31 ALL-DAY [C][E] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
