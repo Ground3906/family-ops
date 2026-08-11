@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-31 (chore rotation extended through end of August).
+Last batch: 2026-08-11.
 
 ---
 
@@ -599,10 +599,10 @@ Last batch: 2026-08-31 (chore rotation extended through end of August).
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
-[CAL] 2026-08-11 13:20 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-08-11 13:20 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-11 17:30 [D] WGU Cohort - IPV6 Introduction D325 :: meetings :: end=18:30
-[CAL] 2026-08-12 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="rescheduled from 2026-07-09"
+[CAL] 2026-08-12 15:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=17:00
 [CAL] 2026-08-14 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
 [CAL] 2026-08-15 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
 [CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
@@ -612,7 +612,9 @@ Last batch: 2026-08-31 (chore rotation extended through end of August).
 [CAL] 2026-08-17 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
+[CAL] 2026-08-20 13:45 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
+[CAL] 2026-08-25 15:00 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
@@ -631,6 +633,7 @@ Last batch: 2026-08-31 (chore rotation extended through end of August).
 
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 
 ---
@@ -638,9 +641,11 @@ Last batch: 2026-08-31 (chore rotation extended through end of August).
 ### OCTOBER 2026
 
 [CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
+[CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
+[CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 
 ---
