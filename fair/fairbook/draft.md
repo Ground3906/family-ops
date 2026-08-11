@@ -1,8 +1,10 @@
 # Custer County Fair Book — Draft
 
-Working draft of the revised county fair book. Built pass by pass in book order by the fairbook rewrite mission (`fair/fairbook/charter.md`). Sections marked PENDING have not been worked yet; they are queued, not omitted.
+This file is the book. It is written chapter by chapter, finished, as it will print. Architecture is `fair/fairbook/structure.md`; mission doctrine is `fair/fairbook/charter.md`.
 
-Every change from the current book is logged in `fair/fairbook/delta-log.md`. Proposals the board has not adopted do not appear in this file. They live in the delta log with status DISCUSS-AT-WALKTHROUGH and print greyed beneath their home paragraph in the walkthrough copy, so the working group reads the actual proposed language in the place it would land.
+Every change from the current book is logged in `fair/fairbook/delta-log.md` and the dated delta files beside it. The delta log is the audit trail behind the book, not the place the book lives. Status flags ride in the log and never print here.
+
+**Chapter reorganization pending.** The text below carries forward from earlier passes in the legacy county order. It is re-homed into CC chapters as those chapters are written.
 
 ---
 
