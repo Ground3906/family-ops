@@ -31,7 +31,7 @@ The default is not a comment on quality. Well-built proposals still go to the bo
 
 - **Map the decision surface before opening an item.** Every decision inside a paragraph gets enumerated before the first one is presented, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces. It never appears inside a running summary as though it had always been there.
 - **One decision per message.** Findings of record, verification results, and status may batch. Decisions never do. This holds under every framing, including reconciliation, conflict-naming, merged-state review, and efficiency. A batch of decisions cannot be acted on and is not a delivery.
-- **Consolidation standard.** Where the same rule prints twice, merge it — redundancy is where drift breeds. An effect-neutral union (every behavior previously covered remains covered, nothing new added) counts as cleanup-class and lands in the draft; the superseded lines are quoted in the delta entry. Set 8/8/2026 on the property-lines merge; the default is merge, not preserve-in-place.
+- **Racking standard (revised 8/10/2026).** Every rule that prints more than once is found and racked up to the shared layer at the top of its chapter. Some rules still repeat downward into departments, and that is correct — but a repeat is then deliberate, and it prints in identical words and identical formatting everywhere it appears. Merge is no longer the automatic answer; rack-then-repeat-on-purpose is. An effect-neutral union (every behavior previously covered remains covered, nothing new added) still counts as cleanup-class and lands in the draft; the superseded lines are quoted in the delta entry. Supersedes the prior merge-by-default line, set 8/8/2026 on the property-lines merge, which read: "Where the same rule prints twice, merge it — redundancy is where drift breeds ... the default is merge, not preserve-in-place."
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices, line numbers, and other extraction notation live only in repo records for traceability; they never carry meaning in the working conversation. Set 8/8/2026.
 - **Book promises print minimal.** Where the book commits the fair to something (publication, timing, process), promise the least that solves the problem; operational specificity stays in practice and committee documents. Matches the veterans' existing instinct (the deliberately unnamed auction platform) and the volatility doctrine. Set 8/8/2026; confirmed under the session's blanket confirm — strike on Matt's word if that read was wrong.
 - **Versioning system.** The Fair Book carries a version number only, never a year; its number moves only on an adopted rule change. All volatile facts, including every date, fee, and form, live in a separate companion Addendum, dated and revision-numbered, with fixed section numbers that never renumber across years. Full design proposed at `delta-log.md` FB-VERSION-01; adopted status pending walkthrough. Set 8/9/2026, in direct response to two versions of the 2026 Fair Book circulating with no way to tell which was current.
@@ -48,11 +48,12 @@ The terminal-sale and online-conduct proposals both respond to the same underlyi
 
 Every adopted rule paragraph carries two layers:
 
-1. Lead-in adoption sentence: "Custer County acknowledges and adopts CSF Rule X.X:" followed by the rule text, verbatim CSF.
+1. Lead-in adoption sentence: "Custer County acknowledges and adopts [source, cited by its own convention]:" followed by the rule text, verbatim.
 2. **Custer Exceptions** block at the bottom of the paragraph: county additions, subtractions, clarifications. No exceptions = no block printed. Local flavor lives ONLY in exception blocks, never woven into rule text.
 
 Verbatim rules:
 
+- **CSF cites by heading name, not by number.** The CSF General Competition Requirements carries no section numbers, no rule numbers, and no section symbol anywhere in the document. It runs on named headings ("Grievances/Protests", "Prohibition of Interference with Competitions", "Determination of Violations", "Barred Exhibitors"). So the adoption lead-in prints the heading: "Custer County acknowledges and adopts the Colorado State Fair General Competition Requirements, Determination of Violations." A parent can open the state's document, find that heading, and confirm the words match, which is the whole job the citation was doing. Verified 8/10/2026 against the archived GCR; the "CSF Rule X.X" format assumed at mission open cannot be written because no such numbering exists. IAFE is the opposite case: its eight guidelines are numbered, so "IAFE National Code of Show Ring Ethics, Item 7" is a real citation. CSF abbreviates to "CSF" in the book after being defined at first use in CC 1.
 - Entity/scale swaps are mandatory on adoption, not optional: CSF staff titles, CSU Extension nomination machinery, "the Fair" meaning Pueblo — all swap to Custer equivalents. Every swap logged in the delta entry.
 - Numbers are never verbatim by default. Fees, weights, windows, deadlines are each a decision in the pass, not a copy.
 - REWORDED only where CSF's own wording genuinely fails; logged with reason. Deliberate softening of CSF mandatory language to discretionary ("will be tested" to "may be tested") is a REWORDED decision and carries its reason in the log.
@@ -68,10 +69,16 @@ When CSF publishes a new year: diff the verbatim layer against the new state tex
 
 ```
 fair/fairbook/
-  charter.md        (this file)
+  charter.md        (this file — mission doctrine)
+  structure.md      (the book's own skeleton: chapters, numbering, citation, drafting standard)
   delta-log.md       (every change; the walkthrough document — seeded, passes populate in book order)
+  delta-YYYY-MM-DD.md (session delta entries awaiting fold-in)
   draft.md          (the clean book — reads exactly as it prints; PENDING markers show unworked sections mid-pass)
+  audit-YYYY-MM-DD.md (intake audits with staged dispositions and receipts)
+  tools/            (section line map, book generator)
 ```
+
+**Delta log split (pending, 8/10/2026):** `delta-log.md` has reached 69KB and grows roughly 20KB per session with thirteen sessions left before October. No available write tool appends; every edit requires resending the whole file, which is how the walkthrough document gets silently corrupted. It splits into per-chapter files matching CC 1 through CC 10, with `delta-log.md` becoming the index. First task of the next session.
 
 The Addendum is not a fixed filename. Per the versioning system above (full design at `delta-log.md` FB-VERSION-01), each year's populated Addendum lands as its own file once that year's facts exist, e.g. `addendum-2027-r1.md` for the 2027 Addendum's first revision, never a single evergreen `addendum-2026.md`. No populated Addendum instance exists yet; the 2027 Addendum is future work, targeted for spring 2027 once 2027 schedule, roster, and fee facts are set.
 
@@ -88,11 +95,11 @@ Per change: stable ID · exact old Custer text · exact new text · CSF cite · 
 
 The enforced-by assignments that accumulate during the passes convert into a vet-facing engagement document: what the fair asks the vet to check (CVI verification on arrival, arrival inspection, mouthing for age where invoked, sale-ring health gate, on-grounds medication administration, specimen collection if testing is exercised, illness/injury/death and medication-withdrawal certification for sale-eligibility purposes), so the vet can scope and fee the work as a professional engagement. CSF supplies the cost-recovery model and it is printable: arrival inspection charged to the exhibitor when the CVI is missing; testing costs deducted from sale proceeds.
 
-Audience lane: this is a third lane — professional/vendor-facing. The document carries scope and fee basis only. Internal rationale (formalizing what was previously informal) stays in internal doctrine; board-facing framing is no-blame ("formalizing existing practice so expectations and fees are clear for both sides"); nothing about exhibitor behavior trends prints anywhere. Generated from the delta log after the passes populate it, not hand-built ahead of them. As of 8/9/2026, SALE-TERMINAL-01 and POULTRY-01 have populated real enforced-by fields (veterinary certification for illness/injury/death/withdrawal; arrival inspection and illness reporting for poultry); assembling the actual document is still future work, triggered once more department passes add their own enforced-by lines.
+Audience lane: this is a third lane — professional/vendor-facing. The document carries scope and fee basis only. Internal rationale (formalizing what was previously informal) stays in internal doctrine; board-facing framing is no-blame ("formalizing existing practice so expectations and fees are clear for both sides"); nothing about exhibitor behavior trends prints anywhere. Generated from the delta log after the passes populate it, not hand-built ahead of them. As of 8/10/2026, SALE-TERMINAL-01, POULTRY-01, and FB-IAFE-01 have populated real enforced-by fields; FB-IAFE-01's adoption of IAFE Item 4 adds on-grounds medication administration by a licensed veterinarian, which is a genuine scope expansion. Assembling the actual document is still future work.
 
 ## Addendum
 
-Built during the passes with `fair/rulebooks/volatility-inventory.md` in hand: volatile lines replaced in `draft.md` with pointers ("see the current Addendum"), the data lands in that year's Addendum file. Full section structure (fixed numbering, forms placement) proposed at `delta-log.md` FB-VERSION-01. Future years add their own Addendum file; the Fair Book itself stays untouched except on an actual rule change.
+Built during the passes with `fair/rulebooks/volatility-inventory.md` in hand: volatile lines replaced in `draft.md` with pointers ("see the current Addendum"), the data lands in that year's Addendum file. Full section structure (fixed numbering, forms placement) proposed at `delta-log.md` FB-VERSION-01. Future years add their own Addendum file; the Fair Book itself stays untouched except on an actual rule change. Signed forms are Addendum-class, including the IAFE Code of Show Ring Ethics signature form added by FB-IAFE-01.
 
 ## Execution pattern
 
@@ -109,6 +116,15 @@ Never here. Build status, current pass position, and pending work live in sessio
 
 - Assembled book artifacts show every section as either passed or explicitly on the punch list; deferral banners are never an end-state. The conformance passes (Authority rename, volatile-to-Addendum pointers, adoption lead-ins) run at every assembly, every time.
 - File-state verification precedes any gate manifest: fresh-read the target files, then present. A manifest's claims are never sourced from memory or prior-session summaries.
-- push_files preflight: state the file count, confirm the files array matches it, then execute. Partial arrays land silently (demonstrated at 69eb5bd, 8/10/2026).
+- push_files preflight: state the file count, then **count the entries in the array against that number before firing**. Partial arrays land silently (demonstrated at 69eb5bd, and three times in one build on 8/10/2026 — stating a count is not the control; counting the array is).
 - Intake for this mission carries staged dispositions with receipts: each audit item logs the problem, source quotes, and a staged disposition for its deep dive. Audit files live beside the draft (audit-YYYY-MM-DD.md).
 - Assembled deliverables carry an explicit worked/unworked scoreboard. A correction from Matt is never a commit word: present the fix plan, re-hold the gate.
+
+## Drafting doctrine (added 8/10/2026)
+
+- **The examples pattern.** State the explicit adopted rule, then print the county's current specifics beneath it as examples. The examples illustrate the rule; they never limit it. This solves the flavor problem structurally: the veterans' own language survives verbatim as illustration while the rule above it is the standard. Nothing gets thrown out and nothing drifts. Matt's formulation, 8/10/2026.
+- **Citation-first exceptions.** Any Custer exception that extends, narrows, or applies an adopted rule cites the source first, then states the county's application. Exceptions that are purely local carry no citation because there is nothing to cite. Without the citation, an exception that carries a CSF principle reads as Custer inventing liability.
+- **Two registers, on purpose.** Adopted text stays in its source's voice, formal, because it should sound like the source it came from. Custer exceptions are written plain, because they are the county talking directly to a family about what the rule means for them. A reader can tell at a glance which is which. The pattern is explained once in CC 1. Audience is eight through eighteen, with enough weight that the rules sound official, because it is the parents who hunt loopholes.
+- **Loophole resistance comes from precision, not complexity.** Loopholes do not live in simple sentences; they live in vocabulary drift. This book's own "termination" problem is the proof, the same word meaning show-ineligibility in one place and slaughter in another. Every weight-bearing term is defined once in CC 1 and used identically forever. No synonyms, ever.
+- **Bullets are banned in rule text.** A bullet cannot be cited, so anything a family can be held to carries a number or a letter. Bullets survive only in non-binding material. If it is a bullet, it is not a rule, and everyone can tell at a glance.
+- **Sub-question discipline.** A flag raised inside an item never goes in a footer to be circled back to. It becomes a numbered sub-question under its parent item, presented and locked one at a time, before the parent item closes. Nothing carries forward on the drafter's memory of it. Set 8/10/2026 after two flags nearly went unaddressed in a single session.
