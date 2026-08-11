@@ -104,3 +104,11 @@ Built during the passes with `fair/rulebooks/volatility-inventory.md` in hand: v
 ## Session state
 
 Never here. Build status, current pass position, and pending work live in session batons only.
+
+## Assembly & gate discipline (added 8/10/2026)
+
+- Assembled book artifacts show every section as either passed or explicitly on the punch list; deferral banners are never an end-state. The conformance passes (Authority rename, volatile-to-Addendum pointers, adoption lead-ins) run at every assembly, every time.
+- File-state verification precedes any gate manifest: fresh-read the target files, then present. A manifest's claims are never sourced from memory or prior-session summaries.
+- push_files preflight: state the file count, confirm the files array matches it, then execute. Partial arrays land silently (demonstrated at 69eb5bd, 8/10/2026).
+- Intake for this mission carries staged dispositions with receipts: each audit item logs the problem, source quotes, and a staged disposition for its deep dive. Audit files live beside the draft (audit-YYYY-MM-DD.md).
+- Assembled deliverables carry an explicit worked/unworked scoreboard. A correction from Matt is never a commit word: present the fix plan, re-hold the gate.
