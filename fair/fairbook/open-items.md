@@ -15,10 +15,6 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 - **Table of contents** — generated at final assembly, after all chapters are written.
 - **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins.
 
-## CC 1 and CC 2 cleanup
-
-- **CSF abbreviation not applied everywhere.** CC 2.1 prints "The Colorado State Fair is excepted"; the preamble spells it out twice more than needed. "Colorado State 4-H dress code" in CC 2.4 is correct and stays — that is the document's actual name.
-
 ## Needs a source pull before it can be drafted
 
 - **CSF water rules.** Two families, both wanted, neither extracted: water as animal care and welfare (access on the grounds), and water as weigh-in integrity (withholding or loading an animal before it hits the scale). The second has teeth and sits next to the weight windows. Matt's direction is straight adoption, no local invention. Market livestock chapter.
