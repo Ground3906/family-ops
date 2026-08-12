@@ -1,10 +1,70 @@
 # Volatility Inventory — 2026 Custer County Fair Book
 
-Deliverable 3 of the Fair Rulebooks Charter (`fair/rulebooks/charter.md`). Every annually-volatile line in the county book — dates, times, deadlines, fees, names, locations — cataloged with its location in the book. Seeds the future addendum page: the book carries stable rules plus references, the addendum carries the changing layer in one spot. This is also the raw material for the parked schedule-rework mission logged in `fair/notes.md` (the printed schedule is the addendum's anchor tenant).
+Deliverable 3 of the Fair Rulebooks Charter (`fair/rulebooks/charter.md`). Every annually-volatile line in the county book — dates, times, deadlines, fees, names, locations — cataloged with its location in the book. Seeds the Addendum: the book carries stable rules plus references, the Addendum carries the changing layer in one spot. This is also the raw material for the parked schedule-rework mission logged in `fair/notes.md` (the printed schedule is the Addendum's anchor tenant).
+
+**Section numbering locked 8/12/2026.** The nine sections below are the Addendum's permanent structure and are cited by number throughout `fair/fairbook/draft.md`. Per the charter's versioning system, these numbers never renumber across years. A section may be empty in a given year; it does not lose its number. Sections are ordered by when a family needs them: who runs the fair and where things happen (§1–§3), what to submit before fair week (§4–§6), and what happens during fair week (§7–§9). The pre-8/12 ordering (schedule first, locations last) was an artifact of extraction order and carried no design; it was reorganized before any citation shipped.
 
 Source: `fair/rulebooks/extracts/2026-custer-county-fair-book.md`, extracted from the county's own 2026 Fair Book (the source of truth; the posted county PDF is not used).
 
-## 1. Schedule
+## 1. Fair Board, Staff, and Superintendents
+
+| Role | Name(s) | Location in book |
+|---|---|---|
+| President | Wendy Rusk | Fair Board section |
+| Vice President | Enjoli Skeen-Dean | Fair Board section |
+| Treasurer | Alisha Shy | Fair Board section |
+| Secretary | Lea Grundy | Fair Board section |
+| Sale Committee | Bre Gasper | Fair Board section |
+| Board member | Brittany VanDeusen | Fair Board section |
+| Board member | Matt Bayer | Fair Board section |
+| County Commissioners | Lucas Epp, Bill Canda, Paul Vogelsong | Commissioners section |
+| CSU Extension Director | Reggie Foster | Extension Staff section |
+| 4-H Program Coordinator | Ashtyn Walter | Extension Staff section |
+| FFA Advisor | Eddie Crispe | FFA Organization section |
+| Official Fair Veterinarian | DVM Annie Cordova, Central CO Veterinary Service | Veterinarian section |
+| Superintendent, 4-H & Open | Ashtyn Walter | Superintendents section |
+| Superintendent, FFA / Beef | Eddie Crispe | Superintendents section |
+| Superintendent, Swine | Joseph Arnone | Superintendents section |
+| Superintendent, Sheep & Goats | Sara Canterbury | Superintendents section |
+| Superintendent, Horse | Katlyn Wommack | Superintendents section |
+| Superintendent, Llama | Caleb & Brittany VanDeusen | Superintendents section |
+| Superintendent, Small Animal (+ its Master Showmanship) | Brianna Evert | Superintendents section |
+| Superintendent, Livestock Master Showmanship | Lance Ingram | Superintendents section |
+| Shooting Sports agent (rifle/shotgun and archery) | Reggie Foster | Shooting Sports section |
+| Cat Show superintendent | **N/A — no cat projects for 2026** | Cat section — a this-year fact sitting in a name slot, still volatile |
+
+## 2. Locations
+
+Sheriff's shooting range (rifle/shotgun), Cowboy Church archery range (archery), Saddle Club Arena (horse/gymkhana), Lamb barn (weigh-in/small-animal check-in), Custer County Fairgrounds show ring (most species shows and companion-animal events), show arena (default/unspecified events). Any facility rename, relocation, or addition is a hit against this list and belongs in next year's addendum, not a rewrite of the stable book.
+
+## 3. Official Communication Channels
+
+Designated channels through which the Fair Board issues official communications. Cited by CC 2.9. Content to be defined by board policy — see the official-channel designation item in `fair/notes.md`.
+
+## 4. Entry Deadlines
+
+Entry and registration deadlines by project area. Cited by CC 2.2. Currently the county book carries enrollment dates only for Llama (April 15 County Add/Drop) and Dog (project enrollment and 4HOnline registration by May 1). Market livestock entry is the county weigh-in; indoor and Open Division entry is check-in. Dates populate from the annual schedule.
+
+## 5. Required Forms
+
+The full list of forms an exhibitor must complete and sign. Cited by CC 2.2. Known form set: 4-H and FFA Code of Conduct (collected by Extension), MQA certification, animal care and housing forms, Wholesome Meat Act Disclosure, IAFE National Code of Show Ring Ethics signature form. The IAFE Code itself is an Addendum instrument per IAFE-PLACEMENT.
+
+## 6. Fees
+
+| Fee | Amount | Location |
+|---|---|---|
+| Protest fee (general Code of Conduct) | $50, cash or certified check | Disciplinary Procedures |
+| Appeal fee (general Code of Conduct) | $100, cash or certified check | Disciplinary Procedures |
+| Protest fee (Open Division, stated separately) | $50, payable to Custer County Fair Board | Open Division general rules |
+| Consumer Science/General premium — Blue/1st | $8.00 | 4-H FCS & General Projects |
+| Consumer Science/General premium — Red/2nd | $5.00 | 4-H FCS & General Projects |
+| Consumer Science/General premium — White/3rd | $3.00 | 4-H FCS & General Projects |
+| Consumer Science/General premium — Yellow/4th | $2.00 | 4-H FCS & General Projects |
+| Consumer Science/General premium — Pink/5th | $2.00 | 4-H FCS & General Projects |
+
+No per-class entry fee is printed anywhere in the book for county competition, in contrast to CSF, which charges $10–25 per class throughout. Logged as finding ADMIN-02 in `divergence-map.md` — confirm with the board whether free entry is deliberate policy or simply handled outside the book.
+
+## 7. Schedule
 
 Highest-volatility section in the book — changes wholesale every year. Standing rules that govern how to *read* the schedule (not dated, but load-bearing): gates open 7:00 am / close 10:00 pm daily; a 15-minute break is scheduled between events, but **no event starts before its stated time** — meaning every printed time after a day's first event is a floor, not a fixed start. This is the exact mechanism already logged as a schedule-rework defect in `fair/notes.md`. "Exhibit Hall Open: TBD" is printed as a literal unfilled placeholder in the current book draft.
 
@@ -46,49 +106,7 @@ Highest-volatility section in the book — changes wholesale every year. Standin
 | Sun Jul 19 | 11:00 am–1:00 pm | General checkout | — |
 | Sun Jul 19 | 1:00–3:00 pm | Mandatory after-fair cleanup | — |
 
-## 2. Fair Board, staff, and superintendent roster
-
-| Role | Name(s) | Location in book |
-|---|---|---|
-| President | Wendy Rusk | Fair Board section |
-| Vice President | Enjoli Skeen-Dean | Fair Board section |
-| Treasurer | Alisha Shy | Fair Board section |
-| Secretary | Lea Grundy | Fair Board section |
-| Sale Committee | Bre Gasper | Fair Board section |
-| Board member | Brittany VanDeusen | Fair Board section |
-| Board member | Matt Bayer | Fair Board section |
-| County Commissioners | Lucas Epp, Bill Canda, Paul Vogelsong | Commissioners section |
-| CSU Extension Director | Reggie Foster | Extension Staff section |
-| 4-H Program Coordinator | Ashtyn Walter | Extension Staff section |
-| FFA Advisor | Eddie Crispe | FFA Organization section |
-| Official Fair Veterinarian | DVM Annie Cordova, Central CO Veterinary Service | Veterinarian section |
-| Superintendent, 4-H & Open | Ashtyn Walter | Superintendents section |
-| Superintendent, FFA / Beef | Eddie Crispe | Superintendents section |
-| Superintendent, Swine | Joseph Arnone | Superintendents section |
-| Superintendent, Sheep & Goats | Sara Canterbury | Superintendents section |
-| Superintendent, Horse | Katlyn Wommack | Superintendents section |
-| Superintendent, Llama | Caleb & Brittany VanDeusen | Superintendents section |
-| Superintendent, Small Animal (+ its Master Showmanship) | Brianna Evert | Superintendents section |
-| Superintendent, Livestock Master Showmanship | Lance Ingram | Superintendents section |
-| Shooting Sports agent (rifle/shotgun and archery) | Reggie Foster | Shooting Sports section |
-| Cat Show superintendent | **N/A — no cat projects for 2026** | Cat section — a this-year fact sitting in a name slot, still volatile |
-
-## 3. Fees
-
-| Fee | Amount | Location |
-|---|---|---|
-| Protest fee (general Code of Conduct) | $50, cash or certified check | Disciplinary Procedures |
-| Appeal fee (general Code of Conduct) | $100, cash or certified check | Disciplinary Procedures |
-| Protest fee (Open Division, stated separately) | $50, payable to Custer County Fair Board | Open Division general rules |
-| Consumer Science/General premium — Blue/1st | $8.00 | 4-H FCS & General Projects |
-| Consumer Science/General premium — Red/2nd | $5.00 | 4-H FCS & General Projects |
-| Consumer Science/General premium — White/3rd | $3.00 | 4-H FCS & General Projects |
-| Consumer Science/General premium — Yellow/4th | $2.00 | 4-H FCS & General Projects |
-| Consumer Science/General premium — Pink/5th | $2.00 | 4-H FCS & General Projects |
-
-No per-class entry fee is printed anywhere in the book for county competition, in contrast to CSF, which charges $10–25 per class throughout. Logged as finding ADMIN-02 in `divergence-map.md` — confirm with the board whether free entry is deliberate policy or simply handled outside the book.
-
-## 4. Weight windows and market-livestock deadlines
+## 8. Weight Windows and Market Deadlines
 
 | Species | Min weight | Max weight | Other volatile terms | Location |
 |---|---|---|---|---|
@@ -99,7 +117,7 @@ No per-class entry fee is printed anywhere in the book for county competition, i
 
 Age/enrollment cutoffs recurring across nearly every department: 4-H/FFA member age 8, not yet 19 as of Dec 31 of current enrollment year (Junior 8-10 / Intermediate 11-13 / Senior 14-18). Species-specific add-ons: Llama exhibitors must be enrolled as of April 15 County Add/Drop Date; Dog project members enrolled since May 1 or earlier and registered in 4HOnline by May 1.
 
-## 5. Protest / appeal / notification deadlines
+## 9. Protest and Appeal Deadlines
 
 | Deadline | Window | Location |
 |---|---|---|
@@ -108,10 +126,6 @@ Age/enrollment cutoffs recurring across nearly every department: 4-H/FFA member 
 | Wholesome Meat Act disclosure | ≤1 hour after conclusion of market beef show | Livestock Sale |
 | Sale-animal notification to sale committee | ≤1 hour after conclusion of beef show | Livestock Sale |
 
-## 6. Locations named in the book
-
-Sheriff's shooting range (rifle/shotgun), Cowboy Church archery range (archery), Saddle Club Arena (horse/gymkhana), Lamb barn (weigh-in/small-animal check-in), Custer County Fairgrounds show ring (most species shows and companion-animal events), show arena (default/unspecified events). Any facility rename, relocation, or addition is a hit against this list and belongs in next year's addendum, not a rewrite of the stable book.
-
-## 7. How this feeds the addendum
+## How this feeds the Addendum
 
 Per the charter's propagation gate, this inventory doesn't build the addendum page itself — that's part of the future county-book-rewrite mission, gated on the board conversation seeded by `divergence-map.md`. This file is the seed data: every row above is a candidate line for that addendum once the rewrite starts.
