@@ -8,34 +8,41 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Blocking the October publish
 
-- **Chapters CC 3 through CC 10** — unwritten. The bulk of remaining scope.
+- **CC 3 species subchapters, and chapters CC 4 through CC 10** — unwritten. CC 3.1 is finished; the six market subchapters build against it.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
-- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins.
+- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins. Now also carries a register pass: every chapter reads in the single formal register.
+
+## Routed to a species subchapter, do not lose
+
+- **Swine 290-pound sale-weight cap.** The county general rule prints that a hog over the maximum sells at 290 pounds regardless of actual weight, and that an over-maximum hog may sell but may not compete. Species-specific, so it fails the CC 3.1 test and lands in Swine.
+- **PEDV as the swine instance of the disease contingency.** CC 3.1.13 carries the general power tied to the Colorado State Veterinarian's Office. The county's PEDV clause prints in Swine as the species application, with the year stripped.
+- **Poultry and rabbit weigh-in unit and class mechanics.** CC 3.1.4 leaves the unit to each subchapter. Turkey weight ceiling, chicken pen composition, and rabbit meat-pen mechanics all land at the department pass with a superintendent in the room.
+- **Sheep drenching carve-out, and the sheep and goat muzzle rule.** CSF permits drenching market lambs for hydration only, with no stomach-pumping device, and requires that any muzzle allow the animal to drink. Species facts under the CC 3.1.12 shell.
 
 ## Needs a source pull before it can be drafted
 
-- **CSF water rules.** Two families, both wanted, neither extracted: water as animal care and welfare (access on the grounds), and water as weigh-in integrity (withholding or loading an animal before it hits the scale). The second has teeth and sits next to the weight windows. Matt's direction is straight adoption, no local invention. Market livestock chapter.
-- **Feeding responsibilities.** No entry anywhere yet. Placement undecided — CC 2 Animal Exhibitors as a shared rule, or each project chapter. Run the placement test before drafting.
 - **8 CCR 1208-1 and CSF's signed Exhibitor Code of Conduct.** The county's removal-warranting conduct list has no analog in captured CSF sources because CSF houses that content in these two documents, neither extracted. A true source-level conduct comparison needs both.
 
 ## Needs a phone call or a person
 
 - **Extension likeness release (Ashtyn or Reggie).** What release does CSU Extension already collect at enrollment, does it run to the Fair Board or only to Extension, and does it cover publication of names, photos, and sale results by the Fair? A 4-H enrollment release does not automatically cover what the Fair itself publishes. Bring findings to the board.
 - **Superintendent review cycle.** Each department chapter cycles through its superintendent before October. Poultry class mechanics, weights, and judging-day choreography specifically need a superintendent's voice — that was deferred deliberately.
-- **Market rabbit meat-pen ruleset.** Currently a single cap-line mention with no class behind it. Same missing-class defect poultry had.
+- **Wholesome Meat and Poultry Products Act citations.** CC 4's sale warranty names both acts plus a county-original catch-all for rabbit. Confirm the citations and the rabbit framing with the processor or Extension before the book prints. Not legal advice as drafted.
+
+## Unresolved rule questions
+
+- **Poultry health and biosecurity gate at check-in.** The P-block question was posed and no lock is recoverable from the session record. Re-ask before the Poultry subchapter drafts.
+- **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
+- **Per-class entry fee.** No entry fee is printed anywhere in the county book, in contrast to CSF, which charges $10–25 per class throughout. Confirm with the board whether free entry is deliberate policy or simply handled outside the book. CC 2.17 drops CSF's entry-fee forfeiture clause on the assumption that no fee exists.
+- **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
 
 ## Load-bearing on the walkthrough
 
 - **The August 2026 market lamb letter — outcome unrecorded.** The board met 8/10 to consider a letter to an exhibitor suggesting a companion animal project in future years. Matt asked them to hold it: no written rule was broken, the letter would put an unwritten rule in writing after the fact, and asserting terminal intent to a family now would make the terminal-sale change read as retaliation at the walkthrough. **If a letter went out, the sequencing hazard is live rather than theoretical.** No names in this log, by design.
-
-## Unresolved rule questions
-
-- **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
-- **Per-class entry fee.** No entry fee is printed anywhere in the county book, in contrast to CSF, which charges $10–25 per class throughout. Confirm with the board whether free entry is deliberate policy or simply handled outside the book.
-- **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
+- **Legacy blocks still staged in `draft.md`.** The General Rules and Livestock Sale carry-forward sections remain in the file below CC 3, and much of the General Rules block is now superseded by CC 2. They are not deleted on the drafter's judgment. Confirm removal item by item when CC 4 and the conduct material finish re-homing.
 
 ## Companion documents that change if the book adopts
 
