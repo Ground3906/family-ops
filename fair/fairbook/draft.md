@@ -374,6 +374,40 @@ Requirements governing market exhibitors that are stated elsewhere in this book 
 
 ---
 
+### CC 3.2 — Market Beef
+
+**CC 3.2.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Beef.
+
+**CC 3.2.2 Age**
+
+Custer County acknowledges and adopts IAFE Code of Show Ring Ethics Item 1, which provides that all exhibitors must present, upon request of fair and livestock show officials, proof of ownership, length of ownership, and age of all animals entered, and that misrepresentation of ownership, age, or any facts relating thereto is prohibited.
+
+Custer County reads this requirement as follows. Every market beef project shall have a maximum age of 20 months at fair time. The licensed veterinarian may perform a dental check to verify the age of any market beef animal.
+
+**CC 3.2.3 Heifer Pregnancy Certification**
+
+Custer County acknowledges and adopts the CSF requirement that all heifers be accompanied by a certificate issued by a licensed veterinarian verifying that the heifer is pregnancy tested open within 30 days of the fair.
+
+Custer County reads this requirement as follows. The certificate shall be presented to the Authority upon the heifer's arrival at the fairgrounds for show. This requirement reaches every heifer entered in the market beef show, in any class.
+
+**CC 3.2.4 Classes and Judging**
+
+Custer County acknowledges and adopts the CSF requirements governing market beef judging. Market beef classes are open to steers and heifers. Steers and heifers shall be shown by weight and shall be divided by sex into classes as appropriate by the Authority, with the superintendent of the department as lead. Heifers shall compete in a heifer class. All steers placing first in a class shall compete in the Grand Champion Drive. The second place winner from the class from which the Grand Champion Market Beef is selected may be considered for Reserve Grand Champion Market Beef. Heifers shall compete equally with the steers in the Grand Champion Drive.
+
+Custer County reads this requirement as follows. No breed competition exists in Market Beef.
+
+**CC 3.2.5 Classes Offered**
+
+The classes offered in Market Beef are Market Steer, Market Heifer, and Grass Fed Heifer or Steer. Breeding Beef is not a market class; see CC 6.
+
+**CC 3.2.6 Show Ring Access**
+
+Custer County acknowledges and adopts the CSF requirement that exhibitors only are allowed in the beef show ring staging areas.
+
+---
+
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
 
 ---
