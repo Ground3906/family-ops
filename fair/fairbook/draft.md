@@ -354,6 +354,8 @@ Custer County further provides that an animal shown in a breeding class shall no
 
 Each exhibitor shall be assigned one pen or stall in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen or stall in each species entered, the superintendent shall assign any remaining space in the same order.
 
+Where the number of entries in a species exceeds the pen space available for that species, the guarantee of pen space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the pen space assigned to each exhibitor as needed, with the superintendent of the department as lead.
+
 Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
 
 **CC 3.1.12 Mandatory Exhibitor Meeting**
@@ -411,6 +413,34 @@ The classes offered in Market Beef are Market Steer, Market Heifer, and Grass Fe
 **CC 3.2.6 Show Ring Access**
 
 Custer County acknowledges and adopts the CSF requirement that exhibitors only are allowed in the beef show ring staging areas.
+
+---
+
+### CC 3.3 — Market Swine
+
+**CC 3.3.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Swine.
+
+**CC 3.3.2 Maximum Weight**
+
+The maximum weight for market swine is listed in Addendum §8. A market hog over the maximum weight is not eligible for competition in the market swine show. A market hog over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+
+**CC 3.3.3 Class Size**
+
+Classes in the market swine show are divided by weight under CC 3.1.5. No class shall contain more than eight hogs. Where dividing by weight would place more than eight hogs in a class, that class is broken into additional classes so that no class contains more than eight hogs.
+
+**CC 3.3.4 Classes Offered**
+
+The class offered in the market swine division is Market Swine. Breeding Swine is not a market class. See CC 6.
+
+**CC 3.3.5 Pen Assignment**
+
+An exhibitor may keep up to two of the exhibitor's own hogs in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's hogs. Pen space in the market swine show is assigned under CC 3.1.11. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.11 is the number of pens required to hold the exhibitor's hogs at up to two hogs per pen.
+
+**CC 3.3.6 Show Ring Access**
+
+Custer County acknowledges and adopts the CSF requirement that exhibitors only are allowed in the hog holding and staging pens.
 
 ---
 
