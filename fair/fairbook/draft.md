@@ -66,23 +66,21 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.2 Bona Fide Member.** A bona fide member is a youth currently enrolled in and meeting the requirements of their 4-H or FFA program, as confirmed by the CSU Extension agent or FFA advisor.
 
-**CC 1.3 Cloverbud Member.** A Cloverbud member is a 4-H member who has not reached eight years of age as of December 31 of the current enrollment year.
+**CC 1.3 Exhibition Bar.** An exhibition bar is the restriction that prohibits an animal from competing in any further show or class after it has been sold by the exhibitor outside the Livestock Sale.
 
-**CC 1.4 Exhibition Bar.** An exhibition bar is the restriction that prohibits an animal from competing in any further show or class after it has been sold by the exhibitor outside the Livestock Sale.
+**CC 1.4 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the county weigh-in and does not meet the minimum weight requirement for its species and class.
 
-**CC 1.5 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the county weigh-in and does not meet the minimum weight requirement for its species and class.
+**CC 1.5 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
 
-**CC 1.6 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
+**CC 1.6 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §6.
 
-**CC 1.7 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §6.
+**CC 1.7 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
 
-**CC 1.8 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
-
-**CC 1.9 The Authority**
+**CC 1.8 The Authority**
 
 Custer County acknowledges and adopts the GCR's use of "the Authority" as the body that administers the fair and enforces its rules. The CSF is a single statutory body. Custer County is not, so the term is defined here by role.
 
-**CC 1.9.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
+**CC 1.8.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
 
 (a) The Fair Board, in all matters, and as the final interpreter of these rules.
 
@@ -94,7 +92,7 @@ Custer County acknowledges and adopts the GCR's use of "the Authority" as the bo
 
 (e) The CSU Extension agent and the FFA advisor, in membership, eligibility, enrollment records, and conduct.
 
-**CC 1.9.2** Where these rules say the Authority decides, the decision belongs to whichever person in CC 1.9.1 is competent to make it. The veterinarian does not rule on showmanship. The judge does not rule on a health certificate.
+**CC 1.8.2** Where these rules say the Authority decides, the decision belongs to whichever person in CC 1.8.1 is competent to make it. The veterinarian does not rule on showmanship. The judge does not rule on a health certificate.
 
 ---
 
@@ -210,7 +208,7 @@ All official communications from the Custer County Fair Board are delivered thro
 
 **CC 2.10 Cloverbud Members**
 
-A Cloverbud member is not judged competitively and does not receive a competitive placing in any class. A Cloverbud member receives a participation ribbon in recognition of participation, and experience sharing is encouraged. A Cloverbud member may exhibit at the Custer County Fair. A Cloverbud member may not exhibit at the CSF.
+A Cloverbud member is a 4-H member who has not reached eight years of age as of December 31 of the current enrollment year. A Cloverbud member is not judged competitively and does not receive a competitive placing in any class. A Cloverbud member receives a participation ribbon in recognition of participation, and experience sharing is encouraged. A Cloverbud member may exhibit at the Custer County Fair. A Cloverbud member may not exhibit at the CSF.
 
 **CC 2.11 Fairgrounds Cleanup**
 
@@ -222,7 +220,7 @@ All exhibitors are required to attend fairgrounds cleanup. Cleanup dates are lis
 
 **CC 2.12 Animal Health**
 
-Each market livestock animal is subject to examination by the licensed veterinarian upon arrival at the fairgrounds, before unloading. The veterinarian may refuse entry to any animal that does not meet health standards. An animal refused entry may not be unloaded or exhibited. The veterinarian may perform age verification checks as required by the eligibility standards in the applicable department chapter. Each market livestock animal may be examined again prior to the sale to determine slaughter readiness. The veterinarian may refuse or excuse any animal per CC 1.9.1(d).
+Each market livestock animal is subject to examination by the licensed veterinarian upon arrival at the fairgrounds, before unloading. The veterinarian may refuse entry to any animal that does not meet health standards. An animal refused entry may not be unloaded or exhibited. The veterinarian may perform age verification checks as required by the eligibility standards in the applicable department chapter. Each market livestock animal may be examined again prior to the sale to determine slaughter readiness. The veterinarian may refuse or excuse any animal per CC 1.8.1(d).
 
 **CC 2.13 Care and Custody**
 
@@ -336,7 +334,7 @@ Custer County acknowledges and adopts the CSF requirement that no animal be fed 
 
 **CC 3.1.8 Feeder Animals**
 
-Every animal weighed in at the county weigh-in shall show in its appropriate class, including an animal that does not meet the minimum weight requirement for its species. CC 1.5 defines a feeder animal. Where a species is exhibited as a pen, the subchapter governing that species states how an underweight pen is handled.
+Every animal weighed in at the county weigh-in shall show in its appropriate class, including an animal that does not meet the minimum weight requirement for its species. CC 1.4 defines a feeder animal. Where a species is exhibited as a pen, the subchapter governing that species states how an underweight pen is handled.
 
 The exhibitor of a feeder animal may have that animal released to return home following the feeder class. The Authority shall determine whether to grant the release, with the superintendent of the department as lead.
 
@@ -377,6 +375,92 @@ Requirements governing market exhibitors that are stated elsewhere in this book 
 ---
 
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
+
+---
+
+## General Rules
+
+### Custer County Fair Code of Conduct
+
+Custer County 4-H, FFA, and Open Fair Code of Conduct and Disciplinary Procedures
+
+Base text is Custer's own 4-H and FFA Code of Conduct, retained rather than replaced by a Colorado State Fair adoption. The Code is owned by CSU Extension, 4-H, and FFA, who collect the signatures. No CSF adoption sentence is printed on this paragraph. See FB-CONDUCT-01.
+
+Prior to participating, the Extension office must have the Code of Conduct signed by the participant, parent/guardian, and volunteers. For applicable participants, MQA certifications and animal care/housing forms are needed as well.
+
+By participating in the Custer County Fair as a participant, volunteer, or spectator you agree to the Code of Conduct.
+
+**A. Purpose and application**
+
+The 4-H and FFA Code of Conduct is intended to foster a safe environment that is conducive to optimal learning and growth. 4-H/FFA members, fair participants, leaders, parents, volunteers, and spectators are expected to behave in a way that respects the rights and property of others and that will not disrupt or interfere with the 4-H or FFA program goals.
+
+This 4-H and FFA Code of Conduct and Disciplinary Procedure is a condition of participation in the Custer County Fair.
+
+**B. Behaviors prohibited at the County Fair that warrant removal from fairgrounds:**
+
+- Possession, selling, and/or use of marijuana, alcoholic beverages, tobacco products to include vapes/e-cigarettes, and/or illegal drugs, or being present where individuals are using alcohol, tobacco products, and/or any illegal substances.
+- Abuse (physical and/or verbal) and harassment.
+- Any kind of excessive public display of affection.
+- Possession of weapons or firearms (except while participating in a shooting sports event).
+- Behavior that violates state or local laws.
+- Damage to, theft of, or misuse or abuse of public or personal property.
+- Conduct that jeopardizes the safety of self or others.
+- Conduct that disrupts or interferes with the 4-H or FFA programming.
+- Tampering with ribbons or state fair qualifier stickers by anyone except official fair staff.
+
+**C. Behaviors that will be subject to Disciplinary Procedures:**
+
+- Contact by parents, exhibitors, leaders, spectators, or volunteers with county fair judges prior to or after the Custer County Fair, for any reason other than learning opportunities, is prohibited. Judges' decisions are final.
+- Participants in the Custer County Fair will be held to the 4-H and FFA Codes of Conduct, and the overall spirit within which they were established. Any 4-H or FFA member that has been reported to law enforcement because of a violation on the Custer County Fairgrounds or Rodeo grounds during fair week will be subject to disciplinary actions including but not limited to: disqualification from show, and/or sale, and/or loss of sale premiums, or other consequences as deemed appropriate by the Custer County Fair Board and the member's project superintendent. Anyone banned from the Rodeo grounds will also be banned from the Fairgrounds and will forfeit all rights to participate in any show or sale.
+- Inappropriate dress. Clothing should meet the standards expected in Custer County public schools. The following Colorado State 4-H dress code has been developed to provide participants and spectators with the best experience and will be enforced for all individuals attending 4-H events and activities, including chaperones. If you choose to dress inappropriately, you will be required to change.
+  - All clothing shall be neat, clean, acceptable in repair and appearance, and shall be worn within the bounds of decency and good taste as appropriate for 4-H events and activities.
+  - Articles of clothing which display profanity, products, or slogans which promote tobacco, alcohol, drugs, or sex, or are in any other way distracting, are prohibited.
+  - Excessively baggy or tight clothing which advertises gang symbols or affiliation is prohibited.
+  - Items of clothing which expose bare midriffs, bare chests, undergarments, or that are transparent (see-through) are prohibited.
+  - Tank tops with straps wider than one inch are permitted. Shirts which expose a bare back, halter tops, and tube tops are prohibited.
+  - Shorts must be mid-thigh length; cut-off shorts or short-shorts are not allowed.
+  - Hats need to be removed for meetings, workshops, meals, and at other times when asked to remove them.
+  - Shoes must be worn at all times.
+
+**D.** Fair Board, 4-H leaders, FFA advisor and advisory board members, superintendents, county or CSU Extension personnel may impose discipline as set out below in cases of misconduct by current, former, or prospective 4-H participants if, in the judgement of the personnel, the misconduct poses a potential risk to the 4-H or FFA program or is in violation of the 4-H and FFA Codes of Conduct. This includes risks to the safety or well-being of others and risks to the effective functioning or integrity of 4-H and FFA.
+
+**E. Disciplinary Procedures**
+
+Discipline may be imposed by any 4-H, FFA, Fair Board, or CSU Extension staff who has oversight responsibility at the Custer County Fair.
+
+Unless otherwise outlined in this fair book, or in cases where immediate action is required, the following procedures must take place before there is a finding or conclusion of guilt:
+
+1. The accused participant shall be told which of the prohibited behaviors he or she is accused of violating, and
+2. The factual evidence will be shared with the accused participant,
+3. The accused participant will be given a chance to tell his/her side of the story.
+
+The 4-H, FFA, Fair Board, or CSU Extension staff must be satisfied that the participant, more likely than not, engaged in the prohibited behavior before imposing a sanction. Sanctions may include some or all of the following:
+
+- Verbal warning
+- Notification to parents
+- Immediate removal from the fair
+- Premium penalties or withholdings
+- Being placed on a behavior contract
+- Referral to local law enforcement
+- Program suspension and/or
+- Expulsion from the fair
+- Other sanctions appropriate to the circumstances, as determined by the Fair Board, 4-H staff, FFA personnel
+
+**Protest and Appeals**
+
+A "protest" may be used by anyone to review rules, policies, and judging procedures. All protests shall be considered by the superintendent or the entity responsible (i.e., the Fair Board), as appropriate.
+
+The protest must be in writing, on a protest form obtained from the Fair Board office and accompanied by a fee of $50 in cash or certified check. The protest shall plainly state the cause of the protest and shall be delivered to the fair office no later than 24 hours after the occurrence of the alleged incident. Judging will not be interrupted by a protest.
+
+In the event the protestor is not satisfied by the protest resolution, the protestor may appeal the protest resolution to the Fair Board executive panel.
+
+The appeal must be in writing, on an Appeal Form obtained from the fair office and accompanied by a fee of $100 in cash or certified check. The appeal shall plainly state the matter being appealed and shall be delivered to the fair office no later than 8 hours after the protest resolution was announced. The decision of the Fair Board executive panel is final.
+
+Compliance with this protest and appeal process is mandatory prior to seeking review in any other forum. The fee(s) imposed above shall be refunded if the matter is resolved in favor of the person bringing the protest or appeal.
+
+**F. Immediate action situations**
+
+4-H, FFA, or extension staff may take immediate action to remove a participant from the fairgrounds and other action as needed, where there is an emergency or significant risk of continuing misconduct. In those cases, the immediate action is temporary discipline and 4-H, FFA, or extension staff must arrange for the procedures set out under Disciplinary Procedures above as soon as possible but in no event longer than seven days from the temporary discipline.
 
 ---
 
