@@ -17,15 +17,16 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Known gaps in finished chapters
 
-- **CC 3.1 has no general class-division rule.** The county's market general rules provide that classes are divided at the discretion of the superintendents, and this is one of the nine FB-SUPER-01 rules the charter tracks. It was racked to CC 3.1 during the placement pass and never drafted. CC 3.2.4 covers beef class division through the adopted CSF text, so Market Beef is not affected, but the shared layer is missing the rule the other five subchapters would inherit. Draft it before CC 3.3.
 - **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Same missing-class defect as market poultry and rabbit. Superintendent pass.
 
 ## Routed to a species subchapter, do not lose
 
 - **Swine 290-pound sale-weight cap.** The county general rule prints that a hog over the maximum sells at 290 pounds regardless of actual weight, and that an over-maximum hog may sell but may not compete. Species-specific, so it fails the CC 3.1 test and lands in Swine.
-- **PEDV as the swine instance of the disease contingency.** CC 3.1.13 carries the general power tied to the Colorado State Veterinarian's Office. The county's PEDV clause prints in Swine as the species application, with the year stripped.
+- **Swine class division by breed.** CSF divides market hogs into as near equal classes as feasible by breed and weight. CC 3.1.5 sets weight as the general criterion and permits a subchapter to add its own, which is the slot breed goes in.
+- **PEDV as the swine instance of the disease contingency.** CC 3.1.14 carries the general power tied to the Colorado State Veterinarian's Office. The county's PEDV clause prints in Swine as the species application, with the year stripped.
 - **Poultry and rabbit weigh-in unit and class mechanics.** CC 3.1.4 leaves the unit to each subchapter. Turkey weight ceiling, chicken pen composition, and rabbit meat-pen mechanics all land at the department pass with a superintendent in the room.
-- **Sheep drenching carve-out, and the sheep and goat muzzle rule.** CSF permits drenching market lambs for hydration only, with no stomach-pumping device, and requires that any muzzle allow the animal to drink. Species facts under the CC 3.1.12 shell.
+- **Sheep drenching carve-out, and the sheep and goat muzzle rule.** CSF permits drenching market lambs for hydration only, with no stomach-pumping device, and requires that any muzzle allow the animal to drink. Species facts under the CC 3.1.13 shell.
+- **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.6 adopts the beef version; the goat and sheep versions belong to their own subchapters.
 
 ## Needs a source pull before it can be drafted
 
