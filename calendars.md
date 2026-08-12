@@ -619,9 +619,9 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="St Peregrine Clinic, 6031 E Woodman Rd Ste 100, Colorado Springs, CO 80923" :: notes="rescheduled back from 2026-08-24. Phone 719-635-7321. Must pre-register/confirm online before arrival."
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
-[CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical
+[CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical :: cancel=confirmed
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
-[CAL] 2026-08-11 13:20 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-08-11 13:20 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-11 17:30 [D] WGU Cohort - IPV6 Introduction D325 :: meetings :: end=18:30
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed :: notes="entered wrong, rescheduled to 2026-08-26 1300"
 [CAL] 2026-08-12 15:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=17:00 :: cancel=confirmed :: notes="rescheduled to 2026-08-13 1000"
@@ -636,11 +636,11 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-17 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
-[CAL] 2026-08-20 13:45 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
-[CAL] 2026-08-20 15:00 [Leo] Labs :: appointments :: stripe=appt :: location="Parkview Medical Center, Pueblo, CO"
+[CAL] 2026-08-20 13:45 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-08-20 15:00 [D][K][L] Labs :: appointments :: stripe=appt :: location="Parkview Medical Center, Pueblo, CO"
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
-[CAL] 2026-08-25 15:00 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-08-25 15:00 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-26 13:00 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=14:00 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="Provider: Beth Pack PA-C, Orthopedics. Check-in 12:45."
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
@@ -869,12 +869,14 @@ Last batch: 2026-08-12.
 [CAL] 2026-04-19 ALL-DAY Molly birthday :: birthdays
 [CAL] 2026-05-27 ALL-DAY Kalea birthday :: birthdays
 [CAL] 2026-06-28 ALL-DAY Rileigh birthday :: birthdays
+[CAL] 2026-08-08 ALL-DAY Leo birthday :: birthdays
 [CAL] 2026-09-04 ALL-DAY Cullen + Emmitt birthday :: birthdays
 [CAL] 2026-12-07 ALL-DAY Matt birthday :: birthdays
 [CAL] 2027-01-22 ALL-DAY Wyatt birthday :: birthdays
 [CAL] 2027-04-19 ALL-DAY Molly birthday :: birthdays
 [CAL] 2027-05-27 ALL-DAY Kalea birthday :: birthdays
 [CAL] 2027-06-28 ALL-DAY Rileigh birthday :: birthdays
+[CAL] 2027-08-08 ALL-DAY Leo birthday :: birthdays
 [CAL] 2027-09-04 ALL-DAY Cullen + Emmitt birthday :: birthdays
 [CAL] 2027-12-07 ALL-DAY Matt birthday :: birthdays
 

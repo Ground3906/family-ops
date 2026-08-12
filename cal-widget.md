@@ -265,6 +265,18 @@ Ships PQ-CHORE. Applies only to `renderDinnerCell`/`renderDinnerGrid` (the What'
 
 ---
 
+## Pill Colors (locked)
+
+```
+D=#9a5828  K=#1a50e0  W=#cc2233  M=#9944cc  R=#f040b8
+C=#2070b8  E=#156e2a  L=#faa030  OMA=#7755cc  PAPA=#6ec898
+GUEST=#E8DFC0  FAM=#7a7aaa  KIDS=#a0c840
+```
+
+Leo born 2026-08-08. `L_ACTIVE=true` — gate flipped 2026-08-10. B6 placeholder retired; L is Leo's permanent pill code.
+
+---
+
 ## calendars.md Schema
 
 ### Entry formats
