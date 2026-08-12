@@ -30,7 +30,7 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 CC 1 and CC 2 shipped 8/12/2026. Remaining, in this order:
 
-1. **CC 3.1** — the market shared layer, its own focused pass. Seven species subchapters lean on it, so getting it right is the single largest force multiplier in the remaining scope.
+1. **CC 3.1** — the market shared layer, shipped 8/12/2026. Six species subchapters lean on it.
 2. **CC 3 species subchapters** — Beef, Swine, Sheep, Goat, Poultry, Rabbit, against the finished 3.1.
 3. **CC 4** — the Livestock Sale. Substantially built from prior work.
 4. **CC 5 and CC 8** — Horse and Shooting Sports. Standalone, no racking problem, fast.
@@ -181,7 +181,7 @@ Where the fit is strained, the county rule is drafted inside the shell anyway an
 
 ## The examples pattern
 
-State the adopted rule, then print the county's current specifics beneath it as examples. The examples illustrate the rule; they never limit it. This solves the flavor problem structurally: the veterans' own language survives verbatim as illustration while the rule above it is the standard. Nothing gets thrown out and nothing drifts.
+State the adopted rule, then print the county's current specifics beneath it as examples. The examples illustrate the rule; they never limit it. This solves the flavor problem structurally: the veterans' own language survives as illustration while the rule above it is the standard. Nothing gets thrown out and nothing drifts.
 
 ## Citation
 
@@ -212,11 +212,17 @@ Official-sounding and loophole-resistant pull in the opposite direction from com
 - **Book promises print minimal.** Where the book commits the fair to something, promise the least that solves the problem. Operational specificity stays in practice and committee documents.
 - Em dashes are permitted here and in the book. These are documents of record, not Matt's authored voice.
 
-## Two registers
+## One register
 
-Adopted text stays in its source's voice, formal, because it should sound like the source it came from. Custer exceptions are written plain, because they are the county talking directly to a family about what the rule means for them. A reader can tell at a glance which is which.
+**Locked 8/12/2026, superseding the prior two-register rule.** The book carries a single formal register throughout. Adopted text and Custer exceptions read in the same voice, in CSF's verbose cadence. County language is reworded on adoption rather than carried in its original plain phrasing.
 
-Audience is eight through eighteen, with enough weight that the rules sound official, because it is the parents who hunt loopholes.
+The seam between an adopted rule and a Custer exception is marked by the adoption lead-in sentence and by the phrase introducing the county's reading, never by a shift in register.
+
+Matt's framing: the book is being transformed from a small-county document into an official one that reads consistently from front to back.
+
+Audience is eight through eighteen, with enough weight that the rules sound official, because it is the parents who hunt loopholes. Where formality and comprehension conflict, the sentence gets shorter, not plainer in register.
+
+CC 1 and CC 2 were drafted under the prior rule and converted 8/12/2026.
 
 ---
 
@@ -278,7 +284,29 @@ Permanent exclusion is within the standard, and it arrives with three-way concur
 
 ## The two three-strike ladders
 
-The county book carried two three-strike ladders thirty lines apart with different triggers and different consequences: the coaching ladder and the own-work ladder. They could not both survive consolidation. Custer's ladder is kept; IAFE's forfeiture of premiums, awards, and auction proceeds is added on top, because sale money is the only consequence a repeat family actually feels.
+The county book carried two three-strike ladders thirty lines apart with different triggers and different consequences: the coaching ladder and the own-work ladder. They could not both survive consolidation. Resolved 8/12/2026: the ladder generalizes and moves to CC 2.7(a) as the escalation any rule violation runs through unless that rule states its own consequence. CC 2.6 and CC 2.13 cite it rather than printing their own. IAFE's forfeiture of premiums, awards, and auction proceeds rides on top where the violation also breaches the Code of Show Ring Ethics, because sale money is the only consequence a repeat family actually feels.
+
+## CSF runs a declared weight, Custer runs a weigh-in
+
+Found 8/12/2026. CSF prints, in every market species, that there will be no official weigh-in. Scales are available for exhibitor use, the exhibitor declares a show weight on a weight card, and integrity is enforced afterward by a deviation tolerance: the animal may not vary more than 5 percent from the declared weight when checked on the official scale. Poultry and rabbit run the same way, with band numbers locked to the card at nomination.
+
+Custer runs the opposite machine, a physical weigh-in on a certified scale, and that is the locked direction. The consequence is that Custer imports none of CSF's declaration or deviation-audit machinery, and any CSF weight ceiling adopted into this book is enforced at the scale instead. This also means the post-placement re-weigh finding below reaches the poultry ceiling, not just beef.
+
+## CSF bars market into breeding, Custer bars breeding into market
+
+These are opposite directions, not the same rule stated once. CSF's Junior Livestock Market Competition eligibility list provides that market animals are not eligible for entry in any breeding show, with a printed exception for heifers, which may enter the Junior Breeding Heifer Show. The county book carries only the reverse, that animals shown in breeding classes may not be shown in market classes. Both directions print, with the heifer exception carried and the department name swapped.
+
+Custer's Breeding Beef department exists but carries no defined classes, only a line vesting regulations and classes in the superintendent or Fair Board. Matt's note: the non-market departments are thin because nobody enrolls in them, not because the fair is closed to them.
+
+## The county market section has four departments and promises five
+
+The market section heading reads "MARKET ELIGIBLE LIVESTOCK AND POULTRY RULES AND REGULATIONS" while the section contains only Market Swine, Market Beef, Market Sheep, and Market Goat. No market poultry department and no market rabbit department exist anywhere in the source. Poultry and Rabbit in CC 3 are therefore new construction against locked direction, not consolidation of existing text.
+
+Three defects in the source itself, recorded so they are not mistaken for extraction errors: Market Swine's project exhibit rules open with three numbered stubs carrying no text, and two general rules are truncated mid-sentence.
+
+## The Wholesome Meat Act does not reach two market species
+
+The Act amends the Federal Meat Inspection Act, which covers cattle, sheep, swine, and goats. Poultry falls under the Poultry Products Inspection Act. Rabbit is a non-amenable species under voluntary fee-for-service inspection. CSF runs Market Chicken, Market Turkey, and Market Rabbit divisions and still names only the Wholesome Meat Act in its sale warranty, so adopting CSF verbatim imports the same gap. Resolved 8/12/2026: both acts print, plus a county-original catch-all warranting any market species not covered by a named act to the same standard, with rabbit named as the current instance. Not legal advice; confirm with the processor or Extension before the book prints.
 
 ## The 2026 pattern behind the terminal sale
 
@@ -291,6 +319,8 @@ Stated opponent-proof: behavior pattern and buyer-relations stake, no blame on a
 ## Veteran knowledge captured
 
 **Beef post-sale rest custom.** Never previously written down anywhere: sale steers were commonly taken home for about a week to calm down and restore muscle glycogen before processing, since a stressed slaughter animal risks dark-cutting and docked meat. The terminal custody chain cannot accommodate an at-home rest week, so the purpose — meat quality — is preserved differently: a purchaser-requested rest period arranged inside the designated-facility chain, holding cost withheld from proceeds like any other delivery cost.
+
+**Why a substitute shower is allowed.** The county rule permitting an animal to be shown by its owner or another qualified member exists for the exhibitor who has two animals of the same species drawn into the same class. The book has never stated the reason. Recorded 8/12/2026 so the answer exists when someone asks why the exception is there.
 
 **Sale-day information practice.** The auction runs live on an auction site, deliberately unnamed in the book to avoid lock-in — the veterans' existing instinct is the volatility doctrine already in practice. Sale lots and order are distributed physically ringside. Misprints are hand-scratched on the podium sale sheet and announced during the sale; the podium sheet as annotated is the single source of information.
 
@@ -310,13 +340,29 @@ All nine rewrite to vest in **the Authority with the superintendent named as lea
 
 **Rule seven is the live flashpoint:** barn space assignment. Swine stall assignment is a recurring political issue, not a one-time one.
 
+## Pen allocation changed principle
+
+Locked 8/12/2026 at CC 3.1.10. The county rule gave space priority in the barns to Senior members, full stop. CSF allocates by animal, one pen per head delivered, with no ranking of exhibitors at all. Custer is running out of space, so neither model survives alone: every exhibitor is guaranteed one pen per species entered, seniority sets the order of assignment, and the superintendent runs both the guaranteed pass and the distribution of whatever space is left.
+
+This is a real change in principle from a pure seniority queue to a floor plus a seniority-ordered remainder, and it lands on the most drama-prone rule in the book. CSF's tampering language is adopted alongside it, which gives the assignment a printed consequence it never had.
+
 ## The coaching rule
 
 Matt is the only board member who questions it and expected to lose a straight repeal vote. The examples structure means **no repeal is needed**: the veterans' language survives in the book, printed as an illustration of an adopted standard rather than as county invention. The alignment argument stays intact.
 
+## Local practices that did not survive
+
+Named here so the veterans hear them from the board rather than discovering them missing.
+
+**First and last call.** The county gave two verbal calls before a show and forfeited the exhibitor's right to show at the second. CSF has no calls at all; the exhibitor is responsible for being at ringside one class ahead, and the gate is held only where the gate steward was told of a conflict. CSF's model was adopted whole at CC 2.18 and the calls end.
+
+**The beef no-waterers line.** Market Beef prohibited leaving feed pans or waterers in pens and stalls, in direct contradiction of Market Swine and of CSF. CSF governs every species now and the beef line dies.
+
+**The swine self-waterer allowance.** Market Swine permitted a self-waterer built from PVC pipe and a pig nipple. Compatible with CSF but more specific than it, and dropped rather than raised, on the judgment that CSF's rule is enough.
+
 ## Answerable for the people you bring
 
-CC 2.7(b) records a warning against both the person who earned it and the exhibitor they were acting for. This is CSF's principle, not Custer's, and it will land hard the first time a twelve-year-old loses premiums because her uncle pounded on a rail.
+CC 2.7(c) records a warning against both the person who earned it and the exhibitor they were acting for. This is CSF's principle, not Custer's, and it will land hard the first time a twelve-year-old loses premiums because her uncle pounded on a rail.
 
 It is also what closes the gaming vector: route coaching through an uncle and the uncle carries a record that follows him to every family he helps, while the exhibitor's record moves anyway. No clean hand to hide behind.
 
@@ -359,10 +405,12 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 - **One decision per message.** Findings, verification results, and status may batch. Decisions never do. This holds under every framing, including efficiency.
 - **Map the decision surface before opening an item**, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces.
 - **Check the existing lock before building an options menu.** A prior lock, a charter line, or an established default may already answer it. Presenting settled doctrine as an open choice wastes a turn and invites re-litigating something decided.
+- **Pull the source before presenting a delta.** CSF first, county second, question only on the difference. Asserting what a source says from memory and being corrected costs more turns than the pull would have.
 - **Run the placement test before proposing, not after locking.**
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices and line numbers live only in repo records.
 - **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
+- **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
 
 ## Source re-extraction
