@@ -632,6 +632,7 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
+[CAL] 2026-08-17 10:30 [D] CT scan :: appointments :: stripe=appt :: end=11:30 :: location="1263 Lake Plaza Dr Suite 100, Colorado Springs, CO"
 [CAL] 2026-08-17 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
 [CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
