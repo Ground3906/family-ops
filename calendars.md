@@ -193,6 +193,28 @@ Last batch: 2026-08-11.
 
 ---
 
+### WYATT CROSS COUNTRY - Fall 2026 (HS only)
+<!-- Week 1 practice (Coach Maria Baldwin, Custer County XC/T&F) -->
+[CAL] 2026-08-10 08:00 [W] XC practice :: kids :: end=09:15
+[CAL] 2026-08-11 08:00 [W] XC practice :: kids :: end=09:15
+[CAL] 2026-08-12 17:00 [W] XC practice :: kids :: end=18:15 :: notes="optional - coaches have CPR training"
+[CAL] 2026-08-13 16:15 [W] XC practice :: kids :: end=17:30
+[CAL] 2026-08-14 08:00 [W] XC practice :: kids :: end=09:15
+<!-- HS Meet schedule - times are tentative per schedule header -->
+[CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
+[CAL] 2026-08-28 13:55 [W] XC meet - Husky Invite :: kids :: location="Platte Canyon XC Course, Bailey, CO" :: notes="HS Boys 1:55 PM. Leave 9:00 AM."
+[CAL] 2026-09-05 10:00 [W] XC meet - Fountain Fort Carson :: kids :: location="Fountain-Fort Carson High School, 900 Jimmy Camp Road, Fountain, CO 80817" :: notes="HS Boys 10:00 AM. Leave 7:00 AM."
+[CAL] 2026-09-12 10:15 [W] XC meet - Joe I. Vigil Open :: kids :: location="Cattails Golf Course, Alamosa, CO" :: notes="HS Boys 10:15 AM. Leave 6:00 AM."
+[CAL] 2026-09-19 09:00 [W] XC meet - Coronado Cougar Classic :: kids :: location="Monument Valley Park XC Course, Colorado Springs, CO" :: notes="HS Boys 9:00 AM. Leave 6:00 AM."
+[CAL] 2026-09-24 16:00 [W] XC meet - Canon City MS/HS XC Invite :: kids :: location="Royal Gorge Bridge and Park, Canon City, CO" :: notes="HS Boys 4:00 PM. Leave 1:00 PM. Park approx 8 miles west of town off Hwy 50."
+[CAL] 2026-10-03 19:05 [W] XC meet - Salida Homecoming Desert Twilight :: kids :: location="Salida Golf Course, Salida, CO" :: notes="HS Boys 7:05 PM. Optional for HS. Leave 3:30 PM." :: tentative=true
+[CAL] 2026-10-10 11:30 [W] XC meet - West Central League :: kids :: location="Colorado Mountain College, Leadville, CO" :: notes="HS Boys 11:30 AM. Leave 7:00 AM."
+[CAL] 2026-10-16 11:00 [W] XC meet - Eric Wolff Invitational :: kids :: location="Monte Vista High School Track, Monte Vista, CO" :: notes="HS Boys 11:00 AM. Leave 5:30 AM."
+[CAL] 2026-10-23 00:00 [W] XC meet - Regionals :: kids :: location="Springfield High School, Springfield, CO" :: notes="HS time TBD. Leave TBD." :: flag=true
+[CAL] 2026-10-31 00:00 [W] XC meet - HS State Qualifier :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS time TBD." :: flag=true
+
+---
+
 ### KNIGHTS OF COLUMBUS - 2026-27 (2nd Tuesday monthly)
 [CAL] 2026-06-09 18:00 [D] Knights of Columbus :: meetings :: end=20:00
 [CAL] 2026-07-14 18:00 [D] Knights of Columbus :: meetings :: end=20:00
@@ -615,10 +637,12 @@ Last batch: 2026-08-11.
 [CAL] 2026-08-20 13:45 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-20 15:00 [Leo] Labs :: appointments :: stripe=appt :: location="Parkview Medical Center, Pueblo, CO"
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
+[CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
 [CAL] 2026-08-25 15:00 [Leo] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-28 13:55 [W] XC meet - Husky Invite :: kids :: location="Platte Canyon XC Course, Bailey, CO" :: notes="HS Boys 1:55 PM. Leave 9:00 AM."
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
@@ -632,22 +656,31 @@ Last batch: 2026-08-11.
 
 ### SEPTEMBER 2026
 
+[CAL] 2026-09-05 10:00 [W] XC meet - Fountain Fort Carson :: kids :: location="Fountain-Fort Carson High School, 900 Jimmy Camp Road, Fountain, CO 80817" :: notes="HS Boys 10:00 AM. Leave 7:00 AM."
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
+[CAL] 2026-09-12 10:15 [W] XC meet - Joe I. Vigil Open :: kids :: location="Cattails Golf Course, Alamosa, CO" :: notes="HS Boys 10:15 AM. Leave 6:00 AM."
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-09-19 09:00 [W] XC meet - Coronado Cougar Classic :: kids :: location="Monument Valley Park XC Course, Colorado Springs, CO" :: notes="HS Boys 9:00 AM. Leave 6:00 AM."
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-09-24 16:00 [W] XC meet - Canon City MS/HS XC Invite :: kids :: location="Royal Gorge Bridge and Park, Canon City, CO" :: notes="HS Boys 4:00 PM. Leave 1:00 PM. Park approx 8 miles west of town off Hwy 50."
 
 ---
 
 ### OCTOBER 2026
 
 [CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
+[CAL] 2026-10-03 19:05 [W] XC meet - Salida Homecoming Desert Twilight :: kids :: location="Salida Golf Course, Salida, CO" :: notes="HS Boys 7:05 PM. Optional for HS. Leave 3:30 PM." :: tentative=true
+[CAL] 2026-10-10 11:30 [W] XC meet - West Central League :: kids :: location="Colorado Mountain College, Leadville, CO" :: notes="HS Boys 11:30 AM. Leave 7:00 AM."
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
+[CAL] 2026-10-16 11:00 [W] XC meet - Eric Wolff Invitational :: kids :: location="Monte Vista High School Track, Monte Vista, CO" :: notes="HS Boys 11:00 AM. Leave 5:30 AM."
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
-[CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-10-23 00:00 [W] XC meet - Regionals :: kids :: location="Springfield High School, Springfield, CO" :: notes="HS time TBD. Leave TBD." :: flag=true
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
+[CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-10-31 00:00 [W] XC meet - HS State Qualifier :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS time TBD." :: flag=true
 
 ---
 
@@ -852,7 +885,7 @@ Last batch: 2026-08-11.
 [CAL] 2026-05-10 ALL-DAY Mother's Day :: holidays
 [CAL] 2026-05-25 ALL-DAY Memorial Day :: holidays
 [CAL] 2026-06-21 ALL-DAY Father's Day :: holidays
-[CAL] 2026-07-04 ALL-DAY Independence Day :: holidays
+[CAL] 2026-07-04 ALL-DAY Independence Date :: holidays
 [CAL] 2026-09-07 ALL-DAY Labor Day :: holidays
 [CAL] 2026-10-12 ALL-DAY Columbus Day :: holidays
 [CAL] 2026-11-11 ALL-DAY Veterans Day :: holidays
