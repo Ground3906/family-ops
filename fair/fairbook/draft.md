@@ -34,7 +34,7 @@ The book is organized into chapters. Each chapter is numbered with the prefix CC
 
 The Addendum is a companion document published separately each year. It contains the fair schedule, roster, fees, weight windows, deadlines, and other information that may change annually. Where this book cites an Addendum section, that section of the current year's Addendum governs.
 
-This book follows the Colorado State Fair General Competition Requirements (GCR) and the International Association of Fairs and Expositions (IAFE) National Code of Show Ring Ethics as its baseline. The GCR is the rulebook that governs competition at the Colorado State Fair. The IAFE Code of Show Ring Ethics is the national standard for honest competition in livestock shows, written by the organization that represents fairs across the United States and Canada.
+This book follows the Colorado State Fair (CSF) General Competition Requirements (GCR) and the International Association of Fairs and Expositions (IAFE) National Code of Show Ring Ethics as its baseline. The GCR is the rulebook that governs competition at the CSF. The IAFE Code of Show Ring Ethics is the national standard for honest competition in livestock shows, written by the organization that represents fairs across the United States and Canada.
 
 Custer County follows these standards so that its exhibitors compete under the same rules they will meet at the state level. These standards exist to protect fair competition. They set out what honest showmanship looks like, how animals are cared for and presented, and what conduct is expected of exhibitors and the adults who support them.
 
@@ -104,7 +104,7 @@ Custer County acknowledges and adopts the GCR's use of "the Authority" as the bo
 
 **CC 2.1 Eligibility**
 
-An exhibit entered at the Custer County Fair may not be entered at any other county fair in Colorado during the same fair year. The Colorado State Fair is excepted.
+An exhibit entered at the Custer County Fair may not be entered at any other county fair in Colorado during the same fair year. The CSF is excepted.
 
 An exhibitor in the Open Division is not required to hold 4-H or FFA membership and is not required to reside in Custer County. See CC 10.
 
