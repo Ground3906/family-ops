@@ -4,7 +4,47 @@ This file is the book. It is written chapter by chapter, finished, as it will pr
 
 Every change from the current book is logged in `fair/fairbook/delta-log.md` and the dated delta files beside it. The delta log is the audit trail behind the book, not the place the book lives. Status flags ride in the log and never print here.
 
-**Chapter reorganization pending.** The text below carries forward from earlier passes in the legacy county order. It is re-homed into CC chapters as those chapters are written.
+---
+
+## CC 1 — Definitions
+
+Where a term is not defined in this chapter, it carries its common meaning.
+
+**CC 1.1 Associate Member.** An associate member is a 4-H youth enrolled in the associate membership category as defined by CSU Extension.
+
+**CC 1.2 Bona Fide Member.** A bona fide member is a youth currently enrolled in and meeting the requirements of their 4-H or FFA program, as confirmed by the CSU Extension agent or FFA advisor.
+
+**CC 1.3 Exhibition Bar.** An exhibition bar is the restriction that prohibits an animal from competing in any further show or class after it has been sold by the exhibitor outside the Livestock Sale.
+
+**CC 1.4 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the county weigh-in and does not meet the minimum weight requirement for its species and class.
+
+**CC 1.5 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
+
+**CC 1.6 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in the current Addendum.
+
+**CC 1.7 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
+
+**CC 1.8 The Authority**
+
+Custer County acknowledges and adopts the Colorado State Fair General Competition Requirements' use of "the Authority" as the body that administers the fair and enforces its rules. The Colorado State Fair is a single statutory body. Custer County is not, so the term is defined here by role.
+
+**CC 1.8.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
+
+(a) The Fair Board, in all matters, and as the final interpreter of these rules.
+
+(b) A superintendent, in their own department, as lead for classes, weights, show order, and running the show.
+
+(c) A judge, in the class being judged, while judging it.
+
+(d) The licensed veterinarian, in animal health, fitness, and slaughter readiness. The veterinarian may refuse or excuse any animal.
+
+(e) The CSU Extension agent and the FFA advisor, in membership, eligibility, enrollment records, and conduct.
+
+**CC 1.8.2** Where these rules say the Authority decides, the decision belongs to whichever person in CC 1.8.1 is competent to make it. The veterinarian does not rule on showmanship. The judge does not rule on a health certificate.
+
+---
+
+*The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
 
 ---
 
