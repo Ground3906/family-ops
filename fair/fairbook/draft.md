@@ -244,7 +244,7 @@ The Authority shall determine hardship cases arising under this section, with th
 
 Custer County acknowledges and adopts the CSF requirements governing water. A water container shall be visible and available in each penned or stalled area at all times so that animals may be watered on a regular basis. The Authority may consult the licensed veterinarian to determine whether water should be given to an animal.
 
-Restrictions on feeding and watering during weigh-in and in the show ring are stated at CC 3.1.7.
+Restrictions on feeding and watering during weigh-in and in the show ring are stated at CC 3.1.8.
 
 **CC 2.16 Barn Hours**
 
@@ -320,41 +320,47 @@ The unit of weight for each market species is stated in the subchapter governing
 
 Minimum and maximum weights for each species and class are listed in Addendum §8. Where a subchapter states a maximum weight above which an animal is ineligible for the market division, that maximum shall be enforced at the county weigh-in.
 
-**CC 3.1.5 Identification**
+**CC 3.1.5 Class Division**
+
+Classes in a market division shall be divided by weight, using the official weights recorded under CC 3.1.4. Classes shall be broken following the close of weigh-in. The Authority shall determine the number and the size of the classes in a division, with the superintendent of the department as lead.
+
+A subchapter may state an additional criterion for the division of classes within its own department.
+
+**CC 3.1.6 Identification**
 
 The tag or band number assigned to an animal at the county weigh-in shall remain with that animal throughout the entire fair. Where a species is exhibited as a pen, each animal in the pen shall carry its own individual identifier, and every such identifier shall be recorded at the county weigh-in.
 
-**CC 3.1.6 Re-Weigh**
+**CC 3.1.7 Re-Weigh**
 
 An animal that weighs under the minimum or over the maximum weight for its species may be re-weighed. An animal may be re-weighed no more than two additional times, and every re-weigh shall be completed prior to the close of weigh-in.
 
-**CC 3.1.7 Feeding and Watering at Weigh-In**
+**CC 3.1.8 Feeding and Watering at Weigh-In**
 
 Custer County acknowledges and adopts the CSF requirement that no animal be fed or watered in a show ring, in a holding pen, or while moving to or from a re-weigh station. Requirements governing the availability of water in pens and stalls are stated at CC 2.15.
 
-**CC 3.1.8 Feeder Animals**
+**CC 3.1.9 Feeder Animals**
 
 Every animal weighed in at the county weigh-in shall show in its appropriate class, including an animal that does not meet the minimum weight requirement for its species. CC 1.4 defines a feeder animal. Where a species is exhibited as a pen, the subchapter governing that species states how an underweight pen is handled.
 
 The exhibitor of a feeder animal may have that animal released to return home following the feeder class. The Authority shall determine whether to grant the release, with the superintendent of the department as lead.
 
-**CC 3.1.9 Market and Breeding Classes**
+**CC 3.1.10 Market and Breeding Classes**
 
 Custer County acknowledges and adopts the CSF requirement that market animals are not eligible for entry in any breeding show, with the exception of heifers, which may enter and show in the Breeding Beef department.
 
 Custer County further provides that an animal shown in a breeding class shall not be shown in a market class.
 
-**CC 3.1.10 Pen and Stall Assignment**
+**CC 3.1.11 Pen and Stall Assignment**
 
 Each exhibitor shall be assigned one pen or stall in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen or stall in each species entered, the superintendent shall assign any remaining space in the same order.
 
 Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
 
-**CC 3.1.11 Mandatory Exhibitor Meeting**
+**CC 3.1.12 Mandatory Exhibitor Meeting**
 
 A mandatory meeting of all market exhibitors shall be held following the close of weigh-in. The time and place of the meeting are stated in Addendum §7. An exhibitor who fails to attend proceeds under the escalation at CC 2.7(a).
 
-**CC 3.1.12 Unethical Fitting Practices and Testing**
+**CC 3.1.13 Unethical Fitting Practices and Testing**
 
 Custer County acknowledges and adopts the CSF requirements governing Unethically Fitted Livestock in full, and recognizes IAFE Code of Show Ring Ethics Item 5, which states the same prohibitions. An animal is unethically fitted where it has been subjected to any practice prohibited by those requirements, including the administration of a prohibited drug; the administration of any substance by injection to alter conformation or appearance; the cutting or tearing of the hide or of any underlying tissue; the administration of a diuretic or of a drug acting on the central nervous system; the use of ice packs or other refrigerants to alter the quality of the finish of an animal; the alteration of the color or structure of hair or wool except by trimming and blocking; and any unnatural means of providing an animal feed, water, or other fluids, including by stomach pump or intravenous administration, except by the drenching process.
 
@@ -362,13 +368,13 @@ Custer County reads these requirements to prohibit doctoring, doping, and inject
 
 All market animals may be subject to random testing for any illegal or banned substance.
 
-**CC 3.1.13 Disease Contingency**
+**CC 3.1.14 Disease Contingency**
 
 Health requirements for the Custer County Fair may change prior to the start of the fair in the event of a disease outbreak in Colorado or in a neighboring state. Exhibitors shall comply with any direction of the Colorado State Veterinarian's Office regarding the treatment, holding, or removal of an animal from the fairgrounds. An animal held under such direction shall not be released until released by a representative of the Colorado State Veterinarian's Office.
 
 Where the Colorado State Veterinarian's Office confirms an outbreak in Custer County of a disease affecting a market species, the Fair Board may declare the show of that species a terminal show.
 
-**CC 3.1.14 Rules Stated Elsewhere**
+**CC 3.1.15 Rules Stated Elsewhere**
 
 Requirements governing market exhibitors that are stated elsewhere in this book include animal health at CC 2.12; care and custody at CC 2.13; showing your own animal at CC 2.14; water at CC 2.15; barn hours at CC 2.16; unmanageable animals at CC 2.17; ringside promptness at CC 2.18; ribbons and placings at CC 2.19; show dress at CC 2.20; stall cleanup and checkout at CC 2.21; and the Livestock Sale at CC 4.
 
