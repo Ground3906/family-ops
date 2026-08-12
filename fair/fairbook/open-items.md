@@ -8,12 +8,17 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Blocking the October publish
 
-- **CC 3 species subchapters, and chapters CC 4 through CC 10** — unwritten. CC 3.1 is finished; the six market subchapters build against it.
+- **CC 3.3 through CC 3.7, and chapters CC 4 through CC 10** — unwritten. CC 3.1 and CC 3.2 are finished; the five remaining market subchapters build against CC 3.1.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
 - **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins. Now also carries a register pass: every chapter reads in the single formal register.
+
+## Known gaps in finished chapters
+
+- **CC 3.1 has no general class-division rule.** The county's market general rules provide that classes are divided at the discretion of the superintendents, and this is one of the nine FB-SUPER-01 rules the charter tracks. It was racked to CC 3.1 during the placement pass and never drafted. CC 3.2.4 covers beef class division through the adopted CSF text, so Market Beef is not affected, but the shared layer is missing the rule the other five subchapters would inherit. Draft it before CC 3.3.
+- **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Same missing-class defect as market poultry and rabbit. Superintendent pass.
 
 ## Routed to a species subchapter, do not lose
 
