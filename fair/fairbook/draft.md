@@ -6,7 +6,61 @@ Every change from the current book is logged in `fair/fairbook/delta-log.md` and
 
 ---
 
+# CUSTER COUNTY FAIR
+
+## Official Fair Book
+
+**Version 1.0**
+
+*[GRAPHIC]*
+
+*[MISSION STATEMENT]*
+
+---
+
+The Custer County Fair Board is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the Fair Board using the contact information listed in Addendum §1.
+
+---
+
+*[TABLE OF CONTENTS — generated at final assembly]*
+
+---
+
+## How to Use This Book
+
+This is the official rulebook for the Custer County Fair. It governs all exhibitors, participants, volunteers, and spectators at the fair, regardless of age, division, or species.
+
+The book is organized into chapters. Each chapter is numbered with the prefix CC. CC 1 defines the terms and abbreviations used throughout the book. CC 2 contains the rules that apply to everyone at the fair. Each chapter after that contains the rules for a specific project area.
+
+The Addendum is a companion document published separately each year. It contains the fair schedule, roster, fees, weight windows, deadlines, and other information that may change annually. Where this book cites an Addendum section, that section of the current year's Addendum governs.
+
+This book follows the Colorado State Fair General Competition Requirements (GCR) and the International Association of Fairs and Expositions (IAFE) National Code of Show Ring Ethics as its baseline. The GCR is the rulebook that governs competition at the Colorado State Fair. The IAFE Code of Show Ring Ethics is the national standard for honest competition in livestock shows, written by the organization that represents fairs across the United States and Canada.
+
+Custer County follows these standards so that its exhibitors compete under the same rules they will meet at the state level. These standards exist to protect fair competition. They set out what honest showmanship looks like, how animals are cared for and presented, and what conduct is expected of exhibitors and the adults who support them.
+
+---
+
 ## CC 1 — Definitions
+
+### Abbreviations
+
+The following abbreviations are used throughout this book.
+
+**4-H** — 4-H Youth Development Program, administered locally through CSU Extension.
+
+**CSF** — Colorado State Fair.
+
+**CSU Extension** — Colorado State University Extension, the county's administrator of the 4-H Youth Development Program.
+
+**FFA** — National FFA Organization, formerly known as Future Farmers of America.
+
+**GCR** — Colorado State Fair General Competition Requirements, the CSF's governing rulebook for all competitions.
+
+**IAFE** — International Association of Fairs and Expositions, the organization that publishes the National Code of Show Ring Ethics adopted by this book.
+
+**MQA** — Meat Quality Assurance, a national certification program for livestock producers covering drug use and animal care practices.
+
+### Definitions
 
 Where a term is not defined in this chapter, it carries its common meaning.
 
@@ -20,13 +74,13 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.5 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
 
-**CC 1.6 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in the current Addendum.
+**CC 1.6 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §6.
 
 **CC 1.7 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
 
 **CC 1.8 The Authority**
 
-Custer County acknowledges and adopts the Colorado State Fair General Competition Requirements' use of "the Authority" as the body that administers the fair and enforces its rules. The Colorado State Fair is a single statutory body. Custer County is not, so the term is defined here by role.
+Custer County acknowledges and adopts the GCR's use of "the Authority" as the body that administers the fair and enforces its rules. The CSF is a single statutory body. Custer County is not, so the term is defined here by role.
 
 **CC 1.8.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
 
@@ -56,7 +110,7 @@ An exhibitor in the Open Division is not required to hold 4-H or FFA membership 
 
 **CC 2.2 Entry and Registration**
 
-Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in the Addendum. Any applicable fees are listed in Addendum §3.
+Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §4. Any applicable fees are listed in Addendum §6.
 
 For market livestock, entry is completed by presenting the animal at the county weigh-in. An animal tagged at the county weigh-in is registered for the current fair year.
 
@@ -64,7 +118,7 @@ For indoor and Open Division projects, entry is completed by check-in at the des
 
 A completed entry, weigh-in, or check-in is the exhibitor's acceptance of all rules in this book and agreement to abide by them for the duration of their participation in the Custer County Fair.
 
-An exhibitor must complete every form required for their projects before participating. The current list of required forms is in the Addendum.
+An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §5.
 
 **CC 2.3 Code of Conduct**
 
@@ -102,11 +156,11 @@ All clothing shall be neat, clean, and acceptable in repair and appearance, and 
 
 **CC 2.5 Judges' Decisions**
 
-Custer County acknowledges and adopts the CSF General Competition Requirements, Grievances/Protests provisions. A grievance may address a violation of these rules, an eligibility question, or a procedural matter. A judge's placing is final. It is not the subject of a grievance, protest, or appeal. Disagreement with a judge's opinion of an animal or an exhibitor is not grounds for a grievance.
+Custer County acknowledges and adopts the GCR, Grievances/Protests provisions. A grievance may address a violation of these rules, an eligibility question, or a procedural matter. A judge's placing is final. It is not the subject of a grievance, protest, or appeal. Disagreement with a judge's opinion of an animal or an exhibitor is not grounds for a grievance.
 
 **CC 2.6 Interference with Competition**
 
-Custer County acknowledges and adopts the CSF General Competition Requirements, Prohibition of Interference with Competitions, and notes that IAFE Code of Show Ring Ethics Item 7 states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
+Custer County acknowledges and adopts the GCR, Prohibition of Interference with Competitions, and notes that IAFE Code of Show Ring Ethics Item 7 states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
 
 If any exhibitor, in any way, whether in person or by agent or representative, interferes with any judge during that judge's adjudication or behaves disrespectfully toward any judge or Authority staff, the Authority may immediately remove that exhibitor from the judging area, disqualify the exhibitor from further competition, remove the exhibitor from the fairgrounds, withhold any prizes awarded in any other event at the fair, and recommend suspension from future fairs.
 
@@ -126,7 +180,7 @@ A first violation results in a written warning. A second violation results in fo
 
 **CC 2.7 Penalties**
 
-Custer County acknowledges and adopts the CSF General Competition Requirements, Determination of Violations. The Fair Board President, the CSU Extension Director or the FFA Advisor where the matter is FFA-specific, and the department Superintendent serve in the roles described in that provision. Upon a finding of violation, the Authority may disqualify the exhibitor and forfeit all fees, premiums, trophies, and awards from the division; withdraw any or all premiums, trophies, and awards won by the exhibitor in any division and require their return; bar the exhibitor from competition at the Custer County Fair for any period, including a lifetime bar, upon three-way concurrence of the Fair Board President, the CSU Extension Director or the FFA Advisor, and the department Superintendent; exclude the entry from any sale; determine the disposition of any sale proceeds already collected, including offering the buyer a full refund, a donation to the Custer County Fair, or retention as a credit toward future sales; or impose any other appropriate penalty.
+Custer County acknowledges and adopts the GCR, Determination of Violations. The Fair Board President, the CSU Extension Director or the FFA Advisor where the matter is FFA-specific, and the department Superintendent serve in the roles described in that provision. Upon a finding of violation, the Authority may disqualify the exhibitor and forfeit all fees, premiums, trophies, and awards from the division; withdraw any or all premiums, trophies, and awards won by the exhibitor in any division and require their return; bar the exhibitor from competition at the Custer County Fair for any period, including a lifetime bar, upon three-way concurrence of the Fair Board President, the CSU Extension Director or the FFA Advisor, and the department Superintendent; exclude the entry from any sale; determine the disposition of any sale proceeds already collected, including offering the buyer a full refund, a donation to the Custer County Fair, or retention as a credit toward future sales; or impose any other appropriate penalty.
 
 Custer County further provides as follows.
 
@@ -140,19 +194,19 @@ Custer County further provides as follows.
 
 **CC 2.8 Protest and Appeals**
 
-Custer County acknowledges and adopts the CSF General Competition Requirements, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
+Custer County acknowledges and adopts the GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
 
-A grievance must be submitted in writing on the form available from the Fair Board office, accompanied by the protest fee listed in Addendum §3, in cash or certified check. The grievance must state the basis plainly and must be delivered to the fair office within the deadline listed in Addendum §5 after the occurrence. Judging will not be interrupted by a grievance.
+A grievance must be submitted in writing on the form available from the Fair Board office, accompanied by the protest fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the fair office within the deadline listed in Addendum §9 after the occurrence. Judging will not be interrupted by a grievance.
 
-If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board. An appeal must be submitted in writing on the appeal form available from the fair office, accompanied by the appeal fee listed in Addendum §3, in cash or certified check. The appeal must state the matter plainly and must be delivered to the fair office within the deadline listed in Addendum §5 after the grievance resolution is announced. The decision of the Fair Board is final. The fee is refunded if the matter is resolved in the grievant's favor.
+If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board. An appeal must be submitted in writing on the appeal form available from the fair office, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the fair office within the deadline listed in Addendum §9 after the grievance resolution is announced. The decision of the Fair Board is final. The fee is refunded if the matter is resolved in the grievant's favor.
 
 **CC 2.9 Official Communications**
 
-All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in the Addendum.
+All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in Addendum §3.
 
 **CC 2.10 Fairgrounds Cleanup**
 
-All exhibitors are required to attend fairgrounds cleanup. Cleanup dates are listed in Addendum §1. At cleanup, each exhibitor is assigned duties that may include trash collection, restroom cleaning, mowing and weed maintenance, cleaning the exhibit hall, raking barns and alleyways, and general grounds work. A sign-in list is maintained for each cleanup. After completing assigned duties, livestock youth may work on their own stalls after the superintendent posts the stall assignment list.
+All exhibitors are required to attend fairgrounds cleanup. Cleanup dates are listed in Addendum §7. At cleanup, each exhibitor is assigned duties that may include trash collection, restroom cleaning, mowing and weed maintenance, cleaning the exhibit hall, raking barns and alleyways, and general grounds work. A sign-in list is maintained for each cleanup. After completing assigned duties, livestock youth may work on their own stalls after the superintendent posts the stall assignment list.
 
 ---
 
@@ -170,7 +224,7 @@ Long sleeves are required. Nice jeans are required. Closed-toe shoes are require
 
 **CC 2.13 Stall Cleanup and Checkout**
 
-All animals must remain on the fairgrounds until released by the Authority. Each exhibitor is responsible for cleaning their own stall area at the end of the fair and must be checked out by a superintendent or the project leader before leaving. No straw or hay is allowed for bedding. Each animal exhibitor is also required to complete their stall cleanup during the post-fair mandatory cleanup period. Post-fair cleanup dates are listed in Addendum §1.
+All animals must remain on the fairgrounds until released by the Authority. Each exhibitor is responsible for cleaning their own stall area at the end of the fair and must be checked out by a superintendent or the project leader before leaving. No straw or hay is allowed for bedding. Each animal exhibitor is also required to complete their stall cleanup during the post-fair mandatory cleanup period. Post-fair cleanup dates are listed in Addendum §7.
 
 ---
 
