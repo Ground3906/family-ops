@@ -892,6 +892,40 @@ Custer County provides that a horse breaking from the jog or trot into a lope or
 
 ---
 
+## CC 8 — Shooting Sports
+
+This chapter governs the shooting sports project at the Custer County Fair. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
+
+**CC 8.1 Governing Rules**
+
+Custer County acknowledges and adopts the Colorado 4-H Shooting Sports Rule Book, which governs the conduct of all Custer County 4-H shooting sports classes, except where this chapter states a Custer County requirement.
+
+**CC 8.2 Standing and Record Book**
+
+Every competitor must be in good standing with their club and their county. Every competitor must complete a record book and a display for each discipline entered. A competitor must score at least 75 percent on the record book and must receive at least a red ribbon on their exhibit to be eligible for the county contest and the state contest.
+
+**CC 8.3 Scorecards**
+
+The Colorado 4-H Shooting Sports Rule Book provides that shoot management reserves the right to use non-Orion targets and scoring methods where circumstances necessitate a change. Custer County exercises this discretion in every discipline. Custer County does not use Orion scorecards. County scorecards are provided on the day of each contest.
+
+**CC 8.4 Ribbons and Placings**
+
+The American System established at CC 2.19 governs every shooting sports contest, without regard to that section's limitation to animal classes.
+
+**CC 8.5 Firearms Champions**
+
+Grand Champion and Reserve Grand Champion in the .22 Rifle discipline and in the Shotgun discipline are each determined by the highest score percentage in that discipline, together with the competitor's project and record book score.
+
+**CC 8.6 Archery Champions**
+
+Grand Champion and Reserve Grand Champion in Archery are determined by the highest score percentage in each age group and bow type, Compound and Recurve, together with the competitor's project and record book score.
+
+**CC 8.7 Contest Schedule, Location, and Agent**
+
+The date, time, and location of each shooting sports contest are listed in Addendum §7. The current Custer County shooting sports agent for each discipline is listed in Addendum §1.
+
+---
+
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
 
 ---
@@ -914,7 +948,7 @@ The 4-H and FFA Code of Conduct is intended to foster a safe environment that is
 
 This 4-H and FFA Code of Conduct and Disciplinary Procedure is a condition of participation in the Custer County Fair.
 
-**B. Behaviors prohibited at the County Fair that warrant removal from fairgrounds:**
+**A. Behaviors prohibited at the County Fair that warrant removal from fairgrounds:**
 
 - Possession, selling, and/or use of marijuana, alcoholic beverages, tobacco products to include vapes/e-cigarettes, and/or illegal drugs, or being present where individuals are using alcohol, tobacco products, and/or any illegal substances.
 - Abuse (physical and/or verbal) and harassment.
