@@ -186,9 +186,7 @@ State the adopted rule, then print the county's current specifics beneath it as 
 ## Citation
 
 - **CSF cites by heading name.** The GCR carries no section numbers, no rule numbers, and no section symbol anywhere. It runs on named headings. So: "Custer County acknowledges and adopts the GCR, Determination of Violations." A parent can open the state's document, find that heading, and confirm the words match. Verified against source 8/10/2026.
-- **CSF department requirements cite by department.** The species department requirements (Market Beef, Market Hogs, Market Lambs, and the rest) are numbered lists under a "Competition Requirements" heading, not GCR headings and without stable heading names of their own. They cite by named department, e.g. "the CSF Market Beef competition requirements," not by a heading that does not exist and not by a bare "the CSF requirement" that points at nothing.
 - **IAFE cites by item number.** Its eight guidelines are numbered, so "IAFE National Code of Show Ring Ethics, Item 7" is a real citation. The Code itself is an Addendum instrument, signed, referenced in the book but never restated.
-- **The adoption phrase.** Every CSF or IAFE adoption opens "Custer County acknowledges and adopts [the source, cited by name] ..." and then states the rule. GCR by heading, CSF department requirements by department, IAFE by item. This is the phrase; it does not vary.
 - **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, CSF, CSU Extension, FFA, GCR, IAFE, MQA. Spelling out a defined term after CC 1 is a defect.
 - **Citation-first exceptions.** Any Custer exception that extends, narrows, or applies an adopted rule cites the source first, then states the county's application. Without the citation, an exception carrying a CSF principle reads as Custer inventing liability.
 
@@ -304,7 +302,7 @@ Custer's Breeding Beef department exists but carries no defined classes, only a 
 
 The market section heading reads "MARKET ELIGIBLE LIVESTOCK AND POULTRY RULES AND REGULATIONS" while the section contains only Market Swine, Market Beef, Market Sheep, and Market Goat. No market poultry department and no market rabbit department exist anywhere in the source. Poultry and Rabbit in CC 3 are therefore new construction against locked direction, not consolidation of existing text.
 
-Two general rules in the source are truncated mid-sentence, recorded so they are not mistaken for extraction errors. (An earlier note here claimed three textless numbered stubs open Market Swine's project exhibit rules; re-extraction on 8/12/2026 at the XML level found the swine block fully populated, six items straight through, and the claim was struck.)
+Three defects in the source itself, recorded so they are not mistaken for extraction errors: Market Swine's project exhibit rules open with three numbered stubs carrying no text, and two general rules are truncated mid-sentence.
 
 ## The Wholesome Meat Act does not reach two market species
 
@@ -344,11 +342,9 @@ All nine rewrite to vest in **the Authority with the superintendent named as lea
 
 ## Pen allocation changed principle
 
-Locked 8/12/2026 at CC 3.1.11. The county rule gave space priority in the barns to Senior members, full stop. CSF allocates by animal, one pen per head delivered, with no ranking of exhibitors at all. Custer is running out of space, so neither model survives alone: every exhibitor is guaranteed one pen per species entered, seniority sets the order of assignment, and the superintendent runs both the guaranteed pass and the distribution of whatever space is left.
+Locked 8/12/2026 at CC 3.1.10. The county rule gave space priority in the barns to Senior members, full stop. CSF allocates by animal, one pen per head delivered, with no ranking of exhibitors at all. Custer is running out of space, so neither model survives alone: every exhibitor is guaranteed one pen per species entered, seniority sets the order of assignment, and the superintendent runs both the guaranteed pass and the distribution of whatever space is left.
 
 This is a real change in principle from a pure seniority queue to a floor plus a seniority-ordered remainder, and it lands on the most drama-prone rule in the book. CSF's tampering language is adopted alongside it, which gives the assignment a printed consequence it never had.
-
-The guarantee is not absolute. CC 3.1.11 carries a capacity escape valve (locked 8/12/2026): where entries in a species exceed available pen space, the guarantee yields to the extent necessary, and the Authority may impose limits on per-exhibitor space, superintendent as lead. The trigger is an objective fact — space ran out — but the response is open-ended discretion, landing on the book's most drama-prone rule. Flagged for the walkthrough as such: the fair could not sign an absolute space guarantee it might not be able to keep in a large year, so the valve is deliberate, and a veteran may read "impose limits as needed" as unbounded board power with no printed ceiling to point at.
 
 ## The coaching rule
 
@@ -363,10 +359,6 @@ Named here so the veterans hear them from the board rather than discovering them
 **The beef no-waterers line.** Market Beef prohibited leaving feed pans or waterers in pens and stalls, in direct contradiction of Market Swine and of CSF. CSF governs every species now and the beef line dies.
 
 **The swine self-waterer allowance.** Market Swine permitted a self-waterer built from PVC pipe and a pig nipple. Compatible with CSF but more specific than it, and dropped rather than raised, on the judgment that CSF's rule is enough.
-
-**The swine home-tag option and its rate-of-gain contest.** The county swine block let an exhibitor self-tag hogs at home in place of an April 4-H weigh-in, and tied a rate-of-gain contest to whether they did. The contest runs nowhere else in the book and has no starting-weight mechanism to run on; both the contest and the home-tag reference are dropped from the fair book (CC 3.3 silent). Home-tagging in April is a 4-H enrollment mechanic, not a fair rule, and the permission lives there. Recorded 8/12/2026.
-
-**The sheep muzzle rule.** CSF permits meshed or plastic muzzles for market lambs provided the muzzle allows the lamb to drink; the county book was silent. Left unadopted at the CC 3.4 pass (CC 3.4 silent) rather than importing a CSF rule the county never carried. The drink-water welfare constraint is the portable piece if it is ever revisited.
 
 ## Answerable for the people you bring
 
@@ -414,7 +406,6 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 - **Map the decision surface before opening an item**, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces.
 - **Check the existing lock before building an options menu.** A prior lock, a charter line, or an established default may already answer it. Presenting settled doctrine as an open choice wastes a turn and invites re-litigating something decided.
 - **Pull the source before presenting a delta.** CSF first, county second, question only on the difference. Asserting what a source says from memory and being corrected costs more turns than the pull would have.
-- **Both directions, every department.** A department pass runs county to CSF for deltas and CSF to county for silence-gaps. Reconciling county text against CSF only surfaces CSF rules that have a county line to collide with; a CSF requirement the county book never addressed generates no delta and stays invisible. The county book is downstream of the standard and incomplete against it (Part Four), so a county-first read inherits that incompleteness. Walk CSF's numbered department requirements against the draft and flag every one with no county counterpart. A department is not done until its CSF department checklist is cleared, not just until the county block is worked. The shared layers (CC 3.1, CC 2, CC 1) carry the same exposure and owe the same re-audit.
 - **Run the placement test before proposing, not after locking.**
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices and line numbers live only in repo records.
 - **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary.
