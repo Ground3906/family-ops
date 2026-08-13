@@ -187,7 +187,7 @@ State the adopted rule, then print the county's current specifics beneath it as 
 
 - **CSF cites by heading name.** The GCR carries no section numbers, no rule numbers, and no section symbol anywhere. It runs on named headings. So: "Custer County acknowledges and adopts the GCR, Determination of Violations." A parent can open the state's document, find that heading, and confirm the words match. Verified against source 8/10/2026.
 - **IAFE cites by item number.** Its eight guidelines are numbered, so "IAFE National Code of Show Ring Ethics, Item 7" is a real citation. The Code itself is an Addendum instrument, signed, referenced in the book but never restated.
-- **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, CSF, CSU Extension, FFA, GCR, IAFE, MQA. Spelling out a defined term after CC 1 is a defect.
+- **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, APA, CSF, CSU Extension, FFA, GCR, IAFE, MQA. Spelling out a defined term after CC 1 is a defect.
 - **Citation-first exceptions.** Any Custer exception that extends, narrows, or applies an adopted rule cites the source first, then states the county's application. Without the citation, an exception carrying a CSF principle reads as Custer inventing liability.
 - **The adoption phrase is fixed.** Every adoption lead-in reads "Custer County acknowledges and adopts [source cited by name]," followed by what is being adopted. One phrase, used identically everywhere. A drafter varying it — recognizes, follows, incorporates — reintroduces the vocabulary drift the no-synonyms rule exists to prevent.
 - **CSF department requirements cite by named department.** The GCR cites by heading, IAFE by item number, and the CSF department requirements by the name of the department: "the CSF Market Hogs competition requirements." These are numbered lists printed under a department's "Competition Requirements" heading, not GCR headings, so a GCR-style heading citation would send a parent to the wrong document.
@@ -199,6 +199,8 @@ Mandatory on adoption, not optional. CSF staff titles, CSU Extension nomination 
 CSF text built on a standing on-call veterinarian or direct contact with the State Veterinarian's Office swaps to Custer's actual chain: the exhibitor's one call goes to a Fair Board member or the relevant superintendent, who contacts the Authority's veterinarian. The veterinarian's own reporting duties to the state run separately, on her own scope of work, and are never printed as a family's obligation.
 
 Where the base text belongs to another body — the 4-H and FFA Code of Conduct, owned by CSU Extension and FFA, who collect the signatures — the county text is retained as base and **no adoption sentence is printed**. The Fair Board rewriting another organization's instrument in CSF's voice is a harder sell than any rule inside it.
+
+**A subchapter may name its own official instrument.** CC 3.1.4 fixes the certified fairgrounds scale as the official instrument, but a livestock scale cannot resolve a three-pound bird. Where the shared-layer instrument physically cannot measure a species, the subchapter names its own as a stated exception, and that instrument carries the same annual Colorado Weights and Measures certification the shared rule requires. The exception is to the instrument, never to the certification. Precedent: CC 3.6.4, the poultry scale.
 
 ## Sentence craft
 
@@ -306,6 +308,12 @@ The market section heading reads "MARKET ELIGIBLE LIVESTOCK AND POULTRY RULES AN
 
 Two defects in the source itself, recorded so they are not mistaken for extraction errors: two general rules are truncated mid-sentence. An XML-level re-extraction 8/12/2026 confirmed Market Swine's project exhibit rules run fully populated, six items straight through, correcting an earlier and incorrect claim that they opened with three textless numbered stubs.
 
+## The CSF handbook carries copy-paste artifacts between departments
+
+Found 8/13/2026. The CSF Market Goat holding-area rule prohibits family members from holding or staging "any lamb-holding pens," inside a section otherwise entirely about goats — the text was written for Market Lambs and pasted across. The CSF Market Chickens classes are divided into "White and Bronze," but Bronze is a turkey variety, and CSF's own turkey classes carry no such split.
+
+Neither artifact was adopted. Before adopting any CSF department requirement, confirm the rule belongs to the department it is printed under. A rule naming a different species than its own department heading is the tell.
+
 ## The Wholesome Meat Act does not reach two market species
 
 The Act amends the Federal Meat Inspection Act, which covers cattle, sheep, swine, and goats. Poultry falls under the Poultry Products Inspection Act. Rabbit is a non-amenable species under voluntary fee-for-service inspection. CSF runs Market Chicken, Market Turkey, and Market Rabbit divisions and still names only the Wholesome Meat Act in its sale warranty, so adopting CSF verbatim imports the same gap. Resolved 8/12/2026: both acts print, plus a county-original catch-all warranting any market species not covered by a named act to the same standard, with rabbit named as the current instance. Not legal advice; confirm with the processor or Extension before the book prints.
@@ -387,6 +395,12 @@ The county has no capacity or intent to run mandatory testing every year. CSF pr
 ## Post-placement re-weigh: not adopted, and why
 
 CSF re-weighs the top five finishers in each class after placing, with a greater-than-5% deviation disqualifying. Custer's scale limitations may not support it. **Printing an integrity rule the fair cannot reliably execute is worse than not printing it.** If the board wants it, that conversation needs the scale's actual capability on the table.
+
+## Two different terminal rationales
+
+Market poultry is terminal for biosecurity: birds that have commingled at a fair do not return to a home flock. Every bird is terminal whether or not it sells. The market sale is terminal for sale integrity, and that change carries the 2026 resale history behind it.
+
+These are separate arguments and they must stay separate in board framing. Poultry's rule would stand on its own if the sale had never changed. Folding it into the sale package would hand an opponent the claim that the board is expanding terminality everywhere, and would drag a disease-control rule into the most contested conversation in the book.
 
 ## Vet scope of work
 
