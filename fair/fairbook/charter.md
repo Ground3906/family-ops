@@ -348,6 +348,8 @@ Locked 8/12/2026 at CC 3.1.10. The county rule gave space priority in the barns 
 
 This is a real change in principle from a pure seniority queue to a floor plus a seniority-ordered remainder, and it lands on the most drama-prone rule in the book. CSF's tampering language is adopted alongside it, which gives the assignment a printed consequence it never had.
 
+**The capacity escape valve is a second flag inside the first.** CC 3.1.11 carries a valve: where entries in a species exceed available pen space, the guarantee yields and the Authority may impose limits on the space assigned to each exhibitor, with the superintendent as lead. The trigger is objective — entries exceed pens, a fact anyone can count. The response is open-ended, and that asymmetry is deliberate, because no printed formula survives contact with a barn that is genuinely full. It also means the valve prints discretion into the most drama-prone rule in the book, on the same page as the rule that already changed principle. Working-group walkthrough item: the board should decide with open eyes whether it wants the discretion or a printed formula, rather than meet the valve for the first time in a full barn.
+
 ## The coaching rule
 
 Matt is the only board member who questions it and expected to lose a straight repeal vote. The examples structure means **no repeal is needed**: the veterans' language survives in the book, printed as an illustration of an adopted standard rather than as county invention. The alignment argument stays intact.
