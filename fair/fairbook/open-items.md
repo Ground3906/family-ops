@@ -10,7 +10,7 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Blocking the October publish
 
-- **CC 5 through CC 10** — unwritten. CC 1 through CC 4 are finished.
+- **CC 6 through CC 10** — unwritten. CC 1 through CC 5 are finished.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
@@ -25,6 +25,8 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Known gaps in finished chapters
 
+- **HSRB not in the archive.** The other 4-H project guides are (cat, dog, shooting sports, consumer science). The HSRB (Colorado 4-H Horse Show Rule Book, LA1500K, 2024) was pulled from the web this session. Add the official PDF to `fair/rulebooks/archive/` when convenient for a clean local source.
+
 - **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Superintendent pass (working group).
 
 ## Unresolved rule questions — route at the relevant chapter pass
@@ -32,12 +34,6 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 - **Poultry health and biosecurity gate at check-in.** Re-ask when a poultry pass comes up. CC 3.6 shipped with the terminal-show and biosecurity-report rules; this was a separate check-in gate question with no recoverable lock.
 - **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
 - **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
-
-## CC 5 Horse — baseline locked, chapter unwritten
-
-- **Baseline (locked): layered.** CC 5 names the Colorado 4-H Horse Show Rule Book (LA1500K, 2024) as the class-conduct authority, with CSF General Competition Requirements as the fair-level frame — mirroring how CSF itself defers class conduct to sanctioning bodies. The 4-H rulebook is the ~150-page detailed class authority; neither the county book nor CSF reproduces it, both point to it.
-- **Still to decide when CC 5 drafts:** class-list handling (body vs. Addendum), the Horse coaching rule (county para 408 vs. cite to CC 2.6), the weighted points and awards structure (Horse-specific, no analog), dress code (Horse-specific vs. CC 2.20 deviation), safety rules (helmets, unsafe-horse excusal).
-- **4-H horse rulebook not in the archive.** The other 4-H project guides are (cat, dog, shooting sports, consumer science). The horse guide was pulled from the web this session (Colorado 4-H Horse Show Rule Book LA1500K 2024). Add the official PDF to `fair/rulebooks/archive/` when convenient for a clean local source.
 
 ## Legacy blocks still staged in draft.md
 
