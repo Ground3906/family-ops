@@ -28,9 +28,9 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 4 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar shipped 8/13/2026. Remaining, in this order:
+CC 1 through CC 5 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026. Remaining, in this order:
 
-1. **CC 5 and CC 8** — Horse and Shooting Sports. Standalone, no racking problem, fast. CC 5's baseline is locked (see `open-items.md`).
+1. **CC 8** — Shooting Sports. Standalone, no racking problem, fast.
 2. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
 3. **CC 7**, then **CC 9**, then **CC 10**.
 4. **Addendum §1 through §9.**
@@ -186,7 +186,8 @@ State the adopted rule, then print the county's current specifics beneath it as 
 
 - **CSF cites by heading name.** The GCR carries no section numbers, no rule numbers, and no section symbol anywhere. It runs on named headings. So: "Custer County acknowledges and adopts the GCR, Determination of Violations." A parent can open the state's document, find that heading, and confirm the words match. Verified against source 8/10/2026.
 - **IAFE cites by item number.** Its eight guidelines are numbered, so "IAFE National Code of Show Ring Ethics, Item 7" is a real citation. The Code itself is an Addendum instrument, signed, referenced in the book but never restated.
-- **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, APA, CSF, CSU Extension, FFA, GCR, IAFE, MQA. Spelling out a defined term after CC 1 is a defect.
+- **HSRB (Horse) cites by specific numbered rule, and by named provision where its provisions carry names but no numbers.** Unlike the GCR, the HSRB numbers its individual rules straight through (Rule 4, Rule 7, Rule 24...), so citations name the number: "HSRB, General Rules and Requirements, Rule 7." A named provision inside the HSRB — "General Rules and Requirements," "Gymkhana Division" — is spelled out in full every time it is cited, the same convention the GCR's named provisions already use (Grievances/Protests, Determination of Violations); it does not get a CC 1 abbreviation of its own. A heading-only citation with no rule number is a defect.
+- **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, APA, CSF, CSU Extension, FFA, GCR, HSRB, IAFE, MQA. Spelling out a defined term after CC 1 is a defect. This applies to the source document names only, never to a named provision or section inside one of those documents — GCR's named provisions and HSRB's named provisions are spelled out in full every citation, per the HSRB citation rule above.
 - **Citation-first exceptions.** Any Custer exception that extends, narrows, or applies an adopted rule cites the source first, then states the county's application. Without the citation, an exception carrying a CSF principle reads as Custer inventing liability.
 - **The adoption phrase is fixed.** Every adoption lead-in reads "Custer County acknowledges and adopts [source cited by name]," followed by what is being adopted. One phrase, used identically everywhere. A drafter varying it — recognizes, follows, incorporates — reintroduces the vocabulary drift the no-synonyms rule exists to prevent.
 - **CSF department requirements cite by named department.** The GCR cites by heading, IAFE by item number, and the CSF department requirements by the name of the department: "the CSF Market Hogs competition requirements." These are numbered lists printed under a department's "Competition Requirements" heading, not GCR headings, so a GCR-style heading citation would send a parent to the wrong document.
@@ -415,6 +416,10 @@ The enforced-by assignments accumulating across the chapters convert into a vet-
 CSF supplies a printable cost-recovery model: arrival inspection charged to the exhibitor when documentation is missing, testing costs deducted from sale proceeds.
 
 Audience lane: professional and vendor-facing. Scope and fee basis only. Board-facing framing is no-blame — formalizing existing practice so expectations and fees are clear for both sides. Nothing about exhibitor behavior trends prints anywhere in it.
+
+## Horse dress narrowings not adopted
+
+The county book's horse dress rules require long-sleeve button-down shirts with collar and cuffs, no "show" shirts, and no chaps or chinks in any class. HSRB permits chaps as optional attire, so the county's chaps prohibition contradicts the adopted source and does not print at CC 5.10. The show-shirt and chaps restrictions are real practices some families may expect to see; their absence should reach the working group before a parent notices a chap-wearing exhibitor and asks why the rule vanished.
 
 ## Board policy, deliberately not in the book
 
