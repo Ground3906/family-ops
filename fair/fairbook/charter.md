@@ -28,18 +28,15 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 and CC 2 shipped 8/12/2026. Remaining, in this order:
+CC 1 through CC 4 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar shipped 8/13/2026. Remaining, in this order:
 
-1. **CC 3.1** — the market shared layer, shipped 8/12/2026. Six species subchapters lean on it.
-2. **CC 3 species subchapters** — Beef, Swine, Sheep, Goat, Poultry, Rabbit, against the finished 3.1.
-3. **CC 4** — the Livestock Sale. Substantially built from prior work.
-4. **CC 5 and CC 8** — Horse and Shooting Sports. Standalone, no racking problem, fast.
-5. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
-6. **CC 7**, then **CC 9**, then **CC 10**.
-7. **Addendum §1 through §9.**
-8. **Cover page** — mission statement and graphic.
-9. **Table of contents** — generated from finished chapters.
-10. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins.
+1. **CC 5 and CC 8** — Horse and Shooting Sports. Standalone, no racking problem, fast. CC 5's baseline is locked (see `open-items.md`).
+2. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
+3. **CC 7**, then **CC 9**, then **CC 10**.
+4. **Addendum §1 through §9.**
+5. **Cover page** — mission statement and graphic.
+6. **Table of contents** — generated from finished chapters.
+7. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
 
 Shared layers build before the projects that lean on them. A reconciliation sweep runs at the end of each chapter to catch commonalities the project passes surface that the chapter's shared layer missed.
 
@@ -164,6 +161,8 @@ Nine permanent sections, **locked 8/12/2026**, ordered by when a family needs th
 **These numbers never renumber.** A section may be empty in a given year; it does not lose its number. Structure and current contents live in `fair/rulebooks/volatility-inventory.md`.
 
 **"See the Addendum" is banned language.** Every reference in the book cites a specific section by number. A bare reference makes a family hunt through a document the book itself organized.
+
+**A relative anchor is not a volatile fact.** A rule stated against a moving reference point — "one hour after the conclusion of the beef show" — prints in the chapter body as the rule AND repeats in its cited Addendum section. It is the schedule that is volatile, not the relationship. The relationship is the rule and belongs in the body; the clock time it resolves to in a given year belongs in the Addendum. Precedent: CC 4.3.1, the exit-election deadline.
 
 ---
 
@@ -427,7 +426,7 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 
 # PART SIX — WORKING METHOD
 
-- **One decision per message.** Findings, verification results, and status may batch. Decisions never do. This holds under every framing, including efficiency.
+- **ONE TOPIC PER RESPONSE — hard rule.** Present one item. Stop. No decision maps, no stacked questions, no "here's everything" preamble, no commentary tail after the decision. If a topic has structure, surface the structure as ONE line and open the first item — do not walk the whole tree. Findings, verification results, and status may batch; decisions and the reasoning around them never do. This holds under every framing, including efficiency. Correcting this drift is not Matt's job.
 - **Map the decision surface before opening an item**, so the item's true size is visible at the start. A sub-question discovered mid-item is named as newly discovered when it surfaces.
 - **Check the existing lock before building an options menu.** A prior lock, a charter line, or an established default may already answer it. Presenting settled doctrine as an open choice wastes a turn and invites re-litigating something decided.
 - **Pull the source before presenting a delta.** CSF first, county second, question only on the difference. Asserting what a source says from memory and being corrected costs more turns than the pull would have.
@@ -437,6 +436,7 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 - **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
 - **Large or multi-file builds chunk by default.** A single commit word covering a big write defaults to sequential chunks, one write and one verified read-back per chunk, as the execution strategy, not a scope question reopened each time.
+- **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
 
@@ -446,4 +446,4 @@ County book (.docx): curl the raw GitHub URL, `pip install python-docx --break-s
 
 Raw fetches (`raw.githubusercontent.com`) need a commit SHA or branch in the URL, never a blob SHA; an invalid ref returns an empty file rather than an error. Sanity-check line count immediately after any raw fetch used as an edit base.
 
-Archive holds: the 2026 county book, the CSF handbook, the GCR, and the Colorado 4-H project guides for cat, dog, shooting sports, and consumer science.
+Archive holds: the 2026 county book, the CSF handbook, the GCR, and the Colorado 4-H project guides for cat, dog, shooting sports, and consumer science. The Colorado 4-H Horse Show Rule Book (LA1500K, 2024), named by the county Horse section and pulled from the web 8/13/2026, is not yet in the archive; add the official PDF when convenient.
