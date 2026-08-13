@@ -948,7 +948,7 @@ The 4-H and FFA Code of Conduct is intended to foster a safe environment that is
 
 This 4-H and FFA Code of Conduct and Disciplinary Procedure is a condition of participation in the Custer County Fair.
 
-**A. Behaviors prohibited at the County Fair that warrant removal from fairgrounds:**
+**B. Behaviors prohibited at the County Fair that warrant removal from fairgrounds:**
 
 - Possession, selling, and/or use of marijuana, alcoholic beverages, tobacco products to include vapes/e-cigarettes, and/or illegal drugs, or being present where individuals are using alcohol, tobacco products, and/or any illegal substances.
 - Abuse (physical and/or verbal) and harassment.
