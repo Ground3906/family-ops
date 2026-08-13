@@ -8,7 +8,7 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Blocking the October publish
 
-- **CC 3.5 through CC 3.7, and chapters CC 4 through CC 10** — unwritten. CC 3.1 through CC 3.4 are finished; the remaining market subchapters build against CC 3.1.
+- **CC 4 through CC 10** — unwritten. CC 3.1 through CC 3.7 are finished; CC 3, Market Livestock, is complete.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
@@ -28,7 +28,6 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Routed to a species subchapter, do not lose
 
-- **Rabbit meat-pen mechanics.** CC 3.1.4 leaves the weigh-in unit to each subchapter. Rabbit's mechanics land at the CC 3.7 department pass with a superintendent in the room.
 - **Goat muzzle rule, and goat drenching.** CSF requires that any muzzle allow the animal to drink, and permits drenching for hydration only, with no stomach-pumping device. Species facts under the CC 3.1.13 shell.
 - **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.7 adopts the beef version; the goat and sheep versions belong to their own subchapters.
 
