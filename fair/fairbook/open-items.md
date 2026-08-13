@@ -4,57 +4,47 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 **An item is on this list or it is closed.** No dates, no status stamps, no "still open as of." Presence is the status. When it is done, delete the line.
 
+This project writes the PROPOSED book. Anything gated on a phone call, a superintendent, a processor confirmation, or a board vote is NOT tracked here — the working group (Matt, Brittany, Enjoli) owns those. This list is drafting work only.
+
 ---
 
 ## Blocking the October publish
 
-- **CC 4 through CC 10** — unwritten. CC 3.1 through CC 3.7 are finished; CC 3, Market Livestock, is complete.
+- **CC 5 through CC 10** — unwritten. CC 1 through CC 4 are finished.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
-- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins. Now also carries a register pass: every chapter reads in the single formal register.
-- **CC 4's residue warranty trigger is too narrow for poultry.** The county's Wholesome Meat Act disclosure is signed by exhibitors participating in the sale. Under CC 3.6, every market bird is terminal whether or not it sells, so an unsold bird enters the food chain with no signed warranty. CC 4 must attach the warranty to terminal delivery rather than to sale participation. The Poultry Products Inspection Act and the county-original catch-all are already locked to print alongside the Wholesome Meat Act.
-- **Poultry sale-counting rules, locked, to print in CC 4.** A market chicken entry is a pen of three and counts as one market animal against the sale limit, matching the rabbit meat pen. Chicken and turkey count as separate species for the different-species requirement, so an exhibitor may sell a champion chicken pen and a champion turkey.
+- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter. Also owns the one full-book renumber (see below).
 
-## Method
+## Carried to the conformance renumber
 
-- **Shared-layer CSF re-audit still owed.** The both-directions department pass (charter Part Six) has been run against the CSF Market Beef, Market Hogs, and Market Lambs department sections. It has not been run against CC 3.1's shared-layer CSF sections, or against CC 2 and CC 1's CSF-derived content. Shared layers can carry silence-gaps too, and those are higher-stakes because every species leans on them.
-- **The prior-sale ownership bar has no county analog.** CSF bars any market animal sold at a county, district, or premium sale after the ownership date from competing at the current year's fair. Custer has CC 1.3 Exhibition Bar, which reaches sales outside the county's own sale, and CC 2.1, which bars double-entry at another Colorado county fair. Neither reaches an animal bought out of another fair's auction ring. Reaches every market species, so it belongs at CC 3.1 rather than in a subchapter.
+- **Two CC 2 All-Exhibitors rules, locked in content, unwritten.** Drafting them now would ripple ~30 cross-references plus the seven "CC 2.1 through CC 2.11" range citations, so under renumber-at-conformance doctrine they wait for the single end-of-book renumber.
+  - **Exhibitor Liability.** New All-Exhibitors rule: every exhibitor is responsible for their own animal or article and releases the Fair, adopted from the CSF indemnification shell. CC 2.22 shrinks to reference it rather than carrying its own Open-only release.
+  - **Barred Exhibitors.** New All-Exhibitors rule: adopt CSF grounds for refusing entry to anyone barred elsewhere for unethical practices, disqualified at a major show, or with premiums withheld. The NALS&RMA infraction database is named as a source the Authority MAY consult, not one it must query.
 
 ## Known gaps in finished chapters
 
-- **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Same missing-class defect as market poultry and rabbit. Superintendent pass.
+- **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Superintendent pass (working group).
 
-## Routed to a species subchapter, do not lose
+## Unresolved rule questions — route at the relevant chapter pass
 
-- **Goat muzzle rule, and goat drenching.** CSF requires that any muzzle allow the animal to drink, and permits drenching for hydration only, with no stomach-pumping device. Species facts under the CC 3.1.13 shell.
-- **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.7 adopts the beef version; the goat and sheep versions belong to their own subchapters.
-
-## Needs a source pull before it can be drafted
-
-- **8 CCR 1208-1 and CSF's signed Exhibitor Code of Conduct.** The county's removal-warranting conduct list has no analog in captured CSF sources because CSF houses that content in these two documents, neither extracted. A true source-level conduct comparison needs both.
-
-## Needs a phone call or a person
-
-- **Extension likeness release (Ashtyn or Reggie).** What release does CSU Extension already collect at enrollment, does it run to the Fair Board or only to Extension, and does it cover publication of names, photos, and sale results by the Fair? A 4-H enrollment release does not automatically cover what the Fair itself publishes. Bring findings to the board.
-- **Superintendent review cycle.** Each department chapter cycles through its superintendent before October.
-- **Wholesome Meat and Poultry Products Act citations.** CC 4's sale warranty names both acts plus a county-original catch-all for rabbit. Confirm the citations and the rabbit framing with the processor or Extension before the book prints. Not legal advice as drafted.
-
-## Unresolved rule questions
-
-- **Poultry health and biosecurity gate at check-in.** The P-block question was posed and no lock is recoverable from the session record. Re-ask before the Poultry subchapter drafts.
+- **Poultry health and biosecurity gate at check-in.** Re-ask when a poultry pass comes up. CC 3.6 shipped with the terminal-show and biosecurity-report rules; this was a separate check-in gate question with no recoverable lock.
 - **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
-- **Per-class entry fee.** No entry fee is printed anywhere in the county book, in contrast to CSF, which charges $10–25 per class throughout. Confirm with the board whether free entry is deliberate policy or simply handled outside the book. CC 2.17 drops CSF's entry-fee forfeiture clause on the assumption that no fee exists.
 - **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
 
-## Load-bearing on the walkthrough
+## CC 5 Horse — baseline locked, chapter unwritten
 
-- **The August 2026 market lamb letter — outcome unrecorded.** The board met 8/10 to consider a letter to an exhibitor suggesting a companion animal project in future years. Matt asked them to hold it: no written rule was broken, the letter would put an unwritten rule in writing after the fact, and asserting terminal intent to a family now would make the terminal-sale change read as retaliation at the walkthrough. **If a letter went out, the sequencing hazard is live rather than theoretical.** No names in this log, by design.
-- **Legacy blocks still staged in `draft.md`.** The General Rules and Livestock Sale carry-forward sections remain in the file below CC 3, and much of the General Rules block is now superseded by CC 2. They are not deleted on the drafter's judgment. Confirm removal item by item when CC 4 and the conduct material finish re-homing.
+- **Baseline (locked): layered.** CC 5 names the Colorado 4-H Horse Show Rule Book (LA1500K, 2024) as the class-conduct authority, with CSF General Competition Requirements as the fair-level frame — mirroring how CSF itself defers class conduct to sanctioning bodies. The 4-H rulebook is the ~150-page detailed class authority; neither the county book nor CSF reproduces it, both point to it.
+- **Still to decide when CC 5 drafts:** class-list handling (body vs. Addendum), the Horse coaching rule (county para 408 vs. cite to CC 2.6), the weighted points and awards structure (Horse-specific, no analog), dress code (Horse-specific vs. CC 2.20 deviation), safety rules (helmets, unsafe-horse excusal).
+- **4-H horse rulebook not in the archive.** The other 4-H project guides are (cat, dog, shooting sports, consumer science). The horse guide was pulled from the web this session (Colorado 4-H Horse Show Rule Book LA1500K 2024). Add the official PDF to `fair/rulebooks/archive/` when convenient for a clean local source.
+
+## Legacy blocks still staged in draft.md
+
+- **General Rules / Code of Conduct block remains below CC 4.** Two of the three legacy carry-forward blocks (Livestock Sale, Wholesome Meat Act) were removed when CC 4 shipped. The General Rules / Code of Conduct block stays — much of it is superseded by CC 2, but it is not deleted on the drafter's judgment. Confirm removal item by item when the conduct material finishes re-homing.
 
 ## Companion documents that change if the book adopts
 
 - **Sale Committee Guidelines: pending-matters line.** The committee's check-verification step gains one line — confirm with the Fair Board that no protests, appeals, or sanctions are pending before checks print.
 - **Sale Committee Guidelines: lab-result payment gate.** Payment holds until testing results return negative or non-suspect for any animal actually tested. The printed "checks ready the first Monday of August" timeline is unaffected for untested animals but needs a caveat for tested ones.
-- **Sale Committee Guidelines: color-only disposition coding.** Post-sale animal disposition is encoded in color alone with no legend. Under terminal delivery every sale animal leaves the same way, so the practice shrinks to marking which designated-facility lane an animal is in. Still color-only, still no legend. Add written codes alongside the colors.
+- **Sale Committee Guidelines: color-only disposition coding.** Post-sale animal disposition is encoded in color alone with no legend. Under terminal delivery every sale animal leaves the same way, so the practice shrinks to marking which designated-facility lane an animal is in. Add written codes alongside the colors (colorblind-safe).
