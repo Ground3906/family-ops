@@ -620,6 +620,54 @@ The maximum number of entries an exhibitor may enter in each market poultry clas
 
 ---
 
+### CC 3.7 — Market Rabbit
+
+**CC 3.7.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Rabbit.
+
+**CC 3.7.2 Terminal Status**
+
+Custer County acknowledges and adopts the CSF Market Rabbits competition requirement that only the Grand Champion and Reserve Grand Champion Market Rabbit Meat Pens qualify for the Livestock Sale, and that the sale is terminal only for the pens that qualify.
+
+Custer County reads this requirement as follows. A market rabbit pen is not terminal by virtue of entry in this department, unlike Market Poultry at CC 3.6.3. A market rabbit pen is terminal only where it sells in the Livestock Sale. A pen that does not sell is released to the exhibitor. The Livestock Sale is at CC 4.
+
+**CC 3.7.3 Weigh-In Unit and Official Weight**
+
+A market rabbit entry is a meat pen of three rabbits of the same breed and variety. Market rabbits shall be weighed on the rabbit scale designated by the Authority rather than on the scale stated at CC 3.1.4, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each rabbit shall be recorded individually at the county weigh-in. The weight of the pen shall be derived from those recorded weights under CC 3.1.4.
+
+**CC 3.7.4 Identification**
+
+Every rabbit entered in the market rabbit division shall carry an individual tattoo in the left ear. The tattoo shall be on the rabbit at the county weigh-in and shall remain on the rabbit throughout the entire fair under CC 3.1.6. The tattoo number of every rabbit shall be recorded at the county weigh-in, and no tattoo number shall be changed after the close of weigh-in.
+
+**CC 3.7.5 Classes Offered**
+
+The class offered in the market rabbit division is Market Rabbit Meat Pen. Non-market rabbit is not a market class. See CC 6.
+
+**CC 3.7.6 Weight**
+
+The weight window for the market rabbit meat pen is listed in Addendum §8, stated to one tenth of a pound. Every rabbit in the pen shall fall within that window.
+
+**CC 3.7.7 Disqualification**
+
+Custer County acknowledges and adopts the CSF Market Rabbits competition requirements governing disqualification, under which a pen is disqualified from competition where any one rabbit in the pen is overweight or underweight, and under which breed disqualifications recognized by the American Rabbit Breeders Association apply to each meat pen, except that body smut on a Californian or Himalayan-marked rabbit and non-descended testicles on a buck are not grounds for disqualification.
+
+**CC 3.7.8 Judging**
+
+Custer County acknowledges and adopts the CSF Market Rabbits competition requirements governing judging, under which a market rabbit meat pen is judged against the American Rabbit Breeders Association Standard of Perfection on meat type, condition of flesh, uniformity of body and weight, and fur.
+
+**CC 3.7.9 Handling at the Show**
+
+The exhibitor shall carry the exhibitor's own pen to the judging table and shall remain at the table until the judge dismisses the entry. No parent or other adult shall carry a pen to or from the judging table. An entry handled in violation of this section shall be disqualified.
+
+Where the exhibitor has more than one entry in the same class, another Custer County 4-H or FFA member in good standing who is also exhibiting may assist the exhibitor under CC 2.14. The exhibitor shall report that member's name to the Authority before the class, with the superintendent of the department as lead.
+
+**CC 3.7.10 Entry Limit**
+
+The maximum number of pens an exhibitor may enter in the market rabbit division is listed in Addendum §8. Pen and cage space is assigned under CC 3.1.11.
+
+---
+
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
 
 ---
