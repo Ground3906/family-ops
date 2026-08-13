@@ -25,7 +25,7 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Routed to a species subchapter, do not lose
 
-- **Poultry and rabbit weigh-in unit and class mechanics.** CC 3.1.4 leaves the unit to each subchapter. Turkey weight ceiling, chicken pen composition, and rabbit meat-pen mechanics all land at the department pass with a superintendent in the room.
+- **Rabbit meat-pen mechanics.** CC 3.1.4 leaves the weigh-in unit to each subchapter. Rabbit's mechanics land at the CC 3.7 department pass with a superintendent in the room.
 - **Goat muzzle rule, and goat drenching.** CSF requires that any muzzle allow the animal to drink, and permits drenching for hydration only, with no stomach-pumping device. Species facts under the CC 3.1.13 shell.
 - **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.7 adopts the beef version; the goat and sheep versions belong to their own subchapters.
 
@@ -36,7 +36,7 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 ## Needs a phone call or a person
 
 - **Extension likeness release (Ashtyn or Reggie).** What release does CSU Extension already collect at enrollment, does it run to the Fair Board or only to Extension, and does it cover publication of names, photos, and sale results by the Fair? A 4-H enrollment release does not automatically cover what the Fair itself publishes. Bring findings to the board.
-- **Superintendent review cycle.** Each department chapter cycles through its superintendent before October. Poultry class mechanics, weights, and judging-day choreography specifically need a superintendent's voice — that was deferred deliberately.
+- **Superintendent review cycle.** Each department chapter cycles through its superintendent before October.
 - **Wholesome Meat and Poultry Products Act citations.** CC 4's sale warranty names both acts plus a county-original catch-all for rabbit. Confirm the citations and the rabbit framing with the processor or Extension before the book prints. Not legal advice as drafted.
 
 ## Unresolved rule questions
