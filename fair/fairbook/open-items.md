@@ -8,12 +8,17 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Blocking the October publish
 
-- **CC 3.3 through CC 3.7, and chapters CC 4 through CC 10** — unwritten. CC 3.1 and CC 3.2 are finished; the five remaining market subchapters build against CC 3.1.
+- **CC 3.5 through CC 3.7, and chapters CC 4 through CC 10** — unwritten. CC 3.1 through CC 3.4 are finished; the remaining market subchapters build against CC 3.1.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
 - **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins. Now also carries a register pass: every chapter reads in the single formal register.
+
+## Method
+
+- **Both-directions department pass.** Every department chapter runs both directions against CSF: county to CSF for deltas, and CSF to county for silence-gaps. A county-first read alone inherits the county book's incompleteness against the standard and misses any CSF requirement the county book never addressed. A department is not done until its CSF department checklist is cleared, not just until the county block is worked. This surfaced when the swine paint/oil rule and two beef rules (nose rings/tongs, aerosols) were found missing from committed chapters.
+- **Shared-layer CSF re-audit still owed.** The both-directions pass has been run against CSF Market Beef, Market Hogs, and Market Lambs department sections. It has NOT been run against CC 3.1's shared-layer CSF sections, or against CC 2 and CC 1's CSF-derived content. Shared layers can carry silence-gaps too, and those are higher-stakes because every species leans on them.
 
 ## Known gaps in finished chapters
 
@@ -21,12 +26,10 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 
 ## Routed to a species subchapter, do not lose
 
-- **Swine 290-pound sale-weight cap.** The county general rule prints that a hog over the maximum sells at 290 pounds regardless of actual weight, and that an over-maximum hog may sell but may not compete. Species-specific, so it fails the CC 3.1 test and lands in Swine.
-- **Swine class division by breed.** CSF divides market hogs into as near equal classes as feasible by breed and weight. CC 3.1.5 sets weight as the general criterion and permits a subchapter to add its own, which is the slot breed goes in.
-- **PEDV as the swine instance of the disease contingency.** CC 3.1.14 carries the general power tied to the Colorado State Veterinarian's Office. The county's PEDV clause prints in Swine as the species application, with the year stripped.
 - **Poultry and rabbit weigh-in unit and class mechanics.** CC 3.1.4 leaves the unit to each subchapter. Turkey weight ceiling, chicken pen composition, and rabbit meat-pen mechanics all land at the department pass with a superintendent in the room.
-- **Sheep drenching carve-out, and the sheep and goat muzzle rule.** CSF permits drenching market lambs for hydration only, with no stomach-pumping device, and requires that any muzzle allow the animal to drink. Species facts under the CC 3.1.13 shell.
-- **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.6 adopts the beef version; the goat and sheep versions belong to their own subchapters.
+- **Goat muzzle rule, and goat drenching.** CSF requires that any muzzle allow the animal to drink, and permits drenching for hydration only, with no stomach-pumping device. Species facts under the CC 3.1.13 shell.
+- **Goat and sheep holding-area access.** CSF restricts the goat and sheep holding and staging areas to exhibitors only, and prohibits wet or iced towels in the goat holding pens during the show. CC 3.2.7 adopts the beef version; the goat and sheep versions belong to their own subchapters.
+- **Goat-specific market rules at the CC 3.5 pass.** The county goat block carries castration before first weigh-in, blunt-tipped horns before weigh-in, a shorn-to-quarter-inch requirement, a milk-tooth requirement, the 5-pound minimum gain from beginning to end weight, and wethers-and-does-may-show. Each is a CC 3.5 item; several have no swine or sheep analog.
 
 ## Needs a source pull before it can be drafted
 
@@ -48,6 +51,7 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 ## Load-bearing on the walkthrough
 
 - **The August 2026 market lamb letter — outcome unrecorded.** The board met 8/10 to consider a letter to an exhibitor suggesting a companion animal project in future years. Matt asked them to hold it: no written rule was broken, the letter would put an unwritten rule in writing after the fact, and asserting terminal intent to a family now would make the terminal-sale change read as retaliation at the walkthrough. **If a letter went out, the sequencing hazard is live rather than theoretical.** No names in this log, by design.
+- **Local practices dropped in the market chapters, named for the walkthrough.** The swine PVC-and-pig-nipple self-waterer (CC 3.3), the swine home-tag-in-April option and its rate-of-gain contest (CC 3.3), and the sheep muzzle rule left unadopted (CC 3.4). Each was dropped or left silent deliberately, not by oversight, and the veterans should hear it from the board rather than find it missing.
 - **Legacy blocks still staged in `draft.md`.** The General Rules and Livestock Sale carry-forward sections remain in the file below CC 3, and much of the General Rules block is now superseded by CC 2. They are not deleted on the drafter's judgment. Confirm removal item by item when CC 4 and the conduct material finish re-homing.
 
 ## Companion documents that change if the book adopts

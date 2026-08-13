@@ -410,9 +410,17 @@ Custer County reads this requirement as follows. No breed competition exists in 
 
 The classes offered in Market Beef are Market Steer, Market Heifer, and Grass Fed Heifer or Steer. Breeding Beef is not a market class; see CC 6.
 
-**CC 3.2.6 Show Ring Access**
+**CC 3.2.6 Control Equipment**
+
+Custer County acknowledges and adopts the CSF Market Beef competition requirements permitting the use of nose rings or tongs to control market beef animals.
+
+**CC 3.2.7 Show Ring Access**
 
 Custer County acknowledges and adopts the CSF requirement that exhibitors only are allowed in the beef show ring staging areas.
+
+**CC 3.2.8 Fitting and Grooming Substances**
+
+Custer County acknowledges and adopts the CSF Market Beef competition requirements prohibiting aerosols in the show arena or holding pens.
 
 ---
 
@@ -438,9 +446,47 @@ The class offered in the market swine division is Market Swine. Breeding Swine i
 
 An exhibitor may keep up to two of the exhibitor's own hogs in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's hogs. Pen space in the market swine show is assigned under CC 3.1.11. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.11 is the number of pens required to hold the exhibitor's hogs at up to two hogs per pen.
 
-**CC 3.3.6 Show Ring Access**
+**CC 3.3.6 Fitting and Grooming Substances**
+
+Custer County acknowledges and adopts the CSF Market Hogs competition requirements governing grooming substances. A market hog may not have any compound on it at any time, including hairdressing compounds, oils, paints, powders, glitter, or other dressings. Only water-based conditioning products may be used, and oil may be used on the feet only. Each market hog shall be washed with soap and water and cleaned for inspection. A market hog may be wiped to check for color at inspection.
+
+**CC 3.3.7 Show Ring Access**
 
 Custer County acknowledges and adopts the CSF requirement that exhibitors only are allowed in the hog holding and staging pens.
+
+---
+
+### CC 3.4 — Market Sheep
+
+**CC 3.4.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep.
+
+**CC 3.4.2 Scrapie Identification**
+
+Scrapie is a fatal disease of the nervous system that affects sheep and goats. The United States Department of Agriculture runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
+
+Custer County acknowledges and adopts the federal scrapie identification requirement recognized by the CSF, under which sexually intact sheep, and wethers 18 months of age and older, must carry a scrapie flock identification tag. Custer County applies this requirement to every sheep. Every sheep entered in the market sheep show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
+
+**CC 3.4.3 Shearing**
+
+Every market lamb shall be rough shorn before the county weigh-in. The deadline for shearing is listed in Addendum §8.
+
+**CC 3.4.4 Weigh-In Preparation**
+
+No blanket, cover, or halter shall be left on a market lamb during weigh-in, so that the weight recorded under CC 3.1.4 reflects the true weight of the animal.
+
+**CC 3.4.5 Bracing and Feet**
+
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the position of the animal in the show ring, under which the front feet of the sheep must remain on the show ring floor while the animal is being shown, and the judge and the superintendent have the discretion to enforce disqualification. Custer County provides that bracing is permitted while showing a market lamb, provided the front feet of the animal remain on the ground.
+
+**CC 3.4.6 Drenching**
+
+CC 3.1.13 permits the drenching of an animal by the drenching process. For a market lamb, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
+
+**CC 3.4.7 Classes Offered**
+
+The class offered in the market sheep division is Market Sheep. Breeding Sheep is not a market class. See CC 6.
 
 ---
 
