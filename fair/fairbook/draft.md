@@ -666,6 +666,134 @@ Where the exhibitor has more than one entry in the same class, another Custer Co
 
 The maximum number of pens an exhibitor may enter in the market rabbit division is listed in Addendum §8. Pen and cage space is assigned under CC 3.1.11.
 
+## CC 4 — The Livestock Sale
+
+This chapter governs the Custer County Fair Market Livestock Sale. It states who may sell, how many animals an exhibitor may sell, how an exhibitor consigns an animal to the sale or declines to, what happens to an animal once it is consigned, and the warranties every exhibitor makes on the animals delivered for slaughter. Requirements applying to every market project are stated at CC 3.1. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
+
+### CC 4.1 — General Sale Requirements
+
+**CC 4.1.1 The Sale**
+
+The Market Livestock Sale is the terminal sale of the Custer County Fair. Custer County acknowledges and adopts the CSF Junior Livestock Sale Participation Requirements, under which the sale is a terminal sale and every animal sold in the sale goes directly to slaughter.
+
+The sale is conducted by open competitive bidding. Each animal is sold to the highest bidder. Once an animal is sold in the sale ring, the sale of that animal is final.
+
+**CC 4.1.2 Eligibility to Sell**
+
+Only a bona fide member of Custer County 4-H or Custer County FFA may sell in the Market Livestock Sale. An associate member may not sell.
+
+**CC 4.1.3 Sale Weight**
+
+The sale weight of an animal is the official weight recorded at the county weigh-in under CC 3.1.4. Where a subchapter of CC 3 fixes an animal's sale weight at a stated maximum, that maximum is the sale weight regardless of the weight recorded at weigh-in.
+
+**CC 4.1.4 Brand Inspection**
+
+In order to sell a market beef animal, the exhibitor shall present a bill of sale to the brand inspector before the sale.
+
+### CC 4.2 — Sale Limits and Required Sales
+
+**CC 4.2.1 Sale Limit**
+
+An exhibitor may sell no more than two market animals in the Market Livestock Sale, and those two animals shall be of different species. In addition to those two animals, an exhibitor may sell one market rabbit meat pen and one market chicken pen.
+
+A market chicken pen counts as one market animal, and a market rabbit meat pen counts as one market animal. Market chicken and market turkey are different species for the purpose of the different-species requirement in this section, and market rabbit is a species distinct from both.
+
+**CC 4.2.2 Required Sales**
+
+The Grand Champion and the Reserve Grand Champion of every market species shall sell in the Market Livestock Sale. This requirement is not limited by the sale limit at CC 4.2.1. An exhibitor who wins the Grand Champion or the Reserve Grand Champion of more than two species shall sell every one of those animals.
+
+Where one exhibitor owns both the Grand Champion and the Reserve Grand Champion of a single species, both animals shall sell. This is the only circumstance in which one exhibitor sells two market animals of the same species.
+
+**CC 4.2.3 Sale Order**
+
+The sale order is determined by the sale committee or the Fair Board.
+
+### CC 4.3 — Consignment and the Exit Election
+
+**CC 4.3.1 Exit Election**
+
+An exhibitor who does not wish to sell a market animal must notify the sale committee no later than one hour after the conclusion of the beef show. A market animal not withdrawn by that deadline is consigned to the Market Livestock Sale. The Grand Champion and the Reserve Grand Champion of every species may not be withdrawn and are consigned in every case, under CC 4.2.2.
+
+This deadline is repeated in Addendum §8.
+
+**CC 4.3.2 Effect of Consignment**
+
+Consignment to the Market Livestock Sale is terminal. Ownership of a consigned animal transfers at the close of bidding for that animal and does not reverse for any reason. A consigned animal may not be withdrawn from the sale after it has entered the sale ring.
+
+**CC 4.3.3 Failure to Notify**
+
+An exhibitor who fails to notify the sale committee by the deadline at CC 4.3.1 may have an animal consigned to the sale at the floor market price rather than through the sale ring. The Fair Board may reduce this consequence where circumstances warrant.
+
+### CC 4.4 — Terminal Delivery and Custody
+
+**CC 4.4.1 Custody From Consignment**
+
+From the close of the exit election at CC 4.3.1 until delivery, a consigned animal may not leave the fairgrounds except by delivery to the slaughter facility designated by the Fair Board. The exhibitor remains responsible for the care, feeding, and daily custody of the animal through the night before delivery.
+
+**CC 4.4.2 Delivery**
+
+The Fair Board delivers every sale animal to the designated slaughter facility. The exhibitor's care and custody of the animal end when the animal is loaded for delivery, and the exhibitor is not part of the delivery.
+
+**CC 4.4.3 No Live Release**
+
+A consigned animal shall not be released to the exhibitor, to the exhibitor's family, or to any other person, at any time after consignment, for any reason.
+
+**CC 4.4.4 Destination and Possession**
+
+The Market Livestock Sale is terminal, and every animal sold goes to slaughter at a facility designated by the Fair Board. The purchase of a sale animal conveys the right to the processed product of that animal only, and never possession of a live animal. A sale animal shall not be returned, gifted, resold, or released as a live animal, for any reason.
+
+**CC 4.4.5 Designated Facilities**
+
+The Fair Board designates the slaughter and processing facilities for the Market Livestock Sale. The Fair Board may designate a facility inspected by the United States Department of Agriculture for product bound for resale, and may separately designate a custom-exempt facility for a buyer taking product for the buyer's own use.
+
+**CC 4.4.6 Post-Sale Rest Period**
+
+Where a purchaser requests that a sale animal be rested before slaughter, the Fair Board may arrange the rest period within the designated facility chain. The cost of the rest period is withheld from the proceeds of the animal in the same manner as any other cost of delivery.
+
+**CC 4.4.7 Illness, Injury, or Death**
+
+Where the licensed veterinarian certifies that a consigned animal cannot be sold because of illness, injury, death, or an unlapsed drug withdrawal period, the sale committee purchases the animal at the floor market price. The exhibitor is credited at that price and is not subject to the consequence at CC 4.5.1.
+
+### CC 4.5 — Discipline
+
+**CC 4.5.1 Failure to Show in the Sale**
+
+An exhibitor who fails to show a consigned animal in the Market Livestock Sale, other than an animal excused under CC 4.4.7, forfeits all awards, recognitions, and premiums earned at the Custer County Fair for that year, and is barred from showing any exhibit on the Custer County fairgrounds for three years.
+
+### CC 4.6 — Proceeds
+
+**CC 4.6.1 Commission**
+
+A commission is withheld from the gross sale proceeds of every animal sold in the Market Livestock Sale. The commission rate is listed in Addendum §6.
+
+**CC 4.6.2 Costs of Delivery**
+
+The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.6, are withheld from the proceeds of that animal.
+
+### CC 4.7 — Warranties on Sale Animals
+
+**CC 4.7.1 Warranty on Terminal Delivery**
+
+Every exhibitor whose animal is delivered for slaughter under this chapter warrants, whether or not the animal was sold in the Market Livestock Sale, that the carcass of the animal complies with the food-safety laws named in CC 4.7.2, is fit for human consumption, contains no trace or residue of any illegal drug or of any substance not approved for administration to the animal under applicable law or the requirements of this book, reveals no evidence of any unethical fitting practice as defined at CC 3.1.13, and presents no unusual condition that would materially diminish the value of the carcass.
+
+The warranty in this section attaches to the delivery of an animal for slaughter, and not to participation in the sale. A market poultry bird that is terminal under CC 3.6.3 and does not sell is delivered for slaughter and carries this warranty.
+
+**CC 4.7.2 Named Food-Safety Laws**
+
+The warranty at CC 4.7.1 is made under the following laws. The United States Department of Agriculture Wholesome Meat Act governs cattle, sheep, swine, and goats. The Poultry Products Inspection Act governs poultry. A market species not covered by either named act is warranted to the same standard by this book, and the market rabbit is the current instance of such a species.
+
+**CC 4.7.3 Withdrawal Periods**
+
+An antibiotic, a sulfonamide, and any other drug administered to a market animal carries a required withdrawal period. The exhibitor shall observe the label directions for use and the withdrawal period of every drug administered to a market animal. Before administering an antibiotic or a sulfonamide, the exhibitor shall consult a licensed and practicing veterinarian or the label directions of the drug.
+
+**CC 4.7.4 Residue and Condemnation**
+
+Where a drug or chemical residue is found in the tissue of a carcass, the carcass may be condemned. Where a carcass of an animal sold through the Market Livestock Sale is condemned for a drug or chemical residue, the Custer County Fair is not liable or responsible for the condition of the carcass or for the sale price of the animal, and the exhibitor forfeits the sale price.
+
+**CC 4.7.5 Warranty Disclosure**
+
+Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §5. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
+
 ---
 
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
@@ -757,61 +885,3 @@ Compliance with this protest and appeal process is mandatory prior to seeking re
 4-H, FFA, or extension staff may take immediate action to remove a participant from the fairgrounds and other action as needed, where there is an emergency or significant risk of continuing misconduct. In those cases, the immediate action is temporary discipline and 4-H, FFA, or extension staff must arrange for the procedures set out under Disciplinary Procedures above as soon as possible but in no event longer than seven days from the temporary discipline.
 
 ---
-
-## Livestock Sale
-
-### 4-H & FFA Livestock Sale
-
-Sale date and time: Saturday, July 18, 2026, 12:00 pm.
-
-All livestock exhibits not being sold need to be removed from the fairgrounds before 9:00 am on Saturday.
-
-**General rules**
-
-Market livestock sale rules will be reviewed on an annual basis with changes made as needed.
-
-An exhibitor may sell no more than two market animals at the Market Livestock Sale, and they must be of different species. In addition, an exhibitor may sell one meat pen of rabbits.
-
-All Grand Champion and Reserve Grand Champion market animals will sell. This applies in every market species and is not limited by the sale limit above. An exhibitor who wins championships in more than two species will sell all of those champions.
-
-The only case in which one exhibitor sells two market animals of the same species is when that exhibitor owns both the Grand Champion and the Reserve Grand Champion of that species. Both animals will sell.
-
-The sale order will be determined by the sale committee or Fair Board.
-
-In order to sell market beef animals, each exhibitor must present a bill of sale to the brand inspector prior to the sale.
-
-The sale weight will be the weight established at the weigh-in.
-
-Market goats (wethers or does) must weigh a minimum of 55 lbs. and must be a milk-tooth goat to be eligible to sell.
-
-Market swine must weigh a minimum of 220 lbs. and a maximum of 290 lbs. If swine is over 290 lbs, it can still be sold, but is not eligible for competition.
-
-Market sheep must weigh a minimum of 105 lbs. and no maximum.
-
-Market beef must weigh a minimum of 1,000 lbs. and no maximum.
-
-All exhibitors must notify the sale committee of the animals they will sell. Deadline for this notification will be one hour after the conclusion of the beef show. Failure to comply may result in the lightest weight animal being sold.
-
-**Marketing:** Open competitive marketing will prevail. Animals are sold to the highest bidder. Once the animal is sold in the rings, all sales are final.
-
-Market animals do not have to be sold. However, if sold, the project is terminated. Project termination is defined as the animal may not be exhibited in any other show or competition.
-
-Animals cannot be withdrawn from the sale after they have entered the sale ring.
-
-Arrangements for the payment, trucking, slaughter, and processing of private sale animals must be taken care of by the exhibitor.
-
-Only bona fide 4-H age youth (no associate member 4-H youth) and FFA youth are eligible to sell at the market livestock sale.
-
-### United States Department of Agriculture Wholesome Meat Act
-
-All members participating in the Livestock Sale must sign and return a copy of this act to the fair office with their sale slip. Both are provided in your livestock folders.
-
-The United States Department of Agriculture Wholesome Meat Act applies to the sale of market livestock sold during the Custer County Fair as follows:
-
-- Animals must be in good health and carcasses free of drug or chemical residues.
-- Antibiotics and sulfonamides have required withdrawal periods.
-- Drug label directions for use and withdrawal periods apply.
-
-If drug or other chemical residues are found in the tissue of carcasses, the entire carcass may be condemned. If drug or other chemical residues are found in the tissue of carcasses of animals sold through sales connected with the Custer County Fair, said show will in no way be liable or responsible for the condition of carcass or sale price of animal. Exhibitor forfeits all rights to the sale price. Before administering antibiotics and/or sulfonamides, consult a licensed and practicing veterinarian, or label directions of the drug.
-
-To be eligible to sell market animals, all exhibitors and parents are required to sign a copy of the Wholesome Meat Act Disclosure. This is to be turned into the sale committee no later than one hour after the market beef show.
