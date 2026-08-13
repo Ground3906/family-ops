@@ -304,7 +304,7 @@ Custer's Breeding Beef department exists but carries no defined classes, only a 
 
 The market section heading reads "MARKET ELIGIBLE LIVESTOCK AND POULTRY RULES AND REGULATIONS" while the section contains only Market Swine, Market Beef, Market Sheep, and Market Goat. No market poultry department and no market rabbit department exist anywhere in the source. Poultry and Rabbit in CC 3 are therefore new construction against locked direction, not consolidation of existing text.
 
-Three defects in the source itself, recorded so they are not mistaken for extraction errors: Market Swine's project exhibit rules open with three numbered stubs carrying no text, and two general rules are truncated mid-sentence.
+Two defects in the source itself, recorded so they are not mistaken for extraction errors: two general rules are truncated mid-sentence. An XML-level re-extraction 8/12/2026 confirmed Market Swine's project exhibit rules run fully populated, six items straight through, correcting an earlier and incorrect claim that they opened with three textless numbered stubs.
 
 ## The Wholesome Meat Act does not reach two market species
 
