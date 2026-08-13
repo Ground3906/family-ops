@@ -199,7 +199,7 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-11 08:00 [W] XC practice :: kids :: end=09:15
 [CAL] 2026-08-12 17:00 [W] XC practice :: kids :: end=18:15 :: notes="optional - coaches have CPR training"
 [CAL] 2026-08-13 16:15 [W] XC practice :: kids :: end=17:30
-[CAL] 2026-08-14 08:00 [W] XC practice :: kids :: end=09:15
+[CAL] 2026-08-14 08:00 [W] XC practice :: kids :: end=09:15 :: cancel=confirmed
 <!-- HS Meet schedule - times are tentative per schedule header -->
 [CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
 [CAL] 2026-08-28 13:55 [W] XC meet - Husky Invite :: kids :: location="Platte Canyon XC Course, Bailey, CO" :: notes="HS Boys 1:55 PM. Leave 9:00 AM."
@@ -626,8 +626,8 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed :: notes="entered wrong, rescheduled to 2026-08-26 1300"
 [CAL] 2026-08-12 15:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=17:00 :: cancel=confirmed :: notes="rescheduled to 2026-08-13 1000"
 [CAL] 2026-08-13 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
-[CAL] 2026-08-14 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
-[CAL] 2026-08-15 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO"
+[CAL] 2026-08-14 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO" :: cancel=confirmed
+[CAL] 2026-08-15 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO" :: cancel=confirmed
 [CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
