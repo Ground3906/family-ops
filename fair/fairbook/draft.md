@@ -386,7 +386,7 @@ Requirements governing market exhibitors that are stated elsewhere in this book 
 
 **CC 3.2.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Beef.
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Beef.
 
 **CC 3.2.2 Age**
 
@@ -428,7 +428,7 @@ Custer County acknowledges and adopts the CSF Market Beef competition requiremen
 
 **CC 3.3.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Swine.
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Swine.
 
 **CC 3.3.2 Maximum Weight**
 
@@ -460,7 +460,7 @@ Custer County acknowledges and adopts the CSF requirement that exhibitors only a
 
 **CC 3.4.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1. Requirements applying to every animal exhibitor are stated at CC 2.12 through CC 2.21. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep.
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep.
 
 **CC 3.4.2 Scrapie Identification**
 
@@ -487,6 +487,78 @@ CC 3.1.13 permits the drenching of an animal by the drenching process. For a mar
 **CC 3.4.7 Classes Offered**
 
 The class offered in the market sheep division is Market Sheep. Breeding Sheep is not a market class. See CC 6.
+
+**CC 3.4.8 Maximum Weight**
+
+The maximum weight for a market sheep is listed in Addendum §8. A market sheep over the maximum weight is not eligible for competition in the market sheep show. A market sheep over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+
+**CC 3.4.9 Eligible Animals**
+
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing eligible animals, under which purebred, grade, and crossbred wethers and ewe lambs are eligible, and a male animal having one or both testicles contained in the body cavity is not eligible to show. The licensed veterinarian may examine any market sheep for this condition upon arrival at the fairgrounds under CC 2.12.
+
+**CC 3.4.10 Holding Area Access**
+
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the holding area, under which no iced or wet towel is allowed in the holding area, and no person other than the exhibitor may enter a sheep holding or staging pen at any time.
+
+---
+
+### CC 3.5 — Market Goat
+
+**CC 3.5.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Goat.
+
+**CC 3.5.2 Eligible Animals**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing eligible animals, under which does and wethers are eligible to be shown in the market goat show.
+
+**CC 3.5.3 Maximum Weight**
+
+The maximum weight for a market goat is listed in Addendum §8. A market goat over the maximum weight is not eligible for competition in the market goat show. A market goat over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+
+**CC 3.5.4 Scrapie Identification**
+
+CC 3.4.2 states the federal scrapie identification requirement and its application at the Custer County Fair. Every goat entered in the market goat show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
+
+**CC 3.5.5 Castration**
+
+A wether entered in the market goat division shall be castrated before the first weigh-in.
+
+**CC 3.5.6 Horns**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing horns, under which all goats must have horns tipped blunt and no sharp points are allowed. Custer County reads this requirement as follows. The horns of every market goat shall be blunt tipped before the county fair weigh-in.
+
+**CC 3.5.7 Shearing**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing shearing, under which a market goat must be slick-shorn and of uniform length from the knee and hock up. Custer County reads this requirement as follows. Every market goat shall be shorn to no more than 1/4 inch before the county fair weigh-in.
+
+**CC 3.5.8 Age**
+
+Every market goat shall have its milk teeth at the county fair weigh-in. The licensed veterinarian may perform a dental check to verify the age of any market goat.
+
+**CC 3.5.9 Weight Gain**
+
+Every market goat shall increase at least 5 pounds from the beginning weigh-in weight to the weight established at the county fair weigh-in.
+
+**CC 3.5.10 Muzzles**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing muzzles, under which a meshed or plastic muzzle may be used, and the style of muzzle must allow the goat to drink water.
+
+**CC 3.5.11 Drenching**
+
+CC 3.1.13 permits the drenching of an animal by the drenching process. For a market goat, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
+
+**CC 3.5.12 Bracing and Feet**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing the position of the animal in the show ring, under which the front feet of the goat must remain on the show ring floor while the animal is being shown, and the judge and the superintendent have the discretion to enforce disqualification. Custer County provides that bracing is permitted while showing a market goat, provided the front feet of the animal remain on the ground.
+
+**CC 3.5.13 Holding Area Access**
+
+Custer County acknowledges and adopts the CSF Market Goat competition requirements governing the holding area, under which no iced or wet towel is allowed in the holding area, and no person other than the exhibitor may hold or stage a goat holding pen at any time.
+
+**CC 3.5.14 Classes Offered**
+
+The class offered in the market goat division is Market Goat. Breeding Goat, Dairy Goat, Fiber Goat, and Utility Goat are not market classes. See CC 6.
 
 ---
 
