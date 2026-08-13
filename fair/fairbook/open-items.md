@@ -14,10 +14,13 @@ Standing items that persist across sessions. Not doctrine (that is `charter.md`)
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
 - **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins. Now also carries a register pass: every chapter reads in the single formal register.
+- **CC 4's residue warranty trigger is too narrow for poultry.** The county's Wholesome Meat Act disclosure is signed by exhibitors participating in the sale. Under CC 3.6, every market bird is terminal whether or not it sells, so an unsold bird enters the food chain with no signed warranty. CC 4 must attach the warranty to terminal delivery rather than to sale participation. The Poultry Products Inspection Act and the county-original catch-all are already locked to print alongside the Wholesome Meat Act.
+- **Poultry sale-counting rules, locked, to print in CC 4.** A market chicken entry is a pen of three and counts as one market animal against the sale limit, matching the rabbit meat pen. Chicken and turkey count as separate species for the different-species requirement, so an exhibitor may sell a champion chicken pen and a champion turkey.
 
 ## Method
 
 - **Shared-layer CSF re-audit still owed.** The both-directions department pass (charter Part Six) has been run against the CSF Market Beef, Market Hogs, and Market Lambs department sections. It has not been run against CC 3.1's shared-layer CSF sections, or against CC 2 and CC 1's CSF-derived content. Shared layers can carry silence-gaps too, and those are higher-stakes because every species leans on them.
+- **The prior-sale ownership bar has no county analog.** CSF bars any market animal sold at a county, district, or premium sale after the ownership date from competing at the current year's fair. Custer has CC 1.3 Exhibition Bar, which reaches sales outside the county's own sale, and CC 2.1, which bars double-entry at another Colorado county fair. Neither reaches an animal bought out of another fair's auction ring. Reaches every market species, so it belongs at CC 3.1 rather than in a subchapter.
 
 ## Known gaps in finished chapters
 
