@@ -382,6 +382,10 @@ Where the Colorado State Veterinarian's Office confirms an outbreak in Custer Co
 
 Requirements governing market exhibitors that are stated elsewhere in this book include animal health at CC 2.12; care and custody at CC 2.13; showing your own animal at CC 2.14; water at CC 2.15; barn hours at CC 2.16; unmanageable animals at CC 2.17; ringside promptness at CC 2.18; ribbons and placings at CC 2.19; show dress at CC 2.20; stall cleanup and checkout at CC 2.21; and the Livestock Sale at CC 4.
 
+**CC 3.1.16 Animals Sold at Another Sale**
+
+Custer County acknowledges and adopts the CSF requirement that a market animal sold through a county, district, or other livestock sale after the date of ownership is not eligible for the market divisions of this chapter. A sale is complete at the fall of the auctioneer's gavel, without regard to the disposition, payment, or delivery of the animal. An animal sold through any such sale after its ownership date shall not be weighed in, shown, or sold at the Custer County Fair.
+
 ---
 
 ### CC 3.2 — Market Beef
