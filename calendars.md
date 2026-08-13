@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-12.
+Last batch: 2026-08-13.
 
 ---
 
@@ -634,6 +634,7 @@ Last batch: 2026-08-12.
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:30 [D] CT scan :: appointments :: stripe=appt :: end=11:30 :: location="1263 Lake Plaza Dr Suite 100, Colorado Springs, CO"
 [CAL] 2026-08-17 17:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=18:00 :: notes="telehealth"
+[CAL] 2026-08-18 14:00 [FAM] Newborn and family photos :: family :: tentative=true
 [CAL] 2026-08-19 10:00 [M][R] Apt - Tracey :: appointments :: stripe=appt :: end=12:00
 [CAL] 2026-08-19 14:30 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-20 13:45 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
