@@ -189,6 +189,8 @@ State the adopted rule, then print the county's current specifics beneath it as 
 - **IAFE cites by item number.** Its eight guidelines are numbered, so "IAFE National Code of Show Ring Ethics, Item 7" is a real citation. The Code itself is an Addendum instrument, signed, referenced in the book but never restated.
 - **Abbreviations are defined once in CC 1 and used everywhere after.** 4-H, CSF, CSU Extension, FFA, GCR, IAFE, MQA. Spelling out a defined term after CC 1 is a defect.
 - **Citation-first exceptions.** Any Custer exception that extends, narrows, or applies an adopted rule cites the source first, then states the county's application. Without the citation, an exception carrying a CSF principle reads as Custer inventing liability.
+- **The adoption phrase is fixed.** Every adoption lead-in reads "Custer County acknowledges and adopts [source cited by name]," followed by what is being adopted. One phrase, used identically everywhere. A drafter varying it — recognizes, follows, incorporates — reintroduces the vocabulary drift the no-synonyms rule exists to prevent.
+- **CSF department requirements cite by named department.** The GCR cites by heading, IAFE by item number, and the CSF department requirements by the name of the department: "the CSF Market Hogs competition requirements." These are numbered lists printed under a department's "Competition Requirements" heading, not GCR headings, so a GCR-style heading citation would send a parent to the wrong document.
 
 ## Entity swaps
 
