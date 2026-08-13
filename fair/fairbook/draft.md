@@ -56,6 +56,8 @@ The following abbreviations are used throughout this book.
 
 **GCR** — Colorado State Fair General Competition Requirements, the CSF's governing rulebook for all competitions.
 
+**HSRB** — Colorado 4-H Horse Show Rule Book (LA1500K), the CSU Extension rulebook that governs the conduct of 4-H horse classes, adopted by CC 5.
+
 **IAFE** — International Association of Fairs and Expositions, the organization that publishes the National Code of Show Ring Ethics adopted by this book.
 
 **MQA** — Meat Quality Assurance, a national certification program for livestock producers covering drug use and animal care practices.
@@ -797,6 +799,96 @@ Where a drug or chemical residue is found in the tissue of a carcass, the carcas
 **CC 4.7.5 Warranty Disclosure**
 
 Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §5. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
+
+---
+
+## CC 5 — Horse
+
+This chapter governs the horse project at the Custer County Fair. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
+
+**CC 5.1 Project Eligibility**
+
+Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 4, under which the horse a member intends to use as a project animal must be designated by May 1 of the current year, and under which an identification certificate must be on file with the CSU Extension office under subpart A.
+
+Custer County provides that a member must meet all requirements of the 4-H horse project to participate in the horse show. These include the Animal Care and Housing Form, the Lease Agreement, the Animal Identification, and all club and project requirements. A member must submit an e-record book within one week after the fair.
+
+**CC 5.2 Access and Care**
+
+Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 3, under which the 4-H member should have complete access to the project horse at any time and should provide the care and management of the horse a majority of the time, whether the horse is owned or leased, and under which a project horse may be boarded at a commercial facility.
+
+Custer County reads this requirement as follows. The exhibitor must have complete access to the horse at all times. The exhibitor must provide the full care and management of the horse for the majority of the time, whether the horse is owned or leased.
+
+**CC 5.3 Governing Rules**
+
+The HSRB governs the conduct of all Custer County 4-H and FFA horse classes, except where this chapter states a Custer County requirement.
+
+**CC 5.4 One Horse Per Class**
+
+Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 4.C, under which a project horse may be shown by more than one member where those members are entered in different age divisions or classifications, at the option of the Authority or a specific county rule.
+
+Custer County provides that no horse may be shown in the same class by more than one contestant.
+
+**CC 5.5 Stallion Prohibition**
+
+Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 7, under which stallions over one year of age are prohibited in 4-H.
+
+Custer County provides that stallions are prohibited in all classes.
+
+**CC 5.6 Divisions**
+
+The horse show is divided into five divisions: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The classes offered in each division are listed in Addendum §7.
+
+**CC 5.7 Mandatory Classes**
+
+Every contestant showing at the Custer County Fair must participate in the showmanship class and, if riding, the horsemanship class, and must take the written test.
+
+**CC 5.8 Scoring**
+
+Placings in each class are scored using a weighted point system based on the number of participants in that class.
+
+**CC 5.9 Awards**
+
+Champion and Reserve Champion awards are given in the Novice, Junior, and Senior levels of each division: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The showmanship score is added into the total Western division score. Where a tie exists, the showmanship placing breaks it. Where the tie continues, the written test score breaks it.
+
+Grand Champion and Reserve Grand Champion are awarded to the Junior and Senior exhibitor with the highest combined points across In-Hand, Western, English, Gymkhana (trotting or regular), and the written test score.
+
+The high-point buckle is awarded to the Junior and Senior exhibitor with the highest combined points across In-Hand, Western, English, Gymkhana (trotting or regular), and the written test score, in each age group.
+
+**CC 5.10 Dress**
+
+Custer County acknowledges and adopts the HSRB, Western Division, Personal Attire, Rule 90, and the corresponding attire requirements stated elsewhere in the HSRB for the English, Gymkhana, and other divisions.
+
+**CC 5.11 Safety**
+
+Custer County acknowledges and adopts the HSRB Protective Headgear Policy and Rule 24, governing required headgear in gymkhana and over-fences events and the excusal of a horse or rider not under suitable control.
+
+**CC 5.12 Rules That Reach This Department**
+
+Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Requirements governing horse exhibitors that are stated elsewhere in this book include interference with competition at CC 2.6 and unmanageable animals at CC 2.17.
+
+**CC 5.13 Age Divisions**
+
+Custer County acknowledges and adopts HSRB Rule 2 for the base date used to compute a contestant's age.
+
+Custer County provides the following age divisions. Junior is 8 to 13 years old. Senior is 14 to 18 years old. Novice is a first-year competitor with no prior show experience, regardless of age. The Novice division is walk-trot only. A Novice contestant may opt out of the Novice division and compete in their age division with parent or guardian approval.
+
+**CC 5.14 Gymkhana Division Exclusivity**
+
+A contestant may compete in the Trotting Gymkhana division or the Gymkhana division, but not both.
+
+**CC 5.15 Trail as a Floating Class**
+
+The Trail class floats between the English and Western divisions. A contestant choosing to show Trail must elect which division that class's points are credited to. Where a contestant does not elect, the class is credited to the Western division.
+
+**CC 5.16 Effect of Disqualification**
+
+A contestant who is disqualified from a class, or who receives no time in a timed event, earns no points from that contest.
+
+**CC 5.17 Trotting Gymkhana**
+
+Custer County acknowledges and adopts HSRB Rules 235 through 244, the general rules and regulations governing Gymkhana Division events, for the conduct of Trotting Gymkhana events.
+
+Custer County provides that a horse breaking from the jog or trot into a lope or canter during a Trotting Gymkhana event is disqualified from that event.
 
 ---
 
