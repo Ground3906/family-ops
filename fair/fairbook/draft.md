@@ -46,6 +46,8 @@ The following abbreviations are used throughout this book.
 
 **4-H** — 4-H Youth Development Program, administered locally through CSU Extension.
 
+**APA** — American Poultry Association, the organization that publishes the Standard of Perfection defining recognized poultry breeds and varieties.
+
 **CSF** — Colorado State Fair.
 
 **CSU Extension** — Colorado State University Extension, the county's administrator of the 4-H Youth Development Program.
@@ -559,6 +561,62 @@ Custer County acknowledges and adopts the CSF Market Goat competition requiremen
 **CC 3.5.14 Classes Offered**
 
 The class offered in the market goat division is Market Goat. Breeding Goat, Dairy Goat, Fiber Goat, and Utility Goat are not market classes. See CC 6.
+
+---
+
+### CC 3.6 — Market Poultry
+
+**CC 3.6.1 Rules That Reach This Department**
+
+Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Poultry.
+
+**CC 3.6.2 Health and Biosecurity**
+
+Every bird entered in a market poultry division is subject to inspection by the licensed veterinarian upon arrival at the fairgrounds, before unloading, under CC 2.12. A bird showing signs of illness shall be refused entry and shall not be unloaded. A bird that becomes ill while on the fairgrounds shall be isolated immediately, and the Authority shall report the illness to the Colorado State Veterinarian's Office.
+
+**CC 3.6.3 Terminal Show**
+
+The market poultry show is a terminal show. Every bird entered in a market poultry division goes to slaughter, whether or not the bird sells in the Livestock Sale. A bird entered in a market poultry division shall not leave the fairgrounds alive and shall not return to a home flock. This requirement protects the flocks of Custer County from disease carried by birds that have been housed together at the fair.
+
+**CC 3.6.4 Weigh-In Unit and Official Weight**
+
+A market chicken entry is a pen of three birds of the same breed. A market turkey entry is a single bird. Market poultry shall be weighed on the poultry scale designated by the Authority rather than on the scale stated at CC 3.1.4, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each bird shall be recorded individually at the county weigh-in. For a pen of chickens, the weight of the pen shall be derived from those recorded weights under CC 3.1.4.
+
+**CC 3.6.5 Identification**
+
+Every bird entered in a market poultry division shall carry a numbered leg band or wing band. The band shall be on the bird at the county weigh-in and shall remain on the bird throughout the entire fair under CC 3.1.6. The band number of every bird shall be recorded at the county weigh-in, and no band number shall be changed after the close of weigh-in.
+
+**CC 3.6.6 Classes Offered**
+
+The classes offered in the market poultry division are Market Fryer Pen, Market Broiler Pen, Market Turkey Hen, and Market Turkey Tom. A Market Fryer Pen entry and a Market Broiler Pen entry are each a pen of three chickens of the same breed. Non-market poultry is not a market class. See CC 6.
+
+**CC 3.6.7 Class Weights**
+
+The weight window for each market poultry class is listed in Addendum §8. Each window is stated to one tenth of a pound, and no bird qualifies for more than one class. For a pen of chickens, every bird in the pen shall fall within the window for the class entered.
+
+**CC 3.6.8 Age**
+
+A chicken entered in the Market Fryer Pen class shall be no more than 8 weeks of age at the county weigh-in. A chicken entered in the Market Broiler Pen class shall be no more than 20 weeks of age. A turkey entered in either market turkey class shall be no less than 16 weeks and no more than 20 weeks of age. The exhibitor shall present a record of the hatch date of every bird at the county weigh-in.
+
+**CC 3.6.9 Turkey Breed**
+
+Custer County acknowledges and adopts the CSF Market Turkeys competition requirements governing breed, under which a turkey entered in a market turkey class shall be of a breed or variety recognized by the APA.
+
+**CC 3.6.10 Judging**
+
+Custer County acknowledges and adopts the CSF Market Chickens competition requirements governing judging, under which birds are judged on uniformity of weight, shape, type, and fleshing.
+
+**CC 3.6.11 Handling at the Show**
+
+The exhibitor shall carry the exhibitor's own birds to the judging table and shall remain at the table until the judge dismisses the entry. No parent or other adult shall carry a bird to or from the judging table. An entry handled in violation of this section shall be disqualified.
+
+Where the exhibitor has more than one entry in the same class, another Custer County 4-H or FFA member in good standing who is also exhibiting may assist the exhibitor under CC 2.14. The exhibitor shall report that member's name to the Authority before the class, with the superintendent of the department as lead.
+
+After a bird has been cooped, it shall not be removed from its assigned cage except to be shown. A bird may be touched, handled, and managed inside the cage only by its exhibitor or by the Authority.
+
+**CC 3.6.12 Entry Limit**
+
+The maximum number of entries an exhibitor may enter in each market poultry class is listed in Addendum §8. Pen and cage space is assigned under CC 3.1.11.
 
 ---
 
