@@ -344,7 +344,7 @@ All nine rewrite to vest in **the Authority with the superintendent named as lea
 
 ## Pen allocation changed principle
 
-Locked 8/12/2026 at CC 3.1.10. The county rule gave space priority in the barns to Senior members, full stop. CSF allocates by animal, one pen per head delivered, with no ranking of exhibitors at all. Custer is running out of space, so neither model survives alone: every exhibitor is guaranteed one pen per species entered, seniority sets the order of assignment, and the superintendent runs both the guaranteed pass and the distribution of whatever space is left.
+Locked 8/12/2026 at CC 3.1.11. The county rule gave space priority in the barns to Senior members, full stop. CSF allocates by animal, one pen per head delivered, with no ranking of exhibitors at all. Custer is running out of space, so neither model survives alone: every exhibitor is guaranteed one pen per species entered, seniority sets the order of assignment, and the superintendent runs both the guaranteed pass and the distribution of whatever space is left.
 
 This is a real change in principle from a pure seniority queue to a floor plus a seniority-ordered remainder, and it lands on the most drama-prone rule in the book. CSF's tampering language is adopted alongside it, which gives the assignment a printed consequence it never had.
 
