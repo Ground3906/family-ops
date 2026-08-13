@@ -214,6 +214,7 @@ Official-sounding and loophole-resistant pull in the opposite direction from com
 - Rule text targets a fifth-grade reading level.
 - **Bullets are banned in rule text.** A bullet cannot be cited, so anything a family can be held to carries a number or a letter. If it is a bullet, it is not a rule.
 - **Book promises print minimal.** Where the book commits the fair to something, promise the least that solves the problem. Operational specificity stays in practice and committee documents.
+- **Judging criteria print without point values.** Where CSF states a numeric point breakdown for judging criteria, the book adopts the named criteria and drops the weighting. Applied at CC 3.6.10 and CC 3.7.8.
 - Em dashes are permitted here and in the book. These are documents of record, not Matt's authored voice.
 
 ## One register
@@ -334,6 +335,12 @@ Stated opponent-proof: behavior pattern and buyer-relations stake, no blame on a
 
 **Sale-day information practice.** The auction runs live on an auction site, deliberately unnamed in the book to avoid lock-in — the veterans' existing instinct is the volatility doctrine already in practice. Sale lots and order are distributed physically ringside. Misprints are hand-scratched on the podium sale sheet and announced during the sale; the podium sheet as annotated is the single source of information.
 
+## Market Rabbit is the sale-integrity case, not a third terminal rationale
+
+Found 8/13/2026, reading the CSF Market Rabbits department (Dept 802.00) against the terminal-rationale question raised building CC 3.6. Only the Grand Champion and Reserve Grand Champion pens qualify for the Livestock Sale, and CSF states plainly that the sale is terminal only for the pens that qualify. The department's own schedule has every non-qualifying pen off the grounds the same weekend rather than routed to slaughter.
+
+This is the beef, hogs, lambs, and goats pattern. Poultry's terminal-by-biosecurity rule, adopted at CC 3.6.3 and explained at the Part Five finding on two terminal rationales, does not extend to rabbit; nothing in CSF's rabbit text carries a disease or commingling rationale. Resolved 8/13/2026: CC 3.7.2 states the distinction explicitly rather than leaving it to inference, since the two departments sit back to back in the book and silence would invite a reader to assume the poultry rule carries over.
+
 ---
 
 # PART FIVE — POLITICAL FLAGS
@@ -429,11 +436,14 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices and line numbers live only in repo records.
 - **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
+- **Large or multi-file builds chunk by default.** A single commit word covering a big write defaults to sequential chunks, one write and one verified read-back per chunk, as the execution strategy, not a scope question reopened each time.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
 
 ## Source re-extraction
 
 County book (.docx): curl the raw GitHub URL, `pip install python-docx --break-system-packages -q`, iterate `doc.paragraphs`, write a numbered extract. CSF handbook and GCR (.pdf): curl, then `pdftotext -layout`.
+
+Raw fetches (`raw.githubusercontent.com`) need a commit SHA or branch in the URL, never a blob SHA; an invalid ref returns an empty file rather than an error. Sanity-check line count immediately after any raw fetch used as an edit base.
 
 Archive holds: the 2026 county book, the CSF handbook, the GCR, and the Colorado 4-H project guides for cat, dog, shooting sports, and consumer science.
