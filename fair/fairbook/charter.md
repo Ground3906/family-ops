@@ -28,15 +28,14 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 5 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026. Remaining, in this order:
+CC 1 through CC 5, CC 7, and CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. Remaining, in this order:
 
-1. **CC 8** — Shooting Sports. Standalone, no racking problem, fast.
-2. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
-3. **CC 7**, then **CC 9**, then **CC 10**.
-4. **Addendum §1 through §9.**
-5. **Cover page** — mission statement and graphic.
-6. **Table of contents** — generated from finished chapters.
-7. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
+1. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
+2. **CC 9**, then **CC 10**.
+3. **Addendum §1 through §9.**
+4. **Cover page** — mission statement and graphic.
+5. **Table of contents** — generated from finished chapters.
+6. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
 
 Shared layers build before the projects that lean on them. A reconciliation sweep runs at the end of each chapter to catch commonalities the project passes surface that the chapter's shared layer missed.
 
@@ -341,6 +340,14 @@ Found 8/13/2026, reading the CSF Market Rabbits department (Dept 802.00) against
 
 This is the beef, hogs, lambs, and goats pattern. Poultry's terminal-by-biosecurity rule, adopted at CC 3.6.3 and explained at the Part Five finding on two terminal rationales, does not extend to rabbit; nothing in CSF's rabbit text carries a disease or commingling rationale. Resolved 8/13/2026: CC 3.7.2 states the distinction explicitly rather than leaving it to inference, since the two departments sit back to back in the book and silence would invite a reader to assume the poultry rule carries over.
 
+## Showmanship timing contradicts the written county rule
+
+Found 8/13/2026 building CC 7. The county book states showmanship classes run "immediately prior to the judging" of their paired class, but actual practice runs the opposite: the market or breed class is judged first, and showmanship for that species runs after. CC 7.1.6 was drafted to match practice rather than the old written rule. Recorded so the change is not mistaken for a drafting error at the conformance pass.
+
+## CSF's Master Showmanship Competition is the state-level feeder event
+
+Found 8/13/2026 building CC 7. CSF runs its own Master Showmanship Competition (Division 001, Department 925) at the state level, open only to one exhibitor per county fair, fed by each county's own "Round Robin" or equivalent qualifying event. Custer's Livestock Master Showmanship Contest at CC 7.2 is that qualifying event, though the book does not currently point to the CSF competition it feeds. Previously unrecorded institutional knowledge.
+
 ---
 
 # PART FIVE — POLITICAL FLAGS
@@ -444,6 +451,7 @@ The county book's horse dress rules require long-sleeve button-down shirts with 
 - **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
+- **Scripted inserts, never manual retype.** A prior session introduced a typo by hand-retyping a full file's content for the MCP write tool. Standard method now: fetch the file fresh, insert new content into that exact fetched copy via a scripted string-replace with a `count==1` assertion, then push that copy verbatim. Read-back diffs against the pre-push local copy, not just against expected content.
 
 ## Source re-extraction
 
