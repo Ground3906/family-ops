@@ -10,7 +10,7 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Blocking the October publish
 
-- **CC 6 through CC 10** — unwritten. CC 1 through CC 5 are finished.
+- **CC 6, CC 9, CC 10** — unwritten. CC 1 through CC 5, CC 7, and CC 8 are finished.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
@@ -31,6 +31,7 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Unresolved rule questions — route at the relevant chapter pass
 
+- **Companion Animal Master Showmanship under-10 open-field rule.** The county book's rule that all Showmen (not just Champions and Reserves) become eligible when fewer than 10 exhibitors compete combined across Cat, Poultry, Dog, and Llama was not adopted into CC 7.3, pending a working-group look at whether a fixed numeric threshold like this belongs printed in the rule body. Not silently dropped; the double-championship backfill piece of the same source rule was adopted.
 - **Poultry health and biosecurity gate at check-in.** Re-ask when a poultry pass comes up. CC 3.6 shipped with the terminal-show and biosecurity-report rules; this was a separate check-in gate question with no recoverable lock.
 - **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
 - **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
