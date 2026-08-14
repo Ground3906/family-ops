@@ -382,7 +382,33 @@ Where the Colorado State Veterinarian's Office confirms an outbreak in Custer Co
 
 **CC 3.1.15 Rules Stated Elsewhere**
 
-Requirements governing market exhibitors that are stated elsewhere in this book include animal health at CC 2.12; care and custody at CC 2.13; showing your own animal at CC 2.14; water at CC 2.15; barn hours at CC 2.16; unmanageable animals at CC 2.17; ringside promptness at CC 2.18; ribbons and placings at CC 2.19; show dress at CC 2.20; stall cleanup and checkout at CC 2.21; and the Livestock Sale at CC 4.
+Requirements governing market exhibitors that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 2.12 — Animal health
+
+CC 2.13 — Care and custody
+
+CC 2.14 — Showing your own animal
+
+CC 2.15 — Water
+
+CC 2.16 — Barn hours
+
+CC 2.17 — Unmanageable animals
+
+CC 2.18 — Ringside promptness
+
+CC 2.19 — Ribbons and placings
+
+CC 2.20 — Show dress
+
+CC 2.21 — Stall cleanup and checkout
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.1.16 Animals Sold at Another Sale**
 
@@ -394,7 +420,17 @@ Custer County acknowledges and adopts the CSF requirement that a market animal s
 
 **CC 3.2.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Beef.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Beef. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.2.2 Age**
 
@@ -436,7 +472,17 @@ Custer County acknowledges and adopts the CSF Market Beef competition requiremen
 
 **CC 3.3.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Swine.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Swine. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.3.2 Maximum Weight**
 
@@ -468,7 +514,17 @@ Custer County acknowledges and adopts the CSF requirement that exhibitors only a
 
 **CC 3.4.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.4.2 Scrapie Identification**
 
@@ -514,7 +570,17 @@ Custer County acknowledges and adopts the CSF Market Lambs competition requireme
 
 **CC 3.5.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Goat.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Goat. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.5.2 Eligible Animals**
 
@@ -574,7 +640,17 @@ The class offered in the market goat division is Market Goat. Breeding Goat, Dai
 
 **CC 3.6.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Poultry.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Poultry. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.6.2 Health and Biosecurity**
 
@@ -630,7 +706,17 @@ The maximum number of entries an exhibitor may enter in each market poultry clas
 
 **CC 3.7.1 Rules That Reach This Department**
 
-Requirements applying to every market project are stated at CC 3.1, and CC 3.1.15 lists the requirements stated elsewhere in this book that reach every market exhibitor. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11. Showmanship is at CC 7 and the Livestock Sale is at CC 4. This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Rabbit.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Rabbit. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 3.1 — Requirements applying to every market project
+
+CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+
+CC 4 — The Livestock Sale
+
+CC 7 — Showmanship
 
 **CC 3.7.2 Terminal Status**
 
@@ -892,6 +978,106 @@ Custer County provides that a horse breaking from the jog or trot into a lope or
 
 ---
 
+## CC 6 — Non-Market and Small Animal
+
+This chapter governs every non-market animal project at the Custer County Fair. CC 6.1 states the requirements that apply to all non-market and small animal projects. The subchapters that follow state the requirements of each department, and carry only those rules that differ from CC 6.1 or that exist only within that department. Custer County acknowledges and adopts the GCR as the frame governing conduct at the fair. Each subchapter names the authority governing the conduct of its own classes.
+
+### CC 6.1 — General Non-Market Requirements
+
+**CC 6.1.1 Rules That Reach This Chapter**
+
+Requirements governing exhibitors in this chapter that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 2.12 — Animal health
+
+CC 2.13 — Care and custody
+
+CC 2.14 — Showing your own animal
+
+CC 2.15 — Water
+
+CC 2.16 — Barn hours
+
+CC 2.17 — Unmanageable animals
+
+CC 2.18 — Ringside promptness
+
+CC 2.19 — Ribbons and placings
+
+CC 2.20 — Show dress
+
+CC 2.21 — Stall cleanup and checkout
+
+CC 3.1.10 — Market and breeding classes
+
+CC 7 — Showmanship
+
+CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 6.1.2 Eligibility**
+
+Exhibitors in the divisions of this chapter must be bona fide members of Colorado 4-H or FFA. An exhibitor must be at least eight years of age and must not have reached their nineteenth birthday as of December 31 of the current enrollment year, and must satisfy any other eligibility requirement stated for a class in order to compete in that class. General eligibility requirements applicable to all exhibitors are stated at CC 2.1.
+
+**CC 6.1.3 Breeding Records**
+
+Breeding records are not required for any breeding class.
+
+**CC 6.1.4 Pen, Stall, and Cage Assignment**
+
+Each exhibitor shall be assigned one pen, stall, or cage in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen, stall, or cage in each species entered, the superintendent shall assign any remaining space in the same order.
+
+Where the number of entries in a species exceeds the space available for that species, the guarantee of space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the space assigned to each exhibitor as needed, with the superintendent of the department as lead.
+
+Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
+
+**CC 6.1.5 Unethical Fitting Practices and Testing**
+
+Custer County acknowledges and adopts the CSF requirements governing Unethically Fitted Livestock in full, and recognizes IAFE Code of Show Ring Ethics Item 5, which states the same prohibitions. An animal is unethically fitted where it has been subjected to any practice prohibited by those requirements, including the administration of a prohibited drug; the administration of any substance by injection to alter conformation or appearance; the cutting or tearing of the hide or of any underlying tissue; the administration of a diuretic or of a drug acting on the central nervous system; the use of ice packs or other refrigerants to alter the quality of the finish of an animal; the alteration of the color or structure of hair or wool except by trimming and blocking; and any unnatural means of providing an animal feed, water, or other fluids, including by stomach pump or intravenous administration, except by the drenching process.
+
+Custer County reads these requirements to prohibit doctoring, doping, and injection for the purpose of body fill.
+
+Any animal entered in a division of this chapter may be subject to random testing for any illegal or banned substance.
+
+**CC 6.1.6 Project Ownership**
+
+Every animal entered in a division of this chapter shall be a bona fide 4-H or FFA project of the exhibitor.
+
+**CC 6.1.7 Animal Health**
+
+Every animal entered in a division of this chapter shall display good health. An animal showing evidence of poor health, or presenting a risk to other animals or to any person, may be excused from the fairgrounds by the Authority. Where the licensed veterinarian is present at the fairgrounds, the veterinarian may examine any animal in a division of this chapter and may refuse or excuse that animal per CC 1.8.1(d).
+
+### CC 6.2 — Rabbit
+
+**CC 6.2.1 Rules That Reach This Department**
+
+This subchapter states only those requirements that differ from CC 6.1 or that exist only in Rabbit. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 6.1 — Requirements applying to every non-market and small animal project
+
+CC 7 — Showmanship
+
+CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 6.2.2 Governing Rules**
+
+Custer County acknowledges and adopts the American Rabbit Breeders Association Standard of Perfection as the standard against which every rabbit in this department is judged, and the breed disqualifications recognized by the American Rabbit Breeders Association as grounds for disqualification in any conformation class.
+
+**CC 6.2.3 Classes Offered**
+
+The classes offered in the rabbit department are Showmanship, Companion Rabbit, and Breeding Rabbit. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+
+The Breeding Rabbit class is divided by age and sex as follows. Junior Doe and Junior Buck are under six months of age. Intermediate Doe and Intermediate Buck are six months of age and under twelve months of age. Senior Doe and Senior Buck are over twelve months of age.
+
+**CC 6.2.4 Awards**
+
+Ribbons are presented under CC 2.19. Each class is awarded a Champion and a Reserve Champion. Every Champion is eligible for Grand Champion. Every remaining Champion, together with the Reserve Champion of the class from which the Grand Champion was selected, is eligible for Reserve Grand Champion.
+
+---
+
 ## CC 7 — Showmanship
 
 This chapter governs showmanship classes at the Custer County Fair. Showmanship is a required class for every 4-H and FFA exhibitor in market livestock, horse, and companion and small animal projects. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
@@ -1091,5 +1277,3 @@ Compliance with this protest and appeal process is mandatory prior to seeking re
 **F. Immediate action situations**
 
 4-H, FFA, or extension staff may take immediate action to remove a participant from the fairgrounds and other action as needed, where there is an emergency or significant risk of continuing misconduct. In those cases, the immediate action is temporary discipline and 4-H, FFA, or extension staff must arrange for the procedures set out under Disciplinary Procedures above as soon as possible but in no event longer than seven days from the temporary discipline.
-
----
