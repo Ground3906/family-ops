@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/16, incl. zone chores and Sunday exception).
+Last batch: 2026-08-17 (Molly/Rileigh chore override extended to 8/17, incl. zone chores).
 
 ---
 
@@ -420,9 +420,11 @@ Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/16, incl. zone c
 <!-- WEEK A: 8/17-8/23 -->
 [CHORE] 2026-08-17 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-23
 [CHORE] 2026-08-17 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-08-23
-[CHORE] 2026-08-17 ALL-DAY [W][R] Dishes :: chore-type=dishes
-[CHORE] 2026-08-17 ALL-DAY [M][C] Animals :: chore-type=animals
-[CHORE] 2026-08-17 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-17 ALL-DAY [M][R] Bathrooms :: chore-zone=A :: notes="One-day override - Molly/Rileigh covering both zones today only. Week A zone assignment (W+C Bathrooms / M+E Floors) resumes tomorrow."
+[CHORE] 2026-08-17 ALL-DAY [M][R] Floors :: chore-zone=A :: notes="One-day override - Molly/Rileigh covering both zones today only. Week A zone assignment (W+C Bathrooms / M+E Floors) resumes tomorrow."
+[CHORE] 2026-08-17 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-17 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-17 ALL-DAY [M][R] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-18 ALL-DAY [W][C] Dishes :: chore-type=dishes
 [CHORE] 2026-08-18 ALL-DAY [M][E] Animals :: chore-type=animals
 [CHORE] 2026-08-18 ALL-DAY [R][E] Table :: chore-type=table
