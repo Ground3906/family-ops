@@ -121,6 +121,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **cancel=confirmed:** Parser skips entry entirely - removed from Cockpit display. Line stays in file permanently as audit trail. Never delete a confirmed-cancel line.
 - **When in doubt, ask Tim.** Life with 6 kids changes - don't guess at this year's schedule from last year's.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
+- **WYATT CROSS COUNTRY block is canonical. Never add individual XC practice or meet entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
@@ -194,6 +195,7 @@ Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/16, incl. zone c
 ---
 
 ### WYATT CROSS COUNTRY - Fall 2026 (HS only)
+<!-- CANONICAL SOURCE. Do not duplicate individual XC practice or meet entries in monthly sections. -->
 <!-- Week 1 practice (Coach Maria Baldwin, Custer County XC/T&F) -->
 [CAL] 2026-08-10 08:00 [W] XC practice :: kids :: end=09:15
 [CAL] 2026-08-11 08:00 [W] XC practice :: kids :: end=09:15
@@ -665,31 +667,22 @@ Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/16, incl. zone c
 
 ### SEPTEMBER 2026
 
-[CAL] 2026-09-05 10:00 [W] XC meet - Fountain Fort Carson :: kids :: location="Fountain-Fort Carson High School, 900 Jimmy Camp Road, Fountain, CO 80817" :: notes="HS Boys 10:00 AM. Leave 7:00 AM."
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
-[CAL] 2026-09-12 10:15 [W] XC meet - Joe I. Vigil Open :: kids :: location="Cattails Golf Course, Alamosa, CO" :: notes="HS Boys 10:15 AM. Leave 6:00 AM."
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
-[CAL] 2026-09-19 09:00 [W] XC meet - Coronado Cougar Classic :: kids :: location="Monument Valley Park XC Course, Colorado Springs, CO" :: notes="HS Boys 9:00 AM. Leave 6:00 AM."
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
-[CAL] 2026-09-24 16:00 [W] XC meet - Canon City MS/HS XC Invite :: kids :: location="Royal Gorge Bridge and Park, Canon City, CO" :: notes="HS Boys 4:00 PM. Leave 1:00 PM. Park approx 8 miles west of town off Hwy 50."
 
 ---
 
 ### OCTOBER 2026
 
 [CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
-[CAL] 2026-10-03 19:05 [W] XC meet - Salida Homecoming Desert Twilight :: kids :: location="Salida Golf Course, Salida, CO" :: notes="HS Boys 7:05 PM. Optional for HS. Leave 3:30 PM." :: tentative=true
-[CAL] 2026-10-10 11:30 [W] XC meet - West Central League :: kids :: location="Colorado Mountain College, Leadville, CO" :: notes="HS Boys 11:30 AM. Leave 7:00 AM."
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
-[CAL] 2026-10-16 11:00 [W] XC meet - Eric Wolff Invitational :: kids :: location="Monte Vista High School Track, Monte Vista, CO" :: notes="HS Boys 11:00 AM. Leave 5:30 AM."
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
-[CAL] 2026-10-23 00:00 [W] XC meet - Regionals :: kids :: location="Springfield High School, Springfield, CO" :: notes="HS time TBD. Leave TBD." :: flag=true
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 [CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
-[CAL] 2026-10-31 00:00 [W] XC meet - HS State Qualifier :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS time TBD." :: flag=true
 
 ---
 
