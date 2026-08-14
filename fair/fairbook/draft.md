@@ -892,6 +892,84 @@ Custer County provides that a horse breaking from the jog or trot into a lope or
 
 ---
 
+## CC 7 — Showmanship
+
+This chapter governs showmanship classes at the Custer County Fair. Showmanship is a required class for every 4-H and FFA exhibitor in market livestock, horse, and companion and small animal projects. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
+
+### CC 7.1 — General Showmanship Rules
+
+**CC 7.1.1 Showing Your Own Animal**
+
+Custer County acknowledges and adopts the CSF, Junior Livestock Breeding Competition Eligibility, Class Eligibility provisions, under which, in all showmanship classes, exhibitors must show their own animals. Custer County reads this requirement to close the exception at CC 2.14 for showmanship classes: the allowance for another qualified member to show an exhibitor's animal does not apply to a showmanship class.
+
+**CC 7.1.2 Showmanship Eligibility**
+
+Custer County acknowledges and adopts the CSF, Junior Livestock Breeding Competition Eligibility, Class Eligibility provisions, under which only an animal shown or exhibited during the current fair is eligible for a showmanship class. Custer County applies this requirement to every market livestock showmanship class.
+
+**CC 7.1.3 Age Divisions**
+
+Showmanship classes are divided into Senior (14 to 18 years of age), Intermediate (11 to 13 years of age), and Junior (8 to 10 years of age) age divisions. Horse showmanship uses the age divisions stated at CC 5.13 instead.
+
+**CC 7.1.4 The Qualifying Animal**
+
+A contestant shows the animal with which they qualified for the class, except that the judge may direct contestants to trade animals during a showmanship class.
+
+**CC 7.1.5 Judging Criteria and Grooming Score**
+
+A showmanship class is judged on the contestant's skill as a showman and on the appearance the contestant's animal makes before the judge. The breed or individual conformation of the animal shown is not considered. The judge considers the following in every showmanship class: the fitting of the animal for the show, the presentation of the animal in the show ring, the appearance of the showman, and the sportsmanlike behavior of the showman.
+
+A grooming score is determined during each showmanship class. This score is used as a tie-breaker in the Livestock Master Showmanship Contest at CC 7.2 and the Companion Animal Master Showmanship Contest at CC 7.3.
+
+**CC 7.1.6 Timing**
+
+A showmanship class is held immediately after the judging of the class it is paired with.
+
+**CC 7.1.7 Awards**
+
+A Champion Showman is named in the Senior, Intermediate, and Junior divisions of each species' showmanship class.
+
+### CC 7.2 — Livestock Master Showmanship Contest
+
+**CC 7.2.1 Rules That Reach This Contest**
+
+Requirements applying to every showmanship class are stated at CC 7.1, including the judging criteria and grooming score tie-breaker at CC 7.1.5.
+
+**CC 7.2.2 Qualification**
+
+The Champion Senior, Intermediate, and Junior Showmen from the Horse, Beef, Swine, Sheep, and Goat shows compete in the Livestock Master Showmanship Contest.
+
+**CC 7.2.3 Multiple Qualification and Backfill**
+
+A participant must compete in the first animal class in which they qualify. Where the Champion Showman of an animal class is unable to compete, the next highest qualifier may compete in their place. Where an animal class has no Champion Showman, that animal class is dropped from the contest.
+
+**CC 7.2.4 Awards**
+
+Grand Champion and Reserve Grand Champion Master Showman are named in the Junior, Intermediate, and Senior divisions.
+
+### CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 7.3.1 Rules That Reach This Contest**
+
+Requirements applying to every showmanship class are stated at CC 7.1. The judging criteria at CC 7.1.5 apply, together with the additional criterion at CC 7.3.4.
+
+**CC 7.3.2 Qualification**
+
+The Champion and Reserve Champion Senior, Intermediate, and Junior Showmen from the Cat, Poultry, Dog, and Llama shows compete in the Companion Animal Master Showmanship Contest.
+
+**CC 7.3.3 Multiple Qualification**
+
+Where a Showman is Champion or Reserve Champion in more than one species, the next-placing qualifier in each species that Showman does not use becomes eligible to compete.
+
+**CC 7.3.4 Additional Judging Criterion**
+
+In addition to the criteria at CC 7.1.5, the judge considers showmanship elements specific to the breed of the animal shown.
+
+**CC 7.3.5 Awards**
+
+Grand Champion and Reserve Grand Champion Companion Animal Master Showman are named in the Junior, Intermediate, and Senior divisions.
+
+---
+
 ## CC 8 — Shooting Sports
 
 This chapter governs the shooting sports project at the Custer County Fair. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.11.
