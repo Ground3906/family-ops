@@ -205,6 +205,8 @@ Vertical south glass self-shades seasonally with no curtain, no cloth, no operat
 | Power | 115V / 4.7A |
 | Fuel | NG as bought, LP kit 53080 in hand |
 
+**Altitude: RESOLVED 2026-08-14.** Derate on this unit is handled at the **gas valve spring only**. No high-altitude orifices, no additional hardware to source. The 53080 LP conversion kit plus the valve spring adjustment covers both the fuel change and the 9,000 ft derate. Modine call closed, no further action.
+
 **Greenhouse load, first pass.** Design condition -15 F outside, 40 F inside, delta-T 55 F:
 
 | Loss path | BTU/hr |
@@ -218,8 +220,6 @@ Vertical south glass self-shades seasonally with no curtain, no cloth, no operat
 **52,000 delivered against ~22,000 needed. Roughly 2.4x headroom.** Carries the building with real margin for a colder night or a leakier envelope.
 
 Glazing is 55% of total loss. A night curtain would pay here if it returns to the design.
-
-**Open:** Modine high-altitude LP orifice call, 800-828-4328. Same open line as the garage barn.
 
 ---
 
