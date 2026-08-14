@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/15).
+Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/16, incl. zone chores and Sunday exception).
 
 ---
 
@@ -403,12 +403,17 @@ Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/15).
 [CHORE] 2026-08-13 ALL-DAY [M][R] Dishes :: chore-type=dishes
 [CHORE] 2026-08-13 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-08-13 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-14 ALL-DAY [M][R] Bathrooms :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only. Week B zone assignment (M+E Bathrooms / W+C Floors) resumes tomorrow."
+[CHORE] 2026-08-14 ALL-DAY [M][R] Floors :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only. Week B zone assignment (M+E Bathrooms / W+C Floors) resumes tomorrow."
 [CHORE] 2026-08-14 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-14 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-14 ALL-DAY [M][R] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [R][M] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [M][R] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [R][M] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-16 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
+[CHORE] 2026-08-16 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
+[CHORE] 2026-08-16 ALL-DAY [M][R] Table :: chore-type=table :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
 
 <!-- WEEK A: 8/17-8/23 -->
 [CHORE] 2026-08-17 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-23
