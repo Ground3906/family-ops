@@ -3,7 +3,7 @@
 **Agent:** Rootstock (definition not yet committed)
 **Site:** 38.0979386, -105.2994594 - 1722 Edelweiss Dr, Westcliffe CO, 9,000 ft, zone 4a
 **Status:** Design in progress. Nothing built. Nothing ordered.
-**Design session:** 2026-08-13
+**Design sessions:** 2026-08-13, 2026-08-14
 
 ---
 
@@ -31,9 +31,7 @@ No shading. Confirmed by owner observation. No county building code jurisdiction
 | Equinox | 51.9 deg |
 | Summer solstice | 75.3 deg |
 
-Theoretically optimal winter glazing tilt is 61.5 deg off horizontal. Unbuildable over a 20 ft depth (37 ft rise). Design accepts off-angle loss, which is small: cosine loss only, 80-91% of theoretical across the practical pitch range.
-
-Winter shadow length is 1.84x object height.
+Winter shadow length is 1.84x object height. Theoretically optimal winter glazing tilt is 61.5 deg off horizontal, unbuildable at this depth. Design accepts off-angle loss, which is cosine loss only and small across the practical range.
 
 ---
 
@@ -61,13 +59,49 @@ Bird run is handled outside this design. Not a variable.
 
 ---
 
+## LOCKED GEOMETRY
+
+**All numbers locked 2026-08-14.**
+
+| Element | Dimension |
+|---------|-----------|
+| Footprint | 18 ft 6 in deep x 40 ft long = **740 sq ft** |
+| Roof pitch | **20 deg** |
+| Slope length | 19 ft 8 in (two 10 ft panels, lapped) |
+| Riser above container | **5 ft 0 in** |
+| Peak height above floor | **14 ft 6 in** |
+| Roof fall over 18 ft 6 in | 6 ft 9 in |
+| Beam bearing / top plate | 7 ft 9 in |
+| **South window sill** | **6 ft 0 in** |
+| Window head | 8 ft 10 in |
+| Clear height at south wall | 7 ft 9 in |
+| **Pen ceiling at 10 ft line** | **10 ft 10 in** |
+
+**Why depth is 18 ft 6 in and not 20 ft:** two 10-foot panels lapped give 19 ft 8 in of slope. At 20 deg that lands the footprint at 18 ft 6 in. Panel length sets depth, not the other way around. No cutting either material.
+
+**Why 20 deg:** it is the minimum pitch at which heated polycarbonate sheds snow. Below it, the roof holds load and dams at the eave.
+
+**Why 5 ft riser:** riser translates to sill one for one with no side effects. Depth, pitch, panel count, glazing ratio, beam sizing and rafter span are all unchanged between a 4 ft 6 in and a 5 ft riser. The extra six inches buys six inches of sill, clear height, and pen ceiling for half a course of framing.
+
+**Ceiling height by distance south of the container:**
+
+| Distance | Ceiling |
+|----------|---------|
+| 0 (peak) | 14 ft 6 in |
+| 5 ft | 12 ft 8 in |
+| 10 ft (pen line) | 10 ft 10 in |
+| 15 ft | 9 ft 0 in |
+| 18 ft 6 in (south wall) | 7 ft 9 in |
+
+---
+
 ## LOCKED ITEMS
 
 ### Item 2 - Use
 Four-season, cold-hardy. Never freezes inside. Passive solar carrying the load, mechanical heat as insurance.
 
 ### Item 3 - Footprint
-20 ft deep x 40 ft long, 800 sq ft. Container is the north wall. Building runs south off the container's full 40 ft face.
+18 ft 6 in x 40 ft, 740 sq ft. Container is the north wall. Building runs south off the container's full 40 ft face.
 
 ### Item 4 - Container layout
 As above. Fixed and closed to design.
@@ -75,14 +109,14 @@ As above. Fixed and closed to design.
 ### Item 5 - Coop / greenhouse air relationship
 Wall stays sealed and insulated. **One-way air path: greenhouse to coop.**
 
-Coop already runs an exhaust fan (same class as the Hessaire 16SF3-H ordered for the garage barn). Fan pulls, makeup air enters wherever it can. Today that is cold outdoor air through windows. With the greenhouse attached, makeup air is drawn through the existing 20 in x 30 in window from a heated sunlit space instead.
+Coop already runs an exhaust fan. Fan pulls, makeup air enters wherever it can. Today that is cold outdoor air through windows. With the greenhouse attached, makeup air is drawn through the existing 20 in x 30 in window from a heated sunlit space instead.
 
 Coop stays negative pressure relative to the greenhouse for as long as the fan runs. Coop dust and ammonia cannot migrate into the greenhouse. Separation is enforced by pressure gradient, not by filtration. No new hardware.
 
 **5.1 locked:** greenhouse window is primary intake. Exterior coop windows retained as functional backup. A coop should never have exactly one way to breathe.
 
 ### Item 6 - Structure geometry
-**Single-slope shed.** Framed riser built up off the container top, sloping down south to a glazed south wall. Peak sits over the north wall, against insulated mass, not under glass. Warm air collects there. Main passive vent windows located at the peak.
+**Single-slope shed.** Framed riser built up off the container top, sloping down south. Peak sits over the north wall against insulated mass, not under glass. Warm air collects there. Main passive vent windows located in the riser at the peak.
 
 **Low intakes at the south wall are required.** Passive stack venting stalls without them. High vents alone will not flow.
 
@@ -92,7 +126,7 @@ No floor drop. Building sits on the pad as-is. Earth-tempering (walipini logic) 
 **Slab under the pens only. Individual pens. Dirt on the remainder.** Animals locked in pens at all times, no free roaming. Walking happens outside the greenhouse. This contains two years of manure to a scrapeable surface and prevents nitrogen and ammonia saturation of future bed soil.
 
 ### Item 8 - Foundation
-Shallow footing on fill. Load is light (light frame, poly, metal roof, snow) and lands in the low hundreds of psf. Bearing capacity is not the constraint.
+Shallow footing on fill. Load is light and lands in the low hundreds of psf. Bearing capacity is not the constraint.
 
 Three constraints that are:
 
@@ -100,53 +134,146 @@ Three constraints that are:
 2. **Differential settlement.** North end bears on the container (long settled), south end on fill. Polycarbonate does not forgive racking.
 3. **Frost.** Insulated frost skirt (Frost-Protected Shallow Foundation, code-recognized, Scandinavian origin): 2-4 in rigid foam laid horizontally, extending 2-4 ft outward from the footing, roughly 1 ft below grade, backfilled over. Wider and thicker at corners. Building is heated, so the standard heated-case detail applies.
 
-**Backfill the south and west walls after the pour.** Fill on both sides opposes the lateral pressure. Converts an 8 ft retaining wall into a basement wall: same concrete, a fraction of the engineering, plus thermal mass as a side effect. Frost skirt foam goes down in the same pass of the Gehl.
+**Continuous stem wall with thickened pads cast integral at each post location.** Not separate isolated piers. Separate piers and a separate stem wall heave independently at 9,000 ft and tear the wall apart. One pour, one continuous element, deeper and wider where the posts land.
+
+**Backfill the south and west walls after the pour.** Fill on both sides opposes the lateral pressure. Converts a retaining wall into a basement wall: same concrete, a fraction of the engineering, plus thermal mass as a side effect. Frost skirt foam goes down in the same pass of the Gehl.
+
+### Item 9 - Bed placement
+**Beds move inboard. South strip under the glass becomes walkway.**
+
+This is the decision that unlocked sill height. Light through a horizontal window band lands in a strip 1.84x sill height out from the wall to 1.84x head height. The strip width is constant regardless of sill; raising the sill slides the lit strip north, it does not shrink it. A tall sill therefore throws light *past* a bed sitting under the glass.
+
+With a walkway under the glass and the bed inboard in the lit strip, sill height costs nothing but reach.
+
+**Winter lit strip at the locked 6 ft sill:** from 11 ft 0 in to 16 ft 3 in south of the north wall.
+**Summer beam reach:** approximately 1 ft 3 in. Vertical south glass self-shades hard, with no curtain and no operational decision.
 
 ---
 
 ## GLAZING
 
-### Salvaged commercial IGUs (on hand)
-Approximately 8 units pulled from an all-glass high-rise. Roughly 2 ft 6 in x 6 ft, to be measured. Double pane, 1/2 in air gap, aluminum walled, **glass to the edge, no frames, no flange, no extrusions retained.**
+### Inventory (measured 2026-08-14)
 
-**Performance is better than assumed.** Commercial double-glazed with a half-inch gap runs R-2 to R-3, likely low-E coated. That matches or beats new twin-wall polycarbonate (R-1.6) and beats it badly on night-time long-wave retention. More wall glass is not a thermal penalty. It is the best-performing surface on the building.
+| Unit | Glass size | Qty | Each | Total | Disposition |
+|------|-----------|-----|------|-------|-------------|
+| Commercial windows | 32 in x 91 in | 8 | 20.2 sq ft | **162 sq ft** | **IN USE** |
+| Gold walk-in cooler doors | 26 in x 66 in | 6 | 11.9 sq ft | 72 sq ft | Set aside |
+| Black walk-in cooler doors | 32 in x 77 in | 2 | 17.1 sq ft | 34 sq ft | Hold |
 
-**Installation requirements (all mandatory):**
+**The commercial units have flanges.** Complete windows: frame, gasket, drainage, and edge-seal protection all intact. No rabbeted buck detail required. Standard buck-and-flash install. (Supersedes the entire bare-IGU installation section from the 2026-08-13 session, which was written on a wrong assumption.)
 
-The original aluminum extrusions did four jobs: held the unit, gasketed it, drained water away from the insulated glass edge seal, and shaded that seal from UV. All four must be replaced by the buck detail.
+**Cooler doors set aside, and why.** Walk-in cooler glass is engineered to reject radiant heat: solar-control low-E, typical SHGC 0.25-0.35 against 0.70 for clear double glazing. It lights a space but does not heat one, which works directly against a four-season passive-solar mission. Framing cost is per opening, not per square foot, and the gold units are the worst trade on the property: six openings for 72 sq ft of heat-rejecting glass. No door hardware retained, so door reuse is off the table.
 
-- **Vertical wall only.** Sloped installation kills these units: water sits, dirt collects at the low edge, the seal soaks and fails. Vertical is the only mounting where salvaged curtain wall glass has a long life.
-- **Rabbeted buck.** Unit drops into a recess, exterior stop holds it.
-- **Never let glass touch wood.** Neoprene setting blocks at the quarter points carry the weight.
-- **Sill must drain.** Rabbet bottom sloped outward, weep holes drilled.
-- **Stop must shade the edge seal.** Sufficient overlap to cover the black perimeter band.
-- **Dry-glaze** with butyl tape plus exterior stop. More forgiving than wet-glazing with silicone at altitude in cold weather.
-- Bare aluminum is a severe thermal bridge. Expect condensation and frost on the frames. Water running down the frame must not reach the edge seal.
+Black pair held in reserve: at 32 in wide they match the commercial units, and could fill an end-wall opening laid out for the same width.
 
-**Framing rule from Matt:** a 6 ft window needs at least an 8 ft wall to make the framing work (buck top and bottom, header, plates).
+**Field test if the cooler doors ever come back into play:** hold a flame close to the glass in a dark spot and count reflections. Four reflections is double pane. If one reflection reads dimmer or tinted, that pane carries a low-E coating.
 
-**Horizontal mounting is open.** With no frames retained, units can mount 6 ft wide x 2 ft 6 in tall. A horizontal band needs only about a 4 ft sill for the same glass area, dropping the riser roughly four feet. To be evaluated once true dimensions are known.
+### Orientation: HORIZONTAL
+
+Units laid on their side: 91 in wide x 32 in tall. Rough opening 93 in x 34 in (7 ft 9 in x 2 ft 10 in).
+
+Vertical orientation was ruled out. A 91 in unit standing up needs a 10 ft wall, which puts the south wall taller than the 9 ft 6 in container and slopes the roof the wrong way, away from the sun.
+
+### Distribution
+
+| Wall | Units | Glass |
+|------|-------|-------|
+| South | 4 (one per bay) | 81 sq ft |
+| East and west ends | 4 (two per end) | 81 sq ft |
+| **Total** | **8** | **162 sq ft** |
 
 ### Glazing ratio
-Four-season production wants 60-80% of floor area in glazing. Chinese solar houses approach 1:1.
 
-- 8 windows alone = 120 sq ft = **15%.** That is a well-lit barn, not a greenhouse.
-- South wall packed corner to corner, framing accounted = approximately 270 sq ft = 34%.
-- **The south wall alone cannot reach ratio.** Roof glazing is the only surface with enough area.
+| Source | Area |
+|--------|------|
+| Salvaged glass | 162 sq ft |
+| Roof polycarbonate, 10 ft x 40 ft | 400 sq ft |
+| **Total** | **562 sq ft** |
+| **Ratio against 740 sq ft floor** | **76%** |
 
-**Decision: polycarbonate returns to the roof.** South run of roof in poly, north run in metal.
+Four-season production wants 60-80% of floor area in glazing. 76% clears it with margin for a dirty panel, a cloudy month, or a colder winter than the design case.
+
+**Glass alone is 22%.** That is a well-lit barn, not a greenhouse. Roof glazing is the only surface on this building with enough area to reach ratio, and it is the only surface that catches high summer sun: vertical south glass is nearly blind from May to August.
+
+---
+
+## STRUCTURE
+
+### Post and beam south wall
+
+The wall does not carry the roof. Posts and a continuous beam do. This is what makes the window framing trivial: headers over the openings become non-structural infill.
+
+| Element | Spec |
+|---------|------|
+| Bays | **4 at 10 ft 0 in** |
+| Posts | 6x6, five total, on standoff bases |
+| Clear between posts | 9 ft 6 in |
+| Window rough opening | 7 ft 9 in - fits with 21 in of framing to land it in |
+| **Beam** | **6x12 solid Doug fir or larch** |
+| Studs between posts | 2x6, 16 in or 24 in centers, non-bearing |
+| Window header | **2x6, racked to the top plate** - carries nothing |
+
+**NO ENGINEERED LUMBER.** LVL, glulam, LSL and PSL are interior-dry-use products. Greenhouse humidity, condensation dripping off a cold beam, and repeated wet-dry cycling will delaminate them. Solid sawn timber only.
+
+**Built-up beams (triple 2x12) have the same problem in miniature** - three plies face to face trap water in the seams and rot from the inside. A solid timber has no glue lines and no seams, and dries and breathes as a unit. Rough-sawn local Doug fir or larch is both cheaper and dimensionally full (a rough 6x12 is a true 6x12, not 5.5 x 11.25).
+
+Green timber checks and shrinks as it dries. Normal, not structural. Bolted connections need re-tightening after the first season.
+
+**Posts must not sit directly on concrete.** Galvanized standoff bases lifting end grain an inch clear. Concrete wicks water and a post end sitting in it rots from the bottom in a wet building.
+
+### Beam sizing basis
+
+| Input | Value |
+|-------|-------|
+| Ground snow load | **60 psf - ASSUMED, NOT VERIFIED** |
+| Roof dead load | 10 psf |
+| Rafter span | 18 ft 6 in |
+| Tributary width | 9 ft 3 in |
+| Uniform load on beam | ~650 lb/ft |
+| Load per 10 ft bay | ~6,500 lb |
+| Required section modulus | ~75 in3 |
+| 6x12 solid provides | 121 in3 |
+| Post load each | ~6,500 lb |
+
+**The 60 psf figure is an estimate from elevation and the Sangre front. It is doing a lot of work in every number above.** At 40 psf the requirement drops roughly 40% and a 6x10 covers 10 ft bays. Verify with the Westcliffe lumber yard or a local builder before buying timber. No county jurisdiction means no published number to check.
+
+Steel (W8x15 or W10x15) is the alternative: immune to moisture, allows longer bays. Rejected on cost. Fabrication, coating, and setting equipment exceed timber for this span.
+
+### Riser detail (north wall, on the container)
+
+**Load path is the whole story.** A shipping container carries load through its four corner castings and its steel side rails. The roof panel is 14-16 gauge corrugated and carries almost nothing. A rafter set down in the middle of that roof dents it.
+
+The riser stands on the **top side rail** - the continuous structural C-channel running the full 40 ft along the container's south edge.
+
+Bottom up:
+
+1. **Continuous steel angle sill.** L3x3x1/4 or heavier, bolted through the top side rail every 24 in with backing plates. Spreads the riser load along the rail and gives a fastening surface for wood. Bolting preferred over welding to avoid burning the paint.
+2. **Treated bottom plate** on the angle, with sill seal or butyl between. Wood never touches steel dry: condensation on cold steel rots untreated lumber and corrodes the rail.
+3. **2x6 stud wall, 16 in centers, 5 ft 0 in tall.** Doubled top plate. Light wall, carries only the north end of the rafters.
+4. **Rafters birdsmouthed to 20 deg**, bearing on the top plate.
+5. **Insulate to R-21 minimum.** This is the north wall of a heated greenhouse at 9,000 ft. Sheathing, weather barrier, metal siding to match the roof.
+
+**Three details that matter more here than they look:**
+
+- **Uplift.** A 40 ft wall at 14 ft 6 in catches serious wind on the Sangre front. The angle-to-rail connection is the hold-down for the entire roof. Bolt it properly.
+- **Thermal break at the rail.** The steel angle runs inside to outside. Rigid foam on the exterior face of the riser, lapping down over the container's top rail, or a 40 ft condensation line forms right at the joint.
+- **Vent windows land in this wall**, high, at the peak.
 
 ---
 
 ## ROOF
 
-**Metal north, polycarbonate south.**
+**10 ft polycarbonate south, 10 ft metal north. Two panels, one lap seam, no cuts.**
 
-Winter ray trace: light entering the roof more than about 7 ft horizontal from the south edge overshoots the floor entirely and lands on the north wall, which is foam-insulated and cannot store it. **North roof glazing contributes nothing in winter.** Converting it to metal costs almost no winter gain and cuts summer load hard.
+Winter ray trace: light entering the roof more than about 7 ft horizontal from the south edge overshoots the floor and lands on the north wall, which is foam-insulated and cannot store it. **North roof glazing contributes nothing in winter.** Metal there costs almost no winter gain and cuts summer load hard.
+
+**Why 10 ft of poly and not the 8 ft the ray trace suggests:** 10 ft is exactly one panel with no cut and no waste, and it moves the glazing ratio from 65% to 76%. The extra two feet buys shoulder-season and summer light (high sun lands where it enters) plus diffuse light on cloudy days, which does not care about angle. It costs winter night heat loss: poly at R-1.6 where metal would be R-19.
+
+Past 10 ft the trade turns bad. 12 or 14 ft of poly buys shoulder-season light paid for every winter night.
 
 Metal roof over the north bay also gives an insulated deck to hang lights, fans, or a curtain track from, and turns the tall bay into a dark insulated reservoir rather than a night-time heat loss.
 
-**Phase 1 note: roof the entire slope in metal for the animal years.** Polycarbonate's UV warranty clock (typically 10 years) starts the day it goes up. Livestock humidity and ammonia attack the UV coating. At conversion, pull the south run of metal and drop poly into the opening. Framing is laid out for that seam from the start. Metal comes off in one piece for another building.
+**Phase 1 note: roof the entire slope in metal for the animal years.** Polycarbonate's UV warranty clock (typically 10 years) starts the day it goes up. Livestock humidity and ammonia attack the UV coating. At conversion, pull the south 10 ft of metal and drop poly into the opening. Framing is laid out for that seam from the start. Metal comes off in one piece for another building.
 
 **Snow shed minimums:**
 
@@ -157,38 +284,7 @@ Metal roof over the north bay also gives an insulated deck to hang lights, fans,
 | Heated metal | 18-20 deg |
 | Unheated metal | 25-30 deg |
 
-Panel seams and exposed fasteners want a few degrees more. Melt-refreeze at 9,000 ft creates eave ice dams that pitch alone does not solve.
-
-**Panel length trap:** slope length exceeds footprint depth on a pitched roof. Adjust depth to land the slope on standard panel lengths rather than cutting.
-
----
-
-## GEOMETRY (open, pending window measurements)
-
-Sill height drives everything. Riser = roof fall minus 1 ft 6 in (container top to sill datum). Depth 20 ft, all figures no floor drop.
-
-**With an 8 ft sill (6 ft window vertical):**
-
-| Pitch | Roof fall | Riser | Peak | Pen ceiling at 10 ft |
-|-------|-----------|-------|------|----------------------|
-| 15 deg | 5 ft 4 in | 3 ft 10 in | 13 ft 4 in | 10 ft 8 in |
-| 18 deg | 6 ft 6 in | 5 ft 0 in | 14 ft 6 in | 11 ft 3 in |
-| 20 deg | 7 ft 3 in | 5 ft 9 in | 15 ft 3 in | 11 ft 8 in |
-| 22 deg | 8 ft 1 in | 6 ft 7 in | 16 ft 1 in | 12 ft 0 in |
-| 25 deg | 9 ft 4 in | 7 ft 10 in | 17 ft 4 in | 12 ft 6 in |
-
-**Pen bay requirement:** pens run 10 ft south from the container. Ceiling at that line should meet or exceed the container's own 9 ft 6 in so the two spaces read continuously.
-
-**Light penetration by sill height, direct beam:**
-
-| Sill | Winter solstice reach | Summer solstice reach |
-|------|----------------------|----------------------|
-| 6 ft 8 in | 12 ft 3 in | 1 ft 9 in |
-| 8 ft 0 in | 14 ft 9 in | 2 ft 1 in |
-
-Vertical south glass self-shades seasonally with no curtain, no cloth, no operational decision. Roof poly does not and will need shade cloth or whitewash in summer.
-
-**Cheap upgrade:** paint the container's south face and the pen-bay ceiling white. Diffuse bounce into the north zone roughly doubles. Shade-tolerant greens run several feet further north than the beam line suggests.
+Locked pitch of 20 deg sits at the heated-poly minimum. Panel seams and exposed fasteners want a few degrees more. Melt-refreeze at 9,000 ft creates eave ice dams that pitch alone does not solve.
 
 ---
 
@@ -207,38 +303,42 @@ Vertical south glass self-shades seasonally with no curtain, no cloth, no operat
 
 **Altitude: RESOLVED 2026-08-14.** Derate on this unit is handled at the **gas valve spring only**. No high-altitude orifices, no additional hardware to source. The 53080 LP conversion kit plus the valve spring adjustment covers both the fuel change and the 9,000 ft derate. Modine call closed, no further action.
 
-**Greenhouse load, first pass.** Design condition -15 F outside, 40 F inside, delta-T 55 F:
+**Greenhouse load, first pass.** Design condition -15 F outside, 40 F inside, delta-T 55 F. **Needs recalculation against the locked 740 sq ft envelope and 562 sq ft glazing package.** The figures below are from the 2026-08-13 first pass and are directionally correct but not current.
 
 | Loss path | BTU/hr |
 |-----------|--------|
-| Glazing, ~440 sq ft at R-2 | 12,100 |
+| Glazing | 12,100 |
 | Insulated metal roof | 2,300 |
 | End walls, stem wall | 1,700 |
 | Infiltration, altitude-adjusted | 6,200 |
 | **Total** | **~22,000** |
 
-**52,000 delivered against ~22,000 needed. Roughly 2.4x headroom.** Carries the building with real margin for a colder night or a leakier envelope.
-
-Glazing is 55% of total loss. A night curtain would pay here if it returns to the design.
+52,000 delivered against ~22,000 needed is roughly 2.4x headroom. Glazing is the dominant loss path. A night curtain would pay here if it returns to the design.
 
 ---
 
 ## OPEN ITEMS
 
-1. **Window inventory.** Exact count, height and width of each, glass thickness, and any unit that is cracked or fogged. A fogged unit is dead and should not get framing built around it.
-2. **Horizontal vs vertical window mounting.** Decides sill height, riser, and total building height.
-3. **Pitch, riser, sill, exact depth.** All blocked on item 1.
-4. **Buried utilities.** Depth and routing must be known before any excavation. Power and water run through this area.
-5. **Stratification management.** Circulation fan or mass ducting to move ceiling air down. Pitch does not solve this; air movement does.
-6. **Thermal mass.** Currently the design has almost none beyond the stem wall. Foam and air everywhere else.
-7. **Beds and layout.** Growing zone is the lit south portion. North zone is work aisle, potting bench, storage.
-8. **Drainage and grading** around the pad perimeter.
-9. **Rootstock agent definition.** Not committed. This file is the first Rootstock content in the repo.
+1. **East wall design.** Next up. 18 ft 6 in deep, 14 ft 6 in at the container tapering to 7 ft 9 in at the south wall. Two commercial windows planned. Also the sunken side - ground rises to the east.
+2. **West wall design.** Same taper. Two commercial windows. Falls away to the west; backfill applies.
+3. **Snow load verification.** 60 psf is assumed. Every structural number depends on it. Ask the Westcliffe lumber yard or a local builder.
+4. **Heat load recalculation** against the locked envelope.
+5. **Buried utilities.** Depth and routing must be known before any excavation. Power and water run through this area.
+6. **Stratification management.** Circulation fan or mass ducting to move ceiling air down. Pitch does not solve this; air movement does.
+7. **Thermal mass.** The design has almost none. Foam and air everywhere else.
+8. **Bed layout.** Beds inboard in the lit strip, walkway under the glass. Exact bed geometry not set.
+9. **Vent sizing.** Peak vents in the riser, low intakes at the south wall. Neither sized.
+10. **Drainage and grading** around the pad perimeter.
+11. **Rootstock agent definition.** Not committed.
 
 ---
 
 ## DESIGN NOTES CARRIED FORWARD
 
-- **The pitch decides where the glass ends up.** Steeper puts light in the roof; shallower stands the wall up and puts light in the wall. Same peak, same footprint, different building.
-- **The tall bay is a feature, not a defect.** Warm air collecting at the peak against insulated mass under a metal roof is a reservoir and an ideal intake plenum, not a loss.
+- **Sill height does not change how much light you get. It changes where the light lands.** The lit strip is a constant width; raising the sill slides it north. This is why beds moved inboard.
+- **Panel length sets depth.** Not the reverse. Slope length always exceeds footprint depth on a pitched roof.
+- **Framing cost is per opening, not per square foot.** This is what killed the small cooler doors.
+- **The riser translates to sill one for one**, with no effect on pitch, depth, ratio, or structure.
+- **Cheap upgrade:** paint the container's south face and the pen-bay ceiling white. Diffuse bounce into the north zone roughly doubles. Shade-tolerant greens run several feet further north than the beam line suggests.
+- **The tall bay is a feature, not a defect.** Warm air collecting at the peak against insulated mass under a metal roof is a reservoir and an ideal intake plenum.
 - Chinese-style solar greenhouse (two-plane south face, steep glazed wall plus shallower roof, insulated night curtain) remains a live alternative. Passed over, not ruled out.
