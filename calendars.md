@@ -141,7 +141,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-13.
+Last batch: 2026-08-14 (Molly/Rileigh chore override for 8/14-8/15).
 
 ---
 
@@ -403,12 +403,12 @@ Last batch: 2026-08-13.
 [CHORE] 2026-08-13 ALL-DAY [M][R] Dishes :: chore-type=dishes
 [CHORE] 2026-08-13 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-08-13 ALL-DAY [C][E] Table :: chore-type=table
-[CHORE] 2026-08-14 ALL-DAY [W][C] Dishes :: chore-type=dishes
-[CHORE] 2026-08-14 ALL-DAY [M][E] Animals :: chore-type=animals
-[CHORE] 2026-08-14 ALL-DAY [R][E] Table :: chore-type=table
-[CHORE] 2026-08-15 ALL-DAY [M][E] Dishes :: chore-type=dishes
-[CHORE] 2026-08-15 ALL-DAY [W][R] Animals :: chore-type=animals
-[CHORE] 2026-08-15 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-08-14 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-14 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-14 ALL-DAY [M][R] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-15 ALL-DAY [R][M] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-15 ALL-DAY [M][R] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
+[CHORE] 2026-08-15 ALL-DAY [R][M] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
 
 <!-- WEEK A: 8/17-8/23 -->
 [CHORE] 2026-08-17 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-23
