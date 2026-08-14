@@ -22,6 +22,8 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 - **Two CC 2 All-Exhibitors rules, locked in content, unwritten.** Drafting them now would ripple ~30 cross-references plus the seven "CC 2.1 through CC 2.11" range citations, so under renumber-at-conformance doctrine they wait for the single end-of-book renumber.
   - **Exhibitor Liability.** New All-Exhibitors rule: every exhibitor is responsible for their own animal or article and releases the Fair, adopted from the CSF indemnification shell. CC 2.22 shrinks to reference it rather than carrying its own Open-only release.
   - **Barred Exhibitors.** New All-Exhibitors rule: adopt CSF grounds for refusing entry to anyone barred elsewhere for unethical practices, disqualified at a major show, or with premiums withheld. The NALS&RMA infraction database is named as a source the Authority MAY consult, not one it must query.
+- **One CC 2 Animal-Exhibitors rule, locked in content, unwritten.**
+  - **Departure From the Fairgrounds.** New rule following CC 2.21 in reading order: every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline in Addendum §7, and may not be removed before release under CC 2.21. Carries forward a rule the county book prints three times (market, non-market, sale sections) that shipped text currently prints zero times. CC 3.1.15, CC 6.1.1, and any later CC 5/CC 9/CC 10 department index need this citation added once it lands with a real number.
 
 ## Known gaps in finished chapters
 
