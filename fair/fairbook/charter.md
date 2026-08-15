@@ -139,6 +139,8 @@ The **CC prefix is load-bearing**. This book prints CSF references on nearly eve
 
 **A rule prints once.** Everywhere else it is cited by number. Each project section opens with an **applies-to-you index**: every rule reaching that project, by number and title, in about one screen. The index points; it does not restate.
 
+**The index prints as a list, not a rule.** A lead-in sentence states what the section covers, then each pointer runs on its own line as "CC X.X — description." This does not reverse the bullets-banned-in-rule-text prohibition: an index creates no obligation and is never itself cited, so nothing is lost by making it scannable. An index of one or two pointers stays as a single sentence instead; a list that short reads worse as a list than as prose. Locked 8/14/2026, converting CC 3.1.15 and the CC 3.2 through CC 3.7 department indexes; CC 5.12, CC 7.2.1, and CC 7.3.1 stayed as prose under the short-list exception.
+
 Reprinting in full is an exception argued at its pass. Every reprint is a drift risk taken deliberately.
 
 ## The Addendum
@@ -348,6 +350,10 @@ Found 8/13/2026 building CC 7. The county book states showmanship classes run "i
 
 Found 8/13/2026 building CC 7. CSF runs its own Master Showmanship Competition (Division 001, Department 925) at the state level, open only to one exhibitor per county fair, fed by each county's own "Round Robin" or equivalent qualifying event. Custer's Livestock Master Showmanship Contest at CC 7.2 is that qualifying event, though the book does not currently point to the CSF competition it feeds. Previously unrecorded institutional knowledge.
 
+## Horse carries no pen, stall, or cage assignment rule, and none is planned
+
+Found 8/14/2026 building CC 6.1. CC 3.1.11 (market) and CC 6.1.4 (non-market) are parallel rules, same shape, adapted to species. CC 5 (Horse) has no equivalent and is not getting one. The horse project runs on stalls families arrange directly, outside any Authority-run assignment process the book governs, and none of CC 5's other rules touch space either. Recorded so a future both-directions audit of CC 5 does not re-flag the absence as a silence-gap needing a rule.
+
 ---
 
 # PART FIVE — POLITICAL FLAGS
@@ -445,10 +451,10 @@ The county book's horse dress rules require long-sleeve button-down shirts with 
 - **A department pass runs both directions.** County to CSF finds the deltas: where the county rule differs from the standard it sits inside. CSF to county finds the silence-gaps: where CSF's department carries a requirement the county book never had, and the county's silence is an omission rather than a decision. A department is not finished until its CSF department checklist has been walked item by item. Shared layers carry the same exposure — CC 3.1, CC 2, and CC 1 were built before this pass existed and owe a re-audit, tracked in `open-items.md` under Method.
 - **Run the placement test before proposing, not after locking.**
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices and line numbers live only in repo records.
-- **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary.
+- **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary. This reaches within a session too: re-check already-fetched text at the point of use rather than recalling it from earlier in the same conversation, including before asserting what a source does or doesn't say and before assigning a new rule number against a slot that may already be occupied.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
 - **Large or multi-file builds chunk by default.** A single commit word covering a big write defaults to sequential chunks, one write and one verified read-back per chunk, as the execution strategy, not a scope question reopened each time.
-- **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
+- **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. Where a new rule's correct reading-order slot is already occupied by shipped, numbered text, no improvised or borrowed number is assigned; the rule is held in `open-items.md` with full text until the conformance renumber gives it a real one. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
 - **Scripted inserts, never manual retype.** A prior session introduced a typo by hand-retyping a full file's content for the MCP write tool. Standard method now: fetch the file fresh, insert new content into that exact fetched copy via a scripted string-replace with a `count==1` assertion, then push that copy verbatim. Read-back diffs against the pre-push local copy, not just against expected content.
