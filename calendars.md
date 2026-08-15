@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-17 (Molly/Rileigh chore override extended to 8/17, incl. zone chores).
+Last batch: 2026-08-15.
 
 ---
 
@@ -639,6 +639,7 @@ Last batch: 2026-08-17 (Molly/Rileigh chore override extended to 8/17, incl. zon
 [CAL] 2026-08-15 09:00 [FAM] Backpack pickup :: kids :: end=13:00 :: location="School parking lot, Westcliffe, CO" :: cancel=confirmed
 [CAL] 2026-08-15 10:00 Mass - Assumption of Mary - Holy Day of Obligation :: liturgical :: end=11:00 :: location="Our Lady of Assumption, Westcliffe" :: notes="Visiting priest. One Mass only."
 [CAL] 2026-08-16 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-08-16 16:00 [K] Zoom - kids school info meeting :: kids :: meetings
 [CAL] 2026-08-17 09:00 [D] Appt - Dr. Woody :: appointments :: stripe=appt
 [CAL] 2026-08-17 10:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-17 11:00 [D] CT Abdomen :: appointments :: stripe=appt :: end=12:00 :: location="PENRAD Imaging - Broadmoor, 1263 Lake Plaza Dr #100, Colorado Springs, CO 80906" :: notes="Confirmed via reminder: 11:00 AM MDT start. Corrected from earlier 10:30 entry."
@@ -651,6 +652,7 @@ Last batch: 2026-08-17 (Molly/Rileigh chore override extended to 8/17, incl. zon
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
 [CAL] 2026-08-25 15:00 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-08-25 18:00 [W][K] Zoom - international trip info meeting :: kids :: meetings
 [CAL] 2026-08-26 13:00 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=14:00 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="Provider: Beth Pack PA-C, Orthopedics. Check-in 12:45."
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
