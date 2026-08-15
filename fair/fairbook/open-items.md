@@ -37,6 +37,7 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 - **Poultry health and biosecurity gate at check-in.** Re-ask when a poultry pass comes up. CC 3.6 shipped with the terminal-show and biosecurity-report rules; this was a separate check-in gate question with no recoverable lock.
 - **Cat arbitration clause.** The Cat general rules carry an arbitration-committee clause inherited from the Colorado 4-H by-reference document, creating a third dispute pathway. Handle at the Cat pass; the Open Division pass gains the matching cross-reference at the same time.
 - **Three GCR rule families with no county analog.** A general conflict-of-interest and recusal rule for board, staff, and family; the volunteer-judge bar; and the vehicle rules. Each is a future item on its own merits, never a rider on another item.
+- **Dog Intermediate Advanced Showmanship gap.** CC 6.4.5 adopts the DTR's showmanship progression, under which an exhibitor who places 1st through 10th with a qualifying score in Intermediate Open at State 4-H Dog Trials is required to move up to Intermediate Advanced the following year. Custer offers a Senior Advanced class but no Intermediate Advanced, so this department has no class for that exhibitor to enter. Not adopted as a new class in this pass; working-group question on whether to add it.
 
 ## Legacy blocks still staged in draft.md
 
