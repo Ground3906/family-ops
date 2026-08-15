@@ -48,6 +48,8 @@ The following abbreviations are used throughout this book.
 
 **APA** — American Poultry Association, the organization that publishes the Standard of Perfection defining recognized poultry breeds and varieties.
 
+**CCR** — Colorado State Fair 4-H Contest Requirements, the CSU Extension document that governs the Cat Show and other named 4-H contests, adopted by CC 6.5.
+
 **CSF** — Colorado State Fair.
 
 **CSU Extension** — Colorado State University Extension, the county's administrator of the 4-H Youth Development Program.
@@ -1167,6 +1169,60 @@ Every exhibitor in an obedience class and every exhibitor in a showmanship class
 Placings are awarded under the American system, as provided at the DTR, Showmanship, Obedience, and Rally Awards.
 
 In each class, a Champion is awarded to the exhibitor holding the high-point blue ribbon and a Reserve Champion to the exhibitor holding the second high-point blue ribbon. A Grand Champion and a Reserve Grand Champion are awarded in obedience, and a Grand Champion and a Reserve Grand Champion are awarded in showmanship. Each is determined by overall point total across all age divisions, the highest taking Grand Champion and the second highest taking Reserve Grand Champion.
+
+### CC 6.5 — Cat
+
+**CC 6.5.1 Rules That Reach This Department**
+
+This subchapter states only those requirements that differ from CC 6.1 or that exist only in Cat. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 2.5 — Grievances
+
+CC 6.1 — Requirements applying to every non-market and small animal project
+
+CC 7 — Showmanship
+
+CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 6.5.2 Governing Rules**
+
+Custer County acknowledges and adopts the CCR, Cat Show, as the authority governing the conduct and judging of every class in this department, and adopts the CCR Cat Eligibility Rules as the standard governing which cats may compete. Custer County does not adopt the CCR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State Fair Cat Show rather than eligibility to enter this department, and does not adopt the CCR General Contest Rules. Grievances in this department proceed under CC 2.5 like every other department in this book.
+
+The CCR is not printed in this book. A copy is available from CSU Extension.
+
+**CC 6.5.3 Vaccination**
+
+Every cat entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the CCR, General Contest Rules, Rule 3, under which proof of rabies vaccination must come from a licensed veterinarian, and a cat vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
+
+The CCR advises vaccination for feline viral rhinotracheitis, calicivirus, and panleukopenia, and advises testing for feline leukemia and feline immunodeficiency virus. Exhibitors are strongly advised to have proof of these available on the day of the show, and are strongly advised to alert the superintendent before the show if a cat has tested positive for either virus.
+
+Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the CCR Cat Eligibility Rules adopted at CC 6.5.2.
+
+**CC 6.5.4 Classes Offered**
+
+The classes offered in the cat department are Showmanship, Conformation, Cage Decorating, and Costume Contest. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+
+The Conformation class is divided into Purebred, Domestic Short Hair, and Domestic Long Hair. A cat entered in the Purebred class is judged against the breed standard for its breed. A cat entered in the Domestic Short Hair or Domestic Long Hair class is judged on physical condition, cleanliness, temperament, and presentation rather than against a breed standard. A cat may be entered in only one Conformation class.
+
+Custer County acknowledges and adopts the CCR, Cage Decorating, under which members are encouraged to decorate the cat's display cage and cages are judged by age division. Cage Decorating classes are divided by the age divisions stated at CC 7.1.3.
+
+The Costume Contest class is judged with every age division together.
+
+**CC 6.5.5 Handling and Care at the Show**
+
+Every cat must be brought to the show in a travel carrier, and that carrier must remain near the showing area at all times. Every cat must be on a halter and leash whenever it is outside its cage. Every cat must have its front and rear claws clipped.
+
+The exhibitor shall prepare and show the exhibitor's own cat and shall carry that cat to the judging table. Only the exhibitor may show a cat at the judging table. The exhibitor shall remain in the area with the cat during judging. A cat that is not on the judging table at the time its class is judged shall not be judged.
+
+The exhibitor shall provide the cat a litter box, litter, food, water, and a bottom liner providing traction. The exhibitor shall keep the cage clean and orderly at all times.
+
+**CC 6.5.6 Awards**
+
+Ribbons are presented under CC 2.19. Placings in every class are awarded under the American system. In each class, a Champion is awarded to the exhibitor holding the high-point placing and a Reserve Champion to the exhibitor holding the second high-point placing.
+
+One Grand Champion and one Reserve Grand Champion are awarded in this department, determined by overall point total across all classes and all age divisions, the highest taking Grand Champion and the second highest taking Reserve Grand Champion.
 
 ---
 
