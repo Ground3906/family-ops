@@ -28,9 +28,9 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 5, CC 7, and CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. Remaining, in this order:
+CC 1 through CC 5, CC 7, and CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. Remaining, in this order:
 
-1. **CC 6.1**, then its subchapters — Rabbit, Poultry, Dog, Cat, Llama, Breeding and Dairy.
+1. **CC 6**, remaining subchapters — Llama, Breeding and Dairy.
 2. **CC 9**, then **CC 10**.
 3. **Addendum §1 through §9.**
 4. **Cover page** — mission statement and graphic.
@@ -142,6 +142,8 @@ The **CC prefix is load-bearing**. This book prints CSF references on nearly eve
 **The index prints as a list, not a rule.** A lead-in sentence states what the section covers, then each pointer runs on its own line as "CC X.X — description." This does not reverse the bullets-banned-in-rule-text prohibition: an index creates no obligation and is never itself cited, so nothing is lost by making it scannable. An index of one or two pointers stays as a single sentence instead; a list that short reads worse as a list than as prose. Locked 8/14/2026, converting CC 3.1.15 and the CC 3.2 through CC 3.7 department indexes; CC 5.12, CC 7.2.1, and CC 7.3.1 stayed as prose under the short-list exception.
 
 Reprinting in full is an exception argued at its pass. Every reprint is a drift risk taken deliberately.
+
+**A by-reference outside document is adopted in parts, not as a block.** DTR and CCR are both CSU Extension contest-rule documents built from a shared template, and that template carries its own protest-and-arbitration provisions layered independently of CC 2.5. Where an adopted document's general-rules block would import a second grievance path, that block is not adopted; only the specific provisions the department needs are cited by number, and CC 2.5 continues to govern grievances in that department like every other. Locked at CC 6.4 and CC 6.5; expect the same shape wherever another by-reference document appears.
 
 ## The Addendum
 
@@ -354,6 +356,30 @@ Found 8/13/2026 building CC 7. CSF runs its own Master Showmanship Competition (
 
 Found 8/14/2026 building CC 6.1. CC 3.1.11 (market) and CC 6.1.4 (non-market) are parallel rules, same shape, adapted to species. CC 5 (Horse) has no equivalent and is not getting one. The horse project runs on stalls families arrange directly, outside any Authority-run assignment process the book governs, and none of CC 5's other rules touch space either. Recorded so a future both-directions audit of CC 5 does not re-flag the absence as a silence-gap needing a rule.
 
+## CC 6.3 Poultry has no source in either direction
+
+Found 8/15/2026 building CC 6.3. The county book's only mention of a poultry show anywhere in the non-market section is the old Companion Animal Master Showmanship rule, which names Cat, Poultry, Dog, and Llama as feeder shows without ever creating a Poultry department. CSF carries no junior poultry department to adopt from either — its only poultry departments are Market Chickens and Market Turkeys. CC 6.3 was constructed rather than adapted, the first department in the book built this way.
+
+## Market Goat's Dairy Goat cross-reference points at nothing
+
+Found 8/15/2026 building CC 6.3. CC 3.5.14 sends the reader to "the non-market eligible livestock section" for Dairy Goat. That section has no Dairy Goat department, only a two-line Non-Market Goat entry. The dead cross-reference predates this rewrite and is not caused by anything shipped so far; flagged for the conformance pass rather than fixed now, since Breeding and Dairy has not yet been built and may be where it resolves.
+
+## The county's Dog rules regulate a class that is not offered
+
+Found 8/15/2026 building CC 6.4. The county book's obedience rules reference a "Sub-Novice" class by name in two places, but no class list anywhere in the county book offers it. Resolved by adopting the DTR's own progression, which uses Pre-Beginner Novice in that slot; CC 6.4.5 prints the DTR progression as authority rather than the county's incomplete list.
+
+## DTR and CCR share a template, protest-and-arbitration block included
+
+Found 8/15/2026 building CC 6.4 and CC 6.5. Both are CSU Extension by-reference documents, and both carry near-identical General Contest Rules language, including matching $50 written-protest and arbitration-committee provisions. Neither block was adopted, for the reason at Part Two. Expect the same template, and the same non-adoption, in any future by-reference document this book cites.
+
+## The Cat archive file is also the CC 9 source
+
+Found 8/15/2026 building CC 6.5. `co4h-cat.pdf` is not a Cat-specific document. It is the full CSF 4-H Contest Requirements bundle, covering Cake Decorating, Cat Show, Creative Cooks, Digital Photo, Fashion Revue, Public Presentations, and Rocket Fly Day. The CCR abbreviation is defined to cover this reuse in advance; CC 9 will extend the same CC 1 entry rather than defining a second one.
+
+## Llama's Costume class and Cat's Costume Contest may be one practice, not two
+
+Found 8/15/2026 building CC 6.5. Both departments carry a Costume class judged with every age division together, the only class in either department not split by age. Neither source explains the shared shape, and it is unconfirmed whether this reflects one real cross-species costume practice at the fair or independent copy-paste between two legacy sections. Worth a direct check when Llama opens, since the answer may mean one rule rather than two.
+
 ---
 
 # PART FIVE — POLITICAL FLAGS
@@ -458,6 +484,8 @@ The county book's horse dress rules require long-sleeve button-down shirts with 
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
 - **Scripted inserts, never manual retype.** A prior session introduced a typo by hand-retyping a full file's content for the MCP write tool. Standard method now: fetch the file fresh, insert new content into that exact fetched copy via a scripted string-replace with a `count==1` assertion, then push that copy verbatim. Read-back diffs against the pre-push local copy, not just against expected content.
+- **Check every named entity when mirroring a prior department.** A new subchapter drafted from a prior one's shape carries that prior department's abbreviations and document names by default. Every proper noun in the mirrored text is checked against the new department's own facts before presenting for lock, not just the structural parallel. Two catches this session: CC 6.3.2 initially spelled out APA instead of using the defined abbreviation; CC 6.5.2 initially named the DTR instead of the CCR.
+- **A formatting convention is verified against the chapter being extended, not the chapter most recently on screen.** CC 3's subchapters divide with `---`; CC 4, CC 6, and CC 7 do not. An insert built on the wrong assumption was caught by byte-diff against committed content rather than by checking first.
 
 ## Source re-extraction
 
