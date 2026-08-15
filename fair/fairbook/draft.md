@@ -52,6 +52,8 @@ The following abbreviations are used throughout this book.
 
 **CSU Extension** — Colorado State University Extension, the county's administrator of the 4-H Youth Development Program.
 
+**DTR** — Colorado State Fair State 4-H Dog Trials Rules, the CSU Extension rulebook that governs the conduct of 4-H dog classes, adopted by CC 6.4.
+
 **FFA** — National FFA Organization, formerly known as Future Farmers of America.
 
 **GCR** — Colorado State Fair General Competition Requirements, the CSF's governing rulebook for all competitions.
@@ -1075,6 +1077,96 @@ The Breeding Rabbit class is divided by age and sex as follows. Junior Doe and J
 **CC 6.2.4 Awards**
 
 Ribbons are presented under CC 2.19. Each class is awarded a Champion and a Reserve Champion. Every Champion is eligible for Grand Champion. Every remaining Champion, together with the Reserve Champion of the class from which the Grand Champion was selected, is eligible for Reserve Grand Champion.
+
+### CC 6.3 — Poultry
+
+**CC 6.3.1 Rules That Reach This Department**
+
+This subchapter states only those requirements that differ from CC 6.1 or that exist only in Poultry. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 6.1 — Requirements applying to every non-market and small animal project
+
+CC 7 — Showmanship
+
+CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 6.3.2 Governing Rules**
+
+Custer County acknowledges and adopts the APA Standard of Perfection as the standard against which every bird in this department is judged, and the breed and variety disqualifications recognized by the APA as grounds for disqualification in any conformation class.
+
+**CC 6.3.3 Classes Offered**
+
+The classes offered in the poultry department are Showmanship, Companion Poultry, and Breeding Poultry. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+
+A bird of any species recognized by the APA may be entered in the Companion Poultry class or the Breeding Poultry class. The Breeding Poultry class is divided by age and sex as follows. Junior Female and Junior Male are under one year of age. Senior Female and Senior Male are one year of age and over. The age of a bird is determined as of the first day of the fair.
+
+**CC 6.3.4 Health and Biosecurity**
+
+Every bird entered in this department is subject to a health check at check-in. The Authority shall conduct that check, with the superintendent of the department as lead. A bird showing signs of illness shall be refused entry and shall not be unloaded.
+
+Custer County acknowledges and adopts the CSF Livestock Health Requirements provision governing animals showing evidence of disease, under which an animal found showing evidence of an infectious, contagious, or communicable disease may be immediately withdrawn from the show and held in isolation at the owner's risk and expense until that animal is released to return to the owner's premises. A bird that becomes ill while on the fairgrounds shall be isolated immediately.
+
+Custer County acknowledges and adopts the advisory form CSF uses in its Livestock Health Requirements for animals presenting a known risk. Birds housed at the Custer County Fair have been in close contact with birds from other flocks. Exhibitors are strongly advised to keep every bird returning from the fair separated from the home flock.
+
+**CC 6.3.5 Awards**
+
+Ribbons are presented under CC 2.19. Each class is awarded a Champion and a Reserve Champion. Every Champion is eligible for Grand Champion. Every remaining Champion, together with the Reserve Champion of the class from which the Grand Champion was selected, is eligible for Reserve Grand Champion.
+
+### CC 6.4 — Dog
+
+**CC 6.4.1 Rules That Reach This Department**
+
+This subchapter states only those requirements that differ from CC 6.1 or that exist only in Dog. Requirements stated elsewhere in this book that reach this department are listed below.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 6.1 — Requirements applying to every non-market and small animal project
+
+CC 7 — Showmanship
+
+CC 7.3 — Companion Animal Master Showmanship Contest
+
+**CC 6.4.2 Governing Rules**
+
+Custer County acknowledges and adopts the DTR as the authority governing the conduct and judging of every class in this department, and adopts the DTR Dog Eligibility Rules as the standard governing which dogs may compete. Custer County does not adopt the DTR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State 4-H Dog Trials rather than eligibility to enter this department. Eligibility to enter this department is stated at CC 6.1.2 and in this subchapter.
+
+The DTR is not printed in this book. A copy is available from CSU Extension.
+
+**CC 6.4.3 Eligibility and Ownership**
+
+An exhibitor in this department must be enrolled in the 4-H dog project. The exhibitor must own the project dog individually or in partnership with a parent or guardian for the duration of the project.
+
+Every dog entered in this department must have been part of the exhibitor's project on or before the date listed in Addendum §4, and must be registered in the enrollment system designated by CSU Extension on or before that date. A complete vaccination record must accompany that registration.
+
+**CC 6.4.4 Vaccination**
+
+Every dog entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the DTR, General Dog Contest Rules, Rule 6, under which proof of rabies vaccination must come from a licensed veterinarian, and a dog vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
+
+The veterinarians whose recommendations are printed in the DTR advise proof of vaccination for canine distemper virus and canine parvovirus. Exhibitors are strongly advised to have that proof available on the day of the show.
+
+Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the DTR Dog Eligibility Rules adopted at CC 6.4.2.
+
+**CC 6.4.5 Classes Offered**
+
+Custer County acknowledges and adopts the DTR, Showmanship Class Descriptions and Eligibility Requirements, the DTR Obedience General Rules, and the Colorado State 4-H Dog Level Progression Chart printed in the DTR as the authority governing which class an exhibitor and dog enter. The progress the dog has made determines the obedience class entered. The exhibitor's years in 4-H do not determine that class.
+
+The classes currently offered in this department are as follows. In obedience: Puppy, Beginner Novice, Novice, Graduate Novice, Advanced, and Veteran. In showmanship: Junior Novice, Junior Open, Intermediate Novice, Intermediate Open, Senior Novice, Senior Open, Senior Advanced, and Top Showman. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+
+The Top Showman class is entered by an exhibitor of Intermediate or Senior age who has been a Grand Champion or Reserve Grand Champion Showman at a previous State 4-H Dog Trials, as provided at the DTR, Master Showmanship Division, Class 508.
+
+**CC 6.4.6 Required Entry**
+
+Every exhibitor in this department must enter a showmanship class in addition to the obedience class appropriate to the dog under CC 6.4.5.
+
+**CC 6.4.7 Awards**
+
+Every exhibitor in an obedience class and every exhibitor in a showmanship class is awarded a blue, red, or white merit ribbon under the Danish system, rated against the standard for the class rather than against other exhibitors. The point ranges for each ribbon are stated on the score sheets published by the Colorado State 4-H Office and cited at the DTR, Obedience General Rules, Rule 12.
+
+Placings are awarded under the American system, as provided at the DTR, Showmanship, Obedience, and Rally Awards.
+
+In each class, a Champion is awarded to the exhibitor holding the high-point blue ribbon and a Reserve Champion to the exhibitor holding the second high-point blue ribbon. A Grand Champion and a Reserve Grand Champion are awarded in obedience, and a Grand Champion and a Reserve Grand Champion are awarded in showmanship. Each is determined by overall point total across all age divisions, the highest taking Grand Champion and the second highest taking Reserve Grand Champion.
 
 ---
 
