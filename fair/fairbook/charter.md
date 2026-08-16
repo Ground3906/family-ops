@@ -28,9 +28,9 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. CC 9.1, the shared layer for Family and Consumer Sciences and General Projects, shipped 8/16/2026. Remaining, in this order:
+CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. CC 9, Family and Consumer Sciences and General Projects, shipped complete and standalone 8/16/2026 — the project-sections layer was not built; both source documents were fully consumed by the chapter's single section. Remaining, in this order:
 
-1. **CC 9 project sections**, then **CC 10**.
+1. **CC 10.**
 2. **Addendum §1 through §9.**
 3. **Cover page** — mission statement and graphic.
 4. **Table of contents** — generated from finished chapters.
