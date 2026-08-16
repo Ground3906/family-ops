@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-16.
+Last batch: 2026-08-18.
 
 ---
 
@@ -489,6 +489,7 @@ Last batch: 2026-08-16.
 [MEAL] 2026-08-15 17:30 Italian subs :: meal-type=dinner
 [MEAL] 2026-08-16 17:30 Chicken fajitas :: meal-type=dinner
 [MEAL] 2026-08-17 17:30 Baked potato :: meal-type=dinner
+[MEAL] 2026-08-18 17:30 Curry, rice, and vegetables :: meal-type=dinner
 
 ---
 
