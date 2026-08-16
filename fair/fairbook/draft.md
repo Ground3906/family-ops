@@ -1750,6 +1750,98 @@ A quilt entered in this division must have been completed within the two years p
 
 The classes offered in this division are Knitting, Crochet, Quilt, Embroidery, Other Fiber Arts, Non-Fiber Arts, and Miscellaneous.
 
+### CC 10.8 — Scrapbooking
+
+**CC 10.8.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.8.2 Display Format**
+
+Every entry except a card or a tag is displayed in a scrapbook or a three-ring binder. A card or a tag is adhered to and displayed on a sturdy board.
+
+**CC 10.8.3 Classes Offered**
+
+The classes offered in this division are Scrapbooking Album, One or Two-Page Layout, Card Making (Set of Three), Tag Making (Set of Three), and Miscellaneous.
+
+### CC 10.9 — Sewing/Clothing
+
+**CC 10.9.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.9.2 Classes Offered**
+
+The classes offered in this division are Clothing Construction, Artistic Clothing, and Miscellaneous.
+
+### CC 10.10 — Jewelry
+
+**CC 10.10.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.10.2 Display Format**
+
+Every entry is entered display-ready on a stand or form suited to the item, such as a necklace display bust, an earring tree, a bracelet bar, or a ring stand.
+
+**CC 10.10.3 Classes Offered**
+
+The classes offered in this division are Earrings, Necklace, Bracelet, Ring, Sets (Three or More Related Items), and Miscellaneous.
+
+### CC 10.11 — Visual Arts
+
+**CC 10.11.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.11.2 Judging**
+
+Custer County provides the following judging criteria for this division, in place of the criteria stated at CC 10.1.8. An exhibit is judged on technical quality, composition, originality, and relevance to the category.
+
+**CC 10.11.3 Size Limit**
+
+No exhibit over 24 inches by 36 inches is accepted.
+
+**CC 10.11.4 Classes Offered**
+
+The classes offered in this division are Painting, Drawing, Graphic Design, and Miscellaneous.
+
+### CC 10.12 — Photography
+
+**CC 10.12.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.12.2 Judging**
+
+Custer County provides the following judging criteria for this division, in place of the criteria stated at CC 10.1.8. A photograph is judged on technical quality, composition, originality, and relevance to the category.
+
+**CC 10.12.3 Identifying Marks**
+
+A photograph carrying an identifying mark, a copyright, or a watermark is refused.
+
+**CC 10.12.4 Size Limit**
+
+No photograph over 24 inches by 36 inches is accepted.
+
+**CC 10.12.5 Classes Offered**
+
+The classes offered in this division are People, Scenic, Nature, Computer Modified, and Miscellaneous.
+
+### CC 10.13 — Miscellaneous
+
+**CC 10.13.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.13.2 Heritage Exception**
+
+An antique accepted in this division qualifies for the heritage exception stated at CC 10.1.12.
+
+**CC 10.13.3 Classes Offered**
+
+The classes offered in this division are Leathercraft, Woodworking, Metalworking, Ceramics, Home Design, Trending Crafts, and Miscellaneous.
+
 ---
 
 *The following sections carry forward from earlier passes in the legacy county order. They are re-homed into CC chapters as those chapters are written.*
