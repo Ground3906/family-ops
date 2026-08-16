@@ -28,13 +28,12 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. CC 9, Family and Consumer Sciences and General Projects, shipped complete and standalone 8/16/2026 — the project-sections layer was not built; both source documents were fully consumed by the chapter's single section. Remaining, in this order:
+CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. CC 9, Family and Consumer Sciences and General Projects, shipped complete and standalone 8/16/2026 — the project-sections layer was not built; both source documents were fully consumed by the chapter's single section. CC 10, Open Division, shipped complete 8/16/2026 across three chunks: patches to already-shipped text, the CC 10.1 shared layer plus Baked Goods, Food Preservation, Decorated Baked Goods, Floriculture, Horticulture, and Heritage Arts, then Scrapbooking, Sewing/Clothing, Jewelry, Visual Arts, Photography, and Miscellaneous — completing every chapter, CC 1 through CC 10. Remaining, in this order:
 
-1. **CC 10.**
-2. **Addendum §1 through §9.**
-3. **Cover page** — mission statement and graphic.
-4. **Table of contents** — generated from finished chapters.
-5. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
+1. **Addendum §1 through §9.**
+2. **Cover page** — mission statement and graphic.
+3. **Table of contents** — generated from finished chapters.
+4. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
 
 Shared layers build before the projects that lean on them. A reconciliation sweep runs at the end of each chapter to catch commonalities the project passes surface that the chapter's shared layer missed.
 
@@ -144,7 +143,7 @@ The **CC prefix is load-bearing**. This book prints CSF references on nearly eve
 
 Reprinting in full is an exception argued at its pass. Every reprint is a drift risk taken deliberately.
 
-**A by-reference outside document is adopted in parts, not as a block.** DTR and CCR are both CSU Extension contest-rule documents built from a shared template, and that template carries its own protest-and-arbitration provisions layered independently of CC 2.5. Where an adopted document's general-rules block would import a second grievance path, that block is not adopted; only the specific provisions the department needs are cited by number, and CC 2.5 continues to govern grievances in that department like every other. Locked at CC 6.4 and CC 6.5; expect the same shape wherever another by-reference document appears.
+**A by-reference outside document is adopted in parts, not as a block.** DTR and CCR are both CSU Extension contest-rule documents built from a shared template, and that template carries its own protest-and-arbitration provisions layered independently of CC 2.5. Where an adopted document's general-rules block would import a second grievance path, that block is not adopted; only the specific provisions the department needs are cited by number, and CC 2.5 continues to govern grievances in that department like every other. Locked at CC 6.4 and CC 6.5, and extended to the GEFA at CC 10: Custer does not adopt the GEFA as a whole document, only the entry, judging, and display provisions this chapter cites; operational CSF-only provisions (shipping, wristbands, the Pueblo office, CSF-specific check-in cutoffs) are never imported.
 
 ## The Addendum
 
@@ -438,6 +437,8 @@ Named here so the veterans hear them from the board rather than discovering them
 **The beef no-waterers line.** Market Beef prohibited leaving feed pans or waterers in pens and stalls, in direct contradiction of Market Swine and of CSF. CSF governs every species now and the beef line dies.
 
 **The swine self-waterer allowance.** Market Swine permitted a self-waterer built from PVC pipe and a pig nipple. Compatible with CSF but more specific than it, and dropped rather than raised, on the judgment that CSF's rule is enough.
+
+**Superintendent-delivered grievance routing.** The county book had grievances in Open Division routed through the division superintendent at check-in. CC 2.8 governs grievances for every chapter in the book, Open Division included, and that routing does not survive — a grievance in any department goes through the standard CC 2.8 channel, not a department-specific one.
 
 ## Answerable for the people you bring
 
