@@ -1278,6 +1278,42 @@ Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) 
 
 Ribbons are presented under CC 2.19. Placings in every class are awarded under the American system, and ribbons are awarded through 10th place in every performance class. A Champion and a Reserve Champion are awarded in each age division of each class. A Grand Champion and a Reserve Grand Champion are awarded in each of the Junior, Intermediate, and Senior age divisions, determined by ALSA points for combined scores across the Showmanship, Pack, Obstacle, and Public Relations classes.
 
+### CC 6.7 — Breeding and Dairy
+
+**CC 6.7.1 Rules That Reach This Department**
+
+This subchapter states only those requirements that differ from CC 6.1 or that exist only in Breeding and Dairy. Requirements stated elsewhere in this book that reach this department are listed below. This department has no Showmanship class; CC 7 and CC 7.3 do not reach it.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 6.1 — Requirements applying to every non-market and small animal project
+
+**CC 6.7.2 Governing Rules**
+
+This department has no single governing document. Breeding Beef, Breeding Goat, Breeding Swine, Fiber Goat, and Utility Goat have no CSF standard adopted by this book; the Authority determines their classes and judging criteria, as stated at CC 6.7.4. Breeding Sheep and Dairy Goat each carry a partial adoption from their own CSF competition requirements, stated at CC 6.7.4 under each class.
+
+**CC 6.7.3 Classes Offered**
+
+The classes offered in this department are Breeding Beef, Breeding Sheep, Breeding Swine, Breeding Goat, Dairy Goat, Fiber Goat, and Utility Goat. Age divisions for Breeding Sheep and Dairy Goat are stated in the rules for each class. The Authority determines the classes for Breeding Beef, Breeding Swine, Breeding Goat, Fiber Goat, and Utility Goat, as stated at CC 6.7.4.
+
+**CC 6.7.4 Class Rules**
+
+Custer County provides no breed divisions, age classes, or judging criteria for Breeding Beef, Breeding Goat, Breeding Swine, Fiber Goat, or Utility Goat. The Authority shall determine the classes and judging criteria for each of these five classes, with the superintendent of the department as lead.
+
+Custer County provides no breed divisions, age classes, or judging criteria for Breeding Sheep beyond what is stated in this section. The Authority shall determine the classes and judging criteria for this class, with the superintendent of the department as lead.
+
+Custer County acknowledges and adopts the CSF Junior Breeding Sheep competition requirements governing tooth eligibility and shearing, under which an animal shown as a lamb must have all lamb teeth in place, and an animal shown as a yearling may have two or four permanent teeth. An animal shown slick-shorn must be shorn before arriving at the fairgrounds for the show. Every sheep entered in this class shall carry a scrapie flock identification tag under the federal requirement stated at CC 3.4.2. Custer County does not adopt the CSF breed divisions, class numbering, or Bred and Owned sponsorship, which are scaled to state fair competition.
+
+Custer County acknowledges and adopts the CSF Youth Dairy Goat competition requirements governing age classes, under which the class is divided by age as follows: Junior Kid, Intermediate Kid, Senior Kid, Junior Yearling, Senior Yearling, and by year for does one year of age and older. Custer County reads this requirement as follows. Junior Kid is under 3 months of age. Intermediate Kid is 3 months of age and under 5 months of age. Senior Kid is 5 months of age and under 7 months of age. Junior Yearling is 7 months of age and under 12 months of age. Senior Yearling is 12 months of age and under 24 months of age and not yet milking. Doe 1 Year and Under 2 is 12 months of age and under 24 months of age and milking. Doe 2 Years and Under 3, Doe 3 Years and Under 4, Doe 4 Years and Under 5, and Doe 5 Years and Over are milking does divided by age as their names state. Custer County does not adopt the CSF breed-type classification dividing Nubian and Swiss type goats, or the CSF class-number series.
+
+Custer County acknowledges and adopts the CSF Youth Dairy Goat competition requirements governing kid ownership, under which a Junior Kid born after June 1 of the current year is eligible to show only where the exhibitor has owned the dam continuously since June 1 of the current year.
+
+Every dairy goat entered in this class shall carry a scrapie flock identification tag under the federal requirement stated at CC 3.4.2.
+
+**CC 6.7.5 Awards**
+
+Ribbons are presented under CC 2.19. No Champion, Reserve Champion, or Grand Champion structure is adopted for this department.
+
 ---
 
 ## CC 7 — Showmanship
