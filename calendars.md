@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-18.
+Last batch: 2026-08-20.
 
 ---
 
@@ -490,6 +490,8 @@ Last batch: 2026-08-18.
 [MEAL] 2026-08-16 17:30 Chicken fajitas :: meal-type=dinner
 [MEAL] 2026-08-17 17:30 Baked potato :: meal-type=dinner
 [MEAL] 2026-08-18 17:30 Curry, rice, and vegetables :: meal-type=dinner
+[MEAL] 2026-08-19 17:30 Bowtie pasta, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
+[MEAL] 2026-08-20 17:30 Cobb salad :: meal-type=dinner
 
 ---
 
