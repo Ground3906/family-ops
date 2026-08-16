@@ -10,7 +10,6 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Blocking the October publish
 
-- **CC 10** — unwritten. CC 1 through CC 9 are finished.
 - **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
