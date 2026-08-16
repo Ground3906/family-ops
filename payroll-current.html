@@ -60,24 +60,39 @@ body {
 .hdr-right { justify-content: flex-end; }
 
 #btn-home {
-  height: 60px;
-  padding: 0 28px;
-  background: linear-gradient(180deg, #282010 0%, #1a1408 60%, #0e0c06 100%);
-  border-top: 1px solid #504030;
-  border-left: 1px solid #403020;
-  border-right: 1px solid #100c06;
-  border-bottom: 2px solid #060402;
-  border-radius: var(--radius);
-  box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px #4a2808, 0 5px 12px rgba(0,0,0,0.7);
-  color: var(--amber);
-  font-family: Georgia, serif;
-  font-size: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  padding: 4px;
+  background: #0c0a06;
+  border: 1.5px solid #3a1e06;
+  border-top-color: #502e0c;
+  border-left-color: #502e0c;
+  border-bottom-color: #000;
+  border-right-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.8);
   cursor: pointer;
-  transition: transform 0.08s, box-shadow 0.08s;
+  flex-shrink: 0;
+  user-select: none;
+  display: flex;
+  transition: transform 0.08s;
 }
-#btn-home:active { transform: translateY(2px); box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px #4a2808, 0 1px 4px rgba(0,0,0,0.6); border-bottom-width: 1px; }
+#btn-home:active { transform: translateY(2px); }
+#btn-home-face {
+  background: #6a3e10;
+  border-radius: 6px;
+  border-top: 1px solid #c07030;
+  border-left: 1px solid #a05a20;
+  border-bottom: 1px solid #180800;
+  border-right: 1px solid #2e1004;
+  padding: 8px 22px;
+  text-align: center;
+  box-shadow: inset 0 0 16px rgba(0,0,0,.32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-house { font-size: 22px; color: var(--amber); line-height: 1; }
+.home-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.28em; color: #c07830; text-transform: uppercase; margin-top: 3px; font-family: Georgia, serif; }
 
 #hdr-banner {
   background: linear-gradient(180deg, #7a4818 0%, var(--face) 60%, #5a3208 100%);
@@ -274,7 +289,7 @@ body {
 }
 #amount-display.deduct-mode { color: #f08060; text-shadow: 0 0 16px rgba(240,128,96,0.3); }
 
-/* Stamp It -- bright amber face, most prominent element */
+/* Stamp It */
 #btn-action {
   height: 62px;
   border-radius: var(--radius);
@@ -442,10 +457,7 @@ body {
 }
 .btn-run:not(:disabled):active { transform: translateY(2px); border-bottom-width: 1px; }
 .btn-run:disabled { opacity: 0.28; cursor: not-allowed; }
-.btn-run.paid {
-  background: transparent; border: 1px solid rgba(240,200,128,0.12);
-  color: rgba(240,200,128,0.3); box-shadow: none;
-}
+.btn-run.paid { background: transparent; border: 1px solid rgba(240,200,128,0.12); color: rgba(240,200,128,0.3); box-shadow: none; }
 
 #payout-activity { flex: 1; overflow-y: auto; min-height: 0; }
 .activity-hdr { font-size: 10px; font-family: system-ui, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(240,200,128,0.35); margin-bottom: 8px; }
@@ -471,7 +483,7 @@ body {
 <!-- HEADER -->
 <div id="header">
   <div class="hdr-section hdr-left">
-    <button id="btn-home">&#8592; Home</button>
+    <button id="btn-home"><div id="btn-home-face"><div class="home-house">&#8962;</div><div class="home-lbl">Home</div></div></button>
   </div>
   <div class="hdr-section hdr-center">
     <div id="hdr-banner">
@@ -986,7 +998,7 @@ async function doRunAll() {
 
 // -- EVENTS --
 document.addEventListener('click', function(e) {
-  if (e.target.id === 'btn-home') { window.location.href = HOME_URL; return; }
+  if (e.target.id === 'btn-home' || e.target.closest('#btn-home')) { window.location.href = HOME_URL; return; }
   var tb = e.target.closest('.tab-btn'); if (tb) { switchTab(tb.dataset.tab); return; }
   if (e.target.classList.contains('kid-btn'))  { selectKid(e.target.dataset.kid); return; }
   if (e.target.classList.contains('mode-btn')) { setMode(e.target.dataset.mode); return; }
