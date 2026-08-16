@@ -72,6 +72,8 @@ The following abbreviations are used throughout this book.
 
 **MQA** — Meat Quality Assurance, a national certification program for livestock producers covering drug use and animal care practices.
 
+**NCHFP** — National Center for Home Food Preservation, the USDA-supported national authority for safe home food preservation practices, adopted at CC 10.3.
+
 ### Definitions
 
 Where a term is not defined in this chapter, it carries its common meaning.
@@ -1515,6 +1517,238 @@ Every exhibit and record book in this chapter must carry the display card provid
 **CC 9.15 Premiums**
 
 Every project in this chapter is eligible for a premium. Premium amounts by placing are listed in Addendum §6.
+
+---
+
+## CC 10 — Open Division
+
+This chapter governs the Open Division of the Custer County Fair. The Open Division is open to any exhibitor, without regard to 4-H or FFA membership or Custer County residency, under CC 2.1. CC 10.1 states the requirements that apply to every division and class in this chapter. The subchapters that follow state the classes offered in each division and the rules that differ from CC 10.1 or that exist only within that division.
+
+### CC 10.1 — General Open Division Requirements
+
+**CC 10.1.1 Rules That Reach This Chapter**
+
+Requirements governing exhibitors in this chapter that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
+
+CC 2.1 through CC 2.11 — Requirements applying to every exhibitor
+
+CC 2.19 — Ribbons and placings
+
+CC 2.22 — Entry and liability
+
+**CC 10.1.2 Governing Document**
+
+The GEFA governs the entry, judging, and display requirements of this chapter to the extent this chapter cites it. Custer County does not adopt the GEFA as a whole document; only the provisions cited in this chapter are adopted.
+
+The GEFA is not printed in this book. A copy is available from the CSF.
+
+**CC 10.1.3 Eligibility**
+
+Eligibility for the Open Division is stated at CC 2.1 and CC 2.22. An exhibitor in this chapter is not required to hold 4-H or FFA membership and is not required to reside in Custer County.
+
+**CC 10.1.4 Entry Card and Blind Judging**
+
+Every entry card in this chapter is a two-part card. The stub states the exhibitor's name and is retained by the Authority at check-in; the stub is required to claim the exhibit at release. The tag states the division and the class in which the exhibit is entered and remains attached to the exhibit. No exhibitor's name is displayed with an exhibit during judging.
+
+**CC 10.1.5 Entries Per Class**
+
+Custer County acknowledges and adopts the GEFA, Entry Requirements, under which one entry is permitted per class unless otherwise specified. Custer County specifies that an exhibitor may enter up to three exhibits in a single class in the Open Division. An exhibit beyond that limit is not accepted.
+
+**CC 10.1.6 Age Divisions and Awards**
+
+Every class in this chapter is divided into a Youth placing, for an exhibitor under 19 years of age, and an Adult placing, for an exhibitor 19 years of age and older, placed separately. The Authority may subdivide or combine a class based on the number of entries, with the superintendent of the division as lead. This discretion extends to combining the Youth and Adult placings of a class where entries are insufficient to fill both.
+
+Only an exhibit placing first or second in its class is eligible for Grand Champion or Reserve Grand Champion of its division. A Grand Champion and a Reserve Grand Champion are awarded separately for the Youth placings and the Adult placings of each division in this chapter.
+
+**CC 10.1.7 Professional Exhibitors**
+
+Custer County acknowledges and adopts the CSF Pantry competition requirements governing professional exhibitors, under which a person deriving financial income from a skill may not enter a division of this chapter that uses that skill, but may enter any other division.
+
+**CC 10.1.8 Judging**
+
+Except where a division states its own judging criteria, Custer County acknowledges and adopts the GEFA, Judging Criteria, under which an exhibit is judged on originality, suitability of materials, creativity, craftsmanship, and overall effect. Placings in every class are awarded under the American System established at CC 2.19.
+
+**CC 10.1.9 Misentered Exhibits**
+
+Custer County acknowledges and adopts the GEFA, Disqualifications, under which an exhibit that is not a true representative of the class in which it is entered may be disqualified or, at the discretion of the Authority, transferred to the correct class. The Authority is not obligated to transfer a misentered exhibit.
+
+**CC 10.1.10 Exhibits Not Fitting a Listed Class**
+
+An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised by the entry deadline listed in Addendum §4. A request raised at check-in is refused.
+
+**CC 10.1.11 Decency Standard**
+
+An exhibit depicting nudity, violence, drug use, or other content inappropriate for the fairgrounds is not accepted.
+
+**CC 10.1.12 Original Work and the Heritage Exception**
+
+Custer County acknowledges and adopts the GEFA, Entry Requirements, under which every entry is exhibited in the name of its actual creator, except in a heritage class. The original-work requirement at CC 2.22 does not reach an exhibit exhibited under a heritage exception stated for a class in this chapter.
+
+**CC 10.1.13 Sets, Display, and Condition**
+
+Where an exhibit consists of a set of related items, the set is entered as one exhibit.
+
+An exhibit that is used, worn, soiled, or otherwise not fit for display is not accepted.
+
+Except where a division states its own packaging requirement, a baked or grown exhibit is placed on a paper plate inside a plastic bag and, where applicable, cooled before wrapping.
+
+**CC 10.1.14 Removal and Retention**
+
+Custer County acknowledges and adopts the GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §7, and under which the Fair Board is not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
+
+Custer County exempts a perishable exhibit, which may be disposed of before release under the standard stated for its division.
+
+**CC 10.1.15 State Fair Independence**
+
+Entry in the Open Division of the Custer County Fair neither qualifies nor bars an exhibitor from the Colorado State Fair Open Class. A class offered in this chapter does not necessarily correspond to a class offered at the Colorado State Fair.
+
+**CC 10.1.16 Premiums**
+
+An exhibit in this chapter is not eligible for a premium. No entry fee is charged for an exhibit entered under this chapter.
+
+### CC 10.2 — Baked Goods
+
+**CC 10.2.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.2.2 Preparation**
+
+Every entry is prepared by conventional methods except where a class specifies otherwise, and is made from scratch. A prepared mix may not be used.
+
+**CC 10.2.3 Tasting**
+
+An entry consists of four individual items, or one whole loaf or cake. Where the entry consists of individual items, one item is used for tasting and the remaining three are displayed. Where the entry is a whole item, it is cut for tasting. No item is returned to the exhibitor.
+
+**CC 10.2.4 Recipe Card**
+
+Custer County acknowledges and adopts the GEFA, Pantry, Entry Requirements, under which a recipe card must state the yield, the ingredients with measurements, the preparation instructions, and the cooking times and temperatures. Every entry in this division must be accompanied by a recipe card measuring 3 inches by 5 inches meeting this standard. An entry presented without a complete recipe card is not accepted.
+
+**CC 10.2.5 Refrigeration**
+
+An entry requiring refrigeration, including a filling of cream cheese or custard, is not accepted.
+
+**CC 10.2.6 Classes Offered**
+
+The classes offered in this division are Cakes, Cookies, Donuts, Pastries, Quick Breads, Yeast Breads, Candies, and Miscellaneous.
+
+### CC 10.3 — Food Preservation
+
+**CC 10.3.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.3.2 Governing Standard**
+
+Custer County acknowledges and adopts the food-safety standards published by CSU Extension and the NCHFP as the governing standard for every entry in this division. An entry not meeting these standards is not accepted.
+
+**CC 10.3.3 Samples**
+
+Two samples of each entry are submitted, one for tasting and one for display, except that canned fruit and canned vegetables are not opened, and soft spreads and pickles may be opened and tasted at the judge's discretion.
+
+**CC 10.3.4 Canning Requirements**
+
+An entry that is not properly sealed is not accepted. Every canned entry must carry a label stating the name of the product, the pack method, the process method, the altitude and process time, the pressure where applicable, the canning date, and the recipe source. A pickled entry must state the vinegar-to-water ratio on its label. Every entry must be packed in a clean, standard brand-name jar with a new, clean seal, and must have been processed since August 1 of the previous year.
+
+**CC 10.3.5 Recipe Card**
+
+Recipe card requirements are stated at CC 10.2.4.
+
+**CC 10.3.6 Classes Offered**
+
+The classes offered in this division are Canned Fruits, Canned Vegetables, Jellies, Jams, Butters, Marmalade and Conserves, Pickles, Dried Foods, Honey, and Miscellaneous.
+
+### CC 10.4 — Decorated Baked Goods
+
+**CC 10.4.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.4.2 Judging**
+
+An entry in this division is judged on the precision of its decoration and its neatness, in place of the criteria stated at CC 10.1.8. An entry is not cut or tasted.
+
+**CC 10.4.3 Display**
+
+An entry is placed on a paper plate or a disposable cake pan inside a plastic bag, in place of the packaging standard stated at CC 10.1.13. A cake form may be used.
+
+**CC 10.4.4 Refrigeration**
+
+An entry requiring refrigeration, including a filling of cream cheese or custard, is not accepted.
+
+**CC 10.4.5 Classes Offered**
+
+The classes offered in this division are Cakes, Cupcakes, and Cookies.
+
+### CC 10.5 — Floriculture
+
+**CC 10.5.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.5.2 Origin**
+
+Custer County acknowledges and adopts the GEFA, Floriculture, Entry Requirements, under which every entry in this division must have been grown by the exhibitor or have been in the exhibitor's possession for at least three months, unless otherwise specified. The exhibitor need not have grown the flowers used in the Artistic Arrangements class. Silk, dried, or fresh flowers may be used to create an arrangement.
+
+**CC 10.5.3 Identification**
+
+The exhibitor must identify the variety of every flower on the entry card.
+
+**CC 10.5.4 Perishable Disposal**
+
+An entry remaining after the posted closing time on release day is disposed of. Before release day, an entry showing mold is disposed of by the Authority.
+
+**CC 10.5.5 Classes Offered**
+
+The classes offered in this division are Artistic Arrangements (Fresh or Silk), Gardens, Cut Flowers, Potted Plants, and Miscellaneous.
+
+### CC 10.6 — Horticulture
+
+**CC 10.6.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.6.2 Origin**
+
+Only produce grown by the exhibitor may be entered in this division.
+
+**CC 10.6.3 Identification**
+
+The exhibitor must identify the variety of every crop on the entry card.
+
+**CC 10.6.4 Perishable Disposal**
+
+An entry remaining after the posted closing time on release day is disposed of. Before release day, an entry showing mold is disposed of by the Authority.
+
+**CC 10.6.5 Judging**
+
+Custer County provides the following judging criteria for this division, in place of the criteria stated at CC 10.1.8. An entry is judged on uniformity where more than one item of the same crop is entered, on freedom from damage, insects, and disease, and on size and condition appropriate to a consumer-sized item. A fruit or vegetable may not be deformed by cutting off parts to improve its appearance.
+
+**CC 10.6.6 Class Formation**
+
+Two or more entries of the same crop are required to form a class. Where fewer than two entries of a crop are received, those entries are judged together in the Miscellaneous class.
+
+**CC 10.6.7 Classes Offered**
+
+The classes offered in this division are Vegetable, Herb, Vine Crops, Roots Bulb and Tuberous Crops, Fruit, and Miscellaneous.
+
+### CC 10.7 — Heritage Arts
+
+**CC 10.7.1 Rules That Reach This Division**
+
+CC 10.1 — Requirements applying to every division of this chapter
+
+**CC 10.7.2 Quilt Classification**
+
+An item with three layers, a top, a batting, and a backing, is a quilt and is entered only in a quilt class.
+
+**CC 10.7.3 Quilt Completion Window**
+
+A quilt entered in this division must have been completed within the two years preceding the fair, in place of the completion window stated at CC 2.22. A quilt may be made by an individual exhibitor or by a group of two or more exhibitors; where made by a group, every exhibitor's name must be listed on the entry.
+
+**CC 10.7.4 Classes Offered**
+
+The classes offered in this division are Knitting, Crochet, Quilt, Embroidery, Other Fiber Arts, Non-Fiber Arts, and Miscellaneous.
 
 ---
 
