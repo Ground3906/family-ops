@@ -34,8 +34,6 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   width: 1920px; height: 1080px; overflow: hidden;
 }
-
-/* -- HEADER -- */
 #header {
   display: flex; height: var(--hdr);
   background: var(--bg); border-bottom: 2px solid #502e0c; flex-shrink: 0;
@@ -44,8 +42,6 @@ body {
 .hdr-left  { justify-content: flex-start; }
 .hdr-center { justify-content: center; }
 .hdr-right { justify-content: flex-end; }
-
-/* Home button -- exact match to cal-widget #home-btn */
 #btn-home {
   padding: 5px; background: #0c0a06;
   border: 1.5px solid #0e2810;
@@ -65,7 +61,6 @@ body {
 }
 .home-house { font-size: 16px; line-height: 1; margin-bottom: 3px; color: #c8dcaa; }
 .home-lbl { font-family: Georgia, serif; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: #c8dcaa; text-transform: uppercase; }
-
 #hdr-banner {
   background: linear-gradient(180deg, #7a4818 0%, var(--face) 60%, #5a3208 100%);
   border-top: 1px solid var(--face-t); border-left: 1px solid var(--face-l);
@@ -79,8 +74,6 @@ body {
 #save-status { font-size: 13px; font-family: system-ui, sans-serif; letter-spacing: .04em; color: rgba(240,200,128,.45); }
 #save-status.saving { color: var(--amber); }
 #save-status.error  { color: #D4694F; }
-
-/* -- TABS -- */
 #tab-bar {
   display: flex; height: var(--tab); background: var(--bg);
   border-bottom: 2px solid #502e0c; padding: 8px 10px; gap: 8px; flex-shrink: 0;
@@ -104,13 +97,9 @@ body {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--face-t), 0 2px 6px rgba(0,0,0,.5);
   color: var(--amber);
 }
-
-/* -- PANELS -- */
 #content { height: calc(1080px - var(--hdr) - var(--tab)); overflow: hidden; }
 .panel { display: none; width: 100%; height: 100%; }
 .panel.active { display: flex; }
-
-/* -- CARD (parchment, two-layer) -- */
 .card {
   background: linear-gradient(175deg, var(--parch) 0%, var(--parch-mid) 50%, var(--parch-dk) 100%);
   border-radius: 3px;
@@ -119,8 +108,6 @@ body {
   box-shadow: 0 0 0 3px #0c0a06, 0 0 0 5px #502e0c, 0 8px 20px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.45);
   padding: 20px;
 }
-
-/* -- LOG TAB -- */
 #panel-log { display: none; flex-direction: row; gap: 0; padding: 0; height: 100%; }
 #log-left {
   width: 460px; min-width: 460px;
@@ -130,8 +117,6 @@ body {
   padding: 20px 18px 16px 18px; gap: 12px; overflow: hidden;
 }
 #log-right { flex: 1; background: #0a0806; padding: 20px 24px; overflow-y: auto; }
-
-/* Kid row */
 #kid-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
 .kid-btn {
   height: 68px; border-radius: var(--radius);
@@ -151,8 +136,6 @@ body {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--face-t), 0 3px 8px rgba(0,0,0,.6);
   color: var(--amber);
 }
-
-/* Mode toggle */
 #mode-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .mode-btn {
   height: 50px; border-radius: var(--radius);
@@ -179,8 +162,6 @@ body {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px #a04030, 0 2px 5px rgba(0,0,0,.5);
   color: #f0a080;
 }
-
-/* Amount display */
 #amount-row {
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 14px; border-radius: var(--radius);
@@ -194,8 +175,6 @@ body {
   color: var(--amber); text-shadow: 0 0 20px rgba(240,200,128,.35), 0 1px 2px rgba(0,0,0,.7);
 }
 #amount-display.deduct-mode { color: #f08060; text-shadow: 0 0 16px rgba(240,128,96,.3); }
-
-/* Stamp It */
 #btn-action {
   height: 62px; border-radius: var(--radius);
   background: linear-gradient(180deg, #d4a430 0%, #b08820 50%, #886010 100%);
@@ -216,8 +195,6 @@ body {
   color: var(--amber); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px #902010, 0 8px 18px rgba(0,0,0,.75);
   text-shadow: 0 1px 2px rgba(0,0,0,.5);
 }
-
-/* Date row */
 #date-row { display: flex; align-items: center; gap: 10px; }
 .date-label { font-size: 11px; font-family: system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: rgba(240,200,128,.4); white-space: nowrap; }
 #log-date {
@@ -228,8 +205,6 @@ body {
   color: var(--ink); font-family: system-ui, sans-serif; font-size: 15px; font-weight: 600; padding: 0 10px;
   box-shadow: inset 0 2px 4px rgba(0,0,0,.15);
 }
-
-/* -- TAP CONTROLS (replaces all text inputs) -- */
 .tap-section-lbl { font-size: 10px; font-family: system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: rgba(240,200,128,.4); margin-bottom: 6px; }
 .tap-row { display: flex; flex-wrap: wrap; gap: 6px; }
 .tap-btn {
@@ -249,8 +224,6 @@ body {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--face-t), 0 2px 4px rgba(0,0,0,.5);
   color: var(--amber);
 }
-
-/* Reason grid (right panel, deduct mode) */
 .reason-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .reason-btn {
   padding: 16px 10px; border-radius: var(--radius);
@@ -270,12 +243,8 @@ body {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px #a04030, 0 2px 5px rgba(0,0,0,.5);
   color: #f0a080;
 }
-
-/* Right panel section headers */
 .right-section-lbl { font-size: 11px; font-family: system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: rgba(240,200,128,.35); margin-bottom: 14px; }
 .right-section-sublbl { font-size: 11px; font-family: system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: rgba(240,200,128,.35); margin: 14px 0 10px 0; }
-
-/* Recent tickets */
 #recent-wrap { flex: 1; overflow-y: auto; min-height: 0; }
 .recent-hdr { font-size: 10px; font-family: system-ui, sans-serif; letter-spacing: .2em; text-transform: uppercase; color: rgba(240,200,128,.35); margin-bottom: 8px; }
 .ticket-item {
@@ -292,8 +261,6 @@ body {
 .ticket-amt.neg { color: #f08060; }
 .ticket-del { background: none; border: none; cursor: pointer; color: rgba(240,200,128,.35); font-size: 18px; line-height: 1; padding: 0 4px; transition: color .13s; }
 .ticket-del:hover { color: var(--amber); }
-
-/* Job grid */
 .job-grid-hdr { font-size: 11px; font-family: system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: rgba(240,200,128,.35); margin-bottom: 14px; }
 #job-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .job-btn {
@@ -317,8 +284,6 @@ body {
 .job-btn.active .job-name { color: var(--amber); }
 .job-btn .job-price { font-size: 12px; font-family: system-ui, sans-serif; color: rgba(240,200,128,.4); margin-top: 2px; }
 .job-btn.active .job-price { color: rgba(240,200,128,.7); }
-
-/* -- BOARD TAB -- */
 #panel-board { flex-direction: column; padding: 20px 24px 16px 24px; gap: 16px; overflow: hidden; }
 #kid-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .kid-card { padding: 18px 18px; }
@@ -338,8 +303,6 @@ body {
 .rate-item-name { color: var(--ink); opacity: .85; }
 .rate-item-price { color: var(--ink-soft); font-weight: 700; }
 .rate-note { font-size: 10px; font-family: system-ui, sans-serif; color: var(--ink-soft); opacity: .6; margin-top: 10px; padding-top: 8px; border-top: 1px dashed #b09050; }
-
-/* -- PAYOUT TAB -- */
 #panel-payout { flex-direction: column; padding: 20px 24px 14px 24px; gap: 12px; overflow: hidden; }
 #payout-top { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .payout-hdr-card { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
@@ -383,7 +346,6 @@ body {
   margin-bottom: 6px; font-size: 13px; font-family: system-ui, sans-serif; color: rgba(240,200,128,.55);
 }
 .activity-item strong { color: var(--amber); }
-
 @keyframes stampIn {
   0%   { transform: scale(2.2) rotate(-14deg); opacity: 0; }
   60%  { transform: scale(.95) rotate(-6deg); opacity: 1; }
@@ -392,7 +354,6 @@ body {
 </style>
 </head>
 <body>
-
 <div id="header">
   <div class="hdr-section hdr-left">
     <button id="btn-home"><div id="btn-home-face"><div class="home-house">&#8962;</div><div class="home-lbl">Home</div></div></button>
@@ -405,16 +366,12 @@ body {
   </div>
   <div class="hdr-section hdr-right"><div id="save-status"></div></div>
 </div>
-
 <div id="tab-bar">
   <button class="tab-btn" data-tab="log">Log a Job</button>
   <button class="tab-btn active" data-tab="board">Earnings Board</button>
   <button class="tab-btn" data-tab="payout">Payout</button>
 </div>
-
 <div id="content">
-
-  <!-- LOG TAB -->
   <section id="panel-log" class="panel">
     <div id="log-left">
       <div id="kid-row">
@@ -428,7 +385,6 @@ body {
         <button class="mode-btn active" data-mode="job">&#128190; Job</button>
         <button class="mode-btn" data-mode="deduct">&#8722; Deduction</button>
       </div>
-      <!-- Tap controls for hours / custom amount rendered here -->
       <div id="cond-fields"></div>
       <div id="amount-row">
         <div>
@@ -446,14 +402,11 @@ body {
         <div id="recent-list"></div>
       </div>
     </div>
-
     <div id="log-right">
-      <!-- Job grid (job mode) -->
       <div id="job-grid-wrap">
         <div class="job-grid-hdr">Which job?</div>
         <div id="job-grid"></div>
       </div>
-      <!-- Deduction panel (deduct mode) -->
       <div id="deduct-panel" style="display:none;">
         <div class="right-section-lbl">What happened?</div>
         <div class="reason-grid" id="reason-grid"></div>
@@ -462,8 +415,6 @@ body {
       </div>
     </div>
   </section>
-
-  <!-- BOARD TAB -->
   <section id="panel-board" class="panel active">
     <div id="kid-cards"></div>
     <div class="card" id="rate-card">
@@ -472,8 +423,6 @@ body {
       <div class="rate-note">* Wyatt only &nbsp;&middot;&nbsp; Not up to Al's standards? I don't think so, Tim. No stamp, no pay.</div>
     </div>
   </section>
-
-  <!-- PAYOUT TAB -->
   <section id="panel-payout" class="panel">
     <div id="payout-top">
       <div class="card payout-hdr-card" id="payout-accrual-card"></div>
@@ -485,14 +434,11 @@ body {
       <div id="activity-list"></div>
     </div>
   </section>
-
 </div>
-
 <script>
 var HOME_URL  = 'http://192.168.1.60:8080/cal-widget-current.html';
 var DATA_URL  = 'http://192.168.1.60:8080/payroll/payroll-data.json';
 var WRITE_URL = 'http://192.168.1.60:8081/save';
-
 var KIDS = [
   { id:'wyatt',   name:'Wyatt',   age:14 },
   { id:'molly',   name:'Molly',   age:10 },
@@ -511,8 +457,8 @@ var JOBS = [
   { id:'coop',      label:'Coop deep-clean',      rate:5,  unit:'flat', icon:'\uD83C\uDFE0' },
   { id:'garden',    label:'Garden bed weeded',     rate:2,  unit:'flat', icon:'\uD83C\uDF3F' },
   { id:'yard',      label:'Yard cleanup',          rate:1,  unit:'flat', icon:'\uD83C\uDF42' },
-  { id:'diaper',    label:'Take out diaper trash', rate:1,  unit:'flat', icon:'\uD83D\uDDD1' },
-  { id:'snow',      label:'Snow shovel',           rate:1,  unit:'flat', icon:'\u2744' },
+  { id:'diaper',    label:'Take out diaper trash', rate:1,  unit:'flat', icon:'\uD83D\uDDD1\uFE0F' },
+  { id:'snow',      label:'Snow shovel',           rate:1,  unit:'flat', icon:'\u2744\uFE0F' },
   { id:'chip',      label:'Wood chipping',         rate:15, unit:'hour', icon:'\uD83E\uDEB5', only:'wyatt' },
   { id:'car',       label:'Clean the car',         rate:2,  unit:'flat', icon:'\uD83D\uDE97' },
   { id:'windows',   label:'Windows, per room',     rate:1,  unit:'flat', icon:'\u2728' },
@@ -521,26 +467,20 @@ var JOBS = [
   { id:'down',      label:'Zone: Downstairs',      rate:1,  unit:'flat', icon:'\uD83D\uDCE6' },
   { id:'common',    label:'Zone: Common room',     rate:1,  unit:'flat', icon:'\uD83D\uDECB' },
   { id:'mudroom',   label:'Mud room reset',        rate:2,  unit:'flat', icon:'\uD83D\uDEAA' },
-  { id:'dishes',    label:'Unload dishes',         rate:1,  unit:'flat', icon:'\uD83C\uDF7D' },
+  { id:'dishes',    label:'Unload dishes',         rate:1,  unit:'flat', icon:'\uD83C\uDF7D\uFE0F' },
   { id:'unloadcar', label:'Unload car',            rate:1,  unit:'flat', icon:'\uD83C\uDF92' },
-  { id:'custom',    label:'Something else',        rate:null, unit:'custom', icon:'\u270F' },
+  { id:'custom',    label:'Something else',        rate:null, unit:'custom', icon:'\u270F\uFE0F' },
 ];
 var HOUR_PRESETS   = [0.5, 1, 1.5, 2, 3, 4];
 var CUSTOM_AMTS    = [1, 2, 3, 5, 10, 15];
 var DEDUCT_REASONS = ['Attitude','Bad Words','Begging','Fighting','Ignoring Bedtime','Jealousy','Lying','Not Listening','Too Loud','Wasting Resources','Whining'];
 var DEDUCT_AMTS    = [1, 2, 3, 5];
-
-// UI state
 var activeTab = 'board';
 var selKid = null, selJob = null, logMode = 'job';
 var logHours = '', custAmt = '';
 var dedAmt = '', dedNote = '';
 var newTicketId = null;
-
-// Data state
 var gData = null, saving = false, saveErr = null;
-
-// Helpers
 function todayStr() { return new Date().toISOString().slice(0,10); }
 function monthKey(d) { return d.slice(0,7); }
 function monthLabel(mk) {
@@ -577,8 +517,6 @@ function canStamp() {
 function canDeduct() { return !!selKid && parseFloat(dedAmt) > 0 && dedNote.trim().length > 0; }
 function jobsForKid(kidId) { return JOBS.filter(function(j) { return !j.only || j.only === kidId; }); }
 function fmtDollars(n) { return (n < 0 ? '-' : '') + '$' + Math.abs(n).toFixed(2); }
-
-// Seed / persistence
 function seedData() {
   return {
     entries: [
@@ -586,8 +524,8 @@ function seedData() {
       {id:'seed-002',kidId:'rileigh',type:'job',   label:'Car cleanout',       rate:2,   unit:'flat',  hours:null,amount:2,date:'2026-07-09'},
       {id:'seed-003',kidId:'rileigh',type:'job',   label:'Unload dishes',      rate:1,   unit:'flat',  hours:null,amount:1,date:'2026-07-09'},
       {id:'seed-004',kidId:'molly',  type:'job',   label:'Unload car',         rate:1,   unit:'flat',  hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-005',kidId:'cullen', type:'deduct',label:'Attitude deduction', rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-006',kidId:'emmitt', type:'deduct',label:'Attitude deduction', rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
+      {id:'seed-005',kidId:'cullen', type:'deduct',label:'Attitude',           rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
+      {id:'seed-006',kidId:'emmitt', type:'deduct',label:'Attitude',           rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
     ],
     categories:{
       totals:{
@@ -623,8 +561,6 @@ function updateSaveStatus() {
   else if (saveErr) { el.textContent = saveErr; el.className = 'error'; }
   else { el.textContent = ''; el.className = ''; }
 }
-
-// Tab switching
 function switchTab(tab) {
   activeTab = tab;
   document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.tab === tab); });
@@ -634,15 +570,11 @@ function switchTab(tab) {
   if (tab === 'board')  renderBoard();
   if (tab === 'payout') renderPayout();
 }
-
-// Kid selection
 function selectKid(kidId) {
   selKid = kidId; selJob = null;
   document.querySelectorAll('.kid-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.kid === kidId); });
   renderJobGrid(); renderCondFields(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets();
 }
-
-// Mode toggle
 function setMode(mode) {
   logMode = mode; selJob = null;
   logHours = ''; custAmt = ''; dedAmt = ''; dedNote = '';
@@ -662,24 +594,18 @@ function setMode(mode) {
   }
   renderCondFields(); updateAmountDisplay(); updateActionBtn();
 }
-
-// Deduction panel (right side)
 function renderDeductPanel() {
-  // Reason grid
   var rg = document.getElementById('reason-grid');
   rg.innerHTML = DEDUCT_REASONS.map(function(r) {
     var act = dedNote === r ? ' active' : '';
     return '<button class="reason-btn' + act + '" data-reason="' + r + '">' + r + '</button>';
   }).join('');
-  // Amount row
   var dr = document.getElementById('dedamt-row');
   dr.innerHTML = DEDUCT_AMTS.map(function(a) {
     var act = parseFloat(dedAmt) === a ? ' active' : '';
     return '<button class="tap-btn dedamt-btn' + act + '" data-dedamt="' + a + '">&#8722;$' + a + '</button>';
   }).join('');
 }
-
-// Job grid
 function renderJobGrid() {
   var grid = document.getElementById('job-grid');
   if (!selKid) { grid.innerHTML = ''; return; }
@@ -692,15 +618,12 @@ function renderJobGrid() {
       '<span class="job-price">' + price + '</span></button>';
   }).join('');
 }
-
 function selectJob(jobId) {
   selJob = JOBS.find(function(j) { return j.id === jobId; }) || null;
   logHours = ''; custAmt = '';
   document.querySelectorAll('.job-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.jobid === jobId); });
   renderCondFields(); updateAmountDisplay(); updateActionBtn();
 }
-
-// Conditional tap controls (left panel, job mode)
 function renderCondFields() {
   var el = document.getElementById('cond-fields');
   if (logMode === 'deduct' || !selJob) { el.innerHTML = ''; return; }
@@ -722,7 +645,6 @@ function renderCondFields() {
   }
   el.innerHTML = html;
 }
-
 function updateAmountDisplay() {
   var el = document.getElementById('amount-display');
   if (logMode === 'deduct') { el.textContent = '-$' + (parseFloat(dedAmt) || 0).toFixed(2); }
@@ -731,8 +653,6 @@ function updateAmountDisplay() {
 function updateActionBtn() {
   document.getElementById('btn-action').disabled = logMode === 'job' ? !canStamp() : !canDeduct();
 }
-
-// Stamp
 async function doStamp() {
   if (!canStamp() || !gData) return;
   var isC = selJob.id === 'custom';
@@ -750,8 +670,6 @@ async function doStamp() {
   selJob = null; logHours = ''; custAmt = '';
   renderJobGrid(); renderCondFields(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets(); persist();
 }
-
-// Deduct
 async function doDeduct() {
   if (!canDeduct() || !gData) return;
   var a = parseFloat(parseFloat(dedAmt).toFixed(2));
@@ -765,15 +683,11 @@ async function doDeduct() {
   dedAmt = ''; dedNote = '';
   renderDeductPanel(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets(); persist();
 }
-
-// Delete ticket
 async function deleteTicket(id) {
   if (!gData) return;
   gData.entries = gData.entries.filter(function(e) { return e.id !== id; });
   renderRecentTickets(); persist();
 }
-
-// Recent tickets
 function renderRecentTickets() {
   var el = document.getElementById('recent-list');
   if (!gData || !gData.entries.length) {
@@ -793,8 +707,6 @@ function renderRecentTickets() {
   }).join('');
   if (newTicketId) setTimeout(function() { newTicketId = null; }, 500);
 }
-
-// Board
 function renderBoard() {
   if (!gData) return;
   document.getElementById('kid-cards').innerHTML = KIDS.map(function(k) {
@@ -816,8 +728,6 @@ function renderBoard() {
            '<span class="rate-item-price">$' + j.rate + (j.unit === 'hour' ? '/hr' : '') + '</span></div>';
   }).join('');
 }
-
-// Payout
 function renderPayout() {
   if (!gData) return;
   var cats = gData.categories, mk = monthKey(todayStr()), ml = monthLabel(mk);
@@ -846,7 +756,6 @@ function renderPayout() {
   var bam = document.getElementById('btn-add-month'); if (bam) bam.addEventListener('click', doAddMonth);
   var bra = document.getElementById('btn-run-all');   if (bra) bra.addEventListener('click', doRunAll);
 }
-
 async function doAddMonth() {
   if (!gData) return;
   var cats = gData.categories, mk = monthKey(todayStr());
@@ -860,7 +769,6 @@ async function doAddMonth() {
   });
   cats.lastAccrualMonth = mk; renderPayout(); persist();
 }
-
 async function doRunKid(kidId) {
   if (!gData) return;
   var cats = gData.categories, mk = monthKey(todayStr());
@@ -880,7 +788,6 @@ async function doRunKid(kidId) {
     date:todayStr()});
   cats.lastPayoutMonth[kidId] = mk; renderPayout(); persist();
 }
-
 async function doRunAll() {
   if (!gData) return;
   var mk = monthKey(todayStr());
@@ -889,52 +796,36 @@ async function doRunAll() {
     if (gData.categories.lastPayoutMonth[k.id] !== mk && Math.max(0, netThisMonth(k.id)) > 0) await doRunKid(k.id);
   }
 }
-
-// Event delegation
 document.addEventListener('click', function(e) {
-  // Home
   if (e.target.id === 'btn-home' || e.target.closest('#btn-home')) { window.location.href = HOME_URL; return; }
-  // Tab
   var tb = e.target.closest('.tab-btn'); if (tb) { switchTab(tb.dataset.tab); return; }
-  // Kid
   if (e.target.classList.contains('kid-btn')) { selectKid(e.target.dataset.kid); return; }
-  // Mode
   if (e.target.classList.contains('mode-btn')) { setMode(e.target.dataset.mode); return; }
-  // Job
   var jb = e.target.closest('.job-btn'); if (jb) { selectJob(jb.dataset.jobid); return; }
-  // Hours
   if (e.target.dataset.hours !== undefined && e.target.dataset.hours !== '') {
     logHours = e.target.dataset.hours;
     document.querySelectorAll('.hour-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.hours === logHours); });
     updateAmountDisplay(); updateActionBtn(); return;
   }
-  // Custom amount
   if (e.target.dataset.custamt !== undefined && e.target.dataset.custamt !== '') {
     custAmt = e.target.dataset.custamt;
     document.querySelectorAll('.custamt-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.custamt === custAmt); });
     updateAmountDisplay(); updateActionBtn(); return;
   }
-  // Deduct reason
   if (e.target.dataset.reason !== undefined && e.target.dataset.reason !== '') {
     dedNote = e.target.dataset.reason;
     document.querySelectorAll('.reason-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.reason === dedNote); });
     updateActionBtn(); return;
   }
-  // Deduct amount
   if (e.target.dataset.dedamt !== undefined && e.target.dataset.dedamt !== '') {
     dedAmt = e.target.dataset.dedamt;
     document.querySelectorAll('.dedamt-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.dedamt === dedAmt); });
     updateAmountDisplay(); updateActionBtn(); return;
   }
-  // Action
   if (e.target.id === 'btn-action') { logMode === 'job' ? doStamp() : doDeduct(); return; }
-  // Delete
   if (e.target.dataset.del) { deleteTicket(e.target.dataset.del); return; }
-  // Payout run
   if (e.target.dataset.run) { doRunKid(e.target.dataset.run); return; }
 });
-
-// Init
 (async function init() {
   document.getElementById('log-date').value = todayStr();
   await loadData();
