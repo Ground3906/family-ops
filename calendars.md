@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-15.
+Last batch: 2026-08-16.
 
 ---
 
@@ -196,13 +196,11 @@ Last batch: 2026-08-15.
 
 ### WYATT CROSS COUNTRY - Fall 2026 (HS only)
 <!-- CANONICAL SOURCE. Do not duplicate individual XC practice or meet entries in monthly sections. -->
-<!-- Week 1 practice (Coach Maria Baldwin, Custer County XC/T&F) -->
 [CAL] 2026-08-10 08:00 [W] XC practice :: kids :: end=09:15
 [CAL] 2026-08-11 08:00 [W] XC practice :: kids :: end=09:15
 [CAL] 2026-08-12 17:00 [W] XC practice :: kids :: end=18:15 :: notes="optional - coaches have CPR training"
 [CAL] 2026-08-13 16:15 [W] XC practice :: kids :: end=17:30
 [CAL] 2026-08-14 08:00 [W] XC practice :: kids :: end=09:15 :: cancel=confirmed
-<!-- HS Meet schedule - times are tentative per schedule header -->
 [CAL] 2026-08-22 08:30 [W] XC meet - Cheyenne Mountain Stampede :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS Boys 8:30 AM. Leave 5:30 AM. $10 to park."
 [CAL] 2026-08-28 13:55 [W] XC meet - Husky Invite :: kids :: location="Platte Canyon XC Course, Bailey, CO" :: notes="HS Boys 1:55 PM. Leave 9:00 AM."
 [CAL] 2026-09-05 10:00 [W] XC meet - Fountain Fort Carson :: kids :: location="Fountain-Fort Carson High School, 900 Jimmy Camp Road, Fountain, CO 80817" :: notes="HS Boys 10:00 AM. Leave 7:00 AM."
@@ -405,23 +403,21 @@ Last batch: 2026-08-15.
 [CHORE] 2026-08-13 ALL-DAY [M][R] Dishes :: chore-type=dishes
 [CHORE] 2026-08-13 ALL-DAY [W][C] Animals :: chore-type=animals
 [CHORE] 2026-08-13 ALL-DAY [C][E] Table :: chore-type=table
-[CHORE] 2026-08-14 ALL-DAY [M][R] Bathrooms :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only. Week B zone assignment (M+E Bathrooms / W+C Floors) resumes tomorrow."
-[CHORE] 2026-08-14 ALL-DAY [M][R] Floors :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only. Week B zone assignment (M+E Bathrooms / W+C Floors) resumes tomorrow."
+[CHORE] 2026-08-14 ALL-DAY [M][R] Bathrooms :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only."
+[CHORE] 2026-08-14 ALL-DAY [M][R] Floors :: chore-zone=B :: notes="One-day override - Molly/Rileigh covering both zones today only."
 [CHORE] 2026-08-14 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-14 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-14 ALL-DAY [M][R] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [R][M] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [M][R] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-15 ALL-DAY [R][M] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
-[CHORE] 2026-08-16 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
-[CHORE] 2026-08-16 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
-[CHORE] 2026-08-16 ALL-DAY [M][R] Table :: chore-type=table :: notes="Sunday exception - Molly/Rileigh covering all chores. Sundays otherwise carry no chore assignment."
+[CHORE] 2026-08-16 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="Sunday exception - Molly/Rileigh covering all chores."
+[CHORE] 2026-08-16 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="Sunday exception - Molly/Rileigh covering all chores."
+[CHORE] 2026-08-16 ALL-DAY [M][R] Table :: chore-type=table :: notes="Sunday exception - Molly/Rileigh covering all chores."
 
 <!-- WEEK A: 8/17-8/23 -->
 [CHORE] 2026-08-17 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-08-23
 [CHORE] 2026-08-17 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-08-23
-[CHORE] 2026-08-17 ALL-DAY [M][R] Bathrooms :: chore-zone=A :: notes="One-day override - Molly/Rileigh covering both zones today only. Week A zone assignment (W+C Bathrooms / M+E Floors) resumes tomorrow."
-[CHORE] 2026-08-17 ALL-DAY [M][R] Floors :: chore-zone=A :: notes="One-day override - Molly/Rileigh covering both zones today only. Week A zone assignment (W+C Bathrooms / M+E Floors) resumes tomorrow."
 [CHORE] 2026-08-17 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-17 ALL-DAY [R][M] Animals :: chore-type=animals :: notes="One-off override - Molly/Rileigh covering all chores"
 [CHORE] 2026-08-17 ALL-DAY [M][R] Table :: chore-type=table :: notes="One-off override - Molly/Rileigh covering all chores"
@@ -487,7 +483,12 @@ Last batch: 2026-08-15.
 [MEAL] 2026-07-26 17:30 Brauts :: meal-type=dinner
 [MEAL] 2026-07-27 17:30 Gyros :: meal-type=dinner
 [MEAL] 2026-07-28 17:30 Bowtie pasta, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
+[MEAL] 2026-07-29 17:30 Garlic butter sausage subs :: meal-type=dinner :: recipe=chow-hall/recipes/garlic-butter-sausage-subs.md
 [MEAL] 2026-08-06 17:30 Dinner with fruit spread :: meal-type=dinner :: notes="Transfiguration - grapes and first fruits at table. Bless before dinner."
+[MEAL] 2026-08-14 17:30 Pizza :: meal-type=dinner
+[MEAL] 2026-08-15 17:30 Italian subs :: meal-type=dinner
+[MEAL] 2026-08-16 17:30 Chicken fajitas :: meal-type=dinner
+[MEAL] 2026-08-17 17:30 Baked potato :: meal-type=dinner
 
 ---
 
@@ -627,7 +628,7 @@ Last batch: 2026-08-15.
 [CAL] 2026-08-06 08:00 [W] Cross country :: kids
 [CAL] 2026-08-06 13:30 [K] Prenatal appt :: appointments :: stripe=appt :: end=14:30 :: location="Pueblo, CO"
 [CAL] 2026-08-06 15:40 [D] Gastro appt :: appointments :: stripe=appt :: location="St Peregrine Clinic, 6031 E Woodman Rd Ste 100, Colorado Springs, CO 80923" :: notes="rescheduled back from 2026-08-24. Phone 719-635-7321. Must pre-register/confirm online before arrival."
-[CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
+[CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: meetings :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical :: cancel=confirmed
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
 [CAL] 2026-08-11 13:20 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
