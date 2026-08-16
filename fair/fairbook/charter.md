@@ -28,14 +28,13 @@ The Addendum's first populated instance (2027 facts) follows separately in sprin
 
 ## Build order
 
-CC 1 through CC 5, CC 7, and CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. Remaining, in this order:
+CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. Remaining, in this order:
 
-1. **CC 6**, remaining subchapters — Llama, Breeding and Dairy.
-2. **CC 9**, then **CC 10**.
-3. **Addendum §1 through §9.**
-4. **Cover page** — mission statement and graphic.
-5. **Table of contents** — generated from finished chapters.
-6. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
+1. **CC 9**, then **CC 10**.
+2. **Addendum §1 through §9.**
+3. **Cover page** — mission statement and graphic.
+4. **Table of contents** — generated from finished chapters.
+5. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
 
 Shared layers build before the projects that lean on them. A reconciliation sweep runs at the end of each chapter to catch commonalities the project passes surface that the chapter's shared layer missed.
 
@@ -120,6 +119,8 @@ Matt's formulation 8/11/2026: "CC 2 is for everyone. Then the kids can navigate 
 Commonalities rack **within a chapter**, to that chapter's top. A rule shared by every market project goes to CC 3.1 and does not climb to CC 2. A rule shared by every animal project goes to Animal Exhibitors. A rule shared by every exhibitor goes to All Exhibitors.
 
 Deviations stay in the project's own subchapter and are not normalized into the shared layer.
+
+**Racking reaches below chapter level too.** Within a single subchapter, a fact repeated verbatim across three or more sibling classes in that subchapter's Class Rules racks into one shared statement rather than printing per class. Precedent: Llama's eight-obstacle minimum, stated once for Pack, Obstacle, and Public Relations rather than three times.
 
 ## Numbering
 
@@ -380,6 +381,16 @@ Found 8/15/2026 building CC 6.5. `co4h-cat.pdf` is not a Cat-specific document. 
 
 Found 8/15/2026 building CC 6.5. Both departments carry a Costume class judged with every age division together, the only class in either department not split by age. Neither source explains the shared shape, and it is unconfirmed whether this reflects one real cross-species costume practice at the fair or independent copy-paste between two legacy sections. Worth a direct check when Llama opens, since the answer may mean one rule rather than two.
 
+Checked when Llama opened, 8/15/2026: not the same shape. Llama's Costume class states its all-ages rule three times in the source. Cat's carries no source at all — the sentence naming Cat's Costume Contest as undivided appeared in shipped text with no county or CCR statement behind it, and has been struck. Logged to open-items as a working-group question rather than resolved as fact.
+
+## A keyword hit-count is not a source
+
+Found 8/15/2026 building CC 6.7. A raw text search for "Breeding Swine" in the CSF handbook returned five hits, read at first as a real department to adopt from. All five were incidental: a Hereford Hog purebred-eligibility note and a litter-registration policy line, both embedded in the Market Swine department rather than naming a standalone Breeding Swine show. Breeding Sheep and Dairy Goat, by contrast, each returned dozens of hits inside a genuine numbered department with its own class list and award structure. A hit count alone does not distinguish these; the entry or class-number list structure does. Check before treating prose mentions as an adoptable source.
+
+## Two postures for the same zero-source pattern, unresolved
+
+CC 6.3 Poultry was built from construction — real classes, drafted from general livestock-show convention, with neither source to check against. CC 6.7's five classes with no source on either side (Breeding Beef, Breeding Goat, Breeding Swine, Fiber Goat, Utility Goat) were instead left undefined, delegated whole to the Authority. Same fact pattern, two different drafting postures, and nothing in this charter says which one governs. CC 9 and CC 10 are ahead and may hit the same pattern again. Needs a stated default before then.
+
 ---
 
 # PART FIVE — POLITICAL FLAGS
@@ -395,6 +406,8 @@ All nine rewrite to vest in **the Authority with the superintendent named as lea
 **FLAGGED DRAMA-PRONE.** A long-tenured superintendent will hear "we are taking your show away." The answer that works, in Matt's framing: "This isn't to take their responsibility away, it's to formally allow the Authority to do what they need if needed." The rule changes nothing about who runs the show, only about who the show belongs to.
 
 **Rule seven is the live flashpoint:** barn space assignment. Swine stall assignment is a recurring political issue, not a one-time one.
+
+**The rewrite has settled into a fixed formula, confirmed 8/15/2026 against nine live printings:** "[obligation or power], with the superintendent of the department as lead." The verb before the comma tracks whether the Authority must act or may — "shall determine," "may impose," "may change" — and that choice is a real decision each time, not filled in by the formula. Only the trailing clause is fixed.
 
 ## Pen allocation changed principle
 
@@ -475,14 +488,18 @@ The county book's horse dress rules require long-sleeve button-down shirts with 
 - **Check the existing lock before building an options menu.** A prior lock, a charter line, or an established default may already answer it. Presenting settled doctrine as an open choice wastes a turn and invites re-litigating something decided.
 - **Pull the source before presenting a delta.** CSF first, county second, question only on the difference. Asserting what a source says from memory and being corrected costs more turns than the pull would have.
 - **A department pass runs both directions.** County to CSF finds the deltas: where the county rule differs from the standard it sits inside. CSF to county finds the silence-gaps: where CSF's department carries a requirement the county book never had, and the county's silence is an omission rather than a decision. A department is not finished until its CSF department checklist has been walked item by item. Shared layers carry the same exposure — CC 3.1, CC 2, and CC 1 were built before this pass existed and owe a re-audit, tracked in `open-items.md` under Method.
+- **Sweep the full county paragraph range before Item 1 opens.** A line sitting in the department's front matter, above the numbered project rules, is easy to miss when work starts from the class list. Llama Races sat undiscovered until late in that department's pass because the sweep ran only over the class-list and class-rules paragraphs. Every line in the department's source range gets a disposition — adopted, racked, delegated, or logged — before the first item is presented.
 - **Run the placement test before proposing, not after locking.**
 - **Words, not numbers.** Matt-facing presentation quotes the exact rulebook text. Paragraph indices and line numbers live only in repo records.
 - **Sources first, never memory.** The county book, the GCR, and the CSF handbook live in `fair/rulebooks/archive/`. Containers reset; re-pull and re-extract each session rather than reconstructing from a prior summary. This reaches within a session too: re-check already-fetched text at the point of use rather than recalling it from earlier in the same conversation, including before asserting what a source does or doesn't say and before assigning a new rule number against a slot that may already be occupied.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
+- **Verify content before every write, not just intent.** A session wrote a literal placeholder string to `draft.md` instead of the file's content, live on main for about a minute before the read-back caught it at 8 bytes. Before any `create_or_update_file` call: confirm the actual content is present, not a reference or shorthand, and sanity-check its length against what's expected. The read-back catches a bad push after the fact; this catches it before.
 - **Large or multi-file builds chunk by default.** A single commit word covering a big write defaults to sequential chunks, one write and one verified read-back per chunk, as the execution strategy, not a scope question reopened each time.
 - **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. Where a new rule's correct reading-order slot is already occupied by shipped, numbered text, no improvised or borrowed number is assigned; the rule is held in `open-items.md` with full text until the conformance renumber gives it a real one. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
-- **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number.
+- **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number. This includes internal forward-references within a subchapter being actively drafted: a section number cited ahead of itself is checked against the subchapter's final section count at build time, not against whatever existed when that citation was drafted.
+- **A defect in already-shipped text found while drafting a new department ships in the same build as that department**, as a patch to the shipped file, rather than deferred. Two this session: CC 6.1.2 gained a Cloverbud exception while Llama was drafted; CC 6.5.4 lost an unsourced sentence while Llama's Costume class was compared against it.
+- **Silence in the source is an answer, not an invitation to borrow a neighboring department's structure.** A department with no award structure in either source gets no award structure and an open-items flag, not a nearby department's pattern applied by default because the shape looks similar.
 - **Scripted inserts, never manual retype.** A prior session introduced a typo by hand-retyping a full file's content for the MCP write tool. Standard method now: fetch the file fresh, insert new content into that exact fetched copy via a scripted string-replace with a `count==1` assertion, then push that copy verbatim. Read-back diffs against the pre-push local copy, not just against expected content.
 - **Check every named entity when mirroring a prior department.** A new subchapter drafted from a prior one's shape carries that prior department's abbreviations and document names by default. Every proper noun in the mirrored text is checked against the new department's own facts before presenting for lock, not just the structural parallel. Two catches this session: CC 6.3.2 initially spelled out APA instead of using the defined abbreviation; CC 6.5.2 initially named the DTR instead of the CCR.
 - **A formatting convention is verified against the chapter being extended, not the chapter most recently on screen.** CC 3's subchapters divide with `---`; CC 4, CC 6, and CC 7 do not. An insert built on the wrong assumption was caught by byte-diff against committed content rather than by checking first.
