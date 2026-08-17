@@ -1,6 +1,6 @@
 # Front Matter
 
-Cover page and mission/objectives page, per `charter.md` Part Two. Front matter carries no CC rule numbers and is kept separate from `draft.md` so the conformance-pass renumber does not touch it.
+Cover page, mission/objectives page, and ADA statement, per `charter.md` Part Two. Front matter carries no CC rule numbers and is kept separate from `draft.md` so the conformance-pass renumber does not touch it.
 
 ---
 
@@ -24,3 +24,9 @@ The Custer County Fair celebrates the history, heritage, and culture of this cou
 ### Objectives
 
 The objectives of the Custer County Fair are to educate its participants and to give them the experience of carrying a project through a full season. The Fair asks for sustained work from every exhibitor, teaches sportsmanship in all outcomes, and encourages cooperation among exhibitors, families, and the community. These objectives give every generation the opportunity to take up the agricultural traditions of this valley and carry them forward.
+
+---
+
+## ADA Statement
+
+The Custer County Fair Board is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the Fair Board using the contact information listed in Addendum §1.
