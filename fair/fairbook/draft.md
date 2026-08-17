@@ -210,13 +210,21 @@ Custer County further provides as follows.
 
 (e) A prior record informs the Authority. It does not by itself determine the outcome of any new matter.
 
-**CC 2.8 Protest and Appeals**
+**CC 2.8 Grievance and Appeals**
 
 Custer County acknowledges and adopts the GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
 
-A grievance must be submitted in writing on the form available from the Fair Board office, accompanied by the protest fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the fair office within the deadline listed in Addendum §9 after the occurrence. Judging will not be interrupted by a grievance.
+A grievance must be submitted in writing on the form available from the Fair and 4-H office, accompanied by the grievance fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §9 after the occurrence. Judging will not be interrupted by a grievance.
 
-If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board. An appeal must be submitted in writing on the appeal form available from the fair office, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the fair office within the deadline listed in Addendum §9 after the grievance resolution is announced. The decision of the Fair Board is final. The fee is refunded if the matter is resolved in the grievant's favor.
+If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board.
+
+A person against whom a sanction is imposed under CC 2.7 may appeal that sanction to the Fair Board, whether or not a grievance was filed. This right attaches to every sanction under CC 2.7, including a first written warning, and to any finding of violation under the Determination of Violations provision. Where the person sanctioned is under 18, the appeal may be filed by a parent or guardian on their behalf.
+
+An appeal must be submitted in writing on the appeal form available from the Fair and 4-H office, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §9. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
+
+A sanction under appeal is recorded under CC 2.7(b) when the appeal is decided, not when the sanction is issued. A sanction overturned on appeal is not recorded and does not count.
+
+The decision of the Fair Board is final. The fee is refunded if the matter is resolved in favor of the person bringing the grievance or appeal.
 
 **CC 2.9 Official Communications**
 
@@ -496,13 +504,17 @@ CC 4 — The Livestock Sale
 
 CC 7 — Showmanship
 
-**CC 3.3.2 Maximum Weight**
+**CC 3.3.2 Weight and Sale Eligibility**
 
-The maximum weight for market swine is listed in Addendum §8. A market hog over the maximum weight is not eligible for competition in the market swine show. A market hog over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+The minimum and maximum weights for market swine are listed in Addendum §8.
+
+A market swine under the minimum weight shall show in the lightest weight class. It shall not sell in the Market Livestock Sale.
+
+A market swine over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §8. The weight recorded at the county weigh-in does not set its sale weight.
 
 **CC 3.3.3 Class Size**
 
-Classes in the market swine show are divided by weight under CC 3.1.5. No class shall contain more than eight hogs. Where dividing by weight would place more than eight hogs in a class, that class is broken into additional classes so that no class contains more than eight hogs.
+Classes in the market swine show are divided by weight under CC 3.1.5. No class shall contain more than eight animals. Where dividing by weight would place more than eight animals in a class, that class is broken into additional classes so that no class contains more than eight animals.
 
 **CC 3.3.4 Classes Offered**
 
@@ -510,7 +522,7 @@ The class offered in the market swine division is Market Swine. Breeding Swine i
 
 **CC 3.3.5 Pen Assignment**
 
-An exhibitor may keep up to two of the exhibitor's own hogs in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's hogs. Pen space in the market swine show is assigned under CC 3.1.11. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.11 is the number of pens required to hold the exhibitor's hogs at up to two hogs per pen.
+An exhibitor may keep up to two of the exhibitor's own animals in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's animals. Pen space in the market swine show is assigned under CC 3.1.11. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.11 is the number of pens required to hold the exhibitor's animals at up to two animals per pen.
 
 **CC 3.3.6 Fitting and Grooming Substances**
 
@@ -1574,7 +1586,7 @@ Custer County acknowledges and adopts the GEFA, Disqualifications, under which a
 
 **CC 10.1.10 Exhibits Not Fitting a Listed Class**
 
-An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised by the entry deadline listed in Addendum §4. A request raised at check-in is refused.
+An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised with the superintendent by the deadline for miscellaneous exhibit requests listed in Addendum §4, which falls before check-in. A request raised at check-in is refused.
 
 **CC 10.1.11 Decency Standard**
 
