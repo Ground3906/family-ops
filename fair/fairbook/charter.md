@@ -24,18 +24,19 @@ Three stages fit inside that date:
 
 **High finish is a requirement, not a nice-to-have.** The working group needs to react to finished text, not draft a book. A rougher pass would move the drafting burden onto three volunteers and would not survive the clock.
 
-The Addendum's first populated instance (2027 facts) follows separately in spring 2027 and is not part of the October deliverable.
+**Superseded 8/16/2026.** The Addendum's first populated instance ships inside the October deliverable, not separately in spring 2027. 2026 facts translate to 2027 using a fixed anchor — the fair closes on the third Saturday in July, giving July 17, 2027 — and the translated values populate the Addendum directly rather than waiting for a second pass. A relative-anchor rule (April 15 llama enrollment, May 1 dog enrollment) does not ride the fair-week shift and carries forward as stated. Values with no source in either direction (sheep and goat maximum weight, official channels) are marked as pending rather than guessed, and populate when the working group or a superintendent supplies them.
 
 ## Build order
 
 CC 1 through CC 8 are shipped. CC 1, CC 2, and CC 3 (shared layer plus six species subchapters) shipped 8/12/2026; CC 4 the Livestock Sale and CC 3.1.16 the prior-sale ownership bar, plus CC 5 Horse, shipped 8/13/2026; CC 8 Shooting Sports and CC 7 Showmanship shipped 8/13/2026; CC 6.1 the shared layer and CC 6.2 Rabbit shipped 8/14/2026; CC 6.3 Poultry, CC 6.4 Dog, and CC 6.5 Cat shipped 8/15/2026; CC 6.6 Llama and CC 6.7 Breeding and Dairy shipped 8/15/2026, completing CC 6. CC 7 was pulled forward ahead of CC 6 by explicit call, since CC 6.1's six-species racking pass was judged too long for the session. CC 9, Family and Consumer Sciences and General Projects, shipped complete and standalone 8/16/2026 — the project-sections layer was not built; both source documents were fully consumed by the chapter's single section. CC 10, Open Division, shipped complete 8/16/2026 across three chunks: patches to already-shipped text, the CC 10.1 shared layer plus Baked Goods, Food Preservation, Decorated Baked Goods, Floriculture, Horticulture, and Heritage Arts, then Scrapbooking, Sewing/Clothing, Jewelry, Visual Arts, Photography, and Miscellaneous — completing every chapter, CC 1 through CC 10. Remaining, in this order:
 
-1. **Addendum §1 through §9.**
-2. **Cover page** — mission statement and graphic.
-3. **Table of contents** — generated from finished chapters.
-4. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
+1. **Cover page** — mission statement and graphic.
+2. **Table of contents** — generated from finished chapters.
+3. **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter, and the one full-book renumber (see Part Six).
 
 Shared layers build before the projects that lean on them. A reconciliation sweep runs at the end of each chapter to catch commonalities the project passes surface that the chapter's shared layer missed.
+
+**Addendum §1 through §9 shipped 8/16/2026**, at `fair/fairbook/addendum.md`, pre-populated with 2027 facts per the anchor above. §5 carries an index plus seven reproduced forms (§5.1 through §5.7); §5.1 is a proposed Code of Conduct rewrite pending CSU Extension review, §5.2 and §5.3 are marked for collection. §3 (Official Communication Channels) ships as a structure with no channels yet designated, since that is board policy. The same session patched four rules in `draft.md`: CC 2.8 was rewritten to restore the both-sides appeal right (see Part Five), CC 3.3.2 was rewritten into a three-tier swine weight and sale-eligibility structure (see Part Five), CC 3.3.3 and CC 3.3.5 were synced from "hogs" to "animals" to match, and CC 10.1.10 was patched to resolve a self-contradiction (see Part Four). Remaining: cover page, table of contents, and the full-book conformance screen.
 
 Roughly 700 source paragraphs remain unworked. CC 1 and CC 2 consumed a full session and are the two smallest chapters in the book, so the remaining scope is several working sessions run back to back, not one.
 
@@ -159,13 +160,23 @@ Nine permanent sections, **locked 8/12/2026**, ordered by when a family needs th
 | §6 | Fees | protest, appeal, premiums, any entry fee |
 | §7 | Schedule | the fair schedule, cleanup dates |
 | §8 | Weight Windows and Market Deadlines | per-species weights and market timing |
-| §9 | Protest and Appeal Deadlines | filing windows |
+| §9 | Grievance and Appeal Deadlines | filing windows |
 
 **These numbers never renumber.** A section may be empty in a given year; it does not lose its number. Structure and current contents live in `fair/rulebooks/volatility-inventory.md`.
 
 **"See the Addendum" is banned language.** Every reference in the book cites a specific section by number. A bare reference makes a family hunt through a document the book itself organized.
 
 **A relative anchor is not a volatile fact.** A rule stated against a moving reference point — "one hour after the conclusion of the beef show" — prints in the chapter body as the rule AND repeats in its cited Addendum section. It is the schedule that is volatile, not the relationship. The relationship is the rule and belongs in the body; the clock time it resolves to in a given year belongs in the Addendum. Precedent: CC 4.3.1, the exit-election deadline.
+
+## The Word deliverable
+
+**Locked 8/16/2026.** Markdown in `draft.md` and `addendum.md` is the drafting source throughout the project. The deliverable the working group and the board see is a Word document, generated once at final assembly, after the conformance screen — not built incrementally as chapters ship. Doing it once avoids walking the whole book twice, since the conformance screen already owns that walk.
+
+The Word output is built for a volunteer administrator to edit with basic computer skills: flat tables, a single header row, no merged cells, no hidden or locked cells, no formulas, gridlines visible. A signature line is a bordered table cell, never an underscore run, since underscores shift when a volunteer types near them in Word. A free-text field (a grievance's statement of facts, an appeal's stated outcome) is a fixed-height table cell sized to the content it needs to hold, not a blank paragraph, so it holds its place on the printed page and grows rather than pushing the rest of the form apart.
+
+Every table drafted in markdown from this point forward is checked against these constraints at draft time, not deferred to conversion.
+
+**Hyperlinking.** The Word deliverable is internally hyperlinked. Every citation to a CC rule, an Addendum section, and every table-of-contents entry links to its target, using Word bookmarks and cross-references rather than typed page numbers, so links survive editing and repagination. This is what "see the Addendum is banned" and citation-first exceptions were already built for: a bare reference has nothing to link to, and a book that names its target everywhere is a book that can be wired up mechanically at assembly.
 
 ---
 
@@ -202,6 +213,8 @@ Mandatory on adoption, not optional. CSF staff titles, CSU Extension nomination 
 CSF text built on a standing on-call veterinarian or direct contact with the State Veterinarian's Office swaps to Custer's actual chain: the exhibitor's one call goes to a Fair Board member or the relevant superintendent, who contacts the Authority's veterinarian. The veterinarian's own reporting duties to the state run separately, on her own scope of work, and are never printed as a family's obligation.
 
 Where the base text belongs to another body — the 4-H and FFA Code of Conduct, owned by CSU Extension and FFA, who collect the signatures — the county text is retained as base and **no adoption sentence is printed**. The Fair Board rewriting another organization's instrument in CSF's voice is a harder sell than any rule inside it.
+
+**The Fair and 4-H office is one defined place, printed in full every time.** CC 2.8 and the Addendum both name the shared office of the Fair Board and CSU Extension as the Fair and 4-H office. It carries no CC 1 abbreviation — a family locating a physical office should never have to decode a defined term to find it. Locked 8/16/2026, replacing the inconsistent "Fair Board office" / "fair office" pair CC 2.8 shipped with.
 
 **A subchapter may name its own official instrument.** CC 3.1.4 fixes the certified fairgrounds scale as the official instrument, but a livestock scale cannot resolve a three-pound bird. Where the shared-layer instrument physically cannot measure a species, the subchapter names its own as a stated exception, and that instrument carries the same annual Colorado Weights and Measures certification the shared rule requires. The exception is to the instrument, never to the certification. Precedent: CC 3.6.4, the poultry scale.
 
@@ -388,6 +401,10 @@ Found 8/15/2026 building CC 6.5. Both departments carry a Costume class judged w
 
 Checked when Llama opened, 8/15/2026: not the same shape. Llama's Costume class states its all-ages rule three times in the source. Cat's carries no source at all — the sentence naming Cat's Costume Contest as undivided appeared in shipped text with no county or CCR statement behind it, and has been struck. Logged to open-items as a working-group question rather than resolved as fact.
 
+## A session-long citation mislabel went uncaught until the Addendum pass
+
+Found 8/16/2026. CC 10.1.10, the miscellaneous-exhibit-request rule, was referred to as "CC 10.4" throughout an entire Addendum working session — by the drafter, not corrected by Matt — because CC 10.4 (Decorated Baked Goods) sits nearby in the chapter and the number was carried from memory rather than checked. The error surfaced only when the actual rule text was pulled to fix a real defect inside it: the rule pointed at Addendum §4 for a deadline that resolved to check-in, while also stating a request made at check-in is refused. The citation-number error and the substantive defect were unrelated; only pulling the source caught either one. Reinforces the standing rule at Part Six to re-check already-fetched text at the point of use rather than recalling it, extended here to rule numbers carried across an entire session rather than reused from a moment earlier in the same reply.
+
 ## A keyword hit-count is not a source
 
 Found 8/15/2026 building CC 6.7. A raw text search for "Breeding Swine" in the CSF handbook returned five hits, read at first as a real department to adopt from. All five were incidental: a Hereford Hog purebred-eligibility note and a litter-registration policy line, both embedded in the Market Swine department rather than naming a standalone Breeding Swine show. Breeding Sheep and Dairy Goat, by contrast, each returned dozens of hits inside a genuine numbered department with its own class list and award structure. A hit count alone does not distinguish these; the entry or class-number list structure does. Check before treating prose mentions as an adoptable source.
@@ -481,6 +498,18 @@ Audience lane: professional and vendor-facing. Scope and fee basis only. Board-f
 ## Horse dress narrowings not adopted
 
 The county book's horse dress rules require long-sleeve button-down shirts with collar and cuffs, no "show" shirts, and no chaps or chinks in any class. HSRB permits chaps as optional attire, so the county's chaps prohibition contradicts the adopted source and does not print at CC 5.10. The show-shirt and chaps restrictions are real practices some families may expect to see; their absence should reach the working group before a parent notices a chap-wearing exhibitor and asks why the rule vanished.
+
+## The grievance appeal right was one-sided until this session
+
+Found and fixed 8/16/2026. CC 2.8 as shipped gave the appeal right to the grievant only — "if the grievant is not satisfied... the grievant may appeal." A person sanctioned under CC 2.7, including on a first written warning that CC 2.7(b) makes permanent and never-expiring, had no route to contest it at all, whether or not anyone had filed a grievance against them. The GCR's own Rights of Appeal and Process of Appeal provision, which CC 2.8 already cited as adopted, gives the appeal right to the person a determination went against — the book had cited the source and then narrowed past what it said. CC 2.8 now gives a sanctioned person the same appeal right a grievant has, with its own filing window (Addendum §9) and its own effective date (the sanction itself is not recorded under CC 2.7(b) until the appeal is decided, so an appeal in progress cannot be held against the person while it is pending).
+
+**FLAGGED for the board pitch.** This closes a real gap rather than adding new machinery — the fix restores what the GCR citation already promised — but it is still a new right nobody currently has, and worth naming plainly rather than letting a superintendent discover it the first time a warning gets appealed.
+
+## Underweight market swine now show but cannot sell
+
+Locked 8/16/2026 at CC 3.3.2. Previously, an underweight animal showed under the general feeder-animal rule at CC 3.1.9 with no species-specific bar on selling it. CC 3.3.2 now states explicitly, for swine only, that an animal at or under 219 pounds shows in the lightest weight class but may not sell in the Market Livestock Sale. The three-tier structure (underweight shows-only, in-window shows and sells at actual weight, overweight shows and sells capped at the 290-pound maximum) is Matt's direct instruction, not adopted from CSF or carried from the county book.
+
+**FLAGGED for the board pitch.** This is a real new restriction on a family whose animal comes in under 220 pounds, printed nowhere in either source. It is scoped to swine only; sheep, goat, and beef are unaffected and carry no equivalent bar.
 
 ## Board policy, deliberately not in the book
 
