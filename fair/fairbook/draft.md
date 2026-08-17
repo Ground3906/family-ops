@@ -1,26 +1,10 @@
 # Custer County Fair Book — Draft
 
-This file is the book. It is written chapter by chapter, finished, as it will print. Architecture is `fair/fairbook/structure.md`; mission doctrine is `fair/fairbook/charter.md`.
-
----
-
-# CUSTER COUNTY FAIR
-
-## Official Fair Book
-
-**Version 1.0**
-
-*[GRAPHIC]*
-
-*[MISSION STATEMENT]*
+This file is the book. It is written chapter by chapter, finished, as it will print. Architecture and front matter (cover, mission and objectives) are in `fair/fairbook/charter.md` and `fair/fairbook/front-matter.md`. The table of contents is `fair/fairbook/toc.md`.
 
 ---
 
 The Custer County Fair Board is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the Fair Board using the contact information listed in Addendum §1.
-
----
-
-*[TABLE OF CONTENTS — generated at final assembly]*
 
 ---
 
