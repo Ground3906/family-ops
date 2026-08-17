@@ -10,11 +10,22 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Blocking the October publish
 
-- **Addendum §1 through §9** — structure locked, contents unpopulated. The book already cites all nine.
 - **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
 - **Table of contents** — generated at final assembly, after all chapters are written.
 - **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter. Also owns the one full-book renumber (see below).
+
+## Addendum — pending values and working-group confirmations
+
+Addendum §1 through §9 shipped 8/16/2026, pre-populated with 2027 facts. These items are what's left inside it.
+
+- **Sheep and goat maximum weight.** No source exists in either direction — CC 3.4.8 and CC 3.5.3 both cite a ceiling that was never defined anywhere. Addendum §8 marks both as pending. Superintendent value needed (working group).
+- **§5.1 Code of Conduct rewrite needs CSU Extension review.** The Code is owned by CSU Extension, 4-H, and FFA; this session's rewrite (struck the duplicate protest block in favor of CC 2.8, replaced the named-officials list with "the Authority," changed "protest" to "grievance," added a signature block) is a proposed draft, not a shipped Extension document.
+- **§5.2 MQA certification form marked for collection.** No form exists; MQA is verified by CSU Extension and nothing is submitted at check-in. Confirm this section should stay a pointer rather than reproduce a document.
+- **§5.3 Animal care and housing form marked for collection.** No source exists anywhere except one legacy sentence naming the form. Working group to confirm what this form actually is and who must complete it.
+- **§5.5 Entry card — card number and office-use block are new.** Neither the county book nor CSF's entry-card format carries a card number field or an office-use block; both were added this session to make the stub-and-tag system work as two paper halves. Confirm before adoption.
+- **§7 schedule — Monday, July 12 ring overlap.** The Cat show and Companion Animal Master Showmanship both show in the show ring, 11:00 am to 12:30 pm and 11:00 am to 2:30 pm respectively, in both source documents. Confirm this is intentional before the schedule ships as final.
+- **§7 schedule — Friday rodeo parade time is an unconfirmed placeholder.** No source states a time; 10:00 am was placed as a placeholder only. Needs a real time before adoption.
 
 ## Carried to the conformance renumber
 
