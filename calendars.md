@@ -664,7 +664,6 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-30 ALL-DAY [C][E] Boys camping trip - with Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
-[CAL] 2026-08-31 11:10 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-08-31 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
@@ -676,6 +675,7 @@ Last batch: 2026-08-20.
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 
 ---
