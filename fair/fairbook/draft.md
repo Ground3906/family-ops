@@ -74,6 +74,8 @@ The following abbreviations are used throughout this book.
 
 **NCHFP** — National Center for Home Food Preservation, the USDA-supported national authority for safe home food preservation practices, adopted at CC 10.3.
 
+**USDA** — United States Department of Agriculture, the federal agency responsible for meat and poultry inspection and food-safety standards cited throughout this book.
+
 ### Definitions
 
 Where a term is not defined in this chapter, it carries its common meaning.
@@ -336,7 +338,7 @@ Exhibitors in the market divisions of this chapter must be bona fide members of 
 
 **CC 3.1.2 Quality Assurance**
 
-Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete a Meat Quality Assurance program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
+Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete an MQA program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
 
 Custer County reads this requirement as follows. A member shall complete the MQA class in their first year of livestock enrollment, and shall complete the class again in the enrollment year in which the member reaches fourteen years of age.
 
@@ -564,7 +566,7 @@ CC 7 — Showmanship
 
 **CC 3.4.2 Scrapie Identification**
 
-Scrapie is a fatal disease of the nervous system that affects sheep and goats. The United States Department of Agriculture runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
+Scrapie is a fatal disease of the nervous system that affects sheep and goats. The USDA runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
 
 Custer County acknowledges and adopts the federal scrapie identification requirement recognized by the CSF, under which sexually intact sheep, and wethers 18 months of age and older, must carry a scrapie flock identification tag. Custer County applies this requirement to every sheep. Every sheep entered in the market sheep show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
 
@@ -648,7 +650,7 @@ Every market goat shall have its milk teeth at the county fair weigh-in. The lic
 
 **CC 3.5.9 Weight Gain**
 
-Every market goat shall increase at least 5 pounds from the beginning weigh-in weight to the weight established at the county fair weigh-in.
+Every market goat shall increase from the beginning weigh-in weight to the weight established at the county fair weigh-in by no less than the minimum gain listed in Addendum §8.
 
 **CC 3.5.10 Muzzles**
 
@@ -872,7 +874,7 @@ The Market Livestock Sale is terminal, and every animal sold goes to slaughter a
 
 **CC 4.4.5 Designated Facilities**
 
-The Fair Board designates the slaughter and processing facilities for the Market Livestock Sale. The Fair Board may designate a facility inspected by the United States Department of Agriculture for product bound for resale, and may separately designate a custom-exempt facility for a buyer taking product for the buyer's own use.
+The Fair Board designates the slaughter and processing facilities for the Market Livestock Sale. The Fair Board may designate a facility inspected by the USDA for product bound for resale, and may separately designate a custom-exempt facility for a buyer taking product for the buyer's own use.
 
 **CC 4.4.6 Post-Sale Rest Period**
 
@@ -908,7 +910,7 @@ The warranty in this section attaches to the delivery of an animal for slaughter
 
 **CC 4.7.2 Named Food-Safety Laws**
 
-The warranty at CC 4.7.1 is made under the following laws. The United States Department of Agriculture Wholesome Meat Act governs cattle, sheep, swine, and goats. The Poultry Products Inspection Act governs poultry. A market species not covered by either named act is warranted to the same standard by this book, and the market rabbit is the current instance of such a species.
+The warranty at CC 4.7.1 is made under the following laws. The USDA Wholesome Meat Act governs cattle, sheep, swine, and goats. The Poultry Products Inspection Act governs poultry. A market species not covered by either named act is warranted to the same standard by this book, and the market rabbit is the current instance of such a species.
 
 **CC 4.7.3 Withdrawal Periods**
 
