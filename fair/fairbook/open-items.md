@@ -10,10 +10,8 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Blocking the October publish
 
-- **Mission statement** — cover page slot is empty. No source text exists anywhere; the county book has never stated what the fair is or what it exists to do. Needs its own session, and it is a board-facing question as much as a drafting one.
 - **Cover page graphic** — slot exists, Matt sourcing.
-- **Table of contents** — generated at final assembly, after all chapters are written.
-- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter. Also owns the one full-book renumber (see below).
+- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter. The renumber portion (CC 2's three-rule insertion) shipped 8/17/2026; the remaining checks are unstarted.
 
 ## Addendum — pending values and working-group confirmations
 
@@ -26,14 +24,6 @@ Addendum §1 through §9 shipped 8/16/2026, pre-populated with 2027 facts. These
 - **§5.5 Entry card — card number and office-use block are new.** Neither the county book nor CSF's entry-card format carries a card number field or an office-use block; both were added this session to make the stub-and-tag system work as two paper halves. Confirm before adoption.
 - **§7 schedule — Monday, July 12 ring overlap.** The Cat show and Companion Animal Master Showmanship both show in the show ring, 11:00 am to 12:30 pm and 11:00 am to 2:30 pm respectively, in both source documents. Confirm this is intentional before the schedule ships as final.
 - **§7 schedule — Friday rodeo parade time is an unconfirmed placeholder.** No source states a time; 10:00 am was placed as a placeholder only. Needs a real time before adoption.
-
-## Carried to the conformance renumber
-
-- **Two CC 2 All-Exhibitors rules, locked in content, unwritten.** Drafting them now would ripple ~30 cross-references plus the seven "CC 2.1 through CC 2.11" range citations, so under renumber-at-conformance doctrine they wait for the single end-of-book renumber.
-  - **Exhibitor Liability.** New All-Exhibitors rule: every exhibitor is responsible for their own animal or article and releases the Fair, adopted from the CSF indemnification shell. CC 2.22 shrinks to reference it rather than carrying its own Open-only release.
-  - **Barred Exhibitors.** New All-Exhibitors rule: adopt CSF grounds for refusing entry to anyone barred elsewhere for unethical practices, disqualified at a major show, or with premiums withheld. The NALS&RMA infraction database is named as a source the Authority MAY consult, not one it must query.
-- **One CC 2 Animal-Exhibitors rule, locked in content, unwritten.**
-  - **Departure From the Fairgrounds.** New rule following CC 2.21 in reading order: every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline in Addendum §7, and may not be removed before release under CC 2.21. Carries forward a rule the county book prints three times (market, non-market, sale sections) that shipped text currently prints zero times. CC 3.1.15, CC 6.1.1, and any later CC 5/CC 9/CC 10 department index need this citation added once it lands with a real number.
 
 ## Known gaps in finished chapters
 
