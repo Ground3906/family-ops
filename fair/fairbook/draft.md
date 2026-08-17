@@ -158,7 +158,7 @@ It is the responsibility of the judge to determine the merits of every class. No
 
 **CC 2.6 Interference with Competition**
 
-Custer County acknowledges and adopts the GCR, Prohibition of Interference with Competitions, and notes that IAFE Code of Show Ring Ethics Item 7 states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
+Custer County acknowledges and adopts the GCR, Prohibition of Interference with Competitions, and recognizes IAFE Code of Show Ring Ethics Item 7, which states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
 
 If any exhibitor, in any way, whether in person or by agent or representative, interferes with any judge during that judge's adjudication or behaves disrespectfully toward any judge or Authority staff, the Authority may immediately remove that exhibitor from the judging area, disqualify the exhibitor from further competition, remove the exhibitor from the fairgrounds, withhold any prizes awarded in any other event at the fair, and recommend suspension from future fairs.
 
@@ -1578,7 +1578,7 @@ Except where a division states its own judging criteria, Custer County acknowled
 
 **CC 10.1.9 Misentered Exhibits**
 
-Custer County acknowledges and adopts the GEFA, Disqualifications, under which an exhibit that is not a true representative of the class in which it is entered may be disqualified or, at the discretion of the Authority, transferred to the correct class. The Authority is not obligated to transfer a misentered exhibit.
+Custer County acknowledges and adopts the GEFA, Disqualifications, under which an exhibit that is not a true representative of the class in which it is entered may be disqualified or, at the discretion of the Authority, transferred to the correct class, with the superintendent of the division as lead. The Authority is not obligated to transfer a misentered exhibit.
 
 **CC 10.1.10 Exhibits Not Fitting a Listed Class**
 
