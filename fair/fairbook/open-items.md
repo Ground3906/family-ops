@@ -11,7 +11,6 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 ## Blocking the October publish
 
 - **Cover page graphic** — slot exists, Matt sourcing.
-- **Full-book conformance screen** — reference integrity, abbreviation consistency, no volatile facts in the body, TOC accuracy, Authority naming, adoption lead-ins, single formal register per chapter. The renumber portion (CC 2's three-rule insertion) shipped 8/17/2026; the remaining checks are unstarted.
 
 ## Addendum — pending values and working-group confirmations
 
@@ -43,10 +42,6 @@ Addendum §1 through §9 shipped 8/16/2026, pre-populated with 2027 facts. These
 - **Llama Costume — dropped criteria.** CC 6.6.5 Costume adopts the CSF training and desensitization standard in place of the county's placement criteria of originality, creativeness, and suitability to theme, and drops the county's sentence judging the member and animal on difficulty in training the animal to accept and exhibit the costume. Working-group question on whether any of the dropped language should return alongside the adopted standard.
 - **Breeding Beef, Breeding Goat, Breeding Swine, Fiber Goat, Utility Goat — no structure from either source.** Neither the county book nor CSF gives breed divisions, age classes, or judging criteria for these five classes. The county's only instruction is that the superintendent or Fair Board sets classes and judging criteria. Superintendent pass needed (working group).
 - **Breeding and Dairy — no award structure.** Neither source states a Champion, Reserve Champion, or Grand Champion structure for any class in this department. Every other CC 6 department has one. Working-group question on whether this department should have a Champion/Grand Champion structure, and if so, whether it follows Rabbit's per-class cascade, Cat's single point total, or something else entirely.
-
-## Legacy blocks still staged in draft.md
-
-- **General Rules / Code of Conduct block remains below CC 4.** Two of the three legacy carry-forward blocks (Livestock Sale, Wholesome Meat Act) were removed when CC 4 shipped. The General Rules / Code of Conduct block stays — much of it is superseded by CC 2, but it is not deleted on the drafter's judgment. Confirm removal item by item when the conduct material finishes re-homing.
 
 ## Companion documents that change if the book adopts
 
