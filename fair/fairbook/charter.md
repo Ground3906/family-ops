@@ -95,11 +95,11 @@ Schedule and roster are gone from the book entirely; they are Addendum content. 
 
 ## Front matter
 
-Locked 8/12/2026, in order: cover page (fair name, book title, version number, graphic, mission statement), ADA statement, table of contents, CC 1 through CC 10. The Addendum publishes separately.
+Locked 8/12/2026, order updated 8/17/2026 when the cover-page session split mission and objectives onto their own page: cover page (book title, version number, graphic), mission and objectives page, ADA statement, table of contents, CC 1 through CC 10. Cover and mission/objectives content lives in `fair/fairbook/front-matter.md`, kept separate from `draft.md` for the same renumber-isolation reason as `toc.md`. The Addendum publishes separately.
 
 The ADA statement adapts CSF's, swapping the Colorado Department of Agriculture for the Custer County Fair Board and the state contact line for a pointer to Addendum §1.
 
-The Fair Book carries a **version number only, never a year**. Its number moves only on an adopted rule change.
+The Fair Book carries a **version number only, never a year**. Its number moves only on an adopted rule change. This book is Version 1.0, the first version under this system; no prior county book was versioned.
 
 ## CC 2 and its subchapters
 
