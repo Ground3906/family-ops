@@ -655,6 +655,7 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-20 13:45 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-20 15:00 [D][K][L] Labs :: appointments :: stripe=appt :: location="Parkview Medical Center, Pueblo, CO"
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
+[CAL] 2026-08-21 11:15 [D] Fairboard WG :: meetings :: end=15:30 :: location="Tony's Pizza, Westcliffe, CO"
 [CAL] 2026-08-25 15:00 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-25 18:00 [W][K] Zoom - international trip info meeting :: kids :: meetings
 [CAL] 2026-08-26 13:00 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=14:00 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="Provider: Beth Pack PA-C, Orthopedics. Check-in 12:45."
