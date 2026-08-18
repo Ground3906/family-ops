@@ -665,13 +665,13 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-30 ALL-DAY [C][E] Camping trip w/ Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
 [CAL] 2026-08-30 ALL-DAY [D] Mesquite Trip :: misc :: span=2026-09-01 :: travel=true :: notes="One-way flight COS-DEN-SGU. UA5291 COS-DEN 0600-0705, UA5054 DEN-SGU (St. George, UT) 0825-1020. Conf G0CB0Q, eTicket 0162131235026. Seats 18B/10B. Returning Tue Sep 1 by car with Uncle Doug."
-[CAL] 2026-08-31 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
 ---
 
 ### SEPTEMBER 2026
 
+[CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
