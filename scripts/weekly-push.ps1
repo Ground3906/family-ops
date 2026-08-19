@@ -1,9 +1,9 @@
-# weekly-push.ps1 — Weekly NightWatch log push to GitHub
+# weekly-push.ps1 - Weekly NightWatch log push to GitHub
 # Runs Sundays 06:05 via BayerFamilyOps-WeeklyPush Task Scheduler task.
 #
 # Pushes:
-#   logs\night-watch.jsonl       — week of LAN activity observations
-#   ops\system-health.json       — latest Watchdog health snapshot
+#   logs\night-watch.jsonl       - week of LAN activity observations
+#   ops\system-health.json       - latest Watchdog health snapshot
 #
 # This is the mechanism by which Al reads NightWatch data for the weekly synthesis.
 #
@@ -59,7 +59,7 @@ try {
     $push = & git -C $RepoRoot push 2>&1
     if ($LASTEXITCODE -ne 0) { Log "PUSH FAIL: $($push -join ' | ')"; exit 1 }
 
-    Log "OK — pushed week of $week"
+    Log "OK - pushed week of $week"
     Write-Host "[weekly-push] Done."
 
 } catch {
