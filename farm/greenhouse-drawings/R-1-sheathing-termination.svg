@@ -6,11 +6,15 @@
   <text x="60" y="90" font-size="12" fill="#777" font-style="italic">Not to scale. Ribs run down-slope, parallel to this cut — shown as crest lines along the panel length, not cross-section corrugation.</text>
   <line x1="60" y1="104" x2="1040" y2="104" stroke="#1a1a1a" stroke-width="2"/>
 
-  <text x="90" y="140" font-size="16" font-weight="bold" fill="#333">NORTH</text>
-  <text x="940" y="140" font-size="16" font-weight="bold" fill="#333">SOUTH</text>
+  <!-- North arrow, matching R-2 convention -->
+  <g transform="translate(90,140)">
+    <polygon points="0,-20 8,6 0,-1 -8,6" fill="#333"/>
+    <text x="0" y="24" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">N</text>
+  </g>
+
   <line x1="300" y1="134" x2="800" y2="134" stroke="#333" stroke-width="1.5"/>
   <polygon points="800,134 788,129 788,139" fill="#333"/>
-  <text x="500" y="126" font-size="12" fill="#333">down-slope / water flow</text>
+  <text x="500" y="126" font-size="12" fill="#333">down-slope</text>
 
   <!-- rafters beyond, dashed. Top edge at y=470 - this is the bearing plane -->
   <rect x="80" y="470" width="940" height="120" fill="#c9a87c" opacity="0.30" stroke="#8a6a3d" stroke-width="1.2" stroke-dasharray="6 4"/>
