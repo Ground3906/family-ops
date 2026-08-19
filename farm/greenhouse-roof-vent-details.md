@@ -1,12 +1,14 @@
 # Greenhouse Roof and Vent Construction Details
 
-**Locked 2026-08-18. Specifications only - not yet drawn as dimensioned sheets.** Read alongside `farm/greenhouse-design-sheet.md`, Roof and Ventilation sections, which these details expand on.
+**Locked 2026-08-18, renumbered 2026-08-19 (R-3 metal-to-metal endlap culled — not needed).** Specifications for R-3 onward are drawn as sheets; R-1 and R-2 also exist as drawn sheets in `farm/greenhouse-drawings/`. Read alongside `farm/greenhouse-design-sheet.md`, Roof and Ventilation sections, which these details expand on.
 
-**Orientation convention for all cross-cut sections:** north/south wall sections drawn north-left, south-right. East/west wall sections drawn west-left, east-right.
+**Orientation convention for all cross-cut sections:** north/south wall sections drawn north-left, south-right (equivalent to viewer facing east). East/west wall sections drawn west-left, east-right. North arrows are omitted on sections where north points into or out of the page (no in-plane direction to show) — noted explicitly on the drawing when that's the case.
 
 ---
 
 ## R-1 - Sheathing Termination and Metal Step at the Seam
+
+**Drawn.** See `farm/greenhouse-drawings/R-1-sheathing-termination.svg`.
 
 **The single most consequence-bearing detail in the roof.** Sets where the Phase 1 deck ends - which is also exactly where the Phase 2 poly's north edge lands. Get this line wrong and Phase 2 means cutting sheathing on a standing, occupied roof instead of stripping a clean tear line.
 
@@ -14,20 +16,24 @@
 
 | | |
 |---|---|
-| Sheathing | North section only, terminates at 9 ft 7-1/4 in up the rake from the south framing face |
+| Sheathing | North section only, terminates at 9 ft 7-1/4 in up the rake from the south framing face (= 10 ft 0-1/4 in down the rake from the north framing face) |
 | Blocking | Continuous, solid, between rafters, directly under the sheathing edge - gives the edge a fastening line and backs the step |
 | Upper metal panel | Bears on sheathing, laps south across the sheathing edge and onto the lower panel |
-| Step | 7/16 in (sheathing thickness), located INSIDE the 20 in lap zone - the lap is fully decked, so the step never shows as a bare transition |
-| Lower metal panel | Bears direct on bare rafters south of the sheathing edge, ramps up 7/16 in to lie flat on the deck within the lap |
-| Closure | Foam or butyl bead at the step line, inside the lap, sealing the void created by the ramp |
+| Step | 7/16 in (sheathing thickness), located INSIDE the 20 in lap zone - the lap is fully decked, so the step never shows as a bare transition. Panel floats naturally over the rise onto the bare rafter, hidden under the upper panel |
+| Lower metal panel | Bears direct on bare rafters south of the sheathing edge, floats up over the rise to lie flat on the deck within the lap |
+| Closure | Foam or butyl, attached to the upper panel, flush to the deck - seals the void created by the rise |
 
 **Why the sheathing stops exactly here and not further south:** the edge was set at the upper panel's own south terminus - since that zone is already shaded by the lap, sheathing to that point costs nothing extra and gives Phase 2 a clean, pre-defined tear line with zero cutting.
 
-**Ryder's note:** do not deck past this line. It is not a convenience stopping point - it is the design boundary between "permanent roof" and "Phase 2 removal zone."
+**Note on the drawing:** do not extend sheathing past this line. The sheathing terminates at 10 ft 0-1/4 in (down the rake from the north framing face), with blocking spanning this line. This is specific for Phase 2.
+
+**Upper panel's extra 6 in:** the upper panel's south edge sits 6 in past the strict sheathing-edge point - the same panel that closes the Phase 1 lap also does double duty as the Phase 2 lap over poly, unchanged, once the lower metal is stripped at conversion.
 
 ---
 
 ## R-2 - Panel Layout and Chalk Line
+
+**Drawn.** See `farm/greenhouse-drawings/R-2-panel-layout.svg`. Roof plan view (not a section) - walls not depicted, rafters shown dashed and pulled from the west (bearing) side at 16 in o.c., with the last (31st) rafter set inboard on the east (non-bearing) side, roof carried past on lookouts.
 
 **Order:**
 
@@ -44,40 +50,21 @@
 | Lower (14 required) | 12 ft 0 in | None - full stock length |
 | Upper (14 required) | 10 ft 10-1/4 in | Cut from 12 ft stock, 1 ft 1-3/4 in offcut each |
 
-**Install - one chalk line per run, snapped from the top (easier to pull downhill than up):**
+**Install sequence:**
 
-**Chalk line: 8 ft 4-1/4 in, measured DOWN the rake from the north framing face.** This is the lower panel's TOP edge. Lay the lower panel first, top edge on the line. The 8 in south overhang and the ramp onto bare rafters fall out automatically once the top edge is placed correctly - no second measurement needed at the south end.
-
-**Upper panel placement:** bottom edge sits 20 in below the lower panel's top edge (i.e., 20 in below the chalk line). Lay the upper panel second, on top of the lower.
+1. Snap chalk line at 8 ft 4-1/4 in down the rake from the north framing face - the proposed measurement. This is the lower panel's TOP edge.
+2. Install lower panels to the line.
+3. Install upper panels to measurements (4 in overhang past finished wall, north; lap per Detail R-1) - not measured off the chalk line directly.
 
 **Edge conditions, both fixed regardless of lap position:**
-- North cantilever past finished wall surface: 4 in
-- South overhang past finished wall surface: 8 in
-
-**Why this sequence:** the upper panel's south edge is a controlled dimension - it is both the Phase 1 lap line and the future Phase 2 metal-to-poly seam. Referencing everything off the single chalk line (rather than measuring the upper panel's position independently) keeps that critical edge accurate without adding a second snapped line.
+- North overhang past finished wall surface: 4 in
+- South overhang past finished wall surface: 8 in - falls out automatically from the 12 ft lower panel length, no separate measurement needed
 
 ---
 
-## R-3 - Metal-to-Metal Endlap (Phase 1)
+## R-3 - Roof Edge Conditions (North and South, Shared Sheet, Two Sections)
 
-**Location:** the 20 in lap between the upper and lower panels, centered over the R-1 sheathing edge and blocking.
-
-**Assembly:**
-
-| | |
-|---|---|
-| Substrate | Solid sheathing, full width of the lap zone (see R-1 - sheathing runs to the upper panel's south edge, so the entire lap sits on deck) |
-| Seal | Butyl tape, full width, between the panels across the lap |
-| Fasteners | Stitch screws through both panels into the blocking below, spaced per standard metal-roofing endlap practice |
-| Rib condition | Ribs nest - panels align so no cross-panel rib mismatch at the lap |
-
-**Phase 2 removal:** back out the stitch screws at this lap, the lower panel lifts free without disturbing the upper panel, which stays permanently in place.
-
----
-
-## R-4 - Roof Edge Conditions (North and South, Shared Sheet, Two Sections)
-
-Both sections drawn north-left/south-right per the standing orientation convention. Placed side by side on one sheet so both wall-head conditions read together.
+**Not yet drawn.** Both sections drawn north-left/south-right per the standing orientation convention (viewer facing east). Placed side by side on one sheet so both wall-head conditions read together.
 
 ### North section - riser wall head
 
@@ -116,9 +103,9 @@ Both sections drawn north-left/south-right per the standing orientation conventi
 
 ---
 
-## R-5 - Poly Eave Termination (Phase 2 only)
+## R-4 - Poly Eave Termination (Phase 2 only)
 
-**Not built in Phase 1.** Applies when the poly is installed at conversion.
+**Not yet drawn.** Not built in Phase 1. Applies when the poly is installed at conversion.
 
 | | |
 |---|---|
@@ -134,7 +121,7 @@ Both sections drawn north-left/south-right per the standing orientation conventi
 
 ## V-1 - Vent Panel Construction (both riser exhaust and south intake locations)
 
-**Applies to all 16 panels** (8 riser exhaust at 4 ft x 24 in, 8 south intake at 4 ft x 27 in).
+**Not yet drawn.** Applies to all 16 panels (8 riser exhaust at 4 ft x 24 in, 8 south intake at 4 ft x 27 in).
 
 | Layer | Spec |
 |---|---|
