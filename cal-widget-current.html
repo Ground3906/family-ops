@@ -1,4 +1,4 @@
-﻿<!-- v5.11 - 2026-07-08
+<!-- v5.11 - 2026-07-08
      v5.11: Zone Sunday fix + zone pairs Sunday-only
      - choreZoneSunday() now returns Sunday BEFORE span start (was: Sunday within span)
        e.g. span 07-06 to 07-12 -> Zone A lands on 07-05, not 07-12
@@ -205,6 +205,7 @@ body{background:var(--bg);color:var(--txt1);font-family:-apple-system,'Segoe UI'
 .eline{display:flex;align-items:baseline;flex-wrap:wrap;gap:3px;}
 .etime{font-size:12px;color:#b8c8d8;font-weight:600;flex-shrink:0;}
 .ettl{font-size:12px;color:#ccc8bc;font-weight:500;white-space:normal;word-break:break-word;flex:1;min-width:80px;}
+.ettl-span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;word-break:normal;}
 .eloc{font-size:10px;color:#6a6050;font-style:italic;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:100%;padding-top:1px;}
 .sep{font-size:10px;color:#6a6050;flex-shrink:0;}
 
@@ -871,7 +872,7 @@ function renderCell(date,isWeekView,isMealPlanner,maxEvts){
   let cls='cell';if(isSun)cls+=' sun';if(isSat)cls+=' sat';if(isToday)cls+=' tod';if(isWeekView&&ds===weekDetailDs)cls+=' wk-active';
   const dnH=`<span class="dnum${isToday?' tod':''}">${dn}</span>`;const flH=hasConflict?`<span class="cflag-hdr">&#9873;</span>`:'';
   const hasTopSpan=allSpanEvts.length>1;
-  const spanPadBot=allSpanEvts.length>0?(allSpanEvts.some(e=>e.span!=='mid')?SPAN_BKT_H+(allSpanEvts.length-1)*SPAN_SLOT_H:allSpanEvts.length*SPAN_SLOT_H):0;
+  const spanPadBot=allSpanEvts.reduce((acc,e)=>acc+(e.span==='mid'?SPAN_BAR_H+SPAN_SEP:SPAN_BKT_H+SPAN_SEP),0);
   const bodyStyle=spanPadBot>0?` style="padding-bottom:${spanPadBot}px;"`:'';
   let innerBody='';if(trashDisplaced)innerBody+=`<div class="trash-hdr" style="margin-bottom:4px;font-size:10px;"><span>&#128465; Trash</span><span>Lock dogs</span></div>`;
   const maxEv=MAX_EVENTS;
@@ -888,8 +889,10 @@ function renderCell(date,isWeekView,isMealPlanner,maxEvts){
   let spanH='';
   if(allSpanEvts.length>0){
     const sortedSpans=[...allSpanEvts].sort((a,b)=>(a._startDate||a.date).localeCompare(b._startDate||b.date));
+    const slotH=sortedSpans.map(e=>e.span==='mid'?SPAN_BAR_H+SPAN_SEP:SPAN_BKT_H+SPAN_SEP);
+    const slotOff=[];let _acc=0;for(let _k=0;_k<slotH.length;_k++){slotOff.push(_acc);_acc+=slotH[_k];}
     // Store slot map for drop connector calculation in buildWkRow
-    _spanSlotMap[ds]=sortedSpans.map((e,i)=>({startDate:e._startDate||e.date,slotIdx:i,spanType:e.span,color:e._spanColor||spanColor(e.pills,e.cat),bottomPx:i*SPAN_SLOT_H}));
+    _spanSlotMap[ds]=sortedSpans.map((e,i)=>({startDate:e._startDate||e.date,slotIdx:i,spanType:e.span,color:e._spanColor||spanColor(e.pills,e.cat),bottomPx:slotOff[i]}));
     sortedSpans.forEach((e,i)=>{
       // On return days, bars at higher slots pass through the return bracket â€” render at z-index 10+i
       const lowerHasReturn=sortedSpans.slice(0,i).some(s=>s.span==='end');
@@ -897,10 +900,10 @@ function renderCell(date,isWeekView,isMealPlanner,maxEvts){
       const zOverride=passThrough?10+i:i+1;
       const sc=e._spanColor||spanColor(e.pills,e.cat);const sb=spanBg(sc);
       const dp=passThrough?[]:computePills(e.pills,e.cat,e.travelSuppressed);const ph=dp.length?pillHtml(dp):'';
-      const ttl=abbreviate(e.title);const bottomPx=i*SPAN_SLOT_H;const sepStyle=i>0?'border-top:1.5px solid #000;':'';
+      const ttl=abbreviate(e.title);const bottomPx=slotOff[i];const sepStyle=i>0?'border-top:1.5px solid #000;':'';
       if(e.span==='mid'){spanH+=`<div style="position:absolute;bottom:${bottomPx}px;left:-1px;right:-1px;height:${SPAN_BAR_H}px;background:${sc};opacity:.92;z-index:${zOverride};${sepStyle}"></div>`;}
-      else if(e.span==='start'){const timeH=e.time?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.time}</span>`:'';spanH+=`<div style="position:absolute;bottom:${bottomPx}px;left:8px;right:-1px;border-left:7px solid ${sc};border-bottom:7px solid ${sc};border-bottom-left-radius:14px;background:${sb};min-height:${SPAN_BKT_H}px;display:flex;align-items:center;padding:4px 8px 3px 4px;overflow:hidden;z-index:${zOverride};${sepStyle}"><div class="eline">${ph}${timeH}<span class="ettl">${ttl}</span></div></div>`;}
-      else if(e.span==='end'){const arrH=e.end?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.end}</span>`:'';spanH+=`<div style="position:absolute;bottom:${bottomPx}px;left:-1px;right:8px;border-right:7px solid ${sc};border-bottom:7px solid ${sc};border-bottom-right-radius:14px;background:${sb};min-height:${SPAN_BKT_H}px;display:flex;align-items:center;justify-content:flex-end;padding:4px 4px 3px 8px;overflow:hidden;z-index:${zOverride};${sepStyle}"><div class="eline" style="justify-content:flex-end;">${ph}${arrH}<span class="ettl">${ttl}</span></div></div>`;}
+      else if(e.span==='start'){const timeH=e.time?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.time}</span>`:'';spanH+=`<div style="position:absolute;bottom:${bottomPx}px;left:8px;right:-1px;border-left:7px solid ${sc};border-bottom:7px solid ${sc};border-bottom-left-radius:14px;background:${sb};min-height:${SPAN_BKT_H}px;display:flex;align-items:center;padding:4px 8px 3px 4px;overflow:hidden;z-index:${zOverride};${sepStyle}"><div class="eline">${ph}${timeH}<span class="ettl ettl-span">${ttl}</span></div></div>`;}
+      else if(e.span==='end'){const arrH=e.end?`<span style="font-size:9px;color:${sc};font-weight:700;margin-right:3px;flex-shrink:0;">${e.end}</span>`:'';spanH+=`<div style="position:absolute;bottom:${bottomPx}px;left:-1px;right:8px;border-right:7px solid ${sc};border-bottom:7px solid ${sc};border-bottom-right-radius:14px;background:${sb};min-height:${SPAN_BKT_H}px;display:flex;align-items:center;justify-content:flex-end;padding:4px 4px 3px 8px;overflow:hidden;z-index:${zOverride};${sepStyle}"><div class="eline" style="justify-content:flex-end;">${ph}${arrH}<span class="ettl ettl-span">${ttl}</span></div></div>`;}
     });
   } else {
     _spanSlotMap[ds]=[];
@@ -1858,6 +1861,7 @@ function nightController(trigger){
     document.body.classList.remove('night-dim');
     document.getElementById('night-wake').style.display='none';
     updateFloatBar();
+    try{localStorage.setItem('cockpitNight','off');}catch(e){}
     _scheduleNextHourCheck();
     return;
   }
@@ -1872,7 +1876,21 @@ function nightController(trigger){
     document.getElementById('night-wake').style.display='block';
     _clearNightCurfew();
     updateFloatBar();
+    try{localStorage.setItem('cockpitNight','on');}catch(e){}
   }
+}
+function _startupNightCheck(){
+  let stored=null;
+  try{stored=localStorage.getItem('cockpitNight');}catch(e){}
+  if(stored==='on'){
+    nightOn=true;
+    document.getElementById('night-btn').classList.add('night-active');
+    document.body.classList.add('night-dim');
+    document.getElementById('night-wake').style.display='block';
+    updateFloatBar();
+    return;
+  }
+  nightController('startup');
 }
 function engageNight(){nightController('manual');}
 function wakeFromNight(){nightController('wake');}
@@ -1956,7 +1974,7 @@ async function init(){
   window.addEventListener('scroll',_onScrollEdge,{passive:true});
   setInterval(updateEggCard,60000);setInterval(updateFloatBar,1000);setInterval(refreshCalendar,3*60*1000);
   setInterval(()=>{if(!nightOn&&!_nightCurfewTimer)nightController('hourly');},60000);
-  nightController('startup');
+  _startupNightCheck();
   renderNumpad();
   document.getElementById('cm-center').addEventListener('click',e=>{
     const el=e.target.closest('[data-action]');if(!el)return;
