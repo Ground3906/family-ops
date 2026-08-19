@@ -6,10 +6,10 @@
   <text x="60" y="90" font-size="12" fill="#777" font-style="italic">Not to scale. Ribs run down-slope, parallel to this cut — shown as crest lines along the panel length, not cross-section corrugation.</text>
   <line x1="60" y1="104" x2="1040" y2="104" stroke="#1a1a1a" stroke-width="2"/>
 
-  <!-- North arrow, matching R-2 convention -->
-  <g transform="translate(90,140)">
-    <polygon points="0,-20 8,6 0,-1 -8,6" fill="#333"/>
-    <text x="0" y="24" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">N</text>
+  <!-- North arrow, pointing left — this is a section, north is left per convention -->
+  <g transform="translate(110,140)">
+    <polygon points="-20,0 6,-8 1,0 6,8" fill="#333"/>
+    <text x="14" y="5" font-size="13" font-weight="bold" text-anchor="start" fill="#333">N</text>
   </g>
 
   <line x1="300" y1="134" x2="800" y2="134" stroke="#333" stroke-width="1.5"/>
