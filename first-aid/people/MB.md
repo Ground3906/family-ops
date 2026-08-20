@@ -1,7 +1,7 @@
 # Matt Bayer (MB) — Health Profile
 
 **Date created:** 2026-06-13
-**Last updated:** 2026-08-07
+**Last updated:** 2026-08-20
 **Owner:** IFAK
 **Status:** Active
 
@@ -29,6 +29,12 @@
 - **Status:** Active. Self-managed. Specialist consult pending.
 - **Provider:** Gastroenterologist in Colorado Springs - TBD. Research pending - must accept TRICARE Reserve Select.
 - **Notes:** Peak Gastro consult queued from prior session - confirm provider name and schedule.
+
+**Flare log:**
+
+| Date | Onset | Dinner | Symptoms | BM that day | Red flags | Resolution |
+|---|---|---|---|---|---|---|
+| 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Yes, sporadic pattern is baseline for MB | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Sat up, took antacid, symptoms easing |
 
 ### Hemorrhoids / Anal Fissure (History)
 - **History:** Chronic hemorrhoids. Anal fissure developed ~2 years ago. Fissure failed to heal conservatively.
@@ -161,6 +167,6 @@
 - [ ] Lipid recheck in 3-6 months (target: triglycerides, HDL). Discuss lifestyle-first vs. statin with provider.
 - [ ] Find gastroenterologist in Colorado Springs accepting TRICARE Reserve Select. Schedule GERD consult.
 - [ ] Find dermatologist accepting TRICARE Reserve Select. Renew prescriptions for ketoconazole, Nystatin, ketoconazole/triamcinolone creams.
-- [ ] Find optometrist accepting TRICARE Reserve Select. Schedule eye exam, update prescription, order blue light filtering glasses.
+- [ ] Find optometrist accepting TRICARE Reserve Select. Schedule eye exam, order blue light filtering glasses.
 - [ ] Confirm Peak Gastro provider name from prior research session.
 - [ ] Confirm sparkling water flag details.
