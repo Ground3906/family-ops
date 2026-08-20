@@ -5,6 +5,8 @@
 
 **Tablet clock confirmed:** Mountain Daylight Time, network time ON, 24h format. Device clock is not a source of timing issues. Night dim at 21:00 is working as designed — widget dims and shows wake prompt, never fully powers off. Day rollover guard exists as code backup to the 00:01 reload.
 
+**Night mode wake is manual-only, permanently.** Engaging is clock-based (21:00). Waking is never clock-based, under any circumstance — no morning cutoff hour, no auto-relight, ever. Deliberate: an empty house on vacation stays dark, not burning the screen and power on a schedule nobody asked for. As of 2026-08-19, night state persists across any reload (midnight or otherwise) via local device storage, closing a bug where the day-rollover reload was wiping the dark state and lighting the screen back up at 12:01 AM with no way to re-darken until 9 PM that night.
+
 ---
 
 ## What The Cockpit Is
@@ -179,7 +181,7 @@ INTERNET -> Starlink dish (Gen 2) -> Starlink Gen 2 router (main, office) [CGNAT
 | OS | Android 13 / Fully Kiosk Browser — standard HTML/CSS/JS only |
 | Touch | Capacitive multi-touch — minimum 44px tap targets |
 | Always-on | Dark theme default |
-| Night mode | After 21:00 — brightness down, wake prompt on tap |
+| Night mode | After 21:00 — brightness down, wake prompt on tap (manual-only, no auto-relight) |
 | Network | LAN only — widget fetches from ThinkPad |
 | Colorblind | Never red-vs-green alone for meaning — pair with brightness, shape, or label (Matt is red-green deficient) |
 

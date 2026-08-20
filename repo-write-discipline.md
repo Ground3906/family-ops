@@ -37,6 +37,18 @@ This applies to `.ps1` specifically. Markdown files are read by tools that handl
 
 ---
 
+## Multi-line PowerShell patches must tolerate line endings
+
+Any patch to `cal-widget-current.html` (or any other large file patched locally via PowerShell rather than MCP) spanning more than one line must not rely on a literal here-string match. The ThinkPad's working copy line endings don't reliably match whatever line breaks land in a here-string typed into the console, and a literal multi-line match will silently return zero even when the content is correct on every line.
+
+Fix: build the match as a regex — split the target text on `\r?\n`, escape each line with `[regex]::Escape()`, rejoin with `\r?\n`. Match with `[regex]::Matches()`, not `.Replace()`. Detect the file's actual line ending once (`$content -match "\r\n"`) and normalize inserted text to match before splicing, so the file doesn't end up mixed.
+
+Single-line patches are unaffected and can still use literal matching — this only applies once a target spans more than one line.
+
+This bit on 2026-08-19 patching the span-stacking and night-mode fixes: two separate multi-line patches both silently matched zero on the first attempt against a file confirmed present with a clean read. Root cause was CRLF in the working copy against LF-only here-strings. The abort-on-mismatch check caught it cleanly, no file was written on the failed attempt. The tolerant-regex approach above should be the default for any future multi-line patch, not a reactive fix reached for after a first failure.
+
+---
+
 ## Known failure modes
 
 - **`push_files` accepts placeholder content without error.** Verify every content field is real before firing.
