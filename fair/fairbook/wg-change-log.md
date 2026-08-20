@@ -52,6 +52,56 @@ Four renumbers move citations. Their number is on the left, Matt's carry copy on
 
 ---
 
+## Addendum: what changed
+
+The Addendum was reordered, reformatted, and cleaned of every editorial cue. Their copy is the old order.
+
+| Their section | Matt's copy | Section |
+|---|---|---|
+| §1 | §1 | Fair Board, Staff, and Superintendents |
+| §7 | §2 | Schedule |
+| §4 | §3 | Deadlines and Required Attendance |
+| §8 | §4 | Weight Windows and Market Deadlines |
+| §6 | §5 | Fees |
+| §5 | §6 | Required Forms, now five subsections |
+| §9 | §7.1 | Filing windows, now the opening of Grievance and Appeal |
+| §5.6 | §7.2 | Grievance Form |
+| §5.7 | §7.3 | Appeal Form |
+| §2 | §8 | Locations |
+| §3 | §9 | Official Communication Channels |
+
+| Change | What it does |
+|---|---|
+| Order | Schedule moves to the front, communication channels to the back, and the filing windows now sit directly ahead of the two forms they govern. |
+| Page discipline | Every section and subsection starts its own page, so any form can be printed on its own sheet. No table row splits across a page. |
+| Table shading | One shaded element per table: header row on column tables, label column on label-and-value tables. |
+| Form fields | Every cell top-aligned on a fixed layout, so clicking a form cell puts the cursor at the top left and typing does not move the columns. |
+| Roster | Matthew Bayer. |
+| Book citations | All 39 Addendum citations in the Fair Book retargeted to the new section numbers. |
+
+---
+
+## Walk-through: raise these as we reach each section
+
+Every cue that used to be printed in the Addendum was pulled out so the document reads finished. This is that list. Their copy still has the cues printed; Matt's does not.
+
+| Section | Raise this |
+|---|---|
+| §1 Fair Board | Roster is carried forward from the 2026 fair as a specimen. Confirm every name and contact before adoption. |
+| §2 Schedule | Fair-week dates are translated from 2026 against the anchor that fair week closes the third Saturday in July. |
+| §2 Schedule | Monday July 12: the Cat show and Companion Animal Master Showmanship overlap in the same ring in both source documents. Intentional? |
+| §2 Schedule | Friday rodeo parade time of 10:00 am is a placeholder. No source states a time. |
+| §3 Deadlines | Same date translation as §2. Llama and dog enrollment dates and the miscellaneous-exhibit request date do not move on that anchor and are carried as stated. |
+| §4 Weight Windows | Market sheep and market goat maximum weight both read "Not set." CC 3.4.8 and CC 3.5.3 cite a ceiling that was never defined. Superintendent value needed. |
+| §5 Fees | No source in the repo for the grievance fee, appeal fee, or premium amounts. Only the 3% commission traces to a document. |
+| §6 Required Forms | §6.1 Code of Conduct is a proposed rewrite pending CSU Extension review. Extension owns the Code and collects the signatures. |
+| §6.2 MQA | No form exists. MQA is verified by Extension and nothing is submitted at check-in. Confirm this stays a pointer. |
+| §6.3 Animal care and housing | No source exists beyond one legacy sentence naming the form. The descriptive sentence now printed was drafted to fill the section. Confirm or replace. |
+| §6.5 Entry card | The card number field and the office-use block are new, in neither source. Confirm before adoption. |
+| §9 Communication channels | The table is empty. No channels have ever been designated. |
+
+---
+
 ## Deliverable changes, not rule text
 
 Not in the book file. These change the Word and PDF build only.
@@ -59,4 +109,5 @@ Not in the book file. These change the Word and PDF build only.
 | Change | Effect |
 |---|---|
 | Heading outline levels | PDF gains a navigation sidebar covering all chapters, subchapters, and rules. Absent from the version the working group holds. |
-| Chapter jump strip | One line under each chapter heading linking to every other chapter and back to the contents, with the current chapter shown in plain text. |
+| Chapter navbar | A jump strip in the running header of every body page, linking every chapter and the contents, with the current chapter marked. |
+| Two-column contents | The whole table of contents now fits on one page, every entry a live link. |
