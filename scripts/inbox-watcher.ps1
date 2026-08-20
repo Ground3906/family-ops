@@ -1,8 +1,9 @@
 # inbox-watcher.ps1 - Receipt watcher for Bayer Family Ops.
 # Polls Filing Cabinet\Inbox every 60 seconds for PDF and image files.
 # Two-gate ready check: placeholder (not an OneDrive stub) + 15-second size stability.
-# On clear: writes placeholder JSONL record to archive\receipts-log.jsonl, pushes it to the
-# repo immediately (git add/commit/push, same pattern as payroll-write.ps1), moves file to
+# On clear: writes a full detail JSONL record to archive\receipts-log.jsonl (local only,
+# never committed - see .gitignore), appends a lean four-field record to
+# logs\receipts-index.jsonl (local; committed weekly by weekly-push.ps1), moves file to
 # Cabinet root.
 # Writes heartbeat to archive\watcher-heartbeat.txt on every cycle.
 # Emails via Microsoft Graph on any processing failure.
@@ -10,9 +11,6 @@
 #
 # NOTE: Email alerts require Mail.Send scope on the Graph token.
 # If alerts are silent, re-run graph-auth.ps1 to re-authorize with Mail.Send.
-#
-# NOTE: git push requires push credentials configured on this box (Windows Credential
-# Manager PAT for github.com). Already proven working here by payroll-write.ps1.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -29,7 +27,9 @@ $OneDriveBase         = "C:\Users\ThinkPad X1 Carbon\OneDrive"
 $InboxPath            = Join-Path $OneDriveBase "Filing Cabinet\Inbox"
 $CabinetRoot          = Join-Path $OneDriveBase "Filing Cabinet"
 $ArchiveDir           = Join-Path $RepoRoot "archive"
+$LogsDir              = Join-Path $RepoRoot "logs"
 $ReceiptsLog          = Join-Path $ArchiveDir "receipts-log.jsonl"
+$ReceiptsIndex        = Join-Path $LogsDir "receipts-index.jsonl"
 $HeartbeatFile        = Join-Path $ArchiveDir "watcher-heartbeat.txt"
 $ErrorLog             = Join-Path $ArchiveDir "watcher-error.log"
 $AlertTo              = "matthew.bayer@outlook.com"
@@ -37,8 +37,9 @@ $PollIntervalSeconds  = 60
 $SizeStabilitySeconds = 15
 $ValidExtensions      = @('.pdf', '.jpg', '.jpeg', '.png')
 
-# Ensure archive directory exists
+# Ensure archive and logs directories exist
 if (-not (Test-Path $ArchiveDir)) { New-Item -ItemType Directory -Path $ArchiveDir | Out-Null }
+if (-not (Test-Path $LogsDir)) { New-Item -ItemType Directory -Path $LogsDir | Out-Null }
 
 # ---------------------------------------------------------------
 # GRAPH TOKEN
@@ -155,11 +156,13 @@ function Invoke-ProcessFile {
         $base  = [System.IO.Path]::GetFileNameWithoutExtension($leaf)
         $dest  = Join-Path $CabinetRoot "$base-$stamp$ext"
     }
+    $destLeaf = Split-Path $dest -Leaf
+    $nowTs    = Get-Date -Format 'o'
 
-    # Write JSONL record.
+    # Write full detail JSONL record (local only, never committed - see .gitignore).
     try {
         $record = [ordered]@{
-            ts              = (Get-Date -Format 'o')
+            ts              = $nowTs
             filename        = $leaf
             size_bytes      = $s2
             file_type       = $ext.TrimStart('.')
@@ -173,25 +176,26 @@ function Invoke-ProcessFile {
         return
     }
 
-    # Push the new record to the repo immediately. Local-only writes are invisible to Al;
-    # this is Item 1 of the 2026-08-06 archive-pipeline fix. Same pattern as payroll-write.ps1.
+    # Append the lean index record. Local write only - weekly-push.ps1 commits this file
+    # to the repo on Sundays. Item 1 of the 2026-08-19 archive-pipeline fix.
     try {
-        Push-Location $RepoRoot
-        $null = git add archive/receipts-log.jsonl 2>&1
-        $null = git commit -m "watcher: receipt logged $leaf" 2>&1
-        $null = git push 2>&1
-        Pop-Location
-        Write-Host "[watcher] Pushed receipts-log.jsonl to repo."
+        $indexRecord = [ordered]@{
+            ts            = $nowTs
+            filename      = $leaf
+            file_type     = $ext.TrimStart('.')
+            dest_filename = $destLeaf
+        } | ConvertTo-Json -Compress -Depth 2
+        Add-Content -Path $ReceiptsIndex -Value $indexRecord -Encoding UTF8
+        Write-Host "[watcher] Indexed: $leaf"
     } catch {
-        Pop-Location
-        "$(Get-Date -Format 'o') GIT-PUSH-FAIL for $leaf`: $_" | Add-Content $ErrorLog -Encoding UTF8
-        Send-Alert "[FamilyOps] Watcher: git push failed" "Record for $leaf written locally but push to repo failed: $_"
+        "$(Get-Date -Format 'o') INDEX-WRITE-FAIL for $leaf`: $_" | Add-Content $ErrorLog -Encoding UTF8
+        Send-Alert "[FamilyOps] Watcher: index write failed" "Full record for $leaf written to receipts-log.jsonl but the lean index write failed: $_"
     }
 
     # Move to Filing Cabinet root.
     try {
         Move-Item -LiteralPath $FilePath -Destination $dest -ErrorAction Stop
-        Write-Host "[watcher] Filed: $leaf -> $(Split-Path $dest -Leaf)"
+        Write-Host "[watcher] Filed: $leaf -> $destLeaf"
     } catch {
         Send-Alert "[FamilyOps] Watcher: move failed" "Could not move $leaf to cabinet root: $_"
     }

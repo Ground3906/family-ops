@@ -2,13 +2,17 @@
 # Runs Sundays 06:05 via BayerFamilyOps-WeeklyPush Task Scheduler task.
 #
 # Pushes:
-#   logs\night-watch.jsonl       - week of LAN activity observations
-#   ops\system-health.json       - latest Watchdog health snapshot
+#   logs\night-watch.jsonl        - week of LAN activity observations
+#   ops\system-health.json        - latest Watchdog health snapshot
+#   logs\receipts-index.jsonl     - lean receipt-arrival index, written locally all week
+#                                    by inbox-watcher.ps1
 #
-# This is the mechanism by which Al reads NightWatch data for the weekly synthesis.
+# This is the mechanism by which Al reads NightWatch and receipt-arrival data for the
+# weekly synthesis.
 #
-# PREREQUISITE: git on ThinkPad must have push credentials configured
-# (Windows Credential Manager PAT for github.com). Verify manually:
+# PREREQUISITE: SYSTEM git auth via SSH deploy key, configured machine-wide on this box.
+# See repo-write-discipline.md, "ThinkPad SYSTEM git authentication," for the full setup.
+# Verify manually:
 #   git -C "C:\Users\ThinkPad X1 Carbon\Documents\family-ops" push --dry-run
 # before relying on this task.
 
@@ -35,6 +39,7 @@ try {
     $filesToAdd = @(
         "logs\night-watch.jsonl"
         "ops\system-health.json"
+        "logs\receipts-index.jsonl"
     )
     $staged = 0
     foreach ($f in $filesToAdd) {
