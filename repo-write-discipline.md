@@ -74,6 +74,22 @@ This applies to `.ps1` specifically. Markdown files are read by tools that handl
 
 ---
 
+## Native commands do not throw — check `$LASTEXITCODE`
+
+**A failing external command (git, or any executable) never raises a PowerShell exception. It sets `$LASTEXITCODE` and execution continues.** `$ErrorActionPreference = 'Stop'` does not change this — that setting governs cmdlets, not native executables. A try/catch wrapped around bare `git add` / `git commit` / `git push` calls catches nothing when git fails; the script sails straight into its success path.
+
+This bit for a full month. `payroll-write.ps1` piped all three git commands to `$null` with no exit-code checks and logged `Saved and pushed` unconditionally after them. Diagnosed 2026-08-20: eight "Saved and pushed" entries in the log, zero commits ever landed — the file-scoped `git log` on `payroll/payroll-data.json` showed only the original seed commit. The catch block had never fired once, so no failure was ever recorded anywhere, and there was no diagnostic trail at all. Fixed in commit `efc36caa`; six weeks of unprotected entries were rescued by manual commit `2ae91e0` first.
+
+Rules for any script that runs git:
+- Check `$LASTEXITCODE` after **each** git command individually — add, commit, and push each get their own check. A single check at the end cannot tell you which step failed.
+- Distinguish a harmless no-op (staged diff empty, nothing to commit) from a real failure. They are different log lines.
+- On failure, capture and log git's actual output (`2>&1` into a variable), not just the fact of failure.
+- Log success only after every step is confirmed. A success line the code cannot prove is a lie waiting to be trusted.
+
+**The signature:** a log full of successes over a repo whose commit history shows nothing. Verify the repo side — file-scoped commit history — never the script's own log.
+
+---
+
 ## Multi-line PowerShell patches must tolerate line endings
 
 Any patch to `cal-widget-current.html` (or any other large file patched locally via PowerShell rather than MCP) spanning more than one line must not rely on a literal here-string match. The ThinkPad's working copy line endings don't reliably match whatever line breaks land in a here-string typed into the console, and a literal multi-line match will silently return zero even when the content is correct on every line.
@@ -94,6 +110,7 @@ This bit on 2026-08-19 patching the span-stacking and night-mode fixes: two sepa
 - **Local machine commits race MCP commits.** If two machines pull on a cadence (e.g. a 3-minute pull job), a fresh SHA on fetch can mean a local commit landed between your read and your write. Re-read before writing if there's any chance of that race.
 - **Large doctrine batches exceed single-push payload.** A multi-file doctrine batch can be too large for one `push_files` call. When that happens, chunk to proven size (roughly 2 medium files, or one large file, per call) and expect multiple commits. This does not violate the one-commit rule in spirit — the ceiling is a payload limit, not a choice. Group the chunks logically and read back every file after.
 - **A scheduled task reporting success proves nothing about whether data moved.** `LastTaskResult: 0` means the script exited cleanly, which includes every early-exit path it was written to take. Verify the repo side independently — commit history on the target file — not the exit code.
+- **`create_or_update_file` can fail with `No approval received` where `push_files` succeeds on identical content.** Observed 2026-08-20. `push_files` is the default write tool for this repo; reach for `create_or_update_file` only when a SHA-guarded single-file update is specifically required, and expect the approval gate.
 
 ---
 
