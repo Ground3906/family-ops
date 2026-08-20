@@ -14,21 +14,26 @@ This project writes the PROPOSED book. Anything gated on a phone call, a superin
 
 ## Addendum — pending values and working-group confirmations
 
-Addendum §1 through §9 shipped 8/16/2026, pre-populated with 2027 facts. These items are what's left inside it.
+Addendum §1 through §9 carry 2027 facts. Section numbers below are the reordered ones. Every cue that used to be printed in the Addendum now lives in the working group change log instead, so the Addendum reads as a finished product.
 
-- **Sheep and goat maximum weight.** No source exists in either direction — CC 3.4.8 and CC 3.5.3 both cite a ceiling that was never defined anywhere. Addendum §8 marks both as pending. Superintendent value needed (working group).
-- **§5.1 Code of Conduct rewrite needs CSU Extension review.** The Code is owned by CSU Extension, 4-H, and FFA; this session's rewrite (struck the duplicate protest block in favor of CC 2.8, replaced the named-officials list with "the Authority," changed "protest" to "grievance," added a signature block) is a proposed draft, not a shipped Extension document.
-- **§5.2 MQA certification form marked for collection.** No form exists; MQA is verified by CSU Extension and nothing is submitted at check-in. Confirm this section should stay a pointer rather than reproduce a document.
-- **§5.3 Animal care and housing form marked for collection.** No source exists anywhere except one legacy sentence naming the form. Working group to confirm what this form actually is and who must complete it.
-- **§5.5 Entry card — card number and office-use block are new.** Neither the county book nor CSF's entry-card format carries a card number field or an office-use block; both were added this session to make the stub-and-tag system work as two paper halves. Confirm before adoption.
-- **§7 schedule — Monday, July 12 ring overlap.** The Cat show and Companion Animal Master Showmanship both show in the show ring, 11:00 am to 12:30 pm and 11:00 am to 2:30 pm respectively, in both source documents. Confirm this is intentional before the schedule ships as final.
-- **§7 schedule — Friday rodeo parade time is an unconfirmed placeholder.** No source states a time; 10:00 am was placed as a placeholder only. Needs a real time before adoption.
+- **Sheep and goat maximum weight.** No source exists in either direction — CC 3.4.8 and CC 3.5.3 both cite a ceiling that was never defined anywhere. Addendum §4 prints both as Not set. Superintendent value needed (working group).
+- **§6.1 Code of Conduct rewrite needs CSU Extension review.** The Code is owned by CSU Extension, 4-H, and FFA; this session's rewrite (struck the duplicate protest block in favor of CC 2.8, replaced the named-officials list with "the Authority," changed "protest" to "grievance," added a signature block) is a proposed draft, not a shipped Extension document.
+- **§6.2 MQA certification.** No form exists; MQA is verified by CSU Extension and nothing is submitted at check-in. Confirm this section should stay a pointer rather than reproduce a document.
+- **§6.3 Animal care and housing form.** No source exists anywhere except one legacy sentence naming the form. Working group to confirm what this form actually is and who must complete it.
+- **§6.5 Entry card — card number and office-use block are new.** Neither the county book nor CSF's entry-card format carries a card number field or an office-use block; both were added this session to make the stub-and-tag system work as two paper halves. Confirm before adoption.
+- **§2 schedule — Monday, July 12 ring overlap.** The Cat show and Companion Animal Master Showmanship both show in the show ring, 11:00 am to 12:30 pm and 11:00 am to 2:30 pm respectively, in both source documents. Confirm this is intentional before the schedule ships as final.
+- **§2 schedule — Friday rodeo parade time is an unconfirmed placeholder.** No source states a time; 10:00 am was placed as a placeholder only. Needs a real time before adoption.
+- **§9 Official Communication Channels is an empty table.** Three blank rows, no channels named. The Fair Board designates them by policy and none are recorded anywhere.
+- **§5 fee amounts have no source in the repo.** Grievance $50, appeal $100, premiums $8/$5/$3/$2/$2, commission 3%. Only the commission traces to a document, the Sale Committee Guidelines. Confirm the rest against what the board actually charges.
+- **§6.3 body sentence is drafted, not sourced.** The animal care and housing form had nothing but a collection cue, which would have left an empty section, so one sentence describing the form was written to fill it. Confirm or replace.
 
 ## Known gaps in finished chapters
 
 - **HSRB not in the archive.** The other 4-H project guides are (cat, dog, shooting sports, consumer science). The HSRB (Colorado 4-H Horse Show Rule Book, LA1500K, 2024) was pulled from the web this session. Add the official PDF to `fair/rulebooks/archive/` when convenient for a clean local source.
 
 - **Grass Fed Heifer or Steer has no eligibility standard.** CC 3.2.5 prints the class as the county has always carried it. The county book has never defined what grass fed means, how it is verified, or how the class is judged against grain-fed animals on weight. CSF has no grass-fed class anywhere to adopt from. Superintendent pass (working group).
+
+- **CC 5.7 cites the schedule for horse classes offered.** The rule says the classes offered in each division are listed in the Addendum schedule. A schedule states when things happen, not which classes exist, and no horse class list exists in the Addendum. Pre-existing defect, not introduced by the renumber.
 
 ## Unresolved rule questions — route at the relevant chapter pass
 
