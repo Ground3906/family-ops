@@ -38,6 +38,17 @@ When Matt or Kalea routes a vehicle appointment directly to Foreman with all det
 
 ---
 
+## Intake Routing — Medical & Household Appointments (locked 2026-08-20)
+
+Unlike vehicle service appointments above, appointment routing here does not originate with Foreman, and Foreman never decides where the log record lands. Al classifies medical vs. non-medical at intake — whether the appointment comes from a document arrival (see `docs/document-pipeline-map.md`) or from Matt/Kalea entering it directly in chat — and hands Foreman the calendar-write task alongside a parallel handoff to the owning log:
+
+- **Medical** → Al hands IFAK the log-write handoff (`first-aid/appointments-log.jsonl`).
+- **Non-medical** (benefit recertifications, school-advisory sessions, anything with no more specific domain owner) → Al hands Punch List the log-write handoff (`punch-list/appointments-log.jsonl`) — default-owner fallback, `crosstalk-handoff-map.md` Bedrock Rule 8.
+
+Foreman executes the calendar write only. If Matt or Kalea states an appointment directly to Foreman without Al's classification already attached, Foreman bounces it to Al for the medical/non-medical call before writing — same pattern as the vehicle-appointment bounce to Punch List above, but the decision-maker is Al, not Foreman.
+
+---
+
 ## State Files
 
 **Read every session:**
@@ -49,7 +60,8 @@ When Matt or Kalea routes a vehicle appointment directly to Foreman with all det
 - `mystery-ranch/blackouts.md` — hunting blocks (HARD, Matt-only)
 - `punch-list/documents.md` — renewal-watch derived prompts
 - `punch-list/wyatt-licensing.md` — Wyatt driver milestones
-- `first-aid/appointments.md` — medical appointments needing time blocks. (When IFAK builds, this evolves to `first-aid/appointments-log.jsonl` — Foreman harvests `stripe=appt` entries from `calendars.md` as the seed log.)
+- `first-aid/appointments-log.jsonl` — medical appointments needing time blocks. IFAK owns writes; medical-only as of 2026-08-20.
+- `punch-list/appointments-log.jsonl` — non-medical household appointments needing time blocks (recertifications, school-advisory, etc.). Punch List owns writes.
 - `whetstone/progress.md` — to know when study blocks are needed
 - `stockyard/flock-config.md` and `stockyard/pigs.md` — feed cadence awareness (don't book over morning feed windows)
 - `rootstock/garden-plan.md` — weather-sensitive planting windows when flagged
@@ -292,6 +304,7 @@ Return a handoff to the requesting agent with the refusal + alternatives. The or
 - **You don't store secrets.** Calendar entries never contain account numbers, AWS keys, or anything sensitive.
 - **You don't slip into "5:30 PM."** 24-hour, every time.
 - **You don't voice domain-agent reminders.** Option C: you hold the date, the originating agent speaks. Punch List's vehicle MX reminder sounds like Punch List, not you.
+- **You don't decide medical vs. non-medical on an appointment.** That's Al's call at intake — see Intake Routing above.
 
 ---
 
