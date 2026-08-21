@@ -65,7 +65,7 @@
         "Title if DMV requires it for a renewal (unlikely but confirm)",
         "Mail-in option: check CO DMV online renewal eligibility first — may not require a trip"
       ],
-      "bundling_note": "Ca\u00f1on City day (DMV is southeast, ~1 hr) or mail-in / online. Confirm online eligibility first. If DMV visit required, bundle with Austin Auto drop-off or other Ca\u00f1on City stops.",
+      "bundling_note": "Cañon City day (DMV is southeast, ~1 hr) or mail-in / online. Confirm online eligibility first. If DMV visit required, bundle with Austin Auto drop-off or other Cañon City stops.",
       "calendar_block_requested": true,
       "calendar_block_requested_at": "2026-05-15",
       "notes": "October renewal. 30-day lead = 2026-09-01 target action date. Foreman handoff emitted 2026-05-15 requesting calendar block in early September 2026. Wave 4 cleanup outstanding: calendars.md currently shows 2026-08-01 prompt — needs rewrite to 2026-09-01. Surface to Matt until rewrite ships.",
@@ -96,7 +96,7 @@
       "quoted_date": null,
       "due_date": null,
       "prompt_date": null,
-      "notes": "Seizure discovered at 2026-05-05 service (103,777 mi). Alignment is partial until this is resolved. Bundle with any Ca\u00f1on City day. NV3500 Titan front-end conversion: front parts via Titan catalog, not NV3500.",
+      "notes": "Seizure discovered at 2026-05-05 service (103,777 mi). Alignment is partial until this is resolved. Bundle with any Cañon City day. NV3500 Titan front-end conversion: front parts via Titan catalog, not NV3500.",
       "status": "open"
     },
     {
@@ -252,7 +252,7 @@
       "next_service_approx_date": null,
       "shop": "Austin Automotive",
       "estimated_cost": null,
-      "notes": "Synthetic oil per service history. Annual mileage TBD — use pattern data once available. Previous interval: 83,897 \u2192 103,773 = 19,876 mi (two oil changes in that span based on $cost). Monitor cyl-7 tick and oil consumption (1 qt/8k) at each oil change.",
+      "notes": "Synthetic oil per service history. Annual mileage TBD — use pattern data once available. Previous interval: 83,897 → 103,773 = 19,876 mi (two oil changes in that span based on $cost). Monitor cyl-7 tick and oil consumption (1 qt/8k) at each oil change.",
       "status": "open"
     },
     {
@@ -298,7 +298,7 @@
       "next_service_approx_date": null,
       "shop": "Austin Automotive",
       "estimated_cost": null,
-      "notes": "Current reading 182,114 mi (2026-05-15) — approximately 5,253 mi since last service. At or near interval. Use is transitioning from ~17.7k/yr annualized (Salida run pattern) to ~8k/yr projected. Bundle oil change with open deferred items (axle seals, heater hose tees) on next Ca\u00f1on City day to minimize shop trips.",
+      "notes": "Current reading 182,114 mi (2026-05-15) — approximately 5,253 mi since last service. At or near interval. Use is transitioning from ~17.7k/yr annualized (Salida run pattern) to ~8k/yr projected. Bundle oil change with open deferred items (axle seals, heater hose tees) on next Cañon City day to minimize shop trips.",
       "status": "open"
     },
     {
@@ -376,6 +376,26 @@
         "Contact Everweigh Scale Industries (719-547-7075) if CDA inspector not already scheduled"
       ],
       "notes": "2026 inspection result: 700 lb scale tested with 300 lbs certified weight — found accurate, approved. 2000 lb scale also approved (substitution test, read 644 on 643 lb load). CDA inspector comes to the fairgrounds. Prompt fires 2027-04-01 to get ahead of fair scheduling. Captured 2026-06-25.",
+      "status": "open"
+    },
+    {
+      "id": "leo-trump-account-2026-08-20",
+      "type": "task",
+      "asset": "Documents",
+      "description": "Confirm Leo's Social Security number is issued and a Trump Account is opened to claim the one-time $1,000 federal deposit. Program requires a valid SSN; enrollment can happen automatically via hospital Enumeration at Birth (EAB) at SSN issuance, or manually via IRS Form 4547 / trumpaccounts.gov if not already done.",
+      "priority": "routine",
+      "estimated_cost": null,
+      "shop": null,
+      "quoted_date": null,
+      "due_date": null,
+      "prompt_date": null,
+      "what_is_needed": [
+        "Confirm Leo's SSN card has arrived (issued via hospital EAB at birth)",
+        "Check whether Trump Account was auto-opened via EAB enrollment",
+        "If not auto-enrolled: file IRS Form 4547 or sign up at trumpaccounts.gov",
+        "Verify $1,000 federal deposit lands in account once opened"
+      ],
+      "notes": "Leo born 2026-08-08 — eligible window is US citizens born 1/1/2025 through 12/31/2028. Program launched 2026-07-04. Captured 2026-08-20 per Matt request. Voice: Punch List.",
       "status": "open"
     }
   ]
