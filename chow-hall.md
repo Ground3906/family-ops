@@ -1,8 +1,8 @@
 # Chow Hall — Meal Planner
 **Agent:** 🍴 Chow Hall
 **Owner:** Chow Hall
-**Last updated:** 2026-07-06 — Dish Crew Doctrine superseded ([CHORE] calendar line type wins over the notes= approach; see `cal-widget.md` and `punch-list.md`). **Prior:** 2026-07-06 — Dish Crew Doctrine added ([MEAL] entries carry dish/table crew; Sunday tiles carry zone swap). **Prior:** 2026-07-03 — Price Comparison Doctrine added (standing grocery-list sort against Costco/Azure Standard/Walmart/Safeway). **Prior:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
-**State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever)
+**Last updated:** 2026-08-20 — Al inbound crosstalk row added (document-arrivals hook, grocery receipts routed from `logs/receipts-index.jsonl` via Al's classification). **Prior:** 2026-07-06 — Dish Crew Doctrine superseded ([CHORE] calendar line type wins over the notes= approach; see `cal-widget.md` and `punch-list.md`). **Prior:** 2026-07-06 — Dish Crew Doctrine added ([MEAL] entries carry dish/table crew; Sunday tiles carry zone swap). **Prior:** 2026-07-03 — Price Comparison Doctrine added (standing grocery-list sort against Costco/Azure Standard/Walmart/Safeway). **Prior:** 2026-06-17 — Recipe Entry Doctrine and Meal Plan Publish Doctrine added (v5.8 session). **Prior:** 2026-06-17 — Renamed from `chow-hall/meal-plan.md` to `chow-hall.md` at repo root; Food Preferences section rewritten to build-as-you-go doctrine; File Split Doctrine updated. **Prior:** 2026-06-10 — Doctrine repair: file split corrected to JSON/JSONL per data shape doctrine. **Prior:** 2026-05-27 — initial build.
+**State files:** `chow-hall.md` (this file — stable doctrine), `chow-hall/meal-plan-current.json` (live weekly plan), `chow-hall/meal-plan-log.jsonl` (weekly plan archive — append-forever), `chow-hall/buy-rate.md` (receipt history — see North-Star Doctrine below)
 
 ---
 
@@ -226,6 +226,7 @@ Any step requiring Kalea's input or sign-off **never fires after 20:00.** This i
 | Stockyard | Egg counts, glut flags, processed bird notifications, pig-in-freezer alerts |
 | Rootstock | Fresh harvest ready, garden surplus, Gardyn herb status |
 | Mystery Ranch | Harvest event, game meat at processor, processor pickup done |
+| Al | Grocery receipt routed from the document-arrivals hook (locked 2026-08-20). Al classifies via direct cabinet read and hands off the extraction task — Chow Hall does not gain a session-open step of its own. See `al.md` Document Arrivals Hook and `docs/document-pipeline-map.md` routing table. |
 
 ### Hands To
 | Agent | What goes out |
@@ -251,3 +252,4 @@ Any step requiring Kalea's input or sign-off **never fires after 20:00.** This i
 | Cook Mode widget + kids recipe browser | Phase 1 live (v5.8) |
 | Integration + stress test + crosstalk update | Rides Wave 2 (charter Rollout) |
 | Root cellar schema handshake (Rootstock) | Future, by pull |
+| `buy-rate.md` / `pantry.md` JSONL conversion | Dedicated session (see `chow-hall/buy-rate.md` Format note) |

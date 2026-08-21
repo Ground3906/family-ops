@@ -4,6 +4,8 @@ How agents pass work to each other. Designed against Charter §Anti-Silo Princip
 
 **v2 (2026-06-05):** Roster reduced to 9 agents. Struck Whetstone, The Square, Footings (patterns E and F removed). First Aid Kit renamed IFAK (path `first-aid/` unchanged); The Mantel renamed Mantle (path `mantle/`). Ledger (financial) added — fed by the JSONL cost/revenue logs; handoff patterns designed at build. "Phase 2 may relax" language replaced with the Automation layer.
 
+**2026-08-20 addendum:** Bedrock Rule 8 (default-owner fallback) and Pattern S (direct-entry appointment routing) added — document-pipeline hook design session. See `docs/document-pipeline-map.md`.
+
 ---
 
 ## Bedrock Rules
@@ -15,6 +17,7 @@ How agents pass work to each other. Designed against Charter §Anti-Silo Princip
 5. **Sacred blocks beat everything.** Family meals 17:30 daily. Sundays. Mass obligation (floating sacred — travels through adjudication, always protected). Hunting season blackouts (Matt-only scope). Kalea drill travel (Kalea-only scope). Kalea-flagged blocks. Foreman refuses scheduling violations and bounces back to the originating agent.
 6. **Reminder ownership — Option C.** The agent that owns the work owns the reminder. Foreman owns calendar truth (the *when*); domain agents own voice and cadence (the *what* and *how*). Cross-agent dependencies resolve to whoever has the more time-sensitive or domain-primary stake.
 7. **Pills = ownership, not logistics.** A pill on a calendar event means that person owns the event. Driver and vehicle assignment is Punch List territory — surfaced in the day/week detail panel on tap, never on the pill stack.
+8. **Default owner is Punch List.** Any item, appointment, or arrival that doesn't fit an existing domain goes to Punch List — the household logistics dispatcher. This isn't a dumping ground; it's the explicit fallback so nothing gets orphaned waiting for a bespoke owner. Al still makes the routing determination — this rule only sets the destination when nothing more specific applies. (locked 2026-08-20, document-pipeline hook design session)
 
 ---
 
@@ -32,7 +35,7 @@ Read as: ROW agent typically hands work TO COLUMN agent.
 | **Stockyard**|  →   |  ↔  |  →  |     |  —  |     |     |  →   |
 | **Rootstock**|  →   |  ↔  |  →  |     |     |  —  |     |      |
 | **IFAK**     |  →   |  →  |     |     |     |     |  —  |  →   |
-| **Mantle**   |      |     |     |     |     |     |     |  —   |
+| **Mantle**   |      |     |     |     |     |     |     |  —  |
 
 `→` sends to. `←` receives from. `↔` bidirectional. **MR = Mystery Ranch. Stock = Stockyard. Root = Rootstock.**
 
@@ -142,6 +145,13 @@ Al (orchestrator) holds final authority on when to push back on the human. Other
 
 **Struck patterns (2026-06-05):** Pattern E (Study → Schedule, Whetstone) and Pattern F (Job Hunt ↔ Study, Footings ↔ Whetstone) removed with their agents. WGU study lives in its own project.
 
+### Pattern S — Direct-Entry Appointment Routing (locked 2026-08-20)
+**Al → Foreman + (IFAK or Punch List).** Matt or Kalea states an appointment directly in chat, not from a document arrival.
+
+Al classifies medical vs. non-medical before Foreman is ever asked to write anything. Two handoffs fire from Al: one to Foreman (calendar write), one to the owning log (IFAK for medical → `first-aid/appointments-log.jsonl`; Punch List for non-medical → `punch-list/appointments-log.jsonl`, default-owner fallback per Bedrock Rule 8). Foreman executes the calendar write only; it does not choose the log destination. See `al.md` Document Arrivals Hook and `foreman.md` Intake Routing — Medical & Household Appointments.
+
+This pattern also covers appointments arriving via document (see `docs/document-pipeline-map.md`) — the classification step is the same, only the trigger differs (document arrival vs. chat statement).
+
 ---
 
 ## Confirmation Protocol
@@ -188,14 +198,16 @@ A handoff that bounces back unprocessed twice = stop and surface to the human vi
 | Vehicles | Punch List | `punch-list/vehicles.json` + `fleet-state-v1.md` |
 | Documents / renewals | Punch List | `punch-list/documents.md` |
 | Wyatt licensing | Punch List | `punch-list/wyatt-licensing.md` |
+| Non-medical household appointments | Punch List | `punch-list/appointments-log.jsonl` (default-owner fallback, Bedrock Rule 8) |
 | CCIR routing doctrine | Household-wide | `ccir-protocol.md` |
 | Meals | Chow Hall | `chow-hall.md` |
+| Grocery receipt history | Chow Hall | `chow-hall/buy-rate.md` |
 | Game meat | Chow Hall | `chow-hall/freezer.json` |
 | Hunting seasons | Mystery Ranch | `mystery-ranch/seasons.md` |
 | Livestock, eggs, feed | Stockyard | `stockyard/` (eggs-log, flock-config, pigs, turkeys) — *durability-gated* |
 | Plants, orchard, greenhouse | Rootstock | `rootstock/` (plantings.md, garden-plan.md, gardyn-roster.md) |
-| Health | IFAK | `first-aid/` |
+| Health, medical appointments | IFAK | `first-aid/` (`appointments-log.jsonl` is medical-only as of 2026-08-20) |
 | Memory / legacy | Mantle | `mantle/` |
 | Farm finances | Ledger | *(unbuilt — fed by `fuel-log.jsonl`, `feed-log.jsonl`, `income-log.jsonl`)* |
 
-If two agents seem to want the same fact: re-read this table. One owner only. The other agent references.
+If two agents seem to want the same fact: re-read this table. One owner only. The other agent references. **No owner fits?** Default to Punch List — Bedrock Rule 8.
