@@ -64,21 +64,25 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.2 Bona Fide Member.** A bona fide member is a youth currently enrolled in and meeting the requirements of their 4-H or FFA program, as confirmed by the CSU Extension agent or FFA advisor.
 
-**CC 1.3 Exhibition Bar.** An exhibition bar is the restriction that prohibits an animal from competing in any further show or class after it has been sold by the exhibitor outside the Livestock Sale.
+**CC 1.3 Care.** Care is the daily work of keeping an animal fed, watered, bedded, and clean, and of tending its condition. Care is not custody. A person may be responsible for the care of an animal held in another's custody.
 
-**CC 1.4 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the county weigh-in and does not meet the minimum weight requirement for its species and class.
+**CC 1.4 Custody.** Custody is legal control of an animal, including the authority to move it, hold it, release it, or deliver it. The person or body holding custody answers for where the animal is.
 
-**CC 1.5 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
+**CC 1.5 Exhibition Bar.** An exhibition bar is the restriction that prohibits an animal from competing in any further show or class after it has been sold by the exhibitor outside the Livestock Sale.
 
-**CC 1.6 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §6.
+**CC 1.6 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the county weigh-in and does not meet the minimum weight requirement for its species and class.
 
-**CC 1.7 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
+**CC 1.7 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
 
-**CC 1.8 The Authority**
+**CC 1.8 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §5.
+
+**CC 1.9 Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was tagged at the county weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
+
+**CC 1.10 The Authority**
 
 Custer County acknowledges and adopts the GCR's use of "the Authority" as the body that administers the fair and enforces its rules. The CSF is a single statutory body. Custer County is not, so the term is defined here by role.
 
-**CC 1.8.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
+**CC 1.10.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
 
 (a) The Fair Board, in all matters, and as the final interpreter of these rules.
 
@@ -90,7 +94,9 @@ Custer County acknowledges and adopts the GCR's use of "the Authority" as the bo
 
 (e) The CSU Extension agent and the FFA advisor, in membership, eligibility, enrollment records, and conduct.
 
-**CC 1.8.2** Where these rules say the Authority decides, the decision belongs to whichever person in CC 1.8.1 is competent to make it. The veterinarian does not rule on showmanship. The judge does not rule on a health certificate.
+(f) The sale committee, in the conduct of the Market Livestock Sale, including sale order, the exit election, and the handling of sale proceeds and required disclosures.
+
+**CC 1.10.2** Where these rules say the Authority decides, the decision belongs to whichever person in CC 1.10.1 is competent to make it. The veterinarian does not rule on showmanship. The judge does not rule on a health certificate.
 
 ---
 
@@ -106,7 +112,7 @@ An exhibitor in the Open Division is not required to hold 4-H or FFA membership 
 
 **CC 2.2 Entry and Registration**
 
-Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §4. Any applicable fees are listed in Addendum §6.
+Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §3. Any applicable fees are listed in Addendum §5.
 
 For market livestock, entry is completed by presenting the animal at the county weigh-in. An animal tagged at the county weigh-in is registered for the current fair year.
 
@@ -114,7 +120,7 @@ For indoor and Open Division projects, entry is completed by check-in at the des
 
 A completed entry, weigh-in, or check-in is the exhibitor's acceptance of all rules in this book and agreement to abide by them for the duration of their participation in the Custer County Fair.
 
-An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §5.
+An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §6.
 
 **CC 2.3 Code of Conduct**
 
@@ -142,7 +148,7 @@ Tampering with ribbons or state fair qualifier stickers by anyone other than off
 
 A person removed or banned from the Westcliffe Stampede Rodeo is also removed from the Custer County Fairgrounds for the same period and forfeits all participation rights in any show or sale.
 
-Discipline may be imposed by any member of the Fair Board, any 4-H leader, the FFA advisor, any superintendent, or any CSU Extension personnel with oversight responsibility at the fair. Before any finding of guilt, the accused must be told which behavior they are accused of, shown the factual evidence, and given a chance to respond. The Authority must be satisfied that the person, more likely than not, engaged in the prohibited behavior before imposing any sanction. When immediate action is needed to address an emergency or continuing risk, the Authority may act without prior notice. The full procedure must follow within seven days.
+Discipline may be imposed by the Authority. A person who is not the Authority reports prohibited behavior to the Authority. Before any finding of guilt, the accused must be told which behavior they are accused of, shown the factual evidence, and given a chance to respond. The Authority must be satisfied that the person, more likely than not, engaged in the prohibited behavior before imposing any sanction. When immediate action is needed to address an emergency or continuing risk, the Authority may act without prior notice. The full procedure must follow within seven days.
 
 **CC 2.4 Grounds Dress**
 
@@ -196,13 +202,13 @@ Custer County further provides as follows.
 
 Custer County acknowledges and adopts the GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
 
-A grievance must be submitted in writing on the form available from the Fair and 4-H office, accompanied by the grievance fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §9 after the occurrence. Judging will not be interrupted by a grievance.
+A grievance must be submitted in writing on the form available from the Fair and 4-H office, accompanied by the grievance fee listed in Addendum §5, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §7.1 after the occurrence. Judging will not be interrupted by a grievance.
 
 If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board.
 
 A person against whom a sanction is imposed under CC 2.7 may appeal that sanction to the Fair Board, whether or not a grievance was filed. This right attaches to every sanction under CC 2.7, including a first written warning, and to any finding of violation under the Determination of Violations provision. Where the person sanctioned is under 18, the appeal may be filed by a parent or guardian on their behalf.
 
-An appeal must be submitted in writing on the appeal form available from the Fair and 4-H office, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §9. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
+An appeal must be submitted in writing on the appeal form available from the Fair and 4-H office, accompanied by the appeal fee listed in Addendum §5, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §7.1. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
 
 A sanction under appeal is recorded under CC 2.7(b) when the appeal is decided, not when the sanction is issued. A sanction overturned on appeal is not recorded and does not count.
 
@@ -210,7 +216,7 @@ The decision of the Fair Board is final. The fee is refunded if the matter is re
 
 **CC 2.9 Official Communications**
 
-All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in Addendum §3.
+All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in Addendum §9.
 
 **CC 2.10 Cloverbud Members**
 
@@ -218,11 +224,11 @@ A Cloverbud member is a 4-H member who has not reached eight years of age as of 
 
 **CC 2.11 Fairgrounds Cleanup**
 
-All exhibitors are required to attend fairgrounds cleanup. Cleanup dates are listed in Addendum §7. At cleanup, each exhibitor is assigned duties that may include trash collection, restroom cleaning, mowing and weed maintenance, cleaning the exhibit hall, raking barns and alleyways, and general grounds work. A sign-in list is maintained for each cleanup. After completing assigned duties, livestock youth may work on their own stalls after the superintendent posts the stall assignment list.
+All exhibitors are required to attend fairgrounds cleanup. Cleanup dates are listed in Addendum §2. At cleanup, each exhibitor is assigned duties that may include trash collection, restroom cleaning, mowing and weed maintenance, cleaning the exhibit hall, raking barns and alleyways, and general grounds work. A sign-in list is maintained for each cleanup. After completing assigned duties, livestock youth may work on their own stalls after the superintendent posts the stall assignment list.
 
 **CC 2.12 Exhibitor Liability**
 
-Custer County acknowledges and adopts the GCR, Exhibitor Liability. Each exhibitor is solely responsible for any loss, injury, or damage done to, occasioned by, or arising from any animal or article that exhibitor shows. By entering the Custer County Fair, an exhibitor releases the Fair Board and Custer County from any claim, demand, or liability arising from the exhibitor's animal, article, or participation.
+Custer County acknowledges and adopts the GCR, Exhibitor Liability. Each exhibitor is solely responsible for any loss, injury, or damage done to, occasioned by, or arising from any animal or article that exhibitor shows. By entering the Custer County Fair, an exhibitor releases the Fair Board, Custer County, and each person acting as the Authority under CC 1.10.1, from any claim, demand, or liability arising from the exhibitor's animal, article, or participation.
 
 **CC 2.13 Barred Exhibitors**
 
@@ -234,7 +240,7 @@ Custer County acknowledges and adopts the GCR, Barred Exhibitors. The Authority 
 
 **CC 2.14 Animal Health**
 
-Each market livestock animal is subject to examination by the licensed veterinarian upon arrival at the fairgrounds, before unloading. The veterinarian may refuse entry to any animal that does not meet health standards. An animal refused entry may not be unloaded or exhibited. The veterinarian may perform age verification checks as required by the eligibility standards in the applicable department chapter. Each market livestock animal may be examined again prior to the sale to determine slaughter readiness. The veterinarian may refuse or excuse any animal per CC 1.8.1(d).
+Each market livestock animal is subject to examination by the licensed veterinarian upon arrival at the fairgrounds, before unloading. The veterinarian may refuse entry to any animal that does not meet health standards. An animal refused entry may not be unloaded or exhibited. The veterinarian may perform age verification checks as required by the eligibility standards in the applicable department chapter. Each market livestock animal may be examined again prior to the sale to determine slaughter readiness. The veterinarian may refuse or excuse any animal per CC 1.10.1(d).
 
 **CC 2.15 Care and Custody**
 
@@ -258,11 +264,11 @@ The Authority shall determine hardship cases arising under this section, with th
 
 Custer County acknowledges and adopts the CSF requirements governing water. A water container shall be visible and available in each penned or stalled area at all times so that animals may be watered on a regular basis. The Authority may consult the licensed veterinarian to determine whether water should be given to an animal.
 
-Restrictions on feeding and watering during weigh-in and in the show ring are stated at CC 3.1.8.
+Restrictions on feeding and watering during weigh-in and in the show ring are stated at CC 3.1.9.
 
 **CC 2.18 Barn Hours**
 
-The barns close each evening at the time stated in Addendum §7. Following closing, only exhibitors and members of their families may enter a barn, and only for the purpose of checking on that exhibitor's animals.
+The barns close each evening at the time stated in Addendum §2. Following closing, only exhibitors and members of their families may enter a barn, and only for the purpose of checking on that exhibitor's animals.
 
 **CC 2.19 Unmanageable Animals**
 
@@ -286,11 +292,11 @@ An exhibitor shall wear a long-sleeved shirt, nice jeans or trousers, and closed
 
 **CC 2.23 Stall Cleanup and Checkout**
 
-All animals must remain on the fairgrounds until released by the Authority. Each exhibitor is responsible for cleaning their own stall area at the end of the fair and must be checked out by a superintendent or the project leader before leaving. No straw or hay is allowed for bedding. Each animal exhibitor is also required to complete their stall cleanup during the post-fair mandatory cleanup period. Post-fair cleanup dates are listed in Addendum §7.
+All animals must remain on the fairgrounds until released by the Authority. Each exhibitor is responsible for cleaning their own stall area at the end of the fair and must be checked out by a superintendent or the project leader before leaving. No straw or hay is allowed for bedding. Each animal exhibitor is also required to complete their stall cleanup during the post-fair mandatory cleanup period. Post-fair cleanup dates are listed in Addendum §2.
 
 **CC 2.24 Departure From the Fairgrounds**
 
-Every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline listed in Addendum §7. No animal may be removed before its release under CC 2.23.
+Every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline listed in Addendum §2. No animal may be removed before its release under CC 2.23.
 
 ---
 
@@ -312,87 +318,7 @@ This chapter governs every market project at the Custer County Fair. CC 3.1 stat
 
 ### CC 3.1 — General Market Requirements
 
-**CC 3.1.1 Eligibility**
-
-Exhibitors in the market divisions of this chapter must be bona fide members of Custer County 4-H or Custer County FFA. General eligibility requirements applicable to all exhibitors are stated at CC 2.1.
-
-**CC 3.1.2 Quality Assurance**
-
-Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete an MQA program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
-
-Custer County reads this requirement as follows. A member shall complete the MQA class in their first year of livestock enrollment, and shall complete the class again in the enrollment year in which the member reaches fourteen years of age.
-
-MQA certification is verified by CSU Extension. No certificate is submitted at check-in.
-
-**CC 3.1.3 Project Ownership**
-
-Every animal entered in a market division shall be a bona fide 4-H or FFA project of the exhibitor.
-
-**CC 3.1.4 Weigh-In and Official Weight**
-
-All market animals shall be weighed at the time scheduled in Addendum §7. The weight recorded at the county weigh-in is the official weight of the animal and is the weight used for the Livestock Sale. The official scale is the certified scale at the fairgrounds, which is calibrated annually by Colorado Weights and Measures. No other scale shall be used to establish an official weight.
-
-The unit of weight for each market species is stated in the subchapter governing that species. Where a species is exhibited as a pen, the weight of each animal in the pen shall be recorded individually and the weight of the pen shall be derived from those recorded weights.
-
-Minimum and maximum weights for each species and class are listed in Addendum §8. Where a subchapter states a maximum weight above which an animal is ineligible for the market division, that maximum shall be enforced at the county weigh-in.
-
-**CC 3.1.5 Class Division**
-
-Classes in a market division shall be divided by weight, using the official weights recorded under CC 3.1.4. Classes shall be broken following the close of weigh-in. The Authority shall determine the number and the size of the classes in a division, with the superintendent of the department as lead.
-
-A subchapter may state an additional criterion for the division of classes within its own department.
-
-**CC 3.1.6 Identification**
-
-The tag or band number assigned to an animal at the county weigh-in shall remain with that animal throughout the entire fair. Where a species is exhibited as a pen, each animal in the pen shall carry its own individual identifier, and every such identifier shall be recorded at the county weigh-in.
-
-**CC 3.1.7 Re-Weigh**
-
-An animal that weighs under the minimum or over the maximum weight for its species may be re-weighed. An animal may be re-weighed no more than two additional times, and every re-weigh shall be completed prior to the close of weigh-in.
-
-**CC 3.1.8 Feeding and Watering at Weigh-In**
-
-Custer County acknowledges and adopts the CSF requirement that no animal be fed or watered in a show ring, in a holding pen, or while moving to or from a re-weigh station. Requirements governing the availability of water in pens and stalls are stated at CC 2.17.
-
-**CC 3.1.9 Feeder Animals**
-
-Every animal weighed in at the county weigh-in shall show in its appropriate class, including an animal that does not meet the minimum weight requirement for its species. CC 1.4 defines a feeder animal. Where a species is exhibited as a pen, the subchapter governing that species states how an underweight pen is handled.
-
-The exhibitor of a feeder animal may have that animal released to return home following the feeder class. The Authority shall determine whether to grant the release, with the superintendent of the department as lead.
-
-**CC 3.1.10 Market and Breeding Classes**
-
-Custer County acknowledges and adopts the CSF requirement that market animals are not eligible for entry in any breeding show, with the exception of heifers, which may enter and show in the Breeding Beef department.
-
-Custer County further provides that an animal shown in a breeding class shall not be shown in a market class.
-
-**CC 3.1.11 Pen and Stall Assignment**
-
-Each exhibitor shall be assigned one pen or stall in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen or stall in each species entered, the superintendent shall assign any remaining space in the same order.
-
-Where the number of entries in a species exceeds the pen space available for that species, the guarantee of pen space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the pen space assigned to each exhibitor as needed, with the superintendent of the department as lead.
-
-Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
-
-**CC 3.1.12 Mandatory Exhibitor Meeting**
-
-A mandatory meeting of all market exhibitors shall be held following the close of weigh-in. The time and place of the meeting are stated in Addendum §7. An exhibitor who fails to attend proceeds under the escalation at CC 2.7(a).
-
-**CC 3.1.13 Unethical Fitting Practices and Testing**
-
-Custer County acknowledges and adopts the CSF requirements governing Unethically Fitted Livestock in full, and recognizes IAFE Code of Show Ring Ethics Item 5, which states the same prohibitions. An animal is unethically fitted where it has been subjected to any practice prohibited by those requirements, including the administration of a prohibited drug; the administration of any substance by injection to alter conformation or appearance; the cutting or tearing of the hide or of any underlying tissue; the administration of a diuretic or of a drug acting on the central nervous system; the use of ice packs or other refrigerants to alter the quality of the finish of an animal; the alteration of the color or structure of hair or wool except by trimming and blocking; and any unnatural means of providing an animal feed, water, or other fluids, including by stomach pump or intravenous administration, except by the drenching process.
-
-Custer County reads these requirements to prohibit doctoring, doping, and injection for the purpose of body fill.
-
-All market animals may be subject to random testing for any illegal or banned substance.
-
-**CC 3.1.14 Disease Contingency**
-
-Health requirements for the Custer County Fair may change prior to the start of the fair in the event of a disease outbreak in Colorado or in a neighboring state. Exhibitors shall comply with any direction of the Colorado State Veterinarian's Office regarding the treatment, holding, or removal of an animal from the fairgrounds. An animal held under such direction shall not be released until released by a representative of the Colorado State Veterinarian's Office.
-
-Where the Colorado State Veterinarian's Office confirms an outbreak in Custer County of a disease affecting a market species, the Fair Board may declare the show of that species a terminal show.
-
-**CC 3.1.15 Rules Stated Elsewhere**
+**CC 3.1.1 Rules Stated Elsewhere**
 
 Requirements governing market exhibitors that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
 
@@ -424,6 +350,86 @@ CC 4 — The Livestock Sale
 
 CC 7 — Showmanship
 
+**CC 3.1.2 Eligibility**
+
+Exhibitors in the market divisions of this chapter must be bona fide members of Custer County 4-H or Custer County FFA. General eligibility requirements applicable to all exhibitors are stated at CC 2.1.
+
+**CC 3.1.3 Quality Assurance**
+
+Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete an MQA program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
+
+Custer County reads this requirement as follows. A member shall complete the MQA class in their first year of livestock enrollment, and shall complete the class again in the enrollment year in which the member reaches fourteen years of age.
+
+MQA certification is verified by CSU Extension. No certificate is submitted at check-in.
+
+**CC 3.1.4 Project Ownership**
+
+Every animal entered in a market division shall be a bona fide 4-H or FFA project of the exhibitor.
+
+**CC 3.1.5 Weigh-In and Official Weight**
+
+All market animals shall be weighed at the time scheduled in Addendum §2. The weight recorded at the county weigh-in is the official weight of the animal and is the weight used for the Livestock Sale. The official scale is the certified scale at the fairgrounds, which is calibrated annually by Colorado Weights and Measures. No other scale shall be used to establish an official weight.
+
+The unit of weight for each market species is stated in the subchapter governing that species. Where a species is exhibited as a pen, the weight of each animal in the pen shall be recorded individually and the weight of the pen shall be derived from those recorded weights.
+
+Minimum and maximum weights for each species and class are listed in Addendum §4. Where a subchapter states a maximum weight above which an animal is ineligible for the market division, that maximum shall be enforced at the county weigh-in.
+
+**CC 3.1.6 Class Division**
+
+Classes in a market division shall be divided by weight, using the official weights recorded under CC 3.1.5. Classes shall be broken following the close of weigh-in. The Authority shall determine the number and the size of the classes in a division, with the superintendent of the department as lead.
+
+A subchapter may state an additional criterion for the division of classes within its own department.
+
+**CC 3.1.7 Identification**
+
+The tag or band number assigned to an animal at the county weigh-in shall remain with that animal throughout the entire fair. Where a species is exhibited as a pen, each animal in the pen shall carry its own individual identifier, and every such identifier shall be recorded at the county weigh-in.
+
+**CC 3.1.8 Re-Weigh**
+
+An animal that weighs under the minimum or over the maximum weight for its species may be re-weighed. An animal may be re-weighed no more than two additional times, and every re-weigh shall be completed prior to the close of weigh-in.
+
+**CC 3.1.9 Feeding and Watering at Weigh-In**
+
+Custer County acknowledges and adopts the CSF requirement that no animal be fed or watered in a show ring, in a holding pen, or while moving to or from a re-weigh station. Requirements governing the availability of water in pens and stalls are stated at CC 2.17.
+
+**CC 3.1.10 Feeder Animals**
+
+Every animal weighed in at the county weigh-in shall show in its appropriate class, including an animal that does not meet the minimum weight requirement for its species. CC 1.6 defines a feeder animal. Where a species is exhibited as a pen, the subchapter governing that species states how an underweight pen is handled.
+
+The exhibitor of a feeder animal may have that animal released to return home following the feeder class. The Authority shall determine whether to grant the release, with the superintendent of the department as lead.
+
+**CC 3.1.11 Market and Breeding Classes**
+
+Custer County acknowledges and adopts the CSF requirement that market animals are not eligible for entry in any breeding show, with the exception of heifers, which may enter and show in the Breeding Beef department.
+
+Custer County further provides that an animal shown in a breeding class shall not be shown in a market class.
+
+**CC 3.1.12 Pen and Stall Assignment**
+
+Each exhibitor shall be assigned one pen or stall in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen or stall in each species entered, the superintendent shall assign any remaining space in the same order.
+
+Where the number of entries in a species exceeds the pen space available for that species, the guarantee of pen space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the pen space assigned to each exhibitor as needed, with the superintendent of the department as lead.
+
+Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
+
+**CC 3.1.13 Mandatory Exhibitor Meeting**
+
+A mandatory meeting of all market exhibitors shall be held following the close of weigh-in. The time and place of the meeting are stated in Addendum §2. An exhibitor who fails to attend proceeds under the escalation at CC 2.7(a).
+
+**CC 3.1.14 Unethical Fitting Practices and Testing**
+
+Custer County acknowledges and adopts the CSF requirements governing Unethically Fitted Livestock in full, and recognizes IAFE Code of Show Ring Ethics Item 5, which states the same prohibitions. An animal is unethically fitted where it has been subjected to any practice prohibited by those requirements, including the administration of a prohibited drug; the administration of any substance by injection to alter conformation or appearance; the cutting or tearing of the hide or of any underlying tissue; the administration of a diuretic or of a drug acting on the central nervous system; the use of ice packs or other refrigerants to alter the quality of the finish of an animal; the alteration of the color or structure of hair or wool except by trimming and blocking; and any unnatural means of providing an animal feed, water, or other fluids, including by stomach pump or intravenous administration, except by the drenching process.
+
+Custer County reads these requirements to prohibit doctoring, doping, and injection for the purpose of body fill.
+
+All market animals may be subject to random testing for any illegal or banned substance.
+
+**CC 3.1.15 Disease Contingency**
+
+Health requirements for the Custer County Fair may change prior to the start of the fair in the event of a disease outbreak in Colorado or in a neighboring state. Exhibitors shall comply with any direction of the Colorado State Veterinarian's Office regarding the treatment, holding, or removal of an animal from the fairgrounds. An animal held under such direction shall not be released until released by a representative of the Colorado State Veterinarian's Office.
+
+Where the Colorado State Veterinarian's Office confirms an outbreak in Custer County of a disease affecting a market species, the Authority may declare the show of that species a terminal show.
+
 **CC 3.1.16 Animals Sold at Another Sale**
 
 Custer County acknowledges and adopts the CSF requirement that a market animal sold through a county, district, or other livestock sale after the date of ownership is not eligible for the market divisions of this chapter. A sale is complete at the fall of the auctioneer's gavel, without regard to the disposition, payment, or delivery of the animal. An animal sold through any such sale after its ownership date shall not be weighed in, shown, or sold at the Custer County Fair.
@@ -440,7 +446,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -492,7 +498,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -500,15 +506,15 @@ CC 7 — Showmanship
 
 **CC 3.3.2 Weight and Sale Eligibility**
 
-The minimum and maximum weights for market swine are listed in Addendum §8.
+The minimum and maximum weights for market swine are listed in Addendum §4.
 
 A market swine under the minimum weight shall show in the lightest weight class. It shall not sell in the Market Livestock Sale.
 
-A market swine over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §8. The weight recorded at the county weigh-in does not set its sale weight.
+A market swine over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §4. The weight recorded at the county weigh-in does not set its sale weight.
 
 **CC 3.3.3 Class Size**
 
-Classes in the market swine show are divided by weight under CC 3.1.5. No class shall contain more than eight animals. Where dividing by weight would place more than eight animals in a class, that class is broken into additional classes so that no class contains more than eight animals.
+Classes in the market swine show are divided by weight under CC 3.1.6. No class shall contain more than eight animals. Where dividing by weight would place more than eight animals in a class, that class is broken into additional classes so that no class contains more than eight animals.
 
 **CC 3.3.4 Classes Offered**
 
@@ -516,7 +522,7 @@ The class offered in the market swine division is Market Swine. Breeding Swine i
 
 **CC 3.3.5 Pen Assignment**
 
-An exhibitor may keep up to two of the exhibitor's own animals in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's animals. Pen space in the market swine show is assigned under CC 3.1.11. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.11 is the number of pens required to hold the exhibitor's animals at up to two animals per pen.
+An exhibitor may keep up to two of the exhibitor's own animals in a single pen, and a pen assigned to an exhibitor holds only that exhibitor's animals. Pen space in the market swine show is assigned under CC 3.1.12. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.12 is the number of pens required to hold the exhibitor's animals at up to two animals per pen.
 
 **CC 3.3.6 Fitting and Grooming Substances**
 
@@ -538,7 +544,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -552,11 +558,11 @@ Custer County acknowledges and adopts the federal scrapie identification require
 
 **CC 3.4.3 Shearing**
 
-Every market lamb shall be rough shorn before the county weigh-in. The deadline for shearing is listed in Addendum §8.
+Every market lamb shall be rough shorn before the county weigh-in. The deadline for shearing is listed in Addendum §4.
 
 **CC 3.4.4 Weigh-In Preparation**
 
-No blanket, cover, or halter shall be left on a market lamb during weigh-in, so that the weight recorded under CC 3.1.4 reflects the true weight of the animal.
+No blanket, cover, or halter shall be left on a market lamb during weigh-in, so that the weight recorded under CC 3.1.5 reflects the true weight of the animal.
 
 **CC 3.4.5 Bracing and Feet**
 
@@ -564,7 +570,7 @@ Custer County acknowledges and adopts the CSF Market Lambs competition requireme
 
 **CC 3.4.6 Drenching**
 
-CC 3.1.13 permits the drenching of an animal by the drenching process. For a market lamb, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
+CC 3.1.14 permits the drenching of an animal by the drenching process. For a market lamb, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
 
 **CC 3.4.7 Classes Offered**
 
@@ -572,7 +578,7 @@ The class offered in the market sheep division is Market Sheep. Breeding Sheep i
 
 **CC 3.4.8 Maximum Weight**
 
-The maximum weight for a market sheep is listed in Addendum §8. A market sheep over the maximum weight is not eligible for competition in the market sheep show. A market sheep over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+The maximum weight for a market sheep is listed in Addendum §4. A market sheep over the maximum weight is not eligible for competition in the market sheep show. A market sheep over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §4, regardless of the weight recorded at the county weigh-in under CC 3.1.5.
 
 **CC 3.4.9 Eligible Animals**
 
@@ -594,7 +600,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -606,7 +612,7 @@ Custer County acknowledges and adopts the CSF Market Goat competition requiremen
 
 **CC 3.5.3 Maximum Weight**
 
-The maximum weight for a market goat is listed in Addendum §8. A market goat over the maximum weight is not eligible for competition in the market goat show. A market goat over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §8, regardless of the weight recorded at the county weigh-in under CC 3.1.4.
+The maximum weight for a market goat is listed in Addendum §4. A market goat over the maximum weight is not eligible for competition in the market goat show. A market goat over the maximum weight may sell in the Livestock Sale. Its sale weight is the maximum weight listed in Addendum §4, regardless of the weight recorded at the county weigh-in under CC 3.1.5.
 
 **CC 3.5.4 Scrapie Identification**
 
@@ -630,7 +636,7 @@ Every market goat shall have its milk teeth at the county fair weigh-in. The lic
 
 **CC 3.5.9 Weight Gain**
 
-Every market goat shall increase from the beginning weigh-in weight to the weight established at the county fair weigh-in by no less than the minimum gain listed in Addendum §8.
+Every market goat shall increase from the beginning weigh-in weight to the weight established at the county fair weigh-in by no less than the minimum gain listed in Addendum §4.
 
 **CC 3.5.10 Muzzles**
 
@@ -638,7 +644,7 @@ Custer County acknowledges and adopts the CSF Market Goat competition requiremen
 
 **CC 3.5.11 Drenching**
 
-CC 3.1.13 permits the drenching of an animal by the drenching process. For a market goat, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
+CC 3.1.14 permits the drenching of an animal by the drenching process. For a market goat, drenching is permitted for hydration purposes only, and no stomach-pumping device shall be used.
 
 **CC 3.5.12 Bracing and Feet**
 
@@ -664,7 +670,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -680,11 +686,11 @@ The market poultry show is a terminal show. Every bird entered in a market poult
 
 **CC 3.6.4 Weigh-In Unit and Official Weight**
 
-A market chicken entry is a pen of three birds of the same breed. A market turkey entry is a single bird. Market poultry shall be weighed on the poultry scale designated by the Authority rather than on the scale stated at CC 3.1.4, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each bird shall be recorded individually at the county weigh-in. For a pen of chickens, the weight of the pen shall be derived from those recorded weights under CC 3.1.4.
+A market chicken entry is a pen of three birds of the same breed. A market turkey entry is a single bird. Market poultry shall be weighed on the poultry scale designated by the Authority rather than on the scale stated at CC 3.1.5, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each bird shall be recorded individually at the county weigh-in. For a pen of chickens, the weight of the pen shall be derived from those recorded weights under CC 3.1.5.
 
 **CC 3.6.5 Identification**
 
-Every bird entered in a market poultry division shall carry a numbered leg band or wing band. The band shall be on the bird at the county weigh-in and shall remain on the bird throughout the entire fair under CC 3.1.6. The band number of every bird shall be recorded at the county weigh-in, and no band number shall be changed after the close of weigh-in.
+Every bird entered in a market poultry division shall carry a numbered leg band or wing band. The band shall be on the bird at the county weigh-in and shall remain on the bird throughout the entire fair under CC 3.1.7. The band number of every bird shall be recorded at the county weigh-in, and no band number shall be changed after the close of weigh-in.
 
 **CC 3.6.6 Classes Offered**
 
@@ -692,7 +698,7 @@ The classes offered in the market poultry division are Market Fryer Pen, Market 
 
 **CC 3.6.7 Class Weights**
 
-The weight window for each market poultry class is listed in Addendum §8. Each window is stated to one tenth of a pound, and no bird qualifies for more than one class. For a pen of chickens, every bird in the pen shall fall within the window for the class entered.
+The weight window for each market poultry class is listed in Addendum §4. Each window is stated to one tenth of a pound, and no bird qualifies for more than one class. For a pen of chickens, every bird in the pen shall fall within the window for the class entered.
 
 **CC 3.6.8 Age**
 
@@ -716,7 +722,7 @@ After a bird has been cooped, it shall not be removed from its assigned cage exc
 
 **CC 3.6.12 Entry Limit**
 
-The maximum number of entries an exhibitor may enter in each market poultry class is listed in Addendum §8. Pen and cage space is assigned under CC 3.1.11.
+The maximum number of entries an exhibitor may enter in each market poultry class is listed in Addendum §4. Pen and cage space is assigned under CC 3.1.12.
 
 ---
 
@@ -730,7 +736,7 @@ CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
 CC 3.1 — Requirements applying to every market project
 
-CC 3.1.15 — Requirements stated elsewhere reaching every market exhibitor
+CC 3.1.1 — Requirements stated elsewhere reaching every market exhibitor
 
 CC 4 — The Livestock Sale
 
@@ -744,11 +750,11 @@ Custer County reads this requirement as follows. A market rabbit pen is not term
 
 **CC 3.7.3 Weigh-In Unit and Official Weight**
 
-A market rabbit entry is a meat pen of three rabbits of the same breed and variety. Market rabbits shall be weighed on the rabbit scale designated by the Authority rather than on the scale stated at CC 3.1.4, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each rabbit shall be recorded individually at the county weigh-in. The weight of the pen shall be derived from those recorded weights under CC 3.1.4.
+A market rabbit entry is a meat pen of three rabbits of the same breed and variety. Market rabbits shall be weighed on the rabbit scale designated by the Authority rather than on the scale stated at CC 3.1.5, and that scale shall be certified annually by Colorado Weights and Measures. The weight of each rabbit shall be recorded individually at the county weigh-in. The weight of the pen shall be derived from those recorded weights under CC 3.1.5.
 
 **CC 3.7.4 Identification**
 
-Every rabbit entered in the market rabbit division shall carry an individual tattoo in the left ear. The tattoo shall be on the rabbit at the county weigh-in and shall remain on the rabbit throughout the entire fair under CC 3.1.6. The tattoo number of every rabbit shall be recorded at the county weigh-in, and no tattoo number shall be changed after the close of weigh-in.
+Every rabbit entered in the market rabbit division shall carry an individual tattoo in the left ear. The tattoo shall be on the rabbit at the county weigh-in and shall remain on the rabbit throughout the entire fair under CC 3.1.7. The tattoo number of every rabbit shall be recorded at the county weigh-in, and no tattoo number shall be changed after the close of weigh-in.
 
 **CC 3.7.5 Classes Offered**
 
@@ -756,7 +762,7 @@ The class offered in the market rabbit division is Market Rabbit Meat Pen. Non-m
 
 **CC 3.7.6 Weight**
 
-The weight window for the market rabbit meat pen is listed in Addendum §8, stated to one tenth of a pound. Every rabbit in the pen shall fall within that window.
+The weight window for the market rabbit meat pen is listed in Addendum §4, stated to one tenth of a pound. Every rabbit in the pen shall fall within that window.
 
 **CC 3.7.7 Disqualification**
 
@@ -774,7 +780,7 @@ Where the exhibitor has more than one entry in the same class, another Custer Co
 
 **CC 3.7.10 Entry Limit**
 
-The maximum number of pens an exhibitor may enter in the market rabbit division is listed in Addendum §8. Pen and cage space is assigned under CC 3.1.11.
+The maximum number of pens an exhibitor may enter in the market rabbit division is listed in Addendum §4. Pen and cage space is assigned under CC 3.1.12.
 
 ## CC 4 — The Livestock Sale
 
@@ -782,9 +788,11 @@ This chapter governs the Custer County Fair Market Livestock Sale. It states who
 
 ### CC 4.1 — General Sale Requirements
 
-**CC 4.1.1 The Sale**
+**CC 4.1.1 The Terminal Sale**
 
 The Market Livestock Sale is the terminal sale of the Custer County Fair. Custer County acknowledges and adopts the CSF Junior Livestock Sale Participation Requirements, under which the sale is a terminal sale and every animal sold in the sale goes directly to slaughter.
+
+The purchase of a sale animal conveys the right to the processed product of that animal only, and never possession of a live animal. A sale animal shall not be returned, gifted, resold, or released as a live animal, for any reason.
 
 The sale is conducted by open competitive bidding. Each animal is sold to the highest bidder. Once an animal is sold in the sale ring, the sale of that animal is final.
 
@@ -794,7 +802,7 @@ Only a bona fide member of Custer County 4-H or Custer County FFA may sell in th
 
 **CC 4.1.3 Sale Weight**
 
-The sale weight of an animal is the official weight recorded at the county weigh-in under CC 3.1.4. Where a subchapter of CC 3 fixes an animal's sale weight at a stated maximum, that maximum is the sale weight regardless of the weight recorded at weigh-in.
+The sale weight of an animal is the official weight recorded at the county weigh-in under CC 3.1.5. Where a subchapter of CC 3 fixes an animal's sale weight at a stated maximum, that maximum is the sale weight regardless of the weight recorded at weigh-in.
 
 **CC 4.1.4 Brand Inspection**
 
@@ -816,7 +824,7 @@ Where one exhibitor owns both the Grand Champion and the Reserve Grand Champion 
 
 **CC 4.2.3 Sale Order**
 
-The sale order is determined by the sale committee or the Fair Board.
+The sale order is determined by the sale committee.
 
 ### CC 4.3 — Consignment and the Exit Election
 
@@ -824,7 +832,7 @@ The sale order is determined by the sale committee or the Fair Board.
 
 An exhibitor who does not wish to sell a market animal must notify the sale committee no later than one hour after the conclusion of the beef show. A market animal not withdrawn by that deadline is consigned to the Market Livestock Sale. The Grand Champion and the Reserve Grand Champion of every species may not be withdrawn and are consigned in every case, under CC 4.2.2.
 
-This deadline is repeated in Addendum §8.
+This deadline is repeated in Addendum §4.
 
 **CC 4.3.2 Effect of Consignment**
 
@@ -836,31 +844,29 @@ An exhibitor who fails to notify the sale committee by the deadline at CC 4.3.1 
 
 ### CC 4.4 — Terminal Delivery and Custody
 
-**CC 4.4.1 Custody From Consignment**
+**CC 4.4.1 Custody and Care**
 
-From the close of the exit election at CC 4.3.1 until delivery, a consigned animal may not leave the fairgrounds except by delivery to the slaughter facility designated by the Fair Board. The exhibitor remains responsible for the care, feeding, and daily custody of the animal through the night before delivery.
+Custer County acknowledges and adopts CC 2.15, under which the exhibitor accepts responsibility for the custody, care, and feeding of the animal. Custody of a market animal remains with the exhibitor under that rule until the animal enters the sale ring. Custody of a consigned animal passes to the Authority when the animal enters the sale ring, and remains with the Authority until the animal is loaded onto the processing facility's truck.
+
+The exhibitor is responsible for the care of a consigned animal through the close of the barn on the day of the sale, whether or not the exhibitor holds custody of it. A consigned animal may not leave the fairgrounds except by delivery under CC 4.4.2.
 
 **CC 4.4.2 Delivery**
 
-The Fair Board delivers every sale animal to the designated slaughter facility. The exhibitor's care and custody of the animal end when the animal is loaded for delivery, and the exhibitor is not part of the delivery.
+The Authority delivers every consigned animal to the truck of the processing facility. The exhibitor is not part of the delivery.
 
 **CC 4.4.3 No Live Release**
 
 A consigned animal shall not be released to the exhibitor, to the exhibitor's family, or to any other person, at any time after consignment, for any reason.
 
-**CC 4.4.4 Destination and Possession**
+**CC 4.4.4 Designated Facilities**
 
-The Market Livestock Sale is terminal, and every animal sold goes to slaughter at a facility designated by the Fair Board. The purchase of a sale animal conveys the right to the processed product of that animal only, and never possession of a live animal. A sale animal shall not be returned, gifted, resold, or released as a live animal, for any reason.
+The Authority designates the slaughter and processing facilities for the Market Livestock Sale. The Authority may designate a facility inspected by the USDA for product bound for resale, and may separately designate a custom-exempt facility for a buyer taking product for the buyer's own use.
 
-**CC 4.4.5 Designated Facilities**
+**CC 4.4.5 Post-Sale Rest Period**
 
-The Fair Board designates the slaughter and processing facilities for the Market Livestock Sale. The Fair Board may designate a facility inspected by the USDA for product bound for resale, and may separately designate a custom-exempt facility for a buyer taking product for the buyer's own use.
+Where a purchaser requests that a sale animal be rested before slaughter, the Authority may arrange the rest period within the designated facility chain. The cost of the rest period is withheld from the proceeds of the animal in the same manner as any other cost of delivery.
 
-**CC 4.4.6 Post-Sale Rest Period**
-
-Where a purchaser requests that a sale animal be rested before slaughter, the Fair Board may arrange the rest period within the designated facility chain. The cost of the rest period is withheld from the proceeds of the animal in the same manner as any other cost of delivery.
-
-**CC 4.4.7 Illness, Injury, or Death**
+**CC 4.4.6 Illness, Injury, or Death**
 
 Where the licensed veterinarian certifies that a consigned animal cannot be sold because of illness, injury, death, or an unlapsed drug withdrawal period, the sale committee purchases the animal at the floor market price. The exhibitor is credited at that price and is not subject to the consequence at CC 4.5.1.
 
@@ -868,23 +874,23 @@ Where the licensed veterinarian certifies that a consigned animal cannot be sold
 
 **CC 4.5.1 Failure to Show in the Sale**
 
-An exhibitor who fails to show a consigned animal in the Market Livestock Sale, other than an animal excused under CC 4.4.7, forfeits all awards, recognitions, and premiums earned at the Custer County Fair for that year, and is barred from showing any exhibit on the Custer County fairgrounds for three years.
+An exhibitor who fails to show a consigned animal in the Market Livestock Sale, other than an animal excused under CC 4.4.6, forfeits all awards, recognitions, and premiums earned at the Custer County Fair for that year, and is barred from showing any exhibit on the Custer County fairgrounds for three years.
 
 ### CC 4.6 — Proceeds
 
 **CC 4.6.1 Commission**
 
-A commission is withheld from the gross sale proceeds of every animal sold in the Market Livestock Sale. The commission rate is listed in Addendum §6.
+A commission is withheld from the gross sale proceeds of every animal sold in the Market Livestock Sale. The commission rate is listed in Addendum §5.
 
 **CC 4.6.2 Costs of Delivery**
 
-The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.6, are withheld from the proceeds of that animal.
+The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.5, are withheld from the proceeds of that animal.
 
 ### CC 4.7 — Warranties on Sale Animals
 
 **CC 4.7.1 Warranty on Terminal Delivery**
 
-Every exhibitor whose animal is delivered for slaughter under this chapter warrants, whether or not the animal was sold in the Market Livestock Sale, that the carcass of the animal complies with the food-safety laws named in CC 4.7.2, is fit for human consumption, contains no trace or residue of any illegal drug or of any substance not approved for administration to the animal under applicable law or the requirements of this book, reveals no evidence of any unethical fitting practice as defined at CC 3.1.13, and presents no unusual condition that would materially diminish the value of the carcass.
+Every exhibitor whose animal is delivered for slaughter under this chapter warrants, whether or not the animal was sold in the Market Livestock Sale, that the carcass of the animal complies with the food-safety laws named in CC 4.7.2, is fit for human consumption, contains no trace or residue of any illegal drug or of any substance not approved for administration to the animal under applicable law or the requirements of this book, reveals no evidence of any unethical fitting practice as defined at CC 3.1.14, and presents no unusual condition that would materially diminish the value of the carcass.
 
 The warranty in this section attaches to the delivery of an animal for slaughter, and not to participation in the sale. A market poultry bird that is terminal under CC 3.6.3 and does not sell is delivered for slaughter and carries this warranty.
 
@@ -902,7 +908,7 @@ Where a drug or chemical residue is found in the tissue of a carcass, the carcas
 
 **CC 4.7.5 Warranty Disclosure**
 
-Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §5. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
+Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §6. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
 
 ---
 
@@ -910,47 +916,51 @@ Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholeso
 
 This chapter governs the horse project at the Custer County Fair. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13.
 
-**CC 5.1 Project Eligibility**
+**CC 5.1 Rules That Reach This Department**
+
+Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13. Requirements governing horse exhibitors that are stated elsewhere in this book include interference with competition at CC 2.6 and unmanageable animals at CC 2.19.
+
+**CC 5.2 Project Eligibility**
 
 Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 4, under which the horse a member intends to use as a project animal must be designated by May 1 of the current year, and under which an identification certificate must be on file with the CSU Extension office under subpart A.
 
 Custer County provides that a member must meet all requirements of the 4-H horse project to participate in the horse show. These include the Animal Care and Housing Form, the Lease Agreement, the Animal Identification, and all club and project requirements. A member must submit an e-record book within one week after the fair.
 
-**CC 5.2 Access and Care**
+**CC 5.3 Access and Care**
 
 Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 3, under which the 4-H member should have complete access to the project horse at any time and should provide the care and management of the horse a majority of the time, whether the horse is owned or leased, and under which a project horse may be boarded at a commercial facility.
 
 Custer County reads this requirement as follows. The exhibitor must have complete access to the horse at all times. The exhibitor must provide the full care and management of the horse for the majority of the time, whether the horse is owned or leased.
 
-**CC 5.3 Governing Rules**
+**CC 5.4 Governing Rules**
 
 The HSRB governs the conduct of all Custer County 4-H and FFA horse classes, except where this chapter states a Custer County requirement.
 
-**CC 5.4 One Horse Per Class**
+**CC 5.5 One Horse Per Class**
 
 Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 4.C, under which a project horse may be shown by more than one member where those members are entered in different age divisions or classifications, at the option of the Authority or a specific county rule.
 
 Custer County provides that no horse may be shown in the same class by more than one contestant.
 
-**CC 5.5 Stallion Prohibition**
+**CC 5.6 Stallion Prohibition**
 
 Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 7, under which stallions over one year of age are prohibited in 4-H.
 
 Custer County provides that stallions are prohibited in all classes.
 
-**CC 5.6 Divisions**
+**CC 5.7 Divisions**
 
-The horse show is divided into five divisions: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The classes offered in each division are listed in Addendum §7.
+The horse show is divided into five divisions: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The classes offered in each division are listed in Addendum §2.
 
-**CC 5.7 Mandatory Classes**
+**CC 5.8 Mandatory Classes**
 
 Every contestant showing at the Custer County Fair must participate in the showmanship class and, if riding, the horsemanship class, and must take the written test.
 
-**CC 5.8 Scoring**
+**CC 5.9 Scoring**
 
 Placings in each class are scored using a weighted point system based on the number of participants in that class.
 
-**CC 5.9 Awards**
+**CC 5.10 Awards**
 
 Champion and Reserve Champion awards are given in the Novice, Junior, and Senior levels of each division: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The showmanship score is added into the total Western division score. Where a tie exists, the showmanship placing breaks it. Where the tie continues, the written test score breaks it.
 
@@ -958,17 +968,13 @@ Grand Champion and Reserve Grand Champion are awarded to the Junior and Senior e
 
 The high-point buckle is awarded to the Junior and Senior exhibitor with the highest combined points across In-Hand, Western, English, Gymkhana (trotting or regular), and the written test score, in each age group.
 
-**CC 5.10 Dress**
+**CC 5.11 Dress**
 
 Custer County acknowledges and adopts the HSRB, Western Division, Personal Attire, Rule 90, and the corresponding attire requirements stated elsewhere in the HSRB for the English, Gymkhana, and other divisions.
 
-**CC 5.11 Safety**
+**CC 5.12 Safety**
 
 Custer County acknowledges and adopts the HSRB Protective Headgear Policy and Rule 24, governing required headgear in gymkhana and over-fences events and the excusal of a horse or rider not under suitable control.
-
-**CC 5.12 Rules That Reach This Department**
-
-Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13. Requirements governing horse exhibitors that are stated elsewhere in this book include interference with competition at CC 2.6 and unmanageable animals at CC 2.19.
 
 **CC 5.13 Age Divisions**
 
@@ -1030,7 +1036,7 @@ CC 2.23 — Stall cleanup and checkout
 
 CC 2.24 — Departure from the fairgrounds
 
-CC 3.1.10 — Market and breeding classes
+CC 3.1.11 — Market and breeding classes
 
 CC 7 — Showmanship
 
@@ -1066,7 +1072,7 @@ Every animal entered in a division of this chapter shall be a bona fide 4-H or F
 
 **CC 6.1.7 Animal Health**
 
-Every animal entered in a division of this chapter shall display good health. An animal showing evidence of poor health, or presenting a risk to other animals or to any person, may be excused from the fairgrounds by the Authority. Where the licensed veterinarian is present at the fairgrounds, the veterinarian may examine any animal in a division of this chapter and may refuse or excuse that animal per CC 1.8.1(d).
+Every animal entered in a division of this chapter shall display good health. An animal showing evidence of poor health, or presenting a risk to other animals or to any person, may be excused from the fairgrounds by the Authority. Where the licensed veterinarian is present at the fairgrounds, the veterinarian may examine any animal in a division of this chapter and may refuse or excuse that animal per CC 1.10.1(d).
 
 ### CC 6.2 — Rabbit
 
@@ -1088,7 +1094,7 @@ Custer County acknowledges and adopts the American Rabbit Breeders Association S
 
 **CC 6.2.3 Classes Offered**
 
-The classes offered in the rabbit department are Showmanship, Companion Rabbit, and Breeding Rabbit. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+The classes offered in the rabbit department are Showmanship, Companion Rabbit, and Breeding Rabbit. Showmanship classes are divided by the age divisions stated at CC 7.1.4.
 
 The Breeding Rabbit class is divided by age and sex as follows. Junior Doe and Junior Buck are under six months of age. Intermediate Doe and Intermediate Buck are six months of age and under twelve months of age. Senior Doe and Senior Buck are over twelve months of age.
 
@@ -1116,7 +1122,7 @@ Custer County acknowledges and adopts the APA Standard of Perfection as the stan
 
 **CC 6.3.3 Classes Offered**
 
-The classes offered in the poultry department are Showmanship, Companion Poultry, and Breeding Poultry. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+The classes offered in the poultry department are Showmanship, Companion Poultry, and Breeding Poultry. Showmanship classes are divided by the age divisions stated at CC 7.1.4.
 
 A bird of any species recognized by the APA may be entered in the Companion Poultry class or the Breeding Poultry class. The Breeding Poultry class is divided by age and sex as follows. Junior Female and Junior Male are under one year of age. Senior Female and Senior Male are one year of age and over. The age of a bird is determined as of the first day of the fair.
 
@@ -1156,7 +1162,7 @@ The DTR is not printed in this book. A copy is available from CSU Extension.
 
 An exhibitor in this department must be enrolled in the 4-H dog project. The exhibitor must own the project dog individually or in partnership with a parent or guardian for the duration of the project.
 
-Every dog entered in this department must have been part of the exhibitor's project on or before the date listed in Addendum §4, and must be registered in the enrollment system designated by CSU Extension on or before that date. A complete vaccination record must accompany that registration.
+Every dog entered in this department must have been part of the exhibitor's project on or before the date listed in Addendum §3, and must be registered in the enrollment system designated by CSU Extension on or before that date. A complete vaccination record must accompany that registration.
 
 **CC 6.4.4 Vaccination**
 
@@ -1170,7 +1176,7 @@ Health requirements reaching this department beyond this section are stated at C
 
 Custer County acknowledges and adopts the DTR, Showmanship Class Descriptions and Eligibility Requirements, the DTR Obedience General Rules, and the Colorado State 4-H Dog Level Progression Chart printed in the DTR as the authority governing which class an exhibitor and dog enter. The progress the dog has made determines the obedience class entered. The exhibitor's years in 4-H do not determine that class.
 
-The classes currently offered in this department are as follows. In obedience: Puppy, Beginner Novice, Novice, Graduate Novice, Advanced, and Veteran. In showmanship: Junior Novice, Junior Open, Intermediate Novice, Intermediate Open, Senior Novice, Senior Open, Senior Advanced, and Top Showman. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+The classes currently offered in this department are as follows. In obedience: Puppy, Beginner Novice, Novice, Graduate Novice, Advanced, and Veteran. In showmanship: Junior Novice, Junior Open, Intermediate Novice, Intermediate Open, Senior Novice, Senior Open, Senior Advanced, and Top Showman. Showmanship classes are divided by the age divisions stated at CC 7.1.4.
 
 The Top Showman class is entered by an exhibitor of Intermediate or Senior age who has been a Grand Champion or Reserve Grand Champion Showman at a previous State 4-H Dog Trials, as provided at the DTR, Master Showmanship Division, Class 508.
 
@@ -1218,11 +1224,11 @@ Health requirements reaching this department beyond this section are stated at C
 
 **CC 6.5.4 Classes Offered**
 
-The classes offered in the cat department are Showmanship, Conformation, Cage Decorating, and Costume Contest. Showmanship classes are divided by the age divisions stated at CC 7.1.3.
+The classes offered in the cat department are Showmanship, Conformation, Cage Decorating, and Costume Contest. Showmanship classes are divided by the age divisions stated at CC 7.1.4.
 
 The Conformation class is divided into Purebred, Domestic Short Hair, and Domestic Long Hair. A cat entered in the Purebred class is judged against the breed standard for its breed. A cat entered in the Domestic Short Hair or Domestic Long Hair class is judged on physical condition, cleanliness, temperament, and presentation rather than against a breed standard. A cat may be entered in only one Conformation class.
 
-Custer County acknowledges and adopts the CCR, Cage Decorating, under which members are encouraged to decorate the cat's display cage and cages are judged by age division. Cage Decorating classes are divided by the age divisions stated at CC 7.1.3.
+Custer County acknowledges and adopts the CCR, Cage Decorating, under which members are encouraged to decorate the cat's display cage and cages are judged by age division. Cage Decorating classes are divided by the age divisions stated at CC 7.1.4.
 
 **CC 6.5.5 Handling and Care at the Show**
 
@@ -1260,13 +1266,13 @@ The CSF Youth Llama and Alpaca (Camelids) competition requirements are not print
 
 **CC 6.6.3 Eligibility**
 
-An exhibitor in this department must be a Custer County 4-H member enrolled in the llama project on or before the date listed in Addendum §4.
+An exhibitor in this department must be a Custer County 4-H member enrolled in the llama project on or before the date listed in Addendum §3.
 
 **CC 6.6.4 Classes Offered**
 
 The classes offered in this department are Showmanship, Pack, Obstacle, Public Relations, Costume, and Educational Display.
 
-Showmanship, Pack, and Educational Display are divided into the age divisions stated at CC 7.1.3. Obstacle and Public Relations are divided into the age divisions stated at CC 7.1.3, plus a Mini division for exhibitors who are Cloverbud members under CC 2.10. The Costume class is judged with every age division together.
+Showmanship, Pack, and Educational Display are divided into the age divisions stated at CC 7.1.4. Obstacle and Public Relations are divided into the age divisions stated at CC 7.1.4, plus a Mini division for exhibitors who are Cloverbud members under CC 2.10. The Costume class is judged with every age division together.
 
 The Authority may change the order in which classes are shown, with the superintendent of the department as lead. The Authority may combine any class with fewer than 5 animals with another class, with the superintendent of the department as lead.
 
@@ -1282,7 +1288,7 @@ Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) 
 
 The Public Relations class tests the animal's ability to participate in community events. Obstacles may include stairs or a ramp, picking up a foot, showing teeth, petting, loading into a vehicle, and backing. This class counts toward Champion and Reserve Champion Performance.
 
-Showmanship is a required class for every exhibitor in this department, and is limited to exhibitors with a llama or alpaca entered in the department. Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Showmanship class, under which the class is a demonstration of the handler's ability to show the animal to its best advantage at halter. Showmanship classes are governed by CC 7.1, are divided by the age divisions stated at CC 7.1.3, and are judged on the criteria stated at CC 7.1.5. Showmanship and Obstacle are required to complete the 4-H llama project. Requirements for completion of a 4-H project are set by CSU Extension. Entry in the remaining classes of this department is encouraged.
+Showmanship is a required class for every exhibitor in this department, and is limited to exhibitors with a llama or alpaca entered in the department. Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Showmanship class, under which the class is a demonstration of the handler's ability to show the animal to its best advantage at halter. Showmanship classes are governed by CC 7.1, are divided by the age divisions stated at CC 7.1.4, and are judged on the criteria stated at CC 7.1.6. Showmanship and Obstacle are required to complete the 4-H llama project. Requirements for completion of a 4-H project are set by CSU Extension. Entry in the remaining classes of this department is encouraged.
 
 In this department, the ring dress standard stated at CC 2.22 is replaced by the following. An exhibitor before a judge in this department must wear black pants or a black skirt, a western shirt or blouse or a white shirt or blouse, and sturdy shoes or boots. The exhibitor's attire must be neat and clean.
 
@@ -1332,37 +1338,55 @@ Ribbons are presented under CC 2.21. No Champion, Reserve Champion, or Grand Cha
 
 ## CC 7 — Showmanship
 
-This chapter governs showmanship classes at the Custer County Fair. Showmanship is a required class for every 4-H and FFA exhibitor in market livestock, horse, and companion and small animal projects. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13.
+This chapter governs showmanship classes at the Custer County Fair. Showmanship is a required class for every 4-H and FFA exhibitor in market livestock, horse, and companion and small animal projects.
 
 ### CC 7.1 — General Showmanship Rules
 
-**CC 7.1.1 Showing Your Own Animal**
+**CC 7.1.1 Rules That Reach This Chapter**
+
+Requirements governing exhibitors in this chapter that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
+
+CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
+
+CC 2.15 — Care and custody
+
+CC 2.16 — Showing your own animal, as read by CC 7.1.2
+
+CC 2.19 — Unmanageable animals
+
+CC 2.20 — Ringside promptness
+
+CC 2.21 — Ribbons and placings
+
+CC 2.22 — Show dress
+
+**CC 7.1.2 Showing Your Own Animal**
 
 Custer County acknowledges and adopts the CSF, Junior Livestock Breeding Competition Eligibility, Class Eligibility provisions, under which, in all showmanship classes, exhibitors must show their own animals. Custer County reads this requirement to close the exception at CC 2.16 for showmanship classes: the allowance for another qualified member to show an exhibitor's animal does not apply to a showmanship class.
 
-**CC 7.1.2 Showmanship Eligibility**
+**CC 7.1.3 Showmanship Eligibility**
 
 Custer County acknowledges and adopts the CSF, Junior Livestock Breeding Competition Eligibility, Class Eligibility provisions, under which only an animal shown or exhibited during the current fair is eligible for a showmanship class. Custer County applies this requirement to every market livestock showmanship class.
 
-**CC 7.1.3 Age Divisions**
+**CC 7.1.4 Age Divisions**
 
 Showmanship classes are divided into Senior (14 to 18 years of age), Intermediate (11 to 13 years of age), and Junior (8 to 10 years of age) age divisions. Horse showmanship uses the age divisions stated at CC 5.13 instead.
 
-**CC 7.1.4 The Qualifying Animal**
+**CC 7.1.5 The Qualifying Animal**
 
 A contestant shows the animal with which they qualified for the class, except that the judge may direct contestants to trade animals during a showmanship class.
 
-**CC 7.1.5 Judging Criteria and Grooming Score**
+**CC 7.1.6 Judging Criteria and Grooming Score**
 
 A showmanship class is judged on the contestant's skill as a showman and on the appearance the contestant's animal makes before the judge. The breed or individual conformation of the animal shown is not considered. The judge considers the following in every showmanship class: the fitting of the animal for the show, the presentation of the animal in the show ring, the appearance of the showman, and the sportsmanlike behavior of the showman.
 
 A grooming score is determined during each showmanship class. This score is used as a tie-breaker in the Livestock Master Showmanship Contest at CC 7.2 and the Companion Animal Master Showmanship Contest at CC 7.3.
 
-**CC 7.1.6 Timing**
+**CC 7.1.7 Timing**
 
 A showmanship class is held immediately after the judging of the class it is paired with.
 
-**CC 7.1.7 Awards**
+**CC 7.1.8 Awards**
 
 A Champion Showman is named in the Senior, Intermediate, and Junior divisions of each species' showmanship class.
 
@@ -1370,7 +1394,7 @@ A Champion Showman is named in the Senior, Intermediate, and Junior divisions of
 
 **CC 7.2.1 Rules That Reach This Contest**
 
-Requirements applying to every showmanship class are stated at CC 7.1, including the judging criteria and grooming score tie-breaker at CC 7.1.5.
+Requirements applying to every showmanship class are stated at CC 7.1, including the judging criteria and grooming score tie-breaker at CC 7.1.6.
 
 **CC 7.2.2 Qualification**
 
@@ -1388,7 +1412,7 @@ Grand Champion and Reserve Grand Champion Master Showman are named in the Junior
 
 **CC 7.3.1 Rules That Reach This Contest**
 
-Requirements applying to every showmanship class are stated at CC 7.1. The judging criteria at CC 7.1.5 apply, together with the additional criterion at CC 7.3.4.
+Requirements applying to every showmanship class are stated at CC 7.1. The judging criteria at CC 7.1.6 apply, together with the additional criterion at CC 7.3.4.
 
 **CC 7.3.2 Qualification**
 
@@ -1400,7 +1424,7 @@ Where a Showman is Champion or Reserve Champion in more than one species, the ne
 
 **CC 7.3.4 Additional Judging Criterion**
 
-In addition to the criteria at CC 7.1.5, the judge considers showmanship elements specific to the breed of the animal shown.
+In addition to the criteria at CC 7.1.6, the judge considers showmanship elements specific to the breed of the animal shown.
 
 **CC 7.3.5 Awards**
 
@@ -1410,35 +1434,45 @@ Grand Champion and Reserve Grand Champion Companion Animal Master Showman are na
 
 ## CC 8 — Shooting Sports
 
-This chapter governs the shooting sports project at the Custer County Fair. Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13.
+This chapter governs the shooting sports project at the Custer County Fair.
 
-**CC 8.1 Governing Rules**
+**CC 8.1 Rules That Reach This Chapter**
+
+Requirements governing exhibitors in this chapter that are stated elsewhere in this book are listed below. This list points to those requirements and does not restate them.
+
+CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
+
+CC 2.20 — Ringside promptness
+
+CC 2.21 — Ribbons and placings, as applied by CC 8.5
+
+**CC 8.2 Governing Rules**
 
 Custer County acknowledges and adopts the Colorado 4-H Shooting Sports Rule Book, which governs the conduct of all Custer County 4-H shooting sports classes, except where this chapter states a Custer County requirement.
 
-**CC 8.2 Standing and Record Book**
+**CC 8.3 Standing and Record Book**
 
 Every competitor must be in good standing with their club and their county. Every competitor must complete a record book and a display for each discipline entered. A competitor must score at least 75 percent on the record book and must receive at least a red ribbon on their exhibit to be eligible for the county contest and the state contest.
 
-**CC 8.3 Scorecards**
+**CC 8.4 Scorecards**
 
 The Colorado 4-H Shooting Sports Rule Book provides that shoot management reserves the right to use non-Orion targets and scoring methods where circumstances necessitate a change. Custer County exercises this discretion in every discipline. Custer County does not use Orion scorecards. County scorecards are provided on the day of each contest.
 
-**CC 8.4 Ribbons and Placings**
+**CC 8.5 Ribbons and Placings**
 
 The American System established at CC 2.21 governs every shooting sports contest.
 
-**CC 8.5 Firearms Champions**
+**CC 8.6 Firearms Champions**
 
 Grand Champion and Reserve Grand Champion in the .22 Rifle discipline and in the Shotgun discipline are each determined by the highest score percentage in that discipline, together with the competitor's project and record book score.
 
-**CC 8.6 Archery Champions**
+**CC 8.7 Archery Champions**
 
 Grand Champion and Reserve Grand Champion in Archery are determined by the highest score percentage in each age group and bow type, Compound and Recurve, together with the competitor's project and record book score.
 
-**CC 8.7 Contest Schedule, Location, and Agent**
+**CC 8.8 Contest Schedule, Location, and Agent**
 
-The date, time, and location of each shooting sports contest are listed in Addendum §7. The current Custer County shooting sports agent for each discipline is listed in Addendum §1.
+The date, time, and location of each shooting sports contest are listed in Addendum §2. The current Custer County shooting sports agent for each discipline is listed in Addendum §1.
 
 ---
 
@@ -1490,7 +1524,7 @@ Custer County acknowledges and adopts the CCGP, 4-H Project Rules, under which a
 
 **CC 9.8 Age Divisions**
 
-Projects in this chapter are divided into Junior, Intermediate, and Senior age groups. Junior is 8 to 10 years of age, Intermediate is 11 to 13 years of age, and Senior is 14 to 18 years of age, as of December 31 of the current enrollment year. These age divisions match the showmanship age divisions stated at CC 7.1.3.
+Projects in this chapter are divided into Junior, Intermediate, and Senior age groups. Junior is 8 to 10 years of age, Intermediate is 11 to 13 years of age, and Senior is 14 to 18 years of age, as of December 31 of the current enrollment year. These age divisions match the showmanship age divisions stated at CC 7.1.4.
 
 **CC 9.9 Cloverbud Members**
 
@@ -1510,7 +1544,7 @@ A Grand Champion ribbon is awarded to the highest-quality exhibit in a project a
 
 **CC 9.12 State Fair Advancement**
 
-A project awarded a Champion ribbon qualifies for the CSF and is awarded a State Fair quality sticker. Where the Champion exhibitor does not wish to display their project at the CSF, the exhibitor shall notify the Fair Board, and the Reserve Champion project is given the opportunity to be displayed in its place.
+A project awarded a Champion ribbon qualifies for the CSF and is awarded a State Fair quality sticker. Where the Champion exhibitor does not wish to display their project at the CSF, the exhibitor shall notify the Authority, and the Reserve Champion project is given the opportunity to be displayed in its place.
 
 **CC 9.13 Exhibit Retention**
 
@@ -1524,7 +1558,7 @@ Every exhibit and record book in this chapter must carry the display card provid
 
 **CC 9.15 Premiums**
 
-Every project in this chapter is eligible for a premium. Premium amounts by placing are listed in Addendum §6.
+Every project in this chapter is eligible for a premium. Premium amounts by placing are listed in Addendum §5.
 
 ---
 
@@ -1582,7 +1616,7 @@ Custer County acknowledges and adopts the GEFA, Disqualifications, under which a
 
 **CC 10.1.10 Exhibits Not Fitting a Listed Class**
 
-An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised with the superintendent by the deadline for miscellaneous exhibit requests listed in Addendum §4, which falls before check-in. A request raised at check-in is refused.
+An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised with the superintendent by the deadline for miscellaneous exhibit requests listed in Addendum §3, which falls before check-in. A request raised at check-in is refused.
 
 **CC 10.1.11 Decency Standard**
 
@@ -1602,7 +1636,7 @@ Except where a division states its own packaging requirement, a baked or grown e
 
 **CC 10.1.14 Removal and Retention**
 
-Custer County acknowledges and adopts the GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §7, and under which the Fair Board is not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
+Custer County acknowledges and adopts the GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §2, and under which the Fair Board, Custer County, and each person acting as the Authority under CC 1.10.1 are not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
 
 Custer County exempts a perishable exhibit, which may be disposed of before release under the standard stated for its division.
 

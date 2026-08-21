@@ -2,8 +2,6 @@
 
 This is the Addendum to the Custer County Fair Book. It is published separately each year and carries the information that changes annually: the roster, locations, fees, weights, deadlines, and the fair schedule. Where the Fair Book cites a section of this Addendum, the current year's version of that section governs.
 
-This edition carries 2027 facts, translated from the 2026 fair using the fixed anchor that closes fair week on the third Saturday in July. Facts translated on that basis are marked; volunteer superintendent values not yet set for 2027 are marked as such, not guessed.
-
 ---
 
 ## §1 — Fair Board, Staff, and Superintendents
@@ -28,7 +26,7 @@ This section lists the people who run the Custer County Fair and how to reach th
 | Secretary | Lea Grundy |
 | Sale Committee | Bre Gasper |
 | Member | Brittany VanDeusen |
-| Member | Matt Bayer |
+| Member | Matthew Bayer |
 
 **County Commissioners**
 
@@ -73,44 +71,153 @@ This section lists the people who run the Custer County Fair and how to reach th
 | Rifle and shotgun | Reggie Foster |
 | Archery | Reggie Foster |
 
-*Roster carried forward from the 2026 fair as a specimen. Confirm every name and contact before this edition is adopted for 2027.*
-
 ---
 
-## §2 — Locations
+## §2 — Schedule
 
-This section lists every place named in the Fair Book and describes what happens there. Addresses are listed where a facility is off the fairgrounds.
+Gates open at 7:00 am and close at 10:00 pm each day. A fifteen-minute break is scheduled between events. No event starts before its stated time, so every time after a day's first event is the earliest an event will begin, not a fixed start.
 
-| Location | What happens there |
+**Week at a glance**
+
+| Day | Major events |
 |---|---|
-| Custer County Fairgrounds | The main site of the fair. Barns, show ring, exhibit hall, and the Fair and 4-H office are here. |
-| Fair and 4-H office | Where grievances, appeals, and fees are filed, and where the Fair Board and CSU Extension staff can be reached during fair week. |
-| Exhibit hall | Check-in, judging, and display of all indoor and Open Division projects. Judge interviews for 4-H general and family and consumer sciences projects. |
-| Show ring | Most livestock and companion animal shows, and master showmanship. |
-| Sale ring | The Market Livestock Sale. |
-| Sheep and goat barn | Housing for sheep and goats. The certified livestock scale is here, and beef and market weigh-in runs through it. Attached to the beef barn. |
-| Beef barn | Housing for market and breeding beef. |
-| Swine barn | Housing for market and breeding swine. |
-| Small animal area | Cages and pens for poultry and rabbits, and small animal check-in. |
-| Saddle Club Arena | All horse shows and gymkhana. |
-| Sheriff's shooting range | Rifle and shotgun competition. Off the fairgrounds. |
-| Cowboy Church archery range | Archery competition. Off the fairgrounds. |
+| Thu, Jul 8 | Record books due. Pre-fair cleanup |
+| Fri, Jul 9 | Indoor and Open Division check-in. General and FCS judging |
+| Sat, Jul 10 | Rifle. Shotgun. Llama show. Llama races |
+| Sun, Jul 11 | Public speaking contest |
+| Mon, Jul 12 | Dog show. Rabbit show. Cat show. Companion Animal Master Showmanship |
+| Tue, Jul 13 | Horse shows and gymkhana. Weigh-in and check-in. Livestock meeting |
+| Wed, Jul 14 | Archery. Swine show |
+| Thu, Jul 15 | Sheep show. Goat show. Ranch rodeo |
+| Fri, Jul 16 | Beef show. Rodeo parade. Livestock Master Showmanship. PRCA rodeo |
+| Sat, Jul 17 | Buckle ceremony. Livestock Sale. PRCA rodeo |
+| Sun, Jul 18 | Checkout. After-fair cleanup |
 
 ---
 
-## §3 — Official Communication Channels
+**THURSDAY, July 8, 2027**
 
-This section lists the channels through which the Custer County Fair Board issues official communications, as required by CC 2.9. A communication that does not come through a channel listed here is not official. Channels are designated by Fair Board policy.
+4:00 pm: Shooting sports record books due
 
-| Channel | Where to find it | What is posted there |
-|---|---|---|
-| | | |
-| | | |
-| | | |
+4:00 pm – 7:00 pm: Mandatory pre-fair cleanup, all 4-H and FFA exhibitors
 
 ---
 
-## §4 — Deadlines and Required Attendance
+**FRIDAY, July 9, 2027**
+
+8:30 am – 8:45 am: Indoor project judges meeting, exhibit hall
+
+9:00 am: Check-in, all indoor and Open Division projects, exhibit hall
+
+9:00 am – 8:00 pm: 4-H general and family and consumer sciences judge interviews, exhibit hall
+
+---
+
+**SATURDAY, July 10, 2027**
+
+9:00 am – 11:00 am: .22 Rifle competition, Sheriff's shooting range
+
+11:00 am – 12:00 pm: Shotgun competition, Sheriff's shooting range
+
+4:00 pm – 7:00 pm: 4-H Llama show, show ring
+
+7:00 pm – 8:00 pm: 4-H Llama races, show ring
+
+---
+
+**SUNDAY, July 11, 2027**
+
+4:00 pm – 7:00 pm: Public speaking contest
+
+---
+
+**MONDAY, July 12, 2027**
+
+9:00 am – 10:00 am: 4-H Dog show, show ring
+
+10:00 am – 11:00 am: 4-H and FFA Rabbit show, show ring
+
+10:30 am: Cat show check-in, show ring
+
+11:00 am – 12:30 pm: Cat show, show ring
+
+11:00 am – 2:30 pm: Companion Animal Master Showmanship, show ring
+
+---
+
+**TUESDAY, July 13, 2027**
+
+9:00 am – 3:00 pm: 4-H Horse shows and Gymkhana, Saddle Club Arena
+
+3:00 pm – 6:00 pm: 4-H and FFA livestock weigh-in and small animal check-in, sheep and goat barn
+
+6:00 pm: All animals in place
+
+6:15 pm – 6:30 pm: Mandatory livestock meeting for all exhibitors and their parents
+
+6:30 pm – 8:30 pm: 4-H and FFA Night Out and Picnic, closed to the general public
+
+---
+
+**WEDNESDAY, July 14, 2027**
+
+9:00 am – 12:00 pm: Archery competition, Cowboy Church archery range
+
+4:30 pm – 6:00 pm: Pulled pork dinner
+
+6:00 pm – 8:00 pm: 4-H and FFA Swine show
+
+---
+
+**THURSDAY, July 15, 2027**
+
+9:00 am – 11:00 am: 4-H and FFA Sheep show
+
+12:00 pm – 2:00 pm: 4-H and FFA Goat show
+
+6:00 pm – 9:00 pm: Westcliffe Stampede Ranch Rodeo
+
+---
+
+**FRIDAY, July 16, 2027**
+
+8:00 am – 9:00 am: Custer County Cattle Women beef breakfast
+
+9:00 am – 11:00 am: 4-H and FFA Beef show
+
+10:00 am: Rodeo parade
+
+12:00 pm – 2:00 pm: Livestock Master Showmanship
+
+One hour after the conclusion of the beef show: Exit election and signed Wholesome Meat Act Disclosure due to the sale committee
+
+6:00 pm – 9:00 pm: PRCA Westcliffe Stampede Rodeo
+
+---
+
+**SATURDAY, July 17, 2027**
+
+11:00 am – 12:00 pm: Sangre de Cristo Cowboy Church steak dinner
+
+12:00 pm – 1:00 pm: Awards and buckle ceremony
+
+1:00 pm – 4:30 pm: 4-H and FFA Livestock Auction
+
+6:00 pm – 9:00 pm: PRCA Westcliffe Stampede Rodeo
+
+---
+
+**SUNDAY, July 18, 2027**
+
+11:00 am – 1:00 pm: General checkout, indoor and Open Division release
+
+1:00 pm – 3:00 pm: Mandatory after-fair cleanup
+
+---
+
+---
+
+## §3 — Deadlines and Required Attendance
 
 This section lists everything you must turn in, and everywhere you must be, grouped by the day it falls due. Missing anything on this list has a consequence. Times and locations for every event are in §7.
 
@@ -168,29 +275,119 @@ This section lists everything you must turn in, and everywhere you must be, grou
 | 11:00 am – 1:00 pm | General checkout. Claim your exhibit with your entry card stub |
 | 1:00 – 3:00 pm | Mandatory after-fair cleanup |
 
-*Fair-week dates translated from the 2026 fair against the anchor that the fair closes on the third Saturday in July. Llama and dog enrollment dates, and the miscellaneous-exhibit request date, do not move on that anchor and are carried as stated.*
+---
+
+## §4 — Weight Windows and Market Deadlines
+
+This section lists the weights, entry limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it.
+
+**Market Beef**
+
+| | |
+|---|---|
+| Minimum weight | 1,000 lbs |
+| Maximum weight | None |
+| Other requirements | CC 3.2.2 age, CC 3.2.3 heifer pregnancy certification |
+
+**Market Swine**
+
+| Weight | Shows | Sells |
+|---|---|---|
+| 219 lbs and under | Yes, lightest weight class | No |
+| 220 to 290 lbs | Yes | Yes, at actual weight |
+| 291 lbs and over | Yes, heaviest weight class | Yes, at 290 lbs |
+
+| | |
+|---|---|
+| Governing rule | CC 3.3.2 |
+| Other requirements | CC 3.3.5 pen assignment |
+
+**Market Sheep**
+
+| | |
+|---|---|
+| Minimum weight | 105 lbs |
+| Maximum weight | Not set |
+| Rough shearing deadline | Before the county weigh-in |
+| Other requirements | CC 3.4.2 scrapie identification, CC 3.4.3 shearing, CC 3.4.9 eligible animals |
+
+**Market Goat**
+
+| | |
+|---|---|
+| Minimum weight | 55 lbs |
+| Maximum weight | Not set |
+| Minimum gain, initial to final weigh-in | 5 lbs |
+| Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age, CC 3.5.9 weight gain |
+
+**Market Poultry**
+
+| Class | Weight window per bird |
+|---|---|
+| Market Fryer Pen | 3.5 to 6.9 lbs |
+| Market Broiler Pen | 7.0 to 12.0 lbs |
+| Market Turkey Hen | 13 to 30 lbs |
+| Market Turkey Tom | 20 to 30 lbs |
+
+| | |
+|---|---|
+| Maximum entries per class | 4 |
+| Other requirements | CC 3.6.5 identification, CC 3.6.8 age, CC 3.6.9 turkey breed |
+
+**Market Rabbit**
+
+| | |
+|---|---|
+| Meat pen weight window per rabbit | 3.5 to 5.5 lbs |
+| Maximum pens per exhibitor | 4 |
+| Other requirements | CC 3.7.4 identification |
+
+**Market deadlines**
+
+| Deadline | Window |
+|---|---|
+| Exit election, filed with the sale committee | No later than one hour after the conclusion of the beef show |
 
 ---
 
-## §5 — Required Forms
+## §5 — Fees
+
+This section lists every fee and payment amount stated in the Fair Book. A fee not listed here is not charged.
+
+| Fee | Amount |
+|---|---|
+| Grievance fee | $50.00, cash or certified check, payable to the Custer County Fair Board |
+| Appeal fee | $100.00, cash or certified check, payable to the Custer County Fair Board |
+| Entry fee | None. No entry fee is charged for any class in any division |
+| Market Livestock Sale commission | 3% of gross sale proceeds |
+
+| Premium by placing | Amount |
+|---|---|
+| Blue, first | $8.00 |
+| Red, second | $5.00 |
+| White, third | $3.00 |
+| Yellow, fourth | $2.00 |
+| Pink, fifth | $2.00 |
+
+The sale commission is reviewed every January and may be adjusted by the board.
+
+---
+
+## §6 — Required Forms
 
 This section lists every form an exhibitor must complete and sign, and reproduces each one. A form not listed here is not required.
 
 | Form | What it is | Who signs |
 |---|---|---|
-| §5.1 Code of Conduct | The 4-H and FFA behavior agreement that is a condition of participation | Exhibitor, parent or guardian, leader, volunteer |
-| §5.2 MQA certification | Meat Quality Assurance program completion, verified by CSU Extension. No certificate is submitted | — |
-| §5.3 Animal care and housing form | Statement of where and how the project animal is kept | Animal exhibitor |
-| §5.4 Wholesome Meat Act Disclosure | Warranty that the carcass is fit for human consumption and residue free | Exhibitor and parent or guardian |
-| §5.5 Entry card | Identifies an indoor or Open Division exhibit and its class | Exhibitor |
-| §5.6 Grievance form | Files a grievance under CC 2.8 | Person filing |
-| §5.7 Appeal form | Appeals a grievance resolution or a sanction under CC 2.8 | Person filing |
+| §6.1 Code of Conduct | The 4-H and FFA behavior agreement that is a condition of participation | Exhibitor, parent or guardian, leader, volunteer |
+| §6.2 MQA certification | Meat Quality Assurance program completion, verified by CSU Extension. No certificate is submitted | — |
+| §6.3 Animal care and housing form | Statement of where and how the project animal is kept | Animal exhibitor |
+| §6.4 Wholesome Meat Act Disclosure | Warranty that the carcass is fit for human consumption and residue free | Exhibitor and parent or guardian |
+| §6.5 Entry card | Identifies an indoor or Open Division exhibit and its class | Exhibitor |
 
-*§5.2 and §5.3 are marked for collection. §5.1 is a proposed rewrite pending CSU Extension review.*
+### §6.1 — Custer County 4-H, FFA, and Open Fair Code of Conduct
 
-### §5.1 — Custer County 4-H, FFA, and Open Fair Code of Conduct
-
-*Proposed draft for CSU Extension review. Owned by CSU Extension, 4-H, and FFA, who collect the signatures, under CC 2.3.*
+This Code is owned by CSU Extension, 4-H, and FFA, who collect the signatures, under CC 2.3.
 
 Prior to participating, the CSU Extension office must have this Code of Conduct signed by the participant, a parent or guardian, and volunteers. For applicable participants, MQA certification and animal care and housing forms are required as well.
 
@@ -244,7 +441,7 @@ The Authority must be satisfied that the participant more likely than not engage
 
 **F. Grievances and appeals**
 
-A participant, parent, guardian, leader, volunteer, or spectator who wishes to contest a decision, a rule, a policy, or a judging procedure files a grievance under the Custer County Fair Book at CC 2.8. Filing windows are stated in Addendum §9, and fees are stated in Addendum §6. That process is the sole process, and compliance with it is mandatory before seeking review in any other forum.
+A participant, parent, guardian, leader, volunteer, or spectator who wishes to contest a decision, a rule, a policy, or a judging procedure files a grievance under the Custer County Fair Book at CC 2.8. Filing windows are stated in Addendum §7.1, and fees are stated in Addendum §6. That process is the sole process, and compliance with it is mandatory before seeking review in any other forum.
 
 **G. Immediate action situations**
 
@@ -268,19 +465,19 @@ I have read this Code of Conduct and the Custer County Fair Book, and I agree to
 
 ---
 
-### §5.2 — MQA Certification
+### §6.2 — MQA Certification
 
-*Marked for collection. MQA certification is verified by CSU Extension under CC 3.1.2. No certificate is submitted at check-in.*
-
----
-
-### §5.3 — Animal Care and Housing Form
-
-*Marked for collection. Working group to confirm what this form is and who must complete it.*
+MQA certification is verified by CSU Extension under CC 3.1.3. No certificate is submitted at check-in.
 
 ---
 
-### §5.4 — Wholesome Meat Act Disclosure
+### §6.3 — Animal Care and Housing Form
+
+This form states where and how the project animal is kept. It is completed by the animal exhibitor and collected by the Fair and 4-H office.
+
+---
+
+### §6.4 — Wholesome Meat Act Disclosure
 
 Signed by every exhibitor and a parent or guardian before an animal is delivered for slaughter, under CC 4.7.5. Returned to the sale committee no later than one hour after the conclusion of the beef show.
 
@@ -306,7 +503,7 @@ The carcass contains no trace or residue of any illegal drug, and no trace or re
 
 You observed the label directions and the full withdrawal period of every drug given to the animal, under CC 4.7.3.
 
-The carcass shows no evidence of any unethical fitting practice, as defined at CC 3.1.13.
+The carcass shows no evidence of any unethical fitting practice, as defined at CC 3.1.14.
 
 The carcass presents no unusual condition that would materially reduce its value.
 
@@ -335,13 +532,11 @@ I have read this disclosure. I warrant everything stated above about the animal 
 
 ---
 
-### §5.5 — Entry Card
+### §6.5 — Entry Card
 
 Issued at check-in for every indoor and Open Division exhibit, under CC 2.2 and CC 10.1.4. An exhibit presented without a completed entry card is refused.
 
 The card is two parts. The exhibitor completes both, the Authority separates them at check-in, and the exhibitor keeps the stub. No exhibitor name is displayed with an exhibit during judging.
-
-*Working group review: the card number and the office-use block below are new, not carried from either source. Confirm before adoption.*
 
 **Stub — retained by the exhibitor. Required to claim the exhibit at release.**
 
@@ -369,9 +564,23 @@ The card is two parts. The exhibitor completes both, the Authority separates the
 
 ---
 
-### §5.6 — Grievance Form
+## §7 — Grievance and Appeal
 
-Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §9, accompanied by the grievance fee stated in Addendum §6, in cash or certified check. Judging will not be interrupted by a grievance.
+This section carries the filing windows for grievances and appeals under CC 2.8, followed by the two forms. Read the window before filling out a form: a form filed outside its window is not considered.
+
+### §7.1 — Filing Windows
+
+This section lists the filing windows for grievances and appeals under CC 2.8. Each window runs from the event named, not from the start of a business day.
+
+| Filing | Window |
+|---|---|
+| Grievance | Within 24 hours after the occurrence of the alleged incident |
+| Appeal by a grievant | Within 8 hours after the grievance resolution is announced |
+| Appeal by a person sanctioned under CC 2.7 | Within 24 hours after the sanction is issued |
+
+### §7.2 — Grievance Form
+
+Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §7.1, accompanied by the grievance fee stated in Addendum §5, in cash or certified check. Judging will not be interrupted by a grievance.
 
 **Person filing**
 
@@ -442,9 +651,9 @@ I swear that the statements made in this grievance are true and correct to the b
 
 ---
 
-### §5.7 — Appeal Form
+### §7.3 — Appeal Form
 
-Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §9, accompanied by the appeal fee stated in Addendum §6, in cash or certified check. The fee is refunded if the matter is resolved in your favor. The decision of the Fair Board is final.
+Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §7.1, accompanied by the appeal fee stated in Addendum §5, in cash or certified check. The fee is refunded if the matter is resolved in your favor. The decision of the Fair Board is final.
 
 **What are you appealing? Check one.**
 
@@ -463,7 +672,7 @@ Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the wind
 | Email or mailing address | |
 | Age, if under 18 | |
 
-*If the person filing is under 18, a parent or guardian may file on their behalf.*
+If the person filing is under 18, a parent or guardian may file on their behalf.
 
 **Complete this block if you checked the first box**
 
@@ -525,256 +734,36 @@ I swear that the statements made in this appeal are true and correct to the best
 
 ---
 
-## §6 — Fees
+## §8 — Locations
 
-This section lists every fee and payment amount stated in the Fair Book. A fee not listed here is not charged.
+This section lists every place named in the Fair Book and describes what happens there. Addresses are listed where a facility is off the fairgrounds.
 
-| Fee | Amount |
+| Location | What happens there |
 |---|---|
-| Grievance fee | $50.00, cash or certified check, payable to the Custer County Fair Board |
-| Appeal fee | $100.00, cash or certified check, payable to the Custer County Fair Board |
-| Entry fee | None. No entry fee is charged for any class in any division |
-| Market Livestock Sale commission | 3% of gross sale proceeds |
-
-| Premium by placing | Amount |
-|---|---|
-| Blue, first | $8.00 |
-| Red, second | $5.00 |
-| White, third | $3.00 |
-| Yellow, fourth | $2.00 |
-| Pink, fifth | $2.00 |
-
-*The sale commission is reviewed every January and may be adjusted by the board.*
+| Custer County Fairgrounds | The main site of the fair. Barns, show ring, exhibit hall, and the Fair and 4-H office are here. |
+| Fair and 4-H office | Where grievances, appeals, and fees are filed, and where the Fair Board and CSU Extension staff can be reached during fair week. |
+| Exhibit hall | Check-in, judging, and display of all indoor and Open Division projects. Judge interviews for 4-H general and family and consumer sciences projects. |
+| Show ring | Most livestock and companion animal shows, and master showmanship. |
+| Sale ring | The Market Livestock Sale. |
+| Sheep and goat barn | Housing for sheep and goats. The certified livestock scale is here, and beef and market weigh-in runs through it. Attached to the beef barn. |
+| Beef barn | Housing for market and breeding beef. |
+| Swine barn | Housing for market and breeding swine. |
+| Small animal area | Cages and pens for poultry and rabbits, and small animal check-in. |
+| Saddle Club Arena | All horse shows and gymkhana. |
+| Sheriff's shooting range | Rifle and shotgun competition. Off the fairgrounds. |
+| Cowboy Church archery range | Archery competition. Off the fairgrounds. |
 
 ---
 
-## §7 — Schedule
+## §9 — Official Communication Channels
 
-Gates open at 7:00 am and close at 10:00 pm each day. A fifteen-minute break is scheduled between events. No event starts before its stated time, so every time after a day's first event is the earliest an event will begin, not a fixed start.
+This section lists the channels through which the Custer County Fair Board issues official communications, as required by CC 2.9. A communication that does not come through a channel listed here is not official. Channels are designated by Fair Board policy.
 
-**Week at a glance**
-
-| Day | Major events |
-|---|---|
-| Thu, Jul 8 | Record books due. Pre-fair cleanup |
-| Fri, Jul 9 | Indoor and Open Division check-in. General and FCS judging |
-| Sat, Jul 10 | Rifle. Shotgun. Llama show. Llama races |
-| Sun, Jul 11 | Public speaking contest |
-| Mon, Jul 12 | Dog show. Rabbit show. Cat show. Companion Animal Master Showmanship |
-| Tue, Jul 13 | Horse shows and gymkhana. Weigh-in and check-in. Livestock meeting |
-| Wed, Jul 14 | Archery. Swine show |
-| Thu, Jul 15 | Sheep show. Goat show. Ranch rodeo |
-| Fri, Jul 16 | Beef show. Rodeo parade. Livestock Master Showmanship. PRCA rodeo |
-| Sat, Jul 17 | Buckle ceremony. Livestock Sale. PRCA rodeo |
-| Sun, Jul 18 | Checkout. After-fair cleanup |
-
----
-
-**THURSDAY, July 8, 2027**
-
-4:00 pm: Shooting sports record books due
-
-4:00 pm – 7:00 pm: Mandatory pre-fair cleanup, all 4-H and FFA exhibitors
-
----
-
-**FRIDAY, July 9, 2027**
-
-8:30 am – 8:45 am: Indoor project judges meeting, exhibit hall
-
-9:00 am: Check-in, all indoor and Open Division projects, exhibit hall
-
-9:00 am – 8:00 pm: 4-H general and family and consumer sciences judge interviews, exhibit hall
-
----
-
-**SATURDAY, July 10, 2027**
-
-9:00 am – 11:00 am: .22 Rifle competition, Sheriff's shooting range
-
-11:00 am – 12:00 pm: Shotgun competition, Sheriff's shooting range
-
-4:00 pm – 7:00 pm: 4-H Llama show, show ring
-
-7:00 pm – 8:00 pm: 4-H Llama races, show ring
-
----
-
-**SUNDAY, July 11, 2027**
-
-4:00 pm – 7:00 pm: Public speaking contest
-
----
-
-**MONDAY, July 12, 2027**
-
-9:00 am – 10:00 am: 4-H Dog show, show ring
-
-10:00 am – 11:00 am: 4-H and FFA Rabbit show, show ring
-
-10:30 am: Cat show check-in, show ring
-
-11:00 am – 12:30 pm: Cat show, show ring
-
-11:00 am – 2:30 pm: Companion Animal Master Showmanship, show ring
-
-*Working group flag: the Cat show and Companion Animal Master Showmanship overlap in the same ring in both source documents. Confirm this is intentional.*
-
----
-
-**TUESDAY, July 13, 2027**
-
-9:00 am – 3:00 pm: 4-H Horse shows and Gymkhana, Saddle Club Arena
-
-3:00 pm – 6:00 pm: 4-H and FFA livestock weigh-in and small animal check-in, sheep and goat barn
-
-6:00 pm: All animals in place
-
-6:15 pm – 6:30 pm: Mandatory livestock meeting for all exhibitors and their parents
-
-6:30 pm – 8:30 pm: 4-H and FFA Night Out and Picnic, closed to the general public
-
----
-
-**WEDNESDAY, July 14, 2027**
-
-9:00 am – 12:00 pm: Archery competition, Cowboy Church archery range
-
-4:30 pm – 6:00 pm: Pulled pork dinner
-
-6:00 pm – 8:00 pm: 4-H and FFA Swine show
-
----
-
-**THURSDAY, July 15, 2027**
-
-9:00 am – 11:00 am: 4-H and FFA Sheep show
-
-12:00 pm – 2:00 pm: 4-H and FFA Goat show
-
-6:00 pm – 9:00 pm: Westcliffe Stampede Ranch Rodeo
-
----
-
-**FRIDAY, July 16, 2027**
-
-8:00 am – 9:00 am: Custer County Cattle Women beef breakfast
-
-9:00 am – 11:00 am: 4-H and FFA Beef show
-
-10:00 am: Rodeo parade *(time not confirmed by either source — placeholder)*
-
-12:00 pm – 2:00 pm: Livestock Master Showmanship
-
-One hour after the conclusion of the beef show: Exit election and signed Wholesome Meat Act Disclosure due to the sale committee
-
-6:00 pm – 9:00 pm: PRCA Westcliffe Stampede Rodeo
-
----
-
-**SATURDAY, July 17, 2027**
-
-11:00 am – 12:00 pm: Sangre de Cristo Cowboy Church steak dinner
-
-12:00 pm – 1:00 pm: Awards and buckle ceremony
-
-1:00 pm – 4:30 pm: 4-H and FFA Livestock Auction
-
-6:00 pm – 9:00 pm: PRCA Westcliffe Stampede Rodeo
-
----
-
-**SUNDAY, July 18, 2027**
-
-11:00 am – 1:00 pm: General checkout, indoor and Open Division release
-
-1:00 pm – 3:00 pm: Mandatory after-fair cleanup
-
----
-
-*Fair-week dates translated from the 2026 fair against the anchor that the fair closes on the third Saturday in July.*
-
----
-
-## §8 — Weight Windows and Market Deadlines
-
-This section lists the weights, entry limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it.
-
-**Market Beef**
-
-| | |
-|---|---|
-| Minimum weight | 1,000 lbs |
-| Maximum weight | None |
-| Other requirements | CC 3.2.2 age, CC 3.2.3 heifer pregnancy certification |
-
-**Market Swine**
-
-| Weight | Shows | Sells |
+| Channel | Where to find it | What is posted there |
 |---|---|---|
-| 219 lbs and under | Yes, lightest weight class | No |
-| 220 to 290 lbs | Yes | Yes, at actual weight |
-| 291 lbs and over | Yes, heaviest weight class | Yes, at 290 lbs |
-
-| | |
-|---|---|
-| Governing rule | CC 3.3.2 |
-| Other requirements | CC 3.3.5 pen assignment |
-
-**Market Sheep**
-
-| | |
-|---|---|
-| Minimum weight | 105 lbs |
-| Maximum weight | Not set — superintendent value pending |
-| Rough shearing deadline | Before the county weigh-in |
-| Other requirements | CC 3.4.2 scrapie identification, CC 3.4.3 shearing, CC 3.4.9 eligible animals |
-
-**Market Goat**
-
-| | |
-|---|---|
-| Minimum weight | 55 lbs |
-| Maximum weight | Not set — superintendent value pending |
-| Minimum gain, initial to final weigh-in | 5 lbs |
-| Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age, CC 3.5.9 weight gain |
-
-**Market Poultry**
-
-| Class | Weight window per bird |
-|---|---|
-| Market Fryer Pen | 3.5 to 6.9 lbs |
-| Market Broiler Pen | 7.0 to 12.0 lbs |
-| Market Turkey Hen | 13 to 30 lbs |
-| Market Turkey Tom | 20 to 30 lbs |
-
-| | |
-|---|---|
-| Maximum entries per class | 4 |
-| Other requirements | CC 3.6.5 identification, CC 3.6.8 age, CC 3.6.9 turkey breed |
-
-**Market Rabbit**
-
-| | |
-|---|---|
-| Meat pen weight window per rabbit | 3.5 to 5.5 lbs |
-| Maximum pens per exhibitor | 4 |
-| Other requirements | CC 3.7.4 identification |
-
-**Market deadlines**
-
-| Deadline | Window |
-|---|---|
-| Exit election, filed with the sale committee | No later than one hour after the conclusion of the beef show |
+| | | |
+| | | |
+| | | |
 
 ---
 
-## §9 — Grievance and Appeal Deadlines
-
-This section lists the filing windows for grievances and appeals under CC 2.8. Each window runs from the event named, not from the start of a business day.
-
-| Filing | Window |
-|---|---|
-| Grievance | Within 24 hours after the occurrence of the alleged incident |
-| Appeal by a grievant | Within 8 hours after the grievance resolution is announced |
-| Appeal by a person sanctioned under CC 2.7 | Within 24 hours after the sanction is issued |
