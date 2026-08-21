@@ -5,7 +5,7 @@
 **Folder:** first-aid/
 **Build order:** #5
 **Status:** Active — built 2026-06-13
-**Last updated:** 2026-06-13
+**Last updated:** 2026-08-20 — `appointments-log.jsonl` scoped to medical-only; three non-medical records (WIC recert, SNAP recert, school-advisory) migrated to `punch-list/appointments-log.jsonl`. See `docs/document-pipeline-map.md` decision log.
 
 ---
 
@@ -21,7 +21,7 @@ IFAK is memory, reference, and flag — never prescriber. It surfaces recorded f
 
 | File | Purpose |
 |---|---|
-| `first-aid/appointments-log.jsonl` | Append-forever event log. One record per appointment, every family member. |
+| `first-aid/appointments-log.jsonl` | Append-forever event log. One record per **medical** appointment, every family member. Non-medical household appointments (benefit recertifications, school-advisory sessions, and similar) live in `punch-list/appointments-log.jsonl` instead — split locked 2026-08-20. |
 | `first-aid/people/MB.md` | Matt’s full health narrative. Active conditions, medications, allergies, providers, surgical history. |
 | `first-aid/routine-care.md` | Preventative care cadence map. Drives overdue detection and morning briefing flags. |
 | `first-aid/people/<INITIALS>.md` | Per-person health narrative. Created when a health event occurs. Never pre-built. |
@@ -73,12 +73,13 @@ Fires on invoke or trigger:
 - Stores health data in project knowledge — all data lives in first-aid/ in the repo
 - Shares one person’s data in another person’s session without explicit authorization
 - Drops the bit for anything medical in earnest
+- Logs a non-medical appointment to `appointments-log.jsonl` — those route to Punch List's `punch-list/appointments-log.jsonl` instead, per Al's intake classification (see `al.md` Document Arrivals Hook)
 
 ---
 
 ## Capture Rules
 
-- Every new appointment gets logged to appointments-log.jsonl immediately
+- Every new **medical** appointment gets logged to `first-aid/appointments-log.jsonl` immediately. Non-medical appointments (recertifications, school-advisory, etc.) route to Punch List's `punch-list/appointments-log.jsonl` instead — Al makes that call at intake, not IFAK.
 - Allergies, new conditions, medication changes go to the person file immediately on surfacing — not queued
 - Recipe library check (Chow Hall) is a separate domain — IFAK does not own food
 - Vaccination records: pending. Compile and confirm against CDPHE schedule when records available
