@@ -15,6 +15,14 @@
 # Verify manually:
 #   git -C "C:\Users\ThinkPad X1 Carbon\Documents\family-ops" push --dry-run
 # before relying on this task.
+#
+# FIX 2026-08-21: origin was found pointed at HTTPS instead of the documented SSH
+# deploy-key remote, which made every push under SYSTEM hang indefinitely rather than
+# fail (no session to satisfy a credential prompt). Remote corrected to SSH. Separately,
+# this run added ahead-of-origin recovery below: a run that commits successfully but
+# then fails to push (as the HTTPS hang did) used to leave that commit stranded forever,
+# because a later run with nothing new to stage never checked for it. See
+# repo-write-discipline.md for the full incident.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -52,9 +60,22 @@ try {
 
     if ($staged -eq 0) { Log "Nothing to stage."; exit 0 }
 
-    # Bail if nothing actually changed
+    # Bail if nothing actually changed -- but first check for a stranded commit from a
+    # prior run that committed successfully and then failed to push. Without this check,
+    # a run with nothing new to stage exits here and a stuck commit sits forever.
     $diff = & git -C $RepoRoot diff --cached --stat 2>&1
-    if (-not $diff) { Log "No staged changes."; exit 0 }
+    if (-not $diff) {
+        $ahead = & git -C $RepoRoot rev-list --count 'origin/main..HEAD' 2>&1
+        if ($LASTEXITCODE -eq 0 -and $ahead -match '^\d+$' -and [int]$ahead -gt 0) {
+            Log "No new changes, but $ahead unpushed commit(s) found -- pushing existing commits."
+            $recoverPush = & git -C $RepoRoot push 2>&1
+            if ($LASTEXITCODE -ne 0) { Log "PUSH FAIL (recovery): $($recoverPush -join ' | ')"; exit 1 }
+            Log "OK - recovered $ahead previously stuck commit(s)"
+            exit 0
+        }
+        Log "No staged changes."
+        exit 0
+    }
 
     # Commit and push
     $week = Get-Date -Format "yyyy-MM-dd"
