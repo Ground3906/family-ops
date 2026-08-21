@@ -2,6 +2,7 @@
 
 **Owner:** Chow Hall (🍴)
 **First populated:** 2026-05-28
+**Last updated:** 2026-08-20 — six trips added from document-pipeline backlog sweep (2026-07-16 through 2026-08-04), including a second Bayer Aspirin instance (see Lowes continued section) and a new Walmart Cañon City store section.
 **Source:** Receipt uploads — Matt Bayer
 **Purpose:** Raw purchase history. Receipts function as deposit slips — each upload adds to the running knowledge base. Chow Hall derives par levels, buy frequency, and price benchmarks from this log over time.
 
@@ -159,6 +160,51 @@
 
 ---
 
+### Trip: 2026-07-20 — SNAP (subtotal $284.94; total confirmed $294.19 by Matt 2026-08-20; SNAP tender $224.89)
+
+*Heavily creased receipt — item-level detail below is best-effort; several lines show voided/re-rung entries on the original. Total is confirmed accurate; individual line items carry more uncertainty than usual.*
+
+| Item | Price | $/unit | Payment | Notes |
+|---|---|---|---|---|
+| Apples Pink Lady | $7.66 | $1.99/lb (3.85 lb) | SNAP | |
+| Avocado Hass ×3–4 | ~$6.76 | $1.69 ea | SNAP | [partial] receipt shows 3 clean lines + a 4th partial |
+| Bananas Golden | $2.47 | $0.69/lb (3.58 lb) | SNAP | |
+| Carrot Mini ×8 | $1.89 | — | SNAP | |
+| Belgioioso Mozzarella | $5.29 | — | SNAP | [flag] receipt shows a second $0.59 line for same item — likely misread, not logged separately |
+| Cherries Red | $11.88 | $4.99/lb (2.38 lb) | SNAP | [flag] math doesn't fully reconcile on a garbled receipt |
+| Grapes White Seedless | $4.69 | $2.79/lb (1.68 lb) | SNAP | receipt shows this line repeated 3x with what looks like a void/re-ring — logged once |
+| Lettuce Cello | $0.79 | — | SNAP | [flag] price looks low, possibly misread |
+| Melon Cantaloupe | — | $1.29/lb | SNAP | [partial] total not legible |
+| Onions Red | — | $1.49/lb (1.03 lb) | SNAP | [partial] total not legible |
+| Pita Orig | $5.19 | — | SNAP | |
+| Plums Black Large | $6.50 | — | SNAP | |
+| Pluots | $11.72 | $4.49/lb (2.61 lb) | SNAP | [flag] receipt shows this line 4x with void/re-ring pattern — logged once, likely 1–2 actual units |
+| Tomatoes (2 varieties) | $5.99 | $1.49/lb (0.72 lb) partial | SNAP | [partial] |
+| Silk Soymilk ×6 | $6.19 ea | — | SNAP | |
+| Torani Syrup | — | — | SNAP | [partial] price not legible |
+| V-8 Splash | $4.29 | — | SNAP | |
+
+---
+
+### Trip: 2026-07-29 — SNAP (subtotal $89.60; tax $2.90; total $92.50; SNAP tender $64.84; WIC tax exempted $0.74; foodstamps tax exempted $2.16)
+
+| Item | Price | $/unit | Payment | Notes |
+|---|---|---|---|---|
+| Bananas Golden | $2.16 | $0.59/lb (3.66 lb) | SNAP | |
+| Bananas Golden (2nd bunch) | $2.53 | $0.59/lb (4.28 lb) | SNAP | |
+| Cherries Red | $24.56 | $5.99/lb (4.10 lb) | SNAP | |
+| Cucumbers Spr ×4 | $3.56 | $0.89 ea | SNAP | |
+| Daisy Sour Cream | $7.99 | — | SNAP | |
+| Organic Herb Parsley Italian | $2.79 | — | SNAP | |
+| Parsley Italian | $0.99 | — | SNAP | [partial] possibly a second line for the same item |
+| Silk Almond Milk | $5.49 | — | SNAP | |
+| Silk Soymilk ×4 | $6.19 ea | — | SNAP | |
+| TS White Vinegar | $4.99 | — | SNAP | |
+| V8 Blend Delicious | $5.49 | — | SNAP | |
+| V-8 Splash | $4.29 | — | SNAP | |
+
+---
+
 ## Walmart Supercenter — Salida, CO
 7865 W US Highway 50 | 719-539-3566
 
@@ -188,9 +234,42 @@
 
 ---
 
+## Walmart Supercenter — Cañon City, CO
+3105 E US Highway 50 | 719-275-2375
+*New store, first trip logged 2026-08-20 (backlog sweep). Cañon City run — secondary Walmart alongside Salida.*
+
+---
+
+### Trip: 2026-07-09 — SNAP + Visa (subtotal $140.30; tax $0.43; total $140.73; SNAP tender $51.00; Visa/cash tender $84.33; change due $5.40)
+
+*Receipt heavily garbled past the produce section — totals and produce lines are solid, deli/bakery detail is thin.*
+
+| Item | Price | Payment | Notes |
+|---|---|---|---|
+| Iceberg Lettuce ×2 | $2.28 ea | SNAP | |
+| Broc Crowns | $6.37 | SNAP | 2.58 lb |
+| Zucchini | $6.37 | SNAP | 1.00 lb + fee, [partial] |
+| Garlic ×4 | $2.72 | SNAP | $0.68 ea |
+| Green Grape | $9.91 | SNAP | 5.03 lb; receipt shows a void/re-ring on this line |
+| Org Avocado | $4.36 | SNAP | |
+| Org Salad | $5.46 | SNAP | |
+| Strawberries | $2.62 | SNAP | |
+| Pom Arils | $2.62 | SNAP | |
+| Cantaloupe | $6.97 | SNAP | |
+| Blueberries ×2 | $2.97 / $4.62 | SNAP | |
+| Strawberries (2nd) | $4.62 | SNAP | |
+| Cocktail Cuke | $4.62 | SNAP | |
+| Mandarin 3-Bag | $2.62 | SNAP | |
+| Yellow Onion | $3.86 | SNAP | |
+| Pink Apples | $4.97 | SNAP | |
+| Bell Pepper | $2.96 | SNAP | 3.36 lb |
+| Remaining deli/bakery lines | ~$30 combined | SNAP | [partial] receipt garbled past this point — item-level detail unreliable, total is solid |
+
+---
+
 ## Safeway — Salida, CO
 232 G Street | 719-539-3513
-*Store 2817. All three receipts same date — single shopping visit, split transactions.*
+*Store 2817. All three April receipts same date — single shopping visit, split transactions.*
 
 ---
 
@@ -236,6 +315,39 @@
 | Werthers | $3.79 | $3.79 | — | CC | |
 | Lindt Milk Chocolate Coconut | $6.99 | $7.99 | -$1.00 Member | CC | |
 | Lindt Lindor Pistachio 3 lb | $4.50 | $6.87 | -$2.37 Member | CC | |
+
+---
+
+### Trip: 2026-07-26 — SNAP (total $175.33; points earned 240; SNAP balance after $2,289.73)
+
+*Large "For U" loyalty run — department, member, and coupon savings applied throughout. Total confirmed on receipt; item-level detail below is a best-effort read of a badly creased receipt.*
+
+| Item | You Paid | Payment | Notes |
+|---|---|---|---|
+| La Cocina | $4.18 | SNAP | |
+| Ken's Chunky Blue | $4.99 | SNAP | Member savings applied |
+| NBC Chicken in Biscuit | $4.29 | SNAP | Member savings applied |
+| V8 Splash | $1.99 | SNAP | Member savings applied |
+| V8 V-Fusion ×2 | $1.99 / $6.79 | SNAP | |
+| Energy drink item | $6.79 | SNAP | [partial] |
+| Promised Land Whole Milk | $6.49 | SNAP | Member savings applied |
+| Baked Rolls | $4.49 | SNAP | |
+| Hamburger/Hot Dog Rolls | $9.00 | SNAP | Member savings applied |
+| Croissants | $9.98 | SNAP | |
+| Fruit Tray w/dip | $3.97 | SNAP | |
+| Zucchini/Squash | $5.07 | SNAP | |
+| Bananas | $1.63 | SNAP | 3.26 lb |
+| Red Bell Peppers | $2.97 | SNAP | Member savings applied |
+| Papaya | $8.99 | SNAP | Member savings applied |
+| Blueberries | $8.99 | SNAP | |
+| Raspberries | $8.99 | SNAP | Store coupon applied |
+| Tomatoes | $5.99 | SNAP | |
+| Blackberries | $8.00 | SNAP | |
+| Mandarins bag | $5.00 | SNAP | Store coupon applied |
+| Belgioioso (deli) | $19.96 | SNAP | Member savings applied |
+| Additional departmental/member discounts | -$20.00 | — | Rolled into total above |
+
+*Receipt-reported total savings: $52.33 (23%).*
 
 ---
 
@@ -517,6 +629,26 @@
 
 ---
 
+### Trip: 2026-07-16 — CC/FSA (subtotal $3.99; tax $0.32; total $4.31)
+
+| Item | Price | Payment | Notes |
+|---|---|---|---|
+| Bayer Aspirin Reg/Large | $3.99 | CC/FSA | FSA OTC — taxed; CC only. Second logged instance of this item — first was 2026-06-03, above. Recurring low-dose regimen; also added to MB.md Medications table (locked 2026-08-20). |
+
+---
+
+### Trip: 2026-08-04 — SNAP (subtotal $19.24; tax $1.02 exempted under SNAP)
+
+| Item | Price | Payment | Notes |
+|---|---|---|---|
+| Candy Snickers | $4.39 | SNAP | |
+| Cheese Slices ×2 | $2.19 ea | SNAP | |
+| Heavy Whipping Cream | $5.99 | SNAP | |
+| Hi-Chew Original | $3.19 | SNAP | |
+| Palmer's Smarties | $1.29 | SNAP | |
+
+---
+
 ## Flags to Resolve
 
 | Flag | Receipt | Notes |
@@ -528,3 +660,6 @@
 | 2× 25 lb Flour | Costco 05/05 | Two flour line items, same price — same item doubled or two different varieties |
 | Lowes 04/15 cash mid-section | Lowes 04/15 | Several lines obscured by fold — confirm nothing critical missing |
 | Safeway Cañon City 06/22 payment split | Safeway 3728 06/22 | SNAP BAL DUE $268.66 shown on $324.04 total — unclear if $268.66 is amount charged to SNAP or remaining SNAP card balance after full charge |
+| Lowes 07/20 item-level detail | Lowes 07/20 | Total confirmed $294.19 by Matt (2026-08-20). Receipt was heavily creased with apparent void/re-ring lines on several produce items (grapes, pluots) — item list is best-effort, not exact |
+| Walmart Cañon City 07/09 deli/bakery | Walmart Cañon City 07/09 | Receipt garbles past the produce section — total is solid, ~$30 of deli/bakery items not itemized |
+| Safeway Salida 07/26 item read | Safeway Salida 07/26 | Total confirmed $175.33 — item-level detail is a best-effort read of a badly creased receipt |
