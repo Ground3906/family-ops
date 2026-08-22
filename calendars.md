@@ -657,6 +657,7 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-21 ALL-DAY [GUEST] Jacque and John :: misc :: span=2026-08-25
 [CAL] 2026-08-21 11:15 [D] Fairboard WG :: meetings :: end=15:30 :: location="Tony's Pizza, Westcliffe, CO"
 [CAL] 2026-08-24 07:45 [D] WGU mentor meeting :: meetings :: end=08:00 :: notes="Weekly sync with Teresa Jackson. Conf GBD39J69F."
+[CAL] 2026-08-25 07:00 [D] Coffee - hunting group :: meetings :: end=08:00 :: location="Westcliffe, CO"
 [CAL] 2026-08-25 15:00 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-25 18:00 [W][K] Zoom - international trip info meeting :: kids :: meetings
 [CAL] 2026-08-26 13:00 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=14:00 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="Provider: Beth Pack PA-C, Orthopedics. Check-in 12:45."
