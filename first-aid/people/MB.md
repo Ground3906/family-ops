@@ -19,6 +19,15 @@
 
 ## Active Conditions
 
+### Shoulder - Orthopedic (Beth Pack, PA-C)
+- **Provider:** Beth Pack, PA-C, Orthopedics — Westcliffe Clinic
+- **Appointment chain (calendars.md, repo source of truth):**
+  - 2026-07-09, 12:15 — scheduled, missed. Matt confirmed the appointment via text without catching a time mismatch, arrived after the actual scheduled time. Rescheduled to 2026-08-12.
+  - 2026-08-12, 12:15 — scheduled, missed the same way (time mismatch, confirmed wrong time via text). Rescheduled to 2026-08-26.
+  - 2026-08-26, 13:00 — currently active/upcoming. Check-in 12:45.
+- **Matt's note (2026-08-22):** Logging this pattern as a PTSD-related memory/sharpness symptom — not being as sharp as he used to be. Self-reported, not a clinical diagnosis on file.
+- **Underlying shoulder issue:** not yet documented — confirm with Matt at or after the 8/26 appointment.
+
 ### Plantar Fasciitis - Left Foot (resolved-adjacent, monitor)
 - **Onset:** February 2026
 - **Provider:** Wentz Foot and Ankle, Salida, CO (Dr. Ralph J. Wentz Jr., DPM)
@@ -146,6 +155,7 @@
 | Provider | Specialty | Location | Status |
 |---|---|---|---|
 | Dr. Mahmood | OB/Prenatal | Parkview Medical Center, Pueblo, CO | Active (Kalea's provider - Matt attends appointments) |
+| Beth Pack, PA-C | Orthopedics | Westcliffe Clinic, Westcliffe, CO | Active -- see Active Conditions, shoulder chain |
 | Wentz Foot and Ankle (Dr. Ralph J. Wentz Jr., DPM) | Podiatry | Salida, CO | Active -- plantar fasciitis course effectively complete as of 2026-06-18; on file for future needs |
 | Dr. Scott B. Woody | Proctology | Mountain Streams Medical, Colorado Springs, CO | Active - current patient, highly satisfied |
 | Salida Family Dentistry (hygienist: Amy) | Dental | Salida, CO | Active - highly satisfied |
@@ -177,6 +187,7 @@
 
 ## Open Actions
 
+- [ ] Confirm underlying shoulder issue and outcome of 2026-08-26 appointment with Beth Pack, PA-C.
 - [ ] Raise mild eosinophilia (%EOS 7.7, 2026-07-28 panel) at upcoming GI appointment (Associates in Gastro, Peregrine) alongside reflux + IBS-M presentation.
 - [ ] Lipid recheck in 3-6 months (target: triglycerides, HDL). Discuss lifestyle-first vs. statin with provider -- mention the existing aspirin regimen.
 - [ ] Find gastroenterologist in Colorado Springs accepting TRICARE Reserve Select. Schedule GERD consult.
