@@ -29,7 +29,8 @@
 - **Underlying shoulder issue:** not yet documented — confirm with Matt at or after the 8/26 appointment.
 
 ### PTSD-related symptom log (self-reported, dated entries)
-- **2026-08-22:** Oma's father-in-law (Oma+Papa's extended family — brother and family) in town, group fishing trip. Matt did not go despite normally loving fishing. No identifiable reason — "didn't feel right, didn't feel like going." Matt notes this is not normal for him. Logged as a dated data point, not diagnosed. Matt has an existing counselor (Mark, telehealth, recurring on calendar) — this file tracks pattern/timeline only, not treatment.
+- **2026-08-12:** Argument with Wyatt over phone use — Wyatt was using Duolingo (language-learning app). Matt questioned what he was doing; Wyatt said he'd already told Matt about the app before and said Matt "always forget[s] and don't listen." Logged as a dated data point on the same memory/sharpness pattern — not diagnosed, no action implied toward Wyatt.
+- **2026-08-22:** Oma+Papa's extended family (father-in-law's brother and family) in town, group fishing trip. Matt did not go despite normally loving fishing. No identifiable reason — "didn't feel right, didn't feel like going." Matt notes this is not normal for him. Logged as a dated data point, not diagnosed. Matt has an existing counselor (Mark, telehealth, recurring on calendar) — this file tracks pattern/timeline only, not treatment.
 
 ### Plantar Fasciitis - Left Foot (resolved-adjacent, monitor)
 - **Onset:** February 2026
