@@ -28,6 +28,9 @@
 - **Matt's note (2026-08-22):** Logging this pattern as a PTSD-related memory/sharpness symptom — not being as sharp as he used to be. Self-reported, not a clinical diagnosis on file.
 - **Underlying shoulder issue:** not yet documented — confirm with Matt at or after the 8/26 appointment.
 
+### PTSD-related symptom log (self-reported, dated entries)
+- **2026-08-22:** Oma's father-in-law (Oma+Papa's extended family — brother and family) in town, group fishing trip. Matt did not go despite normally loving fishing. No identifiable reason — "didn't feel right, didn't feel like going." Matt notes this is not normal for him. Logged as a dated data point, not diagnosed. Matt has an existing counselor (Mark, telehealth, recurring on calendar) — this file tracks pattern/timeline only, not treatment.
+
 ### Plantar Fasciitis - Left Foot (resolved-adjacent, monitor)
 - **Onset:** February 2026
 - **Provider:** Wentz Foot and Ankle, Salida, CO (Dr. Ralph J. Wentz Jr., DPM)
@@ -162,6 +165,7 @@
 | Claflin Eye Care (Sean R. Claflin, O.D., FAAO) | Optometry | Cañon City, CO | Active as of 2026-07-08 exam -- resolves prior "optometrist TBD" open item |
 | Gastroenterologist | Gastroenterology | Colorado Springs, CO | TBD - research pending, must accept TRICARE Reserve Select |
 | Dermatologist | Dermatology | TBD | TBD - research pending, must accept TRICARE Reserve Select |
+| Mark (counselor) | Counseling | Telehealth | Active - recurring on calendar |
 
 ---
 
