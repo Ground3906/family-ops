@@ -1,7 +1,7 @@
 # Matt Bayer (MB) — Health Profile
 
 **Date created:** 2026-06-13
-**Last updated:** 2026-08-20
+**Last updated:** 2026-08-22
 **Owner:** IFAK
 **Status:** Active
 
@@ -46,6 +46,7 @@
 | Date | Onset | Dinner | Symptoms | BM that day | Red flags | Resolution |
 |---|---|---|---|---|---|---|
 | 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Yes, sporadic pattern is baseline for MB | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Sat up, took antacid, symptoms easing |
+| 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Not noted | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Not noted |
 
 ### Hemorrhoids / Anal Fissure (History)
 - **History:** Chronic hemorrhoids. Anal fissure developed ~2 years ago. Fissure failed to heal conservatively.
