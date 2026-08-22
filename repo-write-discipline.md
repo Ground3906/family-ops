@@ -32,6 +32,16 @@ Note the corollary: if a machine-written file genuinely must reach the repo, it 
 
 ---
 
+## The Filesystem connector is a local, per-session tool — not an account-wide one
+
+**The Filesystem connector (rooted at `C:\Users\ThinkPad X1 Carbon`) only exists in a Claude session actually running on the ThinkPad itself.** It is not a cloud connector reachable from any device on the account — it is a local stdio server, alive only for the process that spawned it. A session opened on the phone or on Precision will never see it, no matter how many times the tool is retried, and no amount of reconnecting in Claude's connector settings fixes it from the wrong machine.
+
+This cost three dead retries on 2026-08-21 before the actual cause surfaced: the tool had worked earlier in that same session (reading `inbox-watcher.ps1` cleanly), then appeared to vanish mid-conversation. It hadn't dropped — the person had switched from asking on the ThinkPad to asking from the phone, and the tool was never available there to begin with. The fix was opening the request on the ThinkPad, not troubleshooting the connector.
+
+**The tell:** if the Filesystem connector worked earlier in a session and then stops responding with no error, check which device the current request is actually coming from before assuming the connector itself failed.
+
+---
+
 ## ThinkPad SYSTEM git authentication
 
 Scheduled tasks on the ThinkPad (`BayerFamilyOps-WeeklyPush`, `BayerFamilyOps-InboxWatcher`, `BayerFamilyOps-PayrollWrite`) run as SYSTEM. SYSTEM has no user profile, no desktop session, and no inherited credentials — every assumption that holds for an interactive git session fails there.
@@ -48,6 +58,20 @@ Scheduled tasks on the ThinkPad (`BayerFamilyOps-WeeklyPush`, `BayerFamilyOps-In
 **The failure signature to recognize:** a task that hangs rather than fails. Anything prompting for input — credential manager, host verification — blocks forever under SYSTEM instead of erroring, because there is no session to render the prompt. `Get-ScheduledTaskInfo` shows `LastTaskResult: 267009` (`SCHED_S_TASK_RUNNING`), and `Get-Process -Name git` shows live processes whose `StartTime` matches the task's `LastRunTime`. Kill those by PID, then check for a stranded `.git\index.lock`, which blocks every other git operation against the repo including the 3-minute pull job.
 
 **Testing SYSTEM's git path without risking a hang:** register a temporary task running `git ls-remote origin` as SYSTEM, redirect output to a file, run it, read the file, delete the task. `ls-remote` only reads, so there is nothing to hang on. Never verify SYSTEM auth by running the command as yourself — an interactive session has credentials SYSTEM does not.
+
+**Incident, 2026-08-21 — two compounding failures, found live during an arrivals-hook end-to-end test:**
+
+1. **`origin` had reverted to HTTPS.** Read operations (`pull`, `ls-remote`) still succeeded off a cached Windows Credential Manager entry, which masked the problem completely — only `push` under SYSTEM hung, because push triggers a fresh permission check with no session to satisfy it. A hang, not an error, and the heartbeat log stayed silent because the script's `Log()` calls only fire after a git command returns. Diagnosed by isolating each operation individually as a temporary SYSTEM task — `ls-remote` clean, `pull` clean, `push` hung every time — which narrowed it to exactly the operation this doc already names as the risk. Fixed with `git remote set-url origin git@github.com:Ground3906/family-ops.git`, confirmed against the same isolated-push test.
+
+2. **`FamilyOps-PullJob` was not running as SYSTEM at all.** Its principal was `LogonType: Interactive, UserId: mbay` — Matt's own account, not SYSTEM, unlike every other repo-writing task on this machine. It had been working for months on a cached HTTPS credential belonging to that account. The moment fix #1 changed `origin` to SSH — a single `.git/config` setting shared by every process touching this clone — PullJob broke instantly, since Matt's account had no SSH key registered anywhere. One fix silently broke an unrelated task that had never been unified onto the documented SYSTEM auth model in the first place.
+
+**The lesson, not just the fix:** `origin`'s URL and the SSH deploy key are shared, repo-level state. Changing either affects every task touching that clone, not just the one being debugged. Before changing the remote or the auth model for one task, check the principal of every other scheduled task that touches the same repo:
+
+```
+Get-ScheduledTask | Where-Object { (Get-ScheduledTask $_.TaskName).Actions.Arguments -match 'family-ops' } | ForEach-Object { $_.TaskName; (Get-ScheduledTask $_.TaskName).Principal.UserId }
+```
+
+A task silently running under the wrong identity can work for months before a shared-config change exposes it — a clean `LastTaskResult` history proves nothing about which identity actually produced it.
 
 ---
 
