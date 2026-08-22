@@ -43,10 +43,10 @@
 
 **Flare log:**
 
-| Date | Onset | Dinner | Symptoms | BM that day | Red flags | Resolution |
+| Date | Onset | Dinner | Symptoms | BM (next day) | Red flags | Resolution |
 |---|---|---|---|---|---|---|
-| 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Yes, sporadic pattern is baseline for MB | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Sat up, took antacid, symptoms easing |
-| 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Not noted | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Not noted |
+| 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Next-day BM close to diarrhea, not fully loose | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Sat up, took antacid, symptoms easing |
+| 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Next-day BM hard, slow, straining, incomplete-feeling | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Not noted |
 
 ### Hemorrhoids / Anal Fissure (History)
 - **History:** Chronic hemorrhoids. Anal fissure developed ~2 years ago. Fissure failed to heal conservatively.
