@@ -635,6 +635,7 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-06 17:00 [W][D][K] Back to School Night - CEC Online Campus :: kids :: meetings :: end=18:00 :: location="Microsoft Teams" :: notes="Canvas navigation, staff intros, family resources. Recording available if unable to attend live."
 [CAL] 2026-08-10 ALL-DAY [K][D] Gus - eviction day :: medical :: cancel=confirmed
 [CAL] 2026-08-10 08:00 [W] First day of school :: kids :: end=15:00
+[CAL] 2026-08-24 08:00 [M][R][C][E] First day of school :: kids :: end=15:00
 [CAL] 2026-08-11 13:20 [D][K][L] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-08-11 17:30 [D] WGU Cohort - IPV6 Introduction D325 :: meetings :: end=18:30
 [CAL] 2026-08-12 12:15 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=13:15 :: location="Westcliffe Clinic, Westcliffe, CO" :: cancel=confirmed :: notes="entered wrong, rescheduled to 2026-08-26 1300"
@@ -663,12 +664,14 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-26 13:00 [D] Orthopedic Appt :: appointments :: stripe=appt :: end=14:00 :: location="Westcliffe Clinic, Westcliffe, CO" :: notes="Provider: Beth Pack PA-C, Orthopedics. Check-in 12:45."
 [CAL] 2026-08-26 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
-[CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children."
+[CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children." :: cancel=confirmed
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-28 09:00 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-30 ALL-DAY [C][E] Camping trip w/ Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
+[CAL] 2026-09-02 09:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-30 ALL-DAY [D] Mesquite Trip :: misc :: span=2026-09-01 :: travel=true :: notes="One-way flight COS-DEN-SGU. UA5291 COS-DEN 0600-0705, UA5054 DEN-SGU (St. George, UT) 0825-1020. Conf G0CB0Q, eTicket 0162131235026. Seats 18B/10B. Returning Tue Sep 1 by car with Uncle Doug."
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
