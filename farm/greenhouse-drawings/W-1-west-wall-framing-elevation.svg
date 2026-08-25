@@ -261,31 +261,21 @@
 <text x="675" y="814" font-family="Arial" font-size="8.5" fill="#000">SHEATHING:  7/16&#x201d; OSB</text>
 <text x="675" y="827" font-family="Arial" font-size="8.5" fill="#000">INSULATION:  5&#xbd;&#x201d; CLOSED-CELL S.F.</text>
 <text x="675" y="840" font-family="Arial" font-size="8.5" fill="#000">SIDING:  PRO-PANEL</text>
-<text x="30" y="860" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000">STUD HEIGHT TABLE &#x2014; FOOTING TOP TO TOP OF RAKED TOP PLATE</text>
-<rect x="30" y="870" width="930" height="90" fill="none" stroke="#000" stroke-width="0.8"/>
-<line x1="30" y1="892" x2="960" y2="892" stroke="#000" stroke-width="0.6"/>
-<text x="123.00" y="885" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#000">N. CORNER</text>
-<text x="123.00" y="910" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#000">13&#x2019;-1&#x201d;</text>
-<text x="123.00" y="930" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">X=0&#x201d; FROM N.  FTG&#x2192;T.P.</text>
-<text x="123.00" y="946" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(INCL. SOLE PL. + TOP PL.)</text>
-<line x1="216.00" y1="870" x2="216.00" y2="960" stroke="#000" stroke-width="0.5"/>
-<text x="309.00" y="885" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#000">KING STUD (N)</text>
-<text x="309.00" y="910" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#000">12&#x2019;-7&#xbd;&#x201d;</text>
-<text x="309.00" y="930" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">X=1&#x2019;-4&#x201d; FROM N.  FTG&#x2192;T.P.</text>
-<text x="309.00" y="946" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(INCL. SOLE PL. + TOP PL.)</text>
-<line x1="402.00" y1="870" x2="402.00" y2="960" stroke="#000" stroke-width="0.5"/>
-<text x="495.00" y="885" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#000">KING STUD (S)</text>
-<text x="495.00" y="910" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#000">11&#x2019;-4&#xbd;&#x201d;</text>
-<text x="495.00" y="930" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">X=5&#x2019;-4&#x201d; FROM N.  FTG&#x2192;T.P.</text>
-<text x="495.00" y="946" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(INCL. SOLE PL. + TOP PL.)</text>
-<line x1="588.00" y1="870" x2="588.00" y2="960" stroke="#000" stroke-width="0.5"/>
-<text x="681.00" y="885" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#000">MID-WALL</text>
-<text x="681.00" y="910" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#000">10&#x2019;-1&#xbd;&#x201d;</text>
-<text x="681.00" y="930" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">X=9&#x2019;-2&#x201d; FROM N.  FTG&#x2192;T.P.</text>
-<text x="681.00" y="946" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(INCL. SOLE PL. + TOP PL.)</text>
-<line x1="774.00" y1="870" x2="774.00" y2="960" stroke="#000" stroke-width="0.5"/>
-<text x="867.00" y="885" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#000">S. CORNER</text>
-<text x="867.00" y="910" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#000">7&#x2019;-2&#xbc;&#x201d;</text>
-<text x="867.00" y="930" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">X=18&#x2019;-4&#xbd;&#x201d; FROM N.  FTG&#x2192;T.P.</text>
-<text x="867.00" y="946" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(INCL. SOLE PL. + TOP PL.)</text>
+<text x="185.00" y="860" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000">STUD HEIGHT TABLE &#x2014; FTG TOP &#x2192; TOP OF RAKED TOP PLATE</text>
+<rect x="185.00" y="870" width="661.50" height="90" fill="none" stroke="#000" stroke-width="0.8"/>
+<line x1="185.00" y1="892" x2="846.50" y2="892" stroke="#000" stroke-width="0.6"/>
+<text x="295.25" y="885" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#000">N. CORNER</text>
+<text x="295.25" y="915" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#000">13&#x2019;-1&#x201d;</text>
+<text x="295.25" y="935" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#000">0&#x2019; from N.  FTG&#x2192;T.P.</text>
+<text x="295.25" y="950" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(includes sole pl. + top pl.)</text>
+<line x1="405.50" y1="870" x2="405.50" y2="960" stroke="#000" stroke-width="0.5"/>
+<text x="515.75" y="885" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#000">MID-WALL</text>
+<text x="515.75" y="915" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#000">10&#x2019;-1&#xbd;&#x201d;</text>
+<text x="515.75" y="935" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#000">9&#x2019;-2&#x201d; from N.  FTG&#x2192;T.P.</text>
+<text x="515.75" y="950" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(includes sole pl. + top pl.)</text>
+<line x1="626.00" y1="870" x2="626.00" y2="960" stroke="#000" stroke-width="0.5"/>
+<text x="736.25" y="885" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#000">S. CORNER</text>
+<text x="736.25" y="915" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#000">7&#x2019;-2&#xbc;&#x201d;</text>
+<text x="736.25" y="935" text-anchor="middle" font-family="Arial" font-size="8.5" fill="#000">18&#x2019;-4&#xbd;&#x201d; from N.  FTG&#x2192;T.P.</text>
+<text x="736.25" y="950" text-anchor="middle" font-family="Arial" font-size="8" fill="#000">(includes sole pl. + top pl.)</text>
 </svg>
