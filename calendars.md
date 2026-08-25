@@ -690,6 +690,7 @@ Last batch: 2026-08-20.
 
 [CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
 [CAL] 2026-10-05 08:00 [D] TI4 w/ Fr. Joe :: misc :: end=20:00 :: location="Salida, CO"
+[CAL] 2026-10-08 10:50 [L] Appt :: appointments :: stripe=appt
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
