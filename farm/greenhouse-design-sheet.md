@@ -3,7 +3,7 @@
 **Agent:** Rootstock (definition not yet committed)
 **Site:** 38.0979386, -105.2994594 - 1722 Edelweiss Dr, Westcliffe CO, 9,000 ft, zone 4a
 **Status:** Design in progress. Nothing built. Nothing ordered.
-**Design sessions:** 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-18 (drawing/scope session - framing geometry corrected, roof and vent assemblies re-locked)
+**Design sessions:** 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-18 (drawing/scope session - framing geometry corrected, roof and vent assemblies re-locked), 2026-08-24 (sill rebuild - built-up sill locked, south wall framing elevation drawn and committed)
 
 ---
 
@@ -102,29 +102,33 @@ This reconciles with the original design's 18 ft 5 in depth and 6 ft 11 in roof 
 | | Above grade |
 |---|---|
 | Footing top | 6 in |
-| Framing below sill | 30 in |
-| **South sill** | **3 ft 0 in** |
+| Framing below sill | 30 in - STALE, see note below |
+| **South sill** | **3 ft 4-1/2 in** |
 | Window RO (34.5 in) | - |
-| Window head, at beam underside (no header - see South Wall) | 5 ft 10-1/2 in |
+| Window head, at beam underside (no header - see South Wall) | 5 ft 10-1/2 in - STALE |
 | Beam depth (rough-sawn 6x10) | 10 in |
-| Beam top | 6 ft 8-1/2 in |
+| Beam top | 6 ft 8-1/2 in - STALE |
 | Rafter above notch (10 in - 2-1/4 in) | 7-3/4 in |
-| **Roof plane at south wall** | **7 ft 4-1/4 in** |
+| **Roof plane at south wall** | **7 ft 4-1/4 in - STALE** |
 | Rise over the rake | + 6 ft 10-3/4 in |
-| **Peak (rafter top edge at riser)** | **14 ft 3 in** |
+| **Peak (rafter top edge at riser)** | **14 ft 3 in - STALE** |
 | Less rafter plumb depth (sits on raked cap, no notch) | - 12 in |
-| Top of riser cap plate | 13 ft 3 in |
+| Top of riser cap plate | 13 ft 3 in - STALE |
 | Less container top (fixed) | - 8 ft 10 in |
-| **Riser framing (bottom plate to cap plate)** | **4 ft 5 in** |
-| **Total riser + rafter above container top** | **5 ft 5 in** |
+| **Riser framing (bottom plate to cap plate)** | **4 ft 5 in - STALE** |
+| **Total riser + rafter above container top** | **5 ft 5 in - STALE** |
 
-**Supersedes:** original 5 ft 8 in riser and 14 ft 6 in peak. New peak is 3 in lower; new riser is 1 ft 6-1/2 in shorter. Both results of dropping the south sill from 4 ft 2 in to 3 ft 0 in and removing the header/doubled-plate stack under the south windows (see South Wall).
+**Sill locked 2026-08-24 at 3 ft 4-1/2 in** (was 3 ft 0 in) - built-up sill construction, see South Wall. Framing below sill (30 in) no longer reconciles to this height, and every row below South sill in the table above (window head through total riser) was computed against the old 3 ft 0 in sill and has not been rerun. See Open Item 19.
+
+**Supersedes:** original 5 ft 8 in riser and 14 ft 6 in peak. New peak is 3 in lower; new riser is 1 ft 6-1/2 in shorter. Both results of dropping the south sill from 4 ft 2 in to 3 ft 0 in and removing the header/doubled-plate stack under the south windows (see South Wall). Sill has since moved again to 3 ft 4-1/2 in (2026-08-24) - this paragraph describes the 4 ft 2 in to 3 ft 0 in transition only and is otherwise historical.
 
 ---
 
 ## SOUTH WALL
 
-**Sill dropped to 3 ft 0 in above grade** (was 4 ft 2 in), owner's explicit target to reduce riser height. Consequence carried through the full height stack above.
+**Sill dropped to 3 ft 0 in, then locked at 3 ft 4-1/2 in above grade** (was 4 ft 2 in), owner's explicit target to reduce riser height. Consequence carried through the full height stack above - see STALE flags in Framing Geometry, not yet rerun against 3 ft 4-1/2 in.
+
+**Sill construction: built-up, not solid. Locked 2026-08-24.** 2x6 flat cap / 2x4 on edge / 2x6 flat bottom cap, 6-1/2 in tall overall. A single 2x6-on-edge was tried and rejected - no bearing.
 
 **Window head: flange lands directly on the beam underside. No header, no doubled top plate.** The south wall is non-bearing infill between posts - the header was never structural, and removing it plus the doubled plate took 8-1/2 in out of the riser stack in exchange for a trim detail: the window flange lands on a rough-sawn timber face rather than a flat framed nailer, so head casing will need to scribe to the beam. Accepted trade.
 
@@ -154,10 +158,10 @@ This reconciles with the original design's 18 ft 5 in depth and 6 ft 11 in roof 
 | Beam bearing above floor at the south wall | ~~7 ft 9 in~~ | SUPERSEDED - beam now 6x10, sill dropped, see South Wall/Framing Geometry |
 | Doubled top plate (south) | ~~3 in~~ | SUPERSEDED - no header/plate at south windows, see South Wall |
 | Racked 2x6 header, on edge | ~~5.5 in~~ | SUPERSEDED - no header at south windows |
-| South window head | ~~7 ft 1 in~~ | SUPERSEDED - now at beam underside, approx 5 ft 10-1/2 in |
+| South window head | ~~7 ft 1 in~~ | STALE - was approx 5 ft 10-1/2 in against the 3 ft 0 in sill, not rerun against 3 ft 4-1/2 in |
 | South window rough opening, vertical | 34.5 in (frame + 1/2 in shim per side) | current |
-| South window sill | ~~4 ft 2 in~~ | SUPERSEDED - now 3 ft 0 in |
-| Framing below south sill (above footing) | ~~3 ft 8 in~~ | SUPERSEDED - now 2 ft 6 in (30 in) |
+| South window sill | ~~4 ft 2 in~~, ~~3 ft 0 in~~ | SUPERSEDED - now 3 ft 4-1/2 in, built-up sill, locked 2026-08-24 |
+| Framing below south sill (above footing) | ~~3 ft 8 in~~ | STALE - was 2 ft 6 in (30 in) against the 3 ft 0 in sill, not rerun against 3 ft 4-1/2 in |
 | Pen ceiling at 10 ft line | 10 ft 9 in | STALE - not recalculated against new peak, open item |
 | Footprint | 18 ft 5 in x 40 ft = 736 sq ft | current |
 
@@ -420,20 +424,21 @@ At conversion: strip the lower metal panel and the north-section sheathing above
 | Clear insulated wall below panel | 24-1/2 in |
 | Actuation | Wax cylinder, fails closed |
 
-**South (sill) intake panels - RESIZED, full height retained (not shortened):**
+**South (sill) intake panels - RESIZED 2026-08-18, top trimmed 1/2 in further 2026-08-24 for the built-up sill:**
 
 | | |
 |---|---|
 | Count | 8 (2 per 10 ft bay) |
-| Size | 4 ft wide x 27 in tall |
-| Area | 72 sq ft |
+| Size | 4 ft wide x 26-1/2 in tall (was 27 in) |
+| Area | STALE - was 72 sq ft at 27 in, not rerun at 26-1/2 in |
 | Hinge | Piano hinge at top, racked to the underside of the sill plate |
 | Bottom rail position | 7-1/2 in above grade |
+| Top rail position | 2 ft 10 in above grade (was 2 ft 10-1/2 in) |
 | Actuation | Wax cylinder, fails closed |
 
 **Sizing logic, panel height:** actuators only open on heat - they're closed all winter by design, so the low bottom-rail height (7-1/2 in above grade) does not present a snow-drift-blocking condition; drifts pile against a closed, gasketed panel like any other wall section. Base gravel/splash strip noted for the south wall to manage rain splash and mud at the low bottom rail - maintenance item, not a function item.
 
-**Intake-to-exhaust ratio: 72 sq ft / 64 sq ft = 1.125x.** Design sheet originally targeted 1.5x; south wall has no more width to add intake, so the ratio is accepted as-is rather than shrinking exhaust to force the ratio (shrinking exhaust would worsen the absolute-area shortfall below, which matters more than the ratio).
+**Intake-to-exhaust ratio: 72 sq ft / 64 sq ft = 1.125x - STALE, south intake area not rerun against the 26-1/2 in panel height.** Design sheet originally targeted 1.5x; south wall has no more width to add intake, so the ratio is accepted as-is rather than shrinking exhaust to force the ratio (shrinking exhaust would worsen the absolute-area shortfall below, which matters more than the ratio).
 
 **Absolute area check against the 15-20% of floor area passive-vent standard:** 64 sq ft exhaust against a 736 sq ft floor is 8.7%, against a 110-147 sq ft target - short by roughly half. **Accepted, not solved, because of the layered scheme below** - passive vents are one of four paths, not the sole path, and the shortfall is covered by powered ventilation on the conditions (hot, still, daytime) where passive is weakest.
 
@@ -515,6 +520,7 @@ Existing coop exhaust fan continues to draw makeup air through the 20 in x 30 in
 16. **Riser uplift/hold-down detail at the raked cap plate.** NEW - the birdsmouth-based hurricane-tie approach no longer applies at the north bearing since it's now a flat bearing on a raked plate, not a notch. Connection method not yet drawn.
 17. **Ceiling height table, glazing ratio, lit-strip position** - all stale against the corrected peak/sill geometry, not recalculated this session, low priority.
 18. **Garage-barn build sheet** needs a line-item update removing the Hessaire fan, now reassigned here.
+19. **South wall riser/peak cascade recalc.** NEW 2026-08-24 - sill locked at 3 ft 4-1/2 in above grade, built-up construction (2x6 flat cap / 2x4 on edge / 2x6 flat bottom cap, 6-1/2 in tall; single 2x6-on-edge rejected, no bearing). Window head, beam top, roof plane, peak, and riser framing in the Framing Geometry table, plus the south vent intake panel area and intake-to-exhaust ratio in Ventilation, all still reflect the old 3 ft 0 in sill and need a full rerun. South wall framing elevation drawing (`farm/greenhouse-drawings/south-wall-framing-elevation.svg`) is built and committed against the new sill - this open item is the design sheet catching up to the drawing, not a design question.
 
 ---
 
