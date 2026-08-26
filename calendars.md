@@ -665,6 +665,7 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-26 13:00 [K] Apt - Gina :: appointments :: stripe=appt
 [CAL] 2026-08-26 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children." :: cancel=confirmed
+[CAL] 2026-08-28 08:15 [K] Coffee - Leanne :: meetings
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-28 09:00 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
