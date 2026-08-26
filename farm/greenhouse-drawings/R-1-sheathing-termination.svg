@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780" font-family="Helvetica, Arial, sans-serif">
-  <rect width="1100" height="780" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 880" width="1100" height="880" font-family="Arial">
+  <rect width="1100" height="880" fill="#ffffff"/>
 
-  <text x="60" y="44" font-size="24" font-weight="bold" fill="#1a1a1a">DETAIL R-1 — SHEATHING TERMINATION + METAL STEP AT SEAM</text>
-  <text x="60" y="68" font-size="15" fill="#444">Section at the roof seam · north left, south right · Phase 1 condition</text>
+  
+  
   <text x="60" y="90" font-size="12" fill="#777" font-style="italic">Not to scale. Ribs run down-slope, parallel to this cut — shown as crest lines along the panel length, not cross-section corrugation.</text>
   <line x1="60" y1="104" x2="1040" y2="104" stroke="#1a1a1a" stroke-width="2"/>
 
@@ -107,4 +107,4 @@
   <text x="60" y="728" font-size="15" font-weight="bold" fill="#c2410c">NOTE — DO NOT EXTEND SHEATHING PAST THIS LINE</text>
   <text x="60" y="750" font-size="13" fill="#333">The sheathing terminates at 10'-0 1/4" (down the rake from the north framing face), with</text>
   <text x="60" y="768" font-size="13" fill="#333">blocking spanning this line. This is specific for Phase 2.</text>
-</svg>
+<text x="40" y="800" font-family="Arial" font-size="16" font-weight="bold" fill="#000">SHEATHING TERMINATION + METAL STEP AT SEAM</text><text x="40" y="818" font-family="Arial" font-size="11" fill="#000">(SECTION AT ROOF SEAM &#x2014; NORTH LEFT, SOUTH RIGHT &#x2014; PHASE 1 CONDITION)</text><text x="40" y="834" font-family="Arial" font-size="11" fill="#000">SCALE:  NOT TO SCALE       DRAWING R-1</text></svg>
