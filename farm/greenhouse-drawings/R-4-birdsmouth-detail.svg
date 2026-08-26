@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1345" viewBox="0 0 2000 1345">
+<rect width="2000" height="1345" fill="#ffffff"/>
+<rect x="690.00" y="620.00" width="144.00" height="240.00" fill="#f2f2f2" stroke="#000" stroke-width="1.6"/>
+<text x="762.00" y="740.00" font-family="Arial" font-size="11" font-weight="bold" fill="#000" text-anchor="middle">6x10 BEAM</text>
+<text x="762.00" y="753.00" font-family="Arial" font-size="9" fill="#000" text-anchor="middle">ROUGH-SAWN</text>
+<rect x="690.00" y="860.00" width="144.00" height="60.00" fill="#f2f2f2" stroke="#000" stroke-width="1.4"/>
+<text x="762.00" y="886.00" font-family="Arial" font-size="9" font-weight="bold" fill="#000" text-anchor="middle">6x6 POST BELOW</text>
+<polygon points="690.00,620.00 690.00,385.64 1314.00,151.64 1314.00,440.00 834.00,620.00" fill="#ffffff" stroke="#000" stroke-width="2.0"/>
+<text x="1038.00" y="490.40" font-family="Arial" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">2x12 RAFTER @ 24" O.C.</text>
+<text x="1038.00" y="502.40" font-family="Arial" font-size="8.5" fill="#000" text-anchor="middle">DF-L No.2 - 11 1/4" ACTUAL</text>
+<text x="1306.00" y="404.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">RAFTER CONTINUES NORTH</text>
+<rect x="679.50" y="385.64" width="10.50" height="534.36" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="673.50" y="385.64" width="6.00" height="534.36" fill="none" stroke="#000" stroke-width="1.0"/>
+<line x1="669.50" y1="401.64" x2="430.00" y2="254.00" stroke="#000" stroke-width="0.5"/>
+<line x1="430.00" y1="254.00" x2="254.00" y2="254.00" stroke="#000" stroke-width="0.5"/>
+<text x="250.00" y="214.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="end">WALL BUILDUP, 3/4" TOTAL</text>
+<text x="250.00" y="225.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">7/16" OSB + 1/4" FLAT-CUT PRO-PANEL,</text>
+<text x="250.00" y="236.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">OUTBOARD OF THE FRAMING FACE. RUNS UP</text>
+<text x="250.00" y="247.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">OVER THE BEAM AND COVERS THE RAFTER</text>
+<text x="250.00" y="258.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">PLUMB-CUT END - NO EXPOSED TIMBER HERE.</text>
+<line x1="690.00" y1="920.00" x2="690.00" y2="956.00" stroke="#000" stroke-width="0.35"/>
+<line x1="834.00" y1="920.00" x2="834.00" y2="956.00" stroke="#000" stroke-width="0.35"/>
+<line x1="690.00" y1="950.00" x2="834.00" y2="950.00" stroke="#000" stroke-width="0.8"/>
+<line x1="690.00" y1="945.00" x2="690.00" y2="955.00" stroke="#000" stroke-width="0.8"/>
+<line x1="834.00" y1="945.00" x2="834.00" y2="955.00" stroke="#000" stroke-width="0.8"/>
+<text x="762.00" y="969.00" font-family="Arial" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">SEAT CUT = BEAM WIDTH  6"</text>
+<text x="762.00" y="981.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="middle">RAFTER BEARS THE FULL WIDTH</text>
+<line x1="690.00" y1="674.00" x2="834.00" y2="620.00" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<line x1="690.00" y1="620.00" x2="690.00" y2="674.00" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<line x1="754.80" y1="642.68" x2="886.80" y2="665.60" stroke="#000" stroke-width="0.4"/>
+<text x="891.60" y="661.60" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="start">BIRDSMOUTH WEDGE - CHOP THIS OFF</text>
+<text x="891.60" y="673.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">VERTICAL LEG, AT THE PLUMB FACE ....  2 1/4"</text>
+<text x="891.60" y="684.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">SEAT RUN, TOP OF THE WEDGE .........  6"</text>
+<text x="891.60" y="695.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">HYPOTENUSE, ON THE STOCK EDGE ......  6 13/32"</text>
+<text x="891.60" y="708.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">MARK THE 6" RUN AND THE 2 1/4" LEG, CONNECT,</text>
+<text x="891.60" y="719.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">AND CUT. NO TRUE BIRDSMOUTH REQUIRED.</text>
+<line x1="690.00" y1="385.64" x2="595.20" y2="421.19" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<line x1="595.20" y1="421.19" x2="690.00" y2="674.00" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<line x1="834.00" y1="616.00" x2="966.00" y2="576.00" stroke="#000" stroke-width="0.5"/>
+<line x1="966.00" y1="576.00" x2="1098.00" y2="576.00" stroke="#000" stroke-width="0.5"/>
+<text x="1107.60" y="573.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">NOTCH CLOSES TO ZERO HERE -</text>
+<text x="1107.60" y="583.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">STOCK BOTTOM EDGE RESUMES.</text>
+<line x1="531.60" y1="385.64" x2="531.60" y2="674.00" stroke="#000" stroke-width="0.7"/>
+<line x1="526.60" y1="385.64" x2="536.60" y2="385.64" stroke="#000" stroke-width="0.7"/>
+<line x1="536.60" y1="385.64" x2="672.00" y2="385.64" stroke="#000" stroke-width="0.3" stroke-dasharray="2,3"/>
+<line x1="526.60" y1="620.00" x2="536.60" y2="620.00" stroke="#000" stroke-width="0.7"/>
+<line x1="536.60" y1="620.00" x2="672.00" y2="620.00" stroke="#000" stroke-width="0.3" stroke-dasharray="2,3"/>
+<line x1="526.60" y1="674.00" x2="536.60" y2="674.00" stroke="#000" stroke-width="0.7"/>
+<line x1="536.60" y1="674.00" x2="672.00" y2="674.00" stroke="#000" stroke-width="0.3" stroke-dasharray="2,3"/>
+<text x="522.60" y="494.82" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">9 3/4" PLUMB</text>
+<text x="522.60" y="505.82" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">9 1/8" PERPENDICULAR</text>
+<text x="522.60" y="516.82" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">RAFTER REMAINING ABOVE THE SEAT,</text>
+<text x="522.60" y="527.82" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">AT THIS FACE. CLEARS THE 2/3-DEPTH</text>
+<text x="522.60" y="538.82" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">MINIMUM OF 7 1/2".</text>
+<text x="522.60" y="650.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="end">2 1/4" PLUMB</text>
+<text x="522.60" y="661.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">(2 1/8" PERP.)</text>
+<line x1="1326.00" y1="440.00" x2="1326.00" y2="151.64" stroke="#000" stroke-width="0.7"/>
+<line x1="1322.00" y1="440.00" x2="1330.00" y2="440.00" stroke="#000" stroke-width="0.7"/>
+<line x1="1322.00" y1="151.64" x2="1330.00" y2="151.64" stroke="#000" stroke-width="0.7"/>
+<text x="1334.00" y="292.82" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="start">12" PLUMB</text>
+<text x="1334.00" y="303.82" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">FULL DEPTH</text>
+<line x1="688.00" y1="620.00" x2="688.00" y2="385.64" stroke="#000" stroke-width="0.6"/>
+<text x="706.80" y="418.40" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="start">PLUMB CUT AT THE BEAM SOUTH FACE</text>
+<text x="706.80" y="430.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">WEDGE OFF THE SQUARE STOCK END:</text>
+<text x="706.80" y="441.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">ALONG THE TOP EDGE .......  4 7/32"</text>
+<text x="706.80" y="452.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">SQUARE STOCK END .........  11 1/4"</text>
+<text x="706.80" y="463.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">PLUMB CUT, HYPOTENUSE ....  12"</text>
+<line x1="1050.00" y1="250.64" x2="1338.00" y2="250.64" stroke="#000" stroke-width="0.7"/>
+<line x1="1338.00" y1="250.64" x2="1338.00" y2="142.64" stroke="#000" stroke-width="0.7"/>
+<text x="1194.00" y="262.64" font-family="Arial" font-size="8.5" fill="#000" text-anchor="middle">12"</text>
+<text x="1352.40" y="199.64" font-family="Arial" font-size="8.5" fill="#000" text-anchor="start">4 1/2"</text>
+<text x="1194.00" y="274.64" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="middle">PITCH 4.5:12</text>
+<line x1="330.00" y1="385.64" x2="330.00" y2="860.00" stroke="#000" stroke-width="0.7"/>
+<text x="324.00" y="359.64" font-family="Arial" font-size="9" font-weight="bold" fill="#000" text-anchor="end">ABOVE GRADE</text>
+<line x1="325.00" y1="385.64" x2="335.00" y2="385.64" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="385.64" x2="310.00" y2="385.64" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="385.64" x2="260.00" y2="385.64" stroke="#000" stroke-width="0.4"/>
+<text x="256.00" y="383.64" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">7'-8 1/4"</text>
+<text x="256.00" y="394.64" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">ROOF PLANE AT SOUTH WALL</text>
+<line x1="325.00" y1="620.00" x2="335.00" y2="620.00" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="620.00" x2="310.00" y2="620.00" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="620.00" x2="260.00" y2="620.00" stroke="#000" stroke-width="0.4"/>
+<text x="256.00" y="618.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">6'-10 1/2"</text>
+<text x="256.00" y="629.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">BEAM TOP / SEAT CUT</text>
+<line x1="325.00" y1="860.00" x2="335.00" y2="860.00" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="860.00" x2="310.00" y2="876.00" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="876.00" x2="260.00" y2="876.00" stroke="#000" stroke-width="0.4"/>
+<text x="256.00" y="874.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">6'-0 1/2"</text>
+<text x="256.00" y="885.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">BEAM BOTTOM = WINDOW HEAD</text>
+<text x="40.00" y="1020.00" font-family="Arial" font-size="17" font-weight="bold" fill="#000" text-anchor="start">BIRDSMOUTH AT BEAM - SOUTH BEARING DETAIL</text>
+<text x="40.00" y="1038.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">SECTION - VIEW LOOKING WEST - NORTH AT RIGHT</text>
+<text x="40.00" y="1054.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">SCALE:  3" = 1'-0"          DRAWING R-4</text>
+<rect x="40.00" y="1068.00" width="330.00" height="205.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="48.00" y="1083.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">GENERAL NOTES</text>
+<text x="50.00" y="1095.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">1. SOUTH BEARING ONLY. NORTH BEARING IS A RAKED</text>
+<text x="50.00" y="1106.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   CAP PLATE, FULL WIDTH, NO NOTCH - SEE N-1.</text>
+<text x="50.00" y="1117.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">2. BEAM SOUTH FACE IS THE WALL FRAMING PLANE.</text>
+<text x="50.00" y="1129.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">3. POSTS AND BEAM FULLY CLAD - NO EXPOSED TIMBER</text>
+<text x="50.00" y="1140.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   ON THE SOUTH FACE.</text>
+<text x="50.00" y="1152.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">4. NO HEADER AT THE SOUTH WINDOWS - THE WALL IS</text>
+<text x="50.00" y="1163.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   NON-BEARING INFILL BETWEEN POSTS.</text>
+<text x="50.00" y="1174.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">5. WINDOW FLANGE LANDS ON THE BEAM UNDERSIDE.</text>
+<text x="50.00" y="1186.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   HEAD CASING SCRIBES TO ROUGH-SAWN TIMBER.</text>
+<text x="50.00" y="1197.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">6. NO ENGINEERED LUMBER ANYWHERE ON THIS BUILDING.</text>
+<text x="50.00" y="1209.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">7. UPLIFT CONNECTION NOT SHOWN - NOT YET DETAILED.</text>
+<text x="50.00" y="1220.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">8. SEE R-3 FOR RAFTER LAYOUT.</text>
+<rect x="380.00" y="1068.00" width="320.00" height="205.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="388.00" y="1083.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">CUT SCHEDULE - BIRDSMOUTH</text>
+<text x="390.00" y="1095.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">BIRDSMOUTH WEDGE:</text>
+<text x="390.00" y="1106.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">  SEAT RUN:  6" - BEAM FULL WIDTH</text>
+<text x="390.00" y="1117.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">NOTCH AT SOUTH FACE:  2 1/4" PLUMB</text>
+<text x="390.00" y="1129.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">                      2 1/8" PERPENDICULAR</text>
+<text x="390.00" y="1140.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">NOTCH AT NORTH END OF SEAT:  ZERO</text>
+<text x="390.00" y="1152.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">  HYPOTENUSE ON STOCK EDGE:  6 13/32"</text>
+<text x="390.00" y="1163.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">PLUMB-CUT WEDGE:</text>
+<text x="390.00" y="1174.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">  ALONG TOP EDGE:  4 7/32"</text>
+<text x="390.00" y="1186.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">  SQUARE STOCK END:  11 1/4"</text>
+<text x="390.00" y="1197.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">  PLUMB CUT:  12"</text>
+<text x="390.00" y="1209.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">RAFTER ABOVE SEAT:  9 3/4" PLUMB</text>
+<text x="390.00" y="1220.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">                    9 1/8" PERPENDICULAR</text>
+<text x="390.00" y="1231.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">FULL RAFTER DEPTH:  12" PLUMB</text>
+<text x="390.00" y="1243.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">                    11 1/4" ACTUAL</text>
+<text x="390.00" y="1254.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">PLUMB CUT:  FLUSH AT BEAM SOUTH FACE</text>
+<text x="390.00" y="1266.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">PITCH:  4.5:12  (20.556 DEG)</text>
+<text x="390.00" y="1277.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">BOTH RAFTER END CUTS ARE PARALLEL.</text>
+<rect x="710.00" y="1068.00" width="300.00" height="205.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="718.00" y="1083.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">MATERIAL SCHEDULE</text>
+<text x="720.00" y="1095.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">RAFTER:  2x12 DF-L No.2, 20'-0" STOCK</text>
+<text x="720.00" y="1106.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">BEAM:  6x10 ROUGH-SAWN DOUG FIR OR LARCH</text>
+<text x="720.00" y="1117.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">POST:  6x6 ROUGH-SAWN, GALV. STANDOFF BASE</text>
+<text x="720.00" y="1129.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">SHEATHING:  7/16" OSB</text>
+<text x="720.00" y="1140.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">CLADDING:  PRO-PANEL, FLAT-CUT TOP COURSE</text>
+<text x="720.00" y="1152.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">WALL BUILDUP:  3/4" TOTAL OUTBOARD OF THE</text>
+<text x="720.00" y="1163.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">               FRAMING FACE</text>
+</svg>
