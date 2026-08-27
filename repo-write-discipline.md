@@ -11,8 +11,26 @@
 2. **Reconstruct full content.** Partial writes are not supported. Take the fetched content, apply the change in full, produce the complete new file content.
 3. **Fetch the SHA before any `create_or_update_file`.** Required for updating an existing file. A stale SHA means someone else committed between your fetch and your write — re-fetch, don't force it.
 4. **Batch multi-file changes into one `push_files` call.** One commit, one message, every touched file in the same array. Never stagger a related set of changes across separate calls.
-5. **Read back after every write.** Fetch the file again post-commit and confirm the actual content landed, not just that the API returned success. The API returning a SHA does not mean the content is correct — the tool parameter itself can be wrong and the API will still commit successfully.
-6. **Never pass a shell reference as file content.** A tool call parameter is not a shell context. `$(cat file.md)`, backticks, environment variable syntax, none of it executes there. It gets written to the repo as literal text. This happened on this project, 2026-07-06: a `content` parameter was set to a literal bash command instead of the actual file text, and it silently committed roughly ninety seconds of garbage before a read-back caught it. Always inline the real content directly, every time.
+5. **Read back after every write, and compare the byte size.** Fetch the file again post-commit and confirm the actual content landed, not just that the API returned success. The API returning a SHA does not mean the content is correct — the tool parameter itself can be wrong and the API will still commit successfully. **The check is numeric, not visual: the `size` in the API response must equal the known byte count of the source. A stated intention to write real content is not verification.**
+6. **Never pass any reference, placeholder, or token as file content.** A tool call parameter is not a shell context and not a variable scope. `$(cat file.md)`, backticks, environment variable syntax, `__FILE__`, a path, a filename — none of it resolves. It gets written to the repo as literal text. **Every `content` field must contain the complete literal file text, inlined, every time.**
+
+---
+
+## Placeholder content is the highest-frequency MCP failure on this repo
+
+**It has happened twice, and the second time the doctrine forbidding it was already written in this file.**
+
+- **2026-07-06:** a `content` parameter was set to a literal bash command instead of file text. Caught by read-back after roughly ninety seconds of garbage in the repo.
+- **2026-08-27:** a `push_files` call sent the literal string `__FILE__` in the `content` field of all twelve files in a greenhouse drawing-renumber batch. Every one committed successfully and became 8 bytes. The API reported success twelve times. Recovery took the larger part of a working session, one file at a time. Nothing was lost only because the batch was a rename — every original still existed under its old name, untouched. **A batch that had overwritten files in place would have destroyed them.**
+
+**Why knowing the rule was not enough:** both incidents passed a preflight that consisted of *intending* to send real content. The intention is not the check. The check is the byte count on the way back out.
+
+**Mechanical rule, no exceptions:**
+
+- Before firing a multi-file `push_files`, print the byte size of every file being sent and confirm each is non-trivial.
+- After the call returns, compare the returned `size` for every file against that number.
+- A returned size in the single or double digits on a file that should be kilobytes means placeholder content landed. Stop and repair immediately — do not continue the session's work on top of a corrupted tree.
+- **Never delete the superseded version of a file until the replacement has been read back and size-verified.** In the 2026-08-27 incident this ordering is the only reason recovery was possible.
 
 ---
 
@@ -128,7 +146,7 @@ This bit on 2026-08-19 patching the span-stacking and night-mode fixes: two sepa
 
 ## Known failure modes
 
-- **`push_files` accepts placeholder content without error.** Verify every content field is real before firing.
+- **`push_files` accepts placeholder content without error.** Verify every content field is real before firing, and verify the returned byte size after. See the dedicated section above — this has happened twice.
 - **`get_file_contents` returns a placeholder for large files (roughly 25KB and up).** Use `web_fetch` on the raw GitHub URL as a fallback for files above that size.
 - **Files above roughly 50KB cannot be pushed inline via MCP.** Requires manual git from a local machine. This applies to the Cockpit widget HTML specifically — see `cal-widget.md`'s Hard Gates for the PowerShell-only push rule on that file.
 - **Local machine commits race MCP commits.** If two machines pull on a cadence (e.g. a 3-minute pull job), a fresh SHA on fetch can mean a local commit landed between your read and your write. Re-read before writing if there's any chance of that race.
