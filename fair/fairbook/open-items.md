@@ -36,8 +36,6 @@ Addendum §1 through §10 carry 2027 facts. The IAFE National Code of Show Ring 
 
 - **Provisional letter-suffix rule numbers.** The working-group edit pass inserted new rules in reading-order position using letter suffixes so existing cross-references would not ripple: CC 3.1.4a, CC 3.1.5a, CC 3.1.9a, CC 3.1.9b, CC 3.2.2a, CC 3.3.2a, CC 3.4.8a. All resolve to clean integers at the conformance renumber. CC 4.1.5 cites two of them and must be re-checked after the renumber.
 
-- **CC 3.1.12 and CC 6.1.4 are near-identical rules.** Both state the same pen/stall/cage guarantee, the same seniority-ordered remainder pass, the same capacity valve, the same tampering rule, and now the same no-mixing rule. Consolidating them into one rule at CC 2 was raised and deliberately not done inside an edit pass. Future item on its own merits.
-
 - **CC 2.4 distracting-clothing catch-all.** The dress standard prohibits clothing "in any way distracting." It has no stated limit, it can reach anything a person in authority dislikes, and it is the sentence in CC 2.4 most likely to produce a grievance the board cannot defend. Kept deliberately at Matt's direction; flagged once and recorded here.
 
 - **HSRB not in the archive.** The other 4-H project guides are (cat, dog, shooting sports, consumer science). The HSRB (Colorado 4-H Horse Show Rule Book, LA1500K, 2024) was pulled from the web this session. Add the official PDF to `fair/rulebooks/archive/` when convenient for a clean local source.
