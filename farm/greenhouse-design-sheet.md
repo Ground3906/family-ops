@@ -162,7 +162,7 @@ This reconciles with the original design's 18 ft 5 in depth and 6 ft 11 in roof 
 
 **Window head: flange lands directly on the beam underside. No header, no doubled top plate.** The south wall is non-bearing infill between posts - the header was never structural, and removing it plus the doubled plate took 8-1/2 in out of the riser stack in exchange for a trim detail: the window flange lands on a rough-sawn timber face rather than a flat framed nailer, so head casing will need to scribe to the beam. Accepted trade.
 
-**Framing plane:** beam south face is the framing reference. All wall framing - posts, studs, sill plate - sets flush to that same plane. **Posts and beam are fully clad, no exposed timber on the south face** - UV and weathering exposure on rough-sawn Doug fir/larch at 9,000 ft is not worth the maintenance. Sheathing runs up over the beam face and continues up to cover the rafter's south plumb-cut end (full 9-1/8 in remaining depth after the notch), so the wall plane is continuous from footing to roof edge with no gap at the rafter line. See Detail R-4 (south section) for the wall-head/roof-edge assembly.
+**Framing plane:** beam south face is the framing reference. All wall framing - posts, studs, sill plate - sets flush to that same plane. **Posts and beam are fully clad, no exposed timber on the south face** - UV and weathering exposure on rough-sawn Doug fir/larch at 9,000 ft is not worth the maintenance. Sheathing runs up over the beam face and continues up to cover the rafter's south plumb-cut end (full 9-1/8 in remaining depth after the notch), so the wall plane is continuous from footing to roof edge with no gap at the rafter line. See Detail D-2 for the wall-head/roof-edge assembly.
 
 **Wall buildup outboard of the framing face:** approx 7/16 in OSB sheathing + approx 1/4 in flat-cut (rib-ripped) Pro-Panel = **approx 3/4 in total.** This buildup is identical at the north (riser) wall - see Roof section for how it factors into overhang measurements.
 
@@ -268,14 +268,14 @@ Slope crest setback 2-3 ft on south and west. Differential settlement is expecte
 
 **South wall: HORIZONTAL.** 93.5 in wide x 34.5 in tall RO.
 
-**East wall: VERTICAL**, both units, matched at one sill line. **Locked 2026-08-24 as E-1** - see East Wall.
+**East wall: VERTICAL**, both units, matched at one sill line. **Locked 2026-08-24, drawn on S-3** - see East Wall.
 
 ### Distribution
 
 | Wall | Units | Orientation |
 |------|-------|-------------|
 | South | 4 | Horizontal, one per bay |
-| East | 2 | Vertical, both north of the door, matched sill - locked as E-1 |
+| East | 2 | Vertical, both north of the door, matched sill - drawn on S-3 |
 | East | 1 door | Full-lite |
 | **Floating** | **1** | Unassigned |
 | West | none | Solid wall, by decision |
@@ -286,11 +286,11 @@ Slope crest setback 2-3 ft on south and west. Differential settlement is expecte
 
 ---
 
-## EAST WALL - LOCKED 2026-08-24 (E-1)
+## EAST WALL - LOCKED 2026-08-24 (drawn on S-3)
 
-**Non-bearing.** Flat 2x6 nailers at all heads and sill plates, **no headers** - rough opening heads rack straight to the top plate. Full lateral wind pressure across a face that is mostly glass and door, so structural sheathing is still required. The east rafter is set inboard of this wall's inner face and the roof is carried to the wall plane on **2x12 lookout blocking, 5-1/2 in long at 24 in o.c.** - sheathing nailers only, not structural. See R-3.
+**Non-bearing.** Flat 2x6 nailers at all heads and sill plates, **no headers** - rough opening heads rack straight to the top plate. Full lateral wind pressure across a face that is mostly glass and door, so structural sheathing is still required. The east rafter is set inboard of this wall's inner face and the roof is carried to the wall plane on **2x12 lookout blocking, 5-1/2 in long at 24 in o.c.** - sheathing nailers only, not structural. See S-5.
 
-Figures below read off `farm/greenhouse-drawings/E-1-east-wall-framing-elevation.svg`, not from memory. R.O. edges measured from the container (north) face.
+Figures below read off `farm/greenhouse-drawings/S-3-east-wall-framing-elevation.svg`, not from memory. R.O. edges measured from the container (north) face.
 
 | Element | Position from container | Sill | Head |
 |---------|------------------------|------|------|
@@ -323,7 +323,7 @@ No glass, by decision - west glazing dumps summer heat exactly when the building
 | Intake louver | **J&D 30 in gravity shutter, 31 x 31 in R.O.**, south edge 1 ft 5-1/2 in off the south corner, sill 3 ft 11-3/8 in, head 6 ft 6-3/8 in, header (2) 2x6 on edge |
 | Insulation | 5.5 in closed cell, full cavity |
 
-**Bearing wall - real headers required**, unlike the east wall. Figures read off `farm/greenhouse-drawings/W-1-west-wall-framing-elevation.svg`.
+**Bearing wall - real headers required**, unlike the east wall. Figures read off `farm/greenhouse-drawings/S-2-west-wall-framing-elevation.svg`.
 
 **The louver lives here, not on the east wall.** Putting the makeup-air intake on the same face as the exhaust fan lets the fan short-circuit into its own inlet and sweep nothing. West is the far end of the run; air crosses the full building before it leaves. Locked 2026-08-24.
 
@@ -333,9 +333,9 @@ Natural home for thermal mass - unresolved, open item.
 
 ## NORTH WALL - RISER. LOCKED 2026-08-25
 
-Stud wall standing on the container's top rail. **No posts, no bays** - the 10 ft bay module is a south wall fact and does not exist here. Studs run 2x6 at 16 in o.c. continuous the full 40 ft, stacked under the rafters; openings are framed where they land.
+Stud wall standing on the container's top rail. **No posts, no bays** - the 10 ft bay module is a south wall fact and does not exist here. Studs run 2x6 at 16 in o.c. continuous the full 40 ft; rafters are at 24 in o.c. and DO NOT stack on the studs (changed 2026-08-27, see S-4/S-5); openings are framed where they land.
 
-**Datum for this wall is the top of the container, 8 ft 10 in above grade.** N-1 dimensions off that datum on the left chain and off grade on the right.
+**Datum for this wall is the top of the container, 8 ft 10 in above grade.** S-4 dimensions off that datum on the left chain and off grade on the right.
 
 ### Height stack, above container top
 
@@ -367,7 +367,7 @@ Closes at 40 ft 0 in exactly.
 
 | Element | Spec |
 |---|---|
-| Studs | 2x6 at 16 in o.c., continuous full 40 ft, stacked under rafters |
+| Studs | 2x6 at 16 in o.c., continuous full 40 ft. Rafters at 24 in o.c. do NOT stack on studs |
 | Stud tops | Bevel cut 4.5:12, 5-7/8 in measured on the cut |
 | Top plate | (2) 2x6, 3 in perpendicular to the bevel, set flush north |
 | Between the pair | (3) 2x6 pack - king / stud / king, 4-1/2 in |
@@ -431,7 +431,7 @@ Stands on the container's **top side rail**, not the roof deck.
 2. Treated bottom plate on the angle, sill seal/butyl between.
 3. 2x6 stud wall, 16 in centers, **4 ft 9 in tall** (see Framing Geometry). Stud tops **bevel cut 4.5:12**, 5-7/8 in on the cut, carrying a **doubled 2x6 top plate laid on that same bevel**, 3 in perpendicular. Plates set flush north; the 3/8 in of bare stud left over sits on the interior. See North Wall.
 4. Rafters bear full-width on the raked cap, plumb-cut flush at the riser's outside framing face. No notch, no hurricane-tie-at-birdsmouth condition - uplift connection method at this bearing needs its own detail, not yet drawn.
-5. Sheathing, weather barrier, metal siding, full height up to and over the rafter top edge (see Detail R-4, north section).
+5. Sheathing, weather barrier, metal siding, full height up to and over the rafter top edge (see Detail D-4, north roof edge - NOT YET DIGITISED).
 
 Uplift: the angle-to-rail connection is the hold-down for the entire roof. Thermal break: 2 in closed cell over the steel, inside, lapping the rail.
 
@@ -451,7 +451,7 @@ Uplift: the angle-to-rail connection is the hold-down for the entire roof. Therm
 | | |
 |---|---|
 | Sheathing | North section only. Edge terminates at 9 ft 7-1/4 in up the rake from the south framing face - this is also the exact point where the Phase 1 upper metal panel's south edge, and the future Phase 2 poly panel's north edge, both land |
-| Blocking | Continuous between rafters at the sheathing edge - backs the fastener row and the step transition (Detail R-1) |
+| Blocking | Continuous between rafters at the sheathing edge - backs the fastener row and the step transition (Detail D-5) |
 | Upper (north) metal panel | Bears on sheathing |
 | Lower (south) metal panel | Bears direct on bare rafters, 24 in o.c. span, no purlins |
 | Step at sheathing edge | 7/16 in (sheathing thickness) - ramped by the lower panel's own flex as it climbs onto the deck under the lap. Closed with foam or butyl at the step line |
@@ -480,9 +480,9 @@ At conversion: strip the lower metal panel and the north-section sheathing above
 
 **Poly:** 8mm triple-wall, 10 panels at 4 ft x 10 ft, flutes down-slope, UV face out. Bears directly on rafters, no purlins. Panel joints at each rafter (9 joints): H-profile aluminum base-and-cap, base screwed to rafter, panels float in the cap - accommodates the ~0.25 in per 10 ft thermal movement, no fasteners through the panel field.
 
-**Poly eave (south, bottom edge), Detail R-5:** 4 in overhang past the finished wall surface. **Termination is breather tape only - no U-profile, no clamped or snap-fit edge trim.** Locked reason: a shedding roof at 4.5:12 sends sliding snow/ice directly across this edge, and any clamp-style channel is a catch point that gets torn off by the slide. Tape seals the flute ends and allows condensation weep without presenting a catchable edge. Accepted maintenance cost: periodic re-taping.
+**Poly eave (south, bottom edge), Detail D-7 (not yet drawn):** 4 in overhang past the finished wall surface. **Termination is breather tape only - no U-profile, no clamped or snap-fit edge trim.** Locked reason: a shedding roof at 4.5:12 sends sliding snow/ice directly across this edge, and any clamp-style channel is a catch point that gets torn off by the slide. Tape seals the flute ends and allows condensation weep without presenting a catchable edge. Accepted maintenance cost: periodic re-taping.
 
-**Poly-to-metal seam (Detail R-1 legacy, now superseded by the direct-lap method below):** the north edge of the poly (at the 9 ft 7-1/4 in line) is overlapped by the Phase 1... no - by the PERMANENT upper metal panel, which never moves between phases. **The offset/transition flashing originally specced (old Detail R-1) is DEAD.** Replaced by a direct 6 in dry lap: metal edge (now extended 6 in past its Phase-1-only position to reach **10 ft 10-1/4 in total, see revised panel length below**) laps over the poly, bearing on the nine H-caps (which stand proud of the poly face by roughly 1/2 in) plus one mid-bay foam/spacer pad per bay (24 in module, so roughly every 2 ft) to prevent the metal from contacting and abrading the poly face under snow load between caps. No sealant, no rubber gasket, no continuous strip - dry lap, low-friction bearing only on the caps and the discrete spacer pads.
+**Poly-to-metal seam (legacy detail, now superseded by the direct-lap method below):** the north edge of the poly (at the 9 ft 7-1/4 in line) is overlapped by the Phase 1... no - by the PERMANENT upper metal panel, which never moves between phases. **The offset/transition flashing originally specced (legacy detail) is DEAD.** Replaced by a direct 6 in dry lap: metal edge (now extended 6 in past its Phase-1-only position to reach **10 ft 10-1/4 in total, see revised panel length below**) laps over the poly, bearing on the nine H-caps (which stand proud of the poly face by roughly 1/2 in) plus one mid-bay foam/spacer pad per bay (24 in module, so roughly every 2 ft) to prevent the metal from contacting and abrading the poly face under snow load between caps. No sealant, no rubber gasket, no continuous strip - dry lap, low-friction bearing only on the caps and the discrete spacer pads.
 
 **Upper panel length revision for the 6 in poly lap:** 10 ft 10-1/4 in (10 ft 4-1/4 in original + 6 in lap allowance). This is the number that should be used for Phase 1 ordering/cutting - see Panel Schedule above, already reflects this.
 
@@ -492,11 +492,11 @@ At conversion: strip the lower metal panel and the north-section sheathing above
 
 **Snow shed minimums:** heated poly 20-22 deg, unheated poly 28-30 deg, heated metal 18-20 deg, unheated metal 25-30 deg. Locked 4.5:12 (20.6 deg) clears the heated-poly minimum with margin.
 
-### Roof edge details, both ends (Detail R-4, shared sheet, two sections)
+### Roof edge details, both ends (SPLIT 2026-08-26 - south is D-2, north is D-4)
 
-**North (Detail R-4, north section):** riser cap plate (raked) up through rafter bearing, sheathing over the rafter's top edge, flat-ripped (rib removed) top course of wall Pro-Panel, standard drip edge with hemmed leg over the flat course, **drip edge turns down over the riser wall face** (covers the sheathing edge and flat wall course's top edge - locked over the alternative of stopping at the panel edge). Roof panel (4 in cantilever) laps over the drip edge. Outside closure strips under the roof panel ribs at this edge - required here because this is the up-slope, windward edge and wind-driven rain can push under open ribs; not required at the south eave because that edge is shedding water outward, not receiving it.
+**North (Detail D-4, not yet digitised):** riser cap plate (raked) up through rafter bearing, sheathing over the rafter's top edge, flat-ripped (rib removed) top course of wall Pro-Panel, standard drip edge with hemmed leg over the flat course, **drip edge turns down over the riser wall face** (covers the sheathing edge and flat wall course's top edge - locked over the alternative of stopping at the panel edge). Roof panel (4 in cantilever) laps over the drip edge. Outside closure strips under the roof panel ribs at this edge - required here because this is the up-slope, windward edge and wind-driven rain can push under open ribs; not required at the south eave because that edge is shedding water outward, not receiving it.
 
-**South (Detail R-4, south section):** beam top through rafter's remaining 9-1/8 in depth after the birdsmouth notch, sheathing over the rafter end, flat-ripped top course of wall Pro-Panel, standard drip edge with hemmed leg over the flat course, roof panel (8 in overhang, Phase 1 metal) laps over the drip edge. Order of assembly: flat wall course first, drip edge over it, roof panel over the drip edge - water sheds off roof onto drip edge, breaks clean at the hem, falls past the wall face, nothing runs behind.
+**South (Detail D-2):** beam top through rafter's remaining 9-1/8 in depth after the birdsmouth notch, sheathing over the rafter end, flat-ripped top course of wall Pro-Panel, standard drip edge with hemmed leg over the flat course, roof panel (8 in overhang, Phase 1 metal) laps over the drip edge. Order of assembly: flat wall course first, drip edge over it, roof panel over the drip edge - water sheds off roof onto drip edge, breaks clean at the hem, falls past the wall face, nothing runs behind.
 
 ### Gutters
 **Not installed in Phase 1.** Metal's 8 in overhang sheds clear on its own with no substrate needed. **Phase 2, when the poly's 4 in overhang replaces the metal at the eave, is the intended point to add a gutter** - the poly eave becomes the mounting reference. Gutter mounting height at that time must keep the front lip at least 1 in below the poly's underside so sliding snow/ice passes over the top rather than catching the lip. No fascia or gutter substrate is built into Scope B framing - flagged as a Phase 2 owner addition, not a contractor scope item.
@@ -632,42 +632,61 @@ Locked 2026-08-25 out of the north wall session retrospective. Extended 2026-08-
 - **No coined vocabulary.** If a term is not already in this sheet, it does not get used in conversation about this sheet.
 - **Layout arithmetic gets computed, not spoken.** Any spacing run that has to close on a total is checked programmatically before it is stated.
 - **Read an existing sheet before drawing a new one.** Format is inherited from the set, not invented per sheet. The first roof framing plan attempt on 2026-08-26 was built without opening N-1 and had to be thrown away and redrawn - wrong tool, wrong conventions, no title block, no note boxes. The set only reads as a set if each new sheet is copied off the last one.
-- **A callout describing a member is not the member.** If something is in the drawing''s scope, it gets drawn. A paragraph explaining where the lookouts go, on a sheet with no lookouts drawn, is not a lookout detail.
+- **A callout describing a member is not the member.** If something is in the drawing's scope, it gets drawn. A paragraph explaining where the lookouts go, on a sheet with no lookouts drawn, is not a lookout detail.
 - **Note text wraps to measured string width.** Lines are packed against the box width less padding, computed, not hand-broken. When notes overflow, the answer is a bigger box or shorter notes - never silently shrinking type to hide a wrapping bug.
 - **Verified arithmetic is not a legible drawing.** The rafter spacing on R-2 was provably correct at 24 in o.c. and still read as 16 in o.c., because 21 rafter lines and 13 panel lines drawn at similar weight merge into one field. Check what the sheet communicates as a separate step from checking that the numbers close.
 - **Notes are written for a framer on a ladder in bad weather.** Short lines. No explaining things a framer already knows. If a note runs to five lines it is a specification, and it belongs in this sheet rather than on the drawing.
+- **The drawings outrank this sheet on anything already drawn.** This sheet is early-stage narrative; the detail sessions have overtaken it repeatedly. Where a sheet draws a thing, the sheet is authoritative and this document is a lagging description of it. This document governs only what is not yet drawn. Added 2026-08-27 after three separate turns in one session were lost to treating a loose figure here as a conflict against correct drawn geometry - the bay width being the clearest case: this sheet says four bays at 10 ft, the drawing says 9 ft 10-3/8 in centre to centre, and only the drawing closes on 40 ft.
+- **Rebuild by transcription, not re-authoring.** When a sheet is redrawn with its framing locked unchanged, extract every member out of the superseded file programmatically, convert to real inches, and transcribe. Never rebuild members from a dimension table. Tables carry non-member columns - S-1's bay table has a GAP column between the stud against the post and the king stud - and reading past one shifts every assignment down the row. That error, plus never extracting the sole plate or footings at all, cost four failed rebuilds of S-1 on 2026-08-27 before the sheet was rebuilt off its own geometry.
 
 ---
 
 ## DRAWINGS
 
-**Drawing set is consistent as of 2026-08-25.** All four wall elevations carry roof plane 7 ft 8-1/4 in at the south wall and peak 14 ft 7 in.
+**Drawing set is consistent as of 2026-08-27.** All four wall elevations carry roof plane 7 ft 8-1/4 in at the south wall and peak 14 ft 7 in, all sheets are on the S-/D- numbering scheme, and every sheet that names rafter spacing says 24 in o.c.
 
 `farm/greenhouse-render-prompts.md` - tested exterior render prompts (south, north, east views) plus prompting lessons.
 
 **East elevation, dimensioned PDF** - drawn to the PRE-2026-08-18 geometry. Peak, riser, and sill heights it shows are now superseded. Do not build from it; needs a redraw once the east wall re-geometry (Open Item 13) is resolved.
 
-**South wall framing elevation (S-1)** - `farm/greenhouse-drawings/south-wall-framing-elevation.svg`. Corrected 2026-08-25: sill, window head and beam all dropped, window rough opening fixed from 34 in to 34-1/2 in, south vent panels shortened to 24 in. Roof plane unchanged. Scale is labelled 1/2 in = 1 ft but drawn at 0.475 - known and accepted.
+**Sheet numbering, locked 2026-08-27.** Two schemes were live at once (the legacy spec list assigned R-2/R-3/R-4 to details while the drawn sheets used the same numbers for different drawings). Resolved by discipline code, wall identity moved into the title block: **S-series is structural** - framing elevations and the framing plan. **D-series is details.** No shared number space, so the collision cannot recur as the set grows.
 
-**West wall framing elevation (W-1)** - `farm/greenhouse-drawings/W-1-west-wall-framing-elevation.svg`. Drawn and committed 2026-08-24. Carries the gravity intake louver rough opening. **Unaffected by the 2026-08-25 correction** - its roof plane and peak were already right.
+| Sheet | File | Was |
+|---|---|---|
+| **S-1** | `S-1-south-wall-framing-elevation.svg` | S-1 (legacy, unprefixed file) |
+| **S-2** | `S-2-west-wall-framing-elevation.svg` | W-1 |
+| **S-3** | `S-3-east-wall-framing-elevation.svg` | E-1 |
+| **S-4** | `S-4-north-wall-framing-elevation.svg` | N-1 |
+| **S-5** | `S-5-roof-framing-plan.svg` | R-3 |
+| **D-1** | `D-1-birdsmouth-detail.svg` | R-4 |
+| **D-2** | `D-2-south-roof-edge-detail.svg` | R-6 |
+| **D-3** | `D-3-panel-layout.svg` | R-2 |
+| **D-4** | *not yet digitised* | north roof edge |
+| **D-5** | `D-5-sheathing-termination.svg` | R-1 |
 
-**East wall framing elevation (E-1)** - `farm/greenhouse-drawings/E-1-east-wall-framing-elevation.svg`. Drawn and committed 2026-08-24. **Unaffected by the 2026-08-25 correction.** Supersedes the legacy dimensioned east elevation PDF above.
+All legacy filenames and the four legacy generators were deleted the same session. No old-scheme reference survives anywhere in the set.
 
-**North wall (riser) framing elevation (N-1)** - `farm/greenhouse-drawings/N-1-north-wall-framing-elevation.svg`. Drawn and committed 2026-08-25, rerun the same session against the dropped sill. Carries the riser height stack, the four-pair vent layout, box headers with bevel-ripped cripples, the beveled plate condition, and an east orientation arrow. Two dimension chains: left off the container top, right off grade.
+**South wall framing elevation (S-1)** - `farm/greenhouse-drawings/S-1-south-wall-framing-elevation.svg`. Rebuilt 2026-08-27 from the superseded sheet's own extracted geometry. Now carries the 21 rafter tails at 24 in o.c. above the beam (the old sheet drew no rafters at all) and is drawn at true 1/2 in = 1 ft - the old sheet was labelled 1/2 in but drawn at 0.475, now corrected. Framing content is otherwise identical to the superseded sheet: continuous sole plate the full 40 ft, footings from -1 ft 4 in to 0 ft 6 in, four jamb studs per bay both sides, built-up sill over each vent, window rough opening as a void bounded by real members. Generator at `generators/generate_s1.py`. Note the bay table's GAP column - see DRAWING PRACTICE.
 
-**Roof framing plan (R-3)** - `farm/greenhouse-drawings/R-3-roof-framing-plan.svg`. Drawn 2026-08-26. Carries the 24 in o.c. rafter layout, the inboard east rafter, lookout blocking, the blocking line at the sheathing edge, and the snow load design basis.
+**West wall framing elevation (S-2)** - `farm/greenhouse-drawings/S-2-west-wall-framing-elevation.svg`. Drawn 2026-08-24. Carries the gravity intake louver rough opening. Rafter callout corrected 16 in to 24 in o.c. on 2026-08-27.
 
-**Birdsmouth cut detail (R-4)** - `farm/greenhouse-drawings/R-4-birdsmouth-detail.svg`. Drawn 2026-08-26. Bench detail for cutting the rafter ends: both wedges dimensioned on all three sides.
+**East wall framing elevation (S-3)** - `farm/greenhouse-drawings/S-3-east-wall-framing-elevation.svg`. Drawn 2026-08-24. Supersedes the legacy dimensioned east elevation PDF above. Lookout callout corrected 16 in to 24 in o.c. on 2026-08-27. **Fan rough opening still carries an ASSUMED 21 in square - verify before framing.**
 
-**South roof edge crosscut (R-6)** - `farm/greenhouse-drawings/R-6-south-roof-edge-detail.svg`. Drawn 2026-08-26. Section through a 6x6 post: sheathing, horizontal Pro-Panel with the ripped flat top course, drip edge with kicker, roof panel at 8 in overhang. Layers drawn exploded.
+**North wall (riser) framing elevation (S-4)** - `farm/greenhouse-drawings/S-4-north-wall-framing-elevation.svg`. Drawn 2026-08-25. Carries the riser height stack, the four-pair vent layout, box headers with bevel-ripped cripples, the beveled plate condition, and an east orientation arrow. Two dimension chains: left off the container top, right off grade. Rewritten 2026-08-27: rafters 31 at 16 in became 21 at 24 in matching S-5, and the rafter line now sits independent of the stud line. **Riser studs remain 16 in o.c. and did not move** - all 77 stud and cripple members are byte-identical to the previous version. **This sheet has no generator** - the rafter swap was done as a scripted surgical edit rather than a full transcription, deliberately, because re-authoring 147 members was the exact failure that cost four rounds on S-1 the same day. It is the one sheet in the set that cannot be regenerated. Open item.
 
-**Panel layout (R-2)** - `farm/greenhouse-drawings/R-2-panel-layout.svg`. Regenerated 2026-08-26 against the 24 in o.c. layout.
+**Roof framing plan (S-5)** - `farm/greenhouse-drawings/S-5-roof-framing-plan.svg`. Drawn 2026-08-26. Carries the 24 in o.c. rafter layout pulled from the west, the inboard east rafter, lookout blocking, the blocking line at the sheathing edge, and the snow load design basis. **This sheet is the rafter layout authority** - S-1 and S-4 both draw the same 21 rafters and refer back here rather than re-dimensioning them.
 
-**The north roof edge is a separate hand-drawn detail, not a shared sheet with the south.** The design sheet previously called for one R-4 carrying both ends; that was split 2026-08-26 on the owner's call. The hand drawing is not yet digitised - it predates the beveled cap plate, the box header and the 2026-08-25 sill drop, so digitising it is a spec-walk, not a trace.
+**Birdsmouth cut detail (D-1)** - `farm/greenhouse-drawings/D-1-birdsmouth-detail.svg`. Drawn 2026-08-26. Bench detail for cutting the rafter ends: both wedges dimensioned on all three sides.
 
-**Remaining roof and vent construction details** - locked as specifications 2026-08-18, not yet drawn as sheets. See `farm/greenhouse-roof-vent-details.md` for the full detail set: R-1 (sheathing termination/step), R-2 (panel layout/chalk line), R-3 (metal-to-metal endlap), R-4 (roof edge conditions, north and south, shared sheet), R-5 (poly eave termination), V-1 (vent panel construction).
+**South roof edge crosscut (D-2)** - `farm/greenhouse-drawings/D-2-south-roof-edge-detail.svg`. Drawn 2026-08-26. Section through a 6x6 post: sheathing, horizontal Pro-Panel with the ripped flat top course, drip edge with kicker, roof panel at 8 in overhang. Layers drawn exploded.
 
-> **NUMBERING COLLISION - OPEN, MUST BE RESOLVED BEFORE THE SET GROWS.** Two schemes are live in this document at once. The legacy spec list immediately above assigns R-2, R-3 and R-4 to one set of details; the drawn sheets registered further up assign the same three numbers to different drawings. R-3 is both "metal-to-metal endlap" and the roof framing plan. R-4 is both "roof edge conditions, shared sheet" and the birdsmouth cut detail. R-2 appears twice. R-6 was picked on the assumption R-5 was taken, which is true only under the legacy scheme. This is a real hazard for anyone building from the set, not a housekeeping item. Next drawing session opens by picking one scheme and renumbering everything to it.
+**Panel layout (D-3)** - `farm/greenhouse-drawings/D-3-panel-layout.svg`. Regenerated 2026-08-26 against the 24 in o.c. layout.
+
+**Sheathing termination and metal step (D-5)** - `farm/greenhouse-drawings/D-5-sheathing-termination.svg`. Was drawn and committed but never registered in this document until 2026-08-27, when it surfaced during the renumber - it had been sitting in the drawings folder while this sheet still listed it as an undrawn specification. Rafter spacing corrected 16 in to 24 in o.c. the same session. **Still the only sheet in the set drawn in colour rather than black-and-white line work, and it is not to scale.** Owner's call to leave both as-is. No generator.
+
+**North roof edge (D-4) - STILL TO BE DIGITISED.** The north and south roof edges are separate details, not a shared sheet; that split was made 2026-08-26 on the owner's call. The south end is drawn as D-2. **The north end exists only as a hand drawing and is not in the repo.** It predates the beveled cap plate, the box header and the 2026-08-25 sill drop, so digitising it is a spec-walk, not a trace.
+
+**Remaining vent and roof construction details** - locked as specifications 2026-08-18, not yet drawn. See `farm/greenhouse-roof-vent-details.md`. Under the new scheme: **D-6** metal-to-metal endlap (largely superseded by the dry-lap note), **D-7** poly eave termination, **D-8** vent panel construction (was V-1). Sheets R-3, R-4 and V-1 hand drawings are also still outside the repo.
 
 **Locked build sequence for future drawing sessions (owner's order, spans multiple sessions):** east elevation, south elevation, west elevation, north elevation, roof framing plan, wall framing plans, aerial layout, footer/footing plan.
 
@@ -682,7 +701,7 @@ Locked 2026-08-25 out of the north wall session retrospective. Extended 2026-08-
 - **The tall bay is a feature.** Warm air collecting at the peak against insulated mass under a metal roof is a reservoir and an ideal intake plenum - now literally true, since that peak-height air is what the container supply fans move.
 - **A birdsmouth notch and a raked bearing plate solve the same bearing problem differently** - notch costs rafter depth and consumes stock past the heel; a raked plate costs nothing off the rafter and keeps full depth, at the cost of a beveled-cut plate/studs at that one wall.
 - **Parallel plumb cuts on a rafter make a parallelogram, not a rectangle** - top and bottom edges are equal length but offset from each other. The usable rake (what the roof covers) is shorter than the stock length by one wedge, not two, when only one end is notched.
-- **A short, dry material lap outperforms a fabricated flashing piece when the height difference between two roof planes is small** - discovered this session solving the metal-to-poly transition; the offset flashing (old R-1) was engineering a solution to a gap smaller than the tolerance of the materials meeting it.
+- **A short, dry material lap outperforms a fabricated flashing piece when the height difference between two roof planes is small** - discovered this session solving the metal-to-poly transition; the offset flashing (legacy detail) was engineering a solution to a gap smaller than the tolerance of the materials meeting it.
 - **Sliding snow at pitch rules out any clamped or snap-fit edge hardware at a shedding roof's leading edge** - governs both the poly eave (no U-channel) and the gutter timing (Phase 2 only, poly's shallower overhang, not Phase 1's metal).
 - **Wax cylinder actuators only open on heat - they are closed by design through winter**, which reframes any low-mounted panel's snow/drift exposure as a non-issue, since the panel behaves like any other closed wall section in the season when drifting occurs.
 - **A bevel across a member's width is not a bevel along its length.** The riser cap plate is raked 4.5:12 across 5-1/2 in, which costs 2-1/16 in of headroom at every opening on that wall. Along the 40 ft face it costs nothing - the peak is level end to end. Getting the axis wrong turns a 2 in problem into an 18 in one.
