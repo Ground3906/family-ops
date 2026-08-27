@@ -1,1 +1,101 @@
-__FILE__
+<svg xmlns="http://www.w3.org/2000/svg" width="2150" height="1420" viewBox="0 0 2150 1420">
+<rect width="2150" height="1420" fill="#ffffff"/>
+<rect x="1050.00" y="606.00" width="144.00" height="240.00" fill="#f2f2f2" stroke="#000" stroke-width="1.6"/>
+<text x="1122.00" y="722.00" font-family="Arial" font-size="10.5" font-weight="bold" fill="#000" text-anchor="middle">6x10 BEAM</text>
+<text x="1122.00" y="735.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="middle">ROUGH-SAWN</text>
+<rect x="1050.00" y="846.00" width="144.00" height="192.00" fill="#f2f2f2" stroke="#000" stroke-width="1.4"/>
+<text x="1122.00" y="922.80" font-family="Arial" font-size="10.5" font-weight="bold" fill="#000" text-anchor="middle">6x6 POST</text>
+<polyline points="1050.00,1038.00 1062.00,1045.00 1086.00,1031.00 1110.00,1045.00 1134.00,1031.00 1158.00,1045.00 1182.00,1031.00 1194.00,1038.00" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="1122.00" y="1062.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="middle">POST CONTINUES BELOW - NOT SHOWN</text>
+<polygon points="1050.00,606.00 1050.00,371.64 1578.00,173.64 1578.00,462.00 1194.00,606.00" fill="#ffffff" stroke="#000" stroke-width="2.0"/>
+<text x="1386.00" y="481.20" font-family="Arial" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">2x12 RAFTER @ 24" O.C.</text>
+<text x="1386.00" y="493.20" font-family="Arial" font-size="8.5" fill="#000" text-anchor="middle">DF-L No.2</text>
+<line x1="1050.00" y1="660.00" x2="1194.00" y2="606.00" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<line x1="1050.00" y1="606.00" x2="1050.00" y2="660.00" stroke="#000" stroke-width="0.7" stroke-dasharray="5,4"/>
+<rect x="1017.90" y="371.64" width="10.50" height="666.36" fill="#e8e8e8" stroke="#000" stroke-width="1.2"/>
+<polyline points="996.30,371.64 996.30,491.64 978.30,491.64 978.30,527.64 996.30,527.64 996.30,707.64 978.30,707.64 978.30,743.64 996.30,743.64 996.30,923.64 978.30,923.64 978.30,959.64 996.30,959.64 996.30,1038.00" fill="none" stroke="#000" stroke-width="1.6"/>
+<polyline points="1139.89,316.33 974.70,378.28 974.70,474.28 962.70,481.48" fill="none" stroke="#000" stroke-width="1.8"/>
+<line x1="804.30" y1="431.38" x2="1578.00" y2="141.24" stroke="#000" stroke-width="1.8"/>
+<line x1="804.30" y1="428.38" x2="1578.00" y2="138.24" stroke="#000" stroke-width="1.0"/>
+<line x1="804.30" y1="431.38" x2="804.30" y2="428.38" stroke="#000" stroke-width="1.4"/>
+<line x1="962.70" y1="481.48" x2="850.00" y2="272.00" stroke="#000" stroke-width="0.45"/>
+<line x1="850.00" y1="272.00" x2="788.00" y2="272.00" stroke="#000" stroke-width="0.45"/>
+<text x="780.00" y="262.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="end">DRIP EDGE - STANDARD, HEMMED LEG</text>
+<text x="780.00" y="273.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">NO SHEATHING HERE - FASTEN TO RAFTER TOPS.</text>
+<text x="780.00" y="284.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">TOP LEG 4" .  FACE LEG 4" .  KICKER 1/2".</text>
+<line x1="978.30" y1="725.64" x2="850.00" y2="492.00" stroke="#000" stroke-width="0.45"/>
+<line x1="850.00" y1="492.00" x2="788.00" y2="492.00" stroke="#000" stroke-width="0.45"/>
+<text x="780.00" y="482.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="end">WALL PRO-PANEL - RUN HORIZONTAL</text>
+<text x="780.00" y="493.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">3/4" RIB AT 9" O.C.  TOP COURSE RIPPED FLAT.</text>
+<text x="780.00" y="504.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">RIBS SHOWN SCHEMATIC.</text>
+<line x1="1017.90" y1="798.00" x2="850.00" y2="702.00" stroke="#000" stroke-width="0.45"/>
+<line x1="850.00" y1="702.00" x2="788.00" y2="702.00" stroke="#000" stroke-width="0.45"/>
+<text x="780.00" y="692.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="end">WALL SHEATHING - 7/16" OSB</text>
+<text x="780.00" y="703.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="end">UP OVER THE BEAM AND THE RAFTER END.</text>
+<line x1="1338.00" y1="231.24" x2="1580.00" y2="217.00" stroke="#000" stroke-width="0.45"/>
+<line x1="1580.00" y1="217.00" x2="1642.00" y2="217.00" stroke="#000" stroke-width="0.45"/>
+<text x="1650.00" y="207.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="start">PRO-PANEL ROOF METAL</text>
+<text x="1650.00" y="218.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">LAPS OVER THE DRIP EDGE TOP LEG.</text>
+<text x="1650.00" y="229.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">NO CLOSURE STRIPS AT THIS EDGE.</text>
+<line x1="1114.80" y1="628.80" x2="1580.00" y2="642.00" stroke="#000" stroke-width="0.45"/>
+<line x1="1580.00" y1="642.00" x2="1642.00" y2="642.00" stroke="#000" stroke-width="0.45"/>
+<text x="1650.00" y="632.00" font-family="Arial" font-size="8.5" font-weight="bold" fill="#000" text-anchor="start">BIRDSMOUTH - CHOP THE WEDGE OFF</text>
+<text x="1650.00" y="643.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">SEAT 6" .  LEG 2 1/4" .  HYP 6 13/32".</text>
+<text x="1650.00" y="654.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">RAFTER ABOVE SEAT 9 3/4" PLUMB, 9 1/8" PERP.</text>
+<text x="1650.00" y="665.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">FULL CUT GEOMETRY ON D-1.</text>
+<line x1="804.30" y1="306.00" x2="804.30" y2="426.38" stroke="#000" stroke-width="0.35"/>
+<line x1="804.30" y1="295.00" x2="804.30" y2="305.00" stroke="#000" stroke-width="0.8"/>
+<line x1="996.30" y1="306.00" x2="996.30" y2="354.38" stroke="#000" stroke-width="0.35"/>
+<line x1="996.30" y1="295.00" x2="996.30" y2="305.00" stroke="#000" stroke-width="0.8"/>
+<line x1="804.30" y1="300.00" x2="996.30" y2="300.00" stroke="#000" stroke-width="0.8"/>
+<text x="900.30" y="279.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="middle">8"  ROOF PANEL OVERHANG</text>
+<text x="900.30" y="291.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="middle">PAST THE FINISHED WALL SURFACE</text>
+<line x1="330.00" y1="371.64" x2="330.00" y2="846.00" stroke="#000" stroke-width="0.7"/>
+<text x="324.00" y="343.64" font-family="Arial" font-size="9" font-weight="bold" fill="#000" text-anchor="end">ABOVE GRADE</text>
+<line x1="325.00" y1="371.64" x2="335.00" y2="371.64" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="371.64" x2="310.00" y2="371.64" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="371.64" x2="262.00" y2="371.64" stroke="#000" stroke-width="0.4"/>
+<text x="258.00" y="369.64" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">7'-8 1/4"</text>
+<text x="258.00" y="380.64" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">ROOF PLANE AT SOUTH WALL</text>
+<line x1="325.00" y1="606.00" x2="335.00" y2="606.00" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="606.00" x2="310.00" y2="606.00" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="606.00" x2="262.00" y2="606.00" stroke="#000" stroke-width="0.4"/>
+<text x="258.00" y="604.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">6'-10 1/2"</text>
+<text x="258.00" y="615.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">BEAM TOP / SEAT CUT</text>
+<line x1="325.00" y1="846.00" x2="335.00" y2="846.00" stroke="#000" stroke-width="0.7"/>
+<line x1="325.00" y1="846.00" x2="310.00" y2="862.00" stroke="#000" stroke-width="0.4"/>
+<line x1="310.00" y1="862.00" x2="262.00" y2="862.00" stroke="#000" stroke-width="0.4"/>
+<text x="258.00" y="860.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="end">6'-0 1/2"</text>
+<text x="258.00" y="871.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="end">BEAM BOTTOM = WINDOW HEAD</text>
+<text x="262.00" y="150.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">SECTION LOOKING WEST</text>
+<text x="262.00" y="163.00" font-family="Arial" font-size="8.5" fill="#000" text-anchor="start">NORTH AT RIGHT</text>
+<text x="40.00" y="1120.00" font-family="Arial" font-size="17" font-weight="bold" fill="#000" text-anchor="start">SOUTH ROOF EDGE AND BEARING - CROSSCUT DETAIL</text>
+<text x="40.00" y="1138.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">SECTION THROUGH A 6x6 POST - VIEW LOOKING WEST - NORTH AT RIGHT</text>
+<text x="40.00" y="1154.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">SCALE:  3" = 1'-0"          DRAWING D-2</text>
+<rect x="40.00" y="1168.00" width="660.00" height="200.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="52.00" y="1187.00" font-family="Arial" font-size="12.5" font-weight="bold" fill="#000" text-anchor="start">GENERAL NOTES</text>
+<text x="52.00" y="1207.00" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">1. LAYERS DRAWN EXPLODED FOR CLARITY. AS BUILT THEY STACK TIGHT.</text>
+<text x="52.00" y="1221.60" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">2. SECTION THROUGH A 6x6 POST. INFILL BETWEEN POSTS IS NON-BEARING, NO HEADER.</text>
+<text x="52.00" y="1236.20" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">3. BEAM SOUTH FACE IS THE FRAMING PLANE. POSTS AND BEAM FULLY CLAD.</text>
+<text x="52.00" y="1250.80" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">4. PHASE 1 IS METAL. NO ROOF SHEATHING SOUTH OF THE 9'-7 1/4" LINE. SEE S-5.</text>
+<text x="52.00" y="1265.40" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">5. NO ENGINEERED LUMBER.</text>
+<text x="52.00" y="1280.00" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">6. VENTING NOT SHOWN. SOUTH VENT PANELS ARE BUILT AS THE NORTH ONES - PANEL CUT 1" LARGER THAN</text>
+<text x="52.00" y="1294.60" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">   THE R.O., RIBS MATCHED TO THE WALL. SEE V-1.</text>
+<rect x="720.00" y="1168.00" width="660.00" height="200.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="732.00" y="1187.00" font-family="Arial" font-size="12.5" font-weight="bold" fill="#000" text-anchor="start">ASSEMBLY ORDER - BOTTOM UP</text>
+<text x="732.00" y="1207.00" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">1. WALL SHEATHING, UP OVER THE BEAM AND RAFTER END.</text>
+<text x="732.00" y="1221.60" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">2. WALL PRO-PANEL, HORIZONTAL. TOP COURSE RIPPED FLAT.</text>
+<text x="732.00" y="1236.20" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">3. DRIP EDGE OVER THE FLAT COURSE.</text>
+<text x="732.00" y="1250.80" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">4. ROOF PANEL OVER THE DRIP EDGE TOP LEG.</text>
+<text x="732.00" y="1265.40" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">5. WATER SHEDS OFF THE ROOF, BREAKS AT THE HEM, FALLS PAST THE WALL. NOTHING RUNS BEHIND.</text>
+<rect x="1400.00" y="1168.00" width="660.00" height="200.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="1412.00" y="1187.00" font-family="Arial" font-size="12.5" font-weight="bold" fill="#000" text-anchor="start">MATERIAL SCHEDULE</text>
+<text x="1412.00" y="1207.00" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">RAFTER: 2x12 DF-L No.2 @ 24" O.C., 20'-0" STOCK</text>
+<text x="1412.00" y="1221.60" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">BEAM: 6x10 ROUGH-SAWN DOUG FIR OR LARCH</text>
+<text x="1412.00" y="1236.20" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">POST: 6x6 ROUGH-SAWN, GALVANIZED STANDOFF BASE</text>
+<text x="1412.00" y="1250.80" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">WALL SHEATHING: 7/16" OSB</text>
+<text x="1412.00" y="1265.40" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">WALL CLADDING: PRO-PANEL, 3/4" RIB AT 9" O.C., HORIZONTAL</text>
+<text x="1412.00" y="1280.00" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">DRIP EDGE: STANDARD HEMMED, 4" TOP, 4" FACE, 1/2" KICK</text>
+<text x="1412.00" y="1294.60" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">ROOFING, PHASE 1: PRO-PANEL METAL</text>
+<text x="1412.00" y="1309.20" font-family="Arial" font-size="11.2" fill="#000" text-anchor="start">WALL BUILDUP OUTBOARD OF FRAMING FACE: 3/4"</text>
+</svg>
