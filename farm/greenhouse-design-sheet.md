@@ -3,7 +3,7 @@
 **Agent:** Rootstock (definition not yet committed)
 **Site:** 38.0979386, -105.2994594 - 1722 Edelweiss Dr, Westcliffe CO, 9,000 ft, zone 4a
 **Status:** Design in progress. Nothing built. Nothing ordered.
-**Design sessions:** 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-18 (drawing/scope session - framing geometry corrected, roof and vent assemblies re-locked), 2026-08-24 (sill rebuild - built-up sill locked, south wall and west wall framing elevations drawn and committed, fixed pane window logged to glazing inventory), 2026-08-25 (north wall - design sheet body recovered after a truncated write, rafter-above-notch error corrected, south sill dropped to hold the roof plane, N-1 drawn, S-1 corrected)
+**Design sessions:** 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-18 (drawing/scope session - framing geometry corrected, roof and vent assemblies re-locked), 2026-08-24 (sill rebuild - built-up sill locked, south wall and west wall framing elevations drawn and committed, fixed pane window logged to glazing inventory), 2026-08-25 (north wall - design sheet body recovered after a truncated write, rafter-above-notch error corrected, south sill dropped to hold the roof plane, N-1 drawn, S-1 corrected), 2026-08-26 (roof framing - rafters relocked at 24 in o.c. on an engineered snow load, R-3 and R-4 and R-6 drawn, R-2 regenerated, wedge geometry corrected, drawing numbering collision found)
 
 ---
 
@@ -624,13 +624,18 @@ Existing coop exhaust fan continues to draw makeup air through the 20 in x 30 in
 
 ## DRAWING PRACTICE
 
-Locked 2026-08-25 out of the north wall session retrospective.
+Locked 2026-08-25 out of the north wall session retrospective. Extended 2026-08-26 out of the roof framing session.
 
 - **Drawings get looked at before they get pushed.** Render the sheet to an image, inspect it, present it, then commit. A drawing is only correctable once it is visible, and a dimension chain running off the edge of the sheet is invisible in the source.
 - **Every sheet gets a generator.** A drawing whose dimensions are hard coordinates cannot be corrected safely - the failure mode is a rect that quietly did not move, which still looks like a drawing. S-1 had no generator on 2026-08-25 and had to be corrected by coordinate surgery with the whole stack back-converted to inches afterward to prove it.
 - **Structure does not transfer between walls.** The 10 ft post bays are a south wall fact. The riser has no posts and no bays. Confirm a structure exists on a given wall before laying anything out against it.
 - **No coined vocabulary.** If a term is not already in this sheet, it does not get used in conversation about this sheet.
 - **Layout arithmetic gets computed, not spoken.** Any spacing run that has to close on a total is checked programmatically before it is stated.
+- **Read an existing sheet before drawing a new one.** Format is inherited from the set, not invented per sheet. The first roof framing plan attempt on 2026-08-26 was built without opening N-1 and had to be thrown away and redrawn - wrong tool, wrong conventions, no title block, no note boxes. The set only reads as a set if each new sheet is copied off the last one.
+- **A callout describing a member is not the member.** If something is in the drawing''s scope, it gets drawn. A paragraph explaining where the lookouts go, on a sheet with no lookouts drawn, is not a lookout detail.
+- **Note text wraps to measured string width.** Lines are packed against the box width less padding, computed, not hand-broken. When notes overflow, the answer is a bigger box or shorter notes - never silently shrinking type to hide a wrapping bug.
+- **Verified arithmetic is not a legible drawing.** The rafter spacing on R-2 was provably correct at 24 in o.c. and still read as 16 in o.c., because 21 rafter lines and 13 panel lines drawn at similar weight merge into one field. Check what the sheet communicates as a separate step from checking that the numbers close.
+- **Notes are written for a framer on a ladder in bad weather.** Short lines. No explaining things a framer already knows. If a note runs to five lines it is a specification, and it belongs in this sheet rather than on the drawing.
 
 ---
 
@@ -661,6 +666,8 @@ Locked 2026-08-25 out of the north wall session retrospective.
 **The north roof edge is a separate hand-drawn detail, not a shared sheet with the south.** The design sheet previously called for one R-4 carrying both ends; that was split 2026-08-26 on the owner's call. The hand drawing is not yet digitised - it predates the beveled cap plate, the box header and the 2026-08-25 sill drop, so digitising it is a spec-walk, not a trace.
 
 **Remaining roof and vent construction details** - locked as specifications 2026-08-18, not yet drawn as sheets. See `farm/greenhouse-roof-vent-details.md` for the full detail set: R-1 (sheathing termination/step), R-2 (panel layout/chalk line), R-3 (metal-to-metal endlap), R-4 (roof edge conditions, north and south, shared sheet), R-5 (poly eave termination), V-1 (vent panel construction).
+
+> **NUMBERING COLLISION - OPEN, MUST BE RESOLVED BEFORE THE SET GROWS.** Two schemes are live in this document at once. The legacy spec list immediately above assigns R-2, R-3 and R-4 to one set of details; the drawn sheets registered further up assign the same three numbers to different drawings. R-3 is both "metal-to-metal endlap" and the roof framing plan. R-4 is both "roof edge conditions, shared sheet" and the birdsmouth cut detail. R-2 appears twice. R-6 was picked on the assumption R-5 was taken, which is true only under the legacy scheme. This is a real hazard for anyone building from the set, not a housekeeping item. Next drawing session opens by picking one scheme and renumbering everything to it.
 
 **Locked build sequence for future drawing sessions (owner's order, spans multiple sessions):** east elevation, south elevation, west elevation, north elevation, roof framing plan, wall framing plans, aerial layout, footer/footing plan.
 
