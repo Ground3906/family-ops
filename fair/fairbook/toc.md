@@ -4,7 +4,7 @@ Generated from the chapter and subchapter headings in `draft.md`. This file is t
 
 No page numbers are listed here. The Word deliverable wires every entry to its target as a bookmark and cross-reference at final assembly, per the locked hyperlinking plan in `charter.md`.
 
-This list reflects the book as shipped through the Addendum pass, 8/16/2026. It does not include the Addendum, which publishes as a separate document, or the legacy General Rules block staged at the bottom of `draft.md`, which is not shipped content.
+This list reflects the book as shipped through the working-group edit pass, 8/26/2026. It does not include the Addendum, which publishes as a separate document, or the legacy General Rules block staged at the bottom of `draft.md`, which is not shipped content.
 
 ---
 
@@ -37,7 +37,7 @@ This list reflects the book as shipped through the Addendum pass, 8/16/2026. It 
 
 - CC 4.1 — General Sale Requirements
 - CC 4.2 — Sale Limits and Required Sales
-- CC 4.3 — Consignment and the Exit Election
+- CC 4.3 — Consignment and the Sale Declaration
 - CC 4.4 — Terminal Delivery and Custody
 - CC 4.5 — Discipline
 - CC 4.6 — Proceeds
