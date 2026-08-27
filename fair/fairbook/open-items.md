@@ -34,8 +34,6 @@ Addendum §1 through §10 carry 2027 facts. The IAFE National Code of Show Ring 
 
 - **CC 3.2.9 Bred and Fed — text pending.** The section is stubbed in reading-order position with a placeholder. Its eligibility standard, verification method, and award structure are working-group text, not this project's to invent. **This stub must not print in an adopted edition.** Conformance screen blocks on it.
 
-- **CC 3.1.2 abbreviation defect.** The rule spells out "Meat Quality Assurance" before using the abbreviation MQA defined at CC 1. Spelling out a defined term is a defect under charter doctrine. Not yet fixed.
-
 - **Provisional letter-suffix rule numbers.** The working-group edit pass inserted new rules in reading-order position using letter suffixes so existing cross-references would not ripple: CC 3.1.4a, CC 3.1.5a, CC 3.1.9a, CC 3.1.9b, CC 3.2.2a, CC 3.3.2a, CC 3.4.8a. All resolve to clean integers at the conformance renumber. CC 4.1.5 cites two of them and must be re-checked after the renumber.
 
 - **CC 3.1.12 and CC 6.1.4 are near-identical rules.** Both state the same pen/stall/cage guarantee, the same seniority-ordered remainder pass, the same capacity valve, the same tampering rule, and now the same no-mixing rule. Consolidating them into one rule at CC 2 was raised and deliberately not done inside an edit pass. Future item on its own merits.
