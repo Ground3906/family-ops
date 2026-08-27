@@ -708,6 +708,11 @@ Last batch: 2026-08-20.
 ### NOVEMBER 2026
 
 [CAL] 2026-11-07 ALL-DAY [D] 3rd Rifle Elk Season :: misc :: span=2026-11-15 :: travel=true
+[CAL] 2026-11-16 10:20 [C] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-11-16 10:50 [E] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-11-24 10:50 [M] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-11-24 11:20 [W] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
+[CAL] 2026-11-30 10:30 [R] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 
 ---
 
