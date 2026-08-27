@@ -668,7 +668,6 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-27 11:00 [R] School meeting :: kids
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children." :: cancel=confirmed
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
-[CAL] 2026-08-28 09:00 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
@@ -682,12 +681,14 @@ Last batch: 2026-08-20.
 ### SEPTEMBER 2026
 
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
+[CAL] 2026-09-03 13:00 [R] DIBELS test :: kids
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch"
 
 ---
 
