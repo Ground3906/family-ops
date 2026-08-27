@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2420" height="1256" viewBox="0 0 2420 1256">
-<rect width="2420" height="1256" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="2420" height="1300" viewBox="0 0 2420 1300">
+<rect width="2420" height="1300" fill="#ffffff"/>
 <rect x="270.00" y="250.00" width="1440.00" height="16.50" fill="#f2f2f2" stroke="#000" stroke-width="1.6"/>
 <text x="990.00" y="240.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="middle">NORTH WALL - RISER ON CONTAINER - BEARING - RAFTERS LAND FULL WIDTH ON RAKED CAP PLATE, NO NOTCH</text>
 <rect x="270.00" y="893.50" width="1440.00" height="18.00" fill="#f2f2f2" stroke="#000" stroke-width="1.6"/>
@@ -138,7 +138,7 @@
 <text x="40.00" y="990.00" font-family="Arial" font-size="17" font-weight="bold" fill="#000" text-anchor="start">ROOF FRAMING PLAN</text>
 <text x="40.00" y="1008.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">PLAN VIEW - LOOKING DOWN - NORTH AT TOP, WEST AT LEFT</text>
 <text x="40.00" y="1024.00" font-family="Arial" font-size="12" fill="#000" text-anchor="start">SCALE:  1/2" = 1'-0"          DRAWING R-3</text>
-<rect x="40.00" y="1038.00" width="310.00" height="168.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<rect x="40.00" y="1038.00" width="310.00" height="212.00" fill="none" stroke="#000" stroke-width="0.8"/>
 <text x="48.00" y="1053.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">GENERAL NOTES</text>
 <text x="50.00" y="1065.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">1. RAFTER FRAMING ONLY. PANEL LAYOUT ON R-2.</text>
 <text x="50.00" y="1076.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">2. ROOF PLANE 7'-8 1/4" AT SOUTH WALL, PEAK 14'-7".</text>
@@ -148,7 +148,12 @@
 <text x="50.00" y="1122.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">6. RAFTERS NO LONGER STACK ON RISER STUDS.</text>
 <text x="50.00" y="1133.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">7. EAST WALL CARRIES NO ROOF LOAD.</text>
 <text x="50.00" y="1144.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">8. ALL WALLS INSET - FACES ON THE 40'-0" LINE.</text>
-<rect x="360.00" y="1038.00" width="305.00" height="168.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<text x="50.00" y="1156.20" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">9. DESIGN BASIS: 50 PSF GROUND SNOW, REDUCED TO</text>
+<text x="50.00" y="1167.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   ~24 PSF ON THE ROOF FOR SLOPE AND A SLIPPERY,</text>
+<text x="50.00" y="1179.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   HEATED, EXPOSED SURFACE. DERIVATION AND THE</text>
+<text x="50.00" y="1190.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   ASSUMPTIONS BEHIND IT ARE IN THE DESIGN SHEET.</text>
+<text x="50.00" y="1201.80" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">   NOT AN ENGINEER-STAMPED CALCULATION.</text>
+<rect x="360.00" y="1038.00" width="305.00" height="212.00" fill="none" stroke="#000" stroke-width="0.8"/>
 <text x="368.00" y="1053.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">FRAMING NOTES</text>
 <text x="370.00" y="1065.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">1. RAFTERS 2x12 @ 24" O.C., 20'-0" STOCK.</text>
 <text x="370.00" y="1076.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">2. PLUMB CUT BOTH ENDS, CUTS PARALLEL.</text>
@@ -162,7 +167,7 @@
 <text x="370.00" y="1167.60" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">9. BLOCKING IS SHEATHING NAILER - NOT STRUCTURAL.</text>
 <text x="370.00" y="1179.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">10. NO CAP BOARD AT EAST EDGE - NAILS DIRECT.</text>
 <text x="370.00" y="1190.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">11. CONT. 2x12 BLOCKING AT SHEATHING EDGE.</text>
-<rect x="675.00" y="1038.00" width="300.00" height="168.00" fill="none" stroke="#000" stroke-width="0.8"/>
+<rect x="675.00" y="1038.00" width="300.00" height="212.00" fill="none" stroke="#000" stroke-width="0.8"/>
 <text x="683.00" y="1053.00" font-family="Arial" font-size="9.5" font-weight="bold" fill="#000" text-anchor="start">MATERIAL SCHEDULE</text>
 <text x="685.00" y="1065.00" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">RAFTERS:  (21) 2x12 DF-L No.2 @ 20'-0"</text>
 <text x="685.00" y="1076.40" font-family="Arial" font-size="8.0" fill="#000" text-anchor="start">LOOKOUT BLOCKING:  (10) 2x12 @ 5 1/2" LONG</text>

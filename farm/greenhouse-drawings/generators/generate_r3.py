@@ -35,7 +35,7 @@ SIDE_WALL_THK = 5.5       # 2x6
 # SHEET SETUP - matches N-1 conventions
 # ---------------------------------------------------------------
 SCALE = 3.0               # px per inch, same as N-1
-CANVAS_W, CANVAS_H = 2420, 1256
+CANVAS_W, CANVAS_H = 2420, 1300
 
 PX0 = 270.0               # west edge of plan
 PY0 = 250.0               # north framing face
@@ -257,7 +257,7 @@ text(40, TB_Y + 18, "PLAN VIEW - LOOKING DOWN - NORTH AT TOP, WEST AT LEFT", 12)
 text(40, TB_Y + 34, "SCALE:  1/2\" = 1'-0\"          DRAWING R-3", 12)
 
 BOX_Y = TB_Y + 48
-BOX_H = 168
+BOX_H = 212
 
 rect(40, BOX_Y, 310, BOX_H, 0.8)
 text(48, BOX_Y + 15, "GENERAL NOTES", 9.5, True)
@@ -270,6 +270,11 @@ gen = [
     "6. RAFTERS NO LONGER STACK ON RISER STUDS.",
     "7. EAST WALL CARRIES NO ROOF LOAD.",
     "8. ALL WALLS INSET - FACES ON THE 40'-0\" LINE.",
+    "9. DESIGN BASIS: 50 PSF GROUND SNOW, REDUCED TO",
+    "   ~24 PSF ON THE ROOF FOR SLOPE AND A SLIPPERY,",
+    "   HEATED, EXPOSED SURFACE. DERIVATION AND THE",
+    "   ASSUMPTIONS BEHIND IT ARE IN THE DESIGN SHEET.",
+    "   NOT AN ENGINEER-STAMPED CALCULATION.",
 ]
 for i, t in enumerate(gen):
     text(50, BOX_Y + 27 + i * 11.4, t, 8.0)

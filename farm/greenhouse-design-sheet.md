@@ -25,7 +25,31 @@ Power and water already on site. Gas reaches easily.
 
 No shading. Confirmed by owner observation. No county building code jurisdiction.
 
-**Design snow load: 50 psf.** Westcliffe town rating, confirmed by Matt.
+**Ground snow load: 50 psf.** Westcliffe town rating, confirmed by Matt.
+
+**Design roof snow load: approximately 24 psf.** Derived 2026-08-26 when the rafter spacing was reworked. The 50 psf ground figure taken straight into a prescriptive span table makes the roof look impossible; the roof does not hold ground snow, and the reduction is real:
+
+| Factor | Value | Basis |
+|---|---|---|
+| Flat roof factor | 0.7 | standard |
+| Exposure, Ce | 0.9 | **ASSUMED** - fully exposed terrain, no shading. Not read off a site document |
+| Thermal, Ct | 1.0 | heated structure. The 0.85 greenhouse credit needs an attendant or a temperature alarm; neither exists, so it is not claimed |
+| Importance, Is | 1.0 | **ASSUMED** - ordinary agricultural risk category |
+| Slope, Cs | 0.761 | slippery, unobstructed, heated roof at 20.556 deg |
+
+0.7 x 0.9 x 1.0 x 1.0 x 0.761 x 50 = **23.96 psf.**
+
+Checked against NDS reference values for Douglas fir-larch No.2 2x12 (Fb 900 psi, E 1,600,000 psi, CD 1.15 snow, Cr 1.15 repetitive), bending governs over deflection at every spacing considered:
+
+| Spacing | Allowable span | Margin over the 18 ft 4-1/2 in required |
+|---|---|---|
+| 16 in o.c. | 23 ft 7 in | +62 in |
+| 19.2 in o.c. | 21 ft 6 in | +37 in |
+| **24 in o.c.** | **19 ft 3 in** | **+10 in** |
+
+19.2 in o.c. was rejected on panel alignment, not strength: 48 in poly does not divide evenly by 19.2, so panel joints land mid-bay with nothing to screw the H-profile base into.
+
+**This is arithmetic, not a stamped calculation, and there is no county building code jurisdiction to check it.** The two assumed factors above are the exposure of the whole result. Both are the standard values for these conditions, and the 24 in margin is not knife-edge, but they were chosen rather than sourced.
 
 **Slab pitch:** finished floor falls away from the container at 1/8 in per foot. Level dirt beyond the footprint.
 
@@ -73,19 +97,19 @@ Container sits on dirt. Any excavation along its south face risks undermining co
 
 | | |
 |---|---|
-| Rafter member | 2x12 dimensional lumber (11-1/4 in actual depth) |
+| Rafter member | 2x12 dimensional lumber, Douglas fir-larch No.2 (11-1/4 in actual depth) |
 | Stock length, exact | 240 in (20 ft) |
-| Spacing | 16 in o.c. |
-| Count | 31 |
+| Spacing | 24 in o.c. |
+| Count | 21 (20 pulled from the west at 24 in o.c., plus one east rafter set inboard of the east wall inner face) |
 | Cuts | Plumb cut both ends, parallel to each other (not birdsmouth-to-birdsmouth) |
 
 **North end (riser):** raked cap plate, beveled to 4.5:12. Rafter bottom face bears full-width on the raked plate, full 11-1/4 in depth intact, zero notch. Plumb cut flush at the riser's outside framing face.
 
 **South end (beam):** birdsmouth notch, seat cut to the beam's full 6 in width (rough-sawn). Notch depth 2-1/4 in plumb, 2-1/8 in perpendicular to the rafter. Remaining rafter depth 9-1/8 in, clears the 2/3-depth minimum (7-1/2 in) with margin. Plumb cut flush at the beam's south face.
 
-**Parallel-cut geometry:** because both plumb cuts are parallel (not birdsmouth-to-birdsmouth), the rafter is a parallelogram in elevation, not a rectangle. Each plumb cut consumes a horizontal wedge of D x tan(20.556 deg), where D is the plumb depth at that cut - 12 in at the north end (no notch), 9-1/8 in effective at the south. The top edge and bottom edge are each 240 in long but offset from each other; they are not both usable as the "rake" dimension.
+**Parallel-cut geometry:** because both plumb cuts are parallel (not birdsmouth-to-birdsmouth), the rafter is a parallelogram in elevation, not a rectangle. The stock arrives with square ends, cut perpendicular to its length, so each plumb cut takes a wedge off that square end. Measured along the edge the wedge is 11-1/4 in x tan(20.556 deg) = 4-7/32 in. It comes off the TOP edge at the south end and off the BOTTOM edge at the north end, because the square end passes through the top corner there. The top edge therefore loses stock only once, at the south. The top edge and bottom edge are each 240 in long but offset from each other; they are not both usable as the "rake" dimension.
 
-**Usable rake (roof coverage dimension):** 235-1/2 in (19 ft 7-1/2 in), plane to plane, north framing face to south framing face. This is 240 in stock less the 4-1/2 in wedge consumed at the north plumb cut (12 in plumb depth x 0.375). This is the number the roof panels are ordered and cut against - see Roof section.
+**Usable rake (roof coverage dimension):** 235-1/2 in (19 ft 7-1/2 in), plane to plane, north framing face to south framing face. This is 240 in stock less the 4-7/32 in wedge consumed at the SOUTH plumb cut, leaving 235-25/32 in of usable top edge against a 235-1/2 in requirement - about 1/4 in of slack. **Corrected 2026-08-26:** the sheet previously carried 4-1/2 in at the north end, which put the wedge at the wrong end and overstated it. The old figure was the conservative one, so nothing built to it is short. This is the number the roof panels are ordered and cut against - see Roof section.
 
 **Trig, locked:** pitch 4.5:12 = 20.556 deg. cos = 0.93633, sin = 0.35112, tan = 0.375.
 
@@ -264,7 +288,7 @@ Slope crest setback 2-3 ft on south and west. Differential settlement is expecte
 
 ## EAST WALL - LOCKED 2026-08-24 (E-1)
 
-**Non-bearing.** Flat 2x6 nailers at all heads and sill plates, **no headers** - rough opening heads rack straight to the top plate. Full lateral wind pressure across a face that is mostly glass and door, so structural sheathing is still required. Roof carried past this wall on **2x12 lookouts at 16 in o.c.**
+**Non-bearing.** Flat 2x6 nailers at all heads and sill plates, **no headers** - rough opening heads rack straight to the top plate. Full lateral wind pressure across a face that is mostly glass and door, so structural sheathing is still required. The east rafter is set inboard of this wall's inner face and the roof is carried to the wall plane on **2x12 lookout blocking, 5-1/2 in long at 24 in o.c.** - sheathing nailers only, not structural. See R-3.
 
 Figures below read off `farm/greenhouse-drawings/E-1-east-wall-framing-elevation.svg`, not from memory. R.O. edges measured from the container (north) face.
 
@@ -387,7 +411,7 @@ Required section modulus ~64 in3 for a 10 ft bay at 50 psf. **6x10 provides 83 i
 
 ### Rafters
 
-2x12 dimensional at 16 in o.c., 31 total, **240 in (20 ft) stock exact.** See Framing Geometry for the full cut-geometry writeup - raked plate north, birdsmouth south, parallel plumb cuts, 235-1/2 in usable rake.
+2x12 dimensional Douglas fir-larch No.2 at 24 in o.c., 21 total, **240 in (20 ft) stock exact.** See Framing Geometry for the full cut-geometry writeup - raked plate north, birdsmouth south, parallel plumb cuts, 235-1/2 in usable rake.
 
 **No overhang framed into the rafters at either end.** Rafters run flush to the framing plane at both walls - **all overhang is done by the roofing material itself**, not by rafter tails, sub-fascia, or outlookers. See Roof section.
 
@@ -395,7 +419,7 @@ Required section modulus ~64 in3 for a 10 ft bay at 50 psf. **6x10 provides 83 i
 
 ### Bearing assignment
 
-North riser: yes (via raked plate, no notch). South (via post/beam): yes (via birdsmouth). West: yes. **East: NO - non-bearing**, easternmost rafter set inboard, roof carried past on lookouts.
+North riser: yes (via raked plate, no notch). South (via post/beam): yes (via birdsmouth). West: yes. **East: NO - non-bearing**, east rafter set inboard of the wall inner face, roof carried to the wall plane on lookout blocking. The wall receives no roof contact at all.
 
 Non-bearing does not mean unloaded - full lateral wind pressure across a face that's mostly glass and door. Structural sheathing required. The louver that once threatened this wall's shear moved to the west wall 2026-08-24; the deviation is void.
 
@@ -429,10 +453,10 @@ Uplift: the angle-to-rail connection is the hold-down for the entire roof. Therm
 | Sheathing | North section only. Edge terminates at 9 ft 7-1/4 in up the rake from the south framing face - this is also the exact point where the Phase 1 upper metal panel's south edge, and the future Phase 2 poly panel's north edge, both land |
 | Blocking | Continuous between rafters at the sheathing edge - backs the fastener row and the step transition (Detail R-1) |
 | Upper (north) metal panel | Bears on sheathing |
-| Lower (south) metal panel | Bears direct on bare rafters, 16 in o.c. span, no purlins |
+| Lower (south) metal panel | Bears direct on bare rafters, 24 in o.c. span, no purlins |
 | Step at sheathing edge | 7/16 in (sheathing thickness) - ramped by the lower panel's own flex as it climbs onto the deck under the lap. Closed with foam or butyl at the step line |
 
-**No purlins anywhere on this roof** - both the Phase 1 lower metal panel and the Phase 2 poly panel bear directly on the 16 in o.c. rafters. (Poly's 4 ft panel width divides evenly into three 16 in bays with zero waste - this is why no purlins are needed structurally for the poly.)
+**No purlins anywhere on this roof** - both the Phase 1 lower metal panel and the Phase 2 poly panel bear directly on the 24 in o.c. rafters. (Poly's 4 ft panel width divides evenly into two 24 in bays with zero waste, so every panel joint still lands on a rafter - this is why no purlins are needed structurally for the poly. The 16 in module gave three bays per panel and worked for the same reason.)
 
 ### Phase 1 panel schedule (metal)
 
@@ -458,11 +482,11 @@ At conversion: strip the lower metal panel and the north-section sheathing above
 
 **Poly eave (south, bottom edge), Detail R-5:** 4 in overhang past the finished wall surface. **Termination is breather tape only - no U-profile, no clamped or snap-fit edge trim.** Locked reason: a shedding roof at 4.5:12 sends sliding snow/ice directly across this edge, and any clamp-style channel is a catch point that gets torn off by the slide. Tape seals the flute ends and allows condensation weep without presenting a catchable edge. Accepted maintenance cost: periodic re-taping.
 
-**Poly-to-metal seam (Detail R-1 legacy, now superseded by the direct-lap method below):** the north edge of the poly (at the 9 ft 7-1/4 in line) is overlapped by the Phase 1... no - by the PERMANENT upper metal panel, which never moves between phases. **The offset/transition flashing originally specced (old Detail R-1) is DEAD.** Replaced by a direct 6 in dry lap: metal edge (now extended 6 in past its Phase-1-only position to reach **10 ft 10-1/4 in total, see revised panel length below**) laps over the poly, bearing on the nine H-caps (which stand proud of the poly face by roughly 1/2 in) plus one mid-bay foam/spacer pad per bay (16 in module, so roughly every 2 ft) to prevent the metal from contacting and abrading the poly face under snow load between caps. No sealant, no rubber gasket, no continuous strip - dry lap, low-friction bearing only on the caps and the discrete spacer pads.
+**Poly-to-metal seam (Detail R-1 legacy, now superseded by the direct-lap method below):** the north edge of the poly (at the 9 ft 7-1/4 in line) is overlapped by the Phase 1... no - by the PERMANENT upper metal panel, which never moves between phases. **The offset/transition flashing originally specced (old Detail R-1) is DEAD.** Replaced by a direct 6 in dry lap: metal edge (now extended 6 in past its Phase-1-only position to reach **10 ft 10-1/4 in total, see revised panel length below**) laps over the poly, bearing on the nine H-caps (which stand proud of the poly face by roughly 1/2 in) plus one mid-bay foam/spacer pad per bay (24 in module, so roughly every 2 ft) to prevent the metal from contacting and abrading the poly face under snow load between caps. No sealant, no rubber gasket, no continuous strip - dry lap, low-friction bearing only on the caps and the discrete spacer pads.
 
 **Upper panel length revision for the 6 in poly lap:** 10 ft 10-1/4 in (10 ft 4-1/4 in original + 6 in lap allowance). This is the number that should be used for Phase 1 ordering/cutting - see Panel Schedule above, already reflects this.
 
-**Why no purlins, no offset flashing, and dry lap only:** all three are simplifications discovered through the framing-geometry session - poly's 4 ft width matches the 16 in rafter module with zero waste, killing the purlin requirement; the 3/16 in natural height difference between the sheathed/metal side and the bare-rafter/poly side (from OSB+flat-Pro-Panel buildup vs poly thickness) means the metal edge already sits proud of the poly with no shim or bent flashing required; and sliding snow load ruled out any clamp-style edge hardware at the point of contact.
+**Why no purlins, no offset flashing, and dry lap only:** all three are simplifications discovered through the framing-geometry session - poly's 4 ft width matches the 24 in rafter module with zero waste, killing the purlin requirement; the 3/16 in natural height difference between the sheathed/metal side and the bare-rafter/poly side (from OSB+flat-Pro-Panel buildup vs poly thickness) means the metal edge already sits proud of the poly with no shim or bent flashing required; and sliding snow load ruled out any clamp-style edge hardware at the point of contact.
 
 **Metal, Phase 1 north section:** solid sheathing, later gets closed-cell foam and interior finish per the Insulation section - this section stays permanent metal roofing through both phases.
 
@@ -626,7 +650,17 @@ Locked 2026-08-25 out of the north wall session retrospective.
 
 **North wall (riser) framing elevation (N-1)** - `farm/greenhouse-drawings/N-1-north-wall-framing-elevation.svg`. Drawn and committed 2026-08-25, rerun the same session against the dropped sill. Carries the riser height stack, the four-pair vent layout, box headers with bevel-ripped cripples, the beveled plate condition, and an east orientation arrow. Two dimension chains: left off the container top, right off grade.
 
-**Roof and vent construction details** - locked as specifications this session (2026-08-18), not yet drawn as sheets. See `farm/greenhouse-roof-vent-details.md` for the full detail set: R-1 (sheathing termination/step), R-2 (panel layout/chalk line), R-3 (metal-to-metal endlap), R-4 (roof edge conditions, north and south, shared sheet), R-5 (poly eave termination), V-1 (vent panel construction).
+**Roof framing plan (R-3)** - `farm/greenhouse-drawings/R-3-roof-framing-plan.svg`. Drawn 2026-08-26. Carries the 24 in o.c. rafter layout, the inboard east rafter, lookout blocking, the blocking line at the sheathing edge, and the snow load design basis.
+
+**Birdsmouth cut detail (R-4)** - `farm/greenhouse-drawings/R-4-birdsmouth-detail.svg`. Drawn 2026-08-26. Bench detail for cutting the rafter ends: both wedges dimensioned on all three sides.
+
+**South roof edge crosscut (R-6)** - `farm/greenhouse-drawings/R-6-south-roof-edge-detail.svg`. Drawn 2026-08-26. Section through a 6x6 post: sheathing, horizontal Pro-Panel with the ripped flat top course, drip edge with kicker, roof panel at 8 in overhang. Layers drawn exploded.
+
+**Panel layout (R-2)** - `farm/greenhouse-drawings/R-2-panel-layout.svg`. Regenerated 2026-08-26 against the 24 in o.c. layout.
+
+**The north roof edge is a separate hand-drawn detail, not a shared sheet with the south.** The design sheet previously called for one R-4 carrying both ends; that was split 2026-08-26 on the owner's call. The hand drawing is not yet digitised - it predates the beveled cap plate, the box header and the 2026-08-25 sill drop, so digitising it is a spec-walk, not a trace.
+
+**Remaining roof and vent construction details** - locked as specifications 2026-08-18, not yet drawn as sheets. See `farm/greenhouse-roof-vent-details.md` for the full detail set: R-1 (sheathing termination/step), R-2 (panel layout/chalk line), R-3 (metal-to-metal endlap), R-4 (roof edge conditions, north and south, shared sheet), R-5 (poly eave termination), V-1 (vent panel construction).
 
 **Locked build sequence for future drawing sessions (owner's order, spans multiple sessions):** east elevation, south elevation, west elevation, north elevation, roof framing plan, wall framing plans, aerial layout, footer/footing plan.
 
