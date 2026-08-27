@@ -29,4 +29,4 @@ The objectives of the Custer County Fair are to educate its participants and to 
 
 ## ADA Statement
 
-The Custer County Fair Board is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the Fair Board using the contact information listed in Addendum §1.
+The Custer County Fair Board is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the CSU Extension office using the contact information listed in Addendum §2.
