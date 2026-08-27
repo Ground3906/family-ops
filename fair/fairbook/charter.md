@@ -148,25 +148,28 @@ Reprinting in full is an exception argued at its pass. Every reprint is a drift 
 
 ## The Addendum
 
-Nine permanent sections, **locked 8/12/2026**, ordered by when a family needs them:
+**Superseded 8/26/2026.** The nine-section table locked 8/12/2026, and the "these numbers never renumber" rule that came with it, no longer hold. The working group asked for the IAFE National Code of Show Ring Ethics printed in full as its own section, so every book citation to it points to text a reader can turn to. Placing it first, ahead of the roster, moved every existing section down by one — a deliberate renumber, not a drift. 46 citations across draft.md, addendum.md, toc.md, and front-matter.md were retargeted in the same pass. The lesson carried forward is narrower than the old rule: a section number holds unless a locked working-group decision requires an insert ahead of it, in which case the renumber is done in one clean pass and every citation is verified against the new numbers before the file ships.
+
+Ten sections, ordered by when a family needs them:
 
 | | Section | Holds |
 |---|---|---|
-| §1 | Fair Board, Staff, and Superintendents | roster, contact information |
-| §2 | Locations | every facility named in the book |
-| §3 | Official Communication Channels | designated channels, per CC 2.9 |
-| §4 | Entry Deadlines | entry and registration deadlines by project area |
-| §5 | Required Forms | every form an exhibitor must complete and sign |
-| §6 | Fees | protest, appeal, premiums, any entry fee |
-| §7 | Schedule | the fair schedule, cleanup dates |
-| §8 | Weight Windows and Market Deadlines | per-species weights and market timing |
-| §9 | Grievance and Appeal Deadlines | filing windows |
+| §1 | IAFE National Code of Show Ring Ethics | fixed reference, does not change annually |
+| §2 | Fair Board, Staff, Superintendents, and the Sale | roster, contact information, club leaders, processors, floor buyers |
+| §3 | Schedule | the fair schedule, cleanup dates |
+| §4 | Deadlines and Required Attendance | entry and registration deadlines by project area |
+| §5 | Weight Windows and Market Deadlines | per-species weights, ages, and market timing |
+| §6 | Fees | grievance, appeal, premiums, any entry fee |
+| §7 | Required Forms | every form an exhibitor must complete and sign |
+| §8 | Grievance and Appeal | filing windows, the two forms |
+| §9 | Locations | every facility named in the book |
+| §10 | Official Communication Channels | designated channels, per CC 2.9 |
 
-**These numbers never renumber.** A section may be empty in a given year; it does not lose its number. Structure and current contents live in `fair/rulebooks/volatility-inventory.md`.
+A section may be empty in a given year; it does not lose its number absent a locked decision like the one above. Structure and current contents live in `fair/rulebooks/volatility-inventory.md`.
 
 **"See the Addendum" is banned language.** Every reference in the book cites a specific section by number. A bare reference makes a family hunt through a document the book itself organized.
 
-**A relative anchor is not a volatile fact.** A rule stated against a moving reference point — "one hour after the conclusion of the beef show" — prints in the chapter body as the rule AND repeats in its cited Addendum section. It is the schedule that is volatile, not the relationship. The relationship is the rule and belongs in the body; the clock time it resolves to in a given year belongs in the Addendum. Precedent: CC 4.3.1, the exit-election deadline.
+**A relative anchor is not a volatile fact.** A rule stated against a moving reference point — "one hour after the conclusion of the beef show" — prints in the chapter body as the rule AND repeats in its cited Addendum section. It is the schedule that is volatile, not the relationship. The relationship is the rule and belongs in the body; the clock time it resolves to in a given year belongs in the Addendum. Precedent: CC 4.3.1, the sale-declaration deadline.
 
 ## The Word deliverable
 
@@ -214,7 +217,7 @@ CSF text built on a standing on-call veterinarian or direct contact with the Sta
 
 Where the base text belongs to another body — the 4-H and FFA Code of Conduct, owned by CSU Extension and FFA, who collect the signatures — the county text is retained as base and **no adoption sentence is printed**. The Fair Board rewriting another organization's instrument in CSF's voice is a harder sell than any rule inside it.
 
-**The Fair and 4-H office is one defined place, printed in full every time.** CC 2.8 and the Addendum both name the shared office of the Fair Board and CSU Extension as the Fair and 4-H office. It carries no CC 1 abbreviation — a family locating a physical office should never have to decode a defined term to find it. Locked 8/16/2026, replacing the inconsistent "Fair Board office" / "fair office" pair CC 2.8 shipped with.
+**Superseded 8/26/2026.** The Fair and 4-H office was never actually one place. The Fair Board's office is a fairgrounds structure staffed only during fair week; CSU Extension runs a separate, year-round office. The merged term hid that difference and would have printed a phone number for a building that has none. The book now names two places: the **Fair office**, the fair-week filing point for CC 2.8 grievances and appeals, and the **CSU Extension office**, the contact of record before and after fair week. Routing follows timing — during fair week, the Fair office; the animal care and housing form is the one exception, routed to Extension since §3 and the Code of Conduct already sent it there and only the collection line disagreed. Both offices are listed in Addendum §2 and §9.
 
 **A subchapter may name its own official instrument.** CC 3.1.4 fixes the certified fairgrounds scale as the official instrument, but a livestock scale cannot resolve a three-pound bird. Where the shared-layer instrument physically cannot measure a species, the subchapter names its own as a stated exception, and that instrument carries the same annual Colorado Weights and Measures certification the shared rule requires. The exception is to the instrument, never to the certification. Precedent: CC 3.6.4, the poultry scale.
 
@@ -357,9 +360,13 @@ Found 8/13/2026, reading the CSF Market Rabbits department (Dept 802.00) against
 
 This is the beef, hogs, lambs, and goats pattern. Poultry's terminal-by-biosecurity rule, adopted at CC 3.6.3 and explained at the Part Five finding on two terminal rationales, does not extend to rabbit; nothing in CSF's rabbit text carries a disease or commingling rationale. Resolved 8/13/2026: CC 3.7.2 states the distinction explicitly rather than leaving it to inference, since the two departments sit back to back in the book and silence would invite a reader to assume the poultry rule carries over.
 
+**Superseded 8/26/2026.** Custer does not adopt CSF's Grand-and-Reserve-only sale limit for market rabbit after all. That limit exists because CSF draws entries from every county in the state; Custer does not, and any exhibitor may sell one meat pen under CC 4.2.1, matching the old county book. CC 3.7.2 keeps the CSF citation for terminal status only and states the deviation plainly. The distinction this finding describes — terminal-on-entry versus terminal-on-sale — still holds; only the sale-qualification half changed.
+
 ## Showmanship timing contradicts the written county rule
 
-Found 8/13/2026 building CC 7. The county book states showmanship classes run "immediately prior to the judging" of their paired class, but actual practice runs the opposite: the market or breed class is judged first, and showmanship for that species runs after. CC 7.1.6 was drafted to match practice rather than the old written rule. Recorded so the change is not mistaken for a drafting error at the conformance pass.
+Found 8/13/2026 building CC 7. The county book states showmanship classes run "immediately prior to the judging" of their paired class, but actual practice runs the opposite: the market or breed class is judged first, and showmanship for that species runs after. CC 7.1.7 (then numbered 7.1.6, before the CC 7.1.1 index insert) was drafted to match practice rather than the old written rule.
+
+**Superseded 8/26/2026.** The working group asked for judge preference instead of a fixed order. CC 7.1.7 now points to the Addendum schedule, and the Authority sets the order each year in consultation with that year's judge. The finding above is why a fixed order existed at all; it is not the reason a fixed order was kept.
 
 ## CSF's Master Showmanship Competition is the state-level feeder event
 
@@ -517,11 +524,13 @@ Locked 8/16/2026 at CC 3.3.2. Previously, an underweight animal showed under the
 
 **FLAGGED for the board pitch.** This is a real new restriction on a family whose animal comes in under 220 pounds, printed nowhere in either source. It is scoped to swine only; sheep, goat, and beef are unaffected and carry no equivalent bar.
 
+**Superseded 8/26/2026.** This flag no longer describes swine alone. CC 3.4.8 and CC 3.5.3 now carry the identical structure for sheep and goat, and CC 3.2.2a for beef. The board pitch above should read as the shared pattern across all four large-animal species, not a swine-only carve-out.
+
 ## Board policy, deliberately not in the book
 
 - **Discipline ledger keeper.** The Fair Board secretary holds it, as a standing duty of the office rather than of a person. Families are told warnings are permanent, never who keeps the ledger. Extension was considered and set aside: a ledger the Fair Board does not control is a ledger that can quietly stop existing.
 - **Buyer-refund donation destination.** The book prints "the Custer County Fair" with no named recipient. Where that money lands is board policy. The Wet Mountain Valley Community Foundation is the obvious candidate and is deliberately unnamed in rule text.
-- **Official channel designation.** Who administers the accounts and how a channel is designated is board policy. The book carries only the pointer to Addendum §3.
+- **Official channel designation.** Who administers the accounts and how a channel is designated is board policy. The book carries only the pointer to Addendum §10.
 
 ---
 
@@ -540,8 +549,9 @@ Locked 8/16/2026 at CC 3.3.2. Previously, an underweight animal showed under the
 - **A resumed session re-verifies before it narrates.** After a conversation compaction, the compaction summary's status claims — what shipped, what is still pending — are not authoritative until checked against the actual files. A session opened by echoing the summary's "open-items.md still needs eight more items" framing before pulling the file; the file was already current, the framing was stale. The verification pull (`open-items.md`, `charter.md`, `draft.md` HEAD) runs at the first message of a resumed session, not deferred to the first write trigger.
 - **Build gate.** Nothing ships without a commit word. A correction is never a commit word.
 - **Verify content before every write, not just intent.** A session wrote a literal placeholder string to `draft.md` instead of the file's content, live on main for about a minute before the read-back caught it at 8 bytes. Before any `create_or_update_file` call: confirm the actual content is present, not a reference or shorthand, and sanity-check its length against what's expected. The read-back catches a bad push after the fact; this catches it before.
+- **A push that requires content the drafter has not directly read in full is not routine.** A small file gets viewed whole before it is retyped for a push. A file large enough that only excerpts have been read carries a real risk of the untouched majority being reconstructed from general shape rather than transcribed — read it complete, in gapless ranges, immediately before the push, and verify the result against a locally computed git blob SHA rather than a character count. Locked 8/26/2026 after `draft.md`, at 140KB, was pushed successfully this way following an initial attempt that would have relied on an incomplete view.
 - **Large or multi-file builds chunk by default.** A single commit word covering a big write defaults to sequential chunks, one write and one verified read-back per chunk, as the execution strategy, not a scope question reopened each time.
-- **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. Where a new rule's correct reading-order slot is already occupied by shipped, numbered text, no improvised or borrowed number is assigned; the rule is held in `open-items.md` with full text until the conformance renumber gives it a real one. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass.
+- **Renumber-at-conformance.** New rules draft in reading-order position with provisional numbers. An insert that would ripple cross-references — a new CC 2 rule that shifts every rule beneath it and every citation to them — is NOT renumbered mid-project. Where a new rule's correct reading-order slot is already occupied by shipped, numbered text, no improvised or borrowed number is assigned; the rule is held in `open-items.md` with full text until the conformance renumber gives it a real one. One clean full-book renumber runs at the end-of-book conformance screen, which already owns cross-reference integrity. Chosen over append-only (which sacrifices reading order permanently) and reserve-gaps (fragile). A rule locked in content but deferred for renumber is tracked in `open-items.md` so it survives to the conformance pass. **A working-group edit pass is a stated exception**, per the Addendum renumber above: a locked decision to insert ahead of existing numbered content may renumber immediately, in one clean pass with every citation verified, rather than waiting for conformance — the deferral exists to avoid partial, uncounted ripples, not to block a counted one.
 - **A ripple-based deferral is counted before it is made.** Before deferring a decision to the conformance pass on the grounds that it would ripple cross-references, the actual references are counted, not assumed. A deferral logged on an uncounted ripple gets reversed the moment someone counts. Locked 8/16/2026: the CC 9 standalone-collapse question was deferred on assumed ripple risk and reopened the same session once a search showed one external citation and zero internal ones.
 - **Nothing is deleted on the drafter's judgment.** Superseded legacy text staged in `draft.md` is not trimmed because a new chapter appears to cover it. Removal is proposed and confirmed item by item like any other decision.
 - **Preflight counts.** Before any batched file operation, count the actual entries in the array against the stated number. This includes internal forward-references within a subchapter being actively drafted: a section number cited ahead of itself is checked against the subchapter's final section count at build time, not against whatever existed when that citation was drafted.
@@ -552,6 +562,7 @@ Locked 8/16/2026 at CC 3.3.2. Previously, an underweight animal showed under the
 - **A formatting convention is verified against the chapter being extended, not the chapter most recently on screen.** CC 3's subchapters divide with `---`; CC 4, CC 6, and CC 7 do not. An insert built on the wrong assumption was caught by byte-diff against committed content rather than by checking first.
 - **A downstream bookkeeping question is not its own decision.** Where a sub-question is only a logistics consequence of an unresolved substantive question — how to log a gap, before it's settled whether a gap exists — resolve the substantive question first. Splitting the logistics question into its own menu before the substantive one is answered stacks an unanswerable choice on top of an open one.
 - **A logged open item is trusted, not repeated.** Once something is captured in `open-items.md`, later answers that touch the same topic don't re-surface the caveat on their own — repeating a stable, already-logged item across unrelated follow-ups is noise, not help. Re-surface it only when directly asked about that item's status or when current work actually changes it. Locked 8/17/2026 after the §5.1 CSU Extension review note was repeated across several Code of Conduct answers with nothing new to add each time.
+- **A gap found by reading the old book is checked against the current draft before it is named a defect.** Reading the prior county book surfaces real history, but a rule found there and not immediately visible in `draft.md` is not yet a finding — the current file is checked directly before anything is called missing, dropped, or silently deleted. Three false findings in one working-group session (goat milk teeth, the re-weigh policy, rate of gain) came from skipping this step; two of the three already existed in `draft.md` exactly as needed, and the third had simply never been part of any version. This extends the existing pull-source-before-presenting-a-delta rule to `draft.md` itself, not just the external sources.
 
 ## Source re-extraction
 
