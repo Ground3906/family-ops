@@ -9,6 +9,9 @@
 #   4. NightWatch staleness     - archive\night-watch-heartbeat.txt     (25h threshold)
 #   5. Disk free space          - C: drive below 75 GB
 #   6. Filing Cabinet count     - root file count dropped
+#   7. Pending arrivals count   - logs\receipts-index.jsonl vs logs\arrivals-processed.jsonl
+#      (count only, no alert - rides the existing digest per Locked #5,
+#      docs\document-pipeline-map.md: no per-arrival notifications)
 #
 # State persisted in archive\watchdog-state.json.
 # Health snapshot written to ops\system-health.json (pushed to repo Sundays by WeeklyPush).
@@ -37,6 +40,8 @@ $NightWatchHB    = Join-Path $ArchiveDir "night-watch-heartbeat.txt"
 $WatchdogState   = Join-Path $ArchiveDir "watchdog-state.json"
 $WatchdogLog     = Join-Path $ArchiveDir "watchdog-log.jsonl"
 $HealthFile      = Join-Path $OpsDir "system-health.json"
+$ReceiptsIndex   = Join-Path $RepoRoot "logs\receipts-index.jsonl"
+$ArrivalsProcessed = Join-Path $RepoRoot "logs\arrivals-processed.jsonl"
 $CabinetRoot     = "C:\Users\ThinkPad X1 Carbon\OneDrive\Filing Cabinet"
 $AlertTo         = "matthew.bayer@outlook.com"
 
@@ -148,8 +153,9 @@ try {
             pull_job      = @{ status = "unknown"; age_hours = $null }
             night_watch   = @{ status = "unknown"; age_hours = $null }
         }
-        disk_free_gb  = $null
-        total_alerts  = 0
+        disk_free_gb      = $null
+        pending_arrivals  = $null
+        total_alerts      = 0
     }
 
     # ------------------------------------------------------------------
@@ -321,6 +327,39 @@ try {
     } catch {
         Write-Warning "[watchdog] File count check failed: $_"
         Write-WatchdogLog "file_count_error" "$_"
+    }
+
+    # ------------------------------------------------------------------
+    # CHECK 7: Pending document-pipeline arrivals
+    # Count only - no alert, no email of its own. Rides the existing digest.
+    # Per docs\document-pipeline-map.md Locked #5, arrivals are caught by the
+    # session-open hook, not by watcher/watchdog notification. This check does
+    # not add a notification path - it adds visibility to the health snapshot
+    # that already goes out three times a day for other reasons.
+    # ------------------------------------------------------------------
+    try {
+        if (-not (Test-Path $ReceiptsIndex)) {
+            Write-Host "[watchdog] Pending arrivals: receipts index not found yet."
+            Write-WatchdogLog "pending_arrivals_no_index" "File not found: $ReceiptsIndex"
+        } else {
+            $indexed = @(Get-Content $ReceiptsIndex -ErrorAction Stop |
+                Where-Object { $_.Trim() -ne "" } |
+                ForEach-Object { (ConvertFrom-Json $_).filename })
+
+            $processed = if (Test-Path $ArrivalsProcessed) {
+                @(Get-Content $ArrivalsProcessed -ErrorAction Stop |
+                    Where-Object { $_.Trim() -ne "" } |
+                    ForEach-Object { (ConvertFrom-Json $_).filename })
+            } else { @() }
+
+            $pending = @($indexed | Where-Object { $_ -notin $processed })
+            $health.pending_arrivals = $pending.Count
+            Write-Host "[watchdog] Pending arrivals: $($pending.Count) (indexed: $($indexed.Count), processed: $($processed.Count))"
+            Write-WatchdogLog "pending_arrivals_count" "Pending: $($pending.Count)  Indexed: $($indexed.Count)  Processed: $($processed.Count)"
+        }
+    } catch {
+        Write-Warning "[watchdog] Pending arrivals check failed: $_"
+        Write-WatchdogLog "pending_arrivals_error" "$_"
     }
 
     # ------------------------------------------------------------------
