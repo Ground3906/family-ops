@@ -1,14 +1,92 @@
 # Custer County Fair Book — Addendum
 
-This is the Addendum to the Custer County Fair Book. It is published separately each year and carries the information that changes annually: the roster, locations, fees, weights, deadlines, and the fair schedule. Where the Fair Book cites a section of this Addendum, the current year's version of that section governs.
+This is the Addendum to the Custer County Fair Book. It is published separately each year and carries the information that changes annually: the roster, locations, fees, weights, deadlines, and the fair schedule. Where the Fair Book cites a section of this Addendum, the current year's version of that section governs. §1, the IAFE National Code of Show Ring Ethics, is a fixed reference and does not change from year to year; it is printed here so that a citation to it in the Fair Book points to text a reader can turn to.
 
 ---
 
-## §1 — Fair Board, Staff, and Superintendents
+## §1 — IAFE National Code of Show Ring Ethics
 
-This section lists the people who run the Custer County Fair and how to reach them. All inquiries, including requests for accommodation under the accessibility statement at the front of the Fair Book, go to the Fair and 4-H office.
+The Fair Book cites the National Code of Show Ring Ethics, published by the International Association of Fairs and Expositions (IAFE), at several points. This section states that Code in summary so a reader does not have to find it elsewhere. This is Custer County's summary of the Code, not IAFE's own text. For the Code's official wording, contact IAFE directly.
 
-**Fair and 4-H office**
+**Purpose**
+
+Every exhibitor of an animal at a livestock show is expected to act with honesty and good sportsmanship, and to hold their conduct to the highest standard of honor in the advancement of agricultural education. The Code reaches junior and open-class exhibitors alike, in any structured competition class, for any livestock entered at any event of the show. A fair or livestock show may add its own rules on top of the Code at the local, county, state, provincial, or national level; the Custer County Fair Book is one such addition.
+
+An adult who leads or works with junior exhibitors carries a higher standard than simply avoiding misconduct. Their example is expected to be strong enough to shape the younger and more impressionable exhibitors who look to them. An owner, exhibitor, fitter, trainer, or other responsible person who violates the Code forfeits premiums, awards, and sale proceeds, and is barred from future shows under the rules the fair or show has adopted. IAFE holds that a violation of the Code harms the standing of every livestock exhibitor and supports excluding a violator from competition at any fair or livestock show in the United States or Canada.
+
+**Item 1 — Proof of ownership and age**
+
+An exhibitor must produce proof of ownership, how long the animal has been owned, and the animal's age, on request of fair or show officials. Misrepresenting any of those facts is prohibited.
+
+**Item 2 — Health certificates**
+
+An owner, exhibitor, fitter, trainer, or other responsible person must produce a health certificate from a licensed veterinarian for an animal, on request of fair or show officials.
+
+**Item 3 — Care by the junior exhibitor**
+
+A junior exhibitor is expected to care for and groom their own animal at the fair or show.
+
+**Item 4 — Drug residues and testing**
+
+An animal entered where it will enter the food chain must be free of violative drug residue. Entering an animal is the owner's, exhibitor's, fitter's, trainer's, and responsible person's consent for the fair or show to collect urine, saliva, blood, or other samples from the animal for testing. An animal not entered in an event leading to the food chain may still only be given drugs allowed under applicable law, and may not be shown at all where a legally administered drug affects its performance or appearance at the event.
+
+A laboratory finding of a forbidden drug or medication in a tested sample is treated as proof that the substance was given to the animal, whether internally or externally. The sample is presumed to be the one taken from the animal in question, its handling is presumed correct at every step, and the lab's report is presumed to reflect the animal's condition when the sample was taken. The owner, exhibitor, fitter, trainer, or other responsible person carries the burden of proving otherwise.
+
+Once an animal is on the fairgrounds, only a licensed veterinarian may administer a drug or medication to it, and only to protect the animal's health.
+
+**Item 5 — Prohibited alteration of the animal**
+
+Surgery, an injection of any substance, or an external application of an irritant or similar substance is prohibited where it could affect the animal's performance or change its natural shape, conformation, or appearance. Two things are excepted: a cosmetic treatment applied to a hoof or horn that affects appearance only, and a surgical procedure performed by a licensed veterinarian solely to protect the animal's health.
+
+**Item 6 — Prohibited handling practices**
+
+A handling practice or device meant to strike an animal to cause swelling, an electrical device used on an animal, or a similar practice, is prohibited.
+
+**Item 7 — No interference with the show**
+
+Direct criticism of, or interference with, a judge, fair or show management, another exhibitor, a breed representative, or a show official is prohibited before, during, or after a competitive event. Every judge, manager, and official is owed courtesy, cooperation, and respect in the course of their duty, and no person may direct abusive or threatening conduct toward them.
+
+**Item 8 — No conspiracy to violate the Code**
+
+An owner, exhibitor, fitter, trainer, or other responsible person may not agree with another person to violate the Code, and may not knowingly help or cooperate in a violation, whether by acting or by failing to act. A violation of this Item subjects the people involved to discipline.
+
+**Item 9 — Absolute responsibility**
+
+The owner, exhibitor, fitter, or other participant is fully responsible for the animal's condition, whether or not they took part in or knew about whatever caused a violation of the Code.
+
+**Item 10 — Consent to discipline**
+
+Entering an animal is the owner's, exhibitor's, fitter's, trainer's, or responsible person's consent to let the fair or show take disciplinary action for a violation of the Code or of the fair's other competition rules, without recourse against the fair or show. It is also consent that IAFE may publish the outcome of that discipline, naming the violator, in its own publications and member notices.
+
+**Item 11 — Consent that entering verifies you have read the Code**
+
+Entering an animal at a fair or livestock show is the owner's, exhibitor's, fitter's, trainer's, or responsible person's verification that they have read the Code and understand the penalties it carries. It is also consent that a violation of the Code that also breaks a federal, state, or provincial law may be reported to the law enforcement authority with jurisdiction over it.
+
+**Acknowledgment**
+
+I have read this summary of the IAFE National Code of Show Ring Ethics, and I understand that entering an animal at the Custer County Fair is itself my verification that I have read the Code and my consent to the disciplinary process it describes.
+
+| | |
+|---|---|
+| Participant name (printed) | |
+| Participant signature | |
+| Date | |
+| Parent or guardian signature, if participant is under 18 | |
+| Date | |
+
+---
+
+## §2 — Fair Board, Staff, Superintendents, and the Sale
+
+This section lists the people who run the Custer County Fair, the club leaders families can reach on their own behalf, and the entities the fair does business with for the Market Livestock Sale.
+
+Two offices serve the fair. The **Fair office**, on the fairgrounds, is staffed by Fair Board members during fair week and is where a grievance or appeal under CC 2.8 is filed. The **CSU Extension office** is where CSU Extension and 4-H conduct year-round business, and is the contact of record before and after fair week, including for a request for accommodation under the accessibility statement at the front of the Fair Book.
+
+**Fair office**
+
+Staffed during fair week only.
+
+**CSU Extension office**
 
 | | |
 |---|---|
@@ -18,15 +96,15 @@ This section lists the people who run the Custer County Fair and how to reach th
 
 **Fair Board**
 
-| Role | Name |
-|---|---|
-| President | Wendy Rusk |
-| Vice President | Enjoli Skeen-Dean |
-| Treasurer | Alisha Shy |
-| Secretary | Lea Grundy |
-| Sale Committee | Bre Gasper |
-| Member | Brittany VanDeusen |
-| Member | Matthew Bayer |
+| Role | Name | Phone |
+|---|---|---|
+| President | Wendy Rusk | |
+| Vice President | Enjoli Skeen-Dean | |
+| Treasurer | Alisha Shy | |
+| Secretary | Lea Grundy | |
+| Sale Committee | Bre Gasper | |
+| Member | Brittany VanDeusen | |
+| Member | Matthew Bayer | |
 
 **County Commissioners**
 
@@ -38,11 +116,11 @@ This section lists the people who run the Custer County Fair and how to reach th
 
 **CSU Extension and FFA**
 
-| Role | Name |
-|---|---|
-| CSU Extension Director | Reggie Foster |
-| 4-H Program Coordinator | Ashtyn Walter |
-| FFA Advisor | Eddie Crispe |
+| Role | Name | Phone |
+|---|---|---|
+| CSU Extension Director | Reggie Foster | |
+| 4-H Program Coordinator | Ashtyn Walter | |
+| FFA Advisor | Eddie Crispe | |
 
 **Official Fair Veterinarian**
 
@@ -52,17 +130,17 @@ This section lists the people who run the Custer County Fair and how to reach th
 
 **Superintendents**
 
-| Department | Name |
-|---|---|
-| 4-H and Open | Ashtyn Walter |
-| FFA and Beef | Eddie Crispe |
-| Swine | Joseph Arnone |
-| Sheep and Goats | Sara Canterbury |
-| Horse | Katlyn Wommack |
-| Llama | Caleb and Brittany VanDeusen |
-| Small Animal | Brianna Evert |
-| Livestock Master Showmanship | Lance Ingram |
-| Companion Animal Master Showmanship | Brianna Evert |
+| Department | Name | Phone |
+|---|---|---|
+| 4-H and Open | Ashtyn Walter | |
+| FFA and Beef | Eddie Crispe | |
+| Swine | Joseph Arnone | |
+| Sheep and Goats | Sara Canterbury | |
+| Horse | Katlyn Wommack | |
+| Llama | Caleb and Brittany VanDeusen | |
+| Small Animal | Brianna Evert | |
+| Livestock Master Showmanship | Lance Ingram | |
+| Companion Animal Master Showmanship | Brianna Evert | |
 
 **Shooting Sports**
 
@@ -71,9 +149,41 @@ This section lists the people who run the Custer County Fair and how to reach th
 | Rifle and shotgun | Reggie Foster |
 | Archery | Reggie Foster |
 
+**4-H Club Leaders**
+
+A family that cannot reach one leader can reach another. One row per leader.
+
+| Club | Leader | Phone |
+|---|---|---|
+| | | |
+| | | |
+| | | |
+
+**Designated Processing Facilities**
+
+Facilities designated by the Authority under CC 4.4.4 for the current fair year.
+
+| Facility | Type |
+|---|---|
+| | |
+| | |
+
+**Floor Buyers**
+
+The floor buyer for each market species, designated by the Authority under CC 4.4.4. A floor buyer purchases an animal at the floor market price where CC 4.4.6 or, for market poultry, CC 3.6.3 applies.
+
+| Species | Floor Buyer |
+|---|---|
+| Market Beef | |
+| Market Swine | |
+| Market Sheep | |
+| Market Goat | |
+| Market Poultry | |
+| Market Rabbit | |
+
 ---
 
-## §2 — Schedule
+## §3 — Schedule
 
 Gates open at 7:00 am and close at 10:00 pm each day. A fifteen-minute break is scheduled between events. No event starts before its stated time, so every time after a day's first event is the earliest an event will begin, not a fixed start.
 
@@ -189,7 +299,7 @@ Gates open at 7:00 am and close at 10:00 pm each day. A fifteen-minute break is 
 
 12:00 pm – 2:00 pm: Livestock Master Showmanship
 
-One hour after the conclusion of the beef show: Exit election and signed Wholesome Meat Act Disclosure due to the sale committee
+One hour after the conclusion of the beef show: Sale declaration and signed Wholesome Meat Act Disclosure due to the sale committee
 
 6:00 pm – 9:00 pm: PRCA Westcliffe Stampede Rodeo
 
@@ -217,9 +327,9 @@ One hour after the conclusion of the beef show: Exit election and signed Wholeso
 
 ---
 
-## §3 — Deadlines and Required Attendance
+## §4 — Deadlines and Required Attendance
 
-This section lists everything you must turn in, and everywhere you must be, grouped by the day it falls due. Missing anything on this list has a consequence. Times and locations for every event are in §7.
+This section lists everything you must turn in, and everywhere you must be, grouped by the day it falls due. Missing anything on this list has a consequence. Times and locations for every event are in §3.
 
 **Before fair week**
 
@@ -230,7 +340,7 @@ This section lists everything you must turn in, and everywhere you must be, grou
 | Friday, July 2, 2027 | Open Division request to accept an exhibit that fits no class offered, raised with the superintendent under CC 10.1.10 |
 | Before the fair | Code of Conduct signed by exhibitor, parent or guardian, and volunteers, collected by CSU Extension |
 | Before the fair | MQA certification and animal care and housing forms, verified by CSU Extension |
-| Before the county weigh-in | Market lamb rough shorn. Market goat shorn, horns blunt tipped, wethers castrated |
+| Before the fair weigh-in | Market lamb rough shorn. Market goat shorn, horns blunt tipped, wethers castrated |
 
 **Thursday, July 8, 2027**
 
@@ -264,7 +374,7 @@ This section lists everything you must turn in, and everywhere you must be, grou
 
 | Time | What |
 |---|---|
-| One hour after the beef show ends | Exit election filed with the sale committee. An animal not withdrawn is consigned to the sale |
+| One hour after the beef show ends | Sale declaration filed with the sale committee. An animal not declared does not sell |
 | One hour after the beef show ends | Signed Wholesome Meat Act Disclosure returned to the sale committee |
 | Before the sale | Bill of sale presented to the brand inspector. Market beef only |
 
@@ -277,19 +387,23 @@ This section lists everything you must turn in, and everywhere you must be, grou
 
 ---
 
-## §4 — Weight Windows and Market Deadlines
+## §5 — Weight Windows and Market Deadlines
 
-This section lists the weights, entry limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it.
+This section lists the weights, ages, entry limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it. Where a minimum weight is lower than the Colorado State Fair figure, that reflects the Custer County Fair being held earlier in the year.
 
 **Market Beef**
 
 | | |
 |---|---|
-| Minimum weight | 1,000 lbs |
+| CSF minimum weight | 1,050 lbs |
+| Custer minimum weight | 1,000 lbs |
 | Maximum weight | None |
+| Governing rule | CC 3.2.2a |
 | Other requirements | CC 3.2.2 age, CC 3.2.3 heifer pregnancy certification |
 
 **Market Swine**
+
+Custer County's minimum and maximum both differ from the Colorado State Fair figures. This is a stated exception to the pattern followed by the other three species.
 
 | Weight | Shows | Sells |
 |---|---|---|
@@ -299,58 +413,63 @@ This section lists the weights, entry limits, and market deadlines for each spec
 
 | | |
 |---|---|
+| CSF weight window | 235 to 300 lbs |
 | Governing rule | CC 3.3.2 |
-| Other requirements | CC 3.3.5 pen assignment |
+| Other requirements | CC 3.3.2a identification, CC 3.3.5 pen assignment |
 
 **Market Sheep**
 
 | | |
 |---|---|
-| Minimum weight | 105 lbs |
-| Maximum weight | Not set |
-| Rough shearing deadline | Before the county weigh-in |
-| Other requirements | CC 3.4.2 scrapie identification, CC 3.4.3 shearing, CC 3.4.9 eligible animals |
+| CSF minimum weight | 110 lbs |
+| Custer minimum weight | 105 lbs |
+| Maximum weight | 165 lbs |
+| Rough shearing deadline | Before the fair weigh-in |
+| Governing rule | CC 3.4.8 |
+| Other requirements | CC 3.4.2 scrapie identification, CC 3.4.3 shearing, CC 3.4.8a age, CC 3.4.9 eligible animals |
 
 **Market Goat**
 
 | | |
 |---|---|
-| Minimum weight | 55 lbs |
-| Maximum weight | Not set |
-| Minimum gain, initial to final weigh-in | 5 lbs |
-| Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age, CC 3.5.9 weight gain |
+| CSF minimum weight | 55 lbs |
+| Custer minimum weight | 55 lbs |
+| Maximum weight | 115 lbs |
+| Governing rule | CC 3.5.3 |
+| Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age |
 
 **Market Poultry**
 
-| Class | Weight window per bird |
-|---|---|
-| Market Fryer Pen | 3.5 to 6.9 lbs |
-| Market Broiler Pen | 7.0 to 12.0 lbs |
-| Market Turkey Hen | 13 to 30 lbs |
-| Market Turkey Tom | 20 to 30 lbs |
+| Class | Weight window per bird | Age |
+|---|---|---|
+| Market Fryer Pen | 3.5 to 7.0 lbs | Not over 8 weeks |
+| Market Broiler Pen | 7.0 to 12.0 lbs | Not over 20 weeks |
+| Market Turkey Hen | 13 to 30 lbs | 16 to 20 weeks |
+| Market Turkey Tom | 20 to 30 lbs | 16 to 20 weeks |
 
 | | |
 |---|---|
-| Maximum entries per class | 4 |
-| Other requirements | CC 3.6.5 identification, CC 3.6.8 age, CC 3.6.9 turkey breed |
+| Maximum entries per exhibitor | 2, across the department |
+| Other requirements | CC 3.6.4 weigh-in requirement, CC 3.6.5 identification, CC 3.6.8 age, CC 3.6.9 turkey breed |
 
 **Market Rabbit**
 
 | | |
 |---|---|
 | Meat pen weight window per rabbit | 3.5 to 5.5 lbs |
-| Maximum pens per exhibitor | 4 |
+| Age limit | 10 weeks |
+| Maximum pens per exhibitor | 2 |
 | Other requirements | CC 3.7.4 identification |
 
 **Market deadlines**
 
 | Deadline | Window |
 |---|---|
-| Exit election, filed with the sale committee | No later than one hour after the conclusion of the beef show |
+| Sale declaration, filed with the sale committee | No later than one hour after the conclusion of the beef show |
 
 ---
 
-## §5 — Fees
+## §6 — Fees
 
 This section lists every fee and payment amount stated in the Fair Book. A fee not listed here is not charged.
 
@@ -373,19 +492,20 @@ The sale commission is reviewed every January and may be adjusted by the board.
 
 ---
 
-## §6 — Required Forms
+## §7 — Required Forms
 
 This section lists every form an exhibitor must complete and sign, and reproduces each one. A form not listed here is not required.
 
 | Form | What it is | Who signs |
 |---|---|---|
-| §6.1 Code of Conduct | The 4-H and FFA behavior agreement that is a condition of participation | Exhibitor, parent or guardian, leader, volunteer |
-| §6.2 MQA certification | Meat Quality Assurance program completion, verified by CSU Extension. No certificate is submitted | — |
-| §6.3 Animal care and housing form | Statement of where and how the project animal is kept | Animal exhibitor |
-| §6.4 Wholesome Meat Act Disclosure | Warranty that the carcass is fit for human consumption and residue free | Exhibitor and parent or guardian |
-| §6.5 Entry card | Identifies an indoor or Open Division exhibit and its class | Exhibitor |
+| §7.1 Code of Conduct | The 4-H and FFA behavior agreement that is a condition of participation | Exhibitor, parent or guardian, leader, volunteer |
+| §7.2 MQA certification | Meat Quality Assurance program completion, verified by CSU Extension. No certificate is submitted | — |
+| §7.3 Animal care and housing form | Statement of where and how the project animal is kept | Animal exhibitor |
+| §7.4 Wholesome Meat Act Disclosure | Warranty that the carcass is fit for human consumption and residue free | Exhibitor and parent or guardian |
+| §7.5 Entry card | Identifies an indoor or Open Division exhibit and its class | Exhibitor |
+| §7.6 Violation Notice | Records a warning or sanction issued under CC 2.7 | Issued by the Authority |
 
-### §6.1 — Custer County 4-H, FFA, and Open Fair Code of Conduct
+### §7.1 — Custer County 4-H, FFA, and Open Fair Code of Conduct
 
 This Code is owned by CSU Extension, 4-H, and FFA, who collect the signatures, under CC 2.3.
 
@@ -415,15 +535,12 @@ This Code of Conduct and Disciplinary Procedure is a condition of participation 
 
 - Contact by parents, exhibitors, leaders, spectators, or volunteers with county fair judges prior to or after the Custer County Fair, for any reason other than learning opportunities, is prohibited. Judges' decisions are final.
 - Participants are held to the 4-H and FFA Codes of Conduct and to the spirit within which they were established. Any 4-H or FFA member reported to law enforcement for a violation on the Custer County Fairgrounds or Rodeo grounds during fair week is subject to disciplinary action, including but not limited to disqualification from show, disqualification from sale, loss of sale premiums, or other consequences as determined under the Custer County Fair Book. Anyone banned from the Rodeo grounds is also banned from the Fairgrounds and forfeits all rights to participate in any show or sale.
-- Inappropriate dress. Clothing should meet the standards expected in Custer County public schools. The following Colorado State 4-H dress code has been developed to provide participants and spectators with the best experience and will be enforced for all individuals attending 4-H events and activities, including chaperones. If you choose to dress inappropriately, you will be required to change.
-  - All clothing shall be neat, clean, acceptable in repair and appearance, and shall be worn within the bounds of decency and good taste as appropriate for 4-H events and activities.
-  - Articles of clothing which display profanity, products, or slogans which promote tobacco, alcohol, drugs, or sex, or are in any other way distracting, are prohibited.
-  - Excessively baggy or tight clothing which advertises gang symbols or affiliation is prohibited.
-  - Items of clothing which expose bare midriffs, bare chests, undergarments, or that are transparent are prohibited.
-  - Tank tops with straps wider than one inch are permitted. Shirts which expose a bare back, halter tops, and tube tops are prohibited.
-  - Shorts must be mid-thigh length. Cut-off shorts and short-shorts are not allowed.
-  - Hats need to be removed for meetings, workshops, meals, and at other times when asked to remove them.
-  - Shoes must be worn at all times.
+- Inappropriate dress. Clothing should meet the standards expected in Custer County public schools. The following dress standard, matching the Fair Book at CC 2.4, has been developed to provide participants and spectators with the best experience and will be enforced for all individuals attending 4-H events and activities, including chaperones. If you choose to dress inappropriately, you will be required to change.
+  - All clothing shall be neat, clean, in good repair, and worn within the bounds of decency and good taste appropriate for 4-H events and activities.
+  - Clothing shall not display profanity. Clothing shall not display a product, slogan, or symbol promoting tobacco, alcohol, drugs, or sex. Clothing shall not display a gang symbol or gang affiliation. Clothing that is in any way distracting is prohibited.
+  - Clothing shall not expose a bare midriff, a bare chest, a bare back, or an undergarment, and shall not be transparent. Halter tops and tube tops are prohibited. A tank top is permitted where its straps are wider than one inch.
+  - Shorts shall reach mid-thigh. Cut-off shorts and short-shorts are prohibited.
+  - Shoes shall be worn at all times. A hat shall be removed for a meeting, a workshop, or a meal, and at any other time a person is asked to remove it.
 
 **D. Who may impose discipline**
 
@@ -441,7 +558,7 @@ The Authority must be satisfied that the participant more likely than not engage
 
 **F. Grievances and appeals**
 
-A participant, parent, guardian, leader, volunteer, or spectator who wishes to contest a decision, a rule, a policy, or a judging procedure files a grievance under the Custer County Fair Book at CC 2.8. Filing windows are stated in Addendum §7.1, and fees are stated in Addendum §6. That process is the sole process, and compliance with it is mandatory before seeking review in any other forum.
+A participant, parent, guardian, leader, volunteer, or spectator who wishes to contest a decision, a rule, a policy, or a judging procedure files a grievance under the Custer County Fair Book at CC 2.8. Filing windows are stated in Addendum §8.1, and fees are stated in Addendum §6. That process is the sole process, and compliance with it is mandatory before seeking review in any other forum.
 
 **G. Immediate action situations**
 
@@ -465,19 +582,19 @@ I have read this Code of Conduct and the Custer County Fair Book, and I agree to
 
 ---
 
-### §6.2 — MQA Certification
+### §7.2 — MQA Certification
 
 MQA certification is verified by CSU Extension under CC 3.1.3. No certificate is submitted at check-in.
 
 ---
 
-### §6.3 — Animal Care and Housing Form
+### §7.3 — Animal Care and Housing Form
 
-This form states where and how the project animal is kept. It is completed by the animal exhibitor and collected by the Fair and 4-H office.
+This form states where and how the project animal is kept. It is completed by the animal exhibitor and collected by the CSU Extension office.
 
 ---
 
-### §6.4 — Wholesome Meat Act Disclosure
+### §7.4 — Wholesome Meat Act Disclosure
 
 Signed by every exhibitor and a parent or guardian before an animal is delivered for slaughter, under CC 4.7.5. Returned to the sale committee no later than one hour after the conclusion of the beef show.
 
@@ -532,7 +649,7 @@ I have read this disclosure. I warrant everything stated above about the animal 
 
 ---
 
-### §6.5 — Entry Card
+### §7.5 — Entry Card
 
 Issued at check-in for every indoor and Open Division exhibit, under CC 2.2 and CC 10.1.4. An exhibit presented without a completed entry card is refused.
 
@@ -564,11 +681,30 @@ The card is two parts. The exhibitor completes both, the Authority separates the
 
 ---
 
-## §7 — Grievance and Appeal
+### §7.6 — Violation Notice
+
+Issued by the Authority under CC 2.7 at the first written warning and at every sanction after it. One copy to the person named, one copy retained.
+
+| | |
+|---|---|
+| Name of person cited | |
+| Role (exhibitor, parent or guardian, leader, volunteer) | |
+| Date and time | |
+| Location | |
+| Rule alleged to have been violated | |
+| Facts | |
+| Escalation step under CC 2.7(a) | |
+| Issued by | |
+
+This is a notice of the escalation step recorded, not a finding requiring the person's signature. A person cited may appeal under CC 2.8. The appeal window is stated in Addendum §8.1.
+
+---
+
+## §8 — Grievance and Appeal
 
 This section carries the filing windows for grievances and appeals under CC 2.8, followed by the two forms. Read the window before filling out a form: a form filed outside its window is not considered.
 
-### §7.1 — Filing Windows
+### §8.1 — Filing Windows
 
 This section lists the filing windows for grievances and appeals under CC 2.8. Each window runs from the event named, not from the start of a business day.
 
@@ -578,9 +714,9 @@ This section lists the filing windows for grievances and appeals under CC 2.8. E
 | Appeal by a grievant | Within 8 hours after the grievance resolution is announced |
 | Appeal by a person sanctioned under CC 2.7 | Within 24 hours after the sanction is issued |
 
-### §7.2 — Grievance Form
+### §8.2 — Grievance Form
 
-Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §7.1, accompanied by the grievance fee stated in Addendum §5, in cash or certified check. Judging will not be interrupted by a grievance.
+Filed under CC 2.8. Must be delivered to the Fair office within the window stated in Addendum §8.1, accompanied by the grievance fee stated in Addendum §6, in cash or certified check. Judging will not be interrupted by a grievance.
 
 **Person filing**
 
@@ -603,7 +739,7 @@ Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the wind
 
 **Rule alleged to have been violated**
 
-State the specific rule of the Custer County Fair Book, the Colorado State Fair General Competition Requirements, or the IAFE National Code of Show Ring Ethics that you allege was violated. Cite it by number where you can.
+State the specific rule of the Custer County Fair Book, the Colorado State Fair General Competition Requirements, or the IAFE National Code of Show Ring Ethics at Addendum §1 that you allege was violated. Cite it by number where you can.
 
 |   |
 |---|
@@ -651,9 +787,9 @@ I swear that the statements made in this grievance are true and correct to the b
 
 ---
 
-### §7.3 — Appeal Form
+### §8.3 — Appeal Form
 
-Filed under CC 2.8. Must be delivered to the Fair and 4-H office within the window stated in Addendum §7.1, accompanied by the appeal fee stated in Addendum §5, in cash or certified check. The fee is refunded if the matter is resolved in your favor. The decision of the Fair Board is final.
+Filed under CC 2.8. Must be delivered to the Fair office within the window stated in Addendum §8.1, accompanied by the appeal fee stated in Addendum §6, in cash or certified check. The fee is refunded if the matter is resolved in your favor. The decision of the Fair Board is final.
 
 **What are you appealing? Check one.**
 
@@ -734,14 +870,15 @@ I swear that the statements made in this appeal are true and correct to the best
 
 ---
 
-## §8 — Locations
+## §9 — Locations
 
 This section lists every place named in the Fair Book and describes what happens there. Addresses are listed where a facility is off the fairgrounds.
 
 | Location | What happens there |
 |---|---|
-| Custer County Fairgrounds | The main site of the fair. Barns, show ring, exhibit hall, and the Fair and 4-H office are here. |
-| Fair and 4-H office | Where grievances, appeals, and fees are filed, and where the Fair Board and CSU Extension staff can be reached during fair week. |
+| Custer County Fairgrounds | The main site of the fair. Barns, show ring, exhibit hall, and the Fair office are here. |
+| Fair office | Staffed by Fair Board members during fair week. Where a grievance or appeal under CC 2.8 is filed. |
+| CSU Extension office | Where CSU Extension conducts 4-H and FFA business year-round. Contact point for accommodation requests, the Code of Conduct, MQA certification, and the animal care and housing form. |
 | Exhibit hall | Check-in, judging, and display of all indoor and Open Division projects. Judge interviews for 4-H general and family and consumer sciences projects. |
 | Show ring | Most livestock and companion animal shows, and master showmanship. |
 | Sale ring | The Market Livestock Sale. |
@@ -755,7 +892,7 @@ This section lists every place named in the Fair Book and describes what happens
 
 ---
 
-## §9 — Official Communication Channels
+## §10 — Official Communication Channels
 
 This section lists the channels through which the Custer County Fair Board issues official communications, as required by CC 2.9. A communication that does not come through a channel listed here is not official. Channels are designated by Fair Board policy.
 
@@ -766,4 +903,3 @@ This section lists the channels through which the Custer County Fair Board issue
 | | | |
 
 ---
-
