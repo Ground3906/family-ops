@@ -1,4 +1,4 @@
-# Custer County Fair Book — Draft
+Custer County Fair Book — Draft
 
 This file is the book. It is written chapter by chapter, finished, as it will print. Architecture and front matter (cover, mission and objectives, ADA statement) are in `fair/fairbook/charter.md` and `fair/fairbook/front-matter.md`. The table of contents is `fair/fairbook/toc.md`.
 
@@ -30,21 +30,21 @@ The following abbreviations are used throughout this book.
 
 **APA** — American Poultry Association, the organization that publishes the Standard of Perfection defining recognized poultry breeds and varieties.
 
-**CCGP** — Colorado State Fair 4-H Consumer Science and General Project Requirements, the CSU Extension document that governs the project-specific requirements of CC 9, adopted by CC 9.2.
-
-**CCR** — Colorado State Fair 4-H Contest Requirements, the CSU Extension document that governs the Cat Show and other named 4-H contests, adopted by CC 6.5.
-
 **CSF** — Colorado State Fair.
+
+**CSF CCGP** — Colorado State Fair 4-H Consumer Science and General Project Requirements, the CSU Extension document that governs the project-specific requirements of CC 9, adopted by CC 9.2.
+
+**CSF CCR** — Colorado State Fair 4-H Contest Requirements, the CSU Extension document that governs the Cat Show and other named 4-H contests, adopted by CC 6.5.
+
+**CSF DTR** — Colorado State Fair State 4-H Dog Trials Rules, the CSU Extension rulebook that governs the conduct of 4-H dog classes, adopted by CC 6.4.
+
+**CSF GCR** — Colorado State Fair General Competition Requirements, the CSF's governing rulebook for all competitions.
+
+**CSF GEFA** — Colorado State Fair General Entry and Fine Arts Department Requirements, the CSF document governing entry, judging, and display requirements for the Open Division, adopted in part by CC 10.
 
 **CSU Extension** — Colorado State University Extension, the county's administrator of the 4-H Youth Development Program.
 
-**DTR** — Colorado State Fair State 4-H Dog Trials Rules, the CSU Extension rulebook that governs the conduct of 4-H dog classes, adopted by CC 6.4.
-
 **FFA** — National FFA Organization, formerly known as Future Farmers of America.
-
-**GCR** — Colorado State Fair General Competition Requirements, the CSF's governing rulebook for all competitions.
-
-**GEFA** — Colorado State Fair General Entry and Fine Arts Department Requirements, the CSF document governing entry, judging, and display requirements for the Open Division, adopted in part by CC 10.
 
 **HSRB** — Colorado 4-H Horse Show Rule Book (LA1500K), the CSU Extension rulebook that governs the conduct of 4-H horse classes, adopted by CC 5.
 
@@ -110,9 +110,9 @@ Custer County acknowledges and adopts the GCR's use of "the Authority" as the bo
 
 **CC 2.1 Eligibility**
 
-An exhibit entered at the Custer County Fair may not be entered at any other county fair in Colorado during the same fair year. The CSF is excepted.
+An exhibit entered at the Custer County Fair may not be entered at any other county fair in Colorado during the same fair year. The Colorado State Fair (CSF) is excepted.
 
-An exhibitor in the Open Division is not required to hold 4-H or FFA membership and is not required to reside in Custer County. See CC 10.
+An exhibitor in the Open Division is not required to hold 4-H or National FFA Organization (FFA) membership and is not required to reside in Custer County. See CC 10.
 
 **CC 2.2 Entry and Registration**
 
@@ -126,7 +126,7 @@ An exhibitor must complete every form required for their projects before partici
 
 **CC 2.3 Code of Conduct**
 
-The Custer County 4-H and FFA Code of Conduct governs all exhibitors, volunteers, and spectators at the Custer County Fair. The Code is owned by CSU Extension, 4-H, and FFA, who collect the signature of each participant, parent or guardian, and volunteer prior to the fair. By participating in the Custer County Fair as an exhibitor, volunteer, or spectator, you agree to be bound by the Code of Conduct and by all rules in this book.
+The Custer County 4-H and FFA Code of Conduct governs all exhibitors, volunteers, and spectators at the Custer County Fair. The Code is owned by Colorado State University Extension (CSU Extension), 4-H, and FFA, who collect the signature of each participant, parent or guardian, and volunteer prior to the fair. By participating in the Custer County Fair as an exhibitor, volunteer, or spectator, you agree to be bound by the Code of Conduct and by all rules in this book.
 
 The following conduct subjects any person to removal from the fairgrounds.
 
@@ -170,13 +170,13 @@ A person who does not meet this standard will be required to change.
 
 **CC 2.5 Judges' Decisions**
 
-Custer County acknowledges and adopts the GCR, Grievances/Protests provisions. A grievance may address a violation of these rules, an eligibility question, or a procedural matter. A judge's placing is final. It is not the subject of a grievance, protest, or appeal. Disagreement with a judge's opinion of an animal or an exhibitor is not grounds for a grievance.
+Custer County acknowledges and adopts the CSF General Competition Requirements (CSF GCR), Grievances/Protests provisions. A grievance may address a violation of these rules, an eligibility question, or a procedural matter. A judge's placing is final. It is not the subject of a grievance, protest, or appeal. Disagreement with a judge's opinion of an animal or an exhibitor is not grounds for a grievance.
 
 It is the responsibility of the judge to determine the merits of every class. No placing in a class is predetermined by the number of exhibits entered in that class.
 
 **CC 2.6 Interference with Competition**
 
-Custer County acknowledges and adopts the GCR, Prohibition of Interference with Competitions, and recognizes IAFE Code of Show Ring Ethics Item 7, which states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
+Custer County acknowledges and adopts the CSF GCR, Prohibition of Interference with Competitions, and recognizes International Association of Fairs and Expositions (IAFE) Code of Show Ring Ethics Item 7, which states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
 
 If any exhibitor, in any way, whether in person or by agent or representative, interferes with any judge during that judge's adjudication or behaves disrespectfully toward any judge or Authority staff, the Authority may immediately remove that exhibitor from the judging area, disqualify the exhibitor from further competition, remove the exhibitor from the fairgrounds, withhold any prizes awarded in any other event at the fair, and recommend suspension from future fairs.
 
@@ -196,7 +196,7 @@ A violation of this section proceeds under the escalation at CC 2.7(a). Violatio
 
 **CC 2.7 Penalties**
 
-Custer County acknowledges and adopts the GCR, Determination of Violations. The Fair Board President, the CSU Extension Director or the FFA Advisor where the matter is FFA-specific, and the department Superintendent serve in the roles described in that provision. Upon a finding of violation, the Authority may disqualify the exhibitor and forfeit all fees, premiums, trophies, and awards from the division; withdraw any or all premiums, trophies, and awards won by the exhibitor in any division and require their return; bar the exhibitor from competition at the Custer County Fair for any period, including a lifetime bar, upon three-way concurrence of the Fair Board President, the CSU Extension Director or the FFA Advisor, and the department Superintendent; exclude the entry from any sale; determine the disposition of any sale proceeds already collected, including offering the buyer a full refund, a donation to the Custer County Fair, or retention as a credit toward future sales; or impose any other appropriate penalty.
+Custer County acknowledges and adopts the CSF GCR, Determination of Violations. The Fair Board President, the CSU Extension Director or the FFA Advisor where the matter is FFA-specific, and the department Superintendent serve in the roles described in that provision. Upon a finding of violation, the Authority may disqualify the exhibitor and forfeit all fees, premiums, trophies, and awards from the division; withdraw any or all premiums, trophies, and awards won by the exhibitor in any division and require their return; bar the exhibitor from competition at the Custer County Fair for any period, including a lifetime bar, upon three-way concurrence of the Fair Board President, the CSU Extension Director or the FFA Advisor, and the department Superintendent; exclude the entry from any sale; determine the disposition of any sale proceeds already collected, including offering the buyer a full refund, a donation to the Custer County Fair, or retention as a credit toward future sales; or impose any other appropriate penalty.
 
 Custer County further provides as follows.
 
@@ -212,7 +212,7 @@ Custer County further provides as follows.
 
 **CC 2.8 Grievance and Appeals**
 
-Custer County acknowledges and adopts the GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
+Custer County acknowledges and adopts the CSF GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
 
 A grievance must be submitted in writing on the form available from the Fair and 4-H office, accompanied by the grievance fee listed in Addendum §5, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair and 4-H office within the deadline listed in Addendum §7.1 after the occurrence. Judging will not be interrupted by a grievance.
 
@@ -244,11 +244,11 @@ At the cleanup before the fair, a livestock exhibitor may work on that exhibitor
 
 **CC 2.12 Exhibitor Liability**
 
-Custer County acknowledges and adopts the GCR, Exhibitor Liability. Each exhibitor is solely responsible for any loss, injury, or damage done to, occasioned by, or arising from any animal or article that exhibitor shows. By entering the Custer County Fair, an exhibitor releases the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1, from any claim, demand, or liability arising from the exhibitor's animal, article, or participation.
+Custer County acknowledges and adopts the CSF GCR, Exhibitor Liability. Each exhibitor is solely responsible for any loss, injury, or damage done to, occasioned by, or arising from any animal or article that exhibitor shows. By entering the Custer County Fair, an exhibitor releases the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1, from any claim, demand, or liability arising from the exhibitor's animal, article, or participation.
 
 **CC 2.13 Barred Exhibitors**
 
-Custer County acknowledges and adopts the GCR, Barred Exhibitors. The Authority may refuse entry to any exhibitor who has been barred from another show for unethical practices, disqualified from competition at any major livestock show or at any state or county fair, or who has had premiums withheld or withdrawn for violation of a competition requirement. The Authority may consult the NALS&RMA Rules & Infraction Database in making this determination.
+Custer County acknowledges and adopts the CSF GCR, Barred Exhibitors. The Authority may refuse entry to any exhibitor who has been barred from another show for unethical practices, disqualified from competition at any major livestock show or at any state or county fair, or who has had premiums withheld or withdrawn for violation of a competition requirement. The Authority may consult the NALS&RMA Rules & Infraction Database in making this determination.
 
 ---
 
@@ -376,7 +376,7 @@ Exhibitors in the market divisions of this chapter must be bona fide members of 
 
 **CC 3.1.3 Quality Assurance**
 
-Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete an MQA program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
+Custer County acknowledges and adopts the CSF requirement that exhibitors in a market division complete a Meat Quality Assurance (MQA) program and comply with the IAFE Code of Show Ring Ethics. Every exhibitor entering a market project shall hold current MQA certification.
 
 Custer County reads this requirement as follows. A member shall complete the MQA class in their first year of livestock enrollment, and shall complete the class again in the enrollment year in which the member reaches fourteen years of age.
 
@@ -444,13 +444,13 @@ Custer County acknowledges and adopts the CSF requirement that market animals ar
 
 Custer County further provides that an animal shown in a breeding class shall not be shown in a market class.
 
-**CC 3.1.12 Pen and Stall Assignment**
+**CC 3.1.12 Pen, Stall, and Cage Assignment**
 
-Each exhibitor shall be assigned one pen or stall in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen or stall in each species entered, the superintendent shall assign any remaining space in the same order.
+Each exhibitor shall be assigned one pen, stall, or cage in each species in which that exhibitor has an entry. The superintendent of the department shall make every assignment. Assignments within a species shall be made in order of exhibitor age division, beginning with Senior members. After every exhibitor has received one pen, stall, or cage in each species entered, the superintendent shall assign any remaining space in the same order.
 
-Where the number of entries in a species exceeds the pen space available for that species, the guarantee of pen space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the pen space assigned to each exhibitor as needed, with the superintendent of the department as lead.
+Where the number of entries in a species exceeds the space available for that species, the guarantee of space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the space assigned to each exhibitor as needed, with the superintendent of the department as lead.
 
-A pen or stall assigned to an exhibitor holds only that exhibitor's animals. This applies in every case, including where the Authority limits pen space under the preceding paragraph.
+A pen, stall, or cage assigned to an exhibitor holds only that exhibitor's animals. This applies in every case, including where the Authority limits space under the preceding paragraph.
 
 Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
 
@@ -612,7 +612,7 @@ CC 7 — Showmanship
 
 **CC 3.4.2 Scrapie Identification**
 
-Scrapie is a fatal disease of the nervous system that affects sheep and goats. The USDA runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
+Scrapie is a fatal disease of the nervous system that affects sheep and goats. The United States Department of Agriculture (USDA) runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
 
 Custer County acknowledges and adopts the federal scrapie identification requirement recognized by the CSF, under which sexually intact sheep, and wethers 18 months of age and older, must carry a scrapie flock identification tag. Custer County applies this requirement to every sheep. Every sheep entered in the market sheep show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
 
@@ -774,7 +774,7 @@ A chicken entered in the Market Fryer Pen class shall be no more than 8 weeks of
 
 **CC 3.6.9 Turkey Breed**
 
-Custer County acknowledges and adopts the CSF Market Turkeys competition requirements governing breed, under which a turkey entered in a market turkey class shall be of a breed or variety recognized by the APA.
+Custer County acknowledges and adopts the CSF Market Turkeys competition requirements governing breed, under which a turkey entered in a market turkey class shall be of a breed or variety recognized by the American Poultry Association (APA).
 
 **CC 3.6.10 Judging**
 
@@ -1016,7 +1016,7 @@ Requirements applying to every exhibitor are stated at CC 2.1 through CC 2.13. R
 
 **CC 5.2 Project Eligibility**
 
-Custer County acknowledges and adopts the HSRB, General Rules and Requirements, Rule 4, under which the horse a member intends to use as a project animal must be designated by May 1 of the current year, and under which an identification certificate must be on file with the CSU Extension office under subpart A.
+Custer County acknowledges and adopts the Colorado 4-H Horse Show Rule Book (HSRB), General Rules and Requirements, Rule 4, under which the horse a member intends to use as a project animal must be designated by May 1 of the current year, and under which an identification certificate must be on file with the CSU Extension office under subpart A.
 
 Custer County provides that a member must meet all requirements of the 4-H horse project to participate in the horse show. These include the Animal Care and Housing Form, the Lease Agreement, the Animal Identification, and all club and project requirements. A member must submit an e-record book within one week after the fair.
 
@@ -1098,7 +1098,7 @@ Custer County provides that a horse breaking from the jog or trot into a lope or
 
 ## CC 6 — Non-Market and Small Animal
 
-This chapter governs every non-market animal project at the Custer County Fair. CC 6.1 states the requirements that apply to all non-market and small animal projects. The subchapters that follow state the requirements of each department, and carry only those rules that differ from CC 6.1 or that exist only within that department. Custer County acknowledges and adopts the GCR as the frame governing conduct at the fair. Each subchapter names the authority governing the conduct of its own classes.
+This chapter governs every non-market animal project at the Custer County Fair. CC 6.1 states the requirements that apply to all non-market and small animal projects. The subchapters that follow state the requirements of each department, and carry only those rules that differ from CC 6.1 or that exist only within that department. Custer County acknowledges and adopts the CSF GCR as the frame governing conduct at the fair. Each subchapter names the authority governing the conduct of its own classes.
 
 ### CC 6.1 — General Non-Market Requirements
 
@@ -1250,9 +1250,9 @@ CC 7.3 — Companion Animal Master Showmanship Contest
 
 **CC 6.4.2 Governing Rules**
 
-Custer County acknowledges and adopts the DTR as the authority governing the conduct and judging of every class in this department, and adopts the DTR Dog Eligibility Rules as the standard governing which dogs may compete. Custer County does not adopt the DTR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State 4-H Dog Trials rather than eligibility to enter this department. Eligibility to enter this department is stated at CC 6.1.2 and in this subchapter.
+Custer County acknowledges and adopts the CSF State 4-H Dog Trials Rules (CSF DTR) as the authority governing the conduct and judging of every class in this department, and adopts the CSF DTR Dog Eligibility Rules as the standard governing which dogs may compete. Custer County does not adopt the CSF DTR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State 4-H Dog Trials rather than eligibility to enter this department. Eligibility to enter this department is stated at CC 6.1.2 and in this subchapter.
 
-The DTR is not printed in this book. A copy is available from CSU Extension.
+The CSF DTR is not printed in this book. A copy is available from CSU Extension.
 
 **CC 6.4.3 Eligibility and Ownership**
 
@@ -1262,19 +1262,19 @@ Every dog entered in this department must have been part of the exhibitor's proj
 
 **CC 6.4.4 Vaccination**
 
-Every dog entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the DTR, General Dog Contest Rules, Rule 6, under which proof of rabies vaccination must come from a licensed veterinarian, and a dog vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
+Every dog entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the CSF DTR, General Dog Contest Rules, Rule 6, under which proof of rabies vaccination must come from a licensed veterinarian, and a dog vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
 
-The veterinarians whose recommendations are printed in the DTR advise proof of vaccination for canine distemper virus and canine parvovirus. Exhibitors are strongly advised to have that proof available on the day of the show.
+The veterinarians whose recommendations are printed in the CSF DTR advise proof of vaccination for canine distemper virus and canine parvovirus. Exhibitors are strongly advised to have that proof available on the day of the show.
 
-Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the DTR Dog Eligibility Rules adopted at CC 6.4.2.
+Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the CSF DTR Dog Eligibility Rules adopted at CC 6.4.2.
 
 **CC 6.4.5 Classes Offered**
 
-Custer County acknowledges and adopts the DTR, Showmanship Class Descriptions and Eligibility Requirements, the DTR Obedience General Rules, and the Colorado State 4-H Dog Level Progression Chart printed in the DTR as the authority governing which class an exhibitor and dog enter. The progress the dog has made determines the obedience class entered. The exhibitor's years in 4-H do not determine that class.
+Custer County acknowledges and adopts the CSF DTR, Showmanship Class Descriptions and Eligibility Requirements, the CSF DTR Obedience General Rules, and the Colorado State 4-H Dog Level Progression Chart printed in the CSF DTR as the authority governing which class an exhibitor and dog enter. The progress the dog has made determines the obedience class entered. The exhibitor's years in 4-H do not determine that class.
 
 The classes currently offered in this department are as follows. In obedience: Puppy, Beginner Novice, Novice, Graduate Novice, Advanced, and Veteran. In showmanship: Junior Novice, Junior Open, Intermediate Novice, Intermediate Open, Senior Novice, Senior Open, Senior Advanced, and Top Showman. Showmanship classes are divided by the age divisions stated at CC 7.1.4.
 
-The Top Showman class is entered by an exhibitor of Intermediate or Senior age who has been a Grand Champion or Reserve Grand Champion Showman at a previous State 4-H Dog Trials, as provided at the DTR, Master Showmanship Division, Class 508.
+The Top Showman class is entered by an exhibitor of Intermediate or Senior age who has been a Grand Champion or Reserve Grand Champion Showman at a previous State 4-H Dog Trials, as provided at the CSF DTR, Master Showmanship Division, Class 508.
 
 **CC 6.4.6 Required Entry**
 
@@ -1282,9 +1282,9 @@ Every exhibitor in this department must enter a showmanship class in addition to
 
 **CC 6.4.7 Awards**
 
-Every exhibitor in an obedience class and every exhibitor in a showmanship class is awarded a blue, red, or white merit ribbon under the Danish system, rated against the standard for the class rather than against other exhibitors. The point ranges for each ribbon are stated on the score sheets published by the Colorado State 4-H Office and cited at the DTR, Obedience General Rules, Rule 12.
+Every exhibitor in an obedience class and every exhibitor in a showmanship class is awarded a blue, red, or white merit ribbon under the Danish system, rated against the standard for the class rather than against other exhibitors. The point ranges for each ribbon are stated on the score sheets published by the Colorado State 4-H Office and cited at the CSF DTR, Obedience General Rules, Rule 12.
 
-Placings are awarded under the American system, as provided at the DTR, Showmanship, Obedience, and Rally Awards.
+Placings are awarded under the American system, as provided at the CSF DTR, Showmanship, Obedience, and Rally Awards.
 
 In each class, a Champion is awarded to the exhibitor holding the high-point blue ribbon and a Reserve Champion to the exhibitor holding the second high-point blue ribbon. A Grand Champion and a Reserve Grand Champion are awarded in obedience, and a Grand Champion and a Reserve Grand Champion are awarded in showmanship. Each is determined by overall point total across all age divisions, the highest taking Grand Champion and the second highest taking Reserve Grand Champion.
 
@@ -1306,17 +1306,17 @@ CC 7.3 — Companion Animal Master Showmanship Contest
 
 **CC 6.5.2 Governing Rules**
 
-Custer County acknowledges and adopts the CCR, Cat Show, as the authority governing the conduct and judging of every class in this department, and adopts the CCR Cat Eligibility Rules as the standard governing which cats may compete. Custer County does not adopt the CCR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State Fair Cat Show rather than eligibility to enter this department, and does not adopt the CCR General Contest Rules. Grievances in this department proceed under CC 2.8 like every other department in this book.
+Custer County acknowledges and adopts the CSF 4-H Contest Requirements (CSF CCR), Cat Show, as the authority governing the conduct and judging of every class in this department, and adopts the CSF CCR Cat Eligibility Rules as the standard governing which cats may compete. Custer County does not adopt the CSF CCR Exhibitor Eligibility Rules, which govern qualification to represent a county at the State Fair Cat Show rather than eligibility to enter this department, and does not adopt the CSF CCR General Contest Rules. Grievances in this department proceed under CC 2.8 like every other department in this book.
 
-The CCR is not printed in this book. A copy is available from CSU Extension.
+The CSF CCR is not printed in this book. A copy is available from CSU Extension.
 
 **CC 6.5.3 Vaccination**
 
-Every cat entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the CCR, General Contest Rules, Rule 3, under which proof of rabies vaccination must come from a licensed veterinarian, and a cat vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
+Every cat entered in this department must carry approved, currently effective vaccination for rabies. Proof of that vaccination must be available for inspection on the day of the show. Custer County acknowledges and adopts the CSF CCR, General Contest Rules, Rule 3, under which proof of rabies vaccination must come from a licensed veterinarian, and a cat vaccinated by a person who is not a Colorado State licensed veterinarian is not legally considered vaccinated.
 
-The CCR advises vaccination for feline viral rhinotracheitis, calicivirus, and panleukopenia, and advises testing for feline leukemia and feline immunodeficiency virus. Exhibitors are strongly advised to have proof of these available on the day of the show, and are strongly advised to alert the superintendent before the show if a cat has tested positive for either virus.
+The CSF CCR advises vaccination for feline viral rhinotracheitis, calicivirus, and panleukopenia, and advises testing for feline leukemia and feline immunodeficiency virus. Exhibitors are strongly advised to have proof of these available on the day of the show, and are strongly advised to alert the superintendent before the show if a cat has tested positive for either virus.
 
-Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the CCR Cat Eligibility Rules adopted at CC 6.5.2.
+Health requirements reaching this department beyond this section are stated at CC 6.1.7 and in the CSF CCR Cat Eligibility Rules adopted at CC 6.5.2.
 
 **CC 6.5.4 Classes Offered**
 
@@ -1324,7 +1324,7 @@ The classes offered in the cat department are Showmanship, Conformation, Cage De
 
 The Conformation class is divided into Purebred, Domestic Short Hair, and Domestic Long Hair. A cat entered in the Purebred class is judged against the breed standard for its breed. A cat entered in the Domestic Short Hair or Domestic Long Hair class is judged on physical condition, cleanliness, temperament, and presentation rather than against a breed standard. A cat may be entered in only one Conformation class.
 
-Custer County acknowledges and adopts the CCR, Cage Decorating, under which members are encouraged to decorate the cat's display cage and cages are judged by age division. Cage Decorating classes are divided by the age divisions stated at CC 7.1.4.
+Custer County acknowledges and adopts the CSF CCR, Cage Decorating, under which members are encouraged to decorate the cat's display cage and cages are judged by age division. Cage Decorating classes are divided by the age divisions stated at CC 7.1.4.
 
 **CC 6.5.5 Handling and Care at the Show**
 
@@ -1392,7 +1392,7 @@ Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) 
 
 **CC 6.6.6 Awards**
 
-Ribbons are presented under CC 2.21. Placings in every class are awarded under the American system, and ribbons are awarded through 10th place in every performance class. A Champion and a Reserve Champion are awarded in each age division of each class. A Grand Champion and a Reserve Grand Champion are awarded in each of the Junior, Intermediate, and Senior age divisions, determined by ALSA points for combined scores across the Showmanship, Pack, Obstacle, and Public Relations classes.
+Ribbons are presented under CC 2.21. Placings in every class are awarded under the American system, and ribbons are awarded through 10th place in every performance class. A Champion and a Reserve Champion are awarded in each age division of each class. A Grand Champion and a Reserve Grand Champion are awarded in each of the Junior, Intermediate, and Senior age divisions, determined by Alpaca Llama Show Association (ALSA) points for combined scores across the Showmanship, Pack, Obstacle, and Public Relations classes.
 
 ### CC 6.7 — Breeding and Dairy
 
@@ -1590,15 +1590,15 @@ CC 2.10 — Cloverbud members
 
 **CC 9.2 Governing Document**
 
-The CCGP governs the project-specific requirements of every division of this chapter, including the requirements for e-records and displays, except where this chapter states a Custer County requirement.
+The CSF 4-H Consumer Science and General Project Requirements (CSF CCGP) governs the project-specific requirements of every division of this chapter, including the requirements for e-records and displays, except where this chapter states a Custer County requirement.
 
-Custer County does not adopt the CCGP as to the Shooting Sports project. CC 8 governs the conduct of that project in full.
+Custer County does not adopt the CSF CCGP as to the Shooting Sports project. CC 8 governs the conduct of that project in full.
 
-The CCGP is not printed in this book. A copy is available from CSU Extension.
+The CSF CCGP is not printed in this book. A copy is available from CSU Extension.
 
 **CC 9.3 Eligibility**
 
-Custer County acknowledges and adopts the CCGP, 4-H Project Rules, governing exhibitor eligibility, under which an exhibitor must be at least eight years of age and must not have reached their nineteenth birthday as of December 31 of the current enrollment year, and must satisfy any other eligibility requirement stated for a class in order to compete in that class.
+Custer County acknowledges and adopts the CSF CCGP, 4-H Project Rules, governing exhibitor eligibility, under which an exhibitor must be at least eight years of age and must not have reached their nineteenth birthday as of December 31 of the current enrollment year, and must satisfy any other eligibility requirement stated for a class in order to compete in that class.
 
 Custer County reads this requirement as follows. Exhibitors in the divisions of this chapter must be bona fide members of Custer County, Colorado 4-H. General eligibility requirements applicable to all exhibitors are stated at CC 2.1.
 
@@ -1608,17 +1608,17 @@ An exhibit entered in this chapter must not have been shown at another county fa
 
 **CC 9.5 Original Work, Citation, and AI-Generated Content**
 
-Custer County acknowledges and adopts the CCGP, 4-H Project Rules, governing original work, under which the project work, including writing, must be the member's own work, sources must be cited, and a project submitted as the member's work without proper acknowledgment that it was created by another is plagiarism. Plagiarism results in disqualification.
+Custer County acknowledges and adopts the CSF CCGP, 4-H Project Rules, governing original work, under which the project work, including writing, must be the member's own work, sources must be cited, and a project submitted as the member's work without proper acknowledgment that it was created by another is plagiarism. Plagiarism results in disqualification.
 
-Custer County further acknowledges and adopts the CCGP requirement governing AI-generated content, under which an image or passage of text generated by artificial intelligence and used in a display board, project notebook, or e-record must carry a caption identifying it as AI-generated, naming the tool used, the developer of the tool, the date the content was created, and a link to the tool.
+Custer County further acknowledges and adopts the CSF CCGP requirement governing AI-generated content, under which an image or passage of text generated by artificial intelligence and used in a display board, project notebook, or e-record must carry a caption identifying it as AI-generated, naming the tool used, the developer of the tool, the date the content was created, and a link to the tool.
 
 **CC 9.6 One Entry Per Class**
 
-Custer County acknowledges and adopts the CCGP, 4-H Project Rules, under which a member may enter only once in the same class.
+Custer County acknowledges and adopts the CSF CCGP, 4-H Project Rules, under which a member may enter only once in the same class.
 
 **CC 9.7 Enrollment**
 
-Custer County acknowledges and adopts the CCGP, 4-H Project Rules, under which a member must be enrolled in the project in which they exhibit.
+Custer County acknowledges and adopts the CSF CCGP, 4-H Project Rules, under which a member must be enrolled in the project in which they exhibit.
 
 **CC 9.8 Age Divisions**
 
@@ -1650,7 +1650,7 @@ Every exhibit, record book, and ribbon in this chapter shall remain on the fairg
 
 **CC 9.14 Display Requirements**
 
-Custer County acknowledges and adopts the CCGP requirements governing display boards, under which a display board must measure 4 feet by 3 feet, must be able to fold flat for transport, and may not carry a sharp item, including a blade, thumbtack, fishing hook, or knife, on the board or elsewhere in the exhibit.
+Custer County acknowledges and adopts the CSF CCGP requirements governing display boards, under which a display board must measure 4 feet by 3 feet, must be able to fold flat for transport, and may not carry a sharp item, including a blade, thumbtack, fishing hook, or knife, on the board or elsewhere in the exhibit.
 
 Every exhibit and record book in this chapter must carry the display card provided at check-in.
 
@@ -1678,9 +1678,9 @@ CC 2.25 — Entry and original work
 
 **CC 10.1.2 Governing Document**
 
-The GEFA governs the entry, judging, and display requirements of this chapter to the extent this chapter cites it. Custer County does not adopt the GEFA as a whole document; only the provisions cited in this chapter are adopted.
+The CSF General Entry and Fine Arts Department Requirements (CSF GEFA) governs the entry, judging, and display requirements of this chapter to the extent this chapter cites it. Custer County does not adopt the CSF GEFA as a whole document; only the provisions cited in this chapter are adopted.
 
-The GEFA is not printed in this book. A copy is available from the CSF.
+The CSF GEFA is not printed in this book. A copy is available from the CSF.
 
 **CC 10.1.3 Eligibility**
 
@@ -1692,7 +1692,7 @@ Every entry card in this chapter is a two-part card. The stub states the exhibit
 
 **CC 10.1.5 Entries Per Class**
 
-Custer County acknowledges and adopts the GEFA, Entry Requirements, under which one entry is permitted per class unless otherwise specified. Custer County specifies that an exhibitor may enter up to three exhibits in a single class in the Open Division. An exhibit beyond that limit is not accepted.
+Custer County acknowledges and adopts the CSF GEFA, Entry Requirements, under which one entry is permitted per class unless otherwise specified. Custer County specifies that an exhibitor may enter up to three exhibits in a single class in the Open Division. An exhibit beyond that limit is not accepted.
 
 **CC 10.1.6 Age Divisions and Awards**
 
@@ -1706,11 +1706,11 @@ Custer County acknowledges and adopts the CSF Pantry competition requirements go
 
 **CC 10.1.8 Judging**
 
-Except where a division states its own judging criteria, Custer County acknowledges and adopts the GEFA, Judging Criteria, under which an exhibit is judged on originality, suitability of materials, creativity, craftsmanship, and overall effect. Placings in every class are awarded under the American System established at CC 2.21.
+Except where a division states its own judging criteria, Custer County acknowledges and adopts the CSF GEFA, Judging Criteria, under which an exhibit is judged on originality, suitability of materials, creativity, craftsmanship, and overall effect. Placings in every class are awarded under the American System established at CC 2.21.
 
 **CC 10.1.9 Misentered Exhibits**
 
-Custer County acknowledges and adopts the GEFA, Disqualifications, under which an exhibit that is not a true representative of the class in which it is entered may be disqualified or, at the discretion of the Authority, transferred to the correct class, with the superintendent of the division as lead. The Authority is not obligated to transfer a misentered exhibit.
+Custer County acknowledges and adopts the CSF GEFA, Disqualifications, under which an exhibit that is not a true representative of the class in which it is entered may be disqualified or, at the discretion of the Authority, transferred to the correct class, with the superintendent of the division as lead. The Authority is not obligated to transfer a misentered exhibit.
 
 **CC 10.1.10 Exhibits Not Fitting a Listed Class**
 
@@ -1722,7 +1722,7 @@ An exhibit depicting nudity, violence, drug use, or other content inappropriate 
 
 **CC 10.1.12 Original Work and the Heritage Exception**
 
-Custer County acknowledges and adopts the GEFA, Entry Requirements, under which every entry is exhibited in the name of its actual creator, except in a heritage class. The original-work requirement at CC 2.25 does not reach an exhibit exhibited under a heritage exception stated for a class in this chapter.
+Custer County acknowledges and adopts the CSF GEFA, Entry Requirements, under which every entry is exhibited in the name of its actual creator, except in a heritage class. The original-work requirement at CC 2.25 does not reach an exhibit exhibited under a heritage exception stated for a class in this chapter.
 
 **CC 10.1.13 Sets, Display, and Condition**
 
@@ -1734,7 +1734,7 @@ Except where a division states its own packaging requirement, a baked or grown e
 
 **CC 10.1.14 Removal and Retention**
 
-Custer County acknowledges and adopts the GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §2, and under which the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1 are not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
+Custer County acknowledges and adopts the CSF GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §2, and under which the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1 are not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
 
 Custer County exempts a perishable exhibit, which may be disposed of before release under the standard stated for its division.
 
@@ -1762,7 +1762,7 @@ An entry consists of four individual items, or one whole loaf or cake. Where the
 
 **CC 10.2.4 Recipe Card**
 
-Custer County acknowledges and adopts the GEFA, Pantry, Entry Requirements, under which a recipe card must state the yield, the ingredients with measurements, the preparation instructions, and the cooking times and temperatures. Every entry in this division must be accompanied by a recipe card measuring 3 inches by 5 inches meeting this standard. An entry presented without a complete recipe card is not accepted.
+Custer County acknowledges and adopts the CSF GEFA, Pantry, Entry Requirements, under which a recipe card must state the yield, the ingredients with measurements, the preparation instructions, and the cooking times and temperatures. Every entry in this division must be accompanied by a recipe card measuring 3 inches by 5 inches meeting this standard. An entry presented without a complete recipe card is not accepted.
 
 **CC 10.2.5 Refrigeration**
 
@@ -1780,7 +1780,7 @@ CC 10.1 — Requirements applying to every division of this chapter
 
 **CC 10.3.2 Governing Standard**
 
-Custer County acknowledges and adopts the food-safety standards published by CSU Extension and the NCHFP as the governing standard for every entry in this division. An entry not meeting these standards is not accepted.
+Custer County acknowledges and adopts the food-safety standards published by CSU Extension and the National Center for Home Food Preservation (NCHFP) as the governing standard for every entry in this division. An entry not meeting these standards is not accepted.
 
 **CC 10.3.3 Samples**
 
@@ -1828,7 +1828,7 @@ CC 10.1 — Requirements applying to every division of this chapter
 
 **CC 10.5.2 Origin**
 
-Custer County acknowledges and adopts the GEFA, Floriculture, Entry Requirements, under which every entry in this division must have been grown by the exhibitor or have been in the exhibitor's possession for at least three months, unless otherwise specified. The exhibitor need not have grown the flowers used in the Artistic Arrangements class. Silk, dried, or fresh flowers may be used to create an arrangement.
+Custer County acknowledges and adopts the CSF GEFA, Floriculture, Entry Requirements, under which every entry in this division must have been grown by the exhibitor or have been in the exhibitor's possession for at least three months, unless otherwise specified. The exhibitor need not have grown the flowers used in the Artistic Arrangements class. Silk, dried, or fresh flowers may be used to create an arrangement.
 
 **CC 10.5.3 Identification**
 
