@@ -1,1 +1,110 @@
-__FILE__
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 880" width="1100" height="880" font-family="Arial">
+  <rect width="1100" height="880" fill="#ffffff"/>
+
+  
+  
+  <text x="60" y="90" font-size="12" fill="#777" font-style="italic">Not to scale. Ribs run down-slope, parallel to this cut — shown as crest lines along the panel length, not cross-section corrugation.</text>
+  <line x1="60" y1="104" x2="1040" y2="104" stroke="#1a1a1a" stroke-width="2"/>
+
+  <!-- North arrow, pointing left — this is a section, north is left per convention -->
+  <g transform="translate(110,140)">
+    <polygon points="-20,0 6,-8 1,0 6,8" fill="#333"/>
+    <text x="14" y="5" font-size="13" font-weight="bold" text-anchor="start" fill="#333">N</text>
+  </g>
+
+  <line x1="300" y1="134" x2="800" y2="134" stroke="#333" stroke-width="1.5"/>
+  <polygon points="800,134 788,129 788,139" fill="#333"/>
+  <text x="500" y="126" font-size="12" fill="#333">down-slope</text>
+
+  <!-- rafters beyond, dashed. Top edge at y=470 - this is the bearing plane -->
+  <rect x="80" y="470" width="940" height="120" fill="#c9a87c" opacity="0.30" stroke="#8a6a3d" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="90" y="600" font-size="13" fill="#8a6a3d" font-style="italic">2x12 rafters, 24" o.c. — beyond cut plane, shown dashed. Ribs run parallel to rafters (same direction as this cut).</text>
+  <text x="900" y="410" font-size="12" font-weight="bold" fill="#8a6a3d">rafter bearing plane</text>
+  <polyline points="950,420 950,470" fill="none" stroke="#8a6a3d" stroke-width="1"/>
+  <circle cx="950" cy="470" r="3" fill="#8a6a3d"/>
+
+  <!-- SHEATHING - sits on top of rafters (bottom at 470, matching rafter top) -->
+  <rect x="80" y="446" width="480" height="24" fill="#a8814f" stroke="#6d5230" stroke-width="1.2"/>
+  <text x="120" y="390" font-size="14" font-weight="bold" fill="#6d5230">SHEATHING — NORTH SECTION ONLY</text>
+  <text x="120" y="408" font-size="12" fill="#555">terminates at 10'-0 1/4" down the rake from north framing face</text>
+  <polyline points="300,418 300,412" fill="none" stroke="#6d5230" stroke-width="1.3"/>
+  <circle cx="300" cy="446" r="3.5" fill="#6d5230"/>
+
+  <line x1="560" y1="440" x2="560" y2="475" stroke="#1a1a1a" stroke-width="1.3" stroke-dasharray="3 2"/>
+
+  <!-- BLOCKING - under the sheathing edge / ramp zone -->
+  <rect x="538" y="470" width="44" height="90" fill="#c9a87c" stroke="#5c4526" stroke-width="1.8"/>
+  <text x="700" y="500" font-size="14" font-weight="bold" fill="#5c4526">BLOCKING</text>
+  <text x="700" y="518" font-size="12" fill="#555">continuous, solid, between rafters</text>
+  <text x="700" y="535" font-size="12" fill="#555">backs the sheathing edge + fastener row</text>
+  <polyline points="695,505 560,505" fill="none" stroke="#5c4526" stroke-width="1.3"/>
+  <circle cx="560" cy="505" r="3.5" fill="#5c4526"/>
+
+  <!-- ============ LOWER PANEL ============ -->
+  <text x="700" y="360" font-size="14" font-weight="bold" fill="#2b6cb0">LOWER PANEL</text>
+  <text x="700" y="378" font-size="12" fill="#555">bears on top of bare rafters, floats</text>
+  <text x="700" y="395" font-size="12" fill="#555">up over the rise, tucks UNDER the upper panel</text>
+  <polyline points="770,405 770,455" fill="none" stroke="#2b6cb0" stroke-width="1.3"/>
+  <circle cx="770" cy="463" r="3.5" fill="#2b6cb0"/>
+
+  <path d="M 1020,464 L 690,464 L 560,440 L 340,440" fill="none" stroke="#1e4d7b" stroke-width="3"/>
+  <path d="M 560,440 L 340,440" fill="none" stroke="#1e4d7b" stroke-width="3" stroke-dasharray="2 5" opacity="0.55"/>
+
+  <!-- rib crest lines, parallel, following the same bend -->
+  <path d="M 1020,458 L 690,458 L 560,434 L 340,434" fill="none" stroke="#1e4d7b" stroke-width="1" opacity="0.6"/>
+  <path d="M 560,434 L 340,434" fill="none" stroke="#1e4d7b" stroke-width="1" stroke-dasharray="2 5" opacity="0.35"/>
+  <path d="M 1020,470 L 690,470 L 560,446 L 340,446" fill="none" stroke="#1e4d7b" stroke-width="1" opacity="0.6"/>
+  <path d="M 560,446 L 340,446" fill="none" stroke="#1e4d7b" stroke-width="1" stroke-dasharray="2 5" opacity="0.35"/>
+
+  <polyline points="340,505 340,450" fill="none" stroke="#1e4d7b" stroke-width="1"/>
+  <circle cx="340" cy="440" r="3" fill="#1e4d7b"/>
+  <text x="230" y="522" font-size="11" fill="#1e4d7b" font-style="italic">lower panel's true north edge —</text>
+  <text x="230" y="537" font-size="11" fill="#1e4d7b" font-style="italic">hidden under upper panel, shown dashed</text>
+
+  <!-- ============ UPPER PANEL ============ -->
+  <text x="120" y="270" font-size="14" font-weight="bold" fill="#2b6cb0">UPPER PANEL</text>
+  <text x="120" y="288" font-size="12" fill="#555">bears on sheathing, laps south</text>
+  <text x="120" y="305" font-size="12" fill="#555">over the lower panel's tucked edge</text>
+  <polyline points="100,315 100,434" fill="none" stroke="#2b6cb0" stroke-width="1.3"/>
+  <circle cx="100" cy="434" r="3.5" fill="#2b6cb0"/>
+
+  <path d="M 90,434 L 652,434" fill="none" stroke="#2b6cb0" stroke-width="3"/>
+  <path d="M 90,428 L 652,428" fill="none" stroke="#2b6cb0" stroke-width="1" opacity="0.7"/>
+  <path d="M 90,422 L 652,422" fill="none" stroke="#2b6cb0" stroke-width="1" opacity="0.7"/>
+  <line x1="652" y1="422" x2="652" y2="437" stroke="#1a3a5c" stroke-width="2"/>
+
+  <!-- 6" future Phase 2 poly-lap zone, southernmost portion of the total lap -->
+  <line x1="560" y1="405" x2="560" y2="422" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="652" y1="405" x2="652" y2="422" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="560" y1="410" x2="652" y2="410" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="606" y="402" font-size="10" fill="#1a1a1a" text-anchor="middle">6"</text>
+
+  <!-- CLOSURE callout -->
+  <rect x="500" y="434" width="60" height="12" fill="#7b5aa6" opacity="0.55"/>
+  <text x="410" y="200" font-size="14" font-weight="bold" fill="#7b5aa6">CLOSURE</text>
+  <text x="410" y="218" font-size="12" fill="#555">foam or butyl, attached to the</text>
+  <text x="410" y="235" font-size="12" fill="#555">upper panel, flush to the deck</text>
+  <polyline points="470,245 500,245 530,436" fill="none" stroke="#7b5aa6" stroke-width="1.3"/>
+  <circle cx="530" cy="436" r="3.5" fill="#7b5aa6"/>
+
+  <!-- 7/16" RISE callout -->
+  <text x="850" y="200" font-size="13" font-weight="bold" fill="#c2410c">7/16" rise</text>
+  <text x="850" y="217" font-size="11" fill="#c2410c">(sheathing thickness) — panel</text>
+  <text x="850" y="232" font-size="11" fill="#c2410c">floats naturally over the rise to</text>
+  <text x="850" y="247" font-size="11" fill="#c2410c">the bare rafter, hidden under</text>
+  <text x="850" y="262" font-size="11" fill="#c2410c">the upper panel</text>
+  <polyline points="845,270 700,270 612,450" fill="none" stroke="#c2410c" stroke-width="1"/>
+  <circle cx="612" cy="456" r="3" fill="#c2410c"/>
+
+  <!-- LAP ZONE bracket -->
+  <line x1="340" y1="640" x2="652" y2="640" stroke="#1a1a1a" stroke-width="1.3"/>
+  <line x1="340" y1="633" x2="340" y2="647" stroke="#1a1a1a" stroke-width="1.3"/>
+  <line x1="652" y1="633" x2="652" y2="647" stroke="#1a1a1a" stroke-width="1.3"/>
+  <text x="345" y="662" font-size="13" font-weight="bold" fill="#1a1a1a">LAP ZONE — 20" total, its southernmost 6" is the future Phase 2 poly lap</text>
+
+  <line x1="60" y1="700" x2="1040" y2="700" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <text x="60" y="728" font-size="15" font-weight="bold" fill="#c2410c">NOTE — DO NOT EXTEND SHEATHING PAST THIS LINE</text>
+  <text x="60" y="750" font-size="13" fill="#333">The sheathing terminates at 10'-0 1/4" (down the rake from the north framing face), with</text>
+  <text x="60" y="768" font-size="13" fill="#333">blocking spanning this line. This is specific for Phase 2.</text>
+<text x="40" y="800" font-family="Arial" font-size="16" font-weight="bold" fill="#000">SHEATHING TERMINATION + METAL STEP AT SEAM</text><text x="40" y="818" font-family="Arial" font-size="11" fill="#000">(SECTION AT ROOF SEAM &#x2014; NORTH LEFT, SOUTH RIGHT &#x2014; PHASE 1 CONDITION)</text><text x="40" y="834" font-family="Arial" font-size="11" fill="#000">SCALE:  NOT TO SCALE       DRAWING D-5</text></svg>
