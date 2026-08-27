@@ -620,7 +620,7 @@ The carcass contains no trace or residue of any illegal drug, and no trace or re
 
 You observed the label directions and the full withdrawal period of every drug given to the animal, under CC 4.7.3.
 
-The carcass shows no evidence of any unethical fitting practice, as defined at CC 3.1.14.
+The carcass shows no evidence of any unethical fitting practice, as defined at CC 3.1.18.
 
 The carcass presents no unusual condition that would materially reduce its value.
 
