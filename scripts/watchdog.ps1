@@ -3,12 +3,12 @@
 # No in-script time gate: the schedule IS the window.
 #
 # Checks per run:
-#   1. InboxWatcher staleness   — archive\watcher-heartbeat.txt         (6h threshold)
-#   2. GraphSync staleness      — scripts\graph-sync-heartbeat.txt       (6h threshold)
-#   3. PullJob staleness        — last-pull.json                         (6h threshold)
-#   4. NightWatch staleness     — archive\night-watch-heartbeat.txt     (25h threshold)
-#   5. Disk free space          — C: drive below 75 GB
-#   6. Filing Cabinet count     — root file count dropped
+#   1. InboxWatcher staleness   - archive\watcher-heartbeat.txt         (6h threshold)
+#   2. GraphSync staleness      - scripts\graph-sync-heartbeat.txt       (6h threshold)
+#   3. PullJob staleness        - last-pull.json                         (6h threshold)
+#   4. NightWatch staleness     - archive\night-watch-heartbeat.txt     (25h threshold)
+#   5. Disk free space          - C: drive below 75 GB
+#   6. Filing Cabinet count     - root file count dropped
 #
 # State persisted in archive\watchdog-state.json.
 # Health snapshot written to ops\system-health.json (pushed to repo Sundays by WeeklyPush).
@@ -44,7 +44,7 @@ $AlertTo         = "matthew.bayer@outlook.com"
 $InboxStalenessHours   = 6
 $GraphSyncStalenessHours = 6
 $PullJobStalenessHours = 6
-$NightWatchStalenessHours = 25   # Only runs 21:30–06:00; max gap between nights is ~15.5h
+$NightWatchStalenessHours = 25   # Only runs 21:30-06:00; max gap between nights is ~15.5h
 $DiskThresholdGB       = 75
 
 foreach ($d in @($ArchiveDir, $OpsDir)) {
@@ -139,7 +139,7 @@ try {
 
     $alerts = 0
 
-    # Health snapshot — populated as checks run
+    # Health snapshot - populated as checks run
     $health = @{
         last_updated = (Get-Date -Format 'o')
         checks       = @{
@@ -213,7 +213,7 @@ try {
     }
 
     # ------------------------------------------------------------------
-    # CHECK 3: PullJob — reads last-pull.json {"last_ok": "YYYY-MM-DD HH:mm:ss"}
+    # CHECK 3: PullJob - reads last-pull.json {"last_ok": "YYYY-MM-DD HH:mm:ss"}
     # ------------------------------------------------------------------
     $pullAge = $null
     if (-not (Test-Path $PullJobSync)) {
@@ -248,15 +248,20 @@ try {
     }
 
     # ------------------------------------------------------------------
-    # CHECK 4: NightWatch heartbeat (25h threshold — only runs at night)
+    # CHECK 4: NightWatch heartbeat (25h threshold - only runs at night)
     # ------------------------------------------------------------------
     $nwAge = Get-HeartbeatAgeHours $NightWatchHB
     if ($nwAge -eq -1) {
-        # First run before NightWatch has ever executed — not an alert condition.
-        # Become an alert after NightWatch is registered and has had a night to run.
-        Write-Host "[watchdog] NightWatch heartbeat not yet present (task may not be registered)."
-        Write-WatchdogLog "night_watch_heartbeat_not_yet" "File absent — task may not be registered"
-        $health.checks.night_watch.status = "not_started"
+        # FIX 2026-08-27: this case used to log "not_started" and send nothing, on the
+        # assumption the task might not be registered yet. NightWatch is registered, so a
+        # missing heartbeat now means the task is not running or the file was removed.
+        # Alerts like every other check.
+        $msg = "NightWatch heartbeat not found at $NightWatchHB. NightWatch task may not be running, or the heartbeat file was removed."
+        Write-Warning "[watchdog] $msg"
+        Send-Alert "[FamilyOps] NightWatch: no heartbeat file" $msg
+        Write-WatchdogLog "night_watch_heartbeat_missing" "File not found"
+        $health.checks.night_watch.status = "missing"
+        $alerts++
     } elseif ($nwAge -eq -2) {
         Write-Warning "[watchdog] Could not parse NightWatch heartbeat."
         Write-WatchdogLog "night_watch_heartbeat_parse_error" "Parse failed"
@@ -305,7 +310,7 @@ try {
         Write-Host "[watchdog] Filing Cabinet root: $currentCount files (last known: $($state.last_file_count))"
         if ($state.last_file_count -ge 0 -and $currentCount -lt $state.last_file_count) {
             $dropped = $state.last_file_count - $currentCount
-            $msg     = "Filing Cabinet root dropped from $($state.last_file_count) to $currentCount files. $dropped file(s) missing. Check OneDrive — use Files Restore at onedrive.com if within 30 days."
+            $msg     = "Filing Cabinet root dropped from $($state.last_file_count) to $currentCount files. $dropped file(s) missing. Check OneDrive - use Files Restore at onedrive.com if within 30 days."
             Send-Alert "[FamilyOps] Filing Cabinet: $dropped file(s) disappeared" $msg
             Write-WatchdogLog "file_count_dropped" "Was: $($state.last_file_count)  Now: $currentCount  Dropped: $dropped"
             $alerts++

@@ -66,11 +66,6 @@ function Write-NightLog {
 }
 
 # ---------------------------------------------------------------
-# STAMP HEARTBEAT (always, even if scan finds nothing)
-# ---------------------------------------------------------------
-Set-Content $HeartbeatFile -Value ($NowLocal.ToString("o")) -Encoding UTF8
-
-# ---------------------------------------------------------------
 # LOAD SESSION STATE
 # ---------------------------------------------------------------
 $sessions = @{}
@@ -97,7 +92,19 @@ if (Test-Path $SessionFile) {
 try {
     $ts = $NowLocal.ToString("o")
 
-    $neighbors = Get-NetNeighbor -State Reachable -ErrorAction SilentlyContinue |
+    # FIX 2026-08-27: was -ErrorAction SilentlyContinue, which turned a failed scan into
+    # an empty list. The run then completed "successfully" having seen nothing, and a
+    # broken scan was indistinguishable from a quiet night. Errors now surface to the
+    # catch below.
+    $rawNeighbors = @(Get-NetNeighbor -State Reachable -ErrorAction Stop)
+
+    # The Starlink router is always reachable, so a working scan is never empty. Zero
+    # results means the scan failed, not that the network was quiet.
+    if ($rawNeighbors.Count -eq 0) {
+        throw "ARP scan returned zero reachable neighbors. Expected at least the Starlink router. Treating as scan failure."
+    }
+
+    $neighbors = $rawNeighbors |
                  Where-Object { $_.IPAddress -notmatch '^(169\.254|fe80|ff|224\.|239\.)' }
 
     $scanned = 0
@@ -170,6 +177,13 @@ try {
     # Persist session state
     $sessions | ConvertTo-Json -Depth 3 | Set-Content $SessionFile -Encoding UTF8
 
+    # STAMP HEARTBEAT - only after a scan actually completed.
+    # FIX 2026-08-27: this used to run before the scan, so a script that failed every
+    # scan still stamped a fresh heartbeat and Watchdog reported NightWatch healthy. A
+    # failed or empty scan now exits through the catch below without stamping, leaving
+    # the old timestamp for Watchdog's staleness check to catch.
+    Set-Content $HeartbeatFile -Value ($NowLocal.ToString("o")) -Encoding UTF8
+
     Write-Host "[night-watch] $($NowLocal.ToString('HH:mm')) --- Unknown devices logged: $scanned"
 
 } catch {
@@ -177,6 +191,5 @@ try {
     Write-NightLog @{ ts = $NowLocal.ToString("o"); type = "error"; detail = "$_" }
     exit 1
 }
-
 
 
