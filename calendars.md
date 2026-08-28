@@ -497,7 +497,8 @@ Last batch: 2026-09-04.
 [MEAL] 2026-08-25 17:30 Chicken tacos :: meal-type=dinner
 [MEAL] 2026-08-26 17:30 Beef roast :: meal-type=dinner
 [MEAL] 2026-08-27 17:30 Spaghetti and meatballs :: meal-type=dinner :: notes="Barb's recipe"
-[MEAL] 2026-08-29 17:30 Beef roast, noodles, and salad :: meal-type=dinner :: notes="Leftover roast from 8/26"
+[MEAL] 2026-08-28 17:30 Beef roast, noodles, and salad :: meal-type=dinner :: notes="Leftover roast from 8/26"
+[MEAL] 2026-08-29 17:30 Pizza :: meal-type=dinner :: notes="Wyatt's friend visiting"
 [MEAL] 2026-09-03 17:30 Sweet potatoes and pork steaks :: meal-type=dinner :: notes="Matt returns 9/1 - welcome home meal"
 [MEAL] 2026-09-04 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday - Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
 
