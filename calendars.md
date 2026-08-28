@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-08-20.
+Last batch: 2026-09-04.
 
 ---
 
@@ -493,6 +493,13 @@ Last batch: 2026-08-20.
 [MEAL] 2026-08-18 17:30 Curry, rice, and vegetables :: meal-type=dinner
 [MEAL] 2026-08-19 17:30 Bowtie pasta, kielbasa, vegetables :: meal-type=dinner :: recipe=chow-hall/recipes/bowtie-pasta.md
 [MEAL] 2026-08-20 17:30 Cobb salad :: meal-type=dinner
+[MEAL] 2026-08-24 17:30 Potatoes :: meal-type=dinner
+[MEAL] 2026-08-25 17:30 Chicken tacos :: meal-type=dinner
+[MEAL] 2026-08-26 17:30 Beef roast :: meal-type=dinner
+[MEAL] 2026-08-27 17:30 Spaghetti and meatballs :: meal-type=dinner :: notes="Barb's recipe"
+[MEAL] 2026-08-29 17:30 Beef roast, noodles, and salad :: meal-type=dinner :: notes="Leftover roast from 8/26"
+[MEAL] 2026-09-03 17:30 Sweet potatoes and pork steaks :: meal-type=dinner :: notes="Matt returns 9/1 - welcome home meal"
+[MEAL] 2026-09-04 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday - Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
 
 ---
 
@@ -668,11 +675,11 @@ Last batch: 2026-08-20.
 [CAL] 2026-08-27 11:00 [R] School meeting :: kids
 [CAL] 2026-08-27 18:00 Pizza and Social - St. Joseph Parish Education Committee :: liturgical :: end=19:30 :: location="Our Lady of Assumption, Westcliffe" :: notes="For parents and children of school-aged children." :: cancel=confirmed
 [CAL] 2026-08-28 09:00 [D] Market Hog Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-28 09:00 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-30 ALL-DAY [C][E] Camping trip w/ Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
-[CAL] 2026-09-02 09:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-08-30 ALL-DAY [D] Mesquite Trip :: misc :: span=2026-09-01 :: travel=true :: notes="One-way flight COS-DEN-SGU. UA5291 COS-DEN 0600-0705, UA5054 DEN-SGU (St. George, UT) 0825-1020. Conf G0CB0Q, eTicket 0162131235026. Seats 18B/10B. Returning Tue Sep 1 by car with Uncle Doug."
 [CAL] 2026-08-31 ALL-DAY [K][D] SNAP recert :: appointments :: flag=true :: tentative=true :: notes="Time TBD - physical paperwork required. Bring required docs. Prompts fire Jul 15 + Aug 1."
 
@@ -680,8 +687,10 @@ Last batch: 2026-08-20.
 
 ### SEPTEMBER 2026
 
+[CAL] 2026-09-02 09:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
 [CAL] 2026-09-03 13:00 [R] DIBELS test :: kids
+[CAL] 2026-09-04 ALL-DAY [C][E] Cullen and Emmitt birthday :: birthdays :: notes="Hamburgers dinner. Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
