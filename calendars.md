@@ -142,7 +142,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-09-04.
+Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rileigh covering Cullen/Emmitt's slots 8/30-9/1 during camping trip).
 
 ---
 
@@ -460,12 +460,61 @@ Last batch: 2026-09-04.
 [CHORE] 2026-08-29 ALL-DAY [W][R] Animals :: chore-type=animals
 [CHORE] 2026-08-29 ALL-DAY [R][C] Table :: chore-type=table
 
+<!-- NEW LEAD SCHEDULE starts here (approved 2026-08-22, applied 2026-08-30). Wyatt: dish lead Mon/Wed/Fri, animal lead Tue/Thu/Sun. Molly: dish lead Tue/Thu/Sun, animal lead Mon/Wed/Fri. Saturday alternates by zone week. Sunday now active - no longer skipped. -->
+<!-- CAMPING COVERAGE 8/30-9/1: Cullen and Emmitt away with Oma and Papa (home 9/2). Rileigh covers their seconds/table solo those three days - flagged heavy load, resolves 9/2. -->
+[CHORE] 2026-08-30 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-08-30 ALL-DAY [W][R] Animals :: chore-type=animals :: notes="Rileigh covering for Cullen - camping trip"
+[CHORE] 2026-08-30 ALL-DAY [R] Table :: chore-type=table :: notes="Rileigh solo - Emmitt on camping trip"
+
 <!-- WEEK A: 8/31-9/6 -->
 [CHORE] 2026-08-31 ALL-DAY [W][C] Bathrooms :: chore-zone=A :: span=2026-09-06
 [CHORE] 2026-08-31 ALL-DAY [M][E] Floors :: chore-zone=A :: span=2026-09-06
 [CHORE] 2026-08-31 ALL-DAY [W][R] Dishes :: chore-type=dishes
-[CHORE] 2026-08-31 ALL-DAY [M][C] Animals :: chore-type=animals
-[CHORE] 2026-08-31 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-08-31 ALL-DAY [M][R] Animals :: chore-type=animals :: notes="Rileigh covering for Cullen - camping trip"
+[CHORE] 2026-08-31 ALL-DAY [R] Table :: chore-type=table :: notes="Rileigh solo - Emmitt on camping trip"
+[CHORE] 2026-09-01 ALL-DAY [M][R] Dishes :: chore-type=dishes :: notes="Rileigh covering for Cullen - camping trip"
+[CHORE] 2026-09-01 ALL-DAY [W][R] Animals :: chore-type=animals :: notes="Rileigh covering for Emmitt - camping trip"
+[CHORE] 2026-09-01 ALL-DAY [R] Table :: chore-type=table :: notes="Rileigh solo - Cullen on camping trip"
+[CHORE] 2026-09-02 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-09-02 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-09-02 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-09-03 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-09-03 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-09-03 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-09-04 ALL-DAY [W][E] Dishes :: chore-type=dishes
+[CHORE] 2026-09-04 ALL-DAY [M][R] Animals :: chore-type=animals
+[CHORE] 2026-09-04 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-09-05 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-09-05 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-09-05 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-09-06 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-09-06 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-09-06 ALL-DAY [R][E] Table :: chore-type=table
+
+<!-- WEEK B: 9/7-9/13 -->
+[CHORE] 2026-09-07 ALL-DAY [M][E] Bathrooms :: chore-zone=B :: span=2026-09-13
+[CHORE] 2026-09-07 ALL-DAY [W][C] Floors :: chore-zone=B :: span=2026-09-13
+[CHORE] 2026-09-07 ALL-DAY [W][R] Dishes :: chore-type=dishes
+[CHORE] 2026-09-07 ALL-DAY [M][C] Animals :: chore-type=animals
+[CHORE] 2026-09-07 ALL-DAY [R][E] Table :: chore-type=table
+[CHORE] 2026-09-08 ALL-DAY [M][C] Dishes :: chore-type=dishes
+[CHORE] 2026-09-08 ALL-DAY [W][E] Animals :: chore-type=animals
+[CHORE] 2026-09-08 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-09-09 ALL-DAY [W][C] Dishes :: chore-type=dishes
+[CHORE] 2026-09-09 ALL-DAY [M][E] Animals :: chore-type=animals
+[CHORE] 2026-09-09 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-09-10 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-09-10 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-09-10 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-09-11 ALL-DAY [W][E] Dishes :: chore-type=dishes
+[CHORE] 2026-09-11 ALL-DAY [M][R] Animals :: chore-type=animals
+[CHORE] 2026-09-11 ALL-DAY [C][E] Table :: chore-type=table
+[CHORE] 2026-09-12 ALL-DAY [M][E] Dishes :: chore-type=dishes
+[CHORE] 2026-09-12 ALL-DAY [W][R] Animals :: chore-type=animals
+[CHORE] 2026-09-12 ALL-DAY [R][C] Table :: chore-type=table
+[CHORE] 2026-09-13 ALL-DAY [M][R] Dishes :: chore-type=dishes
+[CHORE] 2026-09-13 ALL-DAY [W][C] Animals :: chore-type=animals
+[CHORE] 2026-09-13 ALL-DAY [R][E] Table :: chore-type=table
 
 [MEAL] 2026-07-06 17:30 Leftover pork and beans :: meal-type=dinner
 [MEAL] 2026-07-07 17:30 Crockpot beef, bread, and carrots :: meal-type=dinner
