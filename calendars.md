@@ -728,6 +728,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-08-28 09:00 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-08-29 08:30 [D] Market Poultry Judging :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-29 09:00 [D] Market Lamb Show :: 4h :: location="CSU Pavilion, Colorado State Fairgrounds, Pueblo, CO"
+[CAL] 2026-08-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch"
 [CAL] 2026-08-29 13:00 [D] Market Poultry Showmanship :: 4h :: location="Small Animal Building, Colorado State Fairgrounds, Pueblo, CO"
 [CAL] 2026-08-30 ALL-DAY [C][E] Camping trip w/ Oma and Papa :: kids :: span=2026-09-02 :: travel=true :: notes="Departure afternoon Aug 30. Home Sep 2."
 [CAL] 2026-08-30 ALL-DAY [D] Mesquite Trip :: misc :: span=2026-09-01 :: travel=true :: notes="One-way flight COS-DEN-SGU. UA5291 COS-DEN 0600-0705, UA5054 DEN-SGU (St. George, UT) 0825-1020. Conf G0CB0Q, eTicket 0162131235026. Seats 18B/10B. Returning Tue Sep 1 by car with Uncle Doug."
@@ -737,6 +738,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 ### SEPTEMBER 2026
 
+[CAL] 2026-09-02 08:30 [R] Apt - Tracey :: appointments :: stripe=appt
 [CAL] 2026-09-02 09:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
 [CAL] 2026-09-03 13:00 [R] DIBELS test :: kids
@@ -748,6 +750,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
+[CAL] 2026-09-29 ALL-DAY [C][E] Picture day :: kids
 
 ---
 
