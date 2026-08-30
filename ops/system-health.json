@@ -1,12 +1,24 @@
-{
-  "last_updated": null,
-  "note": "Written by watchdog.ps1 on each run (08:00, 14:00, 20:00). Pushed to repo Sundays 06:05 by WeeklyPush. Al reads this at session open for the weekly synthesis.",
-  "checks": {
-    "inbox_watcher": { "status": "unknown", "age_hours": null },
-    "graph_sync":    { "status": "unknown", "age_hours": null },
-    "pull_job":      { "status": "unknown", "age_hours": null },
-    "night_watch":   { "status": "unknown", "age_hours": null }
-  },
-  "disk_free_gb": null,
-  "total_alerts": 0
+﻿{
+    "checks":  {
+                   "graph_sync":  {
+                                      "status":  "stale",
+                                      "age_hours":  1593.38
+                                  },
+                   "pull_job":  {
+                                    "status":  "ok",
+                                    "age_hours":  0.02
+                                },
+                   "inbox_watcher":  {
+                                         "status":  "ok",
+                                         "age_hours":  0
+                                     },
+                   "night_watch":  {
+                                       "status":  "ok",
+                                       "age_hours":  14.08
+                                   }
+               },
+    "total_alerts":  1,
+    "disk_free_gb":  231.41,
+    "pending_arrivals":  2,
+    "last_updated":  "2026-08-29T20:00:01.6907737-06:00"
 }
