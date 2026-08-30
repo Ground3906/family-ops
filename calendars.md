@@ -779,6 +779,12 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 ---
 
+### DECEMBER 2026
+
+[CAL] 2026-12-10 18:00 [C][E] Christmas concert :: kids
+
+---
+
 ### FEBRUARY 2027
 
 [CAL] 2027-02-04 09:30 [K] Dentist :: appointments :: stripe=appt :: end=10:30 :: location="Canon Family Dental, Canon City, CO"
