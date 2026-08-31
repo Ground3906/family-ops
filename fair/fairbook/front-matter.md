@@ -30,3 +30,13 @@ The objectives of the Custer County Fair are to educate its participants and to 
 ## ADA Statement
 
 The Fair is committed to ensuring that individuals with disabilities have access to its services, programs, activities, and events. If accommodation or assistance is needed, please contact the Fair personnel listed in Addendum §2.
+
+---
+
+## Join Us
+
+The Custer County Fair is run by the people of this valley. Every show, every ring, and every barn depends on neighbors who step forward and give their time.
+
+There is a place for anyone who wants one. The Fair Board welcomes new members. Departments need superintendents, and superintendents need assistants. Shows need ring stewards and gate stewards. No experience is required, and help is welcome for a single day or for a full season.
+
+If you would like to serve in any of these roles, or to help in a way not listed here, please contact the Fair personnel listed in Addendum §2.
