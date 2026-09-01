@@ -128,6 +128,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **[CHORE] dish entries: chore-type=dishes. Animal entries: chore-type=animals. Table entries: chore-type=table. Three lines per day. Pills only.**
 - **Zone week source of truth: punch-list/chore-chart.md. Week A = Bathrooms Wyatt+Cullen / Floors Molly+Emmitt. Week B = Bathrooms Molly+Emmitt / Floors Wyatt+Cullen. Rileigh carries no zone.**
 - **FAIRBOARD MEETING entries live only in the FAIRBOARD MEETING recurring block. Never add a standalone [CAL] Fairboard line to a monthly section.**
+- **BIRTHDAYS block is canonical for the base "[name] birthday" entries. When a monthly section carries a richer birthday entry (party details, pills, notes), remove the plain duplicate from the BIRTHDAYS block for that year so the date is not double-rendered.**
 - **Hunting season spans do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks.**
 - **A time overlap is only a real conflict if the pills share a person. Check pills before flagging.**
 - **Mark Allsman LPC sessions ("Apt - Mark") are telehealth regardless of what the source booking confirmation lists as location. Never populate a location field for these.**
@@ -743,6 +744,8 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
 [CAL] 2026-09-03 13:00 [R] DIBELS test :: kids
 [CAL] 2026-09-04 ALL-DAY [C][E] Cullen and Emmitt birthday :: birthdays :: notes="Hamburgers dinner. Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
+[CAL] 2026-09-06 17:00 [FAM] Cullen and Emmitt birthday dinner - with Doug and Deb :: family
+[CAL] 2026-09-08 ALL-DAY [D] K of C - Brandon Nelson IRA call :: meetings :: flag=true :: tentative=true :: notes="Time TBD"
 [CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
@@ -963,7 +966,6 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-05-27 ALL-DAY Kalea birthday :: birthdays
 [CAL] 2026-06-28 ALL-DAY Rileigh birthday :: birthdays
 [CAL] 2026-08-08 ALL-DAY Leo birthday :: birthdays
-[CAL] 2026-09-04 ALL-DAY Cullen + Emmitt birthday :: birthdays
 [CAL] 2026-12-07 ALL-DAY Matt birthday :: birthdays
 [CAL] 2027-01-22 ALL-DAY Wyatt birthday :: birthdays
 [CAL] 2027-04-19 ALL-DAY Molly birthday :: birthdays
