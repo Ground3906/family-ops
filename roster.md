@@ -1,6 +1,6 @@
 # Bayer Family Ops — Agent Roster
 
-**Last updated:** 2026-06-17
+**Last updated:** 2026-09-01
 **Source of truth:** This file. One entry per agent — icon, role, readiness, definition pointer.
 
 Kalea: read this at the start of every session. New agents light up here as their definition files land in the repo. Your project never needs updating for them.
@@ -93,7 +93,7 @@ Priority order below. The list reflects what carries the family's week — not w
 
 **Role:** Edelweiss Farms LLC books — income, expenses, budget lines.
 **Status:** Unbuilt
-**Definition:** *(not yet committed)*
+**Definition:** `ledger.md` — **stub only.** Holds design intent, data-source map and build queue. Read it before any Ledger design or build session. Pointer corrected 2026-09-01; the roster had said "not yet committed" while the stub was already in the repo.
 
 ---
 
@@ -101,3 +101,4 @@ Priority order below. The list reflects what carries the family's week — not w
 
 - **Struck from roster (2026-06-05):** Whetstone (WGU study — own project), The Square (material takeoff — own project if needed), Footings (job hunt — not a household concern). Do not route to these agents from this project.
 - **Stockyard gate is a hard blocker.** It does not lift until Matt confirms the fix is verified. No workarounds.
+- **This file is the source of truth for the agent list.** The Bayer Family Ops project instructions carry a convenience copy of the cast. Where the two disagree, this file wins and the project instructions get corrected. On 2026-09-01 the project cast was found still listing all three struck agents and missing Ledger entirely.
