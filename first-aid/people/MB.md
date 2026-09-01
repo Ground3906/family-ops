@@ -1,7 +1,7 @@
 # Matt Bayer (MB) — Health Profile
 
 **Date created:** 2026-06-13
-**Last updated:** 2026-08-22
+**Last updated:** 2026-08-30
 **Owner:** IFAK
 **Status:** Active
 
@@ -56,10 +56,12 @@
 
 **Flare log:**
 
-| Date | Onset | Dinner | Symptoms | BM (next day) | Red flags | Resolution |
+| Date | Onset | Dinner | Symptoms | Severity (Matt's characterization) | BM (next day) | Resolution |
 |---|---|---|---|---|---|---|
-| 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Next-day BM close to diarrhea, not fully loose | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Sat up, took antacid, symptoms easing |
-| 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Next-day BM hard, slow, straining, incomplete-feeling | Chest/jaw/arm pain: no. Sweating: no. Shortness of breath: no. | Not noted |
+| 2026-08-20 | 01:00, woke from sleep | 18:00 baked potato, Caesar salad; nothing eaten after | Heartburn pain, fullness/pressure, gas, stomach not emptying, pain with pressure (kids hugging goodnight) | Not characterized | Next-day BM close to diarrhea, not fully loose | Sat up, took antacid, symptoms easing |
+| 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Not characterized | Next-day BM hard, slow, straining, incomplete-feeling | Not noted |
+| 2026-08-27 | 22:00, woke from sleep shortly after falling asleep | Not noted | Heartburn, needed Tums | Medium, per Matt -- did not need to get up and walk it off, back to sleep after Tums | Not noted | Tums, back to sleep |
+| 2026-08-30 | Not noted (all-day) | Not noted (attributed to 8:00 meal) | Constant pressure, gas, meal from 8:00 sat undigested/wouldn't move down, stomach wouldn't empty, all-day duration | Not characterized by Matt | Not noted | Not noted |
 
 ### Hemorrhoids / Anal Fissure (History)
 - **History:** Chronic hemorrhoids. Anal fissure developed ~2 years ago. Fissure failed to heal conservatively.
