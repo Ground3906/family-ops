@@ -795,6 +795,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 ### FEBRUARY 2027
 
 [CAL] 2027-02-04 09:30 [K] Dentist :: appointments :: stripe=appt :: end=10:30 :: location="Canon Family Dental, Canon City, CO"
+[CAL] 2027-02-23 10:00 [D] Dentist - cleaning :: appointments :: stripe=appt :: location="Salida Family Dental, Salida, CO"
 
 ---
 
