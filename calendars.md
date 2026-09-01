@@ -207,8 +207,10 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-08-28 13:55 [W] XC meet - Husky Invite :: kids :: location="Platte Canyon XC Course, Bailey, CO" :: notes="HS Boys 1:55 PM. Leave 9:00 AM."
 [CAL] 2026-09-05 10:00 [W] XC meet - Fountain Fort Carson :: kids :: location="Fountain-Fort Carson High School, 900 Jimmy Camp Road, Fountain, CO 80817" :: notes="HS Boys 10:00 AM. Leave 7:00 AM."
 [CAL] 2026-09-12 10:15 [W] XC meet - Joe I. Vigil Open :: kids :: location="Cattails Golf Course, Alamosa, CO" :: notes="HS Boys 10:15 AM. Leave 6:00 AM."
+[CAL] 2026-09-18 17:00 [W] XC team dinner :: kids :: end=19:00
 [CAL] 2026-09-19 09:00 [W] XC meet - Coronado Cougar Classic :: kids :: location="Monument Valley Park XC Course, Colorado Springs, CO" :: notes="HS Boys 9:00 AM. Leave 6:00 AM."
 [CAL] 2026-09-24 16:00 [W] XC meet - Canon City MS/HS XC Invite :: kids :: location="Royal Gorge Bridge and Park, Canon City, CO" :: notes="HS Boys 4:00 PM. Leave 1:00 PM. Park approx 8 miles west of town off Hwy 50."
+[CAL] 2026-10-02 17:00 [W] XC team dinner :: kids :: end=19:00
 [CAL] 2026-10-03 19:05 [W] XC meet - Salida Homecoming Desert Twilight :: kids :: location="Salida Golf Course, Salida, CO" :: notes="HS Boys 7:05 PM. Optional for HS. Leave 3:30 PM." :: tentative=true
 [CAL] 2026-10-10 11:30 [W] XC meet - West Central League :: kids :: location="Colorado Mountain College, Leadville, CO" :: notes="HS Boys 11:30 AM. Leave 7:00 AM."
 [CAL] 2026-10-16 11:00 [W] XC meet - Eric Wolff Invitational :: kids :: location="Monte Vista High School Track, Monte Vista, CO" :: notes="HS Boys 11:00 AM. Leave 5:30 AM."
