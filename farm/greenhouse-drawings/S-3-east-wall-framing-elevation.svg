@@ -7,19 +7,15 @@
 <polygon points="846.50,133.00 185.00,381.25 185.00,390.25 846.50,142.00" fill="none" stroke="#000" stroke-width="1.8"/>
 <line x1="846.50" y1="97.00" x2="185.00" y2="345.06" stroke="#000" stroke-width="1.6"/>
 <rect x="842.00" y="97.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="794.00" y="115.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="746.00" y="133.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="770.00" y="124.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="698.00" y="151.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="650.00" y="169.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="602.00" y="187.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="626.00" y="178.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="554.00" y="205.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="506.00" y="223.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="458.00" y="241.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="482.00" y="232.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="410.00" y="259.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="362.00" y="277.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="314.00" y="295.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="338.00" y="286.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="266.00" y="313.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="218.00" y="331.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
+<rect x="194.00" y="340.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <line x1="222" y1="270" x2="194.00" y2="358.00" stroke="#000" stroke-width="0.4"/>
 <text x="226" y="264" font-family="Arial" font-size="8.5" fill="#000">2x12 LOOKOUTS @ 24&#x201d; O.C.</text>
 <text x="226" y="275" font-family="Arial" font-size="8" fill="#000">TOPS = ROOF PLANE</text>
@@ -46,7 +42,6 @@
 <rect x="602.00" y="232.00" width="4.50" height="33.47" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="602.00" y="545.97" width="4.50" height="58.03" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="410.00" y="304.00" width="4.50" height="54.00" fill="none" stroke="#000" stroke-width="1.0"/>
-<rect x="362.00" y="322.00" width="4.50" height="36.00" fill="none" stroke="#000" stroke-width="1.0"/>
 <rect x="740.75" y="179.97" width="72.00" height="4.50" fill="none" stroke="#000" stroke-width="1.2"/>
 <rect x="720.50" y="545.97" width="112.50" height="4.50" fill="none" stroke="#000" stroke-width="1.2"/>
 <rect x="594.50" y="260.97" width="112.50" height="4.50" fill="none" stroke="#000" stroke-width="1.2"/>
