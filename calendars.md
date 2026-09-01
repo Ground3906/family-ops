@@ -746,7 +746,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-04 ALL-DAY [C][E] Cullen and Emmitt birthday :: birthdays :: notes="Hamburgers dinner. Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
 [CAL] 2026-09-06 17:00 [FAM] Cullen and Emmitt birthday dinner - with Doug and Deb :: family
 [CAL] 2026-09-08 11:00 [D] K of C - Brandon Nelson IRA call :: meetings :: end=11:30
-[CAL] 2026-09-08 ALL-DAY [M][R] Girls trip - Great Wolf Lodge - with Oma and Papa :: kids :: span=2026-09-10 :: travel=true
+[CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Pappa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 16:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=17:00 :: notes="telehealth"
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
