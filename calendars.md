@@ -741,6 +741,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 ### SEPTEMBER 2026
 
+[CAL] 2026-09-01 15:00 [D] Dentist :: appointments :: stripe=appt :: location="Salida Family Dental, Salida, CO" :: notes="Phone: (719) 539-2587"
 [CAL] 2026-09-02 08:30 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch"
 [CAL] 2026-09-02 09:00 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
