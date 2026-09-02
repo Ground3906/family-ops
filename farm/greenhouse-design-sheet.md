@@ -224,20 +224,25 @@ No floor drop. Building sits on the pad as-is, with a 1/8 in per ft fall away fr
 **Slab under the pens only. Individual pens. Dirt on the remainder.** Animals locked in pens at all times. Pen slabs poured separately and later, independent of the structural foundation.
 
 ### Item 8 - Foundation
-**NO STEM WALL.** Monolithic perimeter footing with post piers cast integral, one continuous pour, top 6 in proud of finished grade.
+**NO STEM WALL.** Monolithic grade beam with piers cast integral, one continuous pour. **Rewritten 2026-09-01 - see S-6. The 16 in wide shallow footing and the entire frost skirt are deleted.**
 
 | Element | Spec |
 |---------|------|
-| Perimeter footing width | 16 in |
-| Depth | 12 in minimum, 16 in better |
-| Post pads | ~30 in square, cast integral |
-| Reinforcement | Two #4 continuous, chairs, corner bends |
-| Anchor bolts | 0.5 in x 10 in, 6 ft o.c., within 12 in of each corner |
-| Frost skirt | 2 in rigid foam, 4 ft out horizontal, 12 in below grade, wider at corners |
+| Grade beam | 6 in wide x 12 in deep, 6 in below grade and 6 in above |
+| Beam position | Flush inboard with the wall inside face, 1/2 in proud outboard |
+| Piers | 6 in square, 36 in below grade, cast integral. Plan size nominal - the 36 in depth is the control |
+| Pier count | 3 per leg east and west, plus one under each of the 5 south posts. 9 total. The corner post pier is also the leg corner drop |
+| Post pads | **None.** Each post bears on the beam with a pier under it |
+| Reinforcement | #4 rebar as typical |
+| J-bolts | 0.5 in x 10 in, 6 ft o.c. east and west legs, within 12 in of each corner. South wall gets 2 per bay, 6 in inside each post face. One each side of both door gaps, 6 in clear |
+| Frost skirt | **Deleted.** None on this building |
+| Door gaps | Beam poured to grade only across both man door openings so the exterior slab comes up flush at 0 ft 6 in and forms its own threshold |
 
-Monolithic because separate piers and a separate perimeter heave independently at 9,000 ft. 6 in proud keeps the treated plate out of splash and drift. Frost skirt and slab-edge foam are the entire frost defense in the absence of a stem wall - heated-building FPSF detail applies.
+Monolithic because separate piers and a separate perimeter heave independently at 9,000 ft. 6 in proud keeps the treated plate out of splash and drift. **Frost is carried by the piers reaching below it, not by a skirt.** Owner-measured site frost depth is 24 in max, so the FPSF premise that justified staying shallow never applied here - a conventional 48 in footing was never required either. Custer County has adopted no building code, so there is no regulatory floor; this is engineering judgment on the owner's ground.
 
 Slope crest setback 2-3 ft on south and west. Differential settlement is expected (north end on the long-settled container, south end on fill) - polycarbonate does not forgive racking. Post loads at 50 psf are ~5,550 lb each; bearing capacity of the wheel-packed fill was never the constraint.
+
+**Flatwork, added 2026-09-01 and drawn on S-6.** Pen slab 3 in thick, 10 ft off the container, wall to wall inside the greenhouse. West walk 5 ft wide by 4 in thick, running 16 ft north of the container's south edge and ending 1 ft past the west man door. East slab 6 ft 6 in wide by 4 in thick, running 8 ft north so it closes flush on the container's north face, ending 1 ft past the east man door. Exteriors are 4 in because a loaded wheelbarrow runs that route daily; the west walk is foot traffic only, since the skid steer is 5 ft 7 in wide and will not fit on it at any thickness. **Pens get hand-cleaned to wheelbarrows out the east door - no machine enters the building, the only openings are two man doors.** Pen slabs themselves stay out of scope pending Open Item 2.
 
 **Concrete volume, reinforcement count, fastener schedules: explicitly excluded from the design/drawing scope as of the 2026-08-18 session.** Geometry (footprint, pier spacing, footing width/depth) is Ryder's to build from; quantity takeoffs are Ryder's to calculate.
 
@@ -662,6 +667,7 @@ Locked 2026-08-25 out of the north wall session retrospective. Extended 2026-08-
 | **S-3** | `S-3-east-wall-framing-elevation.svg` | E-1 |
 | **S-4** | `S-4-north-wall-framing-elevation.svg` | N-1 |
 | **S-5** | `S-5-roof-framing-plan.svg` | R-3 |
+| **S-6** | `S-6-foundation-and-concrete-plan.svg` | new 2026-09-01 |
 | **D-1** | `D-1-birdsmouth-detail.svg` | R-4 |
 | **D-2** | `D-2-south-roof-edge-detail.svg` | R-6 |
 | **D-3** | `D-3-panel-layout.svg` | R-2 |
@@ -692,7 +698,9 @@ All legacy filenames and the four legacy generators were deleted the same sessio
 
 **Remaining vent and roof construction details** - locked as specifications 2026-08-18, not yet drawn. See `farm/greenhouse-roof-vent-details.md`. Under the new scheme: **D-6** metal-to-metal endlap (largely superseded by the dry-lap note), **D-7** poly eave termination, **D-8** vent panel construction (was V-1). Sheets R-3, R-4 and V-1 hand drawings are also still outside the repo.
 
-**Locked build sequence for future drawing sessions (owner's order, spans multiple sessions):** east elevation, south elevation, west elevation, north elevation, roof framing plan, wall framing plans, aerial layout, footer/footing plan.
+**Locked build sequence (owner's order) - COMPLETE as of 2026-09-01:** east elevation (S-3), south elevation (S-1), west elevation (S-2), north elevation (S-4), roof framing plan (S-5), wall framing plans (carried by the four elevations), aerial layout, footer/footing plan (S-6).
+
+The order listed "roof framing plan" and "aerial layout" as separate items. The owner confirmed 2026-09-01 that the aerial layout **was** the roof plan, so S-5 satisfied both and no separate sheet is owed. Do not chase it.
 
 ---
 
