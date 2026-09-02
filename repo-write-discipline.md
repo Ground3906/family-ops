@@ -34,6 +34,54 @@
 
 ---
 
+## One asserted pass per edit batch
+
+**Any file Claude cannot re-derive from scratch - a hand-built SVG, a generator, a doctrine document - gets edited in a single pass where every pattern is asserted unique before anything is written, and the batch writes once or not at all.**
+
+Why: chained patches fail in a way that compounds. Each patch is written against the file as the previous patch left it, so a wrong assumption three patches back produces an error whose cause is nowhere near the line that reports it, and recovery means reconstructing the chain rather than re-running one step.
+
+This bit twice inside one session on 2026-09-01, both times on `generate_s6.py`. A regex meant to capture five callout blocks also matched the `def leader(...)` definition above them, producing `def leader(X(E_CL), ...)`. The repair attempt then sliced the file with its indices in the wrong order - the DIMENSIONS section sits above the callouts, not below - and wrote garbage over a working region. Both times the file was restored from a backup and nothing shipped broken, but the cost was several turns and two restores.
+
+Rules:
+
+- Every pattern gets `assert src.count(pattern) == 1` before its replacement. Zero matches and two matches are both failures.
+- The write happens once, at the end, after every replacement has succeeded. An assert that fires leaves the file untouched. That is the point of putting the write last.
+- Parse and run the file between batches - `ast.parse` for Python, a render for a generator. Never start a second batch against an unverified first.
+- Copy the file before any batch that cannot be trivially rebuilt. Delete the copy only after the result is verified.
+- Match at column zero where the syntax allows it. A pattern that can match a definition as well as a call will eventually match both.
+
+---
+
+## An unexplained number is a finding, not noise
+
+**A size, count, or hash that does not match what was built gets chased when it is first noticed.** Not filed, not assumed benign, not deferred.
+
+On 2026-09-01 a staged copy of S-3 read 32,424 bytes against a 24,650-byte build. It was noticed, judged stale, and set aside. Hours later, mid-commit, S-6 showed the same thing - 27,107 against 19,333 - and the delta was identical to the byte: 7,774 both times. The cause was a C2PA content-credentials manifest injected into SVGs on the download path. Harmless in itself, but 7,774 bytes of base64 that no other sheet in the committed set carries. Chasing the first occurrence would have cost two minutes. Discovering it during a commit cost a detour and two rounds of PowerShell surgery to strip cleanly, one of which removed a byte too many.
+
+**An exact repeated delta is never coincidence.** Two files differing from their source by precisely the same number of bytes is a systematic cause, and systematic causes do not resolve themselves.
+
+Rules:
+
+- Compare byte counts against the build, never against a previous staged copy.
+- When a number is wrong, find out why before doing anything else with that file.
+- After a commit, verify size and hash against the remote rather than trusting the push output.
+
+---
+
+## Figures that carry authority need a named source
+
+**Any number that governs a build, a purchase, or a legal position is stated with its jurisdiction and its source, or it is not stated.** Code minimums, frost depth, setbacks, load requirements, permit thresholds, product specifications, prices.
+
+On 2026-09-01, "48 to 60 inches of frost depth at your elevation" was handed to Matt as though it were his local requirement. It came from a concrete-calculator marketing page and a pergola company's frost map. Neither is a code and neither is Custer County. He rejected it on sight. The actual position turned out to be that Custer County has adopted no building code at all, so there was no requirement to cite in the first place, and the real number - 24 inches - came from the owner, who has dug there.
+
+Rules:
+
+- Name the jurisdiction and the source in the same sentence as the number. Aggregators, calculators, and lead-generation pages are not sources.
+- When the authoritative source cannot be found, say so plainly. Do not substitute a plausible general figure.
+- Matt often has ground truth on his own site that beats any published table. Ask before reaching for a table.
+
+---
+
 ## Check `.gitignore` before writing any script that stages a repo path
 
 **Before writing or modifying any script that runs `git add` on a repo path, check `.gitignore` for that path first.**
@@ -153,6 +201,7 @@ This bit on 2026-08-19 patching the span-stacking and night-mode fixes: two sepa
 - **Large doctrine batches exceed single-push payload.** A multi-file doctrine batch can be too large for one `push_files` call. When that happens, chunk to proven size (roughly 2 medium files, or one large file, per call) and expect multiple commits. This does not violate the one-commit rule in spirit — the ceiling is a payload limit, not a choice. Group the chunks logically and read back every file after.
 - **A scheduled task reporting success proves nothing about whether data moved.** `LastTaskResult: 0` means the script exited cleanly, which includes every early-exit path it was written to take. Verify the repo side independently — commit history on the target file — not the exit code.
 - **`create_or_update_file` can fail with `No approval received` where `push_files` succeeds on identical content.** Observed 2026-08-20. `push_files` is the default write tool for this repo; reach for `create_or_update_file` only when a SHA-guarded single-file update is specifically required, and expect the approval gate.
+- **SVGs presented for download can arrive carrying a C2PA content-credentials manifest.** Roughly 7.7KB of base64 inserted as `xmlns:c2pa` on the root element plus a `<metadata>` block immediately after it. Valid SVG, renders identically, but no sheet already committed to this repo carries one. Strip before committing so the set stays consistent, and verify the stripped file matches the build byte for byte - the metadata block is followed by the newline that belongs to the root element, and a greedy pattern eats it.
 
 ---
 
