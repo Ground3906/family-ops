@@ -389,7 +389,16 @@ This section lists everything you must turn in, and everywhere you must be, grou
 
 ## §5 — Weight Windows and Market Deadlines
 
-This section lists the weights, ages, entry limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it. Where a minimum weight is lower than the Colorado State Fair figure, that reflects the Custer County Fair being held earlier in the year.
+This section lists the weights, ages, entry limits, sale limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it. Where a minimum weight is lower than the Colorado State Fair figure, that reflects the Custer County Fair being held earlier in the year.
+
+**Entry limit, all species**
+
+This limit is the same for every species and is stated here once.
+
+| | |
+|---|---|
+| Maximum entries per species | 3 |
+| Governing rule | CC 3.1.4 |
 
 **Market Beef**
 
@@ -438,18 +447,27 @@ Custer County's minimum and maximum both differ from the Colorado State Fair fig
 | Governing rule | CC 3.5.3 |
 | Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age |
 
-**Market Poultry**
+**Market Chicken**
 
-| Class | Weight window per bird | Age |
+Market chicken and market turkey are separate species within the Market Poultry department. The entry limit above applies to each of them separately.
+
+| Weight class | Weight window per bird | Age |
 |---|---|---|
-| Market Fryer Pen | 3.5 to 7.0 lbs | Not over 8 weeks |
-| Market Broiler Pen | 7.0 to 12.0 lbs | Not over 20 weeks |
-| Market Turkey Hen | 13 to 30 lbs | 16 to 20 weeks |
-| Market Turkey Tom | 20 to 30 lbs | 16 to 20 weeks |
+| Fryer | 3.0 to 6.0 lbs | Not over 8 weeks |
+| Broiler | 6.1 to 12.0 lbs | Not over 20 weeks |
 
 | | |
 |---|---|
-| Maximum entries per exhibitor | 2, across the department |
+| Other requirements | CC 3.6.4 weigh-in requirement, CC 3.6.5 identification, CC 3.6.8 age |
+
+**Market Turkey**
+
+| Weight window per bird | Age |
+|---|---|
+| 13 to 34 lbs | 16 to 20 weeks |
+
+| | |
+|---|---|
 | Other requirements | CC 3.6.4 weigh-in requirement, CC 3.6.5 identification, CC 3.6.8 age, CC 3.6.9 turkey breed |
 
 **Market Rabbit**
@@ -458,7 +476,6 @@ Custer County's minimum and maximum both differ from the Colorado State Fair fig
 |---|---|
 | Meat pen weight window per rabbit | 3.5 to 5.5 lbs |
 | Age limit | 10 weeks |
-| Maximum pens per exhibitor | 2 |
 | Other requirements | CC 3.7.4 identification |
 
 **Market deadlines**
@@ -466,6 +483,21 @@ Custer County's minimum and maximum both differ from the Colorado State Fair fig
 | Deadline | Window |
 |---|---|
 | Sale declaration, filed with the sale committee | No later than one hour after the conclusion of the beef show |
+
+**Sale limits**
+
+| | |
+|---|---|
+| Market animals an exhibitor may sell | 2 |
+| Governing rule | CC 4.2.1 |
+
+**Poultry promotion bonus slot**
+
+The bonus slot at CC 4.2.1a is in effect only for a fair year listed below. Where no fair year is listed, the bonus slot is not in effect and the sale limit at CC 4.2.1 applies without it.
+
+| | |
+|---|---|
+| In effect for fair year | 2027 |
 
 ---
 

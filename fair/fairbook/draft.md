@@ -74,13 +74,17 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.7 Feeder Animal.** A feeder animal is a market project animal that was weighed in at the fair weigh-in and does not meet the minimum weight requirement for its species and class.
 
-**CC 1.8 Grand Drive.** The Grand Drive is the championship class of a market department, in which the champion and reserve champion of each weight class compete for Grand Champion and Reserve Grand Champion.
+**CC 1.8 Grand Drive.** The Grand Drive is the championship class of a market species, in which the first place winner of each weight class competes for Grand Champion and Reserve Grand Champion. The Grand Drive is conducted under CC 3.1.7a.
 
 **CC 1.9 In Good Standing.** A member in good standing is a 4-H or FFA member whose enrollment is current and who has met all program requirements, as confirmed by the CSU Extension agent or FFA advisor.
 
 **CC 1.10 Initial Weigh-In.** The initial weigh-in is the weigh-in held before fair week at which the beginning weight of a market animal is recorded.
 
+**CC 1.10a Market Small Animal.** A market small animal is a market chicken, a market turkey, or a market rabbit. Each of the three is a separate species. Market chicken and market turkey are exhibited in the market poultry department at CC 3.6 and market rabbit in the market rabbit department at CC 3.7. This term does not reach the non-market small animal departments at CC 6.
+
 **CC 1.11 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §5.
+
+**CC 1.11a Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was weighed in at the fair weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
 
 **CC 1.12 The Authority**
 
@@ -173,6 +177,10 @@ A person who does not meet this standard will be required to change.
 Custer County acknowledges and adopts the CSF General Competition Requirements (CSF GCR), Grievances/Protests provisions. A grievance may address a violation of these rules, an eligibility question, or a procedural matter. A judge's placing is final. It is not the subject of a grievance, protest, or appeal. Disagreement with a judge's opinion of an animal or an exhibitor is not grounds for a grievance.
 
 It is the responsibility of the judge to determine the merits of every class. No placing in a class is predetermined by the number of exhibits entered in that class.
+
+**CC 2.5a Who May Not Judge**
+
+No member of the Fair Board and no superintendent shall judge any class at the Custer County Fair. This section admits no exception.
 
 **CC 2.6 Interference with Competition**
 
@@ -304,6 +312,12 @@ All animals shall be at ringside one class ahead of the class in which they are 
 
 The exhibitor is responsible for informing the gate steward of any conflict or delay that may cause the exhibitor to be late for or to miss a class. The gate shall be held where the gate steward has been so informed.
 
+**CC 2.20a Ring Stewards and Gate Stewards**
+
+A ring steward and a gate steward assist in the conduct of a show. The superintendent of the department appoints them and directs their work.
+
+A steward is not the Authority under CC 1.12.1 and holds no power of decision. A steward carries the duties the superintendent assigns. The one duty stated in this book is the gate steward's duty under CC 2.20, under which the gate shall be held where the gate steward has been informed of a conflict or delay.
+
 **CC 2.21 Ribbons and Placings**
 
 The American System shall be used to present ribbons in every competitive class in this book, except where this book states that a different system governs a class. Under the American System, the exhibits in a class are placed against one another and ribbons are awarded according to that placing.
@@ -394,9 +408,11 @@ MQA certification is verified by CSU Extension. No certificate is submitted at c
 
 Custer County acknowledges and adopts CC 2.2, under which an exhibitor must complete the entry or registration process for a project before the applicable deadline. For market livestock, entry is completed by presenting the animal at the fair weigh-in. An animal weighed in at the fair weigh-in is registered for the current fair year.
 
-An exhibitor may enter one market animal in each of the market beef, market swine, market sheep, and market goat departments. In addition to that animal, an exhibitor may enter one animal of the same species in the non-market departments at CC 6, counted across every non-market class offered for that species. Entry limits for market poultry are stated at CC 3.6.12 and for market rabbit at CC 3.7.10.
+An exhibitor may enter no more than the maximum number of entries per species listed in Addendum §5. That maximum is the same for every market species. It is counted in the entry unit stated in the subchapter governing that species, so that a pen entered as one unit counts as one entry.
 
-The animal presented at the fair weigh-in is the exhibitor's entry for that species. No animal may be substituted for it and no further animal may be entered in that species after the close of the fair weigh-in. An animal entered under this section shows under CC 3.1.13.
+Market beef, market swine, market sheep, market goat, market chicken, market turkey, and market rabbit are each a species for the purpose of this section.
+
+No further animal may be entered in a species after the close of the fair weigh-in. An animal entered under this section shows under CC 3.1.13.
 
 **CC 3.1.5 Weigh-In and Official Weight**
 
@@ -415,6 +431,14 @@ Nothing shall be on a market animal during the fair weigh-in other than the iden
 Classes in a market division shall be divided by weight, using the official weights recorded under CC 3.1.5. Classes shall be broken following the close of weigh-in. The Authority shall determine the number and the size of the classes in a division, with the superintendent of the department as lead.
 
 A subchapter may state an additional criterion for the division of classes within its own department.
+
+**CC 3.1.7a The Grand Drive**
+
+The first place winner of each weight class in a species competes in the Grand Drive for that species. The Grand Champion is selected first. The second place animal from the weight class that produced the Grand Champion then enters the Grand Drive, and the Reserve Grand Champion is selected from the animals then in the ring.
+
+Where the weight class that produced the Grand Champion held one animal, no animal enters under the preceding paragraph and the Reserve Grand Champion is selected from the animals then in the ring.
+
+This section governs the Grand Drive in every market species.
 
 **CC 3.1.8 Identification**
 
@@ -518,7 +542,7 @@ Custer County reads this requirement as follows. The certificate shall be presen
 
 **CC 3.2.4 Classes and Judging**
 
-Custer County acknowledges and adopts the CSF requirements governing market beef judging. Market beef classes are open to steers and heifers. Steers and heifers shall be shown by weight and shall be divided by sex into classes as appropriate by the Authority, with the superintendent of the department as lead. Heifers shall compete in a heifer class. All steers placing first in a class shall compete in the Grand Champion Drive. The second place winner from the class from which the Grand Champion Market Beef is selected may be considered for Reserve Grand Champion Market Beef. Heifers shall compete equally with the steers in the Grand Champion Drive.
+Custer County acknowledges and adopts the CSF requirements governing market beef judging. Market beef classes are open to steers and heifers. Steers and heifers shall be shown by weight and shall be divided by sex into classes as appropriate by the Authority, with the superintendent of the department as lead. Heifers shall compete in a heifer class. The Grand Drive for market beef is conducted under CC 3.1.7a. Heifers shall compete equally with the steers in the Grand Drive.
 
 Custer County reads this requirement as follows. No breed competition exists in Market Beef.
 
@@ -582,7 +606,7 @@ The class offered in the market swine division is Market Swine. Breeding Swine i
 
 **CC 3.3.5 Pen Assignment**
 
-Pen space in the market swine show is assigned under CC 3.1.15.
+An exhibitor may keep up to two of the exhibitor's own animals in a single pen. Pen space in the market swine show is assigned under CC 3.1.15. For market swine, the pen space guaranteed to an exhibitor under CC 3.1.15 is the number of pens required to hold the exhibitor's animals at up to two animals per pen.
 
 **CC 3.3.6 Fitting and Grooming Substances**
 
@@ -762,15 +786,15 @@ Every bird entered in a market poultry division shall carry a numbered leg band 
 
 **CC 3.6.6 Classes Offered**
 
-The classes offered in the market poultry division are Market Fryer Pen, Market Broiler Pen, Market Turkey Hen, and Market Turkey Tom. A Market Fryer Pen entry and a Market Broiler Pen entry are each a pen of three chickens of the same breed. Non-market poultry is not a market class. See CC 6.
+The market poultry department comprises two species, market chicken and market turkey. The weight classes offered in market chicken are Fryer and Broiler, and each is entered as a pen of three chickens of the same breed. Market turkey is offered as one class and is entered as one bird. Non-market poultry is not a market class. See CC 6.
 
 **CC 3.6.7 Class Weights**
 
-The weight window for each market poultry class is listed in Addendum §4. Each window is stated to one tenth of a pound, and no bird qualifies for more than one class. For a pen of chickens, every bird in the pen shall fall within the window for the class entered.
+The weight window for each market poultry class is listed in Addendum §5. Each window is stated to one tenth of a pound, and no bird qualifies for more than one class. For a pen of chickens, every bird in the pen shall fall within the window for the class entered.
 
 **CC 3.6.8 Age**
 
-Custer County acknowledges and adopts the CSF Market Chickens and Market Turkeys competition requirements governing age. A chicken entered in the Market Fryer Pen class shall be no more than 8 weeks of age at the fair weigh-in. A chicken entered in the Market Broiler Pen class shall be no more than 20 weeks of age. A turkey entered in either market turkey class shall be no less than 16 weeks and no more than 20 weeks of age. The exhibitor shall present a record of the hatch date of every bird at the fair weigh-in.
+Custer County acknowledges and adopts the CSF Market Chickens and Market Turkeys competition requirements governing age. A chicken entered in the Fryer class shall be no more than 8 weeks of age at the fair weigh-in. A chicken entered in the Broiler class shall be no more than 20 weeks of age. A turkey shall be no less than 16 weeks and no more than 20 weeks of age. The exhibitor shall present a record of the hatch date of every bird at the fair weigh-in.
 
 **CC 3.6.9 Turkey Breed**
 
@@ -790,7 +814,7 @@ After a bird has been cooped, it shall not be removed from its assigned cage exc
 
 **CC 3.6.12 Entry Limit**
 
-The maximum number of entries an exhibitor may enter in the market poultry department is listed in Addendum §4. That maximum is counted across every class in the department, in the entry units stated at CC 3.6.4. Pen and cage space is assigned under CC 3.1.15.
+The maximum number of entries an exhibitor may enter in a market poultry species is stated at CC 3.1.4. Market chicken and market turkey are separate species and the maximum applies to each of them separately, counted in the entry units stated at CC 3.6.4. Pen and cage space is assigned under CC 3.1.15.
 
 ---
 
@@ -850,7 +874,7 @@ Where the exhibitor has more than one entry in the same class, another Custer Co
 
 **CC 3.7.10 Entry Limit**
 
-The maximum number of pens an exhibitor may enter in the market rabbit division is listed in Addendum §4. Pen and cage space is assigned under CC 3.1.15.
+The maximum number of pens an exhibitor may enter in market rabbit is stated at CC 3.1.4. Pen and cage space is assigned under CC 3.1.15.
 
 ## CC 4 — The Livestock Sale
 
@@ -906,9 +930,17 @@ CC 3.7.2 — Market rabbit terminal status and sale
 
 **CC 4.2.1 Sale Limit**
 
-An exhibitor may sell no more than two market animals in the Market Livestock Sale, and those two animals shall be of different species. In addition to those two animals, an exhibitor may sell one market rabbit meat pen and one market chicken pen.
+An exhibitor may sell no more than two market animals in the Market Livestock Sale. That maximum is listed in Addendum §5.
 
-A market chicken pen counts as one market animal, and a market rabbit meat pen counts as one market animal. Market chicken and market turkey are different species for the purpose of the different-species requirement in this section, and market rabbit is a species distinct from both.
+Those two animals shall be of different species, except that where both of them are market small animals as defined at CC 1.10a, they need not be of different species.
+
+A market chicken pen counts as one market animal, and a market rabbit meat pen counts as one market animal. Market chicken, market turkey, and market rabbit are each a species distinct from the others for the purpose of this section.
+
+**CC 4.2.1a Poultry Promotion Bonus Slot**
+
+To promote the poultry project, an exhibitor who has filled both sale slots under CC 4.2.1, neither of them with a market chicken pen or a market turkey, may sell one additional animal. That additional animal shall be a market chicken pen or a market turkey.
+
+This section is in effect only for a fair year listed in Addendum §5. Where no fair year is listed there, this section does not apply and CC 4.2.1 governs without it.
 
 **CC 4.2.2 Required Sales**
 
