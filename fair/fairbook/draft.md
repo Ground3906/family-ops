@@ -182,6 +182,10 @@ It is the responsibility of the judge to determine the merits of every class. No
 
 No member of the Fair Board and no superintendent shall judge any class at the Custer County Fair. This section admits no exception.
 
+**CC 2.5b Conflict of Interest**
+
+No person acting as the Authority shall participate in a decision affecting an exhibitor who is a member of that person's household. The person shall state the conflict and withdraw before the matter is taken up, and the remaining members of the Authority shall decide it.
+
 **CC 2.6 Interference with Competition**
 
 Custer County acknowledges and adopts the CSF GCR, Prohibition of Interference with Competitions, and recognizes International Association of Fairs and Expositions (IAFE) Code of Show Ring Ethics Item 7, which states the same prohibition. Direct criticism or interference with a judge, Authority staff, other exhibitors, association representatives, or show officials before, during, or after a competitive event is prohibited. All judges, Authority staff, and show officials shall be treated with courtesy, cooperation, and respect. No person shall direct abusive or threatening conduct toward them.
@@ -1015,6 +1019,10 @@ A commission is withheld from the gross sale proceeds of every animal sold in th
 **CC 4.6.2 Costs of Delivery**
 
 The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.5, are withheld from the proceeds of that animal.
+
+**CC 4.6.3 Payment Hold**
+
+Payment of sale proceeds to an exhibitor is held where a matter affecting that exhibitor or that animal is unresolved. A pending laboratory or testing result, a pending grievance under CC 2.8, a pending appeal under CC 2.8, and a pending disciplinary matter under CC 2.7 each place a hold, as does any other unresolved matter bearing on the eligibility of the exhibitor or the animal. The hold is released when the matter is resolved.
 
 ### CC 4.7 — Warranties on Sale Animals
 

@@ -536,6 +536,7 @@ This section lists every form an exhibitor must complete and sign, and reproduce
 | §7.4 Wholesome Meat Act Disclosure | Warranty that the carcass is fit for human consumption and residue free | Exhibitor and parent or guardian |
 | §7.5 Entry card | Identifies an indoor or Open Division exhibit and its class | Exhibitor |
 | §7.6 Violation Notice | Records a warning or sanction issued under CC 2.7 | Issued by the Authority |
+| §7.7 Sale declaration | Names the animals an exhibitor is declaring to the sale committee under CC 4.3.1 | Exhibitor |
 
 ### §7.1 — Custer County 4-H, FFA, and Open Fair Code of Conduct
 
@@ -729,6 +730,14 @@ Issued by the Authority under CC 2.7 at the first written warning and at every s
 | Issued by | |
 
 This is a notice of the escalation step recorded, not a finding requiring the person's signature. A person cited may appeal under CC 2.8. The appeal window is stated in Addendum §8.1.
+
+---
+
+### §7.7 — Sale Declaration
+
+Filed with the sale committee under CC 4.3.1, no later than one hour after the conclusion of the beef show. An animal not declared does not sell.
+
+**[FORM PENDING — the county's existing sale declaration form to be supplied and reproduced here.]**
 
 ---
 
