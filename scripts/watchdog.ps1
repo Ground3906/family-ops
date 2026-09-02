@@ -5,6 +5,8 @@
 # Checks per run:
 #   1. InboxWatcher staleness   - archive\watcher-heartbeat.txt         (6h threshold)
 #   2. GraphSync staleness      - scripts\graph-sync-heartbeat.txt       (6h threshold)
+#      EMAIL SUPPRESSED 2026-09-01 - see CHECK 2 block. Still logged and
+#      still reported in ops\system-health.json. No mail is sent.
 #   3. PullJob staleness        - last-pull.json                         (6h threshold)
 #   4. NightWatch staleness     - archive\night-watch-heartbeat.txt     (25h threshold)
 #   5. Disk free space          - C: drive below 75 GB
@@ -190,13 +192,21 @@ try {
 
     # ------------------------------------------------------------------
     # CHECK 2: GraphSync heartbeat
+    #
+    # EMAIL SUPPRESSED 2026-09-01 by Matt's direction.
+    # The GraphSync heartbeat has been stale since 2026-06-24 because the
+    # graph-sync.ps1 run does not reach its step 9 write. The alert was
+    # correct but carried no new information and fired three times a day.
+    # The check still runs, still logs, and still reports into
+    # ops\system-health.json. Only the two Send-Alert calls are commented out.
+    # Re-enable both lines once the graph-sync.ps1 fault is fixed.
     # ------------------------------------------------------------------
     $graphAge = Get-HeartbeatAgeHours $GraphSyncHB
     if ($graphAge -eq -1) {
         $msg = "GraphSync heartbeat not found at $GraphSyncHB. GraphSync task may not be running."
         Write-Warning "[watchdog] $msg"
-        Send-Alert "[FamilyOps] GraphSync: no heartbeat file" $msg
-        Write-WatchdogLog "graph_sync_heartbeat_missing" "File not found"
+        # Send-Alert "[FamilyOps] GraphSync: no heartbeat file" $msg
+        Write-WatchdogLog "graph_sync_heartbeat_missing" "File not found (alert suppressed 2026-09-01)"
         $health.checks.graph_sync.status = "missing"
         $alerts++
     } elseif ($graphAge -eq -2) {
@@ -208,8 +218,9 @@ try {
         Write-Host "[watchdog] GraphSync heartbeat age: $([math]::Round($graphAge, 1))h"
         if ($graphAge -gt $GraphSyncStalenessHours) {
             $msg = "GraphSync heartbeat is $([math]::Round($graphAge, 1))h old (threshold: $GraphSyncStalenessHours h). Calendar sync may be down."
-            Send-Alert "[FamilyOps] GraphSync stale: calendar sync may be down" $msg
-            Write-WatchdogLog "graph_sync_stale" "Age: $([math]::Round($graphAge, 2))h"
+            Write-Warning "[watchdog] $msg"
+            # Send-Alert "[FamilyOps] GraphSync stale: calendar sync may be down" $msg
+            Write-WatchdogLog "graph_sync_stale" "Age: $([math]::Round($graphAge, 2))h (alert suppressed 2026-09-01)"
             $health.checks.graph_sync.status = "stale"
             $alerts++
         } else {
