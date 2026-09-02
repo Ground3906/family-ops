@@ -1,7 +1,7 @@
 # Matt Bayer (MB) — Health Profile
 
 **Date created:** 2026-06-13
-**Last updated:** 2026-08-30
+**Last updated:** 2026-09-02
 **Owner:** IFAK
 **Status:** Active
 
@@ -62,6 +62,7 @@
 | 2026-08-22 | 02:00, woke from sleep | Fried chicken sandwich, french fries, ranch dressing | Same as 2026-08-20 episode: heartburn pain, fullness/pressure, gas, stomach not emptying | Not characterized | Next-day BM hard, slow, straining, incomplete-feeling | Not noted |
 | 2026-08-27 | 22:00, woke from sleep shortly after falling asleep | Not noted | Heartburn, needed Tums | Medium, per Matt -- did not need to get up and walk it off, back to sleep after Tums | Not noted | Tums, back to sleep |
 | 2026-08-30 | Not noted (all-day) | Not noted (attributed to 8:00 meal) | Constant pressure, gas, meal from 8:00 sat undigested/wouldn't move down, stomach wouldn't empty, all-day duration | Not characterized by Matt | Not noted | Not noted |
+| 2026-09-01 | 02:00, woke from sleep | Not noted | Pressure, indigestion, burning heartburn pain; massively gassy the next morning | Not characterized | Not noted | Tums, walked a bit, back to sleep |
 
 ### Hemorrhoids / Anal Fissure (History)
 - **History:** Chronic hemorrhoids. Anal fissure developed ~2 years ago. Fissure failed to heal conservatively.
