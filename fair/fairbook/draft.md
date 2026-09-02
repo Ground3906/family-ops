@@ -82,7 +82,7 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.10a Market Small Animal.** A market small animal is a market chicken, a market turkey, or a market rabbit. Each of the three is a separate species. Market chicken and market turkey are exhibited in the market poultry department at CC 3.6 and market rabbit in the market rabbit department at CC 3.7. This term does not reach the non-market small animal departments at CC 6.
 
-**CC 1.11 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §5.
+**CC 1.11 Premium.** A premium is a cash payment awarded to an exhibitor for placing in a judged show class. Premium amounts for each placing are listed in Addendum §6.
 
 **CC 1.11a Qualified Alternate.** A qualified alternate is an enrolled market project of the exhibitor that was weighed in at the fair weigh-in and meets all applicable weight requirements for its species. A qualified alternate may sell in the Livestock Sale if the exhibitor's primary project is barred from the sale.
 
@@ -120,13 +120,13 @@ An exhibitor in the Open Division is not required to hold 4-H or National FFA Or
 
 **CC 2.2 Entry and Registration**
 
-Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §3. Any applicable fees are listed in Addendum §5.
+Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §4. Any applicable fees are listed in Addendum §6.
 
 For indoor and Open Division projects, entry is completed by check-in at the designated location. The exhibitor must submit an entry card for each exhibit before check-in. Each entry card must state the exhibitor's name and the division and class in which the exhibit is entered. An exhibit presented without a completed entry card is refused. It is the exhibitor's responsibility to ensure that each exhibit is entered in the correct class. In the Open Division, no more than three exhibits may be entered in a single class.
 
 A completed entry, weigh-in, or check-in is the exhibitor's acceptance of all rules in this book and agreement to abide by them for the duration of their participation in the Custer County Fair.
 
-An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §6.
+An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §7.
 
 **CC 2.3 Code of Conduct**
 
@@ -230,13 +230,13 @@ This escalation does not limit the Authority's power under this section to impos
 
 Custer County acknowledges and adopts the CSF GCR, Grievances/Protests provisions and Rights of Appeal and Process of Appeal. A grievance may be filed by any person who believes an exhibitor has violated a competition rule or engaged in unethical conduct. A grievance does not reach a judge's placing. See CC 2.5.
 
-A grievance must be submitted in writing on the form available from the Fair office or Addendum §7.2, accompanied by the grievance fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair office within the deadline listed in Addendum §8.1 after the occurrence. Judging will not be interrupted by a grievance.
+A grievance must be submitted in writing on the form available from the Fair office or Addendum §8.2, accompanied by the grievance fee listed in Addendum §6, in cash or certified check. The grievance must state the basis plainly and must be delivered to the Fair office within the deadline listed in Addendum §8.1 after the occurrence. Judging will not be interrupted by a grievance.
 
 If the grievant is not satisfied by the initial resolution, the grievant may appeal to the Fair Board.
 
 A person against whom a sanction is imposed under CC 2.7 may appeal that sanction to the Fair Board, whether or not a grievance was filed. This right attaches to every sanction under CC 2.7, including a first written warning, and to any finding of violation under the Determination of Violations provision. Where the person sanctioned is under 18, the appeal may be filed by a parent or guardian on their behalf.
 
-An appeal must be submitted in writing on the appeal form available from the Fair office or Addendum §7.3, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair office within the deadline listed in Addendum §8.1. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
+An appeal must be submitted in writing on the appeal form available from the Fair office or Addendum §8.3, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair office within the deadline listed in Addendum §8.1. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
 
 A sanction under appeal is recorded under CC 2.7(c) when the appeal is decided, not when the sanction is issued. A sanction overturned on appeal is not recorded and does not count.
 
@@ -244,7 +244,7 @@ The decision of the Fair Board is final. The fee is refunded only where the grie
 
 **CC 2.9 Official Communications**
 
-All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in Addendum §9.
+All official communications from the Custer County Fair Board are delivered through designated channels. The current list of official channels is listed in Addendum §10.
 
 **CC 2.10 Cloverbud Members**
 
@@ -252,7 +252,7 @@ A Cloverbud member is a 4-H member who has not reached eight years of age as of 
 
 **CC 2.11 Fairgrounds Cleanup**
 
-The Custer County Fair holds a mandatory cleanup before the fair and a mandatory cleanup after the fair. Every exhibitor is required to attend both. Cleanup dates are listed in Addendum §2.
+The Custer County Fair holds a mandatory cleanup before the fair and a mandatory cleanup after the fair. Every exhibitor is required to attend both. Cleanup dates are listed in Addendum §4.
 
 At each cleanup, the Authority assigns duties to each exhibitor. Duties may include trash collection, restroom cleaning, mowing and weed maintenance, cleaning the exhibit hall, raking barns and alleyways, and general grounds work. A sign-in list is maintained for each cleanup.
 
@@ -300,7 +300,7 @@ Restrictions on feeding and watering during weigh-in and in the show ring are st
 
 **CC 2.18 Barn Hours**
 
-The barns close each evening at the time stated in Addendum §2. Following closing, only exhibitors and members of their families may enter a barn, and only for the purpose of checking on that exhibitor's animals.
+The barns close each evening when the gates close, at the time stated in Addendum §3. Following closing, only exhibitors and members of their families may enter a barn, and only for the purpose of checking on that exhibitor's animals.
 
 **CC 2.19 Unmanageable Animals**
 
@@ -338,7 +338,7 @@ Stall cleanup is completed during the cleanup after the fair, which every exhibi
 
 **CC 2.24 Departure From the Fairgrounds**
 
-Every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline listed in Addendum §2. No animal may be removed before its release under CC 2.23.
+Every animal not sold in the Market Livestock Sale must be removed from the fairgrounds by the deadline listed in Addendum §4. No animal may be removed before its release under CC 2.23.
 
 ---
 
@@ -416,11 +416,11 @@ No further animal may be entered in a species after the close of the fair weigh-
 
 **CC 3.1.5 Weigh-In and Official Weight**
 
-All market animals shall be weighed at the time scheduled in Addendum §2. The weight recorded at the fair weigh-in is the official weight of the animal and is the weight used for the Livestock Sale. The official scale is the certified scale at the fairgrounds, which is calibrated annually by Colorado Weights and Measures. No other scale shall be used to establish an official weight.
+All market animals shall be weighed at the time scheduled in Addendum §3. The weight recorded at the fair weigh-in is the official weight of the animal and is the weight used for the Livestock Sale. The official scale is the certified scale at the fairgrounds, which is calibrated annually by Colorado Weights and Measures. No other scale shall be used to establish an official weight.
 
 The unit of weight for each market species is stated in the subchapter governing that species. Where a species is exhibited as a pen, the weight of each animal in the pen shall be recorded individually and the weight of the pen shall be derived from those recorded weights.
 
-Minimum and maximum weights for each species and class are listed in Addendum §4. Where a subchapter states a maximum weight above which an animal is ineligible for the market division, that maximum shall be enforced at the fair weigh-in.
+Minimum and maximum weights for each species and class are listed in Addendum §5. Where a subchapter states a maximum weight above which an animal is ineligible for the market division, that maximum shall be enforced at the fair weigh-in.
 
 **CC 3.1.6 Weigh-In Preparation**
 
@@ -484,7 +484,7 @@ Custer County acknowledges and adopts the CSF requirement that tampering with an
 
 **CC 3.1.16 Mandatory Exhibitor Meeting**
 
-A mandatory meeting of all market exhibitors shall be held following the close of weigh-in. The time and place of the meeting are stated in Addendum §2. An exhibitor who fails to attend proceeds under the escalation at CC 2.7(a).
+A mandatory meeting of all market exhibitors shall be held following the close of weigh-in. The time and place of the meeting are stated in Addendum §3. An exhibitor who fails to attend proceeds under the escalation at CC 2.7(a).
 
 **CC 3.1.17 Unethical Fitting Practices and Testing**
 
@@ -530,7 +530,7 @@ Custer County reads this requirement as follows. Every market beef project shall
 
 **CC 3.2.2a Weight and Sale Eligibility**
 
-The minimum weight for market beef is listed in Addendum §4. No maximum weight is set for market beef.
+The minimum weight for market beef is listed in Addendum §5. No maximum weight is set for market beef.
 
 A market beef animal under the minimum weight shall show in the lightweight class. It shall not sell in the Market Livestock Sale.
 
@@ -586,11 +586,11 @@ CC 7 — Showmanship
 
 **CC 3.3.2 Weight and Sale Eligibility**
 
-The minimum and maximum weights for market swine are listed in Addendum §4.
+The minimum and maximum weights for market swine are listed in Addendum §5.
 
 A market swine under the minimum weight shall show in the lightest weight class. It shall not sell in the Market Livestock Sale.
 
-A market swine over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §4. The weight recorded at the fair weigh-in does not set its sale weight.
+A market swine over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §5. The weight recorded at the fair weigh-in does not set its sale weight.
 
 **CC 3.3.2a Identification**
 
@@ -658,11 +658,11 @@ The class offered in the market sheep division is Market Sheep. Breeding Sheep i
 
 **CC 3.4.8 Weight and Sale Eligibility**
 
-The minimum and maximum weights for market sheep are listed in Addendum §4.
+The minimum and maximum weights for market sheep are listed in Addendum §5.
 
 A market sheep under the minimum weight shall show in the lightweight class. It shall not sell in the Market Livestock Sale.
 
-A market sheep over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §4. The weight recorded at the fair weigh-in does not set its sale weight.
+A market sheep over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §5. The weight recorded at the fair weigh-in does not set its sale weight.
 
 **CC 3.4.8a Age**
 
@@ -700,11 +700,11 @@ Custer County acknowledges and adopts the CSF Market Goat competition requiremen
 
 **CC 3.5.3 Weight and Sale Eligibility**
 
-The minimum and maximum weights for market goats are listed in Addendum §4.
+The minimum and maximum weights for market goats are listed in Addendum §5.
 
 A market goat under the minimum weight shall show in the lightweight class. It shall not sell in the Market Livestock Sale.
 
-A market goat over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §4. The weight recorded at the fair weigh-in does not set its sale weight.
+A market goat over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §5. The weight recorded at the fair weigh-in does not set its sale weight.
 
 **CC 3.5.4 Scrapie Identification**
 
@@ -856,7 +856,7 @@ The class offered in the market rabbit division is Market Rabbit Meat Pen. Non-m
 
 **CC 3.7.6 Weight**
 
-The weight window for the market rabbit meat pen is listed in Addendum §4, stated to one tenth of a pound. Every rabbit in the pen shall fall within that window.
+The weight window for the market rabbit meat pen is listed in Addendum §5, stated to one tenth of a pound. Every rabbit in the pen shall fall within that window.
 
 **CC 3.7.7 Disqualification**
 
@@ -956,7 +956,7 @@ The sale order is determined by the sale committee.
 
 An exhibitor shall declare to the sale committee the animals that will sell, no later than one hour after the conclusion of the beef show. An animal declared under this section shall be eligible to sell under CC 4.1.5. An animal declared by that deadline is consigned to the Market Livestock Sale. The Grand Champion and the Reserve Grand Champion of every species are consigned in every case, under CC 4.2.2, whether or not declared.
 
-This deadline is repeated in Addendum §4.
+This deadline is repeated in Addendum §5.
 
 **CC 4.3.2 Declaration of Consignment**
 
@@ -1010,7 +1010,7 @@ Where an exhibitor reaches Tier 3 under the escalation at CC 2.7(a), or is barre
 
 **CC 4.6.1 Commission**
 
-A commission is withheld from the gross sale proceeds of every animal sold in the Market Livestock Sale. The commission rate is listed in Addendum §5.
+A commission is withheld from the gross sale proceeds of every animal sold in the Market Livestock Sale. The commission rate is listed in Addendum §6.
 
 **CC 4.6.2 Costs of Delivery**
 
@@ -1038,7 +1038,7 @@ Where a drug or chemical residue is found in the tissue of a carcass, the carcas
 
 **CC 4.7.5 Warranty Disclosure**
 
-Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §6. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
+Every exhibitor and a parent or guardian of the exhibitor shall sign the Wholesome Meat Act Disclosure before an animal is delivered for slaughter under this chapter. The disclosure is listed in Addendum §7.4. The signed disclosure shall be returned to the sale committee no later than one hour after the conclusion of the beef show.
 
 ---
 
@@ -1080,7 +1080,7 @@ Custer County provides that stallions are prohibited in all classes.
 
 **CC 5.7 Divisions**
 
-The horse show is divided into five divisions: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The classes offered in each division are listed in Addendum §2.
+The horse show is divided into five divisions: In-Hand, Western, English, Trotting Gymkhana, and Gymkhana. The classes offered in each division are those stated in the HSRB for that division, under CC 5.4.
 
 **CC 5.8 Mandatory Classes**
 
@@ -1294,7 +1294,7 @@ The CSF DTR is not printed in this book. A copy is available from CSU Extension.
 
 An exhibitor in this department must be enrolled in the 4-H dog project. The exhibitor must own the project dog individually or in partnership with a parent or guardian for the duration of the project.
 
-Every dog entered in this department must have been part of the exhibitor's project on or before the date listed in Addendum §3, and must be registered in the enrollment system designated by CSU Extension on or before that date. A complete vaccination record must accompany that registration.
+Every dog entered in this department must have been part of the exhibitor's project on or before the date listed in Addendum §4, and must be registered in the enrollment system designated by CSU Extension on or before that date. A complete vaccination record must accompany that registration.
 
 **CC 6.4.4 Vaccination**
 
@@ -1398,7 +1398,7 @@ The CSF Youth Llama and Alpaca (Camelids) competition requirements are not print
 
 **CC 6.6.3 Eligibility**
 
-An exhibitor in this department must be a Custer County 4-H member enrolled in the llama project on or before the date listed in Addendum §3.
+An exhibitor in this department must be a Custer County 4-H member enrolled in the llama project on or before the date listed in Addendum §4.
 
 **CC 6.6.4 Classes Offered**
 
@@ -1606,7 +1606,7 @@ Grand Champion and Reserve Grand Champion in Archery are determined by the highe
 
 **CC 8.8 Contest Schedule, Location, and Agent**
 
-The date, time, and location of each shooting sports contest are listed in Addendum §2. The current Custer County shooting sports agent for each discipline is listed in Addendum §1.
+The date, time, and location of each shooting sports contest are listed in Addendum §3. The current Custer County shooting sports agent for each discipline is listed in Addendum §2.
 
 ---
 
@@ -1692,7 +1692,7 @@ Every exhibit and record book in this chapter must carry the display card provid
 
 **CC 9.15 Premiums**
 
-Every project in this chapter is eligible for a premium. Premium amounts by placing are listed in Addendum §5.
+Every project in this chapter is eligible for a premium. Premium amounts by placing are listed in Addendum §6.
 
 ---
 
@@ -1750,7 +1750,7 @@ Custer County acknowledges and adopts the CSF GEFA, Disqualifications, under whi
 
 **CC 10.1.10 Exhibits Not Fitting a Listed Class**
 
-An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised with the superintendent by the deadline for miscellaneous exhibit requests listed in Addendum §3, which falls before check-in. A request raised at check-in is refused.
+An exhibit that does not fit any class offered under CC 10.2 through CC 10.13 may be accepted at the discretion of the Authority, with the superintendent of the division as lead. A request to accept such an exhibit must be raised with the superintendent by the deadline for miscellaneous exhibit requests listed in Addendum §4, which falls before check-in. A request raised at check-in is refused.
 
 **CC 10.1.11 Decency Standard**
 
@@ -1770,7 +1770,7 @@ Except where a division states its own packaging requirement, a baked or grown e
 
 **CC 10.1.14 Removal and Retention**
 
-Custer County acknowledges and adopts the CSF GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §2, and under which the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1 are not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
+Custer County acknowledges and adopts the CSF GEFA, Removal of Entries and Responsibility, under which an exhibit may not be removed from the fairgrounds once it is checked in, and shall not be removed before the release time stated in Addendum §3, and under which the Fair Board, Custer County, and each person acting as the Authority under CC 1.12.1 are not responsible for an exhibit remaining after the release time. An exhibit remaining on the fairgrounds after the release time is treated as abandoned property and may be disposed of.
 
 Custer County exempts a perishable exhibit, which may be disposed of before release under the standard stated for its division.
 
