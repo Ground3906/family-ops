@@ -31,6 +31,8 @@
 ### PTSD-related symptom log (self-reported, dated entries)
 - **2026-08-12:** Argument with Wyatt over phone use — Wyatt was using Duolingo (language-learning app). Matt questioned what he was doing; Wyatt said he'd already told Matt about the app before and said Matt "always forget[s] and don't listen." Logged as a dated data point on the same memory/sharpness pattern — not diagnosed, no action implied toward Wyatt.
 - **2026-08-22:** Oma+Papa's extended family (father-in-law's brother and family) in town, group fishing trip. Matt did not go despite normally loving fishing. No identifiable reason — "didn't feel right, didn't feel like going." Matt notes this is not normal for him. Logged as a dated data point, not diagnosed. Matt has an existing counselor (Mark, telehealth, recurring on calendar) — this file tracks pattern/timeline only, not treatment.
+- **2026-08-29:** Flight to Mesquite — needed a 03:30 alarm. Matt looked at the alarm but did not set it.
+- **2026-09-01:** Picked up the Tahoe from the airport after the trip, forgot to bring the keys. Kalea reminded him right before he left the house — otherwise a 1.5-hour drive to the airport for a car he had no key for. Required Kalea to take the other vehicle to Lo's appointment while a family member drove Matt to his dentist appointment.
 
 ### Plantar Fasciitis - Left Foot (resolved-adjacent, monitor)
 - **Onset:** February 2026
