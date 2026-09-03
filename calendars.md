@@ -754,7 +754,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
-[CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
+[CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
 [CAL] 2026-09-29 ALL-DAY [C][E] Picture day :: kids
