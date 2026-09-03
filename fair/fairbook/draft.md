@@ -12,7 +12,7 @@ The book is organized into chapters. Each chapter is numbered with the prefix CC
 
 The Addendum is a companion document published separately each year. It contains the fair schedule, roster, fees, weight windows, deadlines, and other information that may change annually. Where this book cites an Addendum section, that section of the current year's Addendum governs.
 
-This book follows the Colorado State Fair (CSF) General Competition Requirements (GCR) and the International Association of Fairs and Expositions (IAFE) National Code of Show Ring Ethics as its baseline. The GCR is the rulebook that governs competition at the CSF. The IAFE Code of Show Ring Ethics is the national standard for honest competition in livestock shows, written by the organization that represents fairs across the United States and Canada.
+This book follows the Colorado State Fair (CSF) General Competition Requirements (CSF GCR) and the International Association of Fairs and Expositions (IAFE) National Code of Show Ring Ethics as its baseline. The CSF GCR is the rulebook that governs competition at the CSF. The IAFE Code of Show Ring Ethics is the national standard for honest competition in livestock shows, written by the organization that represents fairs across the United States and Canada.
 
 Custer County follows these standards so that its exhibitors compete under the same rules they will meet at the state level. These standards exist to protect fair competition. They set out what honest showmanship looks like, how animals are cared for and presented, and what conduct is expected of exhibitors and the adults who support them.
 
@@ -88,7 +88,7 @@ Where a term is not defined in this chapter, it carries its common meaning.
 
 **CC 1.12 The Authority**
 
-Custer County acknowledges and adopts the GCR's use of "the Authority" as the body that administers the fair and enforces its rules. The CSF is a single statutory body. Custer County is not, so the term is defined here by role.
+Custer County acknowledges and adopts the CSF GCR's use of "the Authority" as the body that administers the fair and enforces its rules. The CSF is a single statutory body. Custer County is not, so the term is defined here by role.
 
 **CC 1.12.1** Each person or body listed below is the Authority when acting within their own role. No person acts as the Authority outside it.
 
@@ -194,17 +194,17 @@ If any exhibitor, in any way, whether in person or by agent or representative, i
 
 The following are examples of interference with other exhibitors. These examples illustrate the rule and do not limit it.
 
-(a) Coaching, cueing, or directing an exhibitor from outside the ring during a class.
+(a) Excessive coaching, cueing, or directing an exhibitor from outside the ring during a class.
 
 (b) Whistling, calling, shouting, or clapping to signal an exhibitor in the ring.
 
-(c) Gesturing, making faces, or signaling to an exhibitor or to an animal in the ring.
+(c) Excessive gesturing, making faces, or signaling to an exhibitor or to an animal in the ring.
 
 (d) Striking, pounding, or banging on rails, panels, or gates.
 
 (e) Any deliberate interference with an animal from outside the ring.
 
-A violation of this section proceeds under the escalation at CC 2.7(a). Violations are cumulative across all species and all years per CC 2.7(c). A violation that also constitutes a violation of the IAFE Code of Show Ring Ethics results in forfeiture of premiums, awards, and auction proceeds for all affected classes.
+A violation of this section proceeds under the escalation at CC 2.7(a). Violations are cumulative across all species and all years per CC 2.7(d). A violation that also constitutes a violation of the IAFE Code of Show Ring Ethics results in forfeiture of premiums, awards, and auction proceeds for all affected classes.
 
 **CC 2.7 Penalties**
 
@@ -220,15 +220,21 @@ Tier 2 — Forfeiture of Next Registered Event. A second violation results in au
 
 Tier 3 — Disqualification and Sale Bar. A third violation results in disqualification from all of the exhibitor's remaining registered events for the current fair. Every animal that exhibitor has entered is barred from the Market Livestock Sale under CC 4.5.2.
 
+At Tier 2 and at Tier 3, the Authority may additionally declare forfeit any premium earned by the exhibitor for the current fair.
+
 This escalation does not limit the Authority's power under this section to impose a greater penalty where the violation warrants it. The Fair Board may reduce the tier of any violation where circumstances warrant.
 
-(b) These rules bind every person acting on behalf of, assisting, or accompanying an exhibitor, whether or not related, including parents, guardians, siblings, other relatives, friends, leaders, volunteers, fitters, and trainers. A warning or penalty issued to any such person is recorded against that person and against the exhibitor on whose behalf they were acting.
+(b) Where a member of the Authority named in this section is unavailable, has a conflict of interest under CC 2.5b, or is unable to serve for any other reason the designating officer finds sufficient, that role may be filled by designation. The Fair Board President may designate the Vice President or another member of the Fair Board. The CSU Extension Director may designate another representative of CSU Extension. Where the department Superintendent is unable to serve, the Fair Board President designates another member of the Fair Board.
 
-(c) Every warning and every penalty is permanent. It is recorded and counts for as long as that person takes part in Custer County 4-H or FFA. No warning expires and no record is cleared.
+(c) These rules bind every person acting on behalf of, assisting, or accompanying an exhibitor, whether or not related, including parents, guardians, siblings, other relatives, friends, leaders, volunteers, fitters, and trainers. A warning or penalty issued to any such person is recorded against that person and against the exhibitor on whose behalf they were acting.
 
-(d) Warnings and penalties count across every project and every species.
+(d) Every warning and every penalty is permanent. It is recorded and counts for as long as that person takes part in Custer County 4-H or FFA. No warning expires and no record is cleared.
 
-(e) A prior record informs the Authority. It does not by itself determine the outcome of any new matter.
+(e) Warnings and penalties count across every project and every species.
+
+(f) A prior record informs the Authority. It does not by itself determine the outcome of any new matter.
+
+(g) Discipline documented before the adoption of this book carries forward. Adoption of this book does not clear any record. That prior discipline forms part of the record the Authority considers under paragraph (f), and does not by itself set a tier under paragraph (a).
 
 **CC 2.8 Grievance and Appeals**
 
@@ -242,7 +248,7 @@ A person against whom a sanction is imposed under CC 2.7 may appeal that sanctio
 
 An appeal must be submitted in writing on the appeal form available from the Fair office or Addendum §8.3, accompanied by the appeal fee listed in Addendum §6, in cash or certified check. The appeal must state the matter plainly and must be delivered to the Fair office within the deadline listed in Addendum §8.1. That deadline runs from the announcement of the grievance resolution where the appeal is brought by a grievant, and from the issuance of the sanction where the appeal is brought by the person sanctioned.
 
-A sanction under appeal is recorded under CC 2.7(c) when the appeal is decided, not when the sanction is issued. A sanction overturned on appeal is not recorded and does not count.
+A sanction under appeal is recorded under CC 2.7(d) when the appeal is decided, not when the sanction is issued. A sanction overturned on appeal is not recorded and does not count.
 
 The decision of the Fair Board is final. The fee is refunded only where the grievance or appeal is fully resolved in favor of the person bringing it; a reduced sanction does not refund the fee.
 
@@ -326,6 +332,10 @@ A steward is not the Authority under CC 1.12.1 and holds no power of decision. A
 
 The American System shall be used to present ribbons in every competitive class in this book, except where this book states that a different system governs a class. Under the American System, the exhibits in a class are placed against one another and ribbons are awarded according to that placing.
 
+**CC 2.21a Premiums**
+
+Every ribbon awarded at the Custer County Fair carries a premium. Premium amounts by placing are listed in Addendum §6. Premiums are paid at an awards night held after the Fair, at the time and place stated in Addendum §3.
+
 **CC 2.22 Show Dress**
 
 The following dress standard applies to any exhibitor while before a judge in a livestock or animal show. This standard is in addition to the grounds dress standard at CC 2.4. A department may carry its own ring dress deviation, and that deviation governs within that department.
@@ -408,6 +418,8 @@ Custer County reads this requirement as follows. A member shall complete the MQA
 
 MQA certification is verified by CSU Extension. No certificate is submitted at check-in.
 
+Every exhibitor entering a market project shall sign the IAFE Code of Show Ring Ethics and file the signed Code with the CSU Extension office in each fair year. The Code and its acknowledgment are at Addendum §1.
+
 **CC 3.1.4 Entry and Entry Limit**
 
 Custer County acknowledges and adopts CC 2.2, under which an exhibitor must complete the entry or registration process for a project before the applicable deadline. For market livestock, entry is completed by presenting the animal at the fair weigh-in. An animal weighed in at the fair weigh-in is registered for the current fair year.
@@ -482,7 +494,7 @@ Each exhibitor shall be assigned one pen, stall, or cage in each species in whic
 
 Where the number of entries in a species exceeds the space available for that species, the guarantee of space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the space assigned to each exhibitor as needed, with the superintendent of the department as lead.
 
-A pen, stall, or cage assigned to an exhibitor holds only that exhibitor's animals. This applies in every case, including where the Authority limits space under the preceding paragraph. The superintendent of the department may approve an arrangement under which exhibitors share assigned space.
+Exhibitors may combine their assigned pens, stalls, or cages by mutual agreement, and no approval is required to do so. Combining assigned space does not reduce the space assigned to any exhibitor under this section. Apart from an arrangement made under this paragraph, a pen, stall, or cage assigned to an exhibitor holds only that exhibitor's animals.
 
 Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
 
@@ -606,7 +618,7 @@ Classes in the market swine show are divided by weight under CC 3.1.7. No class 
 
 **CC 3.3.4 Classes Offered**
 
-The class offered in the market swine division is Market Swine. Breeding Swine is not a market class. See CC 6.
+The class offered in the market swine division is Market Swine. Breeding Swine is at CC 6.
 
 **CC 3.3.5 Pen Assignment**
 
@@ -772,13 +784,13 @@ CC 7 — Showmanship
 
 Every bird entered in a market poultry division is subject to inspection by the licensed veterinarian upon arrival at the fairgrounds, before unloading, under CC 2.14. A bird showing signs of illness shall be refused entry and shall not be unloaded. A bird that becomes ill while on the fairgrounds shall be isolated immediately, and the Authority shall report the illness to the Colorado State Veterinarian's Office.
 
-**CC 3.6.3 Terminal Show**
+**CC 3.6.3 Disposition After the Fair**
 
-The market poultry show is a terminal show. Every bird entered in a market poultry division goes to slaughter, whether or not the bird sells in the Livestock Sale. A bird entered in a market poultry division shall not return to a home flock. This requirement protects the flocks of Custer County from disease carried by birds that have been housed together at the fair.
+The Grand Champion and Reserve Grand Champion of every market poultry species are consigned to the Market Livestock Sale in every case, under CC 4.2.2.
 
-The Authority delivers every bird entered in a market poultry division to the truck of the processing facility designated under CC 4.4.4. The exhibitor is not part of the delivery. A bird shall not be released to the exhibitor, to the exhibitor's family, or to any other person, at any time after the close of the fair weigh-in, for any reason.
+A market poultry bird that is not declared to the sale committee under CC 4.3.1 is released to the exhibitor at the close of the Fair.
 
-A bird entered in a market poultry division that does not sell in the Market Livestock Sale is purchased by the floor buyer designated for market poultry at the floor market price. The exhibitor is credited at that price. Floor buyers are listed in Addendum §2.
+Custer County acknowledges and adopts the advisory form the Colorado State Fair uses in its Livestock Health Requirements for animals presenting a known risk. Birds housed at the Custer County Fair have been in close contact with birds from other flocks. Exhibitors are strongly advised to keep every bird returning from the Fair separated from the home flock.
 
 **CC 3.6.4 Weigh-In Unit and Official Weight**
 
@@ -814,8 +826,6 @@ The exhibitor shall carry the exhibitor's own birds to the judging table and sha
 
 Where the exhibitor has more than one entry in the same class, another Custer County 4-H or FFA member in good standing who is also exhibiting may assist the exhibitor under CC 2.16. The exhibitor shall report that member's name to the Authority before the class, with the superintendent of the department as lead.
 
-After a bird has been cooped, it shall not be removed from its assigned cage except to be shown. A bird may be touched, handled, and managed inside the cage only by its exhibitor or by the Authority.
-
 **CC 3.6.12 Entry Limit**
 
 The maximum number of entries an exhibitor may enter in a market poultry species is stated at CC 3.1.4. Market chicken and market turkey are separate species and the maximum applies to each of them separately, counted in the entry units stated at CC 3.6.4. Pen and cage space is assigned under CC 3.1.15.
@@ -838,13 +848,13 @@ CC 4 — The Livestock Sale
 
 CC 7 — Showmanship
 
-**CC 3.7.2 Terminal Status**
+**CC 3.7.2 Disposition After the Fair**
 
-Custer County acknowledges and adopts the CSF Market Rabbits competition requirement that only the Grand Champion and Reserve Grand Champion Market Rabbit Meat Pens qualify for the Livestock Sale, and that the sale is terminal only for the pens that qualify.
+The Grand Champion and Reserve Grand Champion Market Rabbit Meat Pen are consigned to the Market Livestock Sale in every case, under CC 4.2.2. The number of pens an exhibitor may sell is stated at CC 4.2.1.
 
-Custer County does not adopt the CSF limit restricting sale qualification to the Grand Champion and Reserve Grand Champion pens. That limit exists because the Colorado State Fair draws market rabbit entries from every county in the state. The Custer County Fair does not, and the number of pens an exhibitor may sell is stated at CC 4.2.1.
+Custer County does not adopt the Colorado State Fair limit restricting sale qualification to the Grand Champion and Reserve Grand Champion pens. That limit exists because the Colorado State Fair draws market rabbit entries from every county in the state. The Custer County Fair does not.
 
-Custer County reads this requirement as follows. A market rabbit pen is not terminal by virtue of entry in this department, unlike Market Poultry at CC 3.6.3. A market rabbit pen is terminal only where it sells in the Livestock Sale. A pen that does not sell is released to the exhibitor. The Livestock Sale is at CC 4.
+A market rabbit meat pen that is not declared to the sale committee under CC 4.3.1 is released to the exhibitor at the close of the Fair.
 
 **CC 3.7.3 Weigh-In Unit and Official Weight**
 
@@ -894,6 +904,10 @@ The purchase of a sale animal conveys the right to the processed product of that
 
 The sale is conducted by open competitive bidding. Each animal is sold to the highest bidder. Once an animal is sold in the sale ring, the sale of that animal is final.
 
+**CC 4.1.1a Exhibition Does Not Require Sale**
+
+Exhibiting a market animal at the Custer County Fair does not obligate an exhibitor to sell that animal. An animal enters the Market Livestock Sale only where it is declared under CC 4.3.1, or where it is consigned in every case under CC 4.2.2.
+
 **CC 4.1.2 Eligibility to Sell**
 
 Only a bona fide member of Custer County 4-H or Custer County FFA may sell in the Market Livestock Sale. An associate member may not sell.
@@ -936,13 +950,15 @@ CC 3.7.2 — Market rabbit terminal status and sale
 
 An exhibitor may sell no more than two market animals in the Market Livestock Sale. That maximum is listed in Addendum §5.
 
-Those two animals shall be of different species, except that where both of them are market small animals as defined at CC 1.10a, they need not be of different species.
+Those two animals shall be of different species. An exhibitor selling two market small animals is not held to that requirement, and may sell two of the same market small animal species. Market small animal is defined at CC 1.10a. An exhibitor may therefore sell two turkeys, two chicken pens, or two rabbit pens.
 
 A market chicken pen counts as one market animal, and a market rabbit meat pen counts as one market animal. Market chicken, market turkey, and market rabbit are each a species distinct from the others for the purpose of this section.
 
 **CC 4.2.1a Poultry Promotion Bonus Slot**
 
-To promote the poultry project, an exhibitor who has filled both sale slots under CC 4.2.1, neither of them with a market chicken pen or a market turkey, may sell one additional animal. That additional animal shall be a market chicken pen or a market turkey.
+To promote the poultry project, an exhibitor who has filled both sale slots under CC 4.2.1, neither of them with an additional poultry project, may sell one additional poultry project. An additional poultry project is defined as a market meat chicken pen or a market turkey.
+
+An exhibitor whose two sale slots are both consumed by market poultry animals consigned under CC 4.2.2 may sell one additional animal of any market species.
 
 This section is in effect only for a fair year listed in Addendum §5. Where no fair year is listed there, this section does not apply and CC 4.2.1 governs without it.
 
@@ -958,7 +974,7 @@ The sale order is determined by the sale committee.
 
 **CC 4.3.1 Sale Declaration**
 
-An exhibitor shall declare to the sale committee the animals that will sell, no later than one hour after the conclusion of the beef show. An animal declared under this section shall be eligible to sell under CC 4.1.5. An animal declared by that deadline is consigned to the Market Livestock Sale. The Grand Champion and the Reserve Grand Champion of every species are consigned in every case, under CC 4.2.2, whether or not declared.
+An exhibitor shall declare to the sale committee the animals that will sell, no later than one hour after the conclusion of the beef show. The declaration is filed on the form at Addendum §7.7. An animal declared under this section shall be eligible to sell under CC 4.1.5. An animal declared by that deadline is consigned to the Market Livestock Sale. The Grand Champion and the Reserve Grand Champion of every species are consigned in every case, under CC 4.2.2, whether or not declared.
 
 This deadline is repeated in Addendum §5.
 
@@ -966,11 +982,13 @@ This deadline is repeated in Addendum §5.
 
 An animal declared under CC 4.3.1 is consigned to the Market Livestock Sale, and consignment is terminal. Ownership of a consigned animal transfers at the close of bidding for that animal and does not reverse for any reason. A consigned animal may not be withdrawn from the sale after it has entered the sale ring.
 
-**CC 4.3.3 Failure to Declare**
+**CC 4.3.3 Late Declaration**
 
-An exhibitor who fails to declare an animal to the sale committee by the deadline at CC 4.3.1 may have that animal consigned to the sale at the floor market price rather than through the sale ring. The Fair Board may reduce this consequence where circumstances warrant.
+The declaration deadline at CC 4.3.1 is the instrument by which the sale committee builds the sale lot list. Every exhibitor who intends to sell declares by that deadline.
 
-### CC 4.4 — Terminal Delivery and Custody
+An exhibitor who wishes to declare an animal after that deadline may seek the approval of the sale committee. The sale committee may approve a late declaration, and an animal so approved is consigned at the floor market price rather than through the sale ring. The Fair Board may reduce this consequence where circumstances warrant.
+
+---
 
 **CC 4.4.1 Custody and Care**
 
@@ -992,9 +1010,11 @@ The Authority designates the slaughter and processing facilities for the Market 
 
 A floor buyer is a buyer under this chapter. An animal purchased by a floor buyer at the floor market price is a sale animal, and the requirements of CC 4.1.1, CC 4.4.1, CC 4.4.2, CC 4.4.3, and CC 4.7 apply to it in full. A floor buyer takes the processed product of that animal only, and never possession of a live animal.
 
+A floor buyer approved by the Fair Board may take live delivery of a floored animal that has not reached market finish. That buyer shall furnish to the Authority, within three months of the date of the sale, a certified receipt from a licensed livestock auction or a slaughter facility for each animal taken, identifying each animal by the identification it carried at the fair weigh-in. Where a floor buyer fails to furnish that proof, the Fair Board may bar that buyer from participating in the Fair in any capacity.
+
 **CC 4.4.5 Post-Sale Rest Period**
 
-Where a purchaser requests that a sale animal be rested before slaughter, the Authority may arrange the rest period within the designated facility chain. The cost of the rest period is withheld from the proceeds of the animal in the same manner as any other cost of delivery.
+Where a purchaser requests that a sale animal be rested before slaughter, the Authority may arrange the rest period within the designated facility chain. The cost of the rest period is borne by the purchaser under CC 4.6.2.
 
 **CC 4.4.6 Illness, Injury, or Death**
 
@@ -1018,7 +1038,7 @@ A commission is withheld from the gross sale proceeds of every animal sold in th
 
 **CC 4.6.2 Costs of Delivery**
 
-The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.5, are withheld from the proceeds of that animal.
+The costs of delivery of a sale animal, including trucking, handling, and any post-sale rest period arranged under CC 4.4.5, are borne by the purchaser and are not withheld from the proceeds of that animal.
 
 **CC 4.6.3 Payment Hold**
 
@@ -1030,7 +1050,7 @@ Payment of sale proceeds to an exhibitor is held where a matter affecting that e
 
 Every exhibitor whose animal is delivered for slaughter under this chapter warrants, whether or not the animal was sold in the Market Livestock Sale, that the carcass of the animal complies with the food-safety laws named in CC 4.7.2, is fit for human consumption, contains no trace or residue of any illegal drug or of any substance not approved for administration to the animal under applicable law or the requirements of this book, reveals no evidence of any unethical fitting practice as defined at CC 3.1.17, and presents no unusual condition that would materially diminish the value of the carcass.
 
-The warranty in this section attaches to the delivery of an animal for slaughter, and not to participation in the sale. A market poultry bird that is terminal under CC 3.6.3 and does not sell is delivered for slaughter and carries this warranty.
+The warranty in this section attaches to the delivery of an animal for slaughter, and not to participation in the sale.
 
 **CC 4.7.2 Named Food-Safety Laws**
 
@@ -1194,7 +1214,7 @@ Each exhibitor shall be assigned one pen, stall, or cage in each species in whic
 
 Where the number of entries in a species exceeds the space available for that species, the guarantee of space in this section yields to the extent necessary to accommodate all entries. The Authority may impose limits on the space assigned to each exhibitor as needed, with the superintendent of the department as lead.
 
-A pen, stall, or cage assigned to an exhibitor holds only that exhibitor's animals. This applies in every case, including where the Authority limits space under the preceding paragraph. The superintendent of the department may approve an arrangement under which exhibitors share assigned space.
+Exhibitors may combine their assigned pens, stalls, or cages by mutual agreement, and no approval is required to do so. Combining assigned space does not reduce the space assigned to any exhibitor under this section. Apart from an arrangement made under this paragraph, a pen, stall, or cage assigned to an exhibitor holds only that exhibitor's animals.
 
 Custer County acknowledges and adopts the CSF requirement that tampering with another exhibitor's stall, pen, or tie-out assignment subjects the exhibitor to discipline, which at the Custer County Fair proceeds under CC 2.7.
 

@@ -389,7 +389,7 @@ This section lists everything you must turn in, and everywhere you must be, grou
 
 ## §5 — Weight Windows and Market Deadlines
 
-This section lists the weights, ages, entry limits, sale limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it. Where a minimum weight is lower than the Colorado State Fair figure, that reflects the Custer County Fair being held earlier in the year.
+This section lists the weights, ages, entry limits, sale limits, and market deadlines for each species. Every other requirement an animal must meet is stated in the rule cited beside it.
 
 **Entry limit, all species**
 
@@ -404,25 +404,23 @@ This limit is the same for every species and is stated here once.
 
 | | |
 |---|---|
-| CSF minimum weight | 1,050 lbs |
-| Custer minimum weight | 1,000 lbs |
+| Minimum weight | 1,000 lbs |
 | Maximum weight | None |
 | Governing rule | CC 3.2.2a |
 | Other requirements | CC 3.2.2 age, CC 3.2.3 heifer pregnancy certification |
 
 **Market Swine**
 
-Custer County's minimum and maximum both differ from the Colorado State Fair figures. This is a stated exception to the pattern followed by the other three species.
-
 | Weight | Shows | Sells |
 |---|---|---|
-| 219 lbs and under | Yes, lightest weight class | No |
-| 220 to 290 lbs | Yes | Yes, at actual weight |
-| 291 lbs and over | Yes, heaviest weight class | Yes, at 290 lbs |
+| 219.9 lbs and under | Yes, lightest weight class | No |
+| 220 to 290.9 lbs | Yes | Yes, at actual weight |
+| 291 lbs and over | Yes, heaviest weight class | Yes, at 290.9 lbs |
 
 | | |
 |---|---|
-| CSF weight window | 235 to 300 lbs |
+| Minimum weight | 220 lbs |
+| Maximum weight | 290.9 lbs |
 | Governing rule | CC 3.3.2 |
 | Other requirements | CC 3.3.2a identification, CC 3.3.5 pen assignment |
 
@@ -430,8 +428,7 @@ Custer County's minimum and maximum both differ from the Colorado State Fair fig
 
 | | |
 |---|---|
-| CSF minimum weight | 110 lbs |
-| Custer minimum weight | 105 lbs |
+| Minimum weight | 105 lbs |
 | Maximum weight | 165 lbs |
 | Rough shearing deadline | Before the fair weigh-in |
 | Governing rule | CC 3.4.8 |
@@ -441,8 +438,7 @@ Custer County's minimum and maximum both differ from the Colorado State Fair fig
 
 | | |
 |---|---|
-| CSF minimum weight | 55 lbs |
-| Custer minimum weight | 55 lbs |
+| Minimum weight | 55 lbs |
 | Maximum weight | 115 lbs |
 | Governing rule | CC 3.5.3 |
 | Other requirements | CC 3.5.2 eligible animals, CC 3.5.4 scrapie identification, CC 3.5.5 castration, CC 3.5.6 horns, CC 3.5.7 shearing, CC 3.5.8 age |
