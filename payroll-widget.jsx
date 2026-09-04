@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import {
   Home, Sprout, Trash2, Snowflake, Clock, Car, Sparkles,
   UtensilsCrossed, BookOpen, Boxes, Armchair, DoorOpen, X, Stamp,
-  Gift, PiggyBank, Wallet, MinusCircle, Baby, CalendarPlus
+  Gift, PiggyBank, Wallet, MinusCircle, Baby, CalendarPlus, RefreshCw
 } from "lucide-react";
 
 const C = {
@@ -282,6 +282,17 @@ export default function Payroll() {
     await persistCategories({ ...categories, totals: nextTotals, log: [...adds, ...categories.log], lastAccrualMonth: currentMonth });
   };
 
+  const [syncing, setSyncing] = useState(false);
+  const syncFromLedger = async () => {
+    setSyncing(true);
+    try {
+      await persistEntries([]);
+      await persistCategories(SEED_CATEGORIES);
+    } finally {
+      setSyncing(false);
+    }
+  };
+
   return (
     <div style={{ backgroundColor: C.pine, minHeight: "100vh", fontFamily: "system-ui, -apple-system, sans-serif" }} className="p-4 sm:p-8">
       <style>{`
@@ -299,11 +310,19 @@ export default function Payroll() {
       `}</style>
 
       <div className="max-w-2xl mx-auto">
-        <div className="mb-6">
-          <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: C.brass, letterSpacing: "0.18em" }}>Punch List · Payroll</div>
-          <h1 className="text-3xl sm:text-4xl font-black uppercase leading-none mb-2" style={{ color: C.chalk, letterSpacing: "-0.01em" }}>Payroll</h1>
-          <p className="text-sm" style={{ color: C.chalkDim }}>Fixed allowance every month. Commission's extra, on top.</p>
-          <p className="text-xs mt-0.5" style={{ color: C.chalkDim, opacity: 0.75 }}>Commission work is optional. A job worth doing is worth doing right.</p>
+        <div className="mb-6 flex items-start justify-between gap-3 flex-wrap">
+          <div>
+            <div className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: C.brass, letterSpacing: "0.18em" }}>Punch List · Payroll</div>
+            <h1 className="text-3xl sm:text-4xl font-black uppercase leading-none mb-2" style={{ color: C.chalk, letterSpacing: "-0.01em" }}>Payroll</h1>
+            <p className="text-sm" style={{ color: C.chalkDim }}>Fixed allowance every month. Commission's extra, on top.</p>
+            <p className="text-xs mt-0.5" style={{ color: C.chalkDim, opacity: 0.75 }}>Commission work is optional. A job worth doing is worth doing right.</p>
+          </div>
+          <button onClick={syncFromLedger} disabled={syncing}
+            className="ticket-focus flex items-center gap-1.5 py-2 px-3 rounded-md text-xs font-bold uppercase tracking-wide"
+            style={{ backgroundColor: "transparent", color: C.brass, border: `1px solid ${C.brass}`, opacity: syncing ? 0.5 : 1 }}
+            title="Overwrites this screen's saved numbers with the current ledger">
+            <RefreshCw size={13} className={syncing ? "animate-spin" : ""} /> {syncing ? "Syncing…" : "Sync from Ledger"}
+          </button>
         </div>
 
         {/* Always-visible rate board — every kid can see what's on offer without picking a name first */}
@@ -356,25 +375,25 @@ function TicketCard({ children, style }) {
 function RateBoard() {
   return (
     <TicketCard>
-      <div className="text-sm font-black uppercase tracking-wider mb-1" style={{ color: C.ink }}>What You Can Earn</div>
-      <div className="text-xs mb-4 opacity-70" style={{ color: C.inkSoft }}>Pick a job, do it right, get stamped.</div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div className="text-lg font-black uppercase tracking-wider mb-1" style={{ color: C.ink }}>What You Can Earn</div>
+      <div className="text-sm mb-5 opacity-70" style={{ color: C.inkSoft }}>Pick a job, do it right, get stamped.</div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {JOBS.map((j) => {
           const Icon = j.icon;
           return (
-            <div key={j.id} className="rounded-lg p-3 flex flex-col items-center text-center gap-1.5"
-              style={{ backgroundColor: "rgba(43,38,32,0.06)", border: `1px solid ${C.kraftDark}` }}>
-              <Icon size={30} color={C.barn} strokeWidth={2} />
-              <div className="text-xs font-bold leading-tight" style={{ color: C.ink }}>{j.label}</div>
-              <div className="text-xl font-black" style={{ color: C.barn, fontFamily: "ui-monospace, Consolas, monospace" }}>
-                ${j.rate}{j.unit === "hour" ? <span className="text-xs">/hr</span> : ""}
+            <div key={j.id} className="rounded-xl p-4 flex flex-col items-center text-center gap-2"
+              style={{ backgroundColor: "rgba(43,38,32,0.06)", border: `2px solid ${C.kraftDark}` }}>
+              <Icon size={44} color={C.barn} strokeWidth={2} />
+              <div className="text-sm font-bold leading-tight" style={{ color: C.ink }}>{j.label}</div>
+              <div className="text-3xl font-black" style={{ color: C.barn, fontFamily: "ui-monospace, Consolas, monospace" }}>
+                ${j.rate}{j.unit === "hour" ? <span className="text-base">/hr</span> : ""}
               </div>
-              {j.restrictedTo && <div className="text-[10px] uppercase font-bold opacity-60" style={{ color: C.inkSoft }}>Wyatt only</div>}
+              {j.restrictedTo && <div className="text-xs uppercase font-bold opacity-60" style={{ color: C.inkSoft }}>Wyatt only</div>}
             </div>
           );
         })}
       </div>
-      <div className="text-xs mt-4 pt-3 opacity-80 text-center" style={{ color: C.inkSoft, borderTop: `1px dashed ${C.kraftDark}` }}>
+      <div className="text-sm mt-5 pt-3 opacity-80 text-center" style={{ color: C.inkSoft, borderTop: `1px dashed ${C.kraftDark}` }}>
         "Not up to Al's standards? I don't think so, Tim." — No stamp, no pay.
       </div>
     </TicketCard>
