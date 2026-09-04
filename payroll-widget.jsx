@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import {
   Home, Sprout, Trash2, Snowflake, Clock, Car, Sparkles,
   UtensilsCrossed, BookOpen, Boxes, Armchair, DoorOpen, X, Stamp,
-  Gift, PiggyBank, Wallet, MinusCircle, CheckCircle2, CalendarPlus, Edit3, Baby
+  Gift, PiggyBank, Wallet, MinusCircle, Baby, CalendarPlus
 } from "lucide-react";
 
 const C = {
@@ -23,7 +23,7 @@ const C = {
 const KIDS = [
   { id: "wyatt", name: "Wyatt", age: 14 },
   { id: "molly", name: "Molly", age: 10 },
-  { id: "rileigh", name: "Rileigh", age: 7 },
+  { id: "rileigh", name: "Rileigh", age: 8 },
   { id: "cullen", name: "Cullen", age: 6 },
   { id: "emmitt", name: "Emmitt", age: 6 },
 ];
@@ -44,7 +44,7 @@ const JOBS = [
   { id: "mudroom", label: "Mud room reset", rate: 2, unit: "flat", icon: DoorOpen },
 ];
 
-const CUSTOM_JOB = { id: "custom", label: "Something else", rate: null, unit: "custom", icon: Edit3 };
+const CUSTOM_JOB = { id: "custom", label: "Something else", rate: null, unit: "custom", icon: Stamp };
 
 const JAR_META = [
   { key: "give", label: "Give", icon: Gift },
@@ -58,7 +58,7 @@ const JAR_META = [
 const ALLOWANCE_RATES = {
   wyatt: { give: 1, save: 3, spend: 10, trackedJars: ["give", "save", "spend"], bankPaid: ["save", "spend"] },
   molly: { give: 1, save: 2, spend: 7, trackedJars: ["give", "save", "spend"], bankPaid: ["save", "spend"] },
-  rileigh: { give: 1, save: 1, spend: 5, trackedJars: ["give", "save", "spend"], bankPaid: [] },
+  rileigh: { give: 1, save: 1, spend: 6, trackedJars: ["give", "save", "spend"], bankPaid: [] },
   cullen: { give: 1, save: 1, spend: 4, trackedJars: ["give", "save", "spend"], bankPaid: [] },
   emmitt: { give: 1, save: 1, spend: 4, trackedJars: ["give", "save", "spend"], bankPaid: [] },
 };
@@ -66,6 +66,18 @@ const ratioFor = (kidId) => {
   const r = ALLOWANCE_RATES[kidId];
   const total = r.give + r.save + r.spend;
   return { give: r.give / total, save: r.save / total, spend: r.spend / total };
+};
+
+// Splits any dollar amount (positive or negative) into Give/Save/Spend using
+// the kid's own ratio. Give and Save round to the cent; Spend takes whatever
+// is left over, so the three always add back up to the original amount
+// exactly — no rounding drift, no phantom pennies.
+const splitAmount = (kidId, amount) => {
+  const ratio = ratioFor(kidId);
+  const give = +(amount * ratio.give).toFixed(2);
+  const save = +(amount * ratio.save).toFixed(2);
+  const spend = +(amount - give - save).toFixed(2);
+  return { give, save, spend };
 };
 
 const ENTRIES_KEY = "commission_entries_v1";
@@ -77,18 +89,18 @@ const monthLabel = (mk) => {
   return new Date(y, m - 1, 1).toLocaleString("default", { month: "long", year: "numeric" });
 };
 
-// Seed reflects the real May+June backlog as of 2026-07-04.
+// Seed reflects the live allowance-ledger.xlsx as of 2026-08-29 (August
+// allowance posted, Rileigh's birthday rate applied).
 const SEED_CATEGORIES = {
   totals: {
-    wyatt: { give: 2, save: 0, spend: 0 },
-    molly: { give: 2, save: 0, spend: 0 },
-    rileigh: { give: 2, save: 2, spend: 10 },
-    cullen: { give: 2, save: 2, spend: 8 },
-    emmitt: { give: 2, save: 2, spend: 8 },
+    wyatt: { give: 9, save: 26, spend: -8 },
+    molly: { give: 10, save: 19, spend: 34 },
+    rileigh: { give: 6, save: 6, spend: 6 },
+    cullen: { give: 4, save: 4, spend: 11 },
+    emmitt: { give: 5, save: 5, spend: 17 },
   },
   log: [],
-  lastAccrualMonth: "2026-06",
-  lastPayoutMonth: {},
+  lastAccrualMonth: "2026-08",
 };
 
 export default function Payroll() {
@@ -166,16 +178,35 @@ export default function Payroll() {
   );
   const canSubmitDeduct = selectedKid && parseFloat(deductAmount) > 0;
 
+  // Adds a split (give/save/spend, any sign) straight into a kid's running totals.
+  const applySplitToTotals = async (kidId, amount) => {
+    if (!categories) return;
+    const { give, save, spend } = splitAmount(kidId, amount);
+    const prev = categories.totals[kidId];
+    const nextTotals = {
+      ...categories.totals,
+      [kidId]: {
+        give: +(prev.give + give).toFixed(2),
+        save: +(prev.save + save).toFixed(2),
+        spend: +(prev.spend + spend).toFixed(2),
+      },
+    };
+    await persistCategories({ ...categories, totals: nextTotals });
+    return { give, save, spend };
+  };
+
   const logTicket = async () => {
-    if (!canSubmitJob || !entries) return;
+    if (!canSubmitJob || !entries || !categories) return;
     const isCustom = selectedJob.id === "custom";
+    const amount = computedAmount;
+    const split = await applySplitToTotals(selectedKid, amount);
     const entry = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
       kidId: selectedKid, type: "job", jobId: selectedJob.id,
       label: isCustom ? customLabel.trim() : selectedJob.label,
       rate: isCustom ? null : selectedJob.rate, unit: isCustom ? "custom" : selectedJob.unit,
       hours: (!isCustom && selectedJob.unit === "hour") ? parseFloat(hours) : null,
-      amount: computedAmount, date,
+      amount, split, date,
     };
     await persistEntries([entry, ...entries]);
     setStampFlash(true);
@@ -188,11 +219,13 @@ export default function Payroll() {
   };
 
   const logDeduction = async () => {
-    if (!canSubmitDeduct || !entries) return;
+    if (!canSubmitDeduct || !entries || !categories) return;
+    const amount = +parseFloat(deductAmount).toFixed(2);
+    const split = await applySplitToTotals(selectedKid, -amount);
     const entry = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
       kidId: selectedKid, type: "deduct", label: deductNote.trim() || "Attitude deduction",
-      amount: +parseFloat(deductAmount).toFixed(2), date,
+      amount, split, date,
     };
     await persistEntries([entry, ...entries]);
     setStampFlash(true);
@@ -203,7 +236,21 @@ export default function Payroll() {
   };
 
   const deleteEntry = async (id) => {
-    if (!entries) return;
+    if (!entries || !categories) return;
+    const target = entries.find((e) => e.id === id);
+    if (target && target.split) {
+      // Undo its split from totals before removing it
+      const prev = categories.totals[target.kidId];
+      const nextTotals = {
+        ...categories.totals,
+        [target.kidId]: {
+          give: +(prev.give - target.split.give).toFixed(2),
+          save: +(prev.save - target.split.save).toFixed(2),
+          spend: +(prev.spend - target.split.spend).toFixed(2),
+        },
+      };
+      await persistCategories({ ...categories, totals: nextTotals });
+    }
     await persistEntries(entries.filter((e) => e.id !== id));
   };
 
@@ -235,34 +282,6 @@ export default function Payroll() {
     await persistCategories({ ...categories, totals: nextTotals, log: [...adds, ...categories.log], lastAccrualMonth: currentMonth });
   };
 
-  const runPayout = async (kidId) => {
-    if (!categories) return;
-    const net = Math.max(0, netForMonth(kidId, currentMonth));
-    if (net <= 0 || categories.lastPayoutMonth[kidId] === currentMonth) return;
-    const ratio = ratioFor(kidId);
-    const give = +(net * ratio.give).toFixed(2);
-    const save = +(net * ratio.save).toFixed(2);
-    const spend = +(net - give - save).toFixed(2);
-    const prev = categories.totals[kidId];
-    const nextTotals = {
-      ...categories.totals,
-      [kidId]: { give: +(prev.give + give).toFixed(2), save: +(prev.save + save).toFixed(2), spend: +(prev.spend + spend).toFixed(2) },
-    };
-    const entry = {
-      id: `${Date.now()}-${kidId}-payout`, kidId, type: "payout",
-      note: `${monthLabel(currentMonth)} commission — Give $${give.toFixed(2)}, Save $${save.toFixed(2)}, Spend $${spend.toFixed(2)}`,
-      date: todayStr(),
-    };
-    await persistCategories({ ...categories, totals: nextTotals, log: [entry, ...categories.log], lastPayoutMonth: { ...categories.lastPayoutMonth, [kidId]: currentMonth } });
-  };
-
-  const runPayoutAll = async () => {
-    for (const k of KIDS) {
-      const net = Math.max(0, netForMonth(k.id, currentMonth));
-      if (net > 0 && categories.lastPayoutMonth[k.id] !== currentMonth) await runPayout(k.id);
-    }
-  };
-
   return (
     <div style={{ backgroundColor: C.pine, minHeight: "100vh", fontFamily: "system-ui, -apple-system, sans-serif" }} className="p-4 sm:p-8">
       <style>{`
@@ -287,8 +306,11 @@ export default function Payroll() {
           <p className="text-xs mt-0.5" style={{ color: C.chalkDim, opacity: 0.75 }}>Commission work is optional. A job worth doing is worth doing right.</p>
         </div>
 
-        <div className="flex gap-2 mb-6">
-          {[{ id: "log", label: "Log a Job" }, { id: "board", label: "Earnings Board" }, { id: "payout", label: "Payout" }].map((t) => (
+        {/* Always-visible rate board — every kid can see what's on offer without picking a name first */}
+        <RateBoard />
+
+        <div className="flex gap-2 mb-6 mt-6">
+          {[{ id: "log", label: "Log a Job" }, { id: "board", label: "Earnings Board" }, { id: "allowance", label: "Monthly Allowance" }].map((t) => (
             <button key={t.id} onClick={() => setTab(t.id)}
               className="ticket-focus flex-1 py-2.5 px-2 rounded-md text-xs sm:text-sm font-bold uppercase tracking-wide transition-colors"
               style={{ backgroundColor: tab === t.id ? C.brass : "transparent", color: tab === t.id ? C.pineDeep : C.chalkDim, border: `1px solid ${tab === t.id ? C.brass : C.line}` }}>
@@ -312,7 +334,7 @@ export default function Payroll() {
         ) : tab === "board" ? (
           <EarningsBoard {...{ categories, netForMonth, currentMonth }} />
         ) : (
-          <PayoutTab {...{ categories, netForMonth, currentMonth, runPayout, runPayoutAll, addThisMonth, alreadyAccrued }} />
+          <AllowanceTab {...{ currentMonth, addThisMonth, alreadyAccrued }} />
         )}
 
         {error && <div className="mt-4 text-sm text-center py-2 rounded-md" style={{ backgroundColor: C.barnDark, color: C.chalk }}>{error}</div>}
@@ -326,6 +348,36 @@ function TicketCard({ children, style }) {
     <div className="rounded-lg p-5" style={{ backgroundColor: C.kraft, boxShadow: "0 4px 14px rgba(0,0,0,0.35)", border: `1px solid ${C.kraftDark}`, ...style }}>
       {children}
     </div>
+  );
+}
+
+// Big, always-on board of what's available to earn — this is the thing kids
+// should be able to glance at without navigating anywhere or picking a name.
+function RateBoard() {
+  return (
+    <TicketCard>
+      <div className="text-sm font-black uppercase tracking-wider mb-1" style={{ color: C.ink }}>What You Can Earn</div>
+      <div className="text-xs mb-4 opacity-70" style={{ color: C.inkSoft }}>Pick a job, do it right, get stamped.</div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        {JOBS.map((j) => {
+          const Icon = j.icon;
+          return (
+            <div key={j.id} className="rounded-lg p-3 flex flex-col items-center text-center gap-1.5"
+              style={{ backgroundColor: "rgba(43,38,32,0.06)", border: `1px solid ${C.kraftDark}` }}>
+              <Icon size={30} color={C.barn} strokeWidth={2} />
+              <div className="text-xs font-bold leading-tight" style={{ color: C.ink }}>{j.label}</div>
+              <div className="text-xl font-black" style={{ color: C.barn, fontFamily: "ui-monospace, Consolas, monospace" }}>
+                ${j.rate}{j.unit === "hour" ? <span className="text-xs">/hr</span> : ""}
+              </div>
+              {j.restrictedTo && <div className="text-[10px] uppercase font-bold opacity-60" style={{ color: C.inkSoft }}>Wyatt only</div>}
+            </div>
+          );
+        })}
+      </div>
+      <div className="text-xs mt-4 pt-3 opacity-80 text-center" style={{ color: C.inkSoft, borderTop: `1px dashed ${C.kraftDark}` }}>
+        "Not up to Al's standards? I don't think so, Tim." — No stamp, no pay.
+      </div>
+    </TicketCard>
   );
 }
 
@@ -426,6 +478,9 @@ function LogTab({ mode, setMode, selectedKid, setSelectedKid, selectedJob, setSe
             <div className="text-2xl font-black" style={{ color: mode === "deduct" ? C.barn : C.ink, fontFamily: "ui-monospace, Consolas, monospace" }}>
               {mode === "deduct" ? "−" : ""}${(mode === "deduct" ? (parseFloat(deductAmount) || 0) : computedAmount).toFixed(2)}
             </div>
+            {selectedKid && (mode === "job" ? computedAmount > 0 : parseFloat(deductAmount) > 0) && (
+              <SplitPreview kidId={selectedKid} amount={mode === "deduct" ? -(parseFloat(deductAmount) || 0) : computedAmount} />
+            )}
           </div>
           {mode === "job" ? (
             <button onClick={logTicket} disabled={!canSubmitJob}
@@ -459,7 +514,10 @@ function LogTab({ mode, setMode, selectedKid, setSelectedKid, selectedJob, setSe
                     <span className="text-sm font-bold" style={{ color: C.chalk }}>{kid?.name}</span>
                     <span className="text-sm mx-1.5" style={{ color: C.chalkDim }}>·</span>
                     <span className="text-sm" style={{ color: C.chalkDim }}>{e.label}</span>
-                    <div className="text-xs mt-0.5" style={{ color: C.chalkDim, opacity: 0.7 }}>{e.date}{e.hours ? ` · ${e.hours}hr` : ""}</div>
+                    <div className="text-xs mt-0.5" style={{ color: C.chalkDim, opacity: 0.7 }}>
+                      {e.date}{e.hours ? ` · ${e.hours}hr` : ""}
+                      {e.split ? ` · G $${e.split.give.toFixed(2)} / S $${e.split.save.toFixed(2)} / Sp $${e.split.spend.toFixed(2)}` : ""}
+                    </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-bold" style={{ color: isDeduct ? "#D4694F" : C.brass, fontFamily: "ui-monospace, Consolas, monospace" }}>
@@ -479,73 +537,67 @@ function LogTab({ mode, setMode, selectedKid, setSelectedKid, selectedJob, setSe
   );
 }
 
+// Small live preview showing exactly how a ticket will split before it's stamped.
+function SplitPreview({ kidId, amount }) {
+  const { give, save, spend } = splitAmount(kidId, amount);
+  return (
+    <div className="text-xs mt-1 font-semibold" style={{ color: C.inkSoft }}>
+      Give ${give.toFixed(2)} · Save ${save.toFixed(2)} · Spend ${spend.toFixed(2)}
+    </div>
+  );
+}
+
 function EarningsBoard({ categories, netForMonth, currentMonth }) {
   return (
     <div className="space-y-3">
       {KIDS.map((k) => {
-        const net = Math.max(0, netForMonth(k.id, currentMonth));
+        const net = netForMonth(k.id, currentMonth);
         const totals = categories.totals[k.id];
         const rate = ALLOWANCE_RATES[k.id];
         return (
           <TicketCard key={k.id}>
-            <div className="text-sm font-bold uppercase tracking-wide mb-3" style={{ color: C.ink }}>{k.name}</div>
-            <div className="flex items-center justify-between flex-wrap gap-3">
-              <div>
-                <div className="text-xs font-bold uppercase" style={{ color: C.inkSoft }}>This month</div>
-                <div className="text-2xl font-black" style={{ color: C.barn, fontFamily: "ui-monospace, Consolas, monospace" }}>${net.toFixed(2)}</div>
-              </div>
-              <div className="flex gap-3">
-                {JAR_META.map((j) => {
-                  const Icon = j.icon;
-                  return (
-                    <div key={j.key} className="text-center">
-                      <Icon size={13} color={C.inkSoft} className="mx-auto mb-0.5" />
-                      <div className="text-xs font-bold" style={{ color: C.inkSoft }}>{j.label}</div>
-                      <div className="text-sm font-black" style={{ color: C.ink, fontFamily: "ui-monospace, Consolas, monospace" }}>${totals[j.key].toFixed(2)}</div>
-                    </div>
-                  );
-                })}
+            <div className="flex items-center justify-between mb-3">
+              <div className="text-sm font-bold uppercase tracking-wide" style={{ color: C.ink }}>{k.name}</div>
+              <div className="text-xs" style={{ color: C.inkSoft }}>
+                Earned this month: <span className="font-bold" style={{ color: net < 0 ? C.barn : C.ink }}>{net < 0 ? "−" : ""}${Math.abs(net).toFixed(2)}</span>
               </div>
             </div>
+            <div className="flex gap-4">
+              {JAR_META.map((j) => {
+                const Icon = j.icon;
+                const val = totals[j.key];
+                return (
+                  <div key={j.key} className="flex-1 text-center rounded-md py-2" style={{ backgroundColor: "rgba(43,38,32,0.06)" }}>
+                    <Icon size={16} color={C.inkSoft} className="mx-auto mb-1" />
+                    <div className="text-xs font-bold" style={{ color: C.inkSoft }}>{j.label}</div>
+                    <div className="text-lg font-black" style={{ color: val < 0 ? C.barn : C.ink, fontFamily: "ui-monospace, Consolas, monospace" }}>
+                      {val < 0 ? "−" : ""}${Math.abs(val).toFixed(2)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
             {rate.bankPaid.length > 0 && (
-              <div className="text-xs mt-2 opacity-70" style={{ color: C.inkSoft }}>
+              <div className="text-xs mt-3 opacity-70" style={{ color: C.inkSoft }}>
                 Fixed {rate.bankPaid.join(" & ")} still pays out to the bank each month — tracked here too so commission adds up right.
               </div>
             )}
           </TicketCard>
         );
       })}
-
-      <div>
-        <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: C.chalkDim }}>Rate card</div>
-        <TicketCard>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
-            {JOBS.map((j) => (
-              <div key={j.id} className="flex justify-between text-xs">
-                <span style={{ color: C.ink }} className="opacity-80">{j.label}{j.restrictedTo ? " *" : ""}</span>
-                <span style={{ color: C.inkSoft }} className="font-semibold">${j.rate}{j.unit === "hour" ? "/hr" : ""}</span>
-              </div>
-            ))}
-          </div>
-          <div className="text-xs mt-2 opacity-60" style={{ color: C.inkSoft }}>* Wyatt only</div>
-          <div className="text-xs mt-2 pt-2 opacity-70" style={{ color: C.inkSoft, borderTop: `1px dashed ${C.kraftDark}` }}>
-            Not up to Al's standards? I don't think so, Tim. No stamp, no pay.
-          </div>
-        </TicketCard>
-      </div>
     </div>
   );
 }
 
-function PayoutTab({ categories, netForMonth, currentMonth, runPayout, runPayoutAll, addThisMonth, alreadyAccrued }) {
-  const anyPending = KIDS.some((k) => Math.max(0, netForMonth(k.id, currentMonth)) > 0 && categories.lastPayoutMonth[k.id] !== currentMonth);
+function AllowanceTab({ currentMonth, addThisMonth, alreadyAccrued }) {
   return (
     <div className="space-y-5">
       <TicketCard>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap gap-3">
           <div>
             <div className="text-xs font-bold uppercase tracking-wider" style={{ color: C.inkSoft }}>Fixed monthly allowance</div>
             <div className="text-sm" style={{ color: C.ink }}>{monthLabel(currentMonth)}</div>
+            <div className="text-xs mt-1 opacity-70" style={{ color: C.inkSoft }}>Posts once a month, split straight into Give/Save/Spend by each kid's rate.</div>
           </div>
           <button onClick={addThisMonth} disabled={alreadyAccrued}
             className="ticket-focus flex items-center gap-2 py-2.5 px-4 rounded-md font-bold uppercase text-xs tracking-wide"
@@ -554,64 +606,8 @@ function PayoutTab({ categories, netForMonth, currentMonth, runPayout, runPayout
           </button>
         </div>
       </TicketCard>
-
-      <TicketCard>
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wider" style={{ color: C.inkSoft }}>Commission payout</div>
-            <div className="text-sm" style={{ color: C.ink }}>Splits net earnings into the jars, then zeroes the month</div>
-          </div>
-          <button onClick={runPayoutAll} disabled={!anyPending}
-            className="ticket-focus flex items-center gap-2 py-2.5 px-4 rounded-md font-bold uppercase text-xs tracking-wide"
-            style={{ backgroundColor: C.brass, color: C.pineDeep, opacity: anyPending ? 1 : 0.4, cursor: anyPending ? "pointer" : "not-allowed" }}>
-            <CheckCircle2 size={14} /> Run all
-          </button>
-        </div>
-      </TicketCard>
-
-      <div className="space-y-2">
-        {KIDS.map((k) => {
-          const net = Math.max(0, netForMonth(k.id, currentMonth));
-          const done = categories.lastPayoutMonth[k.id] === currentMonth;
-          const ratio = ratioFor(k.id);
-          return (
-            <TicketCard key={k.id}>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold uppercase" style={{ color: C.ink }}>{k.name}</span>
-                <span className="text-lg font-black" style={{ color: C.barn, fontFamily: "ui-monospace, Consolas, monospace" }}>${net.toFixed(2)}</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="text-xs" style={{ color: C.inkSoft }}>
-                  Give {Math.round(ratio.give * 100)}% · Save {Math.round(ratio.save * 100)}% · Spend {Math.round(ratio.spend * 100)}%
-                </div>
-                <button onClick={() => runPayout(k.id)} disabled={net <= 0 || done}
-                  className="ticket-focus flex items-center gap-1 py-1.5 px-3 rounded text-xs font-bold uppercase"
-                  style={{ backgroundColor: done ? "transparent" : C.ink, color: done ? C.inkSoft : C.kraft, opacity: (net <= 0 || done) ? 0.5 : 1 }}>
-                  {done ? "Paid" : "Run"}
-                </button>
-              </div>
-            </TicketCard>
-          );
-        })}
-      </div>
-
-      <div>
-        <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: C.chalkDim }}>Recent activity</div>
-        {categories.log.length === 0 ? (
-          <div className="text-sm py-4 text-center" style={{ color: C.chalkDim }}>Nothing logged yet.</div>
-        ) : (
-          <div className="space-y-1.5">
-            {categories.log.slice(0, 10).map((l) => {
-              const kid = KIDS.find((k) => k.id === l.kidId);
-              return (
-                <div key={l.id} className="py-2 px-3 rounded-md text-xs" style={{ backgroundColor: "rgba(234,217,174,0.08)", border: `1px solid ${C.line}` }}>
-                  <span className="font-bold" style={{ color: C.chalk }}>{kid?.name}</span>
-                  <span style={{ color: C.chalkDim }}> · {l.note}</span>
-                </div>
-              );
-            })}
-          </div>
-        )}
+      <div className="text-xs text-center opacity-60" style={{ color: C.chalkDim }}>
+        Commission jobs and deductions split into the jars the moment they're logged — no separate payout step needed anymore.
       </div>
     </div>
   );
