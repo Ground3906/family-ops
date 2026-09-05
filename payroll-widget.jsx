@@ -97,7 +97,7 @@ const SEED_CATEGORIES = {
     molly: { give: 10, save: 19, spend: 34 },
     rileigh: { give: 6, save: 6, spend: 6 },
     cullen: { give: 4, save: 4, spend: 11 },
-    emmitt: { give: 5, save: 5, spend: 17 },
+    emmitt: { give: 5, save: 5, spend: 18 },
   },
   log: [],
   lastAccrualMonth: "2026-08",
