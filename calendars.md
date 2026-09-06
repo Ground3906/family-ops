@@ -551,7 +551,11 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [MEAL] 2026-08-27 17:30 Spaghetti and meatballs :: meal-type=dinner :: notes="Barb's recipe"
 [MEAL] 2026-08-28 17:30 Beef roast, noodles, and salad :: meal-type=dinner :: notes="Leftover roast from 8/26"
 [MEAL] 2026-08-29 17:30 Pizza :: meal-type=dinner :: notes="Wyatt's friend visiting"
+[MEAL] 2026-09-02 17:30 Pork chops, sweet potatoes, and salad :: meal-type=dinner
 [MEAL] 2026-09-03 17:30 Sweet potatoes and pork steaks :: meal-type=dinner :: notes="Matt returns 9/1 - welcome home meal"
+[MEAL] 2026-09-04 17:30 Korean beef and rice :: meal-type=dinner :: notes="Wyatt XC meet 9/5 - pre-meet carb load"
+[MEAL] 2026-09-05 17:30 Leftovers :: meal-type=dinner :: notes="Wyatt XC meet day - Fountain Fort Carson, leave 7:00 AM"
+[MEAL] 2026-09-07 17:30 Chicken and wild rice soup :: meal-type=dinner
 [MEAL] 2026-09-04 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday - Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
 
 ---
