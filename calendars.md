@@ -771,6 +771,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-10-02 16:00 [FAM] Dinner with Fr. Joe :: family
 [CAL] 2026-10-05 08:00 [D] TI4 w/ Fr. Joe :: misc :: end=20:00 :: location="Salida, CO"
 [CAL] 2026-10-08 10:50 [L] Appt :: appointments :: stripe=appt
+[CAL] 2026-10-10 00:00 [FAM] St. Joseph day dinner :: family :: flag=true :: notes="Time TBD"
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
