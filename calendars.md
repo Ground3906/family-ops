@@ -134,6 +134,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Hunting season spans do not get flag=true for overlapping Family Sacred Dates unless Matt explicitly asks.**
 - **A time overlap is only a real conflict if the pills share a person. Check pills before flagging.**
 - **Mark Allsman LPC sessions ("Apt - Mark") are telehealth regardless of what the source booking confirmation lists as location. Never populate a location field for these.**
+- **Concurrence is the norm on this file.** Multiple writers (Kalea, other sessions, scheduled tasks) touch it in overlapping windows. A field reverting after a fix is expected drift, not a bug to chase - just re-apply on next touch.
 
 ---
 
@@ -773,6 +774,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-10 17:30 [D] Net+ Boot Camp - Session 1 of 6 :: meetings :: end=18:30
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
+[CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-17 17:30 [D] Net+ Boot Camp - Session 2 of 6 :: meetings :: end=18:30
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
