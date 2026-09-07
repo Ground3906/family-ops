@@ -80,11 +80,13 @@ Confirm exact times each season; this is the shape, not the truth.
 - Swim practice in season - 09:30-11:30 Florence Pool.
 - Some weeks K. apt 1400.
 - Lenten Mass 1800 some Thursdays.
+- Net+ Boot Camp cohort 1730-1830 (6 sessions, starting 9/10/2026).
 
 ### Friday
 - Pig feed.
 - Chicken feed (Fri or Sat) - 3 bags.
 - Stations of the Cross during Lent.
+- D325 Net+ Course Intro / Test Prep cohort 1500-1600, weekly, starting 9/11/2026.
 
 ### Saturday
 - 4H meetings monthly (~1300-1400).
@@ -151,6 +153,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
+[CAL-RECUR weekly start=2026-09-11 day=fri] 15:00 [D] D325 Net+ Course Intro and Test Prep cohort :: meetings :: end=16:00 :: notes="Weekly Friday cohort, open ended - diving into special topics within each network domain"
 
 ---
 
@@ -216,6 +219,17 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-10-16 11:00 [W] XC meet - Eric Wolff Invitational :: kids :: location="Monte Vista High School Track, Monte Vista, CO" :: notes="HS Boys 11:00 AM. Leave 5:30 AM."
 [CAL] 2026-10-23 00:00 [W] XC meet - Regionals :: kids :: location="Springfield High School, Springfield, CO" :: notes="HS time TBD. Leave TBD." :: flag=true
 [CAL] 2026-10-31 00:00 [W] XC meet - HS State Qualifier :: kids :: location="Norris Penrose Event Center, Colorado Springs, CO" :: notes="HS time TBD." :: flag=true
+
+---
+
+### NET+ BOOT CAMP - Session 1 of 6 (Sept start), 2026
+<!-- CANONICAL SOURCE. 6-session cohort, Thursdays 5:30-6:30 PM MT. -->
+[CAL] 2026-09-10 17:30 [D] Net+ Boot Camp - Session 1 of 6 :: meetings :: end=18:30
+[CAL] 2026-09-17 17:30 [D] Net+ Boot Camp - Session 2 of 6 :: meetings :: end=18:30
+[CAL] 2026-09-24 17:30 [D] Net+ Boot Camp - Session 3 of 6 :: meetings :: end=18:30
+[CAL] 2026-10-01 17:30 [D] Net+ Boot Camp - Session 4 of 6 :: meetings :: end=18:30
+[CAL] 2026-10-08 17:30 [D] Net+ Boot Camp - Session 5 of 6 :: meetings :: end=18:30
+[CAL] 2026-10-15 17:30 [D] Net+ Boot Camp - Session 6 of 6 :: meetings :: end=18:30
 
 ---
 
@@ -756,10 +770,13 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Pappa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 13:45 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
+[CAL] 2026-09-10 17:30 [D] Net+ Boot Camp - Session 1 of 6 :: meetings :: end=18:30
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
-[CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
+[CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
+[CAL] 2026-09-17 17:30 [D] Net+ Boot Camp - Session 2 of 6 :: meetings :: end=18:30
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-09-24 17:30 [D] Net+ Boot Camp - Session 3 of 6 :: meetings :: end=18:30
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
 [CAL] 2026-09-29 ALL-DAY [C][E] Picture day :: kids
 
@@ -767,12 +784,15 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 ### OCTOBER 2026
 
+[CAL] 2026-10-01 17:30 [D] Net+ Boot Camp - Session 4 of 6 :: meetings :: end=18:30
 [CAL] 2026-10-02 08:00 [D] Endoscopy :: appointments :: stripe=appt :: end=10:00 :: location="Audubon Medical Campus - Endoscopy Centers of Colorado Springs, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: flag=true :: notes="Check-in 0800, procedure 0900. NPO (nothing by mouth) starting midnight prior. Sedation - driver required, cannot drive self home. Driver not yet arranged."
 [CAL] 2026-10-02 16:00 [FAM] Dinner with Fr. Joe :: family
 [CAL] 2026-10-05 08:00 [D] TI4 w/ Fr. Joe :: misc :: end=20:00 :: location="Salida, CO"
 [CAL] 2026-10-08 10:50 [L] Appt :: appointments :: stripe=appt
+[CAL] 2026-10-08 17:30 [D] Net+ Boot Camp - Session 5 of 6 :: meetings :: end=18:30
 [CAL] 2026-10-10 00:00 [FAM] St. Joseph day dinner :: family :: flag=true :: notes="Time TBD"
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-10-15 17:30 [D] Net+ Boot Camp - Session 6 of 6 :: meetings :: end=18:30
 [CAL] 2026-10-17 ALL-DAY [FAM] Bayer family get-together :: family :: span=2026-10-18 :: location="Colorado Springs, CO"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
