@@ -86,7 +86,6 @@ Confirm exact times each season; this is the shape, not the truth.
 - Pig feed.
 - Chicken feed (Fri or Sat) - 3 bags.
 - Stations of the Cross during Lent.
-- D325 Net+ Course Intro / Test Prep cohort 1500-1600, weekly, starting 9/11/2026.
 
 ### Saturday
 - 4H meetings monthly (~1300-1400).
@@ -135,6 +134,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **A time overlap is only a real conflict if the pills share a person. Check pills before flagging.**
 - **Mark Allsman LPC sessions ("Apt - Mark") are telehealth regardless of what the source booking confirmation lists as location. Never populate a location field for these.**
 - **Concurrence is the norm on this file.** Multiple writers (Kalea, other sessions, scheduled tasks) touch it in overlapping windows. A field reverting after a fix is expected drift, not a bug to chase - just re-apply on next touch.
+- **One-time bookings are never written as CAL-RECUR.** A cohort, class, or session that runs once does not become a recurring block just because it's early in a series - verify with Matt whether a schedule repeats before choosing the entry type.
 
 ---
 
@@ -154,7 +154,6 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
-[CAL-RECUR weekly start=2026-09-11 day=fri] 15:00 [D] D325 Net+ Course Intro and Test Prep cohort :: meetings :: end=16:00 :: notes="Weekly Friday cohort, open ended - diving into special topics within each network domain"
 
 ---
 
@@ -768,10 +767,12 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-06 17:00 [FAM] Cullen and Emmitt birthday dinner - with Doug and Deb :: family
 [CAL] 2026-09-07 14:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=15:00 :: notes="telehealth"
 [CAL] 2026-09-08 11:00 [D] K of C - Brandon Nelson IRA call :: meetings :: end=11:30
+[CAL] 2026-09-08 14:45 [D] WGU mentor meeting :: meetings :: end=15:00 :: notes="Weekly sync with Teresa Jackson."
 [CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Pappa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 13:45 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-10 17:30 [D] Net+ Boot Camp - Session 1 of 6 :: meetings :: end=18:30
+[CAL] 2026-09-11 ALL-DAY [D][W] NM State Fair - Turnpike Troubadours concert :: family :: travel=true :: location="Tingley Coliseum, Expo New Mexico, Albuquerque, NM" :: notes="Concert 6:00 PM. Driving to W's XC meet the next morning - overnight logistics TBD."
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
 [CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
