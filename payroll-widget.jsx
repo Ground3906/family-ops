@@ -93,7 +93,7 @@ const monthLabel = (mk) => {
 // allowance posted, Rileigh's birthday rate applied).
 const SEED_CATEGORIES = {
   totals: {
-    wyatt: { give: 9, save: 26, spend: -8 },
+    wyatt: { give: 13, save: 38, spend: 31 },
     molly: { give: 10, save: 19, spend: 34 },
     rileigh: { give: 6, save: 6, spend: 6 },
     cullen: { give: 4, save: 4, spend: 11 },
