@@ -137,6 +137,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **One-time bookings are never written as CAL-RECUR.** A cohort, class, or session that runs once does not become a recurring block just because it's early in a series - verify with Matt whether a schedule repeats before choosing the entry type.
 - **CANONICAL-BLOCK CHECK before writing any multi-session entry:** if a canonical block already exists for a series (swim, XC, boot camp, etc.), the session goes ONLY there - never also in the monthly section. Verify no canonical block exists before free-writing a recurring-feeling entry into a month.
 - **Net+ Boot Camp - Matt is enrolled in Session 1 of 6 only.** The cohort itself runs 6 sessions but Matt did not sign up for the full series. Only the Session 1 entry (9/10) is on the calendar. Do not re-add Sessions 2 through 6 without Matt explicitly confirming he enrolled.
+- **Spelling: "Papa" (grandparent), not "Pappa".**
 
 ---
 
@@ -765,7 +766,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-07 14:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=15:00 :: notes="telehealth"
 [CAL] 2026-09-08 11:00 [D] K of C - Brandon Nelson IRA call :: meetings :: end=11:30
 [CAL] 2026-09-08 14:45 [D] WGU mentor meeting :: meetings :: end=15:00 :: notes="Weekly sync with Teresa Jackson."
-[CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Pappa :: kids :: span=2026-09-10 :: travel=true
+[CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 13:45 [K] WIC phone call :: appointments :: stripe=appt
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-11 ALL-DAY [D][W] NM State Fair - Turnpike Troubadours concert :: family :: travel=true :: location="Tingley Coliseum, Expo New Mexico, Albuquerque, NM" :: notes="Concert 6:00 PM. Driving to W's XC meet the next morning - overnight logistics TBD."
