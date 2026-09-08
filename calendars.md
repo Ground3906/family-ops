@@ -80,7 +80,6 @@ Confirm exact times each season; this is the shape, not the truth.
 - Swim practice in season - 09:30-11:30 Florence Pool.
 - Some weeks K. apt 1400.
 - Lenten Mass 1800 some Thursdays.
-- Net+ Boot Camp cohort 1730-1830 (6 sessions, starting 9/10/2026).
 
 ### Friday
 - Pig feed.
@@ -137,6 +136,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Concurrence is the norm on this file.** Multiple writers (Kalea, other sessions, scheduled tasks) touch it in overlapping windows. A field reverting after a fix is expected drift, not a bug to chase - just re-apply on next touch.
 - **One-time bookings are never written as CAL-RECUR.** A cohort, class, or session that runs once does not become a recurring block just because it's early in a series - verify with Matt whether a schedule repeats before choosing the entry type.
 - **CANONICAL-BLOCK CHECK before writing any multi-session entry:** if a canonical block already exists for a series (swim, XC, boot camp, etc.), the session goes ONLY there - never also in the monthly section. Verify no canonical block exists before free-writing a recurring-feeling entry into a month.
+- **Net+ Boot Camp - Matt is enrolled in Session 1 of 6 only.** The cohort itself runs 6 sessions but Matt did not sign up for the full series. Only the Session 1 entry (9/10) is on the calendar. Do not re-add Sessions 2 through 6 without Matt explicitly confirming he enrolled.
 
 ---
 
@@ -224,14 +224,9 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 
 ---
 
-### NET+ BOOT CAMP - Session 1 of 6 (Sept start), 2026
-<!-- CANONICAL SOURCE. 6-session cohort, Thursdays 5:30-6:30 PM MT. Do not duplicate individual session entries in monthly sections. -->
+### NET+ BOOT CAMP - Session 1 of 6, 2026
+<!-- CANONICAL SOURCE. Matt enrolled in Session 1 of 6 only. Do not duplicate individual session entries in monthly sections. -->
 [CAL] 2026-09-10 17:30 [D] Net+ Boot Camp - Session 1 of 6 :: meetings :: end=18:30
-[CAL] 2026-09-17 17:30 [D] Net+ Boot Camp - Session 2 of 6 :: meetings :: end=18:30
-[CAL] 2026-09-24 17:30 [D] Net+ Boot Camp - Session 3 of 6 :: meetings :: end=18:30
-[CAL] 2026-10-01 17:30 [D] Net+ Boot Camp - Session 4 of 6 :: meetings :: end=18:30
-[CAL] 2026-10-08 17:30 [D] Net+ Boot Camp - Session 5 of 6 :: meetings :: end=18:30
-[CAL] 2026-10-15 17:30 [D] Net+ Boot Camp - Session 6 of 6 :: meetings :: end=18:30
 
 ---
 
