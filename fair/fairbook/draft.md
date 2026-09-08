@@ -122,8 +122,6 @@ An exhibitor in the Open Division is not required to hold 4-H or National FFA Or
 
 Custer County acknowledges and adopts the CSF's requirements for Entries and Entry Forms. An exhibitor must complete the entry or registration process for their project before the applicable deadline. Entry deadlines are listed in Addendum §4. Any applicable fees are listed in Addendum §6.
 
-For indoor and Open Division projects, entry is completed by check-in at the designated location. The exhibitor must submit an entry card for each exhibit before check-in. Each entry card must state the exhibitor's name and the division and class in which the exhibit is entered. An exhibit presented without a completed entry card is refused. It is the exhibitor's responsibility to ensure that each exhibit is entered in the correct class. In the Open Division, no more than three exhibits may be entered in a single class.
-
 A completed entry, weigh-in, or check-in is the exhibitor's acceptance of all rules in this book and agreement to abide by them for the duration of their participation in the Custer County Fair.
 
 An exhibitor must complete every form required for their projects before participating. The current list of required forms is in Addendum §7.
@@ -340,7 +338,13 @@ Every ribbon awarded at the Custer County Fair carries a premium. Premium amount
 
 The following dress standard applies to any exhibitor while before a judge in a livestock or animal show. This standard is in addition to the grounds dress standard at CC 2.4. A department may carry its own ring dress deviation, and that deviation governs within that department.
 
-An exhibitor shall wear a long-sleeved shirt, nice jeans or trousers, and closed-toe shoes. Sandals shall not be worn. A hat shall not be worn while showing. Gum and tobacco products shall not be used while showing.
+Custer County acknowledges and adopts the CSF Show Requirements, Dress Code. An exhibitor must wear appropriate show attire while before a judge. An exhibitor must not wear shorts, a tank top, a low-cut shirt, a sheer blouse, flip flops, a t-shirt, a shirt displaying an inappropriate message or logo, a ball cap, or clothing that exposes a bare midriff.
+
+The recommended dress is a long-sleeved or short-sleeved button-down shirt or blouse, and clean jeans or slacks with a belt. This dress is recommended and is not required.
+
+Custer County states the following county requirements in addition to the CSF Show Requirements, Dress Code. Where that provision prohibits ball caps, an exhibitor must not wear a hat of any kind while before a judge. Where that provision recommends hard-soled closed-toe shoes or boots to protect the feet, an exhibitor must wear hard-soled closed-toe shoes or boots while before a judge. An exhibitor must not use gum or a tobacco product while before a judge.
+
+The Authority may refuse entry into the show ring to an exhibitor not dressed under this section, with the superintendent of the department as lead, until the exhibitor is properly dressed.
 
 **CC 2.23 Stall Cleanup and Checkout**
 
@@ -564,7 +568,7 @@ Custer County reads this requirement as follows. No breed competition exists in 
 
 **CC 3.2.5 Classes Offered**
 
-The classes offered in Market Beef are Market Steer, Market Heifer, and Grass Fed Heifer or Steer. Breeding Beef is not a market class; see CC 6.
+The classes offered in Market Beef are Market Steer, Market Heifer, and Led Bred and Fed. Breeding Beef is not a market class; see CC 6.
 
 **CC 3.2.6 Control Equipment**
 
@@ -577,10 +581,6 @@ Custer County acknowledges and adopts the CSF requirement that exhibitors only a
 **CC 3.2.8 Fitting and Grooming Substances**
 
 Custer County acknowledges and adopts the CSF Market Beef competition requirements prohibiting aerosols in the show arena or holding pens.
-
-**CC 3.2.9 Led Bred and Fed**
-
-[Text pending. This section is reserved for the Led Bred and Fed class. Its eligibility standard, verification method, and award structure are to be supplied by the working group. This section shall not be printed in an adopted edition of this book until that text is supplied.]
 
 ---
 
@@ -830,6 +830,10 @@ Where the exhibitor has more than one entry in the same class, another Custer Co
 
 The maximum number of entries an exhibitor may enter in a market poultry species is stated at CC 3.1.4. Market chicken and market turkey are separate species and the maximum applies to each of them separately, counted in the entry units stated at CC 3.6.4. Pen and cage space is assigned under CC 3.1.15.
 
+**CC 3.6.13 Dress**
+
+The CSF Show Requirements, Dress Code recommends jeans or slacks and a long-sleeved shirt in this department, for safety. This is in addition to the recommended dress at CC 2.22.
+
 ---
 
 ### CC 3.7 — Market Rabbit
@@ -889,6 +893,10 @@ Where the exhibitor has more than one entry in the same class, another Custer Co
 **CC 3.7.10 Entry Limit**
 
 The maximum number of pens an exhibitor may enter in market rabbit is stated at CC 3.1.4. Pen and cage space is assigned under CC 3.1.15.
+
+**CC 3.7.11 Dress**
+
+The CSF Show Requirements, Dress Code recommends jeans or slacks and a long-sleeved shirt in this department, for safety. This is in addition to the recommended dress at CC 2.22.
 
 ## CC 4 — The Livestock Sale
 
@@ -969,6 +977,10 @@ The Grand Champion and the Reserve Grand Champion of every market species shall 
 **CC 4.2.3 Sale Order**
 
 The sale order is determined by the sale committee.
+
+**CC 4.2.3a Dress in the Sale Ring**
+
+Custer County acknowledges and adopts the CSF Grooming and Dress of Exhibitors provisions. The dress standard stated at CC 2.22 applies to every exhibitor in the sale ring.
 
 ### CC 4.3 — Consignment and the Sale Declaration
 
@@ -1258,6 +1270,10 @@ The classes offered in the rabbit department are Showmanship, Companion Rabbit, 
 
 The Breeding Rabbit class is divided by age and sex as follows. Junior Doe and Junior Buck are under six months of age. Intermediate Doe and Intermediate Buck are six months of age and under twelve months of age. Senior Doe and Senior Buck are over twelve months of age.
 
+**CC 6.2.3a Dress**
+
+The CSF Show Requirements, Dress Code recommends jeans or slacks and a long-sleeved shirt in this department, for safety. This is in addition to the recommended dress at CC 2.22.
+
 **CC 6.2.4 Awards**
 
 Ribbons are presented under CC 2.21. Each class is awarded a Champion and a Reserve Champion. Every Champion is eligible for Grand Champion. Every remaining Champion, together with the Reserve Champion of the class from which the Grand Champion was selected, is eligible for Reserve Grand Champion.
@@ -1293,6 +1309,10 @@ Every bird entered in this department is subject to a health check at check-in. 
 Custer County acknowledges and adopts the CSF Livestock Health Requirements provision governing animals showing evidence of disease, under which an animal found showing evidence of an infectious, contagious, or communicable disease may be immediately withdrawn from the show and held in isolation at the owner's risk and expense until that animal is released to return to the owner's premises. A bird that becomes ill while on the fairgrounds shall be isolated immediately.
 
 Custer County acknowledges and adopts the advisory form CSF uses in its Livestock Health Requirements for animals presenting a known risk. Birds housed at the Custer County Fair have been in close contact with birds from other flocks. Exhibitors are strongly advised to keep every bird returning from the fair separated from the home flock.
+
+**CC 6.3.4a Dress**
+
+The CSF Show Requirements, Dress Code recommends jeans or slacks and a long-sleeved shirt in this department, for safety. This is in addition to the recommended dress at CC 2.22.
 
 **CC 6.3.5 Awards**
 
@@ -1420,9 +1440,9 @@ CC 7.3 — Companion Animal Master Showmanship Contest
 
 **CC 6.6.2 Governing Rules**
 
-Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements as the authority governing the conduct and judging of every class in this department, to the extent stated in this section.
+Custer County acknowledges and adopts the Alpaca Llama Show Association (ALSA) Handbook as the authority governing the conduct and judging of every class in this department, to the extent stated in this section.
 
-The CSF Youth Llama and Alpaca (Camelids) competition requirements are not printed in this book. A copy is available from the CSF.
+The ALSA Handbook is not printed in this book. A copy is available from ALSA at alpacallamashows.com.
 
 **CC 6.6.3 Eligibility**
 
@@ -1430,33 +1450,35 @@ An exhibitor in this department must be a Custer County 4-H member enrolled in t
 
 **CC 6.6.4 Classes Offered**
 
-The classes offered in this department are Showmanship, Pack, Obstacle, Public Relations, Costume, and Educational Display.
+The classes offered in this department are Showmanship, Pack, Obstacle, Public Relations, and Costume.
 
-Showmanship, Pack, and Educational Display are divided into the age divisions stated at CC 7.1.4. Obstacle and Public Relations are divided into the age divisions stated at CC 7.1.4, plus a Mini division for exhibitors who are Cloverbud members under CC 2.10. The Costume class is judged with every age division together.
+Showmanship, Pack, Obstacle, and Public Relations are divided into the age divisions stated at CC 7.1.4. Showmanship, Obstacle, and Public Relations carry an additional Mini division for exhibitors who are Cloverbud members under CC 2.10. A Cloverbud member must not enter the Pack class. The Costume class is judged with every age division together.
 
 The Authority may change the order in which classes are shown, with the superintendent of the department as lead. The Authority may combine any class with fewer than 5 animals with another class, with the superintendent of the department as lead.
 
 **CC 6.6.5 Class Rules**
 
-Every performance class in this department must present a minimum of 8 obstacles. The Pack, Obstacle, and Public Relations classes are the performance classes of this department. The Obstacle and Public Relations classes are run back to back, and an exhibitor entered in both completes a minimum of 16 obstacles in sequence. The Pack, Obstacle, and Public Relations courses must differ from one another by at least 4 obstacles.
+Every performance class in this department must present a minimum of 8 obstacles. The Pack, Obstacle, and Public Relations classes are the performance classes of this department. The Pack, Obstacle, and Public Relations courses must differ from one another by at least 4 obstacles.
 
-Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Costume class, under which this class is not about dressing up the animal but about how the exhibitor has trained and desensitized the animal to various stimuli. Points are awarded for the animal's acceptance of stimuli such as dragging items, hats, glasses, noise-making items, and reflective items, and for coverage of the costume on sensitive areas of the animal such as its head, back, legs, and ears. The handler's attire and theme are also considered, because the animal's acceptance of the oddity of the handler's attire demonstrates its desensitization. Costumes may be purchased or made. The animal must be taught to accept the costume, and may be presented with music or a written script. At check-in, an exhibitor may submit a narrative to be read during the performance, stating the name of the exhibitor, the name of the animal, and a description of what the costume represents. This class is judged with every age division together and does not count toward Champion and Reserve Champion Performance.
+Custer County acknowledges and adopts the ALSA Handbook governing the Costume class. Costumes may be purchased or made. The animal must be taught to accept the costume, and may be presented with music or a written script. At check-in, an exhibitor may submit a narrative to be read during the performance, stating the name of the exhibitor, the name of the animal, and a description of what the costume represents. This class is judged with every age division together and does not count toward Champion and Reserve Champion Performance.
 
-Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Pack class, under which the class simulates the conditions and obstacles encountered when packing on the trail. Every pack must have two straps, and belly and chest straps are acceptable. Panniers must be filled out. An alpaca may be packed with a dog or goat pack, which must be filled with a light load. Obstacles may include a bridge or ramp, a step over of no more than 12 inches, manageability, removal of the pack, flexibility, and maneuverability by weaving, ducking, and backing. This class counts toward Champion and Reserve Champion Performance.
+Custer County acknowledges and adopts the ALSA Handbook governing the Pack class, including its requirements for pack obstacles and gear. This class counts toward Champion and Reserve Champion Performance.
 
-Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Obstacle class, under which the class demonstrates the animal's obedience and willingness to complete the activities requested by the handler. Obstacles may include a bridge or ramp, weaving, jumps, change of pace, and backing. This class counts toward Champion and Reserve Champion Performance.
+Custer County acknowledges and adopts the ALSA Handbook governing the Obstacle class. This class counts toward Champion and Reserve Champion Performance.
 
-The Public Relations class tests the animal's ability to participate in community events. Obstacles may include stairs or a ramp, picking up a foot, showing teeth, petting, loading into a vehicle, and backing. This class counts toward Champion and Reserve Champion Performance.
+Custer County acknowledges and adopts the ALSA Handbook governing the Public Relations class. This class counts toward Champion and Reserve Champion Performance.
 
-Showmanship is a required class for every exhibitor in this department, and is limited to exhibitors with a llama or alpaca entered in the department. Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Showmanship class, under which the class is a demonstration of the handler's ability to show the animal to its best advantage at halter. Showmanship classes are governed by CC 7.1, are divided by the age divisions stated at CC 7.1.4, and are judged on the criteria stated at CC 7.1.6. Showmanship and Obstacle are required to complete the 4-H llama project. Requirements for completion of a 4-H project are set by CSU Extension. Entry in the remaining classes of this department is encouraged.
+Showmanship is a required class for every exhibitor in this department, and is limited to exhibitors with a llama or alpaca entered in the department. Custer County acknowledges and adopts the ALSA Handbook governing the Showmanship class. Showmanship classes are governed by CC 7.1, are divided by the age divisions stated at CC 7.1.4, and are judged on the criteria stated at CC 7.1.6. Showmanship and Obstacle are required to complete the 4-H llama project. Requirements for completion of a 4-H project are set by CSU Extension. Entry in the remaining classes of this department is encouraged.
 
-In this department, the ring dress standard stated at CC 2.22 is replaced by the following. An exhibitor before a judge in this department must wear black pants or a black skirt, a western shirt or blouse or a white shirt or blouse, and sturdy shoes or boots. The exhibitor's attire must be neat and clean.
+**CC 6.6.5a Dress**
 
-Custer County acknowledges and adopts the CSF Youth Llama and Alpaca (Camelids) competition requirements governing the Educational Display class, under which this class showcases a skill learned or investigated during the current llama or alpaca project. The display must be a tri-fold board meeting the standard tabletop display board size of 4 feet by 3 feet, neat, well organized, and readable from 3 to 5 feet away. The display is scored on creativity, accuracy of information, interest and value to the exhibitor, depth of knowledge, neatness, readability, organization, and adherence to these requirements. This class does not count toward Champion and Reserve Champion Performance.
+In this department, Custer County acknowledges and adopts the ALSA Handbook governing exhibitor attire and footwear. The dress standard for this show is stated in the ALSA Handbook. CC 2.22 governs this department in all other respects.
 
 **CC 6.6.6 Awards**
 
-Ribbons are presented under CC 2.21. Placings in every class are awarded under the American system, and ribbons are awarded through 10th place in every performance class. A Champion and a Reserve Champion are awarded in each age division of each class. A Grand Champion and a Reserve Grand Champion are awarded in each of the Junior, Intermediate, and Senior age divisions, determined by Alpaca Llama Show Association (ALSA) points for combined scores across the Showmanship, Pack, Obstacle, and Public Relations classes.
+Ribbons are presented under CC 2.21. Placings in every class are awarded under the American system, and ribbons are awarded through 10th place in every performance class. A Champion and a Reserve Champion are awarded in each age division of each class. A Grand Champion and a Reserve Grand Champion are awarded in each of the Junior, Intermediate, and Senior age divisions, determined by ALSA points for combined scores across the Showmanship, Pack, Obstacle, and Public Relations classes. An Overall Grand Champion and an Overall Reserve Grand Champion are awarded in this department, determined by the highest combined scores across all age divisions in the Showmanship, Pack, Obstacle, and Public Relations classes. Each receives a banner.
+
+---
 
 ### CC 6.7 — Breeding and Dairy
 
@@ -1491,6 +1513,8 @@ Custer County acknowledges and adopts the CSF Youth Dairy Goat competition requi
 Custer County acknowledges and adopts the CSF Youth Dairy Goat competition requirements governing kid ownership, under which a Junior Kid born after June 1 of the current year is eligible to show only where the exhibitor has owned the dam continuously since June 1 of the current year.
 
 Every dairy goat entered in this class shall carry a scrapie flock identification tag under the federal requirement stated at CC 3.4.2.
+
+The CSF Show Requirements, Dress Code recommends a white shirt and white pants for dairy goat exhibitors. This is in addition to the recommended dress at CC 2.22.
 
 **CC 6.7.5 Awards**
 
@@ -1583,6 +1607,8 @@ The Champion and Reserve Champion Senior, Intermediate, and Junior Showmen from 
 **CC 7.3.3 Multiple Qualification**
 
 Where a Showman is Champion or Reserve Champion in more than one species, the next-placing qualifier in each species that Showman does not use becomes eligible to compete.
+
+If there are fewer than 10 exhibitors combined in all the species, every Showman is eligible to show.
 
 **CC 7.3.4 Additional Judging Criterion**
 
@@ -1752,7 +1778,7 @@ Eligibility for the Open Division is stated at CC 2.1 and CC 2.25. An exhibitor 
 
 **CC 10.1.4 Entry Card and Blind Judging**
 
-Every entry card in this chapter is a two-part card. The stub states the exhibitor's name and is retained by the Authority at check-in; the stub is required to claim the exhibit at release. The tag states the division and the class in which the exhibit is entered and remains attached to the exhibit. No exhibitor's name is displayed with an exhibit during judging.
+Every entry card in this chapter is a two-part card. The stub states the exhibitor's name and is retained by the Authority at check-in; the stub is required to claim the exhibit at release. The tag states the division and the class in which the exhibit is entered and remains attached to the exhibit. An exhibit presented without a completed entry card is refused. No exhibitor's name is displayed with an exhibit during judging.
 
 **CC 10.1.5 Entries Per Class**
 
