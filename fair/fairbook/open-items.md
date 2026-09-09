@@ -23,7 +23,7 @@ Addendum §1 through §10 carry 2027 facts. The IAFE National Code of Show Ring 
 
 ## Known gaps in finished chapters
 
-- **CC 3.2.5 Led Bred and Fed has no eligibility standard.** The class prints in the Market Beef class list with no rules section behind it. It replaced Grass Fed Heifer or Steer at the working group's direction, and that class had never carried a standard either. Nothing in the book states what led, bred, and fed means, how it is verified, or who decides. The CC 3.2.9 stub that formerly reserved the section was deleted rather than left unprintable. Enjoli supplied candidate rules 9/9/2026; they are in intake, not yet drafted.
+- **CC 3.2.9 Led Bred and Fed has no Fed standard.** Enjoli supplied the eligibility, show, and award rules and they are drafted. The class name promises three conditions and the section states two. Led is stated at CC 3.2.9(a)(vi) and Bred is stated in full at CC 3.2.9(a)(i) through (v). Nothing anywhere requires the animal to have been fed in Custer County, and no source supplies a standard for it. Working group question, not drafting work: either supply a Fed standard or accept that the name overstates the rule.
 
 - **CC 2.4 distracting-clothing catch-all.** The dress standard prohibits clothing "in any way distracting." It has no stated limit, it can reach anything a person in authority dislikes, and it is the sentence in CC 2.4 most likely to produce a grievance the board cannot defend. Kept deliberately at Matt's direction; flagged once and recorded here.
 
