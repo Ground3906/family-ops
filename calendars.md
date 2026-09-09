@@ -768,6 +768,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-08 14:45 [D] WGU mentor meeting :: meetings :: end=15:00 :: notes="Weekly sync with Teresa Jackson."
 [CAL] 2026-09-08 ALL-DAY [M][R] Great Wolf Lodge w/ Oma & Papa :: kids :: span=2026-09-10 :: travel=true
 [CAL] 2026-09-09 13:45 [K] WIC phone call :: appointments :: stripe=appt
+[CAL] 2026-09-09 ALL-DAY [C][E] Picture day :: kids
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-11 ALL-DAY [D][W] NM State Fair - Turnpike Troubadours concert :: family :: travel=true :: location="Tingley Coliseum, Expo New Mexico, Albuquerque, NM" :: notes="Concert 6:00 PM. Driving to W's XC meet the next morning - overnight logistics TBD."
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
@@ -776,7 +777,6 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
-[CAL] 2026-09-29 ALL-DAY [C][E] Picture day :: kids
 
 ---
 
@@ -811,6 +811,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 ### DECEMBER 2026
 
 [CAL] 2026-12-10 18:00 [C][E] Christmas concert :: kids
+[CAL] 2026-12-21 09:00 [K] WIC phone call :: appointments :: stripe=appt
 
 ---
 
