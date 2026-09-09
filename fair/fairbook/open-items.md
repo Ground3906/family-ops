@@ -23,7 +23,7 @@ Addendum §1 through §10 carry 2027 facts. The IAFE National Code of Show Ring 
 
 ## Known gaps in finished chapters
 
-- **CC 3.2.5 Led Bred and Fed has no eligibility standard.** The class prints in the Market Beef class list with no rules section behind it. It replaced Grass Fed Heifer or Steer at the working group's direction, and that class had never carried a standard either. Nothing in the book states what led, bred, and fed means, how it is verified, or who decides. The CC 3.2.9 stub that formerly reserved the section was deleted rather than left unprintable. Superintendent pass (working group).
+- **CC 3.2.5 Led Bred and Fed has no eligibility standard.** The class prints in the Market Beef class list with no rules section behind it. It replaced Grass Fed Heifer or Steer at the working group's direction, and that class had never carried a standard either. Nothing in the book states what led, bred, and fed means, how it is verified, or who decides. The CC 3.2.9 stub that formerly reserved the section was deleted rather than left unprintable. Enjoli supplied candidate rules 9/9/2026; they are in intake, not yet drafted.
 
 - **CC 2.4 distracting-clothing catch-all.** The dress standard prohibits clothing "in any way distracting." It has no stated limit, it can reach anything a person in authority dislikes, and it is the sentence in CC 2.4 most likely to produce a grievance the board cannot defend. Kept deliberately at Matt's direction; flagged once and recorded here.
 
@@ -35,10 +35,10 @@ Addendum §1 through §10 carry 2027 facts. The IAFE National Code of Show Ring 
 
 These are not drafting work. Each one is a question the book cannot answer from any source, written against the rule it would change so the person can react to it directly.
 
-- **Regina (shooting sports), CC 8.3.** There is a minimum number of practices an exhibitor must attend before competing. The Colorado 4-H Shooting Sports Rule Book carries no practice attendance requirement anywhere, so this is a Custer-local rule and the number lives only with you. What is it?
-- **Regina (shooting sports), CC 8.4.** The book currently states "Custer County does not use Orion scorecards. County scorecards are provided on the day of each contest." There was talk of switching to Orion scorecards. If that is happening, CC 8.4 has to change. Is it?
-- **Regina (shooting sports), CC 8.6 and CC 8.7.** The book differentiates Firearms Champions from Archery Champions, but says nothing about buckles anywhere. The word buckle does not appear in the state rulebook either. How does buckle qualification differ between firearms and archery?
-- **Regina (shooting sports), proposed CC 8.9.** The state rulebook already prints who may compete at State: an enrolled 4-H member in good standing in the county they represent, enrolled and active in the discipline, all county requirements complete, and a valid Hunter Education Card. It caps a county at six entrants per class and five for shotgun. The only piece it does not answer is how Custer picks its entrants when more qualify than there are spots. How is that decided?
+- **Reggie (shooting sports), CC 8.3.** There is a minimum number of practices an exhibitor must attend before competing. The Colorado 4-H Shooting Sports Rule Book carries no practice attendance requirement anywhere, so this is a Custer-local rule and the number lives only with you. What is it?
+- **Reggie (shooting sports), CC 8.4.** The book currently states "Custer County does not use Orion scorecards. County scorecards are provided on the day of each contest." There was talk of switching to Orion scorecards. If that is happening, CC 8.4 has to change. Is it?
+- **Reggie (shooting sports), CC 8.6 and CC 8.7.** The book differentiates Firearms Champions from Archery Champions, but says nothing about buckles anywhere. The word buckle does not appear in the state rulebook either. How does buckle qualification differ between firearms and archery?
+- **Reggie (shooting sports), proposed CC 8.9.** The state rulebook already prints who may compete at State: an enrolled 4-H member in good standing in the county they represent, enrolled and active in the discipline, all county requirements complete, and a valid Hunter Education Card. It caps a county at six entrants per class and five for shotgun. The only piece it does not answer is how Custer picks its entrants when more qualify than there are spots. How is that decided?
 - **Fair Board, CC 9.11.** The chapter currently runs the Danish System, with the full ribbon structure built on it. The board needs to decide whether Family and Consumer Sciences and General Projects moves to American only. This is a vote, not a fact.
 
 ## Fair Board and Sale Committee to-do
