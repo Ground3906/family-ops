@@ -28,7 +28,7 @@ This list reflects the book as shipped through the working-group edit pass, 8/26
 - CC 3.1 — General Market Requirements
 - CC 3.2 — Market Beef
 - CC 3.3 — Market Swine
-- CC 3.4 — Market Sheep
+- CC 3.4 — Market Lamb
 - CC 3.5 — Market Goat
 - CC 3.6 — Market Poultry
 - CC 3.7 — Market Rabbit
