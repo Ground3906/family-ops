@@ -149,7 +149,7 @@ Confirm exact times each season; this is the shape, not the truth.
 
 ## Upcoming Events
 
-Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rileigh covering Cullen/Emmitt's slots 8/30-9/1 during camping trip).
+Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 
 ---
 
@@ -476,7 +476,7 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CHORE] 2026-08-29 ALL-DAY [R][C] Table :: chore-type=table
 
 <!-- NEW LEAD SCHEDULE starts here (approved 2026-08-22, applied 2026-08-30). Wyatt: dish lead Mon/Wed/Fri, animal lead Tue/Thu/Sun. Molly: dish lead Tue/Thu/Sun, animal lead Mon/Wed/Fri. Saturday alternates by zone week. Sunday now active - no longer skipped. -->
-<!-- CAMPING COVERAGE 8/30-9/1: Cullen and Emmitt away with Oma and Papa (home 9/2). Rileigh covers their seconds/table solo those three days - flagged heavy load, resolves 9/2. -->
+<!-- CAMPING COVERAGE 8/30-9/1: Cullen and Emmitt away with Oma and Papa (home 9/2). Rileigh covers their seconds/table solo those three days. -->
 [CHORE] 2026-08-30 ALL-DAY [M][R] Dishes :: chore-type=dishes
 [CHORE] 2026-08-30 ALL-DAY [W][R] Animals :: chore-type=animals :: notes="Rileigh covering for Cullen - camping trip"
 [CHORE] 2026-08-30 ALL-DAY [R] Table :: chore-type=table :: notes="Rileigh solo - Emmitt on camping trip"
@@ -565,10 +565,23 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [MEAL] 2026-08-29 17:30 Pizza :: meal-type=dinner :: notes="Wyatt's friend visiting"
 [MEAL] 2026-09-02 17:30 Pork chops, sweet potatoes, and salad :: meal-type=dinner
 [MEAL] 2026-09-03 17:30 Sweet potatoes and pork steaks :: meal-type=dinner :: notes="Matt returns 9/1 - welcome home meal"
-[MEAL] 2026-09-04 17:30 Korean beef and rice :: meal-type=dinner :: notes="Wyatt XC meet 9/5 - pre-meet carb load"
-[MEAL] 2026-09-05 17:30 Leftovers :: meal-type=dinner :: notes="Wyatt XC meet day - Fountain Fort Carson, leave 7:00 AM"
-[MEAL] 2026-09-07 17:30 Chicken and wild rice soup :: meal-type=dinner
 [MEAL] 2026-09-04 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday - Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
+[MEAL] 2026-09-05 17:30 Leftovers :: meal-type=dinner :: notes="Wyatt XC meet day - Fountain Fort Carson, leave 7:00 AM"
+[MEAL] 2026-09-07 17:30 Cookout at Oma and Papa's :: meal-type=dinner
+[MEAL] 2026-09-08 17:30 Chicken and wild rice soup :: meal-type=dinner
+[MEAL] 2026-09-09 17:30 Elk quesadillas :: meal-type=dinner
+[MEAL] 2026-09-10 17:30 Chicken and wild rice soup :: meal-type=dinner
+[MEAL] 2026-09-14 17:30 White chicken chili :: meal-type=dinner
+[MEAL] 2026-09-15 17:30 Fish tacos :: meal-type=dinner
+[MEAL] 2026-09-16 17:30 Chicken kabobs :: meal-type=dinner
+[MEAL] 2026-09-17 17:30 Baked ziti :: meal-type=dinner :: notes="Wyatt XC meet Sat 9/19 - pre-meet carb load"
+[MEAL] 2026-09-21 17:30 Chili :: meal-type=dinner
+[MEAL] 2026-09-22 17:30 Chicken tacos :: meal-type=dinner
+[MEAL] 2026-09-23 17:30 Brats and sausages on the grill :: meal-type=dinner
+[MEAL] 2026-09-24 17:30 Packed sandwiches :: meal-type=dinner :: notes="Wyatt XC meet - Canon City, leave 1:00 PM"
+[MEAL] 2026-09-28 17:30 Italian sausage and tortellini soup :: meal-type=dinner
+[MEAL] 2026-09-29 17:30 Carnitas tacos :: meal-type=dinner
+[MEAL] 2026-10-01 17:30 Tater tot casserole :: meal-type=dinner
 
 ---
 
@@ -788,9 +801,9 @@ Last batch: 2026-09-13 (new dish/animal lead schedule applied 8/30 forward; Rile
 [CAL] 2026-10-08 10:50 [L] Appt :: appointments :: stripe=appt
 [CAL] 2026-10-10 00:00 [FAM] St. Joseph day dinner :: family :: flag=true :: notes="Time TBD"
 [CAL] 2026-10-11 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
-[CAL] 2026-10-17 ALL-DAY [FAM] Bayer family get-together :: family :: span=2026-10-18 :: location="Colorado Springs, CO"
 [CAL] 2026-10-15 11:00 [W] Ortho :: appointments :: stripe=appt :: end=12:00 :: location="Scott Family Ortho, Pueblo, CO" :: cancel=confirmed :: notes="rescheduled to 2026-10-20"
 [CAL] 2026-10-16 10:30 [D] Endoscopy Followup :: appointments :: stripe=appt :: location="Audubon Medical Campus, 2940 N. Circle Dr, Colorado Springs, CO 80909" :: notes="Provider: Naomi Blumenberg"
+[CAL] 2026-10-17 ALL-DAY [FAM] Bayer family get-together :: family :: span=2026-10-18 :: location="Colorado Springs, CO"
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 [CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
