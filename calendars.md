@@ -571,7 +571,8 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [MEAL] 2026-09-07 17:30 Cookout at Oma and Papa's :: meal-type=dinner
 [MEAL] 2026-09-08 17:30 Chicken and wild rice soup :: meal-type=dinner
 [MEAL] 2026-09-09 17:30 Elk quesadillas :: meal-type=dinner
-[MEAL] 2026-09-10 17:30 Chicken and wild rice soup :: meal-type=dinner
+[MEAL] 2026-09-10 17:30 Butternut squash soup :: meal-type=dinner
+[MEAL] 2026-09-11 17:30 Chicken and wild rice soup :: meal-type=dinner :: notes="Matt and Wyatt at NM State Fair - family at home"
 [MEAL] 2026-09-14 17:30 White chicken chili :: meal-type=dinner
 [MEAL] 2026-09-15 17:30 Fish tacos :: meal-type=dinner
 [MEAL] 2026-09-16 17:30 Chicken kabobs :: meal-type=dinner
