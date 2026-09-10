@@ -565,8 +565,9 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [MEAL] 2026-08-29 17:30 Pizza :: meal-type=dinner :: notes="Wyatt's friend visiting"
 [MEAL] 2026-09-02 17:30 Pork chops, sweet potatoes, and salad :: meal-type=dinner
 [MEAL] 2026-09-03 17:30 Sweet potatoes and pork steaks :: meal-type=dinner :: notes="Matt returns 9/1 - welcome home meal"
-[MEAL] 2026-09-04 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday - Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
+[MEAL] 2026-09-04 17:30 Korean beef and rice :: meal-type=dinner :: notes="Wyatt XC meet 9/5 - pre-meet carb load"
 [MEAL] 2026-09-05 17:30 Leftovers :: meal-type=dinner :: notes="Wyatt XC meet day - Fountain Fort Carson, leave 7:00 AM"
+[MEAL] 2026-09-06 17:30 Hamburgers :: meal-type=dinner :: notes="Cullen and Emmitt birthday celebration with Doug and Deb"
 [MEAL] 2026-09-07 17:30 Cookout at Oma and Papa's :: meal-type=dinner
 [MEAL] 2026-09-08 17:30 Chicken and wild rice soup :: meal-type=dinner
 [MEAL] 2026-09-09 17:30 Elk quesadillas :: meal-type=dinner
@@ -774,8 +775,8 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL] 2026-09-02 08:30 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch"
 [CAL] 2026-09-03 12:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=13:00 :: notes="telehealth"
 [CAL] 2026-09-03 13:00 [R] DIBELS test :: kids
-[CAL] 2026-09-04 ALL-DAY [C][E] Cullen and Emmitt birthday :: birthdays :: notes="Hamburgers dinner. Doug and Deb invited pending confirm. Cake: chocolate with vanilla frosting, gummy worms, monster trucks, Oreos. Ice cream: coffee - Wyatt to make or buy."
-[CAL] 2026-09-06 17:00 [FAM] Cullen and Emmitt birthday dinner - with Doug and Deb :: family
+[CAL] 2026-09-04 ALL-DAY [C][E] Cullen and Emmitt birthday :: birthdays :: notes="Korean beef and rice dinner. Cake details TBD for party on 9/6."
+[CAL] 2026-09-06 17:00 [FAM] Cullen and Emmitt birthday dinner - with Doug and Deb :: family :: notes="Hamburgers."
 [CAL] 2026-09-07 14:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=15:00 :: notes="telehealth"
 [CAL] 2026-09-08 11:00 [D] K of C - Brandon Nelson IRA call :: meetings :: end=11:30
 [CAL] 2026-09-08 14:45 [D] WGU mentor meeting :: meetings :: end=15:00 :: notes="Weekly sync with Teresa Jackson."
