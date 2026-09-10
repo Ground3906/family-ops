@@ -1,6 +1,21 @@
 # setup-payroll-accrual.ps1
 # Registers BayerFamilyOps-PayrollAccrual on the ThinkPad. Run once, elevated.
 # ASCII only - PowerShell 5.1
+#
+# Trigger is DAILY, not monthly, on purpose.
+#
+# New-ScheduledTaskTrigger has no -Monthly parameter. Monthly schedules
+# require raw MSFT_TaskTimeTrigger CIM instances or schtasks.exe, both of
+# which are more fragile than the alternative.
+#
+# The alternative: payroll-accrual.ps1 already refuses to run twice in the
+# same month. It checks lastAccrualMonth and exits if the month is done. So
+# a daily trigger produces monthly behaviour, and it does something the
+# monthly trigger could not: if the ThinkPad was off, asleep, or offline on
+# the 1st, the next day it wakes up catches the accrual automatically.
+#
+# The guard is the schedule. The trigger just has to fire often enough to
+# find it. That is one moving part instead of three.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -22,13 +37,10 @@ if ($existing) {
 $action = New-ScheduledTaskAction -Execute 'powershell.exe' `
     -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$Script`""
 
-$trigger = New-ScheduledTaskTrigger -Monthly -DaysOfMonth 1 -At 6am
+$trigger = New-ScheduledTaskTrigger -Daily -At 6am
 
 $principal = New-ScheduledTaskPrincipal -UserId 'SYSTEM' -LogonType ServiceAccount -RunLevel Highest
 
-# StartWhenAvailable is the point: if the ThinkPad is off or asleep on the
-# 1st, the run happens when it next comes up rather than being skipped.
-# Skipping is exactly how three months went missing.
 $settings = New-ScheduledTaskSettingsSet `
     -StartWhenAvailable `
     -ExecutionTimeLimit (New-TimeSpan -Minutes 10) `
@@ -38,10 +50,10 @@ $settings = New-ScheduledTaskSettingsSet `
 Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger `
     -Principal $principal -Settings $settings | Out-Null
 
-Write-Host "Registered $TaskName" -ForegroundColor Green
+Write-Host "Registered $TaskName (daily 06:00, accrues once per month)" -ForegroundColor Green
 Get-ScheduledTask -TaskName $TaskName | Select-Object TaskName, State
 Write-Host ""
-Write-Host "Dry run (safe - it will skip if this month is already accrued):"
+Write-Host "Dry run - safe. September is already accrued, so it should report SKIP:"
 Write-Host "  Start-ScheduledTask -TaskName $TaskName"
 Write-Host "Then check:"
 Write-Host "  Get-Content 'C:\Users\ThinkPad X1 Carbon\Documents\family-ops\logs\payroll-accrual.log' -Tail 5"
