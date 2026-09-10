@@ -36,7 +36,7 @@ body {
 }
 #header {
   display: flex; height: var(--hdr);
-  background: var(--bg); border-bottom: 2px solid #502e0c; flex-shrink: 0;
+  background: var(--bg); border-top: 2px solid #502e0c; flex-shrink: 0;
 }
 .hdr-section { flex: 1; display: flex; align-items: center; padding: 12px 20px; }
 .hdr-left  { justify-content: flex-start; }
@@ -298,10 +298,27 @@ body {
 .kc-bank-note { font-size: 10px; font-family: system-ui, sans-serif; margin-top: 8px; color: var(--ink-soft); opacity: .7; line-height: 1.3; }
 #rate-card { padding: 14px 20px; }
 .rate-card-hdr { font-size: 10px; font-family: system-ui, sans-serif; text-transform: uppercase; letter-spacing: .2em; color: var(--ink-soft); margin-bottom: 10px; }
-.rate-grid { display: flex; flex-wrap: wrap; gap: 4px 0; }
-.rate-item { display: flex; justify-content: space-between; width: 25%; padding-right: 20px; font-size: 12px; font-family: system-ui, sans-serif; }
-.rate-item-name { color: var(--ink); opacity: .85; }
-.rate-item-price { color: var(--ink-soft); font-weight: 700; }
+.rate-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.rate-item { display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 218px; padding: 10px 8px; border-radius: 12px;
+  background: #6a3e10; border-top: 2px solid #c07030; border-left: 2px solid #a05a20;
+  border-bottom: 2px solid #180800; border-right: 2px solid #2e1004;
+  box-shadow: 0 4px 10px rgba(0,0,0,.55), inset 0 0 18px rgba(0,0,0,.28); }
+.rate-item.hero { grid-column: span 2; background: #7d4a12; border-top-color: #e08a3c; }
+.rate-item.wide { grid-column: span 2; }
+.rate-item-icon { font-size: 58px; line-height: 1; margin-bottom: 10px; }
+.rate-item.hero .rate-item-icon { font-size: 76px; }
+.rate-item-name { font-family: Georgia, serif; font-size: 26px; font-weight: 700; color: #f6e2bd;
+  text-align: center; line-height: 1.12; margin-bottom: 10px; }
+.rate-item.hero .rate-item-name { font-size: 34px; }
+.rate-item-price { font-family: Georgia, serif; font-size: 46px; font-weight: 700; color: #ffd98a;
+  letter-spacing: .01em; text-shadow: 0 2px 3px rgba(0,0,0,.6); }
+.rate-item.hero .rate-item-price { font-size: 64px; }
+#load-error { display:flex; flex-direction:column; align-items:center; justify-content:center;
+  height:100%; gap:14px; padding:0 80px; text-align:center; }
+.load-error-title { font-family:Georgia,serif; font-size:52px; font-weight:700; color:#ffd98a; }
+.load-error-body { font-family:Georgia,serif; font-size:28px; color:#f6e2bd; line-height:1.35; }
+.load-error-hint { font-family:system-ui,sans-serif; font-size:18px; color:rgba(240,200,128,.6); }
 .rate-note { font-size: 10px; font-family: system-ui, sans-serif; color: var(--ink-soft); opacity: .6; margin-top: 10px; padding-top: 8px; border-top: 1px dashed #b09050; }
 #panel-payout { flex-direction: column; padding: 20px 24px 14px 24px; gap: 12px; overflow: hidden; }
 #payout-top { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -354,18 +371,6 @@ body {
 </style>
 </head>
 <body>
-<div id="header">
-  <div class="hdr-section hdr-left">
-    <button id="btn-home"><div id="btn-home-face"><div class="home-house">&#8962;</div><div class="home-lbl">Home</div></div></button>
-  </div>
-  <div class="hdr-section hdr-center">
-    <div id="hdr-banner">
-      <div class="hdr-eyebrow">Punch List &middot; Payroll</div>
-      <div class="hdr-title">Payroll</div>
-    </div>
-  </div>
-  <div class="hdr-section hdr-right"><div id="save-status"></div></div>
-</div>
 <div id="tab-bar">
   <button class="tab-btn" data-tab="log">Log a Job</button>
   <button class="tab-btn active" data-tab="board">Earnings Board</button>
@@ -438,7 +443,8 @@ body {
 <script>
 var HOME_URL  = 'http://192.168.1.60:8080/cal-widget-current.html';
 var DATA_URL  = 'http://192.168.1.60:8080/payroll/payroll-data.json';
-var WRITE_URL = 'http://192.168.1.60:8081/save';
+var WRITE_URL  = 'http://192.168.1.60:8081/save';
+var APPEND_URL = 'http://192.168.1.60:8081/append';
 var KIDS = [
   { id:'wyatt',   name:'Wyatt',   age:14 },
   { id:'molly',   name:'Molly',   age:10 },
@@ -480,7 +486,7 @@ var selKid = null, selJob = null, logMode = 'job';
 var logHours = '', custAmt = '';
 var dedAmt = '', dedNote = '';
 var newTicketId = null;
-var gData = null, saving = false, saveErr = null;
+var gData = null, saving = false, saveErr = null, loadErr = null;
 function todayStr() { return new Date().toISOString().slice(0,10); }
 function monthKey(d) { return d.slice(0,7); }
 function monthLabel(mk) {
@@ -517,39 +523,19 @@ function canStamp() {
 function canDeduct() { return !!selKid && parseFloat(dedAmt) > 0 && dedNote.trim().length > 0; }
 function jobsForKid(kidId) { return JOBS.filter(function(j) { return !j.only || j.only === kidId; }); }
 function fmtDollars(n) { return (n < 0 ? '-' : '') + '$' + Math.abs(n).toFixed(2); }
-function seedData() {
-  return {
-    entries: [
-      {id:'seed-001',kidId:'rileigh',type:'job',   label:'Car unload',        rate:1,   unit:'flat',  hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-002',kidId:'rileigh',type:'job',   label:'Car cleanout',       rate:2,   unit:'flat',  hours:null,amount:2,date:'2026-07-09'},
-      {id:'seed-003',kidId:'rileigh',type:'job',   label:'Unload dishes',      rate:1,   unit:'flat',  hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-004',kidId:'molly',  type:'job',   label:'Unload car',         rate:1,   unit:'flat',  hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-005',kidId:'cullen', type:'deduct',label:'Attitude',           rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
-      {id:'seed-006',kidId:'emmitt', type:'deduct',label:'Attitude',           rate:null,unit:'custom',hours:null,amount:1,date:'2026-07-09'},
-    ],
-    categories:{
-      totals:{
-        wyatt:  {give:2,save:6, spend:15 },
-        molly:  {give:2,save:4, spend:-11},
-        rileigh:{give:2,save:2, spend:1  },
-        cullen: {give:2,save:2, spend:3  },
-        emmitt: {give:2,save:2, spend:8  },
-      },
-      log:[],lastAccrualMonth:'2026-06',lastPayoutMonth:{},
-    }
-  };
-}
 async function loadData() {
   try {
     var res = await fetch(DATA_URL + '?t=' + Date.now(), {cache:'no-store'});
-    if (res.ok) { gData = await res.json(); } else { gData = seedData(); }
-  } catch(e) { gData = seedData(); }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    gData = await res.json();
+    loadErr = null;
+  } catch(e) { gData = null; loadErr = 'Cannot reach the ledger. Nothing can be logged until this clears.'; }
 }
-async function persist() {
-  if (!gData) return;
+async function persist(op) {
+  if (!gData || !op) return;
   saving = true; updateSaveStatus();
   try {
-    var res = await fetch(WRITE_URL, {method:'POST', headers:{'Content-Type':'application/json','Accept':'*/*'}, body:JSON.stringify(gData)});
+    var res = await fetch(APPEND_URL, {method:'POST', headers:{'Content-Type':'application/json','Accept':'*/*'}, body:JSON.stringify(op)});
     if (!res.ok) throw new Error('HTTP ' + res.status);
     saveErr = null;
   } catch(e) { saveErr = 'Save failed - check ThinkPad'; }
@@ -668,7 +654,8 @@ async function doStamp() {
   newTicketId = entry.id;
   gData.entries.unshift(entry);
   selJob = null; logHours = ''; custAmt = '';
-  renderJobGrid(); renderCondFields(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets(); persist();
+  renderJobGrid(); renderCondFields(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets();
+  persist({addEntries:[entry]});
 }
 async function doDeduct() {
   if (!canDeduct() || !gData) return;
@@ -681,12 +668,13 @@ async function doDeduct() {
   newTicketId = entry.id;
   gData.entries.unshift(entry);
   dedAmt = ''; dedNote = '';
-  renderDeductPanel(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets(); persist();
+  renderDeductPanel(); updateAmountDisplay(); updateActionBtn(); renderRecentTickets();
+  persist({addEntries:[entry]});
 }
 async function deleteTicket(id) {
   if (!gData) return;
   gData.entries = gData.entries.filter(function(e) { return e.id !== id; });
-  renderRecentTickets(); persist();
+  renderRecentTickets(); persist({removeEntryIds:[id]});
 }
 function renderRecentTickets() {
   var el = document.getElementById('recent-list');
@@ -723,9 +711,24 @@ function renderBoard() {
                '<div class="jar-amt' + (v < 0 ? ' neg' : '') + '">' + fmtDollars(v) + '</div></div>';
       }).join('') + '</div>' + bank + '</div>';
   }).join('');
-  document.getElementById('rate-grid').innerHTML = JOBS.filter(function(j) { return j.id !== 'custom'; }).map(function(j) {
-    return '<div class="rate-item"><span class="rate-item-name">' + j.label + (j.only ? ' *' : '') + '</span>' +
-           '<span class="rate-item-price">$' + j.rate + (j.unit === 'hour' ? '/hr' : '') + '</span></div>';
+  var HERO = ['chip','coop'];
+  var list = JOBS.filter(function(j) { return j.id !== 'custom'; });
+  list.sort(function(a,b) {
+    var ah = HERO.indexOf(a.id) > -1, bh = HERO.indexOf(b.id) > -1;
+    if (ah !== bh) return ah ? -1 : 1;
+    return (b.rate || 0) - (a.rate || 0);
+  });
+  var cells = 0;
+  list.forEach(function(j) { cells += (HERO.indexOf(j.id) > -1) ? 2 : 1; });
+  var cols = 6, slack = (Math.ceil(cells / cols) * cols) - cells;
+  document.getElementById('rate-grid').innerHTML = list.map(function(j, i) {
+    var hero = HERO.indexOf(j.id) > -1;
+    var wide = (!hero && slack > 0 && i === list.length - 1);
+    var cls = 'rate-item' + (hero ? ' hero' : '') + (wide ? ' wide' : '');
+    return '<div class="' + cls + '">' +
+           '<div class="rate-item-icon">' + (j.icon || '') + '</div>' +
+           '<div class="rate-item-name">' + j.label + (j.only ? ' *' : '') + '</div>' +
+           '<div class="rate-item-price">$' + j.rate + (j.unit === 'hour' ? '/hr' : '') + '</div></div>';
   }).join('');
 }
 function renderPayout() {
@@ -760,14 +763,18 @@ async function doAddMonth() {
   if (!gData) return;
   var cats = gData.categories, mk = monthKey(todayStr());
   if (cats.lastAccrualMonth === mk) return;
+  var accrDelta = {}, accrLog = [];
   KIDS.forEach(function(k) {
     var r = RATES[k.id], bal = cats.totals[k.id];
     bal.give  = parseFloat((bal.give  + r.give).toFixed(2));
     bal.save  = parseFloat((bal.save  + r.save).toFixed(2));
     bal.spend = parseFloat((bal.spend + r.spend).toFixed(2));
-    cats.log.unshift({id:uid(),kidId:k.id,type:'accrue',note:monthLabel(mk)+' allowance added',date:todayStr()});
+    accrDelta[k.id] = {give:r.give, save:r.save, spend:r.spend};
+    var lg = {id:uid(),kidId:k.id,type:'accrue',note:monthLabel(mk)+' allowance added',date:todayStr()};
+    cats.log.unshift(lg); accrLog.push(lg);
   });
-  cats.lastAccrualMonth = mk; renderPayout(); persist();
+  cats.lastAccrualMonth = mk; renderPayout();
+  persist({addLog:accrLog, totalsDelta:accrDelta, setAccrualMonth:mk});
 }
 async function doRunKid(kidId) {
   if (!gData) return;
@@ -783,10 +790,13 @@ async function doRunKid(kidId) {
   bal.give  = parseFloat((bal.give  + give).toFixed(2));
   bal.save  = parseFloat((bal.save  + save).toFixed(2));
   bal.spend = parseFloat((bal.spend + spend).toFixed(2));
-  cats.log.unshift({id:uid(),kidId:kidId,type:'payout',
+  var payDelta = {}; payDelta[kidId] = {give:give, save:save, spend:spend};
+  var payLog = {id:uid(),kidId:kidId,type:'payout',
     note:monthLabel(mk)+' commission - Give $'+give.toFixed(2)+', Save $'+save.toFixed(2)+', Spend $'+spend.toFixed(2),
-    date:todayStr()});
-  cats.lastPayoutMonth[kidId] = mk; renderPayout(); persist();
+    date:todayStr()};
+  cats.log.unshift(payLog);
+  cats.lastPayoutMonth[kidId] = mk; renderPayout();
+  persist({addLog:[payLog], totalsDelta:payDelta, setPayoutMonth:{kid:kidId, month:mk}});
 }
 async function doRunAll() {
   if (!gData) return;
@@ -829,10 +839,30 @@ document.addEventListener('click', function(e) {
 (async function init() {
   document.getElementById('log-date').value = todayStr();
   await loadData();
+  if (!gData) {
+    document.getElementById('content').innerHTML =
+      '<div id="load-error"><div class="load-error-title">Ledger unavailable</div>' +
+      '<div class="load-error-body">' + loadErr + '</div>' +
+      '<div class="load-error-hint">Nothing has been lost. Reload once the ThinkPad is reachable.</div></div>';
+    updateSaveStatus();
+    return;
+  }
   renderBoard();
   renderRecentTickets();
   switchTab('board');
 })();
 </script>
+<div id="header">
+  <div class="hdr-section hdr-left">
+    <button id="btn-home"><div id="btn-home-face"><div class="home-house">&#8962;</div><div class="home-lbl">Home</div></div></button>
+  </div>
+  <div class="hdr-section hdr-center">
+    <div id="hdr-banner">
+      <div class="hdr-eyebrow">Punch List &middot; Payroll</div>
+      <div class="hdr-title">Payroll</div>
+    </div>
+  </div>
+  <div class="hdr-section hdr-right"><div id="save-status"></div></div>
+</div>
 </body>
 </html>
