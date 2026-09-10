@@ -21,6 +21,19 @@
 # Git step checks the actual exit code of add/commit/push. The log only
 # reports success when all three genuinely succeeded, tells a no-op apart
 # from a real failure, and records the actual git error text.
+#
+# FIX 2026-09-09: from 2026-08-26 onward every save logged
+# "Applied to disk but git FAILED - exception: To github.com:..." while the
+# commit and push actually succeeded. Twelve false failures, zero lost records.
+# Cause: git writes push progress to stderr, `2>&1` turned those lines into
+# error records, and $ErrorActionPreference = 'Stop' made the first one
+# terminating. Control jumped to the catch block before the $LASTEXITCODE check
+# on the next line ever ran, so the exit-code logic below was correct but
+# unreachable. Git calls now route through Invoke-Git, which relaxes the
+# preference for the duration of the call only; cmdlets in this script still
+# fail hard under 'Stop'. Push-Location/Pop-Location removed at the same time:
+# Invoke-Git passes -C, and the old catch could call Pop-Location on a stack it
+# had never pushed to. Same root cause and same fix as weekly-push.ps1.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -29,6 +42,7 @@ $RepoPath = 'C:\Users\ThinkPad X1 Carbon\Documents\family-ops'
 $DataPath = Join-Path $RepoPath 'payroll\payroll-data.json'
 $LogPath  = Join-Path $RepoPath 'logs\payroll-write.log'
 $Port     = 8081
+$GitExit  = 0
 
 # No BOM. The old script used [System.Text.Encoding]::UTF8, which emits one
 # under .NET Framework and left a BOM on every save.
@@ -38,6 +52,22 @@ function Write-Log {
     param([string]$Msg)
     $ts = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
     "$ts  $Msg" | Out-File -FilePath $LogPath -Append -Encoding ASCII
+}
+
+# Run a git command without letting its stderr chatter terminate the script.
+# Sets $script:GitExit to the real process exit code. Callers test $GitExit,
+# never $LASTEXITCODE, because the pipeline may have moved on by then.
+function Invoke-Git {
+    param([string[]]$GitArgs)
+    $prev = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        $out = & git -C $RepoPath @GitArgs 2>&1
+        $script:GitExit = $LASTEXITCODE
+        return $out
+    } finally {
+        $ErrorActionPreference = $prev
+    }
 }
 
 function Read-Ledger {
@@ -197,31 +227,29 @@ try {
 
                 $gitStatus = "unknown"
                 try {
-                    Push-Location $RepoPath
-
-                    git add payroll/payroll-data.json 2>&1 | Out-Null
-                    if ($LASTEXITCODE -ne 0) {
-                        $gitStatus = "add failed (exit $LASTEXITCODE)"
+                    Invoke-Git @('add', 'payroll/payroll-data.json') | Out-Null
+                    if ($GitExit -ne 0) {
+                        $gitStatus = "add failed (exit $GitExit)"
                     } else {
-                        $staged = git diff --cached --stat -- payroll/payroll-data.json 2>&1
+                        $staged = Invoke-Git @('diff', '--cached', '--stat', '--', 'payroll/payroll-data.json')
                         if (-not $staged) {
                             $gitStatus = "no change to commit"
                         } else {
                             $stamp = Get-Date -Format 'yyyy-MM-dd HH:mm'
-                            $commitOut = git commit -m "payroll: $($changes -join ', ') $stamp" 2>&1
-                            if ($LASTEXITCODE -ne 0) {
-                                $gitStatus = "commit failed (exit $LASTEXITCODE): $commitOut"
+                            $commitOut = Invoke-Git @('commit', '-m', "payroll: $($changes -join ', ') $stamp")
+                            if ($GitExit -ne 0) {
+                                $gitStatus = "commit failed (exit $GitExit): $commitOut"
                             } else {
                                 # Rebase onto whatever an agent pushed while we were local.
                                 # Without this the push loses to the remote and the two
                                 # copies drift apart with nothing saying so.
-                                git pull --rebase 2>&1 | Out-Null
-                                if ($LASTEXITCODE -ne 0) {
-                                    $gitStatus = "pull --rebase failed (exit $LASTEXITCODE) - local and repo have diverged"
+                                $rebaseOut = Invoke-Git @('pull', '--rebase')
+                                if ($GitExit -ne 0) {
+                                    $gitStatus = "pull --rebase failed (exit $GitExit) - local and repo have diverged: $rebaseOut"
                                 } else {
-                                    $pushOut = git push 2>&1
-                                    if ($LASTEXITCODE -ne 0) {
-                                        $gitStatus = "push failed (exit $LASTEXITCODE): $pushOut"
+                                    $pushOut = Invoke-Git @('push')
+                                    if ($GitExit -ne 0) {
+                                        $gitStatus = "push failed (exit $GitExit): $pushOut"
                                     } else {
                                         $gitStatus = "ok"
                                     }
@@ -229,11 +257,8 @@ try {
                             }
                         }
                     }
-
-                    Pop-Location
                 } catch {
-                    Pop-Location
-                    $gitStatus = "exception: $_"
+                    $gitStatus = "exception (line $($_.InvocationInfo.ScriptLineNumber)): $_"
                 }
 
                 if ($gitStatus -eq "ok") {
