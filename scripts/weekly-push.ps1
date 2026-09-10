@@ -23,6 +23,17 @@
 # then fails to push (as the HTTPS hang did) used to leave that commit stranded forever,
 # because a later run with nothing new to stage never checked for it. See
 # repo-write-discipline.md for the full incident.
+#
+# FIX 2026-09-09: every run from 2026-08-23 onward logged "FATAL: To github.com:..."
+# and exited 1 while actually committing and pushing successfully. Cause: git writes
+# push progress to stderr, `2>&1` turned those lines into error records, and
+# $ErrorActionPreference = 'Stop' made the first one terminating. Control jumped to the
+# catch block BEFORE the $LASTEXITCODE check on the next line ever ran. The exit-code
+# checks in this script were always correct; they were simply unreachable. Git calls now
+# route through Invoke-Git, which relaxes the preference for the duration of the call
+# only, so cmdlets in this script still fail hard under 'Stop'. Note the first FATAL
+# (2026-08-23) is the Sunday immediately after the 2026-08-21 SSH fix: pushes only began
+# printing to stderr once they started working.
 
 Set-StrictMode -Version 1
 $ErrorActionPreference = 'Stop'
@@ -30,9 +41,26 @@ $ErrorActionPreference = 'Stop'
 $RepoRoot  = "C:\Users\ThinkPad X1 Carbon\Documents\family-ops"
 $PushLog   = Join-Path $RepoRoot "logs\push-heartbeat.log"
 $Timestamp = (Get-Date -Format "yyyy-MM-dd HH:mm:ss")
+$GitExit   = 0
 
 function Log { param([string]$msg)
     Add-Content -Path $PushLog -Value "[$Timestamp] $msg" -Encoding UTF8
+}
+
+# Run a git command without letting its stderr chatter terminate the script.
+# Sets $script:GitExit to the real process exit code. Callers test $GitExit,
+# never $LASTEXITCODE, because the pipeline may have moved on by then.
+function Invoke-Git {
+    param([string[]]$GitArgs)
+    $prev = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        $out = & git -C $RepoRoot @GitArgs 2>&1
+        $script:GitExit = $LASTEXITCODE
+        return $out
+    } finally {
+        $ErrorActionPreference = $prev
+    }
 }
 
 try {
@@ -40,8 +68,8 @@ try {
     if (-not $net) { Log "SKIP - no network"; exit 0 }
 
     # Pull first to avoid conflicts
-    $pull = & git -C $RepoRoot pull 2>&1
-    if ($LASTEXITCODE -ne 0) { Log "PULL FAIL: $($pull -join ' | ')"; exit 1 }
+    $pull = Invoke-Git @('pull')
+    if ($GitExit -ne 0) { Log "PULL FAIL: $($pull -join ' | ')"; exit 1 }
 
     # Stage files if they exist
     $filesToAdd = @(
@@ -53,7 +81,7 @@ try {
     foreach ($f in $filesToAdd) {
         $full = Join-Path $RepoRoot $f
         if (Test-Path $full) {
-            & git -C $RepoRoot add $f 2>&1 | Out-Null
+            Invoke-Git @('add', $f) | Out-Null
             $staged++
         }
     }
@@ -63,13 +91,13 @@ try {
     # Bail if nothing actually changed -- but first check for a stranded commit from a
     # prior run that committed successfully and then failed to push. Without this check,
     # a run with nothing new to stage exits here and a stuck commit sits forever.
-    $diff = & git -C $RepoRoot diff --cached --stat 2>&1
+    $diff = Invoke-Git @('diff', '--cached', '--stat')
     if (-not $diff) {
-        $ahead = & git -C $RepoRoot rev-list --count 'origin/main..HEAD' 2>&1
-        if ($LASTEXITCODE -eq 0 -and $ahead -match '^\d+$' -and [int]$ahead -gt 0) {
+        $ahead = Invoke-Git @('rev-list', '--count', 'origin/main..HEAD')
+        if ($GitExit -eq 0 -and $ahead -match '^\d+$' -and [int]$ahead -gt 0) {
             Log "No new changes, but $ahead unpushed commit(s) found -- pushing existing commits."
-            $recoverPush = & git -C $RepoRoot push 2>&1
-            if ($LASTEXITCODE -ne 0) { Log "PUSH FAIL (recovery): $($recoverPush -join ' | ')"; exit 1 }
+            $recoverPush = Invoke-Git @('push')
+            if ($GitExit -ne 0) { Log "PUSH FAIL (recovery): $($recoverPush -join ' | ')"; exit 1 }
             Log "OK - recovered $ahead previously stuck commit(s)"
             exit 0
         }
@@ -79,16 +107,16 @@ try {
 
     # Commit and push
     $week = Get-Date -Format "yyyy-MM-dd"
-    & git -C $RepoRoot commit -m "ops: weekly NightWatch push $week" 2>&1 | Out-Null
-    if ($LASTEXITCODE -ne 0) { Log "COMMIT FAIL"; exit 1 }
+    Invoke-Git @('commit', '-m', "ops: weekly NightWatch push $week") | Out-Null
+    if ($GitExit -ne 0) { Log "COMMIT FAIL"; exit 1 }
 
-    $push = & git -C $RepoRoot push 2>&1
-    if ($LASTEXITCODE -ne 0) { Log "PUSH FAIL: $($push -join ' | ')"; exit 1 }
+    $push = Invoke-Git @('push')
+    if ($GitExit -ne 0) { Log "PUSH FAIL: $($push -join ' | ')"; exit 1 }
 
     Log "OK - pushed week of $week"
     Write-Host "[weekly-push] Done."
 
 } catch {
-    Log "FATAL: $_"
+    Log "FATAL (line $($_.InvocationInfo.ScriptLineNumber)): $_"
     exit 1
 }
