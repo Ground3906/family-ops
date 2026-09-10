@@ -2,7 +2,7 @@
     "checks":  {
                    "graph_sync":  {
                                       "status":  "stale",
-                                      "age_hours":  6.96
+                                      "age_hours":  55.16
                                   },
                    "pull_job":  {
                                     "status":  "ok",
@@ -18,7 +18,7 @@
                                    }
                },
     "total_alerts":  1,
-    "disk_free_gb":  230.45,
+    "disk_free_gb":  228.94,
     "pending_arrivals":  2,
-    "last_updated":  "2026-09-05T20:00:01.7507746-06:00"
+    "last_updated":  "2026-09-09T20:00:02.1966330-06:00"
 }
