@@ -22,14 +22,21 @@
 #
 # Type scaled to suit: icon 42, name 21, price 36. Verified to fit a row
 # even at the tightest balance-card height tested.
+#
+# TARGET pin history: first published as 46812 / 4d55805c50e9498d, which was
+# wrong. That figure came from running this patch against a stale local copy
+# of the v2 output, one built before the loadErr declaration bug was fixed.
+# The deployed file carries that declaration and is 16 bytes longer. The pin
+# below is derived from the actual file in the repo. The guard caught the
+# mismatch and refused to write, which is what it is for.
 
 import hashlib
 import os
 import subprocess
 import sys
 
-TARGET_SHA256 = "4d55805c50e9498d"
-TARGET_BYTES = 46812
+TARGET_SHA256 = "722d2b9a917ac0c0"
+TARGET_BYTES = 46828
 F = "payroll-current.html"
 
 if not os.path.exists(F):
