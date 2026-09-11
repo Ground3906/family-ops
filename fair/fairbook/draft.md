@@ -430,7 +430,7 @@ Custer County acknowledges and adopts CC 2.2, under which an exhibitor must comp
 
 An exhibitor may enter no more than the maximum number of entries per species listed in Addendum §5. That maximum is the same for every market species. It is counted in the entry unit stated in the subchapter governing that species, so that a pen entered as one unit counts as one entry.
 
-Market beef, market swine, market sheep, market goat, market chicken, market turkey, and market rabbit are each a species for the purpose of this section.
+Market beef, market swine, market lamb, market goat, market chicken, market turkey, and market rabbit are each a species for the purpose of this section.
 
 No further animal may be entered in a species after the close of the fair weigh-in. An animal entered under this section shows under CC 3.1.13.
 
@@ -474,11 +474,11 @@ Custer County acknowledges and adopts the CSF requirement that no animal be fed 
 
 **CC 3.1.11 Minimum Weight Gain**
 
-The weight of a market animal recorded at the fair weigh-in shall exceed the weight of that animal recorded at the initial weigh-in. This section applies to market beef, market swine, market sheep, and market goat. A market project animal is expected to gain weight across the project period under the standard of care stated at CC 2.15.
+The weight of a market animal recorded at the fair weigh-in shall exceed the weight of that animal recorded at the initial weigh-in. This section applies to market beef, market swine, market lamb, and market goat. A market project animal is expected to gain weight across the project period under the standard of care stated at CC 2.15.
 
 **CC 3.1.12 Grand Drive Eligibility**
 
-An animal that does not meet the minimum weight for its species is not eligible for the Grand Drive. An animal that exceeds the maximum weight for its species is not eligible for the Grand Drive. Such an animal shows and sells as stated in the subchapter governing its species. This section applies to market beef, market swine, market sheep, and market goat.
+An animal that does not meet the minimum weight for its species is not eligible for the Grand Drive. An animal that exceeds the maximum weight for its species is not eligible for the Grand Drive. Such an animal shows and sells as stated in the subchapter governing its species. This section applies to market beef, market swine, market lamb, and market goat.
 
 **CC 3.1.13 Feeder Animals**
 
@@ -582,6 +582,28 @@ Custer County acknowledges and adopts the CSF requirement that exhibitors only a
 
 Custer County acknowledges and adopts the CSF Market Beef competition requirements prohibiting aerosols in the show arena or holding pens.
 
+**CC 3.2.9 Led Bred and Fed**
+
+Led Bred and Fed is a market beef class. An animal entered in this class shows in its market beef weight class and, in addition, in the Led Bred and Fed competition stated in this section.
+
+(a) An animal entered in the Led Bred and Fed class must meet each of the following conditions.
+
+(i) The animal must have been born in Custer County.
+
+(ii) The dam of the animal must have been a resident of Custer County for at least 30 days before conception. A dam is a resident where it is part of an established herd within Custer County.
+
+(iii) The sire of the animal must have been physically in Custer County at the time of conception, or artificial insemination must have been performed using semen from a resident sire.
+
+(iv) The dam must not have been taken out of Custer County to be bred.
+
+(v) Where an embryo transfer is used, the embryo must have been flushed from a resident dam of Custer County and implanted into a recipient dam within Custer County.
+
+(vi) The animal must be the market beef project of a Custer County 4-H or FFA member and must be shown under CC 2.16.
+
+(b) The Led Bred and Fed competition is held after the Grand Drive for market beef and is judged as a market class. The 2 highest-placing Led Bred and Fed animals in each market beef weight class return to the show ring to compete for Grand Champion and Reserve Grand Champion Led Bred and Fed.
+
+(c) A prize is awarded to the Grand Champion Led Bred and Fed and to the Reserve Grand Champion Led Bred and Fed. The Grand Champion Led Bred and Fed sells third in the market beef order in the Market Livestock Sale.
+
 ---
 
 ### CC 3.3 — Market Swine
@@ -634,11 +656,11 @@ Custer County acknowledges and adopts the CSF requirement that exhibitors only a
 
 ---
 
-### CC 3.4 — Market Sheep
+### CC 3.4 — Market Lamb
 
 **CC 3.4.1 Rules That Reach This Department**
 
-This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Sheep. Requirements stated elsewhere in this book that reach this department are listed below.
+This subchapter states only those requirements that differ from CC 3.1 or that exist only in Market Lamb. Requirements stated elsewhere in this book that reach this department are listed below.
 
 CC 2.1 through CC 2.13 — Requirements applying to every exhibitor
 
@@ -654,7 +676,7 @@ CC 7 — Showmanship
 
 Scrapie is a fatal disease of the nervous system that affects sheep and goats. The United States Department of Agriculture (USDA) runs a national program to track and eradicate it, and that program requires certain sheep and goats to carry an official identification tag, called a scrapie flock identification tag, that links the animal to its flock of origin.
 
-Custer County acknowledges and adopts the federal scrapie identification requirement recognized by the CSF, under which sexually intact sheep, and wethers 18 months of age and older, must carry a scrapie flock identification tag. Custer County applies this requirement to every sheep. Every sheep entered in the market sheep show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
+Custer County acknowledges and adopts the federal scrapie identification requirement recognized by the CSF, under which sexually intact sheep, and wethers 18 months of age and older, must carry a scrapie flock identification tag. Custer County applies this requirement to every sheep. Every sheep entered in the market lamb show shall carry a scrapie flock identification tag, without regard to the age or sex of the animal.
 
 **CC 3.4.3 Shearing**
 
@@ -662,7 +684,7 @@ Every market lamb shall be rough shorn before the fair weigh-in. The deadline fo
 
 **CC 3.4.5 Bracing and Feet**
 
-Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the position of the animal in the show ring, under which the front feet of the sheep must remain on the show ring floor while the animal is being shown, and the judge and the superintendent have the discretion to enforce disqualification. Custer County provides that bracing is permitted while showing a market lamb, provided the front feet of the animal remain on the ground.
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the position of the animal in the show ring, under which the front feet of the lamb must remain on the show ring floor while the animal is being shown, and the judge and the superintendent have the discretion to enforce disqualification. Custer County provides that bracing is permitted while showing a market lamb, provided the front feet of the animal remain on the ground.
 
 **CC 3.4.6 Drenching**
 
@@ -670,27 +692,27 @@ CC 3.1.17 permits the drenching of an animal by the drenching process. For a mar
 
 **CC 3.4.7 Classes Offered**
 
-The class offered in the market sheep division is Market Sheep. Breeding Sheep is not a market class. See CC 6.
+The class offered in the market lamb division is Market Lamb. Breeding Sheep is not a market class. See CC 6.
 
 **CC 3.4.8 Weight and Sale Eligibility**
 
-The minimum and maximum weights for market sheep are listed in Addendum §5.
+The minimum and maximum weights for market lamb are listed in Addendum §5.
 
-A market sheep under the minimum weight shall show in the lightweight class. It shall not sell in the Market Livestock Sale.
+A market lamb under the minimum weight shall show in the lightweight class. It shall not sell in the Market Livestock Sale.
 
-A market sheep over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §5. The weight recorded at the fair weigh-in does not set its sale weight.
+A market lamb over the maximum weight shall show in the heaviest weight class. That animal sells at the maximum weight listed in Addendum §5. The weight recorded at the fair weigh-in does not set its sale weight.
 
 **CC 3.4.8a Age**
 
-Every market sheep shall have its milk teeth at the fair weigh-in. The licensed veterinarian may perform a dental check to verify the age of any market sheep.
+Every market lamb shall have its milk teeth at the fair weigh-in. The licensed veterinarian may perform a dental check to verify the age of any market lamb.
 
 **CC 3.4.9 Eligible Animals**
 
-Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing eligible animals, under which purebred, grade, and crossbred wethers and ewe lambs are eligible, and a male animal having one or both testicles contained in the body cavity is not eligible to show. The licensed veterinarian may examine any market sheep for this condition upon arrival at the fairgrounds under CC 2.14.
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing eligible animals, under which purebred, grade, and crossbred wethers and ewe lambs are eligible, and a male animal having one or both testicles contained in the body cavity is not eligible to show. The licensed veterinarian may examine any market lamb for this condition upon arrival at the fairgrounds under CC 2.14.
 
 **CC 3.4.10 Holding Area Access**
 
-Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the holding area, under which no iced or wet towel is allowed in the holding area, and no person other than the exhibitor may enter a sheep holding or staging pen at any time.
+Custer County acknowledges and adopts the CSF Market Lambs competition requirements governing the holding area, under which no iced or wet towel is allowed in the holding area, and no person other than the exhibitor may enter a lamb holding or staging pen at any time.
 
 ---
 
@@ -944,7 +966,7 @@ CC 3.2.2a — Market beef weight and sale eligibility
 
 CC 3.3.2 — Market swine weight and sale eligibility
 
-CC 3.4.8 — Market sheep weight and sale eligibility
+CC 3.4.8 — Market lamb weight and sale eligibility
 
 CC 3.5.3 — Market goat weight and sale eligibility
 
@@ -1584,11 +1606,15 @@ Requirements applying to every showmanship class are stated at CC 7.1, including
 
 **CC 7.2.2 Qualification**
 
-The Champion Senior, Intermediate, and Junior Showmen from the Horse, Beef, Swine, Sheep, and Goat shows compete in the Livestock Master Showmanship Contest.
+The Champion Senior, Intermediate, and Junior Showmen from the Horse, Beef, Swine, Lamb, and Goat shows compete in the Livestock Master Showmanship Contest.
 
 **CC 7.2.3 Multiple Qualification and Backfill**
 
 A participant must compete in the first animal class in which they qualify. Where the Champion Showman of an animal class is unable to compete, the next highest qualifier may compete in their place. Where an animal class has no Champion Showman, that animal class is dropped from the contest.
+
+**CC 7.2.3a Written Examination**
+
+Every participant in the Livestock Master Showmanship Contest must take a written examination. The examination covers general industry questions on Market Beef, Market Goat, Market Lamb, Market Swine, and Horse. The examination score counts 30 percent of the participant's overall score in the contest.
 
 **CC 7.2.4 Awards**
 

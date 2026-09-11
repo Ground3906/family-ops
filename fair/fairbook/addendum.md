@@ -176,7 +176,7 @@ The floor buyer for each market species, designated by the Authority under CC 4.
 |---|---|
 | Market Beef | |
 | Market Swine | |
-| Market Sheep | |
+| Market Lamb | |
 | Market Goat | |
 | Market Poultry | |
 | Market Rabbit | |
@@ -424,7 +424,7 @@ This limit is the same for every species and is stated here once.
 | Governing rule | CC 3.3.2 |
 | Other requirements | CC 3.3.2a identification, CC 3.3.5 pen assignment |
 
-**Market Sheep**
+**Market Lamb**
 
 | | |
 |---|---|
