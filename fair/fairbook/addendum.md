@@ -733,7 +733,7 @@ This is a notice of the escalation step recorded, not a finding requiring the pe
 
 Filed with the sale committee under CC 4.3.1, no later than one hour after the conclusion of the beef show. An animal not declared does not sell.
 
-**[FORM PENDING — the county's existing sale declaration form to be supplied and reproduced here.]**
+The county's existing sale declaration form is reproduced in this section. It is not yet included in this edition.
 
 ---
 
