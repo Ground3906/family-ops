@@ -80,6 +80,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - Swim practice in season - 09:30-11:30 Florence Pool.
 - Some weeks K. apt 1400.
 - Lenten Mass 1800 some Thursdays.
+- Molly - Wonderhood Program 1130-1530 (school year, see canonical block).
 
 ### Friday
 - Pig feed.
@@ -123,6 +124,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **WYATT CROSS COUNTRY block is canonical. Never add individual XC practice or meet entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **NET+ BOOT CAMP block is canonical. Never add individual boot camp session entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
+- **MOLLY WONDERHOOD PROGRAM entry (in RECURRING - Weekly) is canonical. Never add individual Thursday entries to the monthly date sections.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
@@ -157,6 +159,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
+[CAL-RECUR weekly start=2026-09-17 day=thu end=2027-05-27 skip=2026-11-26,2026-12-24,2026-12-31] 11:30 [M] Wonderhood Program :: kids :: end=15:30 :: notes="Runs through May 2027. Skips Thanksgiving and Christmas break Thursdays - confirm exact break dates with Molly's program if longer."
 
 ---
 
