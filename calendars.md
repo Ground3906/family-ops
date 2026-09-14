@@ -796,6 +796,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL] 2026-09-10 08:30 [D] Lab review :: appointments :: stripe=appt :: location="Custer County Health Center, Westcliffe, CO" :: notes="Provider: Caitlin Tremblay"
 [CAL] 2026-09-11 ALL-DAY [D][W] NM State Fair - Turnpike Troubadours concert :: family :: travel=true :: location="Tingley Coliseum, Expo New Mexico, Albuquerque, NM" :: notes="Concert 6:00 PM. Driving to W's XC meet the next morning - overnight logistics TBD."
 [CAL] 2026-09-13 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
+[CAL] 2026-09-13 13:00 [FAM] Family meal planning :: family :: end=15:00 :: notes="Meal suggestions and dinner-duty assignments for the coming weeks."
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
 [CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
@@ -827,6 +828,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 ### NOVEMBER 2026
 
 [CAL] 2026-11-07 ALL-DAY [D] 3rd Rifle Elk Season :: misc :: span=2026-11-15 :: travel=true
+[CAL] 2026-11-08 ALL-DAY [M][R] Girls on the Run race :: kids :: location="Colorado Springs, CO"
 [CAL] 2026-11-16 10:20 [C] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-11-16 10:50 [E] Small World Pediatric appt :: appointments :: stripe=appt :: location="Small World Pediatrics, 332 S Orchard Springs Dr Ste 150, Pueblo West, CO"
 [CAL] 2026-11-17 11:00 [D] Apt - PT w/ Drake :: appointments :: stripe=appt :: location="HRRMC, Westcliffe, CO" :: notes="knee, leg, back"
