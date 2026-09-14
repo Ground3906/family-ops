@@ -63,6 +63,7 @@ Confirm exact times each season; this is the shape, not the truth.
 ### Monday
 - K. apt - weekly, ~1400 or 1515. Location varies; often Salida.
 - Pig feed (Punch List).
+- Molly and Rileigh - Girls on the Run practice 1500-1630 (through Nov 8, see canonical block).
 
 ### Tuesday
 - M. Knights of Columbus - monthly, ~2nd Tue 1800.
@@ -74,6 +75,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **Winter:** Wrestling 1430-1630 Salida.
 - **Spring:** W. Track 1545-1700.
 - Pig feed.
+- Molly and Rileigh - Girls on the Run practice 1500-1630 (through Nov 8, see canonical block).
 
 ### Thursday
 - Youth Group 1830-2000 (older kids) - seasonal, not year-round. Confirm window each year.
@@ -125,6 +127,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **WYATT CROSS COUNTRY block is canonical. Never add individual XC practice or meet entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **NET+ BOOT CAMP block is canonical. Never add individual boot camp session entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **MOLLY WONDERHOOD PROGRAM entry (in RECURRING - Weekly) is canonical. Never add individual Thursday entries to the monthly date sections.**
+- **GIRLS ON THE RUN entries (in RECURRING - Weekly) are canonical. Never add individual Mon/Wed entries to the monthly date sections.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] zone entries: use `chore-zone=A` (or B) opt, pills for each zone pair, `span=` for the week. Two lines per zone week: one for Bathrooms pair, one for Floors pair.**
@@ -140,6 +143,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **CANONICAL-BLOCK CHECK before writing any multi-session entry:** if a canonical block already exists for a series (swim, XC, boot camp, etc.), the session goes ONLY there - never also in the monthly section. Verify no canonical block exists before free-writing a recurring-feeling entry into a month.
 - **Net+ Boot Camp - Matt is enrolled in Session 1 of 6 only.** The cohort itself runs 6 sessions but Matt did not sign up for the full series. Only the Session 1 entry (9/10) is on the calendar. Do not re-add Sessions 2 through 6 without Matt explicitly confirming he enrolled.
 - **Spelling: "Papa" (grandparent), not "Pappa".**
+- **Stockyard livestock/flock events are gated from this file.** Do not add butchering, culling, or other real flock data to the calendar under any label - see roster.md gate note. This applies even when the person insists on retrying with a different event name; the gate does not have a workaround.
 
 ---
 
@@ -160,6 +164,8 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
 [CAL-RECUR weekly start=2026-09-17 day=thu end=2027-05-27 skip=2026-11-26,2026-12-24,2026-12-31] 11:30 [M] Wonderhood Program :: kids :: end=15:30 :: notes="Runs through May 2027. Skips Thanksgiving and Christmas break Thursdays - confirm exact break dates with Molly's program if longer."
+[CAL-RECUR weekly start=2026-09-14 day=mon end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
+[CAL-RECUR weekly start=2026-09-14 day=wed end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
 
 ---
 
