@@ -583,7 +583,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [MEAL] 2026-09-21 17:30 Chili :: meal-type=dinner
 [MEAL] 2026-09-22 17:30 Chicken tacos :: meal-type=dinner
 [MEAL] 2026-09-23 17:30 Brats and sausages on the grill :: meal-type=dinner
-[MEAL] 2026-09-24 17:30 Packed sandwiches :: meal-type=dinner :: notes="Wyatt XC meet - Canon City, leave 1:00 PM"
+[MEAL] 2026-09-24 17:30 Packed sandwiches :: meal-type=dinner :: notes="Wyatt XC meet - Canon City, leave 1:00 PM; Matt AWS class 1100-1500"
 [MEAL] 2026-09-28 17:30 Italian sausage and tortellini soup :: meal-type=dinner
 [MEAL] 2026-09-29 17:30 Carnitas tacos :: meal-type=dinner
 [MEAL] 2026-10-01 17:30 Tater tot casserole :: meal-type=dinner
@@ -795,6 +795,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-21 14:00 [K] Ex-Ed meeting :: meetings :: tentative=true
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
+[CAL] 2026-09-24 11:00 [D] AWS Cloud Security Class :: meetings :: end=15:00
 [CAL] 2026-09-28 06:30 [D] Open MRI - Shoulders :: appointments :: stripe=appt :: location="1425 W US Hwy 50, Suite B, Pueblo, CO 81008" :: notes="Staples Parking Lot"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
 
