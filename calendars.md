@@ -126,7 +126,7 @@ Confirm exact times each season; this is the shape, not the truth.
 - **SWIM PRACTICE block is canonical. Never add individual swim practice entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **WYATT CROSS COUNTRY block is canonical. Never add individual XC practice or meet entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
 - **NET+ BOOT CAMP block is canonical. Never add individual boot camp session entries to the monthly date sections. Duplicate entries cause double rendering on the Cockpit widget.**
-- **MOLLY WONDERHOOD PROGRAM entry (in RECURRING - Weekly) is canonical. Never add individual Thursday entries to the monthly date sections.**
+- **MOLLY WONDERHOOD PROGRAM block (dated [CAL] entries, own section) is canonical. Never add individual Thursday entries to the monthly date sections. Converted from a [CAL-RECUR] entry on 2026-09-14 because the Cockpit widget was not rendering the recurring form - use explicit dated entries for this series going forward.**
 - **GIRLS ON THE RUN entries (in RECURRING - Weekly) are canonical. Never add individual Mon/Wed entries to the monthly date sections.**
 - **[MEAL] entries: real `[MEAL]` line-type prefix, never a `[CAL]` line with a decorative tag. Full schema: `cal-widget.md`. Write ONLY in WHAT'S FOR DINNER section.**
 - **[CHORE] entries: own line type. Full schema: `cal-widget.md`. Rotation source: `punch-list/chore-chart.md`. Write ONLY in WHAT'S FOR DINNER section.**
@@ -163,9 +163,43 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
-[CAL-RECUR weekly start=2026-09-17 day=thu end=2027-05-27 skip=2026-11-26,2026-12-24,2026-12-31,2027-01-07,2027-01-14,2027-03-25,2027-04-01] 11:30 [M] Wonderhood Program :: kids :: end=15:30 :: notes="Per official program calendar: Thanksgiving break 11/26, winter break 12/24-1/14, spring break 3/25 and 4/1. 30 scheduled Thursday learning days total, final day 5/27/27."
 [CAL-RECUR weekly start=2026-09-14 day=mon end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
 [CAL-RECUR weekly start=2026-09-14 day=wed end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
+
+---
+
+### MOLLY WONDERHOOD PROGRAM - School Year 2026-27
+<!-- CANONICAL SOURCE. Do not duplicate individual Thursday entries in monthly sections. Dated entries per official program calendar: 30 scheduled Thursday learning days, Thanksgiving/winter/spring breaks excluded. -->
+[CAL] 2026-09-17 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-09-24 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-10-01 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-10-08 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-10-15 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-10-22 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-10-29 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-11-05 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-11-12 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-11-19 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-12-03 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-12-10 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2026-12-17 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-01-21 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-01-28 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-02-04 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-02-11 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-02-18 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-02-25 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-03-04 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-03-11 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-03-18 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-04-08 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-04-15 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-04-22 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-04-29 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-05-06 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-05-13 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-05-20 11:30 [M] Wonderhood Program :: kids :: end=15:30
+[CAL] 2027-05-27 11:30 [M] Wonderhood Program :: kids :: end=15:30
 
 ---
 
@@ -806,6 +840,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL] 2026-09-24 11:00 [D] AWS Cloud Security Class :: meetings :: end=15:00
 [CAL] 2026-09-28 06:30 [D] Open MRI - Shoulders :: appointments :: stripe=appt :: location="1425 W US Hwy 50, Suite B, Pueblo, CO 81008" :: notes="Staples Parking Lot"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
+[CAL] 2026-09-29 13:00 [M] Therapy intake :: appointments :: stripe=appt :: flag=true :: notes="Overlaps Molly Wonderhood Program (1130-1530) same day - confirm which one holds."
 
 ---
 
