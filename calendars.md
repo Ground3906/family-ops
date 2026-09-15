@@ -163,7 +163,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 
 [CAL-RECUR weekly start=2026-05-03 day=sun skip=2026-06-07,2026-06-21] 08:00 Mass - Eggs for Fr. Joe :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 [CAL-RECUR weekly start=2026-05-06 day=wed] 10:00 Daily Mass :: liturgical :: optional=true :: end=11:00 :: location="Our Lady of Assumption, Westcliffe"
-[CAL-RECUR weekly start=2026-09-17 day=thu end=2027-05-27 skip=2026-11-26,2026-12-24,2026-12-31] 11:30 [M] Wonderhood Program :: kids :: end=15:30 :: notes="Runs through May 2027. Skips Thanksgiving and Christmas break Thursdays - confirm exact break dates with Molly's program if longer."
+[CAL-RECUR weekly start=2026-09-17 day=thu end=2027-05-27 skip=2026-11-26,2026-12-24,2026-12-31,2027-01-07,2027-01-14,2027-03-25,2027-04-01] 11:30 [M] Wonderhood Program :: kids :: end=15:30 :: notes="Per official program calendar: Thanksgiving break 11/26, winter break 12/24-1/14, spring break 3/25 and 4/1. 30 scheduled Thursday learning days total, final day 5/27/27."
 [CAL-RECUR weekly start=2026-09-14 day=mon end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
 [CAL-RECUR weekly start=2026-09-14 day=wed end=2026-11-08] 15:00 [M][R] Girls on the Run practice :: kids :: end=16:30
 
@@ -801,6 +801,7 @@ Last batch: 2026-10-01 (4-week dinner rotation locked Sept 7 - Oct 1).
 [CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-16 09:00 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-21 14:00 [K] Ex-Ed meeting :: meetings :: tentative=true
+[CAL] 2026-09-23 10:45 [W] Orthopedic appt :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-24 11:00 [D] AWS Cloud Security Class :: meetings :: end=15:00
 [CAL] 2026-09-28 06:30 [D] Open MRI - Shoulders :: appointments :: stripe=appt :: location="1425 W US Hwy 50, Suite B, Pueblo, CO 81008" :: notes="Staples Parking Lot"
