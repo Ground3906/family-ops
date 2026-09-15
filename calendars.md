@@ -811,6 +811,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [MEAL] 2026-09-15 17:30 Fish tacos :: meal-type=dinner
 [MEAL] 2026-09-16 17:30 Chicken kabobs :: meal-type=dinner
 [MEAL] 2026-09-17 17:30 Baked ziti :: meal-type=dinner :: notes="Wyatt XC meet Sat 9/19 - pre-meet carb load"
+[MEAL] 2026-09-18 17:30 Leftovers or easy meal :: meal-type=dinner :: notes="Matt and Kalea at Peyton auction table pickup 10:00 AM - back by dinner"
 [MEAL] 2026-09-21 17:30 Chili :: meal-type=dinner
 [MEAL] 2026-09-22 17:30 Chicken tacos :: meal-type=dinner
 [MEAL] 2026-09-23 17:30 Brats and sausages on the grill :: meal-type=dinner
@@ -1025,6 +1026,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [CAL] 2026-09-15 13:00 [M] Meeting with teacher :: kids
 [CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
+[CAL] 2026-09-18 10:00 [D][K] PS Auction Table P/U :: misc :: location="10850 E Woodmen Rd, Peyton, CO 80831"
 [CAL] 2026-09-21 14:00 [K] Ex-Ed meeting :: meetings :: tentative=true
 [CAL] 2026-09-23 10:45 [W] Orthopedic appt :: appointments :: stripe=appt
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
