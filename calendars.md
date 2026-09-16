@@ -1034,6 +1034,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [CAL] 2026-09-23 11:00 [M] Apt - Stacie :: appointments :: stripe=appt :: end=12:00 :: flag=true :: notes="Provider confirmed as Stacie (Kalea, 9/16) - location not yet confirmed"
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-24 11:00 [D] AWS Cloud Security Class :: meetings :: end=15:00
+[CAL] 2026-09-24 17:55 [K] Swim team meeting :: meetings :: flag=true :: notes="Falls inside 17:30-19:00 family meal block - confirm dinner coverage"
 [CAL] 2026-09-28 06:30 [D] Open MRI - Shoulders :: appointments :: stripe=appt :: location="1425 W US Hwy 50, Suite B, Pueblo, CO 81008" :: notes="Staples Parking Lot"
 [CAL] 2026-09-29 10:00 [R] Apt - Tracey :: appointments :: stripe=appt :: location="Pines Ranch" :: cancel=confirmed
 
