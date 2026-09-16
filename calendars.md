@@ -1027,6 +1027,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [CAL] 2026-09-15 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-16 09:00 [D] Appt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-09-18 10:00 [D][K] PS Auction Table P/U :: misc :: location="10850 E Woodmen Rd, Peyton, CO 80831"
+[CAL] 2026-09-21 11:00 [K] Apt - Maddie :: appointments :: stripe=appt
 [CAL] 2026-09-21 14:00 [K] Ex-Ed meeting :: meetings :: tentative=true
 [CAL] 2026-09-22 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-23 10:45 [W] Orthopedic appt :: appointments :: stripe=appt
