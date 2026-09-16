@@ -1030,6 +1030,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [CAL] 2026-09-21 14:00 [K] Ex-Ed meeting :: meetings :: tentative=true
 [CAL] 2026-09-22 15:00 [D] Apt - Mark :: appointments :: stripe=appt :: end=16:00 :: notes="telehealth"
 [CAL] 2026-09-23 10:45 [W] Orthopedic appt :: appointments :: stripe=appt
+[CAL] 2026-09-23 11:00 [M] Apt - Tracey :: appointments :: stripe=appt :: end=12:00 :: location="Pines Ranch" :: flag=true :: notes="Provider/location assumed from established M/R therapist pattern - confirm if different"
 [CAL] 2026-09-24 09:40 [K] 6-week postpartum apt :: appointments :: stripe=appt :: location="Pueblo, CO"
 [CAL] 2026-09-24 11:00 [D] AWS Cloud Security Class :: meetings :: end=15:00
 [CAL] 2026-09-28 06:30 [D] Open MRI - Shoulders :: appointments :: stripe=appt :: location="1425 W US Hwy 50, Suite B, Pueblo, CO 81008" :: notes="Staples Parking Lot"
