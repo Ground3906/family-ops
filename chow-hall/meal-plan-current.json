@@ -60,6 +60,12 @@
       "notes": "Crockpot - start morning. Prenatal appt 14:00 - good day for a slow cooker meal.",
       "confirmed_by": "Kalea",
       "locked_at": "2026-07-06"
+    },
+    {
+      "date": "2026-09-19",
+      "meal": "Natalie's sloppy joes",
+      "confirmed_by": "Kalea",
+      "locked_at": "2026-09-16"
     }
   ],
   "shortfalls": [
