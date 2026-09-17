@@ -1052,6 +1052,7 @@ Last batch: 2026-11-15 (chore rotation continued 2 months forward, same schedule
 [CAL] 2026-10-17 ALL-DAY [FAM] Bayer family get-together :: family :: span=2026-10-18 :: location="Colorado Springs, CO"
 [CAL] 2026-10-19 08:00 [D] TI4 w/ Fr. Joe :: misc :: end=20:00 :: location="Salida, CO"
 [CAL] 2026-10-20 10:00 [W] Ortho :: appointments :: stripe=appt :: end=11:00 :: location="Scott Family Ortho, Pueblo, CO" :: notes="Bring retainer"
+[CAL] 2026-10-21 09:40 [D] Apt - Dr. Wentz :: appointments :: stripe=appt
 [CAL] 2026-10-24 ALL-DAY [D] 2nd Rifle Elk Season :: misc :: span=2026-11-01 :: travel=true
 [CAL] 2026-10-25 08:00 [W][M] Serve at Mass :: liturgical :: end=09:00 :: location="St. Joseph's, Salida"
 
